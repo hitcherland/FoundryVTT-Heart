@@ -1,0 +1,102 @@
+.app.heart.sheet.actor.character > section.window-content {
+    background: white;
+    font-size: 16px;
+}
+
+.ordered-checkable-box {
+    position: relative;
+    border: 2px solid #630000;
+    display: inline-block;
+    height: 16px;
+    width: 16px;
+    margin: 2px;
+    padding: 0;
+}
+
+
+.ordered-checkable-box.checked::after {
+    position: absolute;
+    background: #630000;
+    left: 2px;
+    top: 2px;
+    display: inline-block;
+    height: 8px;
+    width: 8px;
+    content: "";
+}
+
+.app.heart.sheet.actor.character label {
+    color: #630000;
+    flex-grow: 0.5;
+}
+
+.app.heart.sheet.actor.character th {
+    color: #630000;
+    text-transform:uppercase;
+    text-align: left;
+}
+
+.app.heart.sheet.actor.character .center {
+    text-align: center;
+}
+
+.app.heart.sheet.actor.character label.faded {
+    opacity: 0.5;
+}
+
+.app.heart.sheet.actor.character input {
+    border: 0;
+    border-bottom: 1px solid #630000;
+    flex-grow: 1.5;
+    vertical-align: middle;
+}
+
+.app.heart.sheet.actor.character h2 {
+    background: #630000;
+    color: white;
+    flex-grow: 0;
+}
+
+.app.heart.sheet.actor.character .col {
+    padding: 0 0.5em;
+}
+
+.app.heart.sheet.actor.character img {
+    border: 0;
+}
+
+.app.heart.sheet.actor.character h2,
+.app.heart.sheet.actor.character label {
+    font-size: 1.2em;
+    text-transform:uppercase;
+}
+
+.app.heart.sheet.actor.character .inflexible {
+    flex: auto 0;
+}
+
+.app.heart.sheet.actor.character table {
+    background: none;
+    border: 0;
+}
+
+.app.heart.sheet.actor.character .flex-30ex {
+    flex: 20ex 1 0;
+}
+
+.app.heart.sheet.actor.character .notepad .editor-content {
+    font-size: 15px;
+    line-height: 20px;
+    background-image: -moz-linear-gradient(top , transparent, transparent 19px,#630000 0px); 
+    background-image: -webkit-linear-gradient(top , transparent, transparent 19px,#630000 0px);  
+    background-size: 100% 20px;
+}
+
+.app.heart.sheet.actor.character .notepad .editor-content p {
+    margin: 0;
+}
+
+
+.app.heart.sheet.actor.character .left-border {
+    border-left: 1px solid #630000;
+}

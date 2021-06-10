@@ -1,0 +1,98 @@
+<form class="heart actor character {{cssClass}} flexcol" autocomplete="off">
+    <div class="flexrow">
+        <div class="flexcol col">
+
+            <img class="profile" src="{{data.img}}" title="{{actor.name}}" data-edit="img"/>
+            <div class="flexcol">
+                <div class="flexrow">
+                    <label>{{localize "heart.SheetCharacterName"}}</label>
+                    <input name="name" value="{{actor.name}}"/>
+                </div>
+                <div class="flexrow">
+                    <label>{{localize "heart.SheetCharacterClass"}}</label>
+                    <input name="data.class" value="{{actor.data.data.class}}"/>
+                </div>
+                <div class="flexrow">
+                    <label>{{localize "heart.SheetCharacterCalling"}}</label>
+                    <input name="data.calling" value="{{actor.data.data.calling}}"/>
+                </div>
+            </div>
+            <div class="flexcol flex-30ex notepad">
+                <label class="inflexible">{{localize "heart.SheetCharacterActiveBeats"}}</label>
+                {{editor content=actor.data.data.active_beats target="data.active_beats" button=true editable=editable owner=owner}}
+            </div>
+            <div class="flexcol flex-30ex notepad">
+                <label class="inflexible">{{localize "heart.SheetCharacterEquipment"}}</label>
+                {{editor content=actor.data.data.equipment target="data.equipment" button=true editable=editable owner=owner}}
+            </div>
+            <div class="flexcol flex-30ex notepad">
+                <label class="inflexible">{{localize "heart.SheetCharacterResources"}}</label>
+                {{editor content=actor.data.data.resources target="data.resources" button=true editable=editable owner=owner}}
+            </div>
+            <div class="flexrow">
+                <table class="skills">
+                    <tr>
+                        <th class="center">{{localize "heart.SheetSkills"}}</th>
+                        <th class="faded">{{localize "heart.SheetKnacks"}}</th>
+                    </tr>
+                    {{#each actor.data.data.skills as |skill name|}}
+                    <tr>
+                        <td>
+                            <input type="checkbox" name="data.skills.{{name}}.value" {{checked skill.value}}/>
+                            <span>{{localize (concat "heart.SheetSkill" (titlecase name))}}</span>
+                        </td>
+                        <td>
+                            <input name="data.skills.{{name}}.knack" value="{{skill.knack}}"/>
+                        </td>
+                    </tr>
+                    {{/each}}
+                </table>
+                <table class="domains">
+                    <tr>
+                        <th class="center">{{localize "heart.SheetDomains"}}</th>
+                        <th class="faded">{{localize "heart.SheetKnacks"}}</th>
+                    </tr>
+                    {{#each actor.data.data.domains as |domain name|}}
+                    <tr>
+                        <td>
+                            <input type="checkbox" name="data.domains.{{name}}.value" {{checked domain.value}}/>
+                            {{localize (concat "heart.SheetDomain" (titlecase name))}}
+                        </td>
+                        <td>
+                            <input name="data.domains.{{name}}.knack" value="{{domain.knack}}"/>
+                        </td>
+                    </tr>
+                    {{/each}}
+                </table>
+            </div>
+        </div>
+        <div class="flexcol col">
+            <div class="inflexible">
+                <table>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <th class="center">{{localize "heart.SheetProtections"}}</td>
+                    </tr>
+                    {{#each actor.data.data.resistances as |resistance name|}}
+                    <tr>
+                        <th>{{localize (concat "heart.SheetResistance" (titlecase name))}}</th>
+                        <td data-target='data.resistances.{{name}}.value'>{{{ordered-checkable resistance.value 10}}}</td>
+                        <td class="center left-border" data-target='data.resistances.{{name}}.protection'>{{{ordered-checkable resistance.protection 5}}}</td>
+                    </tr>
+                    {{/each}}
+                </table>
+            </div>
+            <div class="flexcol">
+                <div class="flexcol notepad">
+                    <h2 class="invert">{{localize "heart.SheetAbilities"}}</h2>
+                    {{editor content=actor.data.data.abilities target="data.abilities" button=true editable=editable owner=owner}}
+                </div>
+                <div class="flexcol notepad">
+                    <h2 class="invert">{{localize "heart.SheetFallout"}}</h2>
+                    {{editor content=actor.data.data.fallout target="data.fallout" button=true editable=editable owner=owner}}
+                </div>
+            </div>
+        </div>
+    </div>
+</form>
