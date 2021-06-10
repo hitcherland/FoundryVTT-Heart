@@ -1,6 +1,6 @@
 # Heart - The City Beneath
 
-This is a simplistic FoundryVTT implementation of [Heart - The City Beneath](https://rowanrookanddecard.com/product/heart-the-city-beneath-rpg/). It provides a character sheet based on the provided inside Heart. It doesn't currently do anything fancier than storing numbers and textfields.
+This is a simplistic implementation of [Heart - The City Beneath](https://rowanrookanddecard.com/product/heart-the-city-beneath-rpg/) for [FoundryVTT](https://foundryvtt.com/) . It provides a character sheet based on the one provided inside Heart. It doesn't currently do anything fancier than storing numbers and textfields.
 ## Features
 
 * Saves your character information as text - wow
