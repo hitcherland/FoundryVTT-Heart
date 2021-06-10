@@ -21,8 +21,8 @@
     "socket": false,
     "minimumCoreVersion": "0.8.6",
     "compatibleCoreVersion": "0.8.6",
-    "url": "",
-    "manifest": "",
-    "download": "",
-    "readme": ""
+    "url": "https://github.com/hitcherland/foundryvtt-heart",
+    "manifest": "https://raw.githubusercontent.com/hitcherland/foundryvtt-heart/master/system.json",
+    "download": "https://github.com/hitcherland/foundryvtt-heart/archive/refs/tags/0.1.0.zip",
+    "readme": "https://raw.githubusercontent.com/hitcherland/foundryvtt-heart/master/README.md"
 }
