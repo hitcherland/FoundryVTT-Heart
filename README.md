@@ -14,10 +14,10 @@ This is a simplistic FoundryVTT implementation of [Heart - The City Beneath](htt
 
 ## TODO
 
-[X] Make a basic fillable character sheet.
-[ ] Get a hold of the fonts, or something like them (main one is "The Bartender Condensed Serif Press" by Vintage Voyage Design Supply)
-[ ] Convert Equipment, Resources, Abilities and Fallout from a textfield to a list of textfields
-[ ] Make Equipment & Resources Rollable
-[ ] Add a roller that lets you pick skill, domain, knacks & mastery, difficulty etc
-[ ] Add a stress roller
-[ ] Look into adding "class" and "calling" items
+- [x] Make a basic fillable character sheet.
+- [ ] Get a hold of the fonts, or something like them (main one is "The Bartender Condensed Serif Press" by Vintage Voyage Design Supply)
+- [ ] Convert Equipment, Resources, Abilities and Fallout from a textfield to a list of textfields
+- [ ] Make Equipment & Resources Rollable
+- [ ] Add a roller that lets you pick skill, domain, knacks & mastery, difficulty etc
+- [ ] Add a stress roller
+- [ ] Look into adding "class" and "calling" items
