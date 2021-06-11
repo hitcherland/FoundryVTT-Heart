@@ -11,7 +11,6 @@ export class ActorSheetHeartCharacter extends ActorSheet {
 
     getData() {
         const data = super.getData();
-        console.warn(data);
         if(data.data.img === CONST.DEFAULT_TOKEN) {
             data.data.img = "systems/heart/assets/heart_logo_playbook.png";
         }
