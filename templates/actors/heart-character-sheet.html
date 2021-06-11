@@ -3,6 +3,11 @@
         <div class="flexcol col">
 
             <img class="profile" src="{{data.img}}" title="{{actor.name}}" data-edit="img"/>
+            <div class="center">
+                <button class="rollable sketchy"><span class="fas fa-dice"></span> {{localize "heart.RollButton"}}</button>
+                <button class="rollable sketchy"><span class="fas fa-dice"></span> {{localize "heart.RollFallout"}}</button>
+            </div>
+            
             <div class="flexcol">
                 <div class="flexrow">
                     <label>{{localize "heart.SheetCharacterName"}}</label>
@@ -76,7 +81,7 @@
                     </tr>
                     {{#each actor.data.data.resistances as |resistance name|}}
                     <tr>
-                        <th>{{localize (concat "heart.SheetResistance" (titlecase name))}}</th>
+                        <th><a class="prompt-fallout" data-resistance="{{name}}" title="{{localize 'heart.RollFalloutVAR' var=(titlecase name)}}"><span class="fas fa-dice"></span> {{localize (concat "heart.SheetResistance" (titlecase name))}}</a></th>
                         <td data-target='data.resistances.{{name}}.value'>{{{ordered-checkable resistance.value 10}}}</td>
                         <td class="center left-border" data-target='data.resistances.{{name}}.protection'>{{{ordered-checkable resistance.protection 5}}}</td>
                     </tr>
@@ -85,11 +90,15 @@
             </div>
             <div class="flexcol">
                 <div class="flexcol notepad">
-                    <h2 class="invert">{{localize "heart.SheetAbilities"}}</h2>
+                    <div class="inflexible">
+                        <h3 class="width-auto invert very sketchy">{{localize "heart.SheetAbilities"}}</h3>
+                    </div>
                     {{editor content=actor.data.data.abilities target="data.abilities" button=true editable=editable owner=owner}}
                 </div>
                 <div class="flexcol notepad">
-                    <h2 class="invert">{{localize "heart.SheetFallout"}}</h2>
+                    <div class="inflexible">
+                        <h3 class="invert sketchy ">{{localize "heart.SheetFallout"}}</h3>
+                    </div>
                     {{editor content=actor.data.data.fallout target="data.fallout" button=true editable=editable owner=owner}}
                 </div>
             </div>

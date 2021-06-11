@@ -1,0 +1,47 @@
+<form class="heart">
+    <table class="roll-options">
+        <tr>
+            <td><img src="icons/dice/d10black.svg" /></td>
+            <td><img src="icons/dice/d10black.svg" /></td>
+            <td><img src="icons/dice/d10black.svg" /></td>
+            <td><img src="icons/dice/d10black.svg" /></td>
+        </tr>
+        <tr>
+            <td>{{localize "heart.RollStart"}}</td>
+            <td>{{localize "heart.RollRelevantSkill"}}</td>
+            <td>{{localize "heart.RollRelevantDomain"}}</td>
+            <td>{{localize "heart.RollRelevantMastery"}}</td>
+        </tr>
+        <tr>
+            <td></td>
+            <td>
+                <select name="skill" class="inflexible">
+                    <option value=""></option>
+                    {{#each actor.data.data.skills as |r name|}}
+                    {{#if r.value}}
+                    <option value="{{name}}">{{localize (concat "heart.SheetSkill" (titlecase name))}}</option>
+                    {{/if}}
+                    {{/each}}
+                </select>
+            </td>
+            <td>
+                <select name="domain" class="inflexible">
+                    <option value=""></option>
+                    {{#each actor.data.data.domains as |r name|}}
+                    {{#if r.value}}
+                    <option value="{{name}}">{{localize (concat "heart.SheetDomain" (titlecase name))}}</option>
+                    {{/if}}
+                    {{/each}}
+                </select>
+            </td>
+            <td><input type="checkbox" name="mastery" /></td>
+        </tr>
+    </table>
+    <div class="flexrow">
+        <select name="difficulty">
+            <option value="standard">{{localize "heart.DifficultyStandard"}}</option>
+            <option value="risky">{{localize "heart.DifficultyRisky"}}</option>
+            <option value="dangerous">{{localize "heart.DifficultyDangerous"}}</option>
+        </select>
+    </div>
+</form>

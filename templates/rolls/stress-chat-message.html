@@ -1,0 +1,11 @@
+<div data-actor="{{actor.id}}" data-resistance="{{resistance}}" data-clear-stress="{{clearStress}}">
+    <div class="message flexrow center">
+        {{message}}
+    </div>
+    {{#if showClearStressButton}}
+    <div class="flexrow">
+        <button data-actor="{{actor.id}}" class="clear-stress">{{localize "heart.ClearVARStress" var=(titlecase clearStress)}}</button>
+    </div>
+    {{/if}}
+    {{{rollHTML}}}
+</div>

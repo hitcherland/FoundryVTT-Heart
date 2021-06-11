@@ -3,7 +3,12 @@
     font-size: 16px;
 }
 
-.ordered-checkable-box {
+.app.heart.sheet.actor.character input[type=checkbox] {
+    appearance: none;
+}
+
+.app.heart.sheet.actor.character input[type=checkbox],
+.app.heart.sheet.actor.character .ordered-checkable-box {
     position: relative;
     border: 2px solid #630000;
     display: inline-block;
@@ -13,8 +18,8 @@
     padding: 0;
 }
 
-
-.ordered-checkable-box.checked::after {
+.app.heart.sheet.actor.character input[type=checkbox]:checked:after,
+.app.heart.sheet.actor.character .ordered-checkable-box.checked::after {
     position: absolute;
     background: #630000;
     left: 2px;
@@ -23,6 +28,10 @@
     height: 8px;
     width: 8px;
     content: "";
+}
+
+.app.heart.sheet.actor.character .width-auto {
+    width: auto;
 }
 
 .app.heart.sheet.actor.character label {
@@ -36,7 +45,16 @@
     text-align: left;
 }
 
-.app.heart.sheet.actor.character .center {
+.app.heart.sheet.actor.character th.invert {
+    background: #630000;
+    color: white;
+    text-transform:uppercase;
+    text-align: left;
+    padding: 0.1em;
+    text-align: center;
+}
+
+.center {
     text-align: center;
 }
 
@@ -45,16 +63,31 @@
 }
 
 .app.heart.sheet.actor.character input {
+    color: black;
     border: 0;
     border-bottom: 1px solid #630000;
     flex-grow: 1.5;
     vertical-align: middle;
+    background: none;
 }
 
 .app.heart.sheet.actor.character h2 {
     background: #630000;
     color: white;
     flex-grow: 0;
+    padding: 0.2em;
+    width: auto;
+}
+
+.app.heart.sheet.actor.character h3 {
+    background: #630000;
+    color: white;
+    padding: 0.2em;
+    width: auto;
+    text-transform: uppercase;
+    font-weight: bold;
+    display: inline-block;
+    margin: 0;
 }
 
 .app.heart.sheet.actor.character .col {
@@ -87,8 +120,8 @@
 .app.heart.sheet.actor.character .notepad .editor-content {
     font-size: 15px;
     line-height: 20px;
-    background-image: -moz-linear-gradient(top , transparent, transparent 19px,#630000 0px); 
-    background-image: -webkit-linear-gradient(top , transparent, transparent 19px,#630000 0px);  
+    background-image: -moz-linear-gradient(top , transparent, transparent 19px,rgba(99, 0, 0, 0.2) 0px); 
+    background-image: -webkit-linear-gradient(top , transparent, transparent 19px,rgba(99, 0, 0, 0.2) 0px);  
     background-size: 100% 20px;
 }
 
@@ -96,7 +129,79 @@
     margin: 0;
 }
 
-
 .app.heart.sheet.actor.character .left-border {
-    border-left: 1px solid #630000;
+    margin-left: 0.2em;
+}
+
+.app.heart.sheet.actor.character .hint {
+    opacity: 50%;
+    font-size: 0.8em;
+}
+
+.app.heart.sheet.actor.character button {
+    background: white;
+    color: #630000;
+    margin: 0.5em;
+    font-size: 1.2em;
+    width: auto;
+}
+
+.dialog-content form.heart table.roll-options {
+    border: 0;
+    background: none;
+    table-layout: fixed;
+}
+
+.chat-message table.heart-roll {
+    border: 0;
+    background: none;
+    table-layout: fixed;
+}
+
+.chat-message table.heart-roll tr:nth-child(2n) {
+    background: none;
+}
+
+.chat-message table.heart-roll .roll {
+    text-align: center;
+    display: inline-block;
+    float: none;
+}
+
+.chat-message h3 {
+    text-align: center;
+    font-weight: bold;
+}
+
+.dialog-content form.heart table.roll-options td {
+    text-align: center;
+}
+
+.dialog-content form.heart table.roll-options td img {
+    border: 0;
+    filter: invert(8%) sepia(54%) saturate(5408%) hue-rotate(353deg) brightness(94%) contrast(112%);
+}
+
+.dialog.heart .window-content {
+    background: white;
+}
+
+.chat-message .heart-roll .dice-rolls {
+    align-items: center;
+}
+
+.app.heart.sheet.actor.character .sketchy {
+    border: 3px solid #630000;
+    border-top-left-radius: 255px 25px;
+    border-top-right-radius: 45px 225px;
+    border-bottom-right-radius: 505px 45px;
+    border-bottom-left-radius:35px 255px;
+}
+
+.app.heart.sheet.actor.character .very.sketchy {
+    border: 3px solid #630000;
+    border-top-left-radius: 255px 15px;
+    border-top-right-radius: 15px 225px;
+    border-bottom-right-radius: 225px 15px;
+    border-bottom-left-radius:15px 255px;
 }

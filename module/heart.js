@@ -1,4 +1,5 @@
 import {ActorSheetHeartCharacter} from './actor/actor-sheet.js'
+import {ChatListeners} from './chat/chat.js';
 
 Hooks.once('init', function() {
     Actors.unregisterSheet('core', ActorSheet)
@@ -23,4 +24,7 @@ Hooks.once('init', function() {
     Handlebars.registerHelper("titlecase", function(a) {
         return a[0].toUpperCase() + a.slice(1);
     });
-})
+});
+
+Hooks.on('renderChatLog', (app, html, data) =>ChatListeners(html));
+Hooks.on('renderChatPopout', (app, html, data) => ChatListeners(html));
