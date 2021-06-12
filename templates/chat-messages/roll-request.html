@@ -1,0 +1,46 @@
+<form class="heart request-roll">
+    <div class="flexcol margin-0-5em">
+        <h3 class="center">{{localize "heart.Difficulty"}}</h3>
+        <div class="flexrow">
+            <label class="tag selected">
+                {{localize (concat "heart.Difficulty" (titlecase difficulty))}}
+                <input name="difficulty" type="hidden" value="{{difficulty}}"/>
+            </label>
+        </div>
+    </div>
+
+    <div class="flexrow">
+        <div class="flexcol margin-0-5em flexequal">
+            <h3 class="center">{{localize "heart.SheetSkills"}}</h3>
+            <div class="flexrow">
+                {{#each skills as |skill|}}
+                {{#with (randomID) as |id|}}
+                <input id="{{id}}" class="hidden" name="skill" data-value="{{skill}}" type="radio" {{checked (includes ../../selected_skills skill)}}/>
+                <label class="tag" for="{{id}}">    
+                    {{localize (concat "heart.SheetSkill" (titlecase skill))}}
+                </label>
+                {{/with}}
+                {{/each}}
+            </div>
+        </div>
+    
+        <div class="flexcol margin-0-5em">
+            <h3 class="center">{{localize "heart.SheetDomains"}}</h3>
+            <div class="flexrow">
+                {{#each domains as |domain|}}
+                {{#with (randomID) as |id|}}
+                <input id="{{id}}" class="hidden" name="domain" data-value="{{domain}}" type="radio" {{checked (includes ../../selected_domains domain)}}/>
+                <label class="tag" for="{{id}}">    
+                    {{localize (concat "heart.SheetDomain" (titlecase domain))}}
+                </label>
+                {{/with}}
+                {{/each}}
+            </div>
+        </div>
+    </div>
+
+    <button data-action="roll">
+        <span class="fas fa-dice"></span>
+        {{localize "Roll"}}
+    </button>
+</form>

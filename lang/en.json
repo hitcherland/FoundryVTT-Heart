@@ -9,13 +9,16 @@
     "heart.SheetProtections": "Protections",
     "heart.SheetAbilities": "Abilities",
     "heart.SheetFallout": "Fallout",
+    "heart.SheetKnacks": "Knacks",
+
+    "heart.SheetResistances": "Resistances",
     "heart.SheetResistanceBlood": "Blood",
     "heart.SheetResistanceMind": "Mind",
     "heart.SheetResistanceEcho": "Echo",
     "heart.SheetResistanceFortune": "Fortune",
     "heart.SheetResistanceSupplies": "Supplies",
+
     "heart.SheetSkills": "Skills",
-    "heart.SheetKnacks": "Knacks",
     "heart.SheetSkillCompel": "Compel",
     "heart.SheetSkillDelve": "Delve",
     "heart.SheetSkillDiscern": "Discern",
@@ -25,6 +28,7 @@
     "heart.SheetSkillKill": "Kill",
     "heart.SheetSkillMend": "Mend",
     "heart.SheetSkillSneak": "Sneak",
+
     "heart.SheetDomains": "Domains",
     "heart.SheetDomainCursed": "Cursed",
     "heart.SheetDomainDesolate": "Desolate",
@@ -34,18 +38,27 @@
     "heart.SheetDomainTechnology": "Technology",
     "heart.SheetDomainWarren": "Warren",
     "heart.SheetDomainWild": "Wild",
+
     "heart.FalloutRollFlavor": "Fallout Test",
+
+    "heart.Difficulty": "Difficulty",
     "heart.DifficultyStandard": "Standard Difficulty",
     "heart.DifficultyRisky": "Risky Difficulty",
     "heart.DifficultyDangerous": "Dangerous Difficulty",
+
     "heart.RollStart": "Start with 1d10",
     "heart.RollRelevantSkill": "+ Relevant Skill",
     "heart.RollRelevantDomain": "+ Relevant Domain",
     "heart.RollRelevantMastery": "+ Relevant Mastery",
     "heart.Mastery": "Mastery",
+
     "heart.NoFallout": "No Fallout",
     "heart.MinorFallout": "Minor Fallout",
     "heart.MajorFallout": "Major Fallout",
+    "heart.NoFalloutDescription": "",
+    "heart.MinorFalloutDescription": "Take a minor fallout and clear stress in the relevant resistance",
+    "heart.MajorFalloutDescription": "Take a major fallout and clear all stress",
+
     "heart.RollResultCriticalSuccess": "Critical Success",
     "heart.RollResultCriticalSuccessDescription": "Succeed dramatically, and increase outgoing stress dice by 1 step.",
     "heart.RollResultSuccess": "Success",
@@ -56,12 +69,33 @@
     "heart.RollResultFailureDescription": "Fail, and take stress.",
     "heart.RollResultCriticalFailure": "Critical Failure",
     "heart.RollResultCriticalFailureDescription": "Fail, and take double stress.",
+
     "heart.RollMessage": "Made A Roll",
     "heart.RollButton": "Make A Roll",
+
     "heart.RollBase": "Base",
     "heart.ClearVARStress": "Clear {var} Stress",
     "heart.TakeStress": "Take Stress",
     "heart.RollFallout": "Roll Fallout",
     "heart.RollFalloutHint": "Click to roll fallout",
-    "heart.RollFalloutVAR": "Roll {var} Fallout"
+    "heart.RollFalloutVAR": "Roll {var} Fallout",
+    "heart.Or": "or",
+    "heart.PickCharacter": "Pick a Character",
+    "heart.EnterStress": "Enter Stress",
+    "heart.PickResistance": "Pick Resistance",
+    "heart.MoreFalloutInfoNeeded": "Roll Fallout",
+    "heart.SheetSkillSelect": "Click to select valid Skill(s)",
+    "heart.SheetDomainSelect": "Click to select valid Domain(s)",
+    "heart.RequestRoll": "Request Roll",
+    "heart.GMRequestedRoll": "The GM has requested a roll",
+    "heart.NA": "N/A",
+
+    "heart.PrepareRoll": "Prepare a Roll Request",
+    "heart.StressDiceSize": "Stress Dice Size",
+    "heart.RollStress": "Roll Stress",
+    "heart.Stress": "Stress",
+    "heart.TotalStress": "Total Stress",
+    "heart.DicePool": "Dice Pool",
+
+    "heart.RollFailedDifficultyRequired": "Failed to roll, difficulty setting required"
 }

@@ -1,4 +1,27 @@
-<form class="heart">
+<form class="heart roll">
+    <h3 class="center">{{localize "heart.Difficulty"}}</h3>
+    <div class="flexcol margin-0-5em">
+        <div class="flexrow">
+            {{#if difficulty}}
+            <label class="tag selected">
+                {{localize (concat "heart.Difficulty" (titlecase difficulty))}}
+                <input name="difficulty" type="hidden" value="{{difficulty}}"/>
+            </label>
+            {{else}}
+            {{#each difficulties as |localized name|}}
+            {{#with (randomID) as |id|}}
+            <input id="{{id}}" class="hidden" name="difficulty" type="radio" value="{{name}}" />
+            <label class="tag" for="{{id}}">    
+                {{localized}}
+            </label>
+            {{/with}}
+            {{/each}}
+            {{/if}}
+            
+        </div>
+    </div>
+
+    <h3 class="center">{{localize "heart.DicePool"}}</h3>
     <table class="roll-options">
         <tr>
             <td><img src="icons/dice/d10black.svg" /></td>
@@ -17,6 +40,7 @@
             <td>
                 {{#if skills}}
                 <select name="skill" class="inflexible">
+                    <option value=""></option>
                     {{#each skills as |name|}}
                     <option value="{{name}}">{{localize (concat "heart.SheetSkill" (titlecase name))}}</option>
                     {{/each}}
@@ -29,6 +53,7 @@
 
                 {{#if domains}}
                 <select name="domain" class="inflexible">
+                    <option value=""></option>
                     {{#each domains as |name|}}
                     <option value="{{name}}">{{localize (concat "heart.SheetDomain" (titlecase name))}}</option>
                     {{/each}}
@@ -40,15 +65,4 @@
             <td><input type="checkbox" name="mastery" /></td>
         </tr>
     </table>
-
-    {{#if difficulty}}
-    {{else}}
-    <div class="flexrow">
-        <select name="difficulty">
-            <option value="standard">{{localize "heart.DifficultyStandard"}}</option>
-            <option value="risky">{{localize "heart.DifficultyRisky"}}</option>
-            <option value="dangerous">{{localize "heart.DifficultyDangerous"}}</option>
-        </select>
-    </div>
-    {{/if}}
 </form>

@@ -1,0 +1,34 @@
+<form class="heart prepare-roll">
+    <input name="actor_id" type="hidden" value="{{actor.id}}"/>
+    <input name="multiplier" type="hidden" value="{{multiplier}}"/>
+    <div class="flexcol margin-0-5em">
+        <h3 class="center">{{localize "heart.StressDiceSize"}}</h3>
+        <div class="flexrow">
+            {{#each stress_dice as |di|}}
+            {{#with (randomID) as |id|}}
+            <input id="{{id}}" class="hidden" name="stress_di" type="radio" value="{{di}}" {{checked (eq di ../../stress_di)}} />
+            <label class="tag" for="{{id}}">
+                <div class="flexcol">
+                    <img src="icons/dice/{{di}}black.svg"/>
+                    {{di}}
+                </div>
+            </label>
+            {{/with}}
+            {{/each}}
+        </div>
+    </div>
+
+    <div class="flexcol margin-0-5em flexequal">
+        <h3 class="center">{{localize "heart.SheetResistances"}}</h3>
+        <div class="flexrow">
+            {{#each resistances as |resistance|}}
+            {{#with (randomID) as |id|}}
+            <input id="{{id}}" class="hidden" name="resistance" type="radio" value="{{resistance}}" {{checked (eq ../../resistance resistance)}}/>
+            <label class="tag" for="{{id}}">    
+                {{localize (concat "heart.SheetResistance" (titlecase resistance))}}
+            </label>
+            {{/with}}
+            {{/each}}
+        </div>
+    </div>
+</form>

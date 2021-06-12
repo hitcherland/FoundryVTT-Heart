@@ -3,9 +3,15 @@
         {{message}}
     </div>
     {{#if showClearStressButton}}
-    <div class="flexrow">
-        <button data-actor="{{actor.id}}" class="clear-stress">{{localize "heart.ClearVARStress" var=(titlecase clearStress)}}</button>
-    </div>
+        {{#if actor}}
+            <div class="flexrow">
+                <button data-actor="{{actor.id}}" class="clear-stress">{{localize "heart.ClearVARStress" var=(titlecase clearStress)}}</button>
+            </div>
+        {{else}}
+            <div class="flexrow">
+                {{localize "heart.ClearVARStress" var=(titlecase clearStress)}}
+            </div>
+        {{/if}}
     {{/if}}
     {{{rollHTML}}}
 </div>

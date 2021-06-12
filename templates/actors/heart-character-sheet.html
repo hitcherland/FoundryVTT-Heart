@@ -5,7 +5,7 @@
             <img class="profile" src="{{data.img}}" title="{{actor.name}}" data-edit="img"/>
             <div class="center">
                 <button class="rollable sketchy"><span class="fas fa-dice"></span> {{localize "heart.RollButton"}}</button>
-                <button class="rollable sketchy"><span class="fas fa-dice"></span> {{localize "heart.RollFallout"}}</button>
+                <button class="rollable stress sketchy"><span class="fas fa-dice"></span> {{localize "heart.RollStress"}}</button>
             </div>
             
             <div class="flexcol">
@@ -81,7 +81,7 @@
                     </tr>
                     {{#each actor.data.data.resistances as |resistance name|}}
                     <tr>
-                        <th><a class="prompt-fallout" data-resistance="{{name}}" title="{{localize 'heart.RollFalloutVAR' var=(titlecase name)}}"><span class="fas fa-dice"></span> {{localize (concat "heart.SheetResistance" (titlecase name))}}</a></th>
+                        <th><a class="rollable fallout" data-resistance="{{name}}" title="{{localize 'heart.RollFalloutVAR' var=(titlecase name)}}"><span class="fas fa-dice"></span> {{localize (concat "heart.SheetResistance" (titlecase name))}}</a></th>
                         <td data-target='data.resistances.{{name}}.value'>{{{ordered-checkable resistance.value 10}}}</td>
                         <td class="center left-border" data-target='data.resistances.{{name}}.protection'>{{{ordered-checkable resistance.protection 5}}}</td>
                     </tr>

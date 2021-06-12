@@ -21,6 +21,4 @@ This is a simplistic implementation of [Heart - The City Beneath](https://rowanr
 - [x] Add a roller that lets you pick skill, domain, knacks & mastery, difficulty etc
 - [x] Add a stress roller
 - [ ] Look into adding "class" and "calling" items
-- [ ] Improve formatting of chat messages, they look terrible.
-- [ ] Add optional variables to pre-define input on dialog and inputs.
-- [ ] Selecting roll skills & domains is choresome for the user. It'd be good to have a GM-generated chat message that has a roll button on it.
+- [ ] Add ChatMessage buttons to clear stress when receiving fallout

@@ -50,5 +50,11 @@
     },
     "Item": {
         "types": ["class", "calling", "beat", "equipment", "resource", "skill", "fallout", "ability"]
+    },
+    "ChatMessage": {
+        "types": ["default" , "heart"],
+        "heart": {
+            "type": ["prepare-request-roll", "request-roll", "roll"]
+        }
     }
 }
