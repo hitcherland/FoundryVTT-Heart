@@ -90,12 +90,20 @@
     "heart.GMRequestedRoll": "The GM has requested a roll",
     "heart.NA": "N/A",
 
-    "heart.PrepareRoll": "Prepare a Roll Request",
+    "heart.PrepareRollRequest": "Prepare a Roll Request",
+    "heart.PrepareRoll": "Prepare a Roll",
+
+    "heart.RollRequest": "Roll Request",
+
     "heart.StressDiceSize": "Stress Dice Size",
     "heart.RollStress": "Roll Stress",
     "heart.Stress": "Stress",
     "heart.TotalStress": "Total Stress",
     "heart.DicePool": "Dice Pool",
 
-    "heart.RollFailedDifficultyRequired": "Failed to roll, difficulty setting required"
+    "heart.RollFailedDifficultyRequired": "Failed to roll, difficulty setting required",
+    "heart.NoActorSelected": "No Actor Selected",
+    
+    "heart.RollRequestReason": "Roll Request Reason",
+    "heart.Resistance": "Resistance"
 }

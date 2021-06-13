@@ -1,0 +1,8 @@
+{{#each array as |value|}}
+{{#with (randomID) as |id|}}
+<input id="{{id}}" class="hidden" name="{{../../group}}" type="radio" value="{{value}}" {{checked (eq ../../value value)}}/>
+<label class="tag" for="{{id}}">
+    {{> @partial-block value=value}}
+</label>
+{{/with}}
+{{/each}}

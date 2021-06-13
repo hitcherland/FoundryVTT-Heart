@@ -4,8 +4,10 @@
 
             <img class="profile" src="{{data.img}}" title="{{actor.name}}" data-edit="img"/>
             <div class="center">
-                <button class="rollable sketchy"><span class="fas fa-dice"></span> {{localize "heart.RollButton"}}</button>
-                <button class="rollable stress sketchy"><span class="fas fa-dice"></span> {{localize "heart.RollStress"}}</button>
+                
+                <button class="sketchy" data-action="prepare-request-roll"><span class="fas fa-dice"></span> {{localize "heart.RollRequest"}}</button>
+                <button class="sketchy" data-action="prepare-roll"><span class="fas fa-dice"></span> {{localize "Roll"}}</button>
+                <button class="sketchy" data-action="prepare-stress-roll"><span class="fas fa-dice"></span> {{localize "heart.Stress"}}</button>
             </div>
             
             <div class="flexcol">

@@ -1,0 +1,58 @@
+<form class="heart prepare-roll">
+    <input name="multiplier" type="hidden" value="{{multiplier}}"/>
+
+    {{#if actor_id}}
+    <input name="actor_id" type="hidden" value="{{actor_id}}"/>
+    {{else}}
+    {{#> "systems/heart/templates/util/section.html" 
+            title="heart.SheetClassCharacter"
+            value=actor_id
+            target="actor_id"
+            type="radio"}}
+        {{#> "systems/heart/templates/util/radio.html"
+                array=actor_ids value=value group=target}}
+                <div class="flexcol">
+                    <img src="{{lookup (getActor value) 'img'}}"/>
+                    <span>{{lookup (getActor value) "name"}}</span>
+                </div>
+        {{/ "systems/heart/templates/util/radio.html"}}
+    {{/ "systems/heart/templates/util/section.html" }}
+    {{/if}}
+
+    {{#if stress_di}}
+    <input name="stress_di" type="hidden" value="{{stress_di}}"/>
+    {{else}}
+    {{#> "systems/heart/templates/util/section.html" 
+            title="heart.Stress"
+            value=stress_di
+            target="stress_di"
+            type="radio"}}
+        {{#> "systems/heart/templates/util/radio.html"
+                array=stress_dice value=stress_di group=target}}
+                    <div class="flexcol">
+                        <img class="dice" src="icons/dice/{{value}}black.svg"/>
+                        <span>{{value}}</span>
+                    </div>
+        {{/ "systems/heart/templates/util/radio.html"}}
+    {{/ "systems/heart/templates/util/section.html" }}
+    {{/if}}
+
+    {{#if resistance}}
+    {{else}}
+    {{#> "systems/heart/templates/util/section.html" 
+            title="heart.Resistance"
+            value=resistance
+            target="resistance"
+            type="radio"}}
+        {{#> "systems/heart/templates/util/radio.html"
+                array=resistances value=value group=target}}
+                   {{localize (concat "heart.SheetResistance" (titlecase value))}}
+        {{/ "systems/heart/templates/util/radio.html"}}
+    {{/ "systems/heart/templates/util/section.html" }}
+    {{/if}}
+    
+    <div class="flexrow margin-0-5em">
+        <button data-action='cancel'>{{localize "Cancel"}}</button>
+        <button data-action='request-roll' disabled>{{localize "heart.RollStress"}}</button>
+    </div>
+</form>

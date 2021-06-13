@@ -1,4 +1,12 @@
 <form class="heart request-roll">
+    {{#if description}}
+    <div class="flexcol margin-0-5em">
+        <div class="quote">
+            {{description}}
+        </div>
+    </div>
+    {{/if}}
+
     <div class="flexcol margin-0-5em">
         <h3 class="center">{{localize "heart.Difficulty"}}</h3>
         <div class="flexrow">
@@ -34,6 +42,18 @@
                     {{localize (concat "heart.SheetDomain" (titlecase domain))}}
                 </label>
                 {{/with}}
+                {{/each}}
+            </div>
+        </div>
+
+        <div class="flexcol margin-0-5em">
+            <h3 class="center">{{localize "heart.SheetClassCharacter"}}</h3>
+            <div class="flexrow">
+                {{#each actor_ids as |actor_id|}}
+                <div data-actor-id="{{actor_id}}">
+                    <img src="{{lookup (getActor actor_id) 'img'}}"/>
+                    <label class="tag">{{lookup (getActor actor_id) 'name'}}</label>
+                </div>
                 {{/each}}
             </div>
         </div>

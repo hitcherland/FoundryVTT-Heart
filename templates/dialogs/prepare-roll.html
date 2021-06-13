@@ -1,43 +1,90 @@
 <form class="heart prepare-roll">
-    <div class="flexcol margin-0-5em">
-        <h3 class="center">{{localize "heart.Difficulty"}}</h3>
-        <div class="flexrow">
-            {{#each difficulties as |localized name|}}
-            {{#with (randomID) as |id|}}
-            <input id="{{id}}" class="hidden" name="difficulty" type="radio" value="{{name}}" {{checked (eq name ../../difficulty)}} />
-            <label class="tag" for="{{id}}">    
-                {{localized}}
-            </label>
-            {{/with}}
-            {{/each}}
-        </div>
+    {{#if actor_id}}
+    <input name="actor_id" type="hidden" value="{{actor_id}}"/>
+    {{else}}
+    {{#> "systems/heart/templates/util/section.html" 
+            title="heart.SheetClassCharacter"
+            value=actor_id
+            target="actor_id"
+            type="radio"}}
+        {{#> "systems/heart/templates/util/radio.html"
+                array=actor_ids value=value group=target}}
+                <div class="flexcol">
+                    <img src="{{lookup (getActor value) 'img'}}"/>
+                    <span>{{lookup (getActor value) "name"}}</span>
+                </div>
+        {{/ "systems/heart/templates/util/radio.html"}}
+    {{/ "systems/heart/templates/util/section.html" }}
+    {{/if}}
+
+
+    {{#if difficulty}}
+    <input name="difficulty" type="hidden" value="{{difficulty}}"/>
+    {{else}}
+    {{#> "systems/heart/templates/util/section.html"  
+            title="heart.Difficulty"
+            value=description
+            target="difficulty"
+            match=false
+            optional=false
+            type="radio"}}
+        {{#> "systems/heart/templates/util/radio.html"
+            array=difficulties value=difficulty group="difficulty"}}
+            {{localize (concat "heart.Difficulty" (titlecase value))}}
+        {{/ "systems/heart/templates/util/radio.html"}}
+    {{/ "systems/heart/templates/util/section.html" }}
+    {{/if}}
+
+    <div class="margin-0-5em">
+
+        <h3 class="center">{{localize "heart.DicePool"}}</h3>
+        <table class="roll-options">
+            <tr>
+                <td><img src="icons/dice/d10black.svg" /></td>
+                <td><img src="icons/dice/d10black.svg" /></td>
+                <td><img src="icons/dice/d10black.svg" /></td>
+                <td><img src="icons/dice/d10black.svg" /></td>
+            </tr>
+            <tr>
+                <td>{{localize "heart.RollStart"}}</td>
+                <td>{{localize "heart.RollRelevantSkill"}}</td>
+                <td>{{localize "heart.RollRelevantDomain"}}</td>
+                <td>{{localize "heart.RollRelevantMastery"}}</td>
+            </tr>
+            <tr>
+                <td></td>
+                <td>
+                    {{#if skills}}
+                    <select name="skill" class="inflexible">
+                        <option value=""></option>
+                        {{#each skills as |name|}}
+                        <option value="{{name}}">{{localize (concat "heart.SheetSkill" (titlecase name))}}</option>
+                        {{/each}}
+                    </select>
+                    {{else}}
+                    {{localize "heart.NA"}}
+                    {{/if}}
+                </td>
+                <td>
+    
+                    {{#if domains}}
+                    <select name="domain" class="inflexible">
+                        <option value=""></option>
+                        {{#each domains as |name|}}
+                        <option value="{{name}}">{{localize (concat "heart.SheetDomain" (titlecase name))}}</option>
+                        {{/each}}
+                    </select>
+                    {{else}}
+                    {{localize "heart.NA"}}
+                    {{/if}}
+                </td>
+                <td><input type="checkbox" name="mastery" /></td>
+            </tr>
+        </table>
     </div>
 
-    <div class="flexcol margin-0-5em flexequal">
-        <h3 class="center">{{localize "heart.SheetSkills"}}</h3>
-        <div class="flexrow">
-            {{#each skills as |skill|}}
-            {{#with (randomID) as |id|}}
-            <input id="{{id}}" class="hidden" name="skill-{{skill}}" type="checkbox" {{checked (includes ../../selected_skills skill)}}/>
-            <label class="tag" for="{{id}}">    
-                {{localize (concat "heart.SheetSkill" (titlecase skill))}}
-            </label>
-            {{/with}}
-            {{/each}}
-        </div>
-    </div>
-
-    <div class="flexcol margin-0-5em">
-        <h3 class="center">{{localize "heart.SheetDomains"}}</h3>
-        <div class="flexrow">
-            {{#each domains as |domain|}}
-            {{#with (randomID) as |id|}}
-            <input id="{{id}}" class="hidden" name="domain-{{domain}}" type="checkbox" {{checked (includes ../../selected_domains domain)}}/>
-            <label class="tag" for="{{id}}">    
-                {{localize (concat "heart.SheetDomain" (titlecase domain))}}
-            </label>
-            {{/with}}
-            {{/each}}
-        </div>
+    <div class="flexrow margin-0-5em">
+        <button data-action='cancel'>{{localize "Cancel"}}</button>
+        <button data-action='request-roll' disabled>{{localize "Roll"}}</button>
     </div>
 </form>

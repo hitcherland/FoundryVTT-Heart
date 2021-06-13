@@ -1,4 +1,6 @@
-import {CreateRollDialog, CreateRollStressDialog} from '../roll/roll.js';
+import {PrepareRollRequestApplication} from '../applications/prepare-roll-request.js';
+import {PrepareRollApplication} from '../applications/prepare-roll.js';
+import {PrepareStressRollApplication} from '../applications/prepare-stress-roll.js';
 
 export class ActorSheetHeartCharacter extends ActorSheet {
     static get defaultOptions() {
@@ -50,15 +52,29 @@ export class ActorSheetHeartCharacter extends ActorSheet {
             this.actor.update(data);
         });
 
-        html.find('.rollable:not(.stress)').click(ev => {
-            CreateRollDialog({
-                actor_id: this.actor.id,
-            });
+        html.find('[data-action=prepare-request-roll]').click(ev => {
+            new PrepareRollRequestApplication({}).render(true);
         });
 
-        html.find('.rollable.stress').click(ev => {
-            CreateRollStressDialog({
-                actor: this.actor,
+        html.find('[data-action=prepare-roll]').click(ev => {
+            const skills = Object.entries(this.actor.data.data.skills).filter(([k, v]) => {
+                return v.value
+            }).map(([k, v]) => k);
+
+            const domains = Object.entries(this.actor.data.data.domains).filter(([k, v]) => {
+                return v.value
+            }).map(([k, v]) => k);
+
+            new PrepareRollApplication({
+                actor_id: this.actor.id,
+                skills,
+                domains
+            }).render(true);
+        });
+
+        html.find('[data-action=prepare-stress-roll]').click(ev => {
+            new PrepareStressRollApplication({
+                actor_id: this.actor.id,
             });
         });
     }

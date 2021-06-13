@@ -109,6 +109,7 @@
     flex: auto 0;
 }
 
+.heart table,
 .app.heart.sheet.actor.character table {
     background: none;
     border: 0;
@@ -147,6 +148,7 @@
     width: auto;
 }
 
+.heart table.roll-options,
 .chat-message table.heart.roll-options,
 .dialog-content form.heart table.roll-options {
     border: 0;
@@ -154,12 +156,15 @@
     table-layout: fixed;
 }
 
+.heart table.heart-roll,
 .chat-message table.heart-roll {
     border: 0;
     background: none;
     table-layout: fixed;
 }
 
+.heart table.heart.roll-options tr:nth-child(2n),
+.heart table.heart-roll tr:nth-child(2n),
 .chat-message table.heart.roll-options tr:nth-child(2n),
 .chat-message table.heart-roll tr:nth-child(2n) {
     background: none;
@@ -176,12 +181,15 @@
     font-weight: bold;
 }
 
-.dialog-content form.heart table.roll-options td {
+.heart table.roll-options td {
     text-align: center;
 }
 
-.dialog-content form.heart table.roll-options td img {
+.heart table.roll-options td img {
     border: 0;
+}
+
+.heart table.roll-options td img.dice {
     filter: invert(8%) sepia(54%) saturate(5408%) hue-rotate(353deg) brightness(94%) contrast(112%);
 }
 
@@ -341,10 +349,14 @@
 
 .heart label.tag img {
     border: 0;
+}
+
+.heart label.tag img.dice {
     filter: invert(8%) sepia(54%) saturate(5408%) hue-rotate(353deg) brightness(94%) contrast(112%);
 }
 
-.heart input:checked + label.tag img {
+
+.heart input:checked + label.tag img.dice {
     filter: invert(100%);
 }
 
@@ -370,4 +382,69 @@
 .heart.request-roll h3 {
     color: black;
     background: white;
+}
+
+.app.heart > header.window-header {
+    background: black;
+    color: white;
+}
+
+.app.heart > section.window-content {
+    background: white;
+}
+
+.app.heart [data-notification] {
+    float: right;
+    padding: 0.2em;
+}
+
+.app.heart [data-notification=optional].fa-times-circle {
+    color: yellow;
+}
+
+.app.heart [data-notification=required].fa-times-circle {
+    color: red;
+}
+
+.app.heart [data-notification].fa-check-circle {
+    color: green;
+}
+
+.app.heart .margin-0-5em {
+    margin: 0.5em;
+}
+
+.heart button {
+    text-transform:uppercase;
+    font-weight: bold;
+    cursor: pointer;
+    border: 3px solid black;
+}
+
+.heart button:disabled {
+    position: relative;
+    text-shadow: 0 0 4px white;
+    cursor:not-allowed;
+    background: repeating-linear-gradient(
+        45deg,
+        black,
+        black 5px,
+        #360000 5px,
+        #360000 10px
+    );
+}
+
+.chat-message .quote {
+    text-align: center;
+    font-style: italic;
+    color: white;
+    font-size: 1.5em;
+}
+
+.chat-message .quote::before {
+    content: "“"
+}
+
+.chat-message .quote::after {
+    content: "”"
 }
