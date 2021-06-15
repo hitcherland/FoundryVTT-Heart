@@ -1,15 +1,17 @@
 <form class="heart stress">
     <input type="hidden" name="actor_id" value="{{actor.id}}"/>
+    <input type="hidden" name="resistance" value="{{resistance}}"/>
+    <input type="hidden" name="stress_gain" value="{{stress_gain}}"/>
 
     <div class="dice-tooltip">
-        <h3>{{localize "heart.Stress"}}</h3>
+        <h3>{{localizeHeart "stress"}}</h3>
         <div class="dice-rolls flexcol">
             <div class="flexcenter">
                 {{#if (ne multiplier 1)}}
                 <span class="number">{{multiplier}} <span class="fas fa-times"></span></span>
                 {{/if}}
                 <span class="roll {{stress_di}}">
-                    {{stress_roll}}
+                    {{result}}
                 </span>
                 {{#if (ne protection 0)}}
                 <span class="fas fa-minus"></span> 
@@ -17,36 +19,14 @@
                 {{/if}}
                 {{#if (or (ne multiplier 1) (ne protection 0)) }}
                 <span class="fas fa-equals"></span> 
-                <span class="number">{{stress}}</span>
+                <span class="number">{{stress_gain}}</span>
                 {{/if}}
             </div>
-            <label class="tag selected">
-                {{localize (concat "heart.SheetResistance" (titlecase resistance))}}
-            </label>
         </div>
     </div>
 
-    <div class="dice-tooltip">
-        <h3>{{localize (concat "heart." (concat (titlecase fallout) "Fallout"))}}</h3>
-        <div class="flexrow">
-            <div class="dice-rolls flexrow margin-0-5em">
-                <div class="flexcol">
-                    <div class="flexrow">
-                        <div class="flexcenter">
-                            <span class="roll d12  {{#if (eq fallout_result 1)}}min{{/if}} {{#if (eq fallout_result 12)}}max{{/if}}">
-                                {{fallout_result}}
-                            </span>
-                        </div>
-                    </div>
-                    <label class="tag selected">
-                        {{localize "heart.TotalStress"}}: 
-                        {{total_stress}} 
-                    </label>
-                </div>
-            </div>
-            <div class="center margin-0-5em">
-                {{localize (concat "heart." (concat (titlecase fallout) "FalloutDescription"))}}
-            </div>
-        </div>
-    </div>
+    <button data-action="take-stress">
+        <span class="fas fa-brain"></span>
+        {{localizeHeart "perform" "take_stress(stress,resistance)" stress=stress_gain resistance=resistance}}
+    </button>
 </div>

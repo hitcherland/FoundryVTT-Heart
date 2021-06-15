@@ -8,54 +8,38 @@
     {{/if}}
 
     <div class="flexcol margin-0-5em">
-        <h3 class="center">{{localize "heart.Difficulty"}}</h3>
+        <h3 class="center">{{localizeHeart "difficulty"}}</h3>
         <div class="flexrow">
             <label class="tag selected">
-                {{localize (concat "heart.Difficulty" (titlecase difficulty))}}
+                {{localizeHeart "difficulty" difficulty}}
                 <input name="difficulty" type="hidden" value="{{difficulty}}"/>
             </label>
         </div>
     </div>
 
-    <div class="flexrow">
-        <div class="flexcol margin-0-5em flexequal">
-            <h3 class="center">{{localize "heart.SheetSkills"}}</h3>
-            <div class="flexrow">
-                {{#each skills as |skill|}}
-                {{#with (randomID) as |id|}}
-                <input id="{{id}}" class="hidden" name="skill" data-value="{{skill}}" type="radio" {{checked (includes ../../selected_skills skill)}}/>
-                <label class="tag" for="{{id}}">    
-                    {{localize (concat "heart.SheetSkill" (titlecase skill))}}
-                </label>
-                {{/with}}
-                {{/each}}
-            </div>
+    <div class="flexrow margin-0-5em">
+        <div class="flexcol">
+            <h3 class="center inflexible">{{localizeHeart "skills"}}</h3>
+            {{#each skills as |skill|}}
+            {{#with (randomID) as |id|}}
+            <input id="{{id}}" class="hidden" name="skill" data-value="{{skill}}" type="radio" {{checked (includes ../../selected_skills skill)}}/>
+            <label class="tag selected" for="{{id}}">    
+                {{localizeHeart "skill" skill}}
+            </label>
+            {{/with}}
+            {{/each}}
         </div>
     
-        <div class="flexcol margin-0-5em">
-            <h3 class="center">{{localize "heart.SheetDomains"}}</h3>
-            <div class="flexrow">
-                {{#each domains as |domain|}}
-                {{#with (randomID) as |id|}}
-                <input id="{{id}}" class="hidden" name="domain" data-value="{{domain}}" type="radio" {{checked (includes ../../selected_domains domain)}}/>
-                <label class="tag" for="{{id}}">    
-                    {{localize (concat "heart.SheetDomain" (titlecase domain))}}
-                </label>
-                {{/with}}
-                {{/each}}
-            </div>
-        </div>
-
-        <div class="flexcol margin-0-5em">
-            <h3 class="center">{{localize "heart.SheetClassCharacter"}}</h3>
-            <div class="flexrow">
-                {{#each actor_ids as |actor_id|}}
-                <div data-actor-id="{{actor_id}}">
-                    <img src="{{lookup (getActor actor_id) 'img'}}"/>
-                    <label class="tag">{{lookup (getActor actor_id) 'name'}}</label>
-                </div>
-                {{/each}}
-            </div>
+        <div class="flexcol ">
+            <h3 class="center inflexible">{{localizeHeart "domains"}}</h3>
+            {{#each domains as |domain|}}
+            {{#with (randomID) as |id|}}
+            <input id="{{id}}" class="hidden" name="domain" data-value="{{domain}}" type="radio" {{checked (includes ../../selected_domains domain)}}/>
+            <label class="tag selected" for="{{id}}">    
+                {{localizeHeart "domain" domain}}
+            </label>
+            {{/with}}
+            {{/each}}
         </div>
     </div>
 

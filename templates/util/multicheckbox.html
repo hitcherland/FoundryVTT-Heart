@@ -1,8 +1,13 @@
-{{#each array as |value|}}
-{{#with (randomID) as |id|}}
-<input id="{{id}}" class="hidden" name="{{../../group}}-{{value}}" type="checkbox" {{checked (includes ../../checked_array value)}}/>
-<label class="tag" for="{{id}}">
-    {{> @partial-block value=value}}
-</label>
-{{/with}}
-{{/each}}
+<div class="center">
+{{localizeHeart "notification" "multicheckbox"}}
+</div>
+<div class="flexrow">
+    {{#each array as |value|}}
+    {{#with (randomID) as |id|}}
+    <input id="{{id}}" class="hidden" name="{{../../group}}-{{value}}" type="checkbox" {{checked (includes ../../checked_array value)}}/>
+    <label class="tag" for="{{id}}">
+        {{> @partial-block value=value}}
+    </label>
+    {{/with}}
+    {{/each}}
+</div>

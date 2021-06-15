@@ -1,7 +1,7 @@
-<form class="heart prepare-roll">
+<form class="heart prepare-roll-request">
     <div class="margin-0-5em">
         {{#> "systems/heart/templates/util/section.html" 
-                title="heart.Difficulty"
+                title="heart.difficulty"
                 value=description
                 target="difficulty"
                 match=false
@@ -9,12 +9,12 @@
                 type="radio"}}
             {{#> "systems/heart/templates/util/radio.html"
                     array=difficulties value=difficulty group="difficulty"}}
-                {{localize (concat "heart.Difficulty" (titlecase value))}}
+                {{localizeHeart "difficulty" value}}
             {{/ "systems/heart/templates/util/radio.html"}}
         {{/ "systems/heart/templates/util/section.html" }}
 
         {{#> "systems/heart/templates/util/section.html" 
-                title="heart.SheetSkills"
+                title="heart.skills"
                 value=selected_skills.length
                 target="skill"
                 match=false
@@ -25,12 +25,12 @@
                     checked_array=selected_skills
                     group=target
                     }}
-                    {{localize (concat "heart.SheetSkill" (titlecase value))}}
+                    {{localizeHeart "skill" value}}
                 {{/ "systems/heart/templates/util/multicheckbox.html"}}
         {{/ "systems/heart/templates/util/section.html" }}
 
         {{#> "systems/heart/templates/util/section.html" 
-                title="heart.SheetDomains"
+                title="heart.domains"
                 value=selected_domains.length
                 target="domain"
                 type="multicheckbox"}}
@@ -39,31 +39,21 @@
                     checked_array=selected_domains
                     group=target
                     }}
-                    {{localize (concat "heart.SheetDomain" (titlecase value))}}
+                    {{localizeHeart "domain" value}}
                 {{/ "systems/heart/templates/util/multicheckbox.html"}}
         {{/ "systems/heart/templates/util/section.html" }}
-
-        {{#if actor_id}}
-        <input name="actor_id" type="hidden" value="{{actor_id}}"/>
-        {{else}}
-        {{#> "systems/heart/templates/util/section.html" 
-                title="heart.SheetClassCharacter"
-                value=selected_actor_ids.length
-                target="actor_id"
-                optional=true
-                type="multicheckbox"}}
-            {{#> "systems/heart/templates/util/multicheckbox.html"
-                    array=actor_ids checked_array=selected_actor_ids group=target}}
-                    <div class="flexcol">
-                        <img src="{{lookup (getActor value) 'img'}}"/>
-                        <div>{{lookup (getActor value) "name"}}</div>
-                    </div>
-            {{/ "systems/heart/templates/util/multicheckbox.html"}}
-        {{/ "systems/heart/templates/util/section.html" }}
-        {{/if}}
     
         {{#> "systems/heart/templates/util/section.html" 
-             title="heart.RollRequestReason" value=description target="description" match=false optional=true type="input"}}
+             title="heart.prepare:roll_request:reason"
+             value=description
+             target="description"
+             match=false
+             optional=true
+             type="input"}}
+             <div class="center">
+                {{localizeHeart "notification" "input"}}
+                ({{#if optional}}{{localizeHeart "notification" "optional"}}{{else}}{{localizeHeart "notification" "required"}}{{/if}})
+            </div>
             <textarea name="description">{{../description}}</textarea>
         {{/ "systems/heart/templates/util/section.html" }}
     </div>

@@ -1,20 +1,17 @@
-<form class="heart prepare-roll">
-    <input name="multiplier" type="hidden" value="{{multiplier}}"/>
-
-    {{#if actor_id}}
+<form class="heart prepare-stress-roll">
     <input name="actor_id" type="hidden" value="{{actor_id}}"/>
+
+    {{#if result}}
+    <input name="result" type="hidden" value="{{result}}"/>
     {{else}}
     {{#> "systems/heart/templates/util/section.html" 
-            title="heart.SheetClassCharacter"
-            value=actor_id
-            target="actor_id"
+            title="heart.result"
+            value=result
+            target="result"
             type="radio"}}
         {{#> "systems/heart/templates/util/radio.html"
-                array=actor_ids value=value group=target}}
-                <div class="flexcol">
-                    <img src="{{lookup (getActor value) 'img'}}"/>
-                    <span>{{lookup (getActor value) "name"}}</span>
-                </div>
+                array=results value=result group=target}}
+                {{localizeHeart "result" value}}
         {{/ "systems/heart/templates/util/radio.html"}}
     {{/ "systems/heart/templates/util/section.html" }}
     {{/if}}
@@ -40,19 +37,19 @@
     {{#if resistance}}
     {{else}}
     {{#> "systems/heart/templates/util/section.html" 
-            title="heart.Resistance"
+            title="heart.resistance"
             value=resistance
             target="resistance"
             type="radio"}}
         {{#> "systems/heart/templates/util/radio.html"
                 array=resistances value=value group=target}}
-                   {{localize (concat "heart.SheetResistance" (titlecase value))}}
+                   {{localizeHeart "resistance" value}}
         {{/ "systems/heart/templates/util/radio.html"}}
     {{/ "systems/heart/templates/util/section.html" }}
     {{/if}}
     
     <div class="flexrow margin-0-5em">
         <button data-action='cancel'>{{localize "Cancel"}}</button>
-        <button data-action='request-roll' disabled>{{localize "heart.RollStress"}}</button>
+        <button data-action='request-roll' disabled>{{localizeHeart "perform" "stress_roll"}}</button>
     </div>
 </form>

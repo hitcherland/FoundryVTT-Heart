@@ -1,17 +1,17 @@
-import {HeartStressRoll} from '../roll/dialogs.js'
+import {HeartStressRoll} from '../roll/roll.js'
 import {HeartApplication} from './base.js';
 
 export class PrepareStressRollApplication extends HeartApplication {
     static get defaultOptions() {
         return foundry.utils.mergeObject(super.defaultOptions, {
-            template: 'systems/heart/templates/dialogs/prepare-stress-roll.html',
-            classes: ["heart prepare-roll"],
+            template: 'systems/heart/templates/applications/prepare-stress-roll.html',
+            classes: ["heart prepare-stress-roll"],
             height: 375
         });
     }
 
     get title() {
-        return game.i18n.localize('heart.PrepareRoll');
+        return game.i18n.localize('heart.prepare:stress_roll');
     }
 
     Submit(data) {
@@ -20,8 +20,9 @@ export class PrepareStressRollApplication extends HeartApplication {
 
     getData(options={}) {
         return {
-            actor_id: options.actor?.id || options.actor_id,
-            actor_ids: options.actor_ids || game.actors.filter(x => x.data.data.resistances).map(x => x.id),
+            actor_id: options.actor_id || CONFIG.ChatMessage.documentClass.getSpeaker().actor,
+            result: options.result,
+            results: options.results || game.heart.roll_results.slice(0, 3),
             multiplier: options.multiplier || 1,
             description: options.description || "",
             difficulty: options.difficulty,

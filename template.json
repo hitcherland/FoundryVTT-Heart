@@ -46,15 +46,45 @@
             "resources": [],
             "abilities": [],
             "fallout": []
+        },
+        "delve": {
+            "domains": [],
+            "tier": [],
+            "stress": "",
+            "resistance": 10,
+            "events": [],
+            "connection": "",
+            "description": ""
+        },
+        "landmark": {
+            "domains": [],
+            "description": "",
+            "stress": "d4",
+            "haunts": []
+        },
+        "adversary": {
+            "names": "",
+            "descriptors": "",
+            "motivation": "",
+            "difficulty": "",
+            "resistance": "",
+            "protection": "",
+            "resources": [],
+            "equipment": "",
+            "special": ""
         }
     },
     "Item": {
-        "types": ["class", "calling", "beat", "equipment", "resource", "skill", "fallout", "ability"]
-    },
-    "ChatMessage": {
-        "types": ["default" , "heart"],
-        "heart": {
-            "type": ["prepare-request-roll", "request-roll", "roll"]
+        "types": ["class", "calling", "beat", "equipment", "resource", "skill", "fallout", "ability", "haunts", "tag"],
+        "resource": {
+            "value": "",
+            "domain": "",
+            "tags": []
+        },
+        "equipment": {
+            "type": "",
+            "dice_size": "d4",
+            "tags": []
         }
     }
 }

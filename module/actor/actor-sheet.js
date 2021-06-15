@@ -1,11 +1,13 @@
 import {PrepareRollRequestApplication} from '../applications/prepare-roll-request.js';
 import {PrepareRollApplication} from '../applications/prepare-roll.js';
 import {PrepareStressRollApplication} from '../applications/prepare-stress-roll.js';
+import {PrepareFalloutRollApplication} from '../applications/prepare-fallout-roll.js';
 
 export class ActorSheetHeartCharacter extends ActorSheet {
     static get defaultOptions() {
         return mergeObject(super.defaultOptions, {
             classes: ["heart", "sheet", "actor", "character"],
+            width: 820,
         });
     }
 
@@ -75,7 +77,13 @@ export class ActorSheetHeartCharacter extends ActorSheet {
         html.find('[data-action=prepare-stress-roll]').click(ev => {
             new PrepareStressRollApplication({
                 actor_id: this.actor.id,
-            });
+            }).render(true);
+        });
+
+        html.find('[data-action=prepare-fallout-roll]').click(ev => {
+            new PrepareFalloutRollApplication({
+                actor_id: this.actor.id,
+            }).render(true);
         });
     }
 }

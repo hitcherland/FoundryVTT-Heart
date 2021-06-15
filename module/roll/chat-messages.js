@@ -3,18 +3,17 @@ async function _createChatMessage({data={}, requirements={}, template}, {user, s
     for(let key in requirements) {
         allowed_data[key] = data[key] || requirements[key];
     }
-
-    if(allowed_data.actor_id) {
-        allowed_data.actor = game.actors.get(allowed_data.actor_id);
-    }
+    const actor = game.actors.get(allowed_data.actor_id);
 
     const template_path = `systems/heart/templates/chat-messages/${template}.html`;
     user = user || game.user;
     speaker = speaker || {};
     speaker.actor = speaker.actor || allowed_data.actor_id;
-    speaker.alias = speaker.alias || allowed_data.actor?.name;
+    speaker.alias = speaker.alias || actor?.name;
     speaker.token = speaker.token || null;
     speaker.scene = speaker.scene || null;
+
+    console.log(speaker);
 
     return CONFIG.ChatMessage.documentClass.create({
         content: await renderTemplate(template_path, allowed_data),
@@ -49,9 +48,9 @@ export async function CreateRollChatMessage(data={}) {
     return _createChatMessage({
         requirements: {
             actor_id: undefined,
+            difficulty: 'standard',
             dicepairs: [],
             result: undefined,
-            roll: undefined,
             user: game.user,
         },
         data,
@@ -63,50 +62,29 @@ export async function CreateStressRollChatMessage(data={}) {
     return _createChatMessage({
         requirements: {
             actor_id: undefined,
-            fallout: 'no',
-            fallout_result: undefined,
             multiplier: 1,
             protection: 0,
             resistance: undefined,
-            stress: 0,
-            stress_di: 0,
-            stress_roll: 1,
+            result: undefined,
+            stress_gain: 0,
             total_stress: 0,
+            stress_di: 'd4',
         },
         data,
         template: 'stress'
     });
+}
 
-    const actor = data.actor;
-    const resistance = data.resistance;
-    const fallout = data.fallout || 'no';
-    const fallout_result = data.fallout_result || null;
-    const stress = data.stress || 0;
-    const total_stress = data.total_stress || 0;
-    const stress_di = data.stress_di || 'd4';
-    const multiplier = data.multiplier || 1;
-    const protection = data.protection || 0;
-    const stress_roll = data.stress_roll || 1;
-
-    const content = await renderTemplate('systems/heart/templates/chat-messages/stress.html', {
-        actor,
-        resistance,
-        fallout,
-        fallout_result,
-        stress,
-        total_stress,
-        stress_di,
-        multiplier,
-        protection,
-        stress_roll,
-    });
-
-    return CONFIG.ChatMessage.documentClass.create({
-        user: game.user,
-        content,
-        speaker: {
-            actor: actor?.id,
-            alias: actor?.name
-        }
+export async function CreateFalloutRollChatMessage(data={}) {
+    return _createChatMessage({
+        requirements: {
+            actor_id: undefined,
+            fallout: undefined,
+            resistance: undefined,
+            result: undefined,
+            total_stress: 0,
+        },
+        data,
+        template: 'fallout'
     });
 }

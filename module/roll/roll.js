@@ -1,50 +1,121 @@
-import {PrepareRollApplication} from '../applications/prepare-roll.js';
-import {PrepareStressRollApplication} from '../applications/prepare-stress-roll.js';
+import {CreateRollChatMessage, CreateStressRollChatMessage, CreateFalloutRollChatMessage} from './chat-messages.js';
 
-export function activateRollListeners(html) {
-    html.on('click', 'button[data-action=roll]', ev => {
-        ev.preventDefault();
-        const target = $(ev.currentTarget);
-        const form = target.closest("form");
-        const data = {};
+const difficulty_map = {
+    'standard': 0,
+    'risky': 1,
+    'dangerous': 2,
+    'impossible': 3,
+};
 
-        data.actor_id = form.find('[name=actor_id]').data('value');
-        data.difficulty = form.find('[name=difficulty]').val()
-        data.domain =  form.find('[name=domain]:checked').data('value');
-        data.domains = form.find('[name=domain]').map(function() { return $(this).data('value'); }).get();
-        data.skill =  form.find('[name=skill]:checked').data('value');
-        data.skills = form.find('[name=skill]').map(function() { return $(this).data('value'); }).get()
+export async function HeartRoll(data={}) {
+    const actor_id = data.actor_id || CONFIG.ChatMessage.documentClass.getSpeaker().actor;
+    if(!actor_id) {
+        ui.notifications.warn(game.i18n.localize("heart.warning:no_actor_selected"));
+        return;
+    }
 
-        data.actor_id = data.actor_id || CONFIG.ChatMessage.documentClass.getSpeaker().actor;
-        if(!data.actor_id) {
-            ui.notifications.warn(game.i18n.localize("heart.NoActorSelected"))
-            return;
+    const dice = [game.i18n.localize('heart.prepare:roll:base')];
+    if(data.skill) {
+        dice.push(game.i18n.localize(`heart.skill:${data.skill}`));
+    }
+
+    if(data.domain) {
+        dice.push(game.i18n.localize(`heart.domain:${data.domain}`));
+    }
+
+    if(data.mastery) {
+        dice.push(`${game.i18n.localize('heart.prepare:roll:mastery')}`);
+    }
+
+    for(let i=0; i<data.help; i++) {
+        dice.push(`${game.i18n.localize('heart.prepare:roll:help')}`);
+    }
+
+    let difficulty = difficulty_map[data.difficulty] || 0;
+    let result, roll, dicepairs;
+    if(data.difficulty === 'impossible') {
+        result = 'failure';
+    } else {
+        let action_table_type = 'normal';
+        let formula = `${dice.length}d10${difficulty > 0 ? `dh${difficulty}` : ''}kh`;
+
+        if (difficulty >= dice.length) {
+            action_table_type = 'difficult';
         }
 
-        const actor = game.actors.get(data.actor_id);
-        data.skills = data.skills.filter( x => actor?.data.data.skills[x].value );
-        data.domains = data.domains.filter( x => actor?.data.data.domains[x].value );
-        if(!data.skills.includes(data.skill)) data.skill = undefined;
-        if(!data.domains.includes(data.domain)) data.domain = undefined;
+        roll = await Roll.create(formula).evaluate({'async': true});
+        const resultValue = parseInt(roll.result);
+        const action_table_uuid = game.settings.get('heart', `${action_table_type}ActionTable`);
+        const action_table = await fromUuid(action_table_uuid);
+        dicepairs = roll.dice[0].results.map((roll, i) => { return {roll, flavor: dice[i]} });
+        result = action_table.getResultsForRoll(resultValue)[0].getChatText();
+    }
 
-        new PrepareRollApplication(data).render(true);
+    return CreateRollChatMessage({
+        actor_id,
+        difficulty: data.difficulty,
+        roll,
+        dicepairs,
+        result
     });
+}
 
-    html.on('click', 'button[data-action=roll-stress]', ev => {
-        ev.preventDefault();
-        const target = $(ev.currentTarget);
-        const form = target.closest("form");
-        const data = {};
+export async function HeartStressRoll(data={}) {
+    const actor_id = data.actor_id || CONFIG.ChatMessage.documentClass.getSpeaker().actor;
+    if(!actor_id) {
+        ui.notifications.warn(game.i18n.localize("heart.warning:no_actor_selected"));
+        return;
+    }
 
-        const actor_id = form.find('[name=actor_id]').val();
-        data.multiplier = parseInt(form.find('[name=multiplier]').val());
-        data.actor_id = actor_id;
+    const actor = game.actors.get(actor_id);
+    const resistance = data.resistance;
+    const roll_result = data.result;
+    const stress_di = data.stress_di;
 
-        if(!data.actor_id) {
-            ui.notifications.warn(game.i18n.localize("heart.NoActorSelected"))
-            return;
-        }
+    const multiplier = roll_result === 'critical_failure' ? 2 : 1;
+    const protection = actor.data.data.resistances[resistance].protection;
 
-        new PrepareStressRollApplication(data).render(true);
-    }); 
+    const stress_roll = await Roll.create(stress_di).evaluate({ 'async': true });
+    let result = parseInt(stress_roll.result);
+    let stress_gain = Math.max(0, result * multiplier - protection);
+
+    CreateStressRollChatMessage({
+        actor_id,
+        multiplier,
+        protection,
+        resistance,
+        result,
+        stress_gain,
+        stress_di,
+    });
+}
+
+export async function HeartFalloutRoll(data={}) {
+    const actor_id = data.actor_id || CONFIG.ChatMessage.documentClass.getSpeaker().actor;
+    if(!actor_id) {
+        ui.notifications.warn(game.i18n.localize("heart.warning:no_actor_selected"));
+        return;
+    }
+
+    const actor = game.actors.get(actor_id);
+    const resistance = data.resistance;
+
+    const total_stress = Object.values(actor.data.data.resistances).reduce((o, v) => {
+        return o + v.value;
+    }, 0);
+
+    const roll = await Roll.create('1d12').evaluate({ 'async': true });
+    const result = parseInt(roll.result);
+    let fallout = 'no_fallout'
+    if (result <= total_stress) {
+        fallout = result <= 6 ? 'minor_fallout': 'major_fallout';
+    }
+
+    CreateFalloutRollChatMessage({
+        actor_id,
+        resistance,
+        total_stress,
+        fallout,
+        result
+    });
 }

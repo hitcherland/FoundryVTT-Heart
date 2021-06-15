@@ -1,43 +1,37 @@
 <form class="heart">
     <input type="hidden" name="actor_id" value="{{actor.id}}"/>
-    
-    <h3>{{localize "Roll"}}</h3>
-    <table class="dice-tooltip heart-roll">
-        <tr class="dice-rolls">
+    <input type="hidden" name="result" value="{{result}}"/>
+
+    <h3>{{localizeHeart "result" "difficulty" difficulty}}</h3>
+    <div class="dice-tooltip">
+        <div class="flexrow dice-rolls">
             {{#each dicepairs as |dicepair|}}
-                <td class="center">
-                    <div class="roll d10 {{#if dicepair.roll.discarded}}discarded{{/if}} {{#if (eq dicepair.roll.result 1)}}min{{/if}} {{#if (eq dicepair.roll.result 10)}}max{{/if}}">
+            <div class="flexcol flexcenter margin-0-5em">
+                <div class="roll d10 {{#if dicepair.roll.discarded}}discarded{{/if}} {{#if (eq dicepair.roll.result 1)}}min{{/if}} {{#if (eq dicepair.roll.result 10)}}max{{/if}}">
                     {{dicepair.roll.result}}
-                    </div>
-                </td>
+                </div>
+                <label class="inflexible tag {{#if dicepair.roll.discarded}}discarded{{/if}} ">{{dicepair.flavor}}</label>
+            </div>
             {{/each}}
-        </tr>
-        <tr class="dice-rolls">
-            {{#each dicepairs as |dicepair|}}
-            <td class="center">
-                <label class="tag {{#if dicepair.roll.discarded}}discarded{{/if}} ">{{dicepair.flavor}}</label>
-            </td>
-            {{/each}}
-        </tr>
-    </table>
-    <h3>{{localize (concat "heart.RollResult" result)}}</h3>
+        </div>
+    </div>
+
+    <h3>{{localizeHeart "result" result}}</h3>
     <div class="margin-0-5em">
-        <div class="center">{{localize (concat (concat "heart.RollResult" result) "Description")}}</div>
+        <div class="center">{{localizeHeart "result" result "description"}}</div>
     </div>
     
-    {{#if (eq result "CriticalFailure")}}
+    {{#if (eq result "critical_failure")}}
     <button data-action="roll-stress">
         <span class="fas fa-dice"></span>
-        {{localize "heart.RollStress"}}
-        <input type="hidden" name="multiplier" value=2/>
+        {{localizeHeart "perform" "stress_roll"}}
     </button>
     {{/if}}
 
-    {{#if (or (eq result "Failure") (eq result "SuccessAtACost"))}}
+    {{#if (or (eq result "failure") (eq result "success_at_a_cost"))}}
     <button data-action="roll-stress">
         <span class="fas fa-dice"></span>
-        {{localize "heart.RollStress"}}
-        <input type="hidden" name="multiplier" value=1/>
+        {{localizeHeart "perform" "stress_roll"}}
     </button>
     {{/if}}
 </form>

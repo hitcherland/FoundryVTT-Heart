@@ -104,8 +104,7 @@
     text-transform:uppercase;
 }
 
-.dialog.heart .window-content .inflexible,
-.app.heart.sheet.actor.character .inflexible {
+.inflexible {
     flex: auto 0;
 }
 
@@ -131,8 +130,8 @@
     margin: 0;
 }
 
-.app.heart.sheet.actor.character .left-border {
-    margin-left: 0.2em;
+.heart .left-border {
+    margin-left: 0.5em;
 }
 
 .app.heart.sheet.actor.character .hint {
@@ -448,3 +447,14 @@
 .chat-message .quote::after {
     content: "”"
 }
+
+.table-layout-fixed {
+    table-layout: fixed;
+}
+
+.heart.sheet img.profile {
+    flex: 0 0 100px;
+    object-fit: contain;
+    border: none;
+  }
+  
