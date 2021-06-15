@@ -17,42 +17,42 @@ New buttons are available in the character sheet for players, or from the hotbar
 
 ![An example character sheet](https://i.imgur.com/8paJrcO.png)
 
-![Macros](https://i.imgur.com/DsW0Xvz.png)
+![Macros](https://i.imgur.com/wlnKvE4.png)
 
 ### Roll Requests
 
-A roll request is a clickable chat message that allows the players to roll with specific parameters.
-
-
-Rolls can be made via: 
+A roll request is a clickable chat message that allows the players to roll with specific parameters. Rolls can be made via: 
 * "Request Roll" button in a Character Sheet
 * "Prepare Roll Request" Macro
 
 Clicking on either of these will open a window like below:
+
 ![Blank Roll Request window](https://i.imgur.com/PkjB1Le.png)
  
-For example, preparing a roll request like this
+For example, preparing a roll request like this:
+
 ![Preparing a Roll Request](https://i.imgur.com/BwGaaIb.png)
 
-will create a chat message like this
+will create a chat message like this:
+
 ![Roll Request in Chat](https://i.imgur.com/nC3Sur9.png)
 
 ### Rolls
 
-This is a typical "Heart" `1d10` roll.
-
-Rolls can be made with the following: 
+This is a typical "Heart" `1d10` roll. Rolls can be made with the following: 
 * "Roll" button in a Character sheet
 * "Roll" button in chat message
 * "Prepare Roll" Macro
 
-As before, this will open a new window. Depending on the source, we might not need to fill in the difficulty setting. From the macro, we see
+As before, this will open a new window. Depending on the source, we might not need to fill in the difficulty setting. From the macro, we see:
+
 ![Without a predefined difficulty value](https://i.imgur.com/g7YBPQd.png)
 
-But from the chat message, we have
+But from the chat message, we have:
+
 ![With a predefined difficulty value](https://i.imgur.com/lFaXD5M.png)
 
-Again, this might result in chat messages like
+Again, this might result in chat messages like:
 
 ![Success roll](https://i.imgur.com/cGZjSqZ.png)
 ![Failure roll](https://i.imgur.com/dwtGFPA.png)
@@ -67,20 +67,21 @@ Stress rolls can be made with the following:
 * "Prepare Stress Roll" Macro
 
 From the macro:
+
 ![Prepare stress roll](https://i.imgur.com/0NzCkBf.png)
 
-which might result in
+which might result in:
+
 ![Stress chat message](https://i.imgur.com/ZZ1rZhJ.png)
 
 ### Fallout
 
-We also can manage fallout rolls
-
-Stress rolls can be made with the following: 
+We also can manage fallout rolls. Stress rolls can be made with the following: 
 * "Roll Fallout" button in a Character sheet
 * "Prepare Fallout Roll" Macro
 
 An example chat message as a result:
+
 ![Fallout Chat Message](https://i.imgur.com/DsW0Xvz.png)
 
 
