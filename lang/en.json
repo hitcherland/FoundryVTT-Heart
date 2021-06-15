@@ -26,7 +26,6 @@
     "heart.resistance:fortune": "Fortune",
     "heart.resistance:supplies": "Supplies",
 
-    
     "heart.skill": "Skill",
     "heart.skills": "Skills",
     "heart.skill:compel": "Compel",
@@ -38,7 +37,6 @@
     "heart.skill:kill": "Kill",
     "heart.skill:mend": "Mend",
     "heart.skill:sneak": "Sneak",
-
     
     "heart.domain": "Domain",
     "heart.domains": "Domains",
@@ -96,35 +94,6 @@
     "heart.fallout:no_fallout:description": "No fallout, continue onwards",
     "heart.fallout:minor_fallout:description": "Take a minor fallout and clear stress in the relevant resistance",
     "heart.fallout:major_fallout:description": "Take a major fallout and clear all stress",
-
-    "heart.RollBase": "Base",
-    "heart.ClearVARStress": "Clear {var} Stress",
-    "heart.TakeStress": "Take Stress",
-    "heart.RollFallout": "Roll Fallout",
-    "heart.RollFalloutHint": "Click to roll fallout",
-    "heart.PickCharacter": "Pick a Character",
-    "heart.EnterStress": "Enter Stress",
-    "heart.PickResistance": "Pick Resistance",
-    "heart.MoreFalloutInfoNeeded": "Roll Fallout",
-    "heart.SheetSkillSelect": "Click to select valid Skill(s)",
-    "heart.SheetDomainSelect": "Click to select valid Domain(s)",
-    "heart.RequestRoll": "Request Roll",
-    "heart.GMRequestedRoll": "The GM has requested a roll",
-
-    "heart.PrepareRollRequest": "Prepare a Roll Request",
-    "heart.PrepareRoll": "Prepare a Roll",
-
-    "heart.RollRequest": "Roll Request",
-
-    "heart.StressDiceSize": "Stress Dice Size",
-    "heart.RollStress": "Roll Stress",
-    "heart.TotalStress": "Total Stress",
-    "heart.DicePool": "Dice Pool",
-
-    "heart.RollFailedDifficultyRequired": "Failed to roll, difficulty setting required",
-    "heart.NoActorSelected": "No Actor Selected",
-    
-    "heart.RollRequestReason": "Roll Request Reason",
 
     "heart.difficulty": "Difficulty",
     "heart.difficulties": "Difficulties",
