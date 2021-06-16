@@ -30,13 +30,28 @@
     content: "";
 }
 
+.app.heart.sheet.actor.character .notepad .editor-content {
+    font-size: 15px;
+    line-height: 20px;
+    background-image: -moz-linear-gradient(top , transparent, transparent 19px,rgba(99, 0, 0, 0.2) 0px); 
+    background-image: -webkit-linear-gradient(top , transparent, transparent 19px,rgba(99, 0, 0, 0.2) 0px);  
+    background-size: 100% 20px;
+}
+
+.app.heart.sheet.actor.character .notepad .editor-content p {
+    margin: 0;
+}
+
+.heart .editor {
+    flex: 300px 1 1;
+}
+
 .app.heart.sheet.actor.character .width-auto {
     width: auto;
 }
 
 .app.heart.sheet.actor.character label {
     color: #630000;
-    flex-grow: 0.5;
 }
 
 .app.heart.sheet.actor.character th {
@@ -118,18 +133,6 @@
     flex: 20ex 1 0;
 }
 
-.app.heart.sheet.actor.character .notepad .editor-content {
-    font-size: 15px;
-    line-height: 20px;
-    background-image: -moz-linear-gradient(top , transparent, transparent 19px,rgba(99, 0, 0, 0.2) 0px); 
-    background-image: -webkit-linear-gradient(top , transparent, transparent 19px,rgba(99, 0, 0, 0.2) 0px);  
-    background-size: 100% 20px;
-}
-
-.app.heart.sheet.actor.character .notepad .editor-content p {
-    margin: 0;
-}
-
 .heart .left-border {
     margin-left: 0.5em;
 }
@@ -139,7 +142,7 @@
     font-size: 0.8em;
 }
 
-.app.heart.sheet.actor.character button {
+.app.heart.sheet.actor.character button:not(.tox-tbtn) {
     background: white;
     color: #630000;
     margin: 0.5em;
@@ -304,9 +307,13 @@
     margin: 1em;
 }
 
+.heart .flex001 {
+    flex: 0% 0 1;
+}
+
 
 .heart select,
-.heart button:not(.dialog-button) {
+.heart button:not(.dialog-button):not(.tox-tbtn) {
     color: white;
     background: #630000;
     border: 0;
