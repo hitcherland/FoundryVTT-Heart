@@ -73,18 +73,5 @@
             "equipment": "",
             "special": ""
         }
-    },
-    "Item": {
-        "types": ["class", "calling", "beat", "equipment", "resource", "skill", "fallout", "ability", "haunts", "tag"],
-        "resource": {
-            "value": "",
-            "domain": "",
-            "tags": []
-        },
-        "equipment": {
-            "type": "",
-            "dice_size": "d4",
-            "tags": []
-        }
     }
 }
