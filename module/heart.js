@@ -68,7 +68,6 @@ async function generateRandomResource() {
 }
 
 Hooks.once('init', function() {
-    Actors.unregisterSheet('core', ActorSheet)
     Actors.registerSheet('heart', ActorSheetHeartCharacter, {
         types: ["character"],
         makeDefault: true,
