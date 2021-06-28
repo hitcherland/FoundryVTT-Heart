@@ -20,7 +20,7 @@ export default function initialiseItems() {
     Items.unregisterSheet('core', ItemSheet);
     sheetModules.forEach((module) => {
         if(module.default === HeartItemSheet) return;
-        console.warn({data: module.data, module});
+        
         const data = module.data;
         let sheet;
         if(module.default instanceof ItemSheet) {
