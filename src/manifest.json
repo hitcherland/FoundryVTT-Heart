@@ -1,8 +1,5 @@
 {
     "templateVersion": 2,
-    "styles": [
-        "styles/heart.css"
-    ],
     "packs": [
         {
             "name": "action-tables",

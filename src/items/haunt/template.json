@@ -1,0 +1,7 @@
+{
+    "Item": {   
+        "haunt": {
+            "templates": ["has_description"]
+        }
+    }
+}

@@ -1,0 +1,13 @@
+{
+    "Actor": {
+        "delve": {
+            "domains": [],
+            "tier": [],
+            "stress": "",
+            "resistance": 10,
+            "events": [],
+            "connection": "",
+            "description": ""
+        }
+    }
+}

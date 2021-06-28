@@ -1,0 +1,10 @@
+<form class="heart sheet {{documentName}} {{type}} {{cssClass}} flexcol" autocomplete="off">
+    <div class="info">
+        <img class="profile" src="{{data.img}}" title="{{data.name}}" data-edit="img" />
+        <div class="text">
+            <input name="name" value="{{data.name}}" placeholder="{{localizeHeart type 'name'}}" />
+            <div class="subtitle">{{localizeHeart type}}</div>        
+        </div>
+    </div>
+    {{> @partial-block }}
+</form>

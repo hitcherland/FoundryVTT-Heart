@@ -1,0 +1,8 @@
+{
+    "Item": {   
+        "resource": {
+            "templates": ["is_rollable", "has_description"],
+            "domain": ""
+        }
+    }
+}

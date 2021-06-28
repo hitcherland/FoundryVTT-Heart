@@ -4,25 +4,15 @@
 //import {PrepareFalloutRollApplication} from '../applications/prepare-fallout-roll.js';
 
 import sheetHTML from './sheet.html';
+import HeartActorSheet from '../sheet';
 
-export default class CharacterSheet extends ActorSheet {
-    static get defaultOptions() {
-        return mergeObject(super.defaultOptions, {
-            classes: ["heart", "sheet", "actor", "character"],
-            width: 820,
-        });
-    }
-
+export default class CharacterSheet extends HeartActorSheet {
     get template() {
         return sheetHTML.path;
     }
 
-    getData() {
-        const data = super.getData();
-        if (data.data.img === CONST.DEFAULT_TOKEN) {
-            data.data.img = "systems/heart/assets/heart_logo_playbook.png";
-        }
-        return data;
+    get img() {
+        return 'systems/heart/assets/high-punch.svg';
     }
 
     activateListeners(html) {

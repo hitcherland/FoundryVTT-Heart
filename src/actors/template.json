@@ -36,42 +36,6 @@
                     "wild": {"value": false, "knack": ""}
                 }
             }
-        },
-        "character": {
-            "templates": ["resistance", "skills", "domains"],
-            "class": "",
-            "calling": "",
-            "active_beats": [],
-            "equipment": [],
-            "resources": [],
-            "abilities": [],
-            "fallout": []
-        },
-        "delve": {
-            "domains": [],
-            "tier": [],
-            "stress": "",
-            "resistance": 10,
-            "events": [],
-            "connection": "",
-            "description": ""
-        },
-        "landmark": {
-            "domains": [],
-            "description": "",
-            "stress": "d4",
-            "haunts": []
-        },
-        "adversary": {
-            "names": "",
-            "descriptors": "",
-            "motivation": "",
-            "difficulty": "",
-            "resistance": "",
-            "protection": "",
-            "resources": [],
-            "equipment": "",
-            "special": ""
         }
     }
 }

@@ -1,7 +1,9 @@
 import templates from './**/*.@(html|handlebars|hbs)';
-
+import './index.sass';
+import './common/sheet.sass';
 
 import initialiseActors from './actors/actors';
+import initialiseItems from './items/items';
 
 
 /*
@@ -48,6 +50,7 @@ function titlecase(str) {
 function initialise() {
     activateTemplates();
     initialiseActors();
+    initialiseItems();
 
     game.heart = {
         titlecase,

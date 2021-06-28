@@ -1,0 +1,16 @@
+$red: #630000
+$bg-for-red: #949494
+$red-black: #2c2c2c
+$black: #000
+$white: #fff
+$red-transparent: rgba(99, 0, 0, 0.2)
+
+@mixin notepad
+    font-size: 15px
+    line-height: 20px
+    background-image: -moz-linear-gradient(top , transparent, transparent 19px,$red-transparent 0px)
+    background-image: -webkit-linear-gradient(top , transparent, transparent 19px, $red-transparent 0px)
+    background-size: 100% 20px
+
+    p
+        margin: 0

@@ -1,0 +1,8 @@
+{
+    "Item": {   
+        "equipment": {
+            "templates": ["is_rollable", "has_description"],
+            "type": ""
+        }
+    }
+}

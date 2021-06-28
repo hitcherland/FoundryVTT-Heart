@@ -1,14 +1,15 @@
 // modules we need
 const path = require('path');
+const glob = require('glob');
 const CopyPlugin = require('copy-webpack-plugin');
 const FoundryVTTSymlinkPlugin = require('./dev-utils/foundryvtt-symlink');
+const FoundryVTTTemplateMerger = require('./dev-utils/foundryvtt-template-merger');
 const config = require('./foundryvtt.config.js');
 
 // auto calculated values
 const {type, name} = config;
 const distPath = path.resolve(__dirname, 'dist');
 const publicPath = `/${type}s/${name}/`;
-const package = require('./package.json');
 
 function transformManifest(content) {
     // Convert string to object
@@ -32,7 +33,7 @@ function transformManifest(content) {
         if(manifest.url === undefined) manifest.url = `https://github.com/${githubRepo}`;
         if(manifest.manifest === undefined) manifest.manifest = `https://raw.githubusercontent.com/${githubRepo}/${githubBranch}/${type}.json`;
         if(manifest.readme === undefined) manifest.readme = `https://raw.githubusercontent.com/${githubRepo}/${githubBranch}/README.md`;
-        if(manifest.download === undefined) manifest.download = `https://github.com/${githubRepo}/archive/refs/tags/${package.version}.zip`;
+        if(manifest.download === undefined) manifest.download = `https://github.com/${githubRepo}/archive/refs/tags/${config.version}.zip`;
     }
 
     // Return as nicely parsed string
@@ -90,6 +91,7 @@ module.exports = {
         writeToDisk: true
     },
     plugins: [
+        new FoundryVTTTemplateMerger(distPath),
         new CopyPlugin({
             patterns: [
                 {
@@ -108,6 +110,6 @@ module.exports = {
                 },
             ],
         }),
-        new FoundryVTTSymlinkPlugin(name, type, distPath, config.foundryvttPath)
+        new FoundryVTTSymlinkPlugin(name, type, distPath, config.foundryvttPath),
     ],
 };

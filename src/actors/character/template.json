@@ -1,0 +1,14 @@
+{
+    "Actor": {
+        "character": {
+            "templates": ["resistance", "skills", "domains"],
+            "class": "",
+            "calling": "",
+            "active_beats": [],
+            "equipment": [],
+            "resources": [],
+            "abilities": [],
+            "fallout": []
+        }
+    }
+}

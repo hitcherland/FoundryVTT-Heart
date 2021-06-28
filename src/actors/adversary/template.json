@@ -1,0 +1,15 @@
+{
+    "Actor": {
+        "adversary": {
+            "names": "",
+            "descriptors": "",
+            "motivation": "",
+            "difficulty": "",
+            "resistance": "",
+            "protection": "",
+            "resources": [],
+            "equipment": "",
+            "special": ""
+        }
+    }
+}
