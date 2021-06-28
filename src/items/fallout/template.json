@@ -1,0 +1,7 @@
+{
+    "Item": {   
+        "fallout": {
+            "templates": ["has_description"]
+        }
+    }
+}

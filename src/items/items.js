@@ -1,23 +1,40 @@
 import './items.sass';
 
-import EquipmentSheet from './equipment/sheet'
-import ResourceSheet from './resource/sheet'
-import HauntSheet from './haunt/sheet'
+import HeartItemSheet from './sheet';
+import sheetModules from './**/sheet.js';
 
-const sheets = {
-    'equipment': EquipmentSheet,
-    'resource': ResourceSheet,
-    'haunt': HauntSheet
-};
+function ItemSheetFactory(data) {
+    const safe_data = Object.freeze({...data});
+    return class extends HeartItemSheet {
+        get template() {
+            return safe_data.template;
+        }
+    
+        get img() {
+            return safe_data.img;
+        }
+    }
+}
 
 export default function initialiseItems() {
     Items.unregisterSheet('core', ItemSheet);
+    sheetModules.forEach((module) => {
+        if(module.default === HeartItemSheet) return;
+        console.warn({data: module.data, module});
+        const data = module.data;
+        let sheet;
+        if(module.default instanceof ItemSheet) {
+            sheet = module.default;
+        } else if(data.sheet instanceof ItemSheet) {
+            sheet = data.sheet
+        } else {
+            sheet = ItemSheetFactory(data);
+        }
 
-    Object.entries(sheets).forEach(function([key, sheet]) {
         Items.registerSheet('heart', sheet, {
-            types: [key],
+            types: [data.type],
             makeDefault: true,
-            label: `heart.${key}`
+            label: `heart.${data.type}`
         });
     });
 }

@@ -1,0 +1,7 @@
+{
+    "Item": {   
+        "ability": {
+            "templates": ["has_description"]
+        }
+    }
+}

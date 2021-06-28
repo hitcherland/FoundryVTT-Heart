@@ -1,0 +1,8 @@
+{
+    "Item": {   
+        "beat": {
+            "templates": ["has_description"],
+            "type": ""
+        }
+    }
+}

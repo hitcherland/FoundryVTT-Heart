@@ -1,12 +1,11 @@
 import sheetHTML from './sheet.html';
-import HeartItemSheet from '../sheet';
 
-export default class ResourceSheet extends HeartItemSheet {
-    get template() {
-        return sheetHTML.path;
-    }
+const data = Object.freeze({
+    type: 'fallout',
+    img: 'systems/heart/assets/ore.svg',
+    template: sheetHTML.path,
+});
 
-    get img() {
-        return 'systems/heart/assets/ore.svg';
-    }
+export {
+    data
 }

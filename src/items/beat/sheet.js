@@ -1,8 +1,8 @@
 import sheetHTML from './sheet.html';
 
 const data = Object.freeze({
-    type: 'fallout',
-    img: 'systems/heart/assets/prayer.svg',
+    type: 'beat',
+    img: 'systems/heart/assets/drum.svg',
     template: sheetHTML.path,
 });
 
