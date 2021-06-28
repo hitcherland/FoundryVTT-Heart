@@ -6,6 +6,10 @@
     "heart.character:knacks": "Knacks",
     "heart.character:roll_fallout(resistance)": "Roll {resistance} Fallout",
 
+    "heart.adversary": "Adversary",
+    "heart.delve": "Delve",
+    "heart.landmark": "Landmark",
+
     "heart.calling": "Calling",
 
     "heart.class": "Class",

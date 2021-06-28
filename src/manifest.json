@@ -1,0 +1,29 @@
+{
+    "templateVersion": 2,
+    "styles": [
+        "styles/heart.css"
+    ],
+    "packs": [
+        {
+            "name": "action-tables",
+            "label": "Heart Default Action Tables",
+            "system": "heart",
+            "path": "./packs/action-tables.db",
+            "entity": "RollTable"
+        }, {
+            "name": "macros",
+            "label": "Useful Heart Macros",
+            "system": "heart",
+            "path": "./packs/macros.db",
+            "entity": "Macro"
+        }
+    ],
+    "languages": [
+        {
+            "lang": "en",
+            "name": "English",
+            "path": "lang/en.json"
+        }
+    ],
+    "socket": false
+}

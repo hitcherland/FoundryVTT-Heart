@@ -1,0 +1,30 @@
+{
+  "name": "foundryvtt-heart",
+  "version": "0.0.1",
+  "description": "A red wet heaven slumbers fitful under the city of Spire. A FoundryVTT system for Heart - The City Beneath. Purchase at https://rowanrookanddecard.com/product/heart-the-city-beneath-rpg/",
+  "main": "src/index.js",
+  "scripts": {
+    "symlink": "node symlink",
+    "build": "webpack --mode development",
+    "build-prod": "webpack --mode production",
+    "watch": "webpack serve --hot",
+    "release": "npm run build-prod && node dev-utils/github-repo.js"
+  },
+  "keywords": [
+    "foundryvtt"
+  ],
+  "author": "hitcherland",
+  "license": "ISC",
+  "devDependencies": {
+    "copy-webpack-plugin": "^9.0.1",
+    "css-loader": "^5.2.6",
+    "gh-pages": "^3.2.3",
+    "sass": "^1.35.1",
+    "sass-loader": "^12.1.0",
+    "style-loader": "^3.0.0",
+    "webpack": "^5.40.0",
+    "webpack-cli": "^4.7.2",
+    "webpack-dev-server": "^3.11.2",
+    "webpack-import-glob-loader": "^1.6.3"
+  }
+}

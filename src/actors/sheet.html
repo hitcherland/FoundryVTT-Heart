@@ -1,0 +1,10 @@
+<form class="heart actor {{type}} {{cssClass}} flexcol" autocomplete="off">
+    <div class="flexrow">
+        <img class="profile" src="{{data.img}}" title="{{actor.name}}" data-edit="img" />
+        <div class="flexcol">
+            <h1>{{localizeHeart type}}</h1>
+            <input name="name" value="{{actor.name}}" placeholder="{{localizeHeart type 'name'}}" />
+        </div>
+    </div>
+    {{editor content=actor.data.data.description target="data.description" button=true editable=editable owner=owner}}
+</form>

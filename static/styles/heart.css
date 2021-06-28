@@ -30,7 +30,7 @@
     content: "";
 }
 
-.app.heart.sheet.actor.character .notepad .editor-content {
+.app.heart.sheet.actor .notepad .editor-content {
     font-size: 15px;
     line-height: 20px;
     background-image: -moz-linear-gradient(top , transparent, transparent 19px,rgba(99, 0, 0, 0.2) 0px); 
@@ -38,7 +38,7 @@
     background-size: 100% 20px;
 }
 
-.app.heart.sheet.actor.character .notepad .editor-content p {
+.app.heart.sheet.actor .notepad .editor-content p {
     margin: 0;
 }
 
