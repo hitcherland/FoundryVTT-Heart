@@ -77,6 +77,12 @@ function initialise() {
         return output;
     });
 
+    Handlebars.registerHelper('join', function(separator, ...items) {
+        const options = items.pop();
+        const array = options.hash.array || [];
+        return [...items, ...array].join(separator);
+    });
+
     Handlebars.registerHelper('concat', function(a, b) {
         return a + b;
     });
@@ -142,6 +148,7 @@ if (module.hot) {
 
         // Refresh all open windows with new css and/or html
         Object.values(ui.windows).forEach(function(window) {
+            console.warn(window);
             window.render(true);
         });
     }

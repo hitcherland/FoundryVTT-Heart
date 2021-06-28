@@ -1,47 +1,78 @@
 @use '../util'
     
 .heart.sheet.actor
-    .info
-        display: flex
-        flex: 0% 0 1
-        flex-flow: row wrap
-        place-items: center
-        place-content: center
-        background: util.$bg-for-red
-    
-    .info > *
-        flex: 0% 1 1
 
-    img.profile
-        flex-grow: 1
-        background: rgba(0, 0, 0, 0.5)
-        cursor: pointer
-        max-height: 6em
-
-    .text
-        flex-grow: 3
-        display: flex
-        flex-flow: column
-
-    input[name=name]
-        grid-area: 1 / 2 / 2 / 3
-        flex-grow: 0
-        font-size: 2em
-        border: 0
-        align-self: bottom
-        text-align: center
-        background: none
-        color: util.$red
-        font-weight: bold
-
-    .actor-type
-        color: util.$red-black
-        font-size: 1.2em
+    h2
+        font-family: 'MelmaCracked'
         text-transform: uppercase
-        font-style: italic
-        align-self: top
+        color: util.$red
+        border: 0
+        font-weight: bold
+        margin: 0
+        padding: 0
         flex-grow: 0
-        text-align: center
+
+        &> div
+            font-size: 1rem
+            color: util.$black
+
+    h3
+        font-family: 'MelmaCracked'
+        font-size: 1.5em
+        text-transform: uppercase
+        color: util.$red
+        border: 0
+        font-weight: bold
+        margin: 0
+        padding: 0
+        flex-grow: 0
 
     .editor-content 
         @include util.notepad
+
+    &.base
+
+        .item-list
+            flex-basis: 0%
+
+        .info
+            display: flex
+            flex: 0% 0 1
+            flex-flow: row wrap
+            place-items: center
+            place-content: center
+            background: util.$bg-for-red
+        
+        .info > *
+            flex: 0% 1 1
+
+        img.profile
+            flex-grow: 1
+            background: rgba(0, 0, 0, 0.5)
+            cursor: pointer
+            max-height: 6em
+
+        .text
+            flex-grow: 3
+            display: flex
+            flex-flow: column
+
+        input[name=name]
+            grid-area: 1 / 2 / 2 / 3
+            flex-grow: 0
+            font-size: 2em
+            border: 0
+            align-self: bottom
+            text-align: center
+            background: none
+            color: util.$red
+            font-weight: bold
+
+        .actor-type
+            color: util.$red-black
+            font-size: 1.2em
+            text-transform: uppercase
+            font-style: italic
+            align-self: top
+            flex-grow: 0
+            text-align: center

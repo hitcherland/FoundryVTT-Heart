@@ -1,109 +1,143 @@
-<form class="heart actor character {{cssClass}} flexcol" autocomplete="off">
-    <div class="flexrow">
-        <div class="flexcol col">
+{{#*inline "itemList"}}
+    {{#if (lookup heart type)}}
+    <div class="item-list">
+        {{#each (lookup heart type) as |item|}}
+            <div data-item="{{item.data._id}}">
+                {{> @partial-block }}
 
-            <img class="profile" src="{{data.img}}" title="{{actor.name}}" data-edit="img"/>
-            <div class="center">
-                <button data-action="prepare-request-roll"><span class="fas fa-dice"></span> {{localizeHeart "perform" "roll_request"}}</button>
-                <button data-action="prepare-roll"><span class="fas fa-dice"></span> {{localizeHeart "perform" "roll"}}</button>
-                <button data-action="prepare-stress-roll"><span class="fas fa-dice"></span> {{localizeHeart "perform" "stress_roll"}}</button>
-                <button data-action="prepare-fallout-roll"><span class="fas fa-dice"></span> {{localizeHeart "perform" "fallout_roll"}}</button>
-            </div>
-            
-            <div class="flexcol">
-                <div class="flexrow">
-                    <label>{{localizeHeart "character" "name"}}</label>
-                    <input name="name" value="{{actor.name}}"/>
-                </div>
-                <div class="flexrow">
-                    <label>{{localizeHeart "class"}}</label>
-                    <input name="data.class" value="{{actor.data.data.class}}"/>
-                </div>
-                <div class="flexrow">
-                    <label>{{localizeHeart "calling"}}</label>
-                    <input name="data.calling" value="{{actor.data.data.calling}}"/>
+                <div class="right">
+                    <a data-action="view"><span class="fas fa-eye"></span></a>
+                    {{#if isOwner}}
+                        <a data-action="edit"><span class="fas fa-edit"></span></a>
+                        <a data-action="delete"><span class="fas fa-trash"></span></a>
+                    {{/if}}
                 </div>
             </div>
-            <div class="flexcol flex-30ex notepad">
-                <label class="inflexible flex001">{{localizeHeart "character" "active_beats"}}</label>
-                {{editor content=actor.data.data.active_beats target="data.active_beats" button=true editable=editable owner=owner}}
-            </div>
-            <div class="flexcol flex-30ex notepad">
-                <label class="inflexible flex001">{{localizeHeart "equipment"}}</label>
-                {{editor content=actor.data.data.equipment target="data.equipment" button=true editable=editable owner=owner}}
-            </div>
-            <div class="flexcol flex-30ex notepad">
-                <label class="inflexible flex001">{{localizeHeart "resources"}}</label>
-                {{editor content=actor.data.data.resources target="data.resources" button=true editable=editable owner=owner}}
-            </div>
-            <div class="flexrow">
-                <table class="skills">
-                    <tr>
-                        <th class="center">{{localizeHeart "skills"}}</th>
-                        <th class="faded">{{localizeHeart "character" "knacks"}}</th>
-                    </tr>
-                    {{#each actor.data.data.skills as |skill name|}}
-                    <tr>
-                        <td>
-                            <input type="checkbox" name="data.skills.{{name}}.value" {{checked skill.value}}/>
-                            <span>{{localizeHeart "skill" name}}</span>
-                        </td>
-                        <td>
-                            <input name="data.skills.{{name}}.knack" value="{{skill.knack}}"/>
-                        </td>
-                    </tr>
-                    {{/each}}
-                </table>
-                <table class="domains">
-                    <tr>
-                        <th class="center">{{localizeHeart "domains"}}</th>
-                        <th class="faded">{{localizeHeart "character" "knacks"}}</th>
-                    </tr>
-                    {{#each actor.data.data.domains as |domain name|}}
-                    <tr>
-                        <td>
-                            <input type="checkbox" name="data.domains.{{name}}.value" {{checked domain.value}}/>
-                            {{localizeHeart "domain" name}}
-                        </td>
-                        <td>
-                            <input name="data.domains.{{name}}.knack" value="{{domain.knack}}"/>
-                        </td>
-                    </tr>
-                    {{/each}}
-                </table>
+        {{/each}}
+    </div>
+    {{/if}}
+{{/inline}}
+
+<div class="heart flexrow buttons">
+    <button data-action="prepare-request-roll"><span class="fas fa-dice"></span> {{localizeHeart "perform" "roll_request"}}</button>
+    <button data-action="prepare-roll"><span class="fas fa-dice"></span> {{localizeHeart "perform" "roll"}}</button>
+    <button data-action="prepare-stress-roll"><span class="fas fa-dice"></span> {{localizeHeart "perform" "stress_roll"}}</button>
+    <button data-action="prepare-fallout-roll"><span class="fas fa-dice"></span> {{localizeHeart "perform" "fallout_roll"}}</button>
+</div>
+<form class="heart sheet actor character {{cssClass}}" autocomplete="off">
+    <div class="grid-2 place-top">
+        <img class="profile" src="{{data.img}}" title="{{actor.name}}" data-edit="img"/>
+        <div class="grid-3 resistances place-top">
+            <div></div>
+            <div></div>
+            <h3 class="center">{{localizeHeart "character" "protections"}}</h3>
+            {{#each actor.data.data.resistances as |resistance name|}}
+                <h3 class="left">{{localizeHeart "resistance" name}}</h3>
+                <div class="red" data-target='data.resistances.{{name}}.value'>{{{ordered-checkable resistance.value 10}}}</div>
+                <div class="red" data-target='data.resistances.{{name}}.protection'>{{{ordered-checkable resistance.protection 5}}}</div>
+            {{/each}}
+        </div>
+        <div class="info">
+            <div class="grid-2 auto-first-col place-center">
+                <h2>{{localizeHeart "character" "name"}}</h2>
+                <input name="name" value="{{actor.name}}"/>
+                <h2>{{localizeHeart "class"}}</h2>
+                <input name="data.class" value="{{actor.data.data.class}}"/>
+                <h2>{{localizeHeart "calling"}}</h2>
+                <input name="data.calling" value="{{actor.data.data.calling}}"/>
             </div>
         </div>
-        <div class="flexcol col">
-            <div class="inflexible">
-                <table>
-                    <tr>
-                        <td></td>
-                        <td></td>
-                        <th class="center">{{localizeHeart "character" "protections"}}</td>
-                    </tr>
-                    {{#each actor.data.data.resistances as |resistance name|}}
-                    <tr>
-                        <th>{{localizeHeart "resistance" name}}</th>
-                        <td data-target='data.resistances.{{name}}.value'>{{{ordered-checkable resistance.value 10}}}</td>
-                        <td class="center left-border" data-target='data.resistances.{{name}}.protection'>{{{ordered-checkable resistance.protection 5}}}</td>
-                    </tr>
-                    {{/each}}
-                </table>
-            </div>
-            <div class="flexcol">
-                <div class="flexcol notepad">
-                    <div class="inflexible flex001">
-                        <h3 class="width-auto invert very sketchy">{{localizeHeart "abilities"}}</h3>
-                    </div>
-                    {{editor content=actor.data.data.abilities target="data.abilities" button=true editable=editable owner=owner}}
+        <div class="beats">
+            <h2>
+                {{localizeHeart "character" "active_beats"}}
+                {{#if actor.isOwner}}
+                <div class="right">
+                    <a data-action="add" data-type="beat"><span class="fas fa-plus"></span></a>
                 </div>
-                <div class="flexcol notepad">
-                    <div class="inflexibl flex001">
-                        <h3 class="invert sketchy ">{{localizeHeart "fallout"}}</h3>
-                    </div>
-                    {{editor content=actor.data.data.fallout target="data.fallout" button=true editable=editable owner=owner}}
+                {{/if}}
+            </h2>
+            {{#> itemList "beat" }}
+                {{item.name}}
+                ({{join ", " item.data.data.di_size item.data.data.domain array=item.data.data.tags}})
+            {{/itemList}}
+            {{editor content=actor.data.data.active_beats target="data.active_beats" button=true editable=editable owner=owner}}
+        </div>
+        
+        <div class="equipment">
+            <h2>{{localizeHeart "equipment"}}
+                {{#if actor.isOwner}}
+                <div class="right">
+                    <a data-action="add" data-type="equipment"><span class="fas fa-plus"></span></a>
                 </div>
+                {{/if}}
+            </h2>
+            {{#> itemList "equipment" }}
+                {{item.name}}
+                ({{join ", " item.data.data.di_size item.data.data.domain array=item.data.data.tags}})
+            {{/itemList}}
+            {{editor content=actor.data.data.equipment target="data.equipment" button=true editable=editable owner=owner}}
+        </div>
+
+        <div class="resources">
+            <h2>{{localizeHeart "resources"}}
+                {{#if actor.isOwner}}
+                <div class="top right">
+                    <a data-action="add" data-type="resource"><span class="fas fa-plus"></span></a>
+                </div>
+                {{/if}}
+            </h2>
+            {{#> itemList "resource" }}
+                {{item.name}}
+                ({{join ", " item.data.data.di_size array=item.data.data.tags}})
+            {{/itemList}}
+            <div>
+                {{editor content=actor.data.data.resources target="data.resources" button=true editable=editable owner=owner}}
             </div>
+        </div>
+        <div class="abilities">
+            <h2>
+                {{localizeHeart "abilities"}}
+                {{#if actor.isOwner}}
+                <div class="top right">
+                    <a data-action="add" data-type="ability"><span class="fas fa-plus"></span></a>
+                </div>
+                {{/if}}
+            </h2>
+            {{editor content=actor.data.data.abilities target="data.abilities" button=true editable=editable owner=owner}}
+        </div>
+        <div class="fallout">
+            <h2>
+                {{localizeHeart "fallout"}}
+                {{#if actor.isOwner}}
+                <div class="top right">
+                    <a data-action="add" data-type="ability"><span class="fas fa-plus"></span></a>
+                </div>
+                {{/if}}
+            </h2>
+            {{editor content=actor.data.data.fallout target="data.fallout" button=true editable=editable owner=owner}}
+        </div>
+        <div class="skills grid-2 auto-first-col">
+            <h3 class="center">{{localizeHeart "skills"}}</h3>
+            <h3 class="faded">{{localizeHeart "character" "knacks"}}</h3>
+            {{#each actor.data.data.skills as |skill name|}}
+                <div class="flexrow">
+                    <input type="checkbox" name="data.skills.{{name}}.value" {{checked skill.value}}/>
+                    <span class="bold">{{localizeHeart "skill" name}}</span>
+                </div>
+                <input name="data.skills.{{name}}.knack" value="{{skill.knack}}"/>
+            {{/each}}
+        </div>
+
+        <div class="domains grid-2 auto-first-col">
+            <h3 class="center">{{localizeHeart "domains"}}</h3>
+            <h3 class="faded">{{localizeHeart "character" "knacks"}}</h3>
+            {{#each actor.data.data.domains as |domain name|}}
+                <div class="flexrow">
+                    <input type="checkbox" name="data.domains.{{name}}.value" {{checked domain.value}}/>
+                    <span class="bold">{{localizeHeart "domain" name}}</span>
+                </div>
+                <input name="data.domains.{{name}}.knack" value="{{domain.knack}}"/>
+            {{/each}}
         </div>
     </div>
 </form>

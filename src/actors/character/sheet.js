@@ -4,6 +4,7 @@
 //import {PrepareFalloutRollApplication} from '../applications/prepare-fallout-roll.js';
 
 import sheetHTML from './sheet.html';
+import './character.sass';
 import HeartActorSheet from '../sheet';
 
 export default class CharacterSheet extends HeartActorSheet {
