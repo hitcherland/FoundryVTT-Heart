@@ -5,6 +5,8 @@ import './common/sheet.sass';
 import initialiseActors from './actors/actors';
 import initialiseItems from './items/items';
 
+import * as heart_roll from './rolls/heart-roll/roll';
+
 
 /*
 import {activateRollListeners} from './module/roll/chat-log.js';
@@ -68,6 +70,8 @@ function initialise() {
         roll_results: ['critical_failure', 'failure', 'success_at_a_cost', 'success', 'critical_success'],
         stress_results: ['no_fallout', 'minor_fallout', 'major_fallout']
     };
+
+    heart_roll.initialise();
 
     Handlebars.registerHelper('ordered-checkable', function(value, max) {
         let output = '';

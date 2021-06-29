@@ -88,8 +88,8 @@ An example chat message as a result:
 ## TODO
 
 - [x] Make a basic fillable character sheet.
-- [ ] Get a hold of the fonts, or something like them (main one is "The Bartender Condensed Serif Press" by Vintage Voyage Design Supply)
-- [ ] Convert Equipment, Resources, Abilities and Fallout from a textfield to a list of textfields
+- [x] Get a hold of the fonts, or something like them (main one is "The Bartender Condensed Serif Press" by Vintage Voyage Design Supply)
+- [x] Convert Equipment, Resources, Abilities and Fallout from a textfield to a list of textfields
 - [ ] Make Equipment & Resources Rollable
 - [x] Add a roller that lets you pick skill, domain, knacks & mastery, difficulty etc
 - [x] Add a stress roller
@@ -97,4 +97,4 @@ An example chat message as a result:
 - [ ] Look into adding "class" and "calling" items
 - [ ] Add ChatMessage buttons to clear stress when receiving fallout
 - [ ] Cleanup translation file
-- [ ] Cleanup CSS file
+- [x] Cleanup CSS file
