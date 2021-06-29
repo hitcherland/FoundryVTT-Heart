@@ -1,0 +1,20 @@
+<div class="dice-tooltip">
+    {{#each parts}}
+    <section class="tooltip-part">
+        <div class="dice">
+            <header class="part-header">
+                {{#if this.flavor}}<span class="part-formula">{{this.flavor}}</span>{{/if}}
+            </header>
+            <ol class="dice-rolls">
+            {{#each this.rolls as |roll index|}}
+                {{#if (numEq @../index ../../kept)}}
+                <li class="roll {{this.classes}}">{{{roll.result}}}</li>
+                {{else}}
+                <li class="roll discarded {{this.classes}}">{{{roll.result}}}</li>
+                {{/if}}
+            {{/each}}
+            </ol>
+        </div>
+    </section>
+    {{/each}}
+</div>

@@ -120,5 +120,9 @@
     "heart.result:critical_failure": "Critical Failure",
     "heart.result:critical_failure:description": "Fail, and take double stress.",
 
-    "heart.warning:no_actor_selected": "No Actor Selected"
+    "heart.warning:no_actor_selected": "No Actor Selected",
+
+    "heart.roll:description(difficulty, count)": "{difficulty} Roll with {count} dice",
+    "heart.stress_roll:description(dice_size,result)": "{dice_size} Stress Roll from a {result} roll",
+    "heart.stress_roll:take_stress": "Take Stress"
 }
