@@ -16,7 +16,7 @@ export function initialise() {
 }
 
 export default class StressRoll extends Roll {
-    static CHAT_TEMPLATE = chatTemplateHTML.path;
+    static get CHAT_TEMPLATE() { return chatTemplateHTML.path; }
 
     static build(result, dice_size, data={}, options={}) {
         options.result = result;

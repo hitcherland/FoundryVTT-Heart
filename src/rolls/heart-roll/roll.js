@@ -41,8 +41,8 @@ export function initialise() {
 }
 
 export default class HeartRoll extends Roll {
-    static CHAT_TEMPLATE = chatTemplateHTML.path;
-    static TOOLTIP_TEMPLATE = tooltipTemplateHTML.path;
+    static get CHAT_TEMPLATE() { return chatTemplateHTML.path; }
+    static get TOOLTIP_TEMPLATE() { return tooltipTemplateHTML.path; } 
 
     static fromPools(pools = {}, data={}, options={}) {
         const {
