@@ -5,6 +5,36 @@
     font-family: 'MelmaCracked'
     src: url(fonts/melma/MelmaCracked.ttf)
 
+.title-font
+    font-family: 'MelmaCracked'
+
+input.hidden
+    display: none
+
+input.toggle-display
+    & ~ *
+        max-height: 0
+        overflow: hidden
+        transition: max-height 0.2s ease-out
+
+    &:checked ~ *
+        max-height: 20em
+        transition: max-height 0.2s ease-in
+
+.toggle-button
+    font-family: 'MelmaCracked'
+    color: black
+    font-size: 1.5em
+    text-align: center
+    display: flex
+    flex-flow: row wrap
+    justify-content: center
+    padding: 0.2em
+    margin: 0.3em 0
+    border-radius: 0.2em
+    background: util.$white
+    border: 3px solid util.$black
+
 .chat-message
     background: util.$red
     color: util.$white
