@@ -23,7 +23,6 @@ export default class HeartActorSheet extends HeartSheetMixin(ActorSheet) {
         });
 
         data.heart = items;
-        console.warn({data, items});
 
         return data;
     }

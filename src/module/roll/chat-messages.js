@@ -12,9 +12,7 @@ async function _createChatMessage({data={}, requirements={}, template}, {user, s
     speaker.alias = speaker.alias || actor?.name;
     speaker.token = speaker.token || null;
     speaker.scene = speaker.scene || null;
-
-    console.log(speaker);
-
+    
     return CONFIG.ChatMessage.documentClass.create({
         content: await renderTemplate(template_path, allowed_data),
         speaker,

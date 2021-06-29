@@ -5,6 +5,34 @@
     font-family: 'MelmaCracked'
     src: url(fonts/melma/MelmaCracked.ttf)
 
+.chat-message
+    background: util.$red
+    color: util.$white
+    border-color: util.$bg-for-red
+
+    .message-header
+        color: util.$white
+
+    .dice-roll
+        .dice-formula, .dice-total
+            background: util.$white
+            color: util.$red
+            border-color: util.$bg-for-red
+    
+        .dice
+            .part-header
+                border-bottom-color: util.$white
+
+                .part-formula
+                    text-transform: uppercase
+
+            .dice-rolls .roll.discarded
+                filter: sepia(0.5) contrast(0.75) opacity(0.5)
+
+
+
+    
+
 .heart
     font-family: 'Alegreya', serif
     
