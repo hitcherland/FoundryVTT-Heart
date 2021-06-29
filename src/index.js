@@ -6,6 +6,7 @@ import initialiseActors from './actors/actors';
 import initialiseItems from './items/items';
 
 import * as heart_roll from './rolls/heart-roll/roll';
+import * as stress_roll from './rolls/stress-roll/roll';
 
 
 /*
@@ -72,6 +73,7 @@ function initialise() {
     };
 
     heart_roll.initialise();
+    stress_roll.initialise();
 
     Handlebars.registerHelper('ordered-checkable', function(value, max) {
         let output = '';
@@ -95,16 +97,20 @@ function initialise() {
         return a[0].toUpperCase() + a.slice(1);
     });
 
-    Handlebars.registerHelper('includes', function(a, b, options) {
-        if(a === undefined) {
-            console.warn('includes has undefined A', a, b, options);
+    Handlebars.registerHelper('includes', function(array, item, options) {
+        if(array === undefined) {
+            console.warn('includes has undefined array', array, item, options);
             return false;
         }
-        return a.includes(b);
+        return array.includes(item);
     });
 
-    Handlebars.registerHelper('randomID', function(a, b) {
+    Handlebars.registerHelper('randomID', function() {
         return randomID();
+    });
+
+    Handlebars.registerHelper('numEq', function(a, b) {
+        return a == b;
     });
 
     Handlebars.registerHelper('notification', function(target, targetName, options) {
@@ -152,7 +158,6 @@ if (module.hot) {
 
         // Refresh all open windows with new css and/or html
         Object.values(ui.windows).forEach(function(window) {
-            console.warn(window);
             window.render(true);
         });
     }
