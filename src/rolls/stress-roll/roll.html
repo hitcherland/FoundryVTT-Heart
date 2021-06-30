@@ -8,16 +8,18 @@
         <h4 class="dice-total">{{total}} {{localizeHeart 'stress'}}</h4>
     </div>
 </div>
-{{#with (randomID) as |id|}}
-<label for="{{id}}" class="toggle-button">
-    {{localizeHeart 'stress_roll' 'take_stress' }}
-</label>
-<input id="{{id}}" class="hidden toggle-display" type="checkbox"/>
-{{/with}}
-<div>
-    <button class="title-font"><span class="fas fa-heart-broken"></span>{{localizeHeart 'stress_roll' 'take_stress' 'blood'}}</button>
-    <button class="title-font"><span class="fas fa-brain"></span>{{localizeHeart 'stress_roll' 'take_stress' 'mind'}}</button>
-    <button class="title-font"><span class="fas fa-broadcast-tower"></span>{{localizeHeart 'stress_roll' 'take_stress' 'echo'}}</button>
-    <button class="title-font"><span class="fas fa-meteor"></span>{{localizeHeart 'stress_roll' 'take_stress' 'fortune'}}</button>
-    <button class="title-font"><span class="fas fa-parachute-box"></span>{{localizeHeart 'stress_roll' 'take_stress' 'supplies'}}</button>
+<div class="heart stress-roll">
+    {{#with (randomID) as |id|}}
+    <label for="{{id}}" class="toggle-button">
+        {{localizeHeart 'stress_roll' 'take_stress' }}
+    </label>
+    <input id="{{id}}" class="hidden toggle-display" type="checkbox"/>
+    {{/with}}
+    <div>
+        <button class="title-font"><span class="fas fa-heart-broken"></span>{{localizeHeart 'stress_roll' 'take_stress' 'blood'}}</button>
+        <button class="title-font"><span class="fas fa-brain"></span>{{localizeHeart 'stress_roll' 'take_stress' 'mind'}}</button>
+        <button class="title-font"><span class="fas fa-broadcast-tower"></span>{{localizeHeart 'stress_roll' 'take_stress' 'echo'}}</button>
+        <button class="title-font"><span class="fas fa-meteor"></span>{{localizeHeart 'stress_roll' 'take_stress' 'fortune'}}</button>
+        <button class="title-font"><span class="fas fa-parachute-box"></span>{{localizeHeart 'stress_roll' 'take_stress' 'supplies'}}</button>
+    </div>
 </div>

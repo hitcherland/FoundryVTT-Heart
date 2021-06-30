@@ -8,3 +8,8 @@
         <h4 class="dice-total text">{{localizeHeart "result" result}}</h4>
     </div>
 </div>
+{{#if showStressRollButton}}
+<div class="heart heart-roll">
+    <button data-action='roll-stress'>{{localizeHeart "roll_stress"}}</button>
+</div>
+{{/if}}

@@ -9,7 +9,7 @@
     font-family: 'MelmaCracked'
 
 input.hidden
-    display: none
+    display: none !important
 
 input.toggle-display
     & ~ *
@@ -34,6 +34,7 @@ input.toggle-display
     border-radius: 0.2em
     background: util.$white
     border: 3px solid util.$black
+    cursor: pointer
 
 .chat-message
     background: util.$red
@@ -48,6 +49,10 @@ input.toggle-display
             background: util.$white
             color: util.$red
             border-color: util.$bg-for-red
+
+        .dice-formula
+            background: util.$black
+            color: white
     
         .dice
             .part-header
@@ -58,10 +63,20 @@ input.toggle-display
 
             .dice-rolls .roll.discarded
                 filter: sepia(0.5) contrast(0.75) opacity(0.5)
-
-
-
     
+    .message-content + .message-content
+        margin-top: 0.5em
+
+.chat-message .heart
+    button
+        background: util.$bg-for-red
+        color: util.$white
+
+        .fas
+            padding: 0 0.5em
+    
+    button + button
+        margin-top: 0.2em
 
 .heart
     font-family: 'Alegreya', serif
@@ -75,7 +90,7 @@ input.toggle-display
         color: util.$white
         border-color: util.$red-black
         
-        font-size: 1.2rem
+        font-size: 1rem
         text-transform: uppercase
         font-weight: bold
         cursor: pointer

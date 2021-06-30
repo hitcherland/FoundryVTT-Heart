@@ -1,0 +1,45 @@
+@use '../util'
+
+.chat-message
+    background: util.$red
+    color: util.$white
+    border-color: util.$bg-for-red
+
+    .message-header
+        color: util.$white
+
+    .dice-roll
+        .dice-formula, .dice-total
+            background: util.$white
+            color: util.$red
+            border-color: util.$bg-for-red
+
+        .dice-formula
+            background: util.$black
+            color: white
+            font-size: 1.2em
+            padding: 0.2em
+    
+        .dice
+            .part-header
+                border-bottom-color: util.$white
+
+                .part-formula
+                    text-transform: uppercase
+
+            .dice-rolls .roll.discarded
+                filter: sepia(0.5) contrast(0.75) opacity(0.5)
+    
+    .message-content + .message-content
+        margin-top: 0.5em
+
+.chat-message .heart
+    button
+        background: util.$bg-for-red
+        color: util.$white
+
+        .fas
+            padding: 0 0.5em
+    
+    button + button
+        margin-top: 0.2em

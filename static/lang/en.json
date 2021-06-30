@@ -123,11 +123,13 @@
     "heart.warning:no_actor_selected": "No Actor Selected",
 
     "heart.roll:description(difficulty, count)": "{difficulty} Roll with {count} dice",
-    "heart.stress_roll:description(dice_size,result)": "{dice_size} Stress Roll from a {result} roll",
+    "heart.stress_roll:description(dice_size,result)": "{dice_size} Stress Roll",
     "heart.stress_roll:take_stress": "Take Stress",
     "heart.stress_roll:take_stress:blood": "Take Blood Stress",
     "heart.stress_roll:take_stress:mind": "Take Mind Stress",
     "heart.stress_roll:take_stress:echo": "Take Echo Stress",
     "heart.stress_roll:take_stress:fortune": "Take Fortune Stress",
-    "heart.stress_roll:take_stress:supplies": "Take Supplies Stress"
+    "heart.stress_roll:take_stress:supplies": "Take Supplies Stress",
+
+    "heart.fallout_roll:description(total_stress)": "Fallout Roll with {total_stress} Stress"
 }

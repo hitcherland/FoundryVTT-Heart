@@ -24,18 +24,27 @@ const difficult_results = {
     'success_at_a_cost': [10, 10],
 }
 
-export function initialise() {
-    game.heart.difficulties = Object.keys(difficulty_reductions);
+const stress_results = [
+    'critical_failure',
+    'failure',
+    'success_at_a_cost'
+];
 
+export function initialise() {
     const results = {...normal_results, difficult_results};
+    game.heart.difficulties = Object.keys(difficulty_reductions);
     game.heart.results = Object.keys(results);
+    game.heart.stress_results = stress_results;
+
+    Hooks.on('renderChatLog', (app, html, data) => HeartRoll.activateListeners(html));
+    Hooks.on('renderChatPopout', (app, html, data) => HeartRoll.activateListeners(html));
 }
 
 export default class HeartRoll extends Roll {
     static get CHAT_TEMPLATE() { return chatTemplateHTML.path; }
     static get TOOLTIP_TEMPLATE() { return tooltipTemplateHTML.path; } 
 
-    static fromPools(pools = {}, data={}, options={}) {
+    static build(pools = {}, data={}, options={}) {
         const {
             skill,
             domain,
@@ -99,6 +108,8 @@ export default class HeartRoll extends Roll {
         }, chatOptions);
         const isPrivate = chatOptions.isPrivate;
 
+        const showStressRollButton = chatOptions.showStressRollButton !== undefined ? chatOptions.showStressRollButton : false;
+
         // Execute the roll, if needed
         if (!this._evaluated) await this.evaluate({ async: true });
 
@@ -114,6 +125,7 @@ export default class HeartRoll extends Roll {
             flavor: isPrivate ? null : chatOptions.flavor,
             user: chatOptions.user,
             tooltip: isPrivate ? "" : await this.getTooltip(),
+            showStressRollButton: isPrivate ? false : showStressRollButton && stress_results.includes(this.result),
             total: isPrivate ? "?" : this.total,
             result: isPrivate ? "?" : this.result
         };
@@ -128,6 +140,24 @@ export default class HeartRoll extends Roll {
         return renderTemplate(this.constructor.TOOLTIP_TEMPLATE, {
             kept,
             parts 
+        });
+    }
+
+    async buildStressRoll(dice_size='d4', data={}, options={}) {
+        if (!this._evaluated) await this.evaluate({ async: true });
+        return game.heart.rolls.StressRoll.build(this.result, dice_size, data, options);
+    }
+
+    static activateListeners(html) {
+        html.on('click', '.heart-roll [data-action=roll-stress]', async function(ev) {
+            const target = $(ev.currentTarget);
+            const msgElement = target.closest('.chat-message');
+            const messageId = msgElement.data('messageId');
+            const msg = game.messages.get(messageId);
+            const roll = msg.roll;
+            const stressRoll = await roll.buildStressRoll();
+            msg.stressRoll = stressRoll;
+            msg.showStressRollButton = false;
         });
     }
 }

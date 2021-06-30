@@ -55,6 +55,17 @@ export default class CharacterSheet extends HeartActorSheet {
             new PrepareRollRequestApplication({}).render(true);
         });
 
+        html.find('[data-action=fallout-roll]').click(ev => {
+            const stress = Object.values(this.actor.data.data.resistances).reduce((sum, resistance) => {
+                return sum + resistance.value;
+            }, 0);
+            game.heart.rolls.FalloutRoll.build(stress).toMessage({
+                speaker: {
+                    actor: this.actor.data._id
+                }
+            });
+        });
+
         /*
         html.find('[data-action=prepare-roll]').click(ev => {
             const skills = Object.entries(this.actor.data.data.skills).filter(([k, v]) => {
