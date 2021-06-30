@@ -1,20 +1,5 @@
 import chatTemplateHTML from './roll.html';
 
-export function initialise() {
-    const index = CONFIG.Dice.rolls.findIndex(x => x.name === StressRoll.name)
-    if (index < 0) {
-        CONFIG.Dice.rolls.push(StressRoll);
-    } else {
-        CONFIG.Dice.rolls[index] = StressRoll;
-    }
-
-    if (!game.heart.rolls) {
-        game.heart.rolls = {}
-    }
-
-    game.heart.rolls.StressRoll = StressRoll;
-}
-
 export default class StressRoll extends Roll {
     static get CHAT_TEMPLATE() { return chatTemplateHTML.path; }
 

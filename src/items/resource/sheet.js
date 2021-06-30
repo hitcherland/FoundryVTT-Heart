@@ -1,7 +1,8 @@
 import sheetHTML from './sheet.html';
+import templateJSON from './template.json';
 
 const data = Object.freeze({
-    type: 'fallout',
+    type: Object.keys(templateJSON.Item)[0],
     img: 'systems/heart/assets/ore.svg',
     template: sheetHTML.path,
 });

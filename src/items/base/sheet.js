@@ -1,7 +1,9 @@
 import sheetHTML from './sheet.html';
-import HeartSheetMixin from '../common/sheet';'../common/sheet';
+import HeartSheetMixin from '../../common/sheet';
 
 export default class HeartItemSheet extends HeartSheetMixin(ItemSheet) {
+    static get type() { return 'base'; }
+
     get template() {
         return sheetHTML.path;
     }

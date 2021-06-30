@@ -1,7 +1,8 @@
 import sheetHTML from './sheet.html';
+import templateJSON from './template.json';
 
 const data = Object.freeze({
-    type: 'ability',
+    type: Object.keys(templateJSON.Item)[0],
     img: 'systems/heart/assets/skills.svg',
     template: sheetHTML.path,
 });

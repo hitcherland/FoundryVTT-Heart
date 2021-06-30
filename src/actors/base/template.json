@@ -1,6 +1,5 @@
 {
     "Actor": {
-        "types": ["adversary", "character", "delve", "landmark"],
         "templates": {
             "resistance": {
                 "resistances": {

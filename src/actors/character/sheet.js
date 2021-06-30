@@ -5,9 +5,12 @@
 
 import sheetHTML from './sheet.html';
 import './character.sass';
-import HeartActorSheet from '../sheet';
+import HeartActorSheet from '../base/sheet';
+import template from './template.json';
 
 export default class CharacterSheet extends HeartActorSheet {
+    static get type() { return Object.keys(template.Actor)[0]; }
+
     get template() {
         return sheetHTML.path;
     }
@@ -47,11 +50,12 @@ export default class CharacterSheet extends HeartActorSheet {
             this.actor.update(data);
         });
 
-        /*
+        
         html.find('[data-action=prepare-request-roll]').click(ev => {
             new PrepareRollRequestApplication({}).render(true);
         });
 
+        /*
         html.find('[data-action=prepare-roll]').click(ev => {
             const skills = Object.entries(this.actor.data.data.skills).filter(([k, v]) => {
                 return v.value;

@@ -2,11 +2,7 @@ import templates from './**/*.@(html|handlebars|hbs)';
 import './index.sass';
 import './common/sheet.sass';
 
-import initialiseActors from './actors/actors';
-import initialiseItems from './items/items';
-
-import * as heart_roll from './rolls/heart-roll/roll';
-import * as stress_roll from './rolls/stress-roll/roll';
+import modules from './**/index.js';
 
 
 /*
@@ -52,17 +48,8 @@ function titlecase(str) {
 
 function initialise() {
     activateTemplates();
-    initialiseActors();
-    initialiseItems();
 
     game.heart = {
-        titlecase,
-        /*
-        PrepareRollRequestApplication,
-        PrepareRollApplication,
-        PrepareStressRollApplication,
-        PrepareFalloutRollApplication,
-        */
         difficulties: ['standard', 'risky', 'dangerous', 'impossible'],
         resistances: ['blood', 'mind', 'echo', 'fortune', 'supplies'],
         skills: ['compel', 'delve', 'discern', 'endure', 'evade', 'hunt', 'kill', 'mend','sneak'],
@@ -72,8 +59,12 @@ function initialise() {
         stress_results: ['no_fallout', 'minor_fallout', 'major_fallout']
     };
 
-    heart_roll.initialise();
-    stress_roll.initialise();
+    console.log(`heart | Registering ${modules.length} modules`);
+    modules.forEach(module => {
+        if(module.initialise !== undefined) {
+            module.initialise();
+        }
+    });
 
     Handlebars.registerHelper('ordered-checkable', function(value, max) {
         let output = '';
@@ -129,14 +120,6 @@ function initialise() {
         const value = `heart.${args.join(':')}`;
         return HandlebarsHelpers.localize(value, options);
     });
-
-    /*
-    loadTemplates([
-        'systems/heart/templates/util/section.html',
-        'systems/heart/templates/util/radio.html',
-        'systems/heart/templates/util/multicheckbox.html'
-    ]);
-    */
 }
 
 Hooks.once('init', initialise);

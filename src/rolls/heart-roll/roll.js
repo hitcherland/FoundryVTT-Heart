@@ -25,19 +25,10 @@ const difficult_results = {
 }
 
 export function initialise() {
-    const index = CONFIG.Dice.rolls.findIndex(x => x.name === HeartRoll.name)
-    if (index < 0) {
-        CONFIG.Dice.rolls.push(HeartRoll);
-    } else {
-        CONFIG.Dice.rolls[index] = HeartRoll;
-    }
-
-    if (!game.heart.rolls) {
-        game.heart.rolls = {}
-    }
-
-    game.heart.rolls.HeartRoll = HeartRoll;
     game.heart.difficulties = Object.keys(difficulty_reductions);
+
+    const results = {...normal_results, difficult_results};
+    game.heart.results = Object.keys(results);
 }
 
 export default class HeartRoll extends Roll {
