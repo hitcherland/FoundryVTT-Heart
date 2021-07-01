@@ -31,7 +31,24 @@ class HeartChatMessage extends ChatMessage {
     }
 
     set showStressRollButton(value) {
-        return this.getFlag('heart', 'show-stress-roll-button', value);
+        return this.setFlag('heart', 'show-stress-roll-button', value);
+    }
+
+    get showTakeStressButton() {
+        const showTakeStressButton = this.getFlag('heart', 'show-take-stress-button')
+        if (this.stressRoll === undefined || this.falloutRoll !== undefined) {
+            return false;
+        }
+
+        if (showTakeStressButton === undefined) {
+            return true
+        } else {
+            return Boolean(showTakeStressButton);
+        }
+    }
+
+    set showTakeStressButton(value) {
+        return this.setFlag('heart', 'show-take-stress-button', value);
     }
 
     get falloutRoll() {
@@ -63,7 +80,7 @@ class HeartChatMessage extends ChatMessage {
     }
 
     set showFalloutRollButton(value) {
-        return this.getFlag('heart', 'show-fallout-roll-button', value);
+        return this.setFlag('heart', 'show-fallout-roll-button', value);
     }
 
     async getHTML() {
@@ -94,7 +111,10 @@ class HeartChatMessage extends ChatMessage {
                 data.flavor = game.i18n.format("CHAT.PrivateRollContent", { user: this.user.name });
                 data.content = await this.roll.render({ isPrivate: true, showStressRollButton: this.showStressRollButton });
                 if (this.stressRoll) {
-                    data.stressContent = await this.stressRoll.render({ isPrivate: true });
+                    data.stressContent = await this.stressRoll.render({ isPrivate: true, showTakeStressButton: this.showTakeStressButton, showFalloutRollButton: this.showFalloutRollButton });
+                }
+                if (this.falloutRoll) {
+                    data.falloutContent = await this.falloutRoll.render({ isPrivate: true });
                 }
                 messageData.isWhisper = false;
                 messageData.alias = this.user.name;
@@ -104,7 +124,10 @@ class HeartChatMessage extends ChatMessage {
                 const hasContent = data.content && (Number(data.content) !== this.roll.total);
                 if (!hasContent) data.content = await this.roll.render({ isPrivate: false, showStressRollButton: this.showStressRollButton });
                 if (this.stressRoll) {
-                    data.stressContent = await this.stressRoll.render({ isPrivate: false });
+                    data.stressContent = await this.stressRoll.render({ isPrivate: false, showTakeStressButton: this.showTakeStressButton, showFalloutRollButton: this.showFalloutRollButton });
+                }
+                if (this.falloutRoll) {
+                    data.falloutContent = await this.falloutRoll.render({ isPrivate: false });
                 }
             }
         }

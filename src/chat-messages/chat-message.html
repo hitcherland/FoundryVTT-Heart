@@ -19,7 +19,14 @@
     <div class="message-content">
         {{{message.content}}}
     </div>
+    {{#if message.stressContent}}
     <div class="message-content">
         {{{message.stressContent}}}
     </div>
+    {{/if}}
+    {{#if message.falloutContent}}
+    <div class="message-content">
+        {{{message.falloutContent}}}
+    </div>
+    {{/if}}
 </li>

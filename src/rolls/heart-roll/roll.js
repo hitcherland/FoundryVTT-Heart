@@ -35,9 +35,6 @@ export function initialise() {
     game.heart.difficulties = Object.keys(difficulty_reductions);
     game.heart.results = Object.keys(results);
     game.heart.stress_results = stress_results;
-
-    Hooks.on('renderChatLog', (app, html, data) => HeartRoll.activateListeners(html));
-    Hooks.on('renderChatPopout', (app, html, data) => HeartRoll.activateListeners(html));
 }
 
 export default class HeartRoll extends Roll {

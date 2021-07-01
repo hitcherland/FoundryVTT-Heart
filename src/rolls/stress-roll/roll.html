@@ -5,21 +5,18 @@
     <div class="dice-result">
         <div class="dice-formula">{{description}}</div>
         {{{tooltip}}}
-        <h4 class="dice-total">{{total}} {{localizeHeart 'stress'}}</h4>
-    </div>
-</div>
-<div class="heart stress-roll">
-    {{#with (randomID) as |id|}}
-    <label for="{{id}}" class="toggle-button">
-        {{localizeHeart 'stress_roll' 'take_stress' }}
-    </label>
-    <input id="{{id}}" class="hidden toggle-display" type="checkbox"/>
-    {{/with}}
-    <div>
-        <button class="title-font"><span class="fas fa-heart-broken"></span>{{localizeHeart 'stress_roll' 'take_stress' 'blood'}}</button>
-        <button class="title-font"><span class="fas fa-brain"></span>{{localizeHeart 'stress_roll' 'take_stress' 'mind'}}</button>
-        <button class="title-font"><span class="fas fa-broadcast-tower"></span>{{localizeHeart 'stress_roll' 'take_stress' 'echo'}}</button>
-        <button class="title-font"><span class="fas fa-meteor"></span>{{localizeHeart 'stress_roll' 'take_stress' 'fortune'}}</button>
-        <button class="title-font"><span class="fas fa-parachute-box"></span>{{localizeHeart 'stress_roll' 'take_stress' 'supplies'}}</button>
+        <div class="flexrow">
+            <h4 class="dice-total">{{total}} {{localizeHeart 'stress'}}</h4>
+            {{#if showTakeStressButton}}
+            <button class="icon-button" data-action="take-stress" title="{{localizeHeart 'stress_roll' 'take_stress' }}">
+                <span class="fas fa-heart-broken"></span>
+            </button>
+            {{/if}}
+            {{#if showFalloutRollButton}}
+            <button class="icon-button" data-action="roll-fallout" title="{{localizeHeart 'roll_fallout' 'roll_fallout' }}">
+                <span class="fas fa-radiation-alt"></span>
+            </button>
+            {{/if}}
+        </div>
     </div>
 </div>

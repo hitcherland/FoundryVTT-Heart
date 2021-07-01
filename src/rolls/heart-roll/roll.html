@@ -5,11 +5,13 @@
     <div class="dice-result">
         <div class="dice-formula">{{description}}</div>
         {{{tooltip}}}
-        <h4 class="dice-total text">{{localizeHeart "result" result}}</h4>
+        <div class="flexrow">
+            <h4 class="dice-total text">{{localizeHeart "result" result}}</h4>
+            {{#if showStressRollButton}}
+            <button class="icon-button" data-action='roll-stress' title="{{localizeHeart 'roll_stress'}}">
+                <span class="fas fa-dice"></span>
+            </button>
+            {{/if}}
+        </div>
     </div>
 </div>
-{{#if showStressRollButton}}
-<div class="heart heart-roll">
-    <button data-action='roll-stress'>{{localizeHeart "roll_stress"}}</button>
-</div>
-{{/if}}

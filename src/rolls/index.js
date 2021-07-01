@@ -1,4 +1,5 @@
 import rollModules from './*/roll.js';
+import './roll.sass';
 
 export function initialise() {
     console.log('heart | Registering rolls');
@@ -17,6 +18,11 @@ export function initialise() {
         }
         
         game.heart.rolls[Roll.name] = Roll;
+
+        if(Roll.activateListeners !== undefined) {
+            Hooks.on('renderChatLog', (app, html, data) => Roll.activateListeners(html));
+            Hooks.on('renderChatPopout', (app, html, data) => Roll.activateListeners(html));
+        }
     
         if(module.initialise !== undefined) {
             module.initialise()
