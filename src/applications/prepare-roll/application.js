@@ -49,7 +49,7 @@ export default class PrepareRollApplication extends HeartApplication {
             const domain = data.get('domain');
             const mastery = data.get('mastery');
             const helpers = JSON.parse(data.get('helper')).map(x => {
-                return game.actors.get(x);
+                return game.actors.get(x).name;
             });
 
             const roll = await game.heart.rolls.HeartRoll.build({

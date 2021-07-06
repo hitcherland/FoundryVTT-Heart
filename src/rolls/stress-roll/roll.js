@@ -30,7 +30,7 @@ export default class StressRoll extends Roll {
         // Execute the roll, if needed
         if (!this._evaluated) await this.evaluate({ async: true });
 
-        const description = game.i18n.format('heart.stress_roll:description(dice_size,result)', {
+        const description = game.i18n.format('heart.rolls.stress-roll.description(dice_size)', {
             dice_size: this.options.dice_size,
             result: game.i18n.localize(`heart.result:${this.options.result}`)
         });

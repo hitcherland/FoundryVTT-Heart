@@ -1,0 +1,12 @@
+{
+    "stress": "Stress",
+    "rolls": {
+        "stress-roll": {
+            "label": "Stress Roll",
+            "action": "Roll Stress",
+            "take-stress": "Take Stress",
+            "prepare": "Prepare Stress Roll",
+            "description(dice_size)": "{dice_size} Stress Roll"
+        }
+    }
+}

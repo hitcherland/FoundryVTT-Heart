@@ -20,7 +20,7 @@ export default class PrepareStressRollApplication extends HeartApplication {
                 return map;
             }, {}),
             'results': game.heart.stress_results.reduce((map, result) => {
-                map[result] = game.i18n.localize(`heart.results.${result}`);
+                map[result] = game.i18n.localize(`heart.result.${result}`);
                 return map;
             }, {}),
             'dice_sizes': game.heart.stress_dice.reduce((map, dice) => {

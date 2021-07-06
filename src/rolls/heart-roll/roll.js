@@ -52,10 +52,10 @@ export default class HeartRoll extends Roll {
 
         let formula_terms = [];
         [
-            game.i18n.localize('heart.prepare:roll:base'),
-            skill ? game.i18n.localize(`heart.skill:${skill}`) : undefined,
-            domain ? game.i18n.localize(`heart.domain:${domain}`) : undefined, 
-            mastery ? game.i18n.localize(`heart.prepare:roll:mastery`) : false,
+            game.i18n.localize('heart.rolls.roll.base'),
+            skill ? game.i18n.localize(`heart.skill.${skill}`) : undefined,
+            domain ? game.i18n.localize(`heart.domain.${domain}`) : undefined, 
+            mastery ? game.i18n.localize(`heart.mastery.label-short`) : false,
             ...helpers].forEach(flavor => {
             if (!flavor) return;
             formula_terms.push(`1d10[${flavor}]`);
@@ -110,8 +110,8 @@ export default class HeartRoll extends Roll {
         // Execute the roll, if needed
         if (!this._evaluated) await this.evaluate({ async: true });
 
-        const description = game.i18n.format('heart.roll:description(difficulty, count)', {
-            difficulty: game.i18n.localize(`heart.difficulty:${this.options.difficulty}`),
+        const description = game.i18n.format('heart.rolls.roll.description(difficulty,count)', {
+            difficulty: game.i18n.localize(`heart.difficulty.${this.options.difficulty}`),
             count: this.dice.length
         });
 

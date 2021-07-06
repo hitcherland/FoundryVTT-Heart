@@ -2,9 +2,9 @@ import chatTemplateHTML from './roll.html';
 import './roll.sass';
 
 const fallout_results = {
-    'no_fallout': (total, total_stress) => total > total_stress,
-    'minor_fallout': (total, total_stress) => total <= total_stress && total <= 6,
-    'major_fallout': (total, total_stress) => total <= total_stress && total > 6
+    'no-fallout': (total, total_stress) => total > total_stress,
+    'minor-fallout': (total, total_stress) => total <= total_stress && total <= 6,
+    'major-fallout': (total, total_stress) => total <= total_stress && total > 6
 };
 
 export function initialise() {
@@ -36,7 +36,7 @@ export default class FalloutRoll extends Roll {
         // Execute the roll, if needed
         if (!this._evaluated) await this.evaluate({ async: true });
 
-        const description = game.i18n.format('heart.fallout_roll:description(total_stress)', {
+        const description = game.i18n.format('heart.rolls.fallout-roll.description(total_stress)', {
             total_stress: this.options.total_stress
         });
 

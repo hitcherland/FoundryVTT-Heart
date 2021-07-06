@@ -43,10 +43,6 @@ function registerSettings() {
     });
 }
 
-function titlecase(str) {
-    return str.replace(/\w\S*/g, word => word[0].toUpperCase() + word.slice(1).toLowerCase());
-}
-
 function initialise() {
     activateTemplates();
 
@@ -56,8 +52,6 @@ function initialise() {
         skills: ['compel', 'delve', 'discern', 'endure', 'evade', 'hunt', 'kill', 'mend','sneak'],
         domains: ['cursed', 'desolate', 'haven', 'occult', 'religion', 'technology', 'warren', 'wild'],
         stress_dice: ['d4', 'd6', 'd8', 'd10', 'd12'],
-        roll_results: ['critical_failure', 'failure', 'success_at_a_cost', 'success', 'critical_success'],
-        stress_results: ['no_fallout', 'minor_fallout', 'major_fallout']
     };
 
     console.log(`heart | Registering ${modules.length} modules`);

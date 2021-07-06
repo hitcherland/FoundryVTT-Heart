@@ -7,14 +7,23 @@
         "dangerous": "Dangerous",
         "impossible": "Impossible"
     },
-    "results": {
-        "label": "Results",
-        "stress-label": "Stress Results",
+    "result": {
+        "label-single": "Result",
+        "label-multiple": "Results",
+        "label-stress": "Stress Results",
 
         "critical_success": "Critical Success",
         "success": "Success",
         "success_at_a_cost": "Success At A Cost",
         "failure": "Failure",
         "critical_failure": "Critical Failure"
+    },
+    "rolls": {
+        "roll": {
+            "label": "Roll",
+            "action": "Roll",
+            "base": "Base",
+            "description(difficulty,count)": "{difficulty} Roll with {count} dice"
+        }
     }
 }
