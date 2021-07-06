@@ -19,10 +19,10 @@
 {{/inline}}
 
 <div class="heart flexrow buttons sticky">
-    <button data-action="prepare-request-roll"><span class="fas fa-dice"></span> {{localizeHeart "perform" "roll_request"}}</button>
+    <button data-action="prepare-request-roll"><span class="fas fa-dice"></span> {{localizeHeart "perform" "request-roll"}}</button>
     <button data-action="prepare-roll"><span class="fas fa-dice"></span> {{localizeHeart "perform" "roll"}}</button>
-    <button data-action="prepare-stress-roll"><span class="fas fa-dice"></span> {{localizeHeart "perform" "stress_roll"}}</button>
-    <button data-action="fallout-roll"><span class="fas fa-dice"></span> {{localizeHeart "perform" "fallout_roll"}}</button>
+    <button data-action="prepare-stress-roll"><span class="fas fa-dice"></span> {{localizeHeart "perform" "roll-stress"}}</button>
+    <button data-action="fallout-roll"><span class="fas fa-dice"></span> {{localizeHeart "perform" "roll-fallout"}}</button>
 </div>
 <form class="heart sheet actor character {{cssClass}}" autocomplete="off">
     <div class="grid-2 place-top">
@@ -30,7 +30,7 @@
         <div class="grid-3 resistances place-top">
             <div></div>
             <div></div>
-            <h3 class="center">{{localizeHeart "character" "protections"}}</h3>
+            <h3 class="center">{{localizeHeart "resistance" "protection" "label-multiple"}}</h3>
             {{#each actor.data.data.resistances as |resistance name|}}
                 <h3 class="left">{{localizeHeart "resistance" name}}</h3>
                 <div class="red" data-target='data.resistances.{{name}}.value'>{{{ordered-checkable resistance.value 10}}}</div>
@@ -41,15 +41,15 @@
             <div class="grid-2 auto-first-col place-center">
                 <h2>{{localizeHeart "character" "name"}}</h2>
                 <input name="name" value="{{actor.name}}"/>
-                <h2>{{localizeHeart "class"}}</h2>
+                <h2>{{localizeHeart "character" "class"}}</h2>
                 <input name="data.class" value="{{actor.data.data.class}}"/>
-                <h2>{{localizeHeart "calling"}}</h2>
+                <h2>{{localizeHeart "character" "calling"}}</h2>
                 <input name="data.calling" value="{{actor.data.data.calling}}"/>
             </div>
         </div>
         <div class="beats">
             <h2>
-                {{localizeHeart "character" "active_beats"}}
+                {{localizeHeart "beat" "active" "label-multiple"}}
                 {{#if actor.isOwner}}
                 <div class="right">
                     <a data-action="add" data-type="beat"><span class="fas fa-plus"></span></a>
@@ -64,7 +64,7 @@
         </div>
         
         <div class="equipment">
-            <h2>{{localizeHeart "equipment"}}
+            <h2>{{localizeHeart "equipment" "label-multiple"}}
                 {{#if actor.isOwner}}
                 <div class="right">
                     <a data-action="add" data-type="equipment"><span class="fas fa-plus"></span></a>
@@ -79,7 +79,7 @@
         </div>
 
         <div class="resources">
-            <h2>{{localizeHeart "resources"}}
+            <h2>{{localizeHeart "resource" "label-multiple"}}
                 {{#if actor.isOwner}}
                 <div class="top right">
                     <a data-action="add" data-type="resource"><span class="fas fa-plus"></span></a>
@@ -96,7 +96,7 @@
         </div>
         <div class="abilities">
             <h2>
-                {{localizeHeart "abilities"}}
+                {{localizeHeart "ability"  "label-multiple"}}
                 {{#if actor.isOwner}}
                 <div class="top right">
                     <a data-action="add" data-type="ability"><span class="fas fa-plus"></span></a>
@@ -107,7 +107,7 @@
         </div>
         <div class="fallout">
             <h2>
-                {{localizeHeart "fallout"}}
+                {{localizeHeart "fallout" "label-multiple"}}
                 {{#if actor.isOwner}}
                 <div class="top right">
                     <a data-action="add" data-type="ability"><span class="fas fa-plus"></span></a>
@@ -117,8 +117,8 @@
             {{editor content=actor.data.data.fallout target="data.fallout" button=true editable=editable owner=owner}}
         </div>
         <div class="skills grid-2 auto-first-col">
-            <h3 class="center">{{localizeHeart "skills"}}</h3>
-            <h3 class="faded">{{localizeHeart "character" "knacks"}}</h3>
+            <h3 class="center">{{localizeHeart "skill" "label-multiple"}}</h3>
+            <h3 class="faded">{{localizeHeart "skill" "knack" "label-multiple"}}</h3>
             {{#each actor.data.data.skills as |skill name|}}
                 <div class="flexrow">
                     <input type="checkbox" name="data.skills.{{name}}.value" {{checked skill.value}}/>
@@ -129,8 +129,8 @@
         </div>
 
         <div class="domains grid-2 auto-first-col">
-            <h3 class="center">{{localizeHeart "domains"}}</h3>
-            <h3 class="faded">{{localizeHeart "character" "knacks"}}</h3>
+            <h3 class="center">{{localizeHeart "domain" "label-multiple"}}</h3>
+            <h3 class="faded">{{localizeHeart "domain" "knack" "label-multiple"}}</h3>
             {{#each actor.data.data.domains as |domain name|}}
                 <div class="flexrow">
                     <input type="checkbox" name="data.domains.{{name}}.value" {{checked domain.value}}/>

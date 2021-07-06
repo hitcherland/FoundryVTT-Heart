@@ -7,7 +7,7 @@
     "symlink": "node symlink",
     "build": "webpack --mode development",
     "build-prod": "webpack --mode production",
-    "watch": "webpack serve --hot",
+    "watch": "webpack serve --hot --progress",
     "release": "npm run build-prod && node dev-utils/github-repo.js"
   },
   "keywords": [
@@ -19,6 +19,7 @@
     "copy-webpack-plugin": "^9.0.1",
     "css-loader": "^5.2.6",
     "eslint": "^7.29.0",
+    "extra-watch-webpack-plugin": "^1.0.3",
     "gh-pages": "^3.2.3",
     "sass": "^1.35.1",
     "sass-loader": "^12.1.0",

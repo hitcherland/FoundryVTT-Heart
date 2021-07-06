@@ -1,0 +1,8 @@
+{
+    "perform": {
+        "request-roll": "Request Roll",
+        "roll": "Roll",
+        "roll-stress": "Roll Stress",
+        "roll-fallout": "Roll Fallout"
+    }
+}

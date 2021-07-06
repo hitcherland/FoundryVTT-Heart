@@ -1,0 +1,38 @@
+@use '../util'
+
+.heart.form
+    .window-content
+        background: util.$white
+
+    label
+        font-weight: bold
+        font-family: 'MelmaCracked'
+        display: flex
+        align-items: center
+        justify-content: start
+        text-align: left
+
+    .description
+        text-align: center
+
+    
+    .options
+        display: flex
+        
+        align-items: center
+        justify-content: start
+
+        .option
+            font-family: 'Alegreya'
+            border: 1px solid util.$black
+            border-radius: 5px
+            background: util.$white
+            margin: 2px
+            padding: 4px
+            display: inline-block
+            text-transform: uppercase
+
+    input:checked + .option
+        background: util.$red
+        color: util.$white
+

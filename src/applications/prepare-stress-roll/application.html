@@ -1,0 +1,23 @@
+
+{{#> "heart:applications/base/application.html" type="prepare-stress-roll"}}
+<label>
+    {{localizeHeart "character" "label-single"}}
+</label>
+<select name="character">
+    {{selectOptions characters}}
+</select>
+
+<label>
+    {{localizeHeart "results" "stress-label"}}
+</label>
+<select name="result">
+    {{selectOptions results}}
+</select>
+
+<label>
+    {{localizeHeart "dice_size" "label-single"}}
+</label>
+<select name="dice-size">
+    {{selectOptions dice_sizes}}
+</select>
+{{/ "heart:applications/base/application.html"}}

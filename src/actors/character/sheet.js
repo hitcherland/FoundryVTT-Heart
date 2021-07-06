@@ -56,9 +56,7 @@ export default class CharacterSheet extends HeartActorSheet {
         });
 
         html.find('[data-action=fallout-roll]').click(ev => {
-            const stress = Object.values(this.actor.data.data.resistances).reduce((sum, resistance) => {
-                return sum + resistance.value;
-            }, 0);
+            const stress = this.actor.proxy.totalStress;
             game.heart.rolls.FalloutRoll.build(stress).toMessage({
                 speaker: {
                     actor: this.actor.data._id

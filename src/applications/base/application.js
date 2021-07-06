@@ -1,17 +1,22 @@
-export function initialise() {
-    if(game.heart.applications === undefined) {
-        game.heart.applications = {};
-    }
-
-    game.heart.applications.HeartApplication = HeartApplication;
-}
-
 export default class HeartApplication extends FormApplication {
     static get defaultOptions() {
         return foundry.utils.mergeObject(super.defaultOptions, {
-            classes: ["form", "heart"],
+            classes: ["form", "heart", this.formType],
         });
     }
+
+    static get formType() {
+        return 'base'
+    }
+    
+    get title() {
+        if(this.constructor.formType !== 'base') {
+            return game.i18n.localize(`heart.applications.${this.constructor.formType}.title`);
+        } else {
+            return super.title
+        }
+    }
+
 
     activateListeners(html) {
         html.find('button').click(ev => {

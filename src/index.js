@@ -3,7 +3,8 @@ import './index.sass';
 import './common/sheet.sass';
 
 import modules from './**/index.js';
-
+import './**/lang/*.json';
+import './**/template.json';
 
 /*
 import {activateRollListeners} from './module/roll/chat-log.js';
@@ -117,8 +118,8 @@ function initialise() {
 
     Handlebars.registerHelper('localizeHeart', function(...args) {
         const options = args.splice(-1, 1)[0];
-        const value = `heart.${args.join(':')}`;
-        return HandlebarsHelpers.localize(value, options);
+        const value = `heart.${args.join('.')}`;
+        return HandlebarsHelpers.localize(value, options)
     });
 }
 
@@ -128,20 +129,20 @@ Hooks.once('ready', function() {
     registerSettings();
 });
 
-/*
-Hooks.on('renderChatLog', (app, html, data) => activateRollListeners(html));
-Hooks.on('renderChatPopout', (app, html, data) => activateRollListeners(html));
-*/
-
 if (module.hot) {
-    if (module.hot) {
-        module.hot.accept();
+    module.hot.accept();
 
+    (async () => {
         initialise();
+
+        if(game.i18n !== undefined) {
+            game.i18n.translations = {};
+            await game.i18n.setLanguage(game.i18n.lang);
+        }
 
         // Refresh all open windows with new css and/or html
         Object.values(ui.windows).forEach(function(window) {
             window.render(true);
         });
-    }
+    })()
 }

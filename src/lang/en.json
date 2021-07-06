@@ -1,4 +1,55 @@
 {
+    "roll": "Roll",
+    "cancel": "Cancel",
+    "character": {
+        "label-single": "Character",
+        "label-multiple": "Characters",
+        "label-helpers": "Helping Characters",
+        "label-valid-helpers": "Characters Who Could Help"
+    },
+    "dice_size": {
+        "label-single": "Di Size",
+        "label-multiple": "Di Sizes",
+        "d(N)": "d{N}"
+    },
+    "skill": {
+        "label-single": "Skill",
+        "label-multiple": "Skills",
+        "knack": {
+            "label-single": "Knack",
+            "label-multiple": "Knacks"
+        },
+        "compel": "Compel",
+        "delve": "Delve",
+        "discern": "Discern",
+        "endure": "Endure",
+        "evade": "Evade",
+        "hunt": "Hunt",
+        "kill": "Kill",
+        "mend": "Mend",
+        "sneak": "Sneak"
+    },
+    "domain": {
+        "label-single": "Domain",
+        "label-multiple": "Domains",
+        "knack": {
+            "label-single": "Knack",
+            "label-multiple": "Knacks"
+        },
+        "cursed": "Cursed",
+        "desolate": "Desolate",
+        "haven": "Haven",
+        "occult": "Occult",
+        "religion": "Religion",
+        "technology": "Technology",
+        "warren": "Warren",
+        "wild": "Wild"
+    },
+    "mastery": {
+        "label": "Roll with Mastery"
+    },
+
+
     "heart.character": "Character",
     "heart.character:name": "Name",
     "heart.character:active_beats": "Active Beats",

@@ -1,0 +1,8 @@
+{
+    "applications": {
+        "prepare-roll": {
+            "title": "Prepare Roll",
+            "description": "Pick a difficulty, character to roll with and various dice pool modifiers, then roll."
+        }
+    }
+}

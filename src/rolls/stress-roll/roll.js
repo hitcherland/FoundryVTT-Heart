@@ -48,8 +48,6 @@ export default class StressRoll extends Roll {
             result: isPrivate ? "?" : this.result
         };
 
-        console.warn(chatData, showTakeStressButton, chatOptions.showTakeStressButton, showFalloutRollButton, chatOptions.showFalloutRollButton);
-
         // Render the roll display template
         return renderTemplate(chatOptions.template, chatData);
     }

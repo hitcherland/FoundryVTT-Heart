@@ -4,7 +4,10 @@ const glob = require('glob');
 const CopyPlugin = require('copy-webpack-plugin');
 const FoundryVTTSymlinkPlugin = require('./dev-utils/foundryvtt-symlink');
 const FoundryVTTTemplateMerger = require('./dev-utils/foundryvtt-template-merger');
+const FoundryVTTTranslationMerger = require('./dev-utils/foundryvtt-translation-merger');
+const ExtraWatchWebpackPlugin = require('extra-watch-webpack-plugin');
 const config = require('./foundryvtt.config.js');
+const webpack = require('webpack');
 
 // auto calculated values
 const {type, name} = config;
@@ -61,6 +64,12 @@ module.exports = {
                 }
             },
             {
+                test: /lang\/.*.json/,
+                use: {
+                    
+                }
+            },
+            {
                 test: /\.js$/,
                 use: 'webpack-import-glob-loader'
             },
@@ -96,6 +105,7 @@ module.exports = {
     },
     plugins: [
         new FoundryVTTTemplateMerger(distPath),
+        new FoundryVTTTranslationMerger(name, distPath),
         new CopyPlugin({
             patterns: [
                 {
@@ -115,5 +125,9 @@ module.exports = {
             ],
         }),
         new FoundryVTTSymlinkPlugin(name, type, distPath, config.foundryvttPath),
+        new ExtraWatchWebpackPlugin({
+            files: [ 'src/**/lang/*.json', 'src/**/template.json', 'src/**/*.html' ],
+            dirs: [ 'src/**' ],
+        }),
     ],
 };

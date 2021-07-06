@@ -17,7 +17,7 @@ function mergeDeep(target, ...sources) {
     return target;
 }
 
-module.exports = class FoundryVTTSymlinkPlugin {
+module.exports = class FoundryVTTTemplateMerger {
     constructor(distPath) {
         this.distPath = distPath;
     }
@@ -38,7 +38,13 @@ module.exports = class FoundryVTTSymlinkPlugin {
                     return fs.readFileSync(filename);
                 });
 
-                const template = mergeDeep({}, ...contents.map(content => JSON.parse(content)));
+                const template = mergeDeep({}, ...contents.map(content => {
+                    try {
+                        return JSON.parse(content)
+                    } catch(err) {
+                        return {};
+                    }
+                }));
 
                 for(const top of Object.keys(template)) {
                     const types = Object.keys(template[top]).filter(x => x !== "templates");

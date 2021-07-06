@@ -1,0 +1,20 @@
+{
+    "difficulty": {
+        "label-single": "Difficulty",
+        "label-multiple": "Difficulties",
+        "standard": "Standard",
+        "risky": "Risky",
+        "dangerous": "Dangerous",
+        "impossible": "Impossible"
+    },
+    "results": {
+        "label": "Results",
+        "stress-label": "Stress Results",
+
+        "critical_success": "Critical Success",
+        "success": "Success",
+        "success_at_a_cost": "Success At A Cost",
+        "failure": "Failure",
+        "critical_failure": "Critical Failure"
+    }
+}

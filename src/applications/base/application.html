@@ -1,4 +1,10 @@
-<form class="{{classes}}">
-    <button data-action="cancel">cancel</button>
-    <button data-action="submit">roll</button>"
+<form class="heart form {{type}} {{classes}} grid-2 auto-first-col">
+    <div class="wide description">
+    {{localizeHeart "applications" type "description"}}
+    </div>
+    {{> @partial-block}}
+    <div class="wide grid-2">
+        <button data-action='cancel'><span class="fas fa-times"></span> {{localizeHeart 'cancel'}}</button>
+        <button data-action='submit'><span class="fas fa-dice"></span> {{localizeHeart 'roll'}}</button>
+    </div>
 </form>

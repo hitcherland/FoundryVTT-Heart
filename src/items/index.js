@@ -43,6 +43,8 @@ export function initialise() {
         }
 
         game.heart.items[type].sheet = Sheet
+        
+        CONFIG.Item.typeLabels[type] = `heart.${type}.label-single`;
 
         if(type === 'base') return;
 

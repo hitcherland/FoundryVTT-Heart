@@ -1,0 +1,21 @@
+{
+    "character": {
+        "name": "Name",
+        "class": "Class",
+        "calling": "Calling"
+    },
+
+    "resistance": {
+        "label-single": "Resistance",
+        "label-multiple": "Resistances",
+        "protection": {
+            "label-single": "Protection",
+            "label-multiple": "Protections"
+        },
+        "blood": "Blood",
+        "mind": "Mind",
+        "echo": "Echo",
+        "fortune": "Fortune",
+        "supplies": "Supplies"
+    }
+}

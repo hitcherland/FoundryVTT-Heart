@@ -1,0 +1,65 @@
+{{#> "heart:applications/base/application.html" type="prepare-roll-request"}}
+<label>
+    {{localizeHeart "difficulty" "label-single"}}
+</label>
+<select name="difficulty">
+    {{selectOptions difficulties}}
+</select>
+
+<label>
+    {{localizeHeart "character" "label-multiple"}}
+</label>
+<div class="options">
+    {{#each characters as |character char_id|}}
+    {{#with (randomID) as |id|}}
+    <input class="hidden" type="checkbox" id="{{id}}" name="character" value="{{char_id}}" checked/>
+    <label for="{{id}}" class="option">
+        {{character}}
+    </label>
+    {{/with}}
+    {{/each}}
+</div>
+
+<label>
+    {{localizeHeart "skill" "label-multiple"}}
+</label>
+<div class="options">
+    {{#each skills as |skill name|}}
+    {{#with (randomID) as |id|}}
+    <input class="hidden" type="checkbox" id="{{id}}" name="skill" value="{{name}}"/>
+    <label for="{{id}}" class="option">
+        {{skill}}
+    </label>
+    {{/with}}
+    {{/each}}
+</div>
+
+
+<label>
+    {{localizeHeart "domain" "label-multiple"}}
+</label>
+<div class="options">
+    {{#each domains as |domain name|}}
+    {{#with (randomID) as |id|}}
+    <input class="hidden" type="checkbox" id="{{id}}" name="domain" value="{{name}}"/>
+    <label for="{{id}}" class="option">
+        {{domain}}
+    </label>
+    {{/with}}
+    {{/each}}
+</div>
+
+<label>
+    {{localizeHeart "character" "label-valid-helpers"}}
+</label>
+<div class="options">
+    {{#each characters as |character char_id|}}
+    {{#with (randomID) as |id|}}
+    <input class="hidden" type="checkbox" id="{{id}}" name="helper" value="{{char_id}}" checked/>
+    <label for="{{id}}" class="option">
+        {{character}}
+    </label>
+    {{/with}}
+    {{/each}}
+</div>
+{{/ "heart:applications/base/application.html"}}

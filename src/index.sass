@@ -158,3 +158,24 @@ input.toggle-display
 
     & > *
         padding: 8px
+
+
+.grid-2
+    display: grid
+    grid-template-columns: 1fr 1fr
+    place-items: stretch
+    grid-gap: 0.5em
+    margin: 0.5em
+
+    &.auto-first-col
+        grid-template-columns: auto 1fr
+        margin: 0.5em 0
+
+    .wide
+        grid-column: 1 / 3
+
+    &.place-center
+        place-content: center
+
+    &.place-top
+        align-items: start
