@@ -1,0 +1,70 @@
+<form class="heart roll-request grid-2 auto-first-col place-center">
+    <h1 class="wide title-font ">{{localizeHeart "rolls" "roll-request" "label"}}</h1>
+    <label class="title-font">{{localizeHeart "difficulty" "label-single"}}</label>
+    <div>
+        {{localizeHeart "difficulty" difficulty}}
+        <input type="hidden" name="difficulty" value="{{difficulty}}"/>
+    </div>
+
+    <label class="title-font">{{localizeHeart "skill" "label-single"}}</label>
+    {{#if (lt skills.length 2)}}
+        {{#if (eq skills.length 1)}}
+            <div>
+                {{localizeHeart "skill" (lookup skills 0)}}
+                <input type="hidden" name="skill" value="{{lookup skills 0}}"/>
+            </div>
+        {{else}}
+            <div>{{localizeHeart "none"}}</div>
+        {{/if}}
+    {{else}}
+    <select name="skill">
+        {{#each skills as |skill|}}
+        <option value="{{skill}}">{{localizeHeart "skill" skill}}</option>
+        {{/each}}
+    </select>
+    {{/if}}
+
+    <label class="title-font">{{localizeHeart "domain" "label-single"}}</label>
+    {{#if (lt domains.length 2)}}
+        {{#if (eq domains.length 1)}}
+        <div>
+            {{localizeHeart "domain" (lookup domains 0)}}
+            <input type="hidden" name="domain" value="{{lookup domains 0}}"/>
+        </div>
+        {{else}}
+            <div>{{localizeHeart "none"}}</div>
+        {{/if}}
+    {{else}}
+    <select name="domain">
+        {{#each domains as |domain|}}
+        <option value="{{domain}}">{{localizeHeart "domain" domain}}</option>
+        {{/each}}
+    </select>
+    {{/if}}
+
+    <label class="title-font">{{localizeHeart "mastery" "short"}}</label>
+    <input class="invert" type="checkbox" name="mastery"/>
+
+    <label class="title-font">{{localizeHeart "help"}}</label>
+    {{#if validHelpers}}
+    <select name="helper" multiple>
+        {{#each validHelpers as |helper_id|}}
+        {{#with (getActor helper_id) as |actor|}}
+        <option value="{{helper_id}}">{{actor.name}}</option>
+        {{/with}}
+        {{/each}}
+    </select>
+    {{else}}
+    <div>{{localizeHeart "none"}}</div>
+    {{/if}}
+
+    <div class="wide">
+        {{#each characters as |character|}}
+        {{#with (getActor character) as |actor|}}
+        {{#if actor.isOwner}}
+            <button data-action="roll" data-character="{{character}}"> <span class="fas fa-dice"></span> {{actor.name}}</button>
+        {{/if}}
+        {{/with}}
+        {{/each}}
+    </div>
+</form>

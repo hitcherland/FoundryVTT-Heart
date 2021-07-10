@@ -6,6 +6,8 @@ export default function Character(actor) {
                     return sum + resistance.value;
                 }, 0);
             }
+
+            if(actor.itemTypes[name] !== undefined) return actor.itemTypes[name];
         }
     });
 }

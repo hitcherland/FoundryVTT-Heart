@@ -31,7 +31,7 @@ const stress_results = [
 ];
 
 export function initialise() {
-    const results = {...normal_results, difficult_results};
+    const results = {...normal_results, ...difficult_results};
     game.heart.difficulties = Object.keys(difficulty_reductions);
     game.heart.results = Object.keys(results);
     game.heart.stress_results = stress_results;
@@ -41,14 +41,105 @@ export default class HeartRoll extends Roll {
     static get CHAT_TEMPLATE() { return chatTemplateHTML.path; }
     static get TOOLTIP_TEMPLATE() { return tooltipTemplateHTML.path; } 
 
+    static get requirements() {
+        const characters = game.actors.filter(x => x.type === 'character');
+        const skills = game.heart.skills;
+        const domains = game.heart.domains;
+        const difficulties = game.heart.difficulties;
+        return {
+            character: {
+                label: game.i18n.localize(`heart.character.label-single`),
+                options: characters.reduce((map, char) => {
+                    map[char.data._id] = char.name
+                    return map;
+                }, {})
+            }, 
+            difficulty: {
+                label: game.i18n.localize(`heart.difficulty.label-single`),
+                options: difficulties.reduce((map, difficulty) => {
+                    map[difficulty] = game.i18n.localize(`heart.difficulty.${difficulty}`)
+                    return map;
+                }, {})
+            }, 
+            skill: {
+                label: game.i18n.localize(`heart.skill.label-single`),
+                options: skills.reduce((map, skill) => {
+                    map[skill] = game.i18n.localize(`heart.skill.${skill}`)
+                    return map;
+                }, {})
+            }, 
+            domain: {
+                label: game.i18n.localize(`heart.domain.label-single`),
+                options: domains.reduce((map, domain) => {
+                    map[domain] = game.i18n.localize(`heart.domain.${domain}`)
+                    return map;
+                }, {})
+            }, 
+            mastery: {
+                label: game.i18n.localize(`heart.mastery.label-single`),
+                isCheckbox: true,
+            }, 
+            helpers: {
+                label: game.i18n.localize(`heart.helper.label-single`),
+                isMany: true,
+                options: characters.reduce((map, char) => {
+                    map[char.data._id] = char.name
+                    return map;
+                }, {})
+            }
+        }
+    }
+
     static build(pools = {}, data={}, options={}) {
-        const {
-            skill,
-            domain,
-            mastery = false,
-            helpers = [],
-            difficulty = 'standard'
-        } = pools;
+        return new Promise((resolve, reject) => {
+            let {
+                character,
+                skill,
+                domain,
+                mastery,
+                helpers,
+                difficulty
+            } = pools;
+
+            const requirements = this.requirements;
+        
+            if(character !== undefined) delete requirements.character;
+            if(difficulty !== undefined) delete requirements.difficulty;
+            if(skill !== undefined) delete requirements.skill;
+            if(domain !== undefined) delete requirements.domain;
+            if(mastery !== undefined) delete requirements.mastery;
+            if(helpers !== undefined) delete requirements.helpers;
+
+            const buildData = {
+                character,
+                difficulty,
+                skill,
+                domain,
+                mastery,
+                helpers,
+            };
+
+            if(Object.keys(requirements).length > 0) {
+                game.heart.applications.RequirementApplication.build({
+                    requirements,
+                    callback: moreData => {
+                        mergeObject(buildData, moreData)
+                        resolve(this._build(buildData, data, options));
+                    },
+                    type: 'prepare-roll',
+                });
+            } else {
+                return resolve(this._build(buildData, data, options));
+            }
+        })
+    }
+
+    static _build({character, difficulty, skill, domain, mastery, helpers}={}, data={}, options={}) {
+        const actor = game.actors.get(character);
+
+        skill = actor.data.data.skills[skill].value ? skill : undefined;
+        domain = actor.data.data.domains[domain].value ? domain : undefined;
+        helpers = helpers.filter(x => x !== character);
 
         let formula_terms = [];
         [
@@ -70,6 +161,7 @@ export default class HeartRoll extends Roll {
         const difficulty_modifier = difficulty_reduction > 0 ? `dh${difficulty_reduction}` : ''
         const formula = `{${formula_terms.join(', ')}}${difficulty_modifier}kh`;
 
+        options.character = character;
         options.result_set = formula_terms.length > difficulty_reduction ? 'normal' : 'difficult';
         options.skill = skill;
         options.domain = domain;
@@ -117,6 +209,7 @@ export default class HeartRoll extends Roll {
 
         // Define chat data
         const chatData = {
+            character: chatOptions.character || this.options.character,
             description: isPrivate ? '???' : description,
             formula: isPrivate ? "???" : this._formula,
             flavor: isPrivate ? null : chatOptions.flavor,
@@ -140,9 +233,13 @@ export default class HeartRoll extends Roll {
         });
     }
 
-    async buildStressRoll(dice_size='d4', data={}, options={}) {
+    async buildStressRoll(msg, di_size='d4', data={}, options={}) {
         if (!this._evaluated) await this.evaluate({ async: true });
-        return game.heart.rolls.StressRoll.build(this.result, dice_size, data, options);
+
+        await game.heart.applications.PrepareStressRollApplication.build({
+            result: this.result,
+            character: this.options.character,
+        }, msg);
     }
 
     static activateListeners(html) {
@@ -152,8 +249,9 @@ export default class HeartRoll extends Roll {
             const messageId = msgElement.data('messageId');
             const msg = game.messages.get(messageId);
             const roll = msg.roll;
-            const stressRoll = await roll.buildStressRoll();
-            msg.stressRoll = stressRoll;
+
+            await roll.buildStressRoll(msg);
+            //await msg.setStressRoll(stressRoll);
             msg.showStressRollButton = false;
         });
     }

@@ -44,6 +44,10 @@ function registerSettings() {
 }
 
 function initialise() {
+    Hooks._ids = {};
+    Hooks._hooks.renderChatLog = [];
+    Hooks._hooks.renderChatPopout = [];
+
     activateTemplates();
 
     game.heart = {
@@ -115,6 +119,17 @@ function initialise() {
         const value = `heart.${args.join('.')}`;
         return HandlebarsHelpers.localize(value, options)
     });
+
+    Handlebars.registerHelper('ownsAnyActors', function(ids) {
+        for(let id of ids) {
+            const actor = game.actors.get(id);
+            if(!actor) continue;
+
+            if(actor.isOwner) return true;
+        }
+
+        return false;
+    });
 }
 
 Hooks.once('init', initialise);
@@ -138,5 +153,11 @@ if (module.hot) {
         Object.values(ui.windows).forEach(function(window) {
             window.render(true);
         });
+
+        if(ui.chat !== undefined) {
+            ui.chat._lastId = null; 
+            ui.chat.element.find('#chat-log').html(""); 
+            ui.chat._renderBatch(ui.chat.element, CONFIG.ChatMessage.batchSize)
+        }
     })()
 }

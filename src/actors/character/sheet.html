@@ -1,14 +1,15 @@
 {{#*inline "itemList"}}
-    {{#if (lookup heart type)}}
+    {{#with (lookup actor.itemTypes type) as |list|}}
+    {{#if list.length}}
     <div class="item-list">
-        {{#each (lookup heart type) as |item|}}
-            <div data-item="{{item.data._id}}">
-                {{> @partial-block }}
-
+        {{#each list as |item|}}
+            <div data-item="{{item.data._id}}" class="flexrow">
+                <div>
+                    {{> @partial-block item=item }}
+                </div>
+            
                 <div class="right">
-                    <a data-action="view"><span class="fas fa-eye"></span></a>
-                    {{#if isOwner}}
-                        <a data-action="edit"><span class="fas fa-edit"></span></a>
+                    {{#if item.isOwner}}
                         <a data-action="delete"><span class="fas fa-trash"></span></a>
                     {{/if}}
                 </div>
@@ -16,12 +17,13 @@
         {{/each}}
     </div>
     {{/if}}
+    {{/with}}
 {{/inline}}
 
 <div class="heart flexrow buttons sticky">
     <button data-action="prepare-request-roll"><span class="fas fa-dice"></span> {{localizeHeart "perform" "request-roll"}}</button>
-    <button data-action="prepare-roll"><span class="fas fa-dice"></span> {{localizeHeart "perform" "roll"}}</button>
-    <button data-action="prepare-stress-roll"><span class="fas fa-dice"></span> {{localizeHeart "perform" "roll-stress"}}</button>
+    <button data-action="roll"><span class="fas fa-dice"></span> {{localizeHeart "perform" "roll"}}</button>
+    <button data-action="stress-roll"><span class="fas fa-dice"></span> {{localizeHeart "perform" "roll-stress"}}</button>
     <button data-action="fallout-roll"><span class="fas fa-dice"></span> {{localizeHeart "perform" "roll-fallout"}}</button>
 </div>
 <form class="heart sheet actor character {{cssClass}}" autocomplete="off">
@@ -56,9 +58,8 @@
                 </div>
                 {{/if}}
             </h2>
-            {{#> itemList "beat" }}
-                {{item.name}}
-                ({{join ", " item.data.data.di_size item.data.data.domain array=item.data.data.tags}})
+            {{#> itemList type="beat" actor=actor}}
+            <a data-action="view">{{item.name}}</a>
             {{/itemList}}
             {{editor content=actor.data.data.active_beats target="data.active_beats" button=true editable=editable owner=owner}}
         </div>
@@ -71,9 +72,9 @@
                 </div>
                 {{/if}}
             </h2>
-            {{#> itemList "equipment" }}
-                {{item.name}}
-                ({{join ", " item.data.data.di_size item.data.data.domain array=item.data.data.tags}})
+            {{#> itemList type="equipment"  actor=actor}}
+                <a data-action="view">{{item.name}}</a>
+                (<a data-action="roll"><span class="fas fa-dice"></span> {{item.data.data.di_size}}</a>, {{join ", " item.data.data.domain array=item.data.data.tags}})
             {{/itemList}}
             {{editor content=actor.data.data.equipment target="data.equipment" button=true editable=editable owner=owner}}
         </div>
@@ -86,13 +87,14 @@
                 </div>
                 {{/if}}
             </h2>
-            {{#> itemList "resource" }}
-                {{item.name}}
-                ({{join ", " item.data.data.di_size array=item.data.data.tags}})
+            {{#> itemList type="resource" actor=actor}}
+            <a data-action="view">{{item.name}}</a>
+            (<a data-action="roll"><span class="fas fa-dice"></span> {{item.data.data.di_size}}</a>
+            {{#if item.data.data.tags.length}}
+            , {{join ", " array=item.data.data.tags}}
+            {{/if}})
             {{/itemList}}
-            <div>
-                {{editor content=actor.data.data.resources target="data.resources" button=true editable=editable owner=owner}}
-            </div>
+            {{editor content=actor.data.data.resources target="data.resources" button=true editable=editable owner=owner}}
         </div>
         <div class="abilities">
             <h2>
@@ -103,6 +105,10 @@
                 </div>
                 {{/if}}
             </h2>
+            
+            {{#> itemList type="ability" actor=actor}}
+            <a data-action="view">{{item.name}}</a>
+            {{/itemList}}
             {{editor content=actor.data.data.abilities target="data.abilities" button=true editable=editable owner=owner}}
         </div>
         <div class="fallout">
@@ -110,10 +116,13 @@
                 {{localizeHeart "fallout" "label-multiple"}}
                 {{#if actor.isOwner}}
                 <div class="top right">
-                    <a data-action="add" data-type="ability"><span class="fas fa-plus"></span></a>
+                    <a data-action="add" data-type="fallout"><span class="fas fa-plus"></span></a>
                 </div>
                 {{/if}}
             </h2>
+            {{#> itemList type="fallout" actor=actor}}
+            <a data-action="view">{{item.name}}</a>
+            {{/itemList}}
             {{editor content=actor.data.data.fallout target="data.fallout" button=true editable=editable owner=owner}}
         </div>
         <div class="skills grid-2 auto-first-col">

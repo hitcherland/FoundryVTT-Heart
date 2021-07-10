@@ -9,6 +9,27 @@ export default class HeartApplication extends FormApplication {
         return 'base'
     }
     
+    static async build(data, msg) {
+        try {
+            const valueData = Object.entries(data).reduce((map, [key, build]) => {
+                map[key] = build.value[0];
+                return map;
+            }, {});
+
+            await this._roll(valueData, msg);
+        } catch(err) {
+            console.warn(err);
+            return (new this({}, {
+                heart: data,
+                msg
+            })).render(true);
+        }
+    }
+
+    static async _roll(data) {
+        ui.notifications.error(`_roll has not been defined for ${this.formType}`);
+    }
+    
     get title() {
         if(this.constructor.formType !== 'base') {
             return game.i18n.localize(`heart.applications.${this.constructor.formType}.title`);

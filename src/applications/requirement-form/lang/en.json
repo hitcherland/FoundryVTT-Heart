@@ -1,0 +1,19 @@
+{
+    "applications": {
+        "requirement": {
+            "title": "More Information"
+        },
+        "prepare-fallout-roll": {
+            "title": "Prepare Fallout Roll",
+            "description": "Pick a character to roll for fallout with."
+        },
+        "prepare-roll": {
+            "title": "Prepare Roll",
+            "description": "Pick a difficulty, character to roll with and various dice pool modifiers, then roll."
+        },
+        "prepare-stress-roll": {
+            "title": "Prepare Stress Roll",
+            "description": "Pick a character, a stress-inducing result type, and a di size to roll stress with."
+        }
+    }
+}

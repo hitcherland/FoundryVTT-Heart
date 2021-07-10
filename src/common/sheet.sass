@@ -22,3 +22,41 @@
 
     .editor-content 
         @include util.notepad
+
+    .item-list
+        font-size: 1.2em
+
+        
+    &.base
+        .info
+            display: flex
+            flex: 0% 0 1
+            flex-flow: row wrap
+            place-items: center
+            place-content: center
+            background: util.$bg-for-red
+        
+        .info > *
+            flex: 0% 1 1
+
+        img.profile
+            flex-grow: 1
+            background: rgba(0, 0, 0, 0.5)
+            cursor: pointer
+            max-height: 6em
+
+        .text
+            flex-grow: 3
+            display: flex
+            flex-flow: column
+
+        input[name=name]
+            grid-area: 1 / 2 / 2 / 3
+            flex-grow: 0
+            font-size: 2em
+            border: 0
+            align-self: bottom
+            text-align: center
+            background: none
+            color: util.$red
+            font-weight: bold

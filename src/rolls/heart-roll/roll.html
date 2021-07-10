@@ -1,4 +1,5 @@
-<div class="dice-roll heart heart-roll">
+<form class="dice-roll heart heart-roll">
+    <input type="hidden" name="character" value="{{character}}"/>
     {{#if flavor}}
     <div class="dice-flavor">{{flavor}}</div>
     {{/if}}
@@ -7,11 +8,11 @@
         {{{tooltip}}}
         <div class="flexrow">
             <h4 class="dice-total text">{{localizeHeart "result" result}}</h4>
-            {{#if showStressRollButton}}
+            {{#if (and showStressRollButton (lookup (getActor character) "isOwner"))}}
             <button class="icon-button" data-action='roll-stress' title="{{localizeHeart 'rolls' 'stress-roll' 'action'}}">
                 <span class="fas fa-dice"></span>
             </button>
             {{/if}}
         </div>
     </div>
-</div>
+</form>

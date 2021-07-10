@@ -4,6 +4,7 @@
     background: util.$red
     color: util.$white
     border-color: util.$bg-for-red
+    
 
     .message-header
         color: util.$white
@@ -34,6 +35,11 @@
         margin-top: 0.5em
 
 .chat-message .heart
+
+    h1
+        border: 0
+        text-align: center
+        
     button
         background: util.$bg-for-red
         color: util.$white
@@ -43,3 +49,43 @@
     
     button + button
         margin-top: 0.2em
+
+.chat-message .roll-request
+    background: util.$black
+    padding: 1em
+    border-radius: 0.5em
+    font-size: 1.1em
+
+    label
+        display: flex
+        align-items: center
+        justify-items: end
+        place-content: end
+
+    select
+        color: util.$white
+        appearance: none
+        width: 100%
+        overflow: auto
+
+        option
+            appearance: none
+            text-align: center
+            background: util.$black
+
+    button > *
+        text-overflow: ellipsis
+
+    .options
+        align-items: stretch
+        flex-wrap: wrap
+        .option
+            img
+                height: 3em
+                width: 100%
+                object-fit: contain
+                border: 0
+                background: rgba(0, 0, 0, 0.5)
+                padding: 0
+                margin: 0
+                border-radius: 0

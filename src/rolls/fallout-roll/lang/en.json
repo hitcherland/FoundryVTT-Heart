@@ -3,7 +3,7 @@
         "fallout-roll": {
             "label": "Fallout Roll",
             "action": "Roll Fallout",
-            "description(total_stress)": "Fallout Roll with {total_stress} Stress",
+            "description(totalStress)": "Fallout Roll with {totalStress} Stress",
             "results": {
                 "no-fallout": "No Fallout",
                 "minor-fallout": "Minor Fallout",

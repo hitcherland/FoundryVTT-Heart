@@ -140,7 +140,12 @@ input.toggle-display
             background-image: linear-gradient(90deg, util.$black 0%, util.$black 100%)
             background-size: $size - 2px $size - 2px
             background-position: center
-            background-repeat: no-repeat  
+            background-repeat: no-repeat
+
+        &.invert
+            border-color: util.$white
+            &:checked
+                background-image: linear-gradient(90deg, util.$white 0%, util.$white 100%)
 
     .red
         .ordered-checkable-box

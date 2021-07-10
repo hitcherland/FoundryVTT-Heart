@@ -1,8 +1,0 @@
-{
-    "applications": {
-        "prepare-fallout-roll": {
-            "title": "Prepare Fallout Roll",
-            "description": "Pick a character to roll for fallout with."
-        }
-    }
-}

@@ -1,7 +1,10 @@
-import chatMessageHTML from './chat-message.html';
 import './chat-message.sass';
 
 class HeartChatMessage extends ChatMessage {
+    get isRollRequest() {
+        return this.getFlag('heart', 'roll-request') !== undefined;
+    }
+
     get stressRoll() {
         const json = this.getFlag('heart', 'stress-roll');
         if (json === undefined) {
@@ -12,10 +15,9 @@ class HeartChatMessage extends ChatMessage {
         return roll;
     }
 
-    set stressRoll(roll) {
+    async setStressRoll(roll) {
         const json = roll.toJSON()
-        this.setFlag('heart', 'stress-roll', json);
-        return
+        await this.setFlag('heart', 'stress-roll', json);
     }
 
     get showStressRollButton() {
@@ -84,68 +86,72 @@ class HeartChatMessage extends ChatMessage {
     }
 
     async getHTML() {
-        const data = this.toObject(false);
-        const isWhisper = this.data.whisper.length;
+        const html = await super.getHTML();
 
-        const messageData = {
-            message: data,
-            user: game.user,
-            author: this.user,
-            alias: this.alias,
-            cssClass: [
-                this.data.type === CONST.CHAT_MESSAGE_TYPES.IC ? "ic" : null,
-                this.data.type === CONST.CHAT_MESSAGE_TYPES.EMOTE ? "emote" : null,
-                isWhisper ? "whisper" : null,
-                this.data.blind ? "blind" : null
-            ].filterJoin(" "),
-            isWhisper: this.data.whisper.some(id => id !== game.user.id),
-            whisperTo: this.data.whisper.map(u => {
-                let user = game.users.get(u);
-                return user ? user.name : null;
-            }).filterJoin(", ")
-        };
+        if (this.isRoll && this.isContentVisible) {
+            html.find('.message-content').html(
+                await this.roll.render({
+                    isPrivate: false,
+                    showStressRollButton: this.showStressRollButton
+                })
+            )
 
-        if (this.isRoll) {
-
-            if (!this.isContentVisible) {
-                data.flavor = game.i18n.format("CHAT.PrivateRollContent", { user: this.user.name });
-                data.content = await this.roll.render({ isPrivate: true, showStressRollButton: this.showStressRollButton });
-                if (this.stressRoll) {
-                    data.stressContent = await this.stressRoll.render({ isPrivate: true, showTakeStressButton: this.showTakeStressButton, showFalloutRollButton: this.showFalloutRollButton });
-                }
-                if (this.falloutRoll) {
-                    data.falloutContent = await this.falloutRoll.render({ isPrivate: true });
-                }
-                messageData.isWhisper = false;
-                messageData.alias = this.user.name;
+            if (this.stressRoll) {
+                const stressContent = await this.stressRoll.render({ isPrivate: false, showTakeStressButton: this.showTakeStressButton, showFalloutRollButton: this.showFalloutRollButton });
+                html.append(
+                    $('<div class="message-content"></div>').append(stressContent)
+                );
             }
-
-            else {
-                const hasContent = data.content && (Number(data.content) !== this.roll.total);
-                if (!hasContent) data.content = await this.roll.render({ isPrivate: false, showStressRollButton: this.showStressRollButton });
-                if (this.stressRoll) {
-                    data.stressContent = await this.stressRoll.render({ isPrivate: false, showTakeStressButton: this.showTakeStressButton, showFalloutRollButton: this.showFalloutRollButton });
-                }
-                if (this.falloutRoll) {
-                    data.falloutContent = await this.falloutRoll.render({ isPrivate: false });
-                }
+            if (this.falloutRoll) {
+                const falloutContent = await this.falloutRoll.render({ isPrivate: false });
+                html.append(
+                    $('<div class="message-content"></div>').append(falloutContent)
+                );
             }
         }
 
-        if (this.data.type === CONST.CHAT_MESSAGE_TYPES.OOC) {
-            messageData.borderColor = this.user.color;
+        if(this.isRollRequest) {
+            const data = this.getFlag('heart', 'roll-request');
+            const content = await renderTemplate('heart:applications/prepare-roll-request/chat-message.html', data);
+            html.append(content)
         }
 
-        let html = await renderTemplate(CONFIG.ChatMessage.template, messageData);
-        html = $(html);
-
-        Hooks.call("renderChatMessage", this, html, messageData);
         return html;
     }
+}
+
+function activateListeners(html) {
+
+    html.on('click', 'form button', ev => {
+        ev.preventDefault();
+    });
+
+    html.on('click', 'form.roll-request [data-action=roll][data-character]', (ev) => {
+        const button = $(ev.currentTarget);
+        const {
+            character
+        } = button.data();
+
+        const form = button.closest('form.roll-request');
+        const data = new FormData(form.get(0));
+        data.set('character', character);
+
+        const buildData = game.heart.applications.PrepareRollApplication.getBuildData({
+            character: [character],
+            difficulty: form.find(`[name=difficulty]`).map((_, ev) => ev.value).get(),
+            skill: form.find(`[name=skill]`).map((_, ev) => ev.value).get(),
+            domain: form.find(`[name=domain]`).map((_, ev) => ev.value).get(),
+            helper: form.find(`[name=helper]`).map((_, ev) => ev.value).get(),
+        }, data);
+
+        return game.heart.applications.PrepareRollApplication.build(buildData);
+    });
 }
 
 export function initialise() {
     console.log('heart | Registering ChatMessage');
     CONFIG.ChatMessage.documentClass = HeartChatMessage;
-    CONFIG.ChatMessage.template = chatMessageHTML.path;
+
+    Hooks.once('renderChatLog', (app, html, data) => activateListeners(html));
+    Hooks.once('renderChatPopout', (app, html, data) => activateListeners(html));
 }

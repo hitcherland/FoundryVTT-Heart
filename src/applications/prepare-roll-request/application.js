@@ -41,35 +41,27 @@ export default class PrepareRollRequestApplication extends HeartApplication {
         html.find('[data-action=submit]').click(async ev => {
             const data = new FormData(form);
 
-            
             const difficulty = data.get('difficulty');
             const characters = data.getAll('character');
             const skills = data.getAll('skill');
-            const domains = data.getAll('domains');
-            const valid_helpers = data.getAll('helpers');
+            const domains = data.getAll('domain');
+            const validHelpers = data.getAll('helper');
 
-            console.warn({
-                difficulty,
-                characters,
-                skills,
-                domains,
-                valid_helpers
+            CONFIG.ChatMessage.documentClass.create({
+                flags: {
+                    heart: {
+                        ["roll-request"]: {
+                            difficulty,
+                            characters,
+                            skills,
+                            domains,
+                            validHelpers,
+                        }
+                    }
+                }
             });
 
-            /*
-            const roll = await game.heart.rolls.HeartRoll.build({
-                difficulty,
-                skill: character.data.data.skills[skill].value ? skill : undefined,
-                domain: character.data.data.domains[domain].value ? domain : undefined,
-                mastery,
-                helpers
-            });
-
-            roll.toMessage();
-
-            this.close()
-            
-            */
+            this.close();
         });
     }
 }

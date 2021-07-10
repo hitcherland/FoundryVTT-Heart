@@ -55,12 +55,56 @@ export default class CharacterSheet extends HeartActorSheet {
             new PrepareRollRequestApplication({}).render(true);
         });
 
-        html.find('[data-action=fallout-roll]').click(ev => {
-            const stress = this.actor.proxy.totalStress;
-            game.heart.rolls.FalloutRoll.build(stress).toMessage({
-                speaker: {
-                    actor: this.actor.data._id
-                }
+        html.find('[data-action=add][data-type]').click(ev => {
+            const type = $(ev.currentTarget).data('type');
+            const doc = new CONFIG.Item.documentClass({
+                type,
+                name: `New ${type}`
+            });
+
+            
+            this.actor.createEmbeddedDocuments('Item', [doc.toObject()]);
+        });
+
+        html.find('[data-action=view]').click(ev => {
+            const id = $(ev.currentTarget).closest('[data-item]').data('item');
+            const item = this.actor.items.get(id);
+            item.sheet.render(true);
+        });
+
+        html.find('[data-action=delete]').click(ev => {
+            const id = $(ev.currentTarget).closest('[data-item]').data('item');
+            const item = this.actor.items.get(id);
+            item.delete();
+        });
+        
+        html.find('[data-action=roll]').click(async ev => {
+            const roll = await  game.heart.rolls.HeartRoll.build({
+                character: this.actor.id
+            });
+
+            roll.toMessage({
+                speaker: {actor: this.actor.id}
+            });
+        });
+
+        html.find('[data-action=stress-roll]').click(async ev => {
+            const roll = await game.heart.rolls.StressRoll.build({
+                character: this.actor.id
+            });
+
+            roll.toMessage({
+                speaker: {actor: this.actor.id}
+            });
+        });
+
+        html.find('[data-action=fallout-roll]').click(async ev => {
+            const roll = await game.heart.rolls.FalloutRoll.build({
+                character: this.actor.id
+            });
+
+            roll.toMessage({
+                speaker: {actor: this.actor.id}
             });
         });
 
