@@ -1,0 +1,204 @@
+{
+    "heart": {
+        "adversary": {
+            "label-single": "Adversary",
+            "label-multiple": "Adversaries"
+        },
+        "character": {
+            "name": "Name",
+            "class": "Class",
+            "calling": "Calling",
+            "notes": "Notes",
+            "label-single": "Character",
+            "label-multiple": "Characters",
+            "label-helpers": "Helping Characters",
+            "label-valid-helpers": "Characters Who Could Help"
+        },
+        "resistance": {
+            "label-single": "Resistance",
+            "label-multiple": "Resistances",
+            "protection": {
+                "label-single": "Protection",
+                "label-multiple": "Protections"
+            },
+            "blood": "Blood",
+            "mind": "Mind",
+            "echo": "Echo",
+            "fortune": "Fortune",
+            "supplies": "Supplies"
+        },
+        "delve": {
+            "label-single": "Delve",
+            "label-multiple": "Delves"
+        },
+        "landmark": {
+            "label-single": "Landmark",
+            "label-multiple": "Landmarks"
+        },
+        "applications": {
+            "prepare-roll-request": {
+                "title": "Prepare Roll Request",
+                "description": "Pick a difficulty, which characters can roll and help, and what skills and domains they can use. Then send a chat message asking players to roll."
+            },
+            "requirement": {
+                "title": "More Information"
+            },
+            "prepare-fallout-roll": {
+                "title": "Prepare Fallout Roll",
+                "description": "Pick a character to roll for fallout with."
+            },
+            "prepare-roll": {
+                "title": "Prepare Roll",
+                "description": "Pick a difficulty, character to roll with and various dice pool modifiers, then roll."
+            },
+            "prepare-stress-roll": {
+                "title": "Prepare Stress Roll",
+                "description": "Pick a character, a stress-inducing result type, and a di size to roll stress with."
+            },
+            "take-stress": {
+                "description": "Pick a resistance to take stress in."
+            }
+        },
+        "beat": {
+            "label-single": "Beat",
+            "label-multiple": "Beats",
+            "active": {
+                "label-single": "Active Beat",
+                "label-multiple": "Active Beats"
+            }
+        },
+        "ability": {
+            "label-single": "Ability",
+            "label-multiple": "Abilities"
+        },
+        "equipment": {
+            "label-single": "Equipment",
+            "label-multiple": "Equipment",
+            "type": {
+                "label-single": "Type",
+                "label-multiple": "Types",
+                "miscellaneous": "Miscellaneous",
+                "delve": "Delve",
+                "kill": "Kill",
+                "mend": "Mend"
+            }
+        },
+        "fallout": {
+            "label-single": "Fallout",
+            "label-multiple": "Fallout"
+        },
+        "haunt": {
+            "label-single": "Haunt",
+            "label-multiple": "Haunts"
+        },
+        "resource": {
+            "label-single": "Resource",
+            "label-multiple": "Resources"
+        },
+        "roll": "Roll",
+        "cancel": "Cancel",
+        "help": "Help",
+        "none": "N/A",
+        "di_size": {
+            "label-single": "Di Size",
+            "label-multiple": "Di Sizes",
+            "d(N)": "D{N}"
+        },
+        "skill": {
+            "label-single": "Skill",
+            "label-multiple": "Skills",
+            "knack": {
+                "label-single": "Knack",
+                "label-multiple": "Knacks"
+            },
+            "compel": "Compel",
+            "delve": "Delve",
+            "discern": "Discern",
+            "endure": "Endure",
+            "evade": "Evade",
+            "hunt": "Hunt",
+            "kill": "Kill",
+            "mend": "Mend",
+            "sneak": "Sneak"
+        },
+        "domain": {
+            "label-single": "Domain",
+            "label-multiple": "Domains",
+            "knack": {
+                "label-single": "Knack",
+                "label-multiple": "Knacks"
+            },
+            "cursed": "Cursed",
+            "desolate": "Desolate",
+            "haven": "Haven",
+            "occult": "Occult",
+            "religion": "Religion",
+            "technology": "Technology",
+            "warren": "Warren",
+            "wild": "Wild"
+        },
+        "mastery": {
+            "label": "Roll with Mastery",
+            "short": "Mastery",
+            "label-single": "Mastery",
+            "label-multiple": "Masteries"
+        },
+        "helper": {
+            "label-single": "Help",
+            "label-multipler": "Helpers"
+        },
+        "rolls": {
+            "roll-request": {
+                "label": "Roll Request"
+            },
+            "fallout-roll": {
+                "label": "Fallout Roll",
+                "action": "Roll Fallout",
+                "description(totalStress)": "Fallout Roll with {totalStress} Stress",
+                "results": {
+                    "no-fallout": "No Fallout",
+                    "minor-fallout": "Minor Fallout",
+                    "major-fallout": "Major Fallout"
+                }
+            },
+            "roll": {
+                "label": "Roll",
+                "action": "Roll",
+                "base": "Base",
+                "description(difficulty,count)": "{difficulty} Roll with {count} dice"
+            },
+            "stress-roll": {
+                "label": "Stress Roll",
+                "action": "Roll Stress",
+                "take-stress": "Take Stress",
+                "prepare": "Prepare Stress Roll",
+                "description(di_size)": "{di_size} Stress Roll"
+            }
+        },
+        "difficulty": {
+            "label-single": "Difficulty",
+            "label-multiple": "Difficulties",
+            "standard": "Standard",
+            "risky": "Risky",
+            "dangerous": "Dangerous",
+            "impossible": "Impossible"
+        },
+        "result": {
+            "label-single": "Result",
+            "label-multiple": "Results",
+            "label-stress": "Stress Results",
+            "critical_success": "Critical Success",
+            "success": "Success",
+            "success_at_a_cost": "Success At A Cost",
+            "failure": "Failure",
+            "critical_failure": "Critical Failure"
+        },
+        "perform": {
+            "request-roll": "Request Roll",
+            "roll": "Roll",
+            "roll-stress": "Roll Stress",
+            "roll-fallout": "Roll Fallout"
+        },
+        "stress": "Stress"
+    }
+}

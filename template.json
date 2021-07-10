@@ -1,0 +1,211 @@
+{
+    "Actor": {
+        "adversary": {
+            "names": "",
+            "descriptors": "",
+            "motivation": "",
+            "difficulty": "",
+            "resistance": "",
+            "protection": "",
+            "resources": [],
+            "equipment": "",
+            "special": ""
+        },
+        "templates": {
+            "resistance": {
+                "resistances": {
+                    "blood": {
+                        "value": 0,
+                        "max": 10,
+                        "protection": 0
+                    },
+                    "mind": {
+                        "value": 0,
+                        "max": 10,
+                        "protection": 0
+                    },
+                    "echo": {
+                        "value": 0,
+                        "max": 10,
+                        "protection": 0
+                    },
+                    "fortune": {
+                        "value": 0,
+                        "max": 10,
+                        "protection": 0
+                    },
+                    "supplies": {
+                        "value": 0,
+                        "max": 10,
+                        "protection": 0
+                    }
+                }
+            },
+            "skills": {
+                "skills": {
+                    "compel": {
+                        "value": false,
+                        "knack": ""
+                    },
+                    "delve": {
+                        "value": false,
+                        "knack": ""
+                    },
+                    "discern": {
+                        "value": false,
+                        "knack": ""
+                    },
+                    "endure": {
+                        "value": false,
+                        "knack": ""
+                    },
+                    "evade": {
+                        "value": false,
+                        "knack": ""
+                    },
+                    "hunt": {
+                        "value": false,
+                        "knack": ""
+                    },
+                    "kill": {
+                        "value": false,
+                        "knack": ""
+                    },
+                    "mend": {
+                        "value": false,
+                        "knack": ""
+                    },
+                    "sneak": {
+                        "value": false,
+                        "knack": ""
+                    }
+                }
+            },
+            "domains": {
+                "domains": {
+                    "cursed": {
+                        "value": false,
+                        "knack": ""
+                    },
+                    "desolate": {
+                        "value": false,
+                        "knack": ""
+                    },
+                    "haven": {
+                        "value": false,
+                        "knack": ""
+                    },
+                    "occult": {
+                        "value": false,
+                        "knack": ""
+                    },
+                    "religion": {
+                        "value": false,
+                        "knack": ""
+                    },
+                    "technology": {
+                        "value": false,
+                        "knack": ""
+                    },
+                    "warren": {
+                        "value": false,
+                        "knack": ""
+                    },
+                    "wild": {
+                        "value": false,
+                        "knack": ""
+                    }
+                }
+            }
+        },
+        "character": {
+            "templates": [
+                "resistance",
+                "skills",
+                "domains"
+            ],
+            "class": "",
+            "calling": "",
+            "active_beats": [],
+            "equipment": [],
+            "resources": [],
+            "abilities": [],
+            "fallout": [],
+            "notes": ""
+        },
+        "delve": {
+            "domains": [],
+            "tier": [],
+            "stress": "",
+            "resistance": 10,
+            "events": [],
+            "connection": "",
+            "description": ""
+        },
+        "landmark": {
+            "domains": [],
+            "description": "",
+            "stress": "d4",
+            "haunts": []
+        },
+        "types": [
+            "adversary",
+            "character",
+            "delve",
+            "landmark"
+        ]
+    },
+    "Item": {
+        "ability": {
+            "templates": [
+                "has_description"
+            ]
+        },
+        "templates": {
+            "is_rollable": {
+                "di_size": "d4"
+            },
+            "has_description": {
+                "description": ""
+            }
+        },
+        "beat": {
+            "templates": [
+                "has_description"
+            ],
+            "type": ""
+        },
+        "equipment": {
+            "templates": [
+                "is_rollable",
+                "has_description"
+            ],
+            "type": "miscellaneous"
+        },
+        "fallout": {
+            "templates": [
+                "has_description"
+            ]
+        },
+        "haunt": {
+            "templates": [
+                "has_description"
+            ]
+        },
+        "resource": {
+            "templates": [
+                "is_rollable",
+                "has_description"
+            ],
+            "domain": ""
+        },
+        "types": [
+            "ability",
+            "beat",
+            "equipment",
+            "fallout",
+            "haunt",
+            "resource"
+        ]
+    }
+}
