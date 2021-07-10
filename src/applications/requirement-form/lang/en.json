@@ -14,6 +14,9 @@
         "prepare-stress-roll": {
             "title": "Prepare Stress Roll",
             "description": "Pick a character, a stress-inducing result type, and a di size to roll stress with."
+        },
+        "take-stress": {
+            "description": "Pick a resistance to take stress in."
         }
     }
 }

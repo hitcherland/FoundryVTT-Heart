@@ -2,7 +2,8 @@
     "character": {
         "name": "Name",
         "class": "Class",
-        "calling": "Calling"
+        "calling": "Calling",
+        "notes": "Notes"
     },
 
     "resistance": {

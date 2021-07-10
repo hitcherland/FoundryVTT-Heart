@@ -233,15 +233,6 @@ export default class HeartRoll extends Roll {
         });
     }
 
-    async buildStressRoll(msg, di_size='d4', data={}, options={}) {
-        if (!this._evaluated) await this.evaluate({ async: true });
-
-        await game.heart.applications.PrepareStressRollApplication.build({
-            result: this.result,
-            character: this.options.character,
-        }, msg);
-    }
-
     static activateListeners(html) {
         html.on('click', '.heart-roll [data-action=roll-stress]', async function(ev) {
             const target = $(ev.currentTarget);
@@ -250,8 +241,16 @@ export default class HeartRoll extends Roll {
             const msg = game.messages.get(messageId);
             const roll = msg.roll;
 
-            await roll.buildStressRoll(msg);
-            //await msg.setStressRoll(stressRoll);
+            
+            if (!roll._evaluated) await this.evaluate({ async: true });
+            const stressRoll = await game.heart.rolls.StressRoll.build({
+                character: roll.options.character,
+                result: roll.result,
+            }, msg);
+
+            await stressRoll.evaluate({async: true});
+
+            await msg.setStressRoll(stressRoll);
             msg.showStressRollButton = false;
         });
     }

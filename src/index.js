@@ -56,6 +56,7 @@ function initialise() {
         skills: ['compel', 'delve', 'discern', 'endure', 'evade', 'hunt', 'kill', 'mend','sneak'],
         domains: ['cursed', 'desolate', 'haven', 'occult', 'religion', 'technology', 'warren', 'wild'],
         stress_dice: ['d4', 'd6', 'd8', 'd10', 'd12'],
+        di_sizes: ['d4', 'd6', 'd8', 'd10', 'd12'],
     };
 
     console.log(`heart | Registering ${modules.length} modules`);

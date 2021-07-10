@@ -29,7 +29,6 @@ export default class RequirementApplication extends HeartApplication {
 
             const output = Object.entries(this.options.requirements).reduce((map, [key, requirement]) => {
                 if(requirement.isCheckbox) {
-                    console.warn({key, value: data.get(key)});
                     const value = data.get(key);
                     map[key] = value !== null;
                 } else if(requirement.isMany) {

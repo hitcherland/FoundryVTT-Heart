@@ -1,8 +1,3 @@
-//import {PrepareRollRequestApplication} from '../applications/prepare-roll-request.js';
-//import {PrepareRollApplication} from '../applications/prepare-roll.js';
-//import {PrepareStressRollApplication} from '../applications/prepare-stress-roll.js';
-//import {PrepareFalloutRollApplication} from '../applications/prepare-fallout-roll.js';
-
 import sheetHTML from './sheet.html';
 import './character.sass';
 import HeartActorSheet from '../base/sheet';
@@ -52,7 +47,7 @@ export default class CharacterSheet extends HeartActorSheet {
 
         
         html.find('[data-action=prepare-request-roll]').click(ev => {
-            new PrepareRollRequestApplication({}).render(true);
+            new game.heart.applications.PrepareRollRequestApplication({}).render(true);
         });
 
         html.find('[data-action=add][data-type]').click(ev => {
@@ -76,6 +71,19 @@ export default class CharacterSheet extends HeartActorSheet {
             const id = $(ev.currentTarget).closest('[data-item]').data('item');
             const item = this.actor.items.get(id);
             item.delete();
+        });
+
+        html.find('[data-action=item-roll]').click(async ev => {
+            const id = $(ev.currentTarget).closest('[data-item]').data('item');
+            const item = this.actor.items.get(id);
+
+            const roll = game.heart.rolls.ItemRoll.build({item});
+            await roll.evaluate({async: true});
+
+            roll.toMessage({
+                flavor: `${item.name} (<span class="item-type">${item.type}</span>)`,
+                speaker: {actor: this.actor.id}
+            });
         });
         
         html.find('[data-action=roll]').click(async ev => {
@@ -107,35 +115,5 @@ export default class CharacterSheet extends HeartActorSheet {
                 speaker: {actor: this.actor.id}
             });
         });
-
-        /*
-        html.find('[data-action=prepare-roll]').click(ev => {
-            const skills = Object.entries(this.actor.data.data.skills).filter(([k, v]) => {
-                return v.value;
-            }).map(([k, v]) => k);
-
-            const domains = Object.entries(this.actor.data.data.domains).filter(([k, v]) => {
-                return v.value;
-            }).map(([k, v]) => k);
-
-            new PrepareRollApplication({
-                actor_id: this.actor.id,
-                skills,
-                domains
-            }).render(true);
-        });
-
-        html.find('[data-action=prepare-stress-roll]').click(ev => {
-            new PrepareStressRollApplication({
-                actor_id: this.actor.id,
-            }).render(true);
-        });
-
-        html.find('[data-action=prepare-fallout-roll]').click(ev => {
-            new PrepareFalloutRollApplication({
-                actor_id: this.actor.id,
-            }).render(true);
-        });
-        */
     }
 }

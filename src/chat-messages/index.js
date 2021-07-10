@@ -6,6 +6,10 @@ class HeartChatMessage extends ChatMessage {
     }
 
     get stressRoll() {
+        if(this.roll instanceof game.heart.rolls.StressRoll) {
+            return this.roll;
+        }
+
         const json = this.getFlag('heart', 'stress-roll');
         if (json === undefined) {
             return
@@ -38,14 +42,14 @@ class HeartChatMessage extends ChatMessage {
 
     get showTakeStressButton() {
         const showTakeStressButton = this.getFlag('heart', 'show-take-stress-button')
-        if (this.stressRoll === undefined || this.falloutRoll !== undefined) {
-            return false;
-        }
-
-        if (showTakeStressButton === undefined) {
-            return true
+        if(this.stressRoll !== undefined) {
+            if (showTakeStressButton === undefined) {
+                return true
+            } else {
+                return Boolean(showTakeStressButton);
+            }
         } else {
-            return Boolean(showTakeStressButton);
+            return false;
         }
     }
 
@@ -54,6 +58,10 @@ class HeartChatMessage extends ChatMessage {
     }
 
     get falloutRoll() {
+        if(this.roll instanceof game.heart.rolls.FalloutRoll) {
+            return this.roll;
+        }
+
         const json = this.getFlag('heart', 'fallout-roll');
         if (json === undefined) {
             return
@@ -92,17 +100,20 @@ class HeartChatMessage extends ChatMessage {
             html.find('.message-content').html(
                 await this.roll.render({
                     isPrivate: false,
-                    showStressRollButton: this.showStressRollButton
+                    showStressRollButton: this.showStressRollButton,
+                    showTakeStressButton: this.showTakeStressButton,
+                    showFalloutRollButton: this.showFalloutRollButton,
                 })
             )
 
-            if (this.stressRoll) {
+            if (this.stressRoll && this.stressRoll !== this.roll) {
                 const stressContent = await this.stressRoll.render({ isPrivate: false, showTakeStressButton: this.showTakeStressButton, showFalloutRollButton: this.showFalloutRollButton });
                 html.append(
                     $('<div class="message-content"></div>').append(stressContent)
                 );
             }
-            if (this.falloutRoll) {
+
+            if (this.falloutRoll && this.falloutRoll !== this.roll) {
                 const falloutContent = await this.falloutRoll.render({ isPrivate: false });
                 html.append(
                     $('<div class="message-content"></div>').append(falloutContent)

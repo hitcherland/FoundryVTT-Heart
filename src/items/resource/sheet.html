@@ -1,2 +1,13 @@
 {{#> "heart:items/base/sheet.html" type="resource"}}
+<label>
+    {{localizeHeart "domain" "label-single"}}
+</label>
+{{#if editable}}
+    <select name="data.domain">
+        {{selectOptions domains selected=data.data.domain}}
+    </select>
+{{else}}
+    {{localizeHeart "domain" data.data.domain}}
+{{/if}}
+
 {{/ "heart:items/base/sheet.html"}}

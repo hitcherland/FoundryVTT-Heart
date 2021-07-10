@@ -1,4 +1,22 @@
 {{#> "heart:common/sheet.html" documentName="item" type=type}}
-    {{> @partial-block }}
+    {{log this}}
+    {{#if data.data.di_size}}
+    <div class="grid-2 auto-first-col place-center" style="flex: auto 0 0">
+        <label>
+            {{localizeHeart "di_size" "label-single"}}
+        </label>
+        {{#if editable}}
+        <select name="data.di_size">
+            {{selectOptions di_sizes selected=data.data.di_size}}
+        </select>
+        
+        {{else}}
+        {{data.data.di_size}}
+        {{/if}}
+        
+        {{> @partial-block }}
+    </div>
+        
+    {{/if}}
     {{editor content=data.data.description target="data.description" button=true editable=editable owner=owner}}
 {{/ "heart:common/sheet.html" }}

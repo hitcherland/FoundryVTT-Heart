@@ -12,7 +12,7 @@
     "di_size": {
         "label-single": "Di Size",
         "label-multiple": "Di Sizes",
-        "d(N)": "d{N}"
+        "d(N)": "D{N}"
     },
     "skill": {
         "label-single": "Skill",

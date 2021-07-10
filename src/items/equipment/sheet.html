@@ -1,2 +1,6 @@
 {{#> "heart:items/base/sheet.html" type="equipment"}}
+<label>{{localizeHeart "equipment" "type" "label-single"}}</label>
+<select name="data.type">
+    {{selectOptions equipment_types selected=data.data.type}}
+</select>
 {{/ "heart:items/base/sheet.html" }}

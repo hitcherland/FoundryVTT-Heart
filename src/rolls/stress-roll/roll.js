@@ -71,7 +71,6 @@ export default class StressRoll extends Roll {
             formula = `2 * {${di_size}}`;
         }
 
-        console.warn(formula);
         return new this(formula, data, options);
     }
 
@@ -114,34 +113,44 @@ export default class StressRoll extends Roll {
         return renderTemplate(chatOptions.template, chatData);
     }
 
-    takeStress(character, resistance='blood') {
-        character = character || this.options.character;
-        if(character) {
-            const actor = game.actors.get(character);
-            const updateData = {};
-            const resistanceBlock = actor.data.data.resistances[resistance];
-            console.warn(resistanceBlock, resistance, this.total, this);
-            const newValue = (resistanceBlock.value || 0) + Math.max(0, parseInt(this.total) - resistanceBlock.protection);
-            console.warn(newValue);
-            
-            updateData[`data.resistances.${resistance}.value`] = newValue;
-            actor.update(updateData)
-        }
+    async takeStress(character, resistance='blood') {
+        return new Promise((resolve, reject) => {
+            character = character || this.options.character;
+
+            game.heart.applications.RequirementApplication.build({
+                requirements: {
+                    resistance: {
+                        options: game.heart.resistances.reduce((map, resistance) => {
+                            map[resistance] = game.i18n.localize(`heart.resistance.${resistance}`)
+                            return map;
+                        }, {})
+                    }
+                }, 
+                callback: ({resistance}) => {
+                    
+                    const actor = game.actors.get(character);
+                    const updateData = {};
+                    const resistanceBlock = actor.data.data.resistances[resistance];
+                    const total = this.total;
+                    if(total === undefined) {
+                        ui.notifications.error(`Somehow this roll isn't evaluated`, this);
+                        reject();
+                    }
+                    const newValue = (resistanceBlock.value || 0) + Math.max(0, parseInt(total) - resistanceBlock.protection);
+                    updateData[`data.resistances.${resistance}.value`] = newValue;
+                    actor.update(updateData)
+                    resolve();
+                },
+                type: "take-stress"
+            });
+        });
     }
 
-    buildFalloutRoll(character) {
+    asybuildFalloutRoll(character) {
         character = character || this.options.character;
-        if(character) {
-            const character = game.actors.get(character);
-            const stress = Object.values(character.data.data.resistances).reduce((sum, resistance) => {
-                return sum + resistance.value;
-            }, 0);
-            return game.heart.rolls.FalloutRoll.build(stress);
-        } else {
-            ui.notifications.warn('This is not properly implemented yet');
-            return game.heart.rolls.FalloutRoll.build(5);
-        }
-
+        return game.heart.rolls.FalloutRoll.build({
+            character
+        });
     }
 
     static activateListeners(html) {
@@ -153,7 +162,7 @@ export default class StressRoll extends Roll {
             const msg = game.messages.get(messageId);
             const stressRoll = msg.stressRoll;
             const actor_id = stressRoll.options.character;
-            stressRoll.takeStress(actor_id)
+            await stressRoll.takeStress(actor_id)
             msg.showTakeStressButton = false;
             msg.showFalloutRollButton = true;
         });
@@ -165,8 +174,13 @@ export default class StressRoll extends Roll {
             const messageId = msgElement.data('messageId');
             const msg = game.messages.get(messageId);
             const stressRoll = msg.stressRoll;
-            const actor_id = stressRoll.options.character;
-            msg.falloutRoll = stressRoll.buildFalloutRoll(actor_id);
+            const falloutRoll = await game.heart.rolls.FalloutRoll.build({
+                character: stressRoll.options.character
+            });
+
+            await falloutRoll.evaluate({async: true});
+            
+            msg.falloutRoll = falloutRoll;
             msg.showFalloutRollButton = false;
         });
     }

@@ -46,6 +46,10 @@ export function initialise() {
         
         CONFIG.Item.typeLabels[type] = `heart.${type}.label-single`;
 
+        if(module.initialise) {
+            module.initialise();
+        }
+
         if(type === 'base') return;
 
         Items.registerSheet('heart', Sheet, {

@@ -1,6 +1,14 @@
 {
     "equipment": {
         "label-single": "Equipment",
-        "label-multiple": "Equipment"
+        "label-multiple": "Equipment",
+        "type": {
+            "label-single": "Type",
+            "label-multiple": "Types",
+            "miscellaneous": "Miscellaneous",
+            "delve": "Delve",
+            "kill": "Kill",
+            "mend": "Mend"
+        }
     }
 }

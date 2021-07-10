@@ -18,7 +18,6 @@ export default class HeartApplication extends FormApplication {
 
             await this._roll(valueData, msg);
         } catch(err) {
-            console.warn(err);
             return (new this({}, {
                 heart: data,
                 msg

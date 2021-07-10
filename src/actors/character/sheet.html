@@ -74,7 +74,10 @@
             </h2>
             {{#> itemList type="equipment"  actor=actor}}
                 <a data-action="view">{{item.name}}</a>
-                (<a data-action="roll"><span class="fas fa-dice"></span> {{item.data.data.di_size}}</a>, {{join ", " item.data.data.domain array=item.data.data.tags}})
+                ({{localizeHeart "equipment" "type" item.data.data.type}}, <a data-action="item-roll"><span class="fas fa-dice"></span> {{item.data.data.di_size}}</a>
+                {{#if item.data.data.tags.length}}
+                , {{join ", " array=item.data.data.tags}}
+                {{/if}})
             {{/itemList}}
             {{editor content=actor.data.data.equipment target="data.equipment" button=true editable=editable owner=owner}}
         </div>
@@ -89,9 +92,9 @@
             </h2>
             {{#> itemList type="resource" actor=actor}}
             <a data-action="view">{{item.name}}</a>
-            (<a data-action="roll"><span class="fas fa-dice"></span> {{item.data.data.di_size}}</a>
+            (<a data-action="item-roll"><span class="fas fa-dice"></span> {{item.data.data.di_size}}</a>, {{localizeHeart "domain" item.data.data.domain}}
             {{#if item.data.data.tags.length}}
-            , {{join ", " array=item.data.data.tags}}
+            , {{join ", "  array=item.data.data.tags}}
             {{/if}})
             {{/itemList}}
             {{editor content=actor.data.data.resources target="data.resources" button=true editable=editable owner=owner}}
@@ -147,6 +150,12 @@
                 </div>
                 <input name="data.domains.{{name}}.knack" value="{{domain.knack}}"/>
             {{/each}}
+        </div>
+
+        
+        <h3 class="center wide">{{localizeHeart "character" "notes"}}</h3>
+        <div class="wide">
+            {{editor content=actor.data.data.notes target="data.notes" button=true editable=editable owner=owner}}
         </div>
     </div>
 </form>
