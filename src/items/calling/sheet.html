@@ -26,7 +26,7 @@
             <div class="flexrow">
                 {{#if ../item.isOwned}}
                 <div>
-                    <div class="question">{{question.question}}</div>
+                    <div class="question">{{{question.question}}}</div>
                     {{#if ../editable}}
                     {{editor content=question.answer target=(join "." "data.questions" id "answer") button=true editable=../editable owner=owner}}
                     {{else}}

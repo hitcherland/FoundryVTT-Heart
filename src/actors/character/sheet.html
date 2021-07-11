@@ -102,7 +102,7 @@
                 {{/if}}
             </h2>
             {{#> itemList type="equipment"  actor=actor}}
-                <a data-action="view">{{item.name}}</a>
+                {{item.name}}
                 ({{localizeHeart "equipment" "type" item.data.data.type}}, <a data-action="item-roll"><span class="fas fa-dice"></span> {{item.data.data.di_size}}</a>
                 {{#if item.data.data.tags.length}}
                 , {{join ", " array=item.data.data.tags}}
@@ -120,7 +120,7 @@
                 {{/if}}
             </h2>
             {{#> itemList type="resource" actor=actor}}
-            <a data-action="view">{{item.name}}</a>
+            {{item.name}}
             (<a data-action="item-roll"><span class="fas fa-dice"></span> {{item.data.data.di_size}}</a>, {{localizeHeart "domain" item.data.data.domain}}
             {{#if item.data.data.tags.length}}
             , {{join ", "  array=item.data.data.tags}}
@@ -139,10 +139,11 @@
             </h2>
             
             {{#> itemList type="ability" actor=actor}}
-            <a data-action="view">{{item.name}}</a>
+            {{item.name}}
             {{/itemList}}
             {{editor content=actor.data.data.abilities target="data.abilities" button=true editable=editable owner=owner}}
         </div>
+
         <div class="fallout">
             <h2>
                 {{localizeHeart "fallout" "label-multiple"}}
@@ -153,10 +154,11 @@
                 {{/if}}
             </h2>
             {{#> itemList type="fallout" actor=actor}}
-            <a data-action="view">{{item.name}}</a>
+            {{item.name}}
             {{/itemList}}
             {{editor content=actor.data.data.fallout target="data.fallout" button=true editable=editable owner=owner}}
         </div>
+
         <div class="skills grid-2 auto-first-col">
             <h3 class="center">{{localizeHeart "skill" "label-multiple"}}</h3>
             <h3 class="faded">{{localizeHeart "skill" "knack" "label-multiple"}}</h3>
@@ -180,7 +182,6 @@
                 <input name="data.domains.{{name}}.knack" value="{{domain.knack}}"/>
             {{/each}}
         </div>
-
         
         <h3 class="center wide">{{localizeHeart "character" "notes"}}</h3>
         <div class="wide">
