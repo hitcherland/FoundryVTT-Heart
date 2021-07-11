@@ -104,6 +104,10 @@ function initialise() {
         return a == b;
     });
 
+    Handlebars.registerHelper('not', function(a) {
+        return !Boolean(a);
+    });
+
     Handlebars.registerHelper('notification', function(target, targetName, options) {
         const fa = Boolean(target) ? 'check': 'times';
         let type = options.hash.optional ? 'optional' : 'required';

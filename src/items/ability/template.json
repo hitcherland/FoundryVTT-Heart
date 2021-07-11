@@ -1,7 +1,8 @@
 {
     "Item": {   
         "ability": {
-            "templates": ["has_description"]
+            "templates": ["has_description"],
+            "mechanics": ""
         }
     }
 }

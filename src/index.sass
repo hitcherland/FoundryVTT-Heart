@@ -142,6 +142,14 @@ input.toggle-display
             background-position: center
             background-repeat: no-repeat
 
+            
+        &:disabled
+            background-image: linear-gradient(90deg, util.$bg-for-red 0%, util.$bg-for-red 100%)
+            background-size: $size - 2px $size - 2px
+            background-position: center
+            background-repeat: no-repeat
+
+
         &.invert
             border-color: util.$white
             &:checked

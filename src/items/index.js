@@ -1,6 +1,40 @@
 import HeartItemSheet from './base/sheet';
 import sheetModules from './**/sheet.js';
 
+class HeartItem extends Item {
+    constructor(data={}, context={}) {
+        super(data, context);
+
+        Object.defineProperty(this, "parentItem", {
+          value: context.parentItem || null,
+          writable: false
+        });
+    }
+
+    get isChild() {
+        return this.parentItem !== null;
+    }
+
+    async update(data={}, context={}) {
+        if(this.isChild) {
+            const update = this.parentItem.update({
+                [`data.children.${this.data._id}`]: data
+            });
+            
+            update.then(parent => {
+                const child = parent.data.data.children[this.data._id];
+                mergeObject(this.data._source, child);
+                mergeObject(this.data, child);
+            });
+
+            return update;
+        } else {
+            return super.update(data, context);
+        }
+    }
+}
+
+
 function ItemSheetFactory(data) {
     const safe_data = Object.freeze({...data});
     return class extends HeartItemSheet {
@@ -17,6 +51,8 @@ function ItemSheetFactory(data) {
 }
 
 export function initialise() {
+    console.log('heart | Assigning new Item documentClass');
+    CONFIG.Item.documentClass = HeartItem;
     console.log('heart | Registering item sheets');
     Items.unregisterSheet('core', ItemSheet);
     sheetModules.forEach((module) => {
@@ -43,19 +79,17 @@ export function initialise() {
         }
 
         game.heart.items[type].sheet = Sheet
-        
-        CONFIG.Item.typeLabels[type] = `heart.${type}.label-single`;
-
         if(module.initialise) {
             module.initialise();
         }
 
         if(type === 'base') return;
-
+        
+        CONFIG.Item.typeLabels[type] = `heart.${type}.label-single`;
         Items.registerSheet('heart', Sheet, {
             types: [type],
             makeDefault: true,
-            label: `heart.${type}`
+            label: `heart.${type}.label-single`
         });
     });
 }

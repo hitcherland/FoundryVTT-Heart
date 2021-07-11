@@ -1,10 +1,6 @@
 {
-    "beat": {
-        "label-single": "Beat",
-        "label-multiple": "Beats",
-        "active": {    
-            "label-single": "Active Beat",
-            "label-multiple": "Active Beats"
-        }
+    "ability": {
+        "label-single": "Ability",
+        "label-multiple": "Abilities"
     }
 }

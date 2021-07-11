@@ -3,14 +3,15 @@
     {{#if list.length}}
     <div class="item-list">
         {{#each list as |item|}}
-            <div data-item="{{item.data._id}}" class="flexrow">
+            <div data-item-id="{{item.data._id}}" class="flexrow item">
                 <div>
                     {{> @partial-block item=item }}
                 </div>
             
                 <div class="right">
+                    <a data-action="view"><span class="fas fa-eye"></span></a>
                     {{#if item.isOwner}}
-                        <a data-action="delete"><span class="fas fa-trash"></span></a>
+                    <a data-action="delete"><span class="fas fa-trash"></span></a>
                     {{/if}}
                 </div>
             </div>
@@ -19,7 +20,7 @@
     {{/if}}
     {{/with}}
 {{/inline}}
-
+<div>
 <div class="heart flexrow buttons sticky">
     <button data-action="prepare-request-roll"><span class="fas fa-dice"></span> {{localizeHeart "perform" "request-roll"}}</button>
     <button data-action="roll"><span class="fas fa-dice"></span> {{localizeHeart "perform" "roll"}}</button>
@@ -46,7 +47,19 @@
                 <h2>{{localizeHeart "character" "class"}}</h2>
                 <input name="data.class" value="{{actor.data.data.class}}"/>
                 <h2>{{localizeHeart "character" "calling"}}</h2>
+                {{#if callingItem}}
+                <div data-item-id="{{callingItem.data._id}}" class="flexrow calling item">
+                    <div class="name">{{callingItem.name}}</div>
+                    <div class="right">
+                        <a data-action="view"><span class="fas fa-eye"></span></a>
+                        {{#if callingItem.isOwner}}
+                        <a data-action="delete"><span class="fas fa-trash"></span></a>
+                        {{/if}}
+                    </div>
+                </div>
+                {{else}}
                 <input name="data.calling" value="{{actor.data.data.calling}}"/>
+                {{/if}}
             </div>
         </div>
         <div class="beats">
@@ -59,8 +72,24 @@
                 {{/if}}
             </h2>
             {{#> itemList type="beat" actor=actor}}
-            <a data-action="view">{{item.name}}</a>
+            {{{item.data.data.description}}}
             {{/itemList}}
+            <div class="item-list">
+            {{#each callingItem.data.data.children as |beat|}}
+                {{#if (and (eq beat.type "beat") beat.data.active (not beat.data.completed))}}
+                <div data-item-id="{{beat.data._id}}" class="flexrow item">
+                <div>{{{beat.data.description}}}</div>
+                
+                <div class="right">
+                    <a data-action="view"><span class="fas fa-eye"></span></a>
+                    {{#if ../actor.isOwner}}
+                    <a data-action="delete"><span class="fas fa-trash"></span></a>
+                    {{/if}}
+                </div>
+                </div>
+                {{/if}}
+            {{/each}}
+        </div>
             {{editor content=actor.data.data.active_beats target="data.active_beats" button=true editable=editable owner=owner}}
         </div>
         
@@ -159,3 +188,4 @@
         </div>
     </div>
 </form>
+</div>

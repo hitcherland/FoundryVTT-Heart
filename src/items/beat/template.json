@@ -2,7 +2,9 @@
     "Item": {   
         "beat": {
             "templates": ["has_description"],
-            "type": ""
+            "type": "minor",
+            "active": false,
+            "completed": false
         }
     }
 }

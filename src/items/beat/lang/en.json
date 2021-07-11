@@ -1,6 +1,28 @@
 {
-    "ability": {
-        "label-single": "Ability",
-        "label-multiple": "Abilities"
+    "beat": {
+        "label-single": "Beat",
+        "label-multiple": "Beats",
+        "add": "Add Beat",
+        "activate": "Mark as Activate",
+        "complete": "Mark as Complete",
+        "active": {  
+            "label-single": "Active Beat",
+            "label-multiple": "Active Beats"
+        },
+        "minor-beat": {
+            "label-single": "Minor Beat",
+            "label-multiple": "Minor Beats",
+            "add": "Add Minor Beat"
+        },
+        "major-beat": {
+            "label-single": "Major Beat",
+            "label-multiple": "Major Beats",
+            "add": "Add Major Beat"
+        },
+        "zenith-beat": {
+            "label-single": "Zenith Beat",
+            "label-multiple": "Zenith Beats",
+            "add": "Add Zenith Beat"
+        }
     }
 }

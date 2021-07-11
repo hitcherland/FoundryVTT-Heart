@@ -4,6 +4,23 @@ import HeartActorSheet from '../base/sheet';
 import template from './template.json';
 
 export default class CharacterSheet extends HeartActorSheet {
+    static get defaultOptions() {
+        const defaultOptions = super.defaultOptions;
+        return mergeObject(defaultOptions, {
+            dragDrop: [{dragSelector: '.item', dropSelector: null}]
+        })
+    }
+
+    async _onDropItemCreate(itemData) {
+        if(itemData.type === 'calling') {
+            this.actor.itemTypes.calling.forEach(item => {
+                item.delete();
+            });
+        }
+
+        return super._onDropItemCreate(itemData);
+    }
+
     static get type() { return Object.keys(template.Actor)[0]; }
 
     get template() {
@@ -12,6 +29,13 @@ export default class CharacterSheet extends HeartActorSheet {
 
     get img() {
         return 'systems/heart/assets/high-punch.svg';
+    }
+
+    getData() {
+        const data = super.getData();
+        const callingItem = this.actor.items.find(x => x.type === 'calling');
+        data.callingItem = callingItem;
+        return data;
     }
 
     activateListeners(html) {
@@ -62,19 +86,19 @@ export default class CharacterSheet extends HeartActorSheet {
         });
 
         html.find('[data-action=view]').click(ev => {
-            const id = $(ev.currentTarget).closest('[data-item]').data('item');
+            const id = $(ev.currentTarget).closest('[data-item-id]').data('itemId');
             const item = this.actor.items.get(id);
             item.sheet.render(true);
         });
 
         html.find('[data-action=delete]').click(ev => {
-            const id = $(ev.currentTarget).closest('[data-item]').data('item');
+            const id = $(ev.currentTarget).closest('[data-item-id]').data('itemId');
             const item = this.actor.items.get(id);
             item.delete();
         });
 
         html.find('[data-action=item-roll]').click(async ev => {
-            const id = $(ev.currentTarget).closest('[data-item]').data('item');
+            const id = $(ev.currentTarget).closest('[data-item-id]').data('itemId');
             const item = this.actor.items.get(id);
 
             const roll = game.heart.rolls.ItemRoll.build({item});

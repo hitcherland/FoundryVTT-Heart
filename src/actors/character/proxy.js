@@ -7,7 +7,10 @@ export default function Character(actor) {
                 }, 0);
             }
 
-            if(actor.itemTypes[name] !== undefined) return actor.itemTypes[name];
+            if(name === 'calling') {
+                const calling = actor.items.find(x => x.type === 'calling');
+                return calling;
+            }
         }
     });
 }

@@ -6,6 +6,9 @@
             },
             "has_description": {
                 "description": ""
+            },
+            "has_children": {
+                "children": {}
             }
         }
     }

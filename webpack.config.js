@@ -32,8 +32,8 @@ function transformManifest(content) {
     const githubBranch = config.githubBranch;
     if(githubRepo) {
         if(manifest.url === undefined) manifest.url = `https://github.com/${githubRepo}`;
-        if(manifest.manifest === undefined) manifest.manifest = `https://raw.githubusercontent.com/${githubRepo}/${githubBranch}/${type}.json`;
-        if(manifest.readme === undefined) manifest.readme = `https://raw.githubusercontent.com/${githubRepo}/${githubBranch}/README.md`;
+        if(manifest.manifest === undefined) manifest.manifest = `https://raw.githubusercontent.com/${githubRepo}/${config.version}/${type}.json`;
+        if(manifest.readme === undefined) manifest.readme = `https://raw.githubusercontent.com/${githubRepo}/${config.version}/README.md`;
         if(manifest.download === undefined) manifest.download = `https://github.com/${githubRepo}/archive/refs/tags/${config.version}.zip`;
     }
 
