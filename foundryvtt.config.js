@@ -1,7 +1,7 @@
 module.exports = {
     type: 'system',
     name: 'heart',
-    version: '0.3.1',
+    version: '0.3.2',
     author: 'hitcherland',
     title: 'Heart - The City Beneath',
     description: 'A red wet heaven slumbers fitful under the city of Spire. Purchase at https://rowanrookanddecard.com/product/heart-the-city-beneath-rpg/',
