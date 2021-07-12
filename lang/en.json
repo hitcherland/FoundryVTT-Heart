@@ -59,17 +59,54 @@
                 "description": "Pick a resistance to take stress in."
             }
         },
-        "beat": {
-            "label-single": "Beat",
-            "label-multiple": "Beats",
-            "active": {
-                "label-single": "Active Beat",
-                "label-multiple": "Active Beats"
-            }
-        },
         "ability": {
             "label-single": "Ability",
             "label-multiple": "Abilities"
+        },
+        "base": {
+            "label-single": "base",
+            "label-multiple": "bases"
+        },
+        "beat": {
+            "label-single": "Beat",
+            "label-multiple": "Beats",
+            "add": "Add Beat",
+            "activate": "Mark as Activate",
+            "complete": "Mark as Complete",
+            "active": {
+                "label-single": "Active Beat",
+                "label-multiple": "Active Beats"
+            },
+            "minor-beat": {
+                "label-single": "Minor Beat",
+                "label-multiple": "Minor Beats",
+                "add": "Add Minor Beat"
+            },
+            "major-beat": {
+                "label-single": "Major Beat",
+                "label-multiple": "Major Beats",
+                "add": "Add Major Beat"
+            },
+            "zenith-beat": {
+                "label-single": "Zenith Beat",
+                "label-multiple": "Zenith Beats",
+                "add": "Add Zenith Beat"
+            }
+        },
+        "calling": {
+            "label-single": "Calling",
+            "label-multiple": "Callings",
+            "questions": {
+                "prompt": "When you create your character, answer these questions:",
+                "add": "Add Question",
+                "delete": "Delete"
+            },
+            "core-ability": {
+                "label-single": "Core Ability",
+                "label-multiple": "Core Abilities",
+                "add": "Add Core Ability",
+                "delete": "Delete"
+            }
         },
         "equipment": {
             "label-single": "Equipment",

@@ -159,7 +159,8 @@
         "ability": {
             "templates": [
                 "has_description"
-            ]
+            ],
+            "mechanics": ""
         },
         "templates": {
             "is_rollable": {
@@ -167,13 +168,26 @@
             },
             "has_description": {
                 "description": ""
+            },
+            "has_children": {
+                "children": {}
             }
         },
         "beat": {
             "templates": [
                 "has_description"
             ],
-            "type": ""
+            "type": "minor",
+            "active": false,
+            "completed": false
+        },
+        "calling": {
+            "templates": [
+                "has_description",
+                "has_children"
+            ],
+            "questions": {},
+            "mark": null
         },
         "equipment": {
             "templates": [
@@ -202,6 +216,7 @@
         "types": [
             "ability",
             "beat",
+            "calling",
             "equipment",
             "fallout",
             "haunt",
