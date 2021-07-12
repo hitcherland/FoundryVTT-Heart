@@ -107,6 +107,11 @@ module.exports = {
         new CopyPlugin({
             patterns: [
                 {
+                    from: path.resolve(__dirname, 'LICENSE'),
+                    to: distPath,
+                    noErrorOnMissing: true
+                },
+                {
                     // Copy static folder, ignore it if it's empty
                     from: path.resolve(__dirname, 'static'),
                     to: distPath,
@@ -122,10 +127,6 @@ module.exports = {
                 },
             ],
         }),
-        new FoundryVTTSymlinkPlugin(name, type, distPath, config.foundryvttPath),
-        new ExtraWatchWebpackPlugin({
-            files: [ 'src/**/lang/*.json', 'src/**/template.json', 'src/**/*.html', 'LICENSE' ],
-            dirs: [ 'src/**' ],
-        }),
+        new FoundryVTTSymlinkPlugin(name, type, distPath, config.foundryvttPath)
     ],
 };
