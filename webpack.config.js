@@ -124,7 +124,7 @@ module.exports = {
         }),
         new FoundryVTTSymlinkPlugin(name, type, distPath, config.foundryvttPath),
         new ExtraWatchWebpackPlugin({
-            files: [ 'src/**/lang/*.json', 'src/**/template.json', 'src/**/*.html' ],
+            files: [ 'src/**/lang/*.json', 'src/**/template.json', 'src/**/*.html', 'LICENSE' ],
             dirs: [ 'src/**' ],
         }),
     ],
