@@ -1,1 +1,3280 @@
-(()=>{"use strict";var e={875:(e,t,a)=>{a.d(t,{Z:()=>n});var i=a(761),r=a.n(i)()((function(e){return e[1]}));r.push([e.id,'.heart.sheet.actor h2{font-family:"MelmaCracked";text-transform:uppercase;color:#630000;border:0;font-weight:bold;margin:0;padding:0;flex-grow:0}.heart.sheet.actor h2>div{font-size:1rem;color:#000}.heart.sheet.actor h3{font-family:"MelmaCracked";font-size:1.5em;text-transform:uppercase;color:#630000;border:0;font-weight:bold;margin:0;padding:0;flex-grow:0}.heart.sheet.actor .editor-content{font-size:15px;line-height:20px;background-image:-moz-linear-gradient(top, transparent, transparent 19px, rgba(99, 0, 0, 0.2) 0px);background-image:-webkit-linear-gradient(top, transparent, transparent 19px, rgba(99, 0, 0, 0.2) 0px);background-size:100% 20px;min-height:8em}.heart.sheet.actor .editor-content p{margin:0}.heart.sheet.actor.base img.profile{flex-grow:1;background:rgba(0,0,0,.5);cursor:pointer;max-height:6em}.heart.sheet.actor.base .text{flex-grow:3;display:flex;flex-flow:column}.heart.sheet.actor.base input[name=name]{grid-area:1/2/2/3;flex-grow:0;font-size:2em;border:0;align-self:bottom;text-align:center;background:none;color:#630000;font-weight:bold}.heart.sheet.actor.base .actor-type{color:#2c2c2c;font-size:1.2em;text-transform:uppercase;font-style:italic;align-self:top;flex-grow:0;text-align:center}',""]);const n=r},963:(e,t,a)=>{a.d(t,{Z:()=>n});var i=a(761),r=a.n(i)()((function(e){return e[1]}));r.push([e.id,".sticky{position:sticky;top:0;z-index:1}.heart.sheet.actor.character{position:relative;background:#fff}.heart.sheet.actor.character .info .grid-2{grid-gap:1em;align-items:center}.heart.sheet.actor.character .calling{align-items:top}.heart.sheet.actor.character .calling .name{font-weight:bold;text-transform:uppercase;font-size:1.5em}.heart.sheet.actor.character img.profile{object-fit:contain;height:100%;min-height:100px;border:0}.heart.sheet.actor.character .faded{opacity:66%}.heart.sheet.actor.character .right{float:right;flex:auto 0 0}.heart.sheet.actor.character .col{margin:0 .5em}.heart.sheet.actor.character .grid-2 input:not([type]){border:0;border-bottom:1px dotted #630000;font-size:1.5em}.heart.sheet.actor.character .grid-3{display:grid;grid-template-columns:1fr 1fr 1fr;place-items:stretch;column-gap:.5em}.heart.sheet.actor.character .grid-3.resistances{grid-template-columns:auto 1fr auto;align-items:start;justify-content:top}.heart.sheet.actor.character .grid-3.resistances.left{justify-self:left}.heart.sheet.actor.character .bold{font-weight:bold;font-size:16px}",""]);const n=r},780:(e,t,a)=>{a.d(t,{Z:()=>n});var i=a(761),r=a.n(i)()((function(e){return e[1]}));r.push([e.id,'.heart.form .options,.chat-message .options{display:flex;align-items:center;justify-content:start}.heart.form .options .option,.chat-message .options .option{color:#000;font-family:"Alegreya";border:1px solid #000;border-radius:5px;background:#fff;margin:2px;padding:4px;display:inline-block;text-transform:uppercase}.heart.form input:checked+.option,.chat-message input:checked+.option{background:#630000;color:#fff}.heart.form .window-content{background:#fff}.heart.form label{font-weight:bold;font-family:"MelmaCracked";display:flex;align-items:center;justify-content:start;text-align:left}.heart.form .description{text-align:center}',""]);const n=r},429:(e,t,a)=>{a.d(t,{Z:()=>n});var i=a(761),r=a.n(i)()((function(e){return e[1]}));r.push([e.id,".chat-message{background:#630000;color:#fff;border-color:#949494}.chat-message .item-type{text-transform:capitalize}.chat-message .message-header{color:#fff}.chat-message .dice-roll .dice-formula,.chat-message .dice-roll .dice-total{background:#fff;color:#630000;border-color:#949494}.chat-message .dice-roll .dice-formula{background:#000;color:#fff;font-size:1.2em;padding:.2em}.chat-message .dice-roll .dice .part-header{border-bottom-color:#fff}.chat-message .dice-roll .dice .part-header .part-formula{text-transform:uppercase}.chat-message .dice-roll .dice .dice-rolls .roll.discarded{filter:sepia(0.5) contrast(0.75) opacity(0.5)}.chat-message .message-content+.message-content{margin-top:.5em}.chat-message .heart h1{border:0;text-align:center}.chat-message .heart button{background:#949494;color:#fff}.chat-message .heart button .fas{padding:0 .5em}.chat-message .heart button+button{margin-top:.2em}.chat-message .roll-request{background:#000;padding:1em;border-radius:.5em;font-size:1.1em}.chat-message .roll-request label{display:flex;align-items:center;justify-items:end;place-content:end}.chat-message .roll-request select{color:#fff;appearance:none;width:100%;overflow:auto}.chat-message .roll-request select option{appearance:none;text-align:center;background:#000}.chat-message .roll-request button>*{text-overflow:ellipsis}.chat-message .roll-request .options{align-items:stretch;flex-wrap:wrap}.chat-message .roll-request .options .option img{height:3em;width:100%;object-fit:contain;border:0;background:rgba(0,0,0,.5);padding:0;margin:0;border-radius:0}",""]);const n=r},746:(e,t,a)=>{a.d(t,{Z:()=>n});var i=a(761),r=a.n(i)()((function(e){return e[1]}));r.push([e.id,".heart.sheet img.profile{flex-grow:1;background:rgba(0,0,0,.5);cursor:pointer}.heart.sheet .text{flex-grow:3;display:flex;flex-flow:column}.heart.sheet .subtitle{color:#2c2c2c;font-size:1.2em;text-transform:uppercase;font-style:italic;align-self:top;flex-grow:0;text-align:center}.heart.sheet .editor-content{font-size:15px;line-height:20px;background-image:-moz-linear-gradient(top, transparent, transparent 19px, rgba(99, 0, 0, 0.2) 0px);background-image:-webkit-linear-gradient(top, transparent, transparent 19px, rgba(99, 0, 0, 0.2) 0px);background-size:100% 20px;min-height:8em}.heart.sheet .editor-content p{margin:0}.heart.sheet .item-list{font-size:1.2em}.heart.sheet.base .info{display:flex;flex:0% 0 1;flex-flow:row wrap;place-items:center;place-content:center;background:#949494}.heart.sheet.base .info>*{flex:0% 1 1}.heart.sheet.base img.profile{flex-grow:1;background:rgba(0,0,0,.5);cursor:pointer;max-height:6em}.heart.sheet.base .text{flex-grow:3;display:flex;flex-flow:column}.heart.sheet.base input[name=name]{grid-area:1/2/2/3;flex-grow:0;font-size:2em;border:0;align-self:bottom;text-align:center;background:none;color:#630000;font-weight:bold}",""]);const n=r},402:(e,t,a)=>{a.d(t,{Z:()=>d});var i=a(761),r=a.n(i),n=a(80),s=a.n(n),l=a(239),o=r()((function(e){return e[1]}));o.push([e.id,"@import url(https://fonts.googleapis.com/css2?family=Alegreya:ital,wght@0,400;0,500;0,600;1,400&display=swap);"]);var c=s()(l);o.push([e.id,'@font-face{font-family:"MelmaCracked";src:url('+c+')}.title-font{font-family:"MelmaCracked"}input.hidden{display:none !important}input.toggle-display~*{max-height:0;overflow:hidden;transition:max-height .2s ease-out}input.toggle-display:checked~*{max-height:20em;transition:max-height .2s ease-in}.toggle-button{font-family:"MelmaCracked";color:#000;font-size:1.5em;text-align:center;display:flex;flex-flow:row wrap;justify-content:center;padding:.2em;margin:.3em 0;border-radius:.2em;background:#fff;border:3px solid #000;cursor:pointer}.chat-message{background:#630000;color:#fff;border-color:#949494}.chat-message .message-header{color:#fff}.chat-message .dice-roll .dice-formula,.chat-message .dice-roll .dice-total{background:#fff;color:#630000;border-color:#949494}.chat-message .dice-roll .dice-formula{background:#000;color:#fff}.chat-message .dice-roll .dice .part-header{border-bottom-color:#fff}.chat-message .dice-roll .dice .part-header .part-formula{text-transform:uppercase}.chat-message .dice-roll .dice .dice-rolls .roll.discarded{filter:sepia(0.5) contrast(0.75) opacity(0.5)}.chat-message .message-content+.message-content{margin-top:.5em}.chat-message .heart button{background:#949494;color:#fff}.chat-message .heart button .fas{padding:0 .5em}.chat-message .heart button+button{margin-top:.2em}.heart{font-family:"Alegreya",serif}.heart input{font-family:inherit}.heart button{font-family:"Alegreya";background:#630000;color:#fff;border-color:#2c2c2c;font-size:1rem;text-transform:uppercase;font-weight:bold;cursor:pointer}.heart.buttons{display:flex;flex-flow:row wrap;background:#000}.heart.buttons>*{flex:50px 1 0;min-width:200px}.heart table{border:0}.heart .ordered-checkable-box{flex:14px 0 0}.heart .ordered-checkable-box::after,.heart .ordered-checkable-box.checked::after{content:"";display:inline-block;width:14px;height:14px;border:3px solid #000;margin:0 2px}.heart .ordered-checkable-box.checked::after{background-image:linear-gradient(90deg, #000 0%, #000 100%);background-size:12px 12px;background-position:center;background-repeat:no-repeat}.heart input[type=checkbox]{flex:14px 0 0;appearance:none;display:inline-block;width:14px;height:14px;border:3px solid #000;margin:0 2px;box-sizing:content-box}.heart input[type=checkbox]:checked{background-image:linear-gradient(90deg, #000 0%, #000 100%);background-size:12px 12px;background-position:center;background-repeat:no-repeat}.heart input[type=checkbox]:disabled{background-image:linear-gradient(90deg, #949494 0%, #949494 100%);background-size:12px 12px;background-position:center;background-repeat:no-repeat}.heart input[type=checkbox].invert{border-color:#fff}.heart input[type=checkbox].invert:checked{background-image:linear-gradient(90deg, #fff 0%, #fff 100%)}.heart .red .ordered-checkable-box::after,.heart .red .ordered-checkable-box.checked:after{border-color:#630000}.heart .red .ordered-checkable-box.checked::after{background-image:linear-gradient(90deg, #630000 0%, #630000 100%)}.window-app .window-content{padding:0}.window-app .window-content>*{padding:8px}.grid-2{display:grid;grid-template-columns:1fr 1fr;place-items:stretch;grid-gap:.5em;margin:.5em}.grid-2.auto-first-col{grid-template-columns:auto 1fr;margin:.5em 0}.grid-2 .wide{grid-column:1/3}.grid-2.place-center{place-content:center}.grid-2.place-top{align-items:start}',""]);const d=o},621:(e,t,a)=>{a.d(t,{Z:()=>n});var i=a(761),r=a.n(i)()((function(e){return e[1]}));r.push([e.id,'form.heart.calling{display:block;font-size:1.1em}form.heart.calling h1,form.heart.calling h2{font-family:"MelmaCracked"}form.heart.calling h1,form.heart.calling h2,form.heart.calling h3{text-transform:uppercase}form.heart.calling h4{font-weight:bold}form.heart.calling h1,form.heart.calling h2,form.heart.calling h3,form.heart.calling h4{border:0;margin:0;flex:auto 0 0}form.heart.calling h1 .right,form.heart.calling h2 .right,form.heart.calling h3 .right,form.heart.calling h4 .right{float:right;font-family:Alegreya;font-size:.8em}form.heart.calling h1{background:#630000;color:#fff;padding:.2em}form.heart.calling h1 input{color:#fff !important;border:0;width:100%;font-size:1em !important;text-align:left !important}form.heart.calling h2{color:#630000;padding:.2em 0}form.heart.calling .description{flex:auto 0 0;font-size:1.2em;font-style:italic;padding:0 1em;margin:.5em}form.heart.calling .description .editor-content{font-size:1.7em !important;line-height:1em;background:rgba(0,0,0,.1);min-height:6.5em;padding:.5em;text-align:center}form.heart.calling li .action{padding:.2em}form.heart.calling .action{flex:auto 0 0}form.heart.calling p{margin:0}form.heart.calling p+p{margin-top:.2em}form.heart.calling .flexrow{align-content:center}form.heart.calling .right{flex:auto 0 0}form.heart.calling .question{font-weight:bold;font-style:italic}form.heart.calling .question .editor-content{min-height:7em !important}form.heart.calling .name{text-transform:uppercase;font-weight:bold;color:#630000}',""]);const n=r},979:(e,t,a)=>{a.d(t,{Z:()=>n});var i=a(761),r=a.n(i)()((function(e){return e[1]}));r.push([e.id,'.heart.fallout-roll .dice-total{font-family:"MelmaCracked"}',""]);const n=r},107:(e,t,a)=>{a.d(t,{Z:()=>n});var i=a(761),r=a.n(i)()((function(e){return e[1]}));r.push([e.id,'.heart.heart-roll .dice-total{font-family:"MelmaCracked"}.heart.heart-roll .dice-tooltip{text-align:center;display:flex;flex-flow:row wrap;align-items:flex-end}.heart.heart-roll .dice-tooltip .tooltip-part{flex:33% 1 1;text-align:center}.heart.heart-roll .dice-tooltip .tooltip-part .dice-rolls{text-align:center;display:flex;flex-flow:row wrap;justify-content:center}.heart.heart-roll+.heart.heart-roll{margin-top:.5em}',""]);const n=r},361:(e,t,a)=>{a.d(t,{Z:()=>n});var i=a(761),r=a.n(i)()((function(e){return e[1]}));r.push([e.id,".heart.dice-roll .flexrow .dice-total{flex:1;display:flex;place-items:center;place-content:center}.heart.dice-roll .flexrow .icon-button{padding:0;flex:1em 0 0}.heart.dice-roll .flexrow .icon-button+.icon-button{margin:0}",""]);const n=r},695:e=>{var t={};e.exports=function(e){if(void 0===t[e]){var a=document.querySelector(e);if(window.HTMLIFrameElement&&a instanceof window.HTMLIFrameElement)try{a=a.contentDocument.head}catch(e){a=null}t[e]=a}return t[e]}},379:e=>{var t=[];function a(e){for(var a=-1,i=0;i<t.length;i++)if(t[i].identifier===e){a=i;break}return a}function i(e,i){for(var n={},s=[],l=0;l<e.length;l++){var o=e[l],c=i.base?o[0]+i.base:o[0],d=n[c]||0,h="".concat(c," ").concat(d);n[c]=d+1;var u=a(h),p={css:o[1],media:o[2],sourceMap:o[3]};-1!==u?(t[u].references++,t[u].updater(p)):t.push({identifier:h,updater:r(p,i),references:1}),s.push(h)}return s}function r(e,t){var a=t.domAPI(t);return a.update(e),function(t){if(t){if(t.css===e.css&&t.media===e.media&&t.sourceMap===e.sourceMap)return;a.update(e=t)}else a.remove()}}e.exports=function(e,r){var n=i(e=e||[],r=r||{});return function(e){e=e||[];for(var s=0;s<n.length;s++){var l=a(n[s]);t[l].references--}for(var o=i(e,r),c=0;c<n.length;c++){var d=a(n[c]);0===t[d].references&&(t[d].updater(),t.splice(d,1))}n=o}}},216:e=>{e.exports=function(e){var t=document.createElement("style");return e.setAttributes(t,e.attributes),e.insert(t),t}},795:e=>{e.exports=function(e){var t=e.insertStyleElement(e);return{update:function(a){!function(e,t,a){var i=a.css,r=a.media,n=a.sourceMap;r?e.setAttribute("media",r):e.removeAttribute("media"),n&&"undefined"!=typeof btoa&&(i+="\n/*# sourceMappingURL=data:application/json;base64,".concat(btoa(unescape(encodeURIComponent(JSON.stringify(n))))," */")),t.styleTagTransform(i,e)}(t,e,a)},remove:function(){!function(e){if(null===e.parentNode)return!1;e.parentNode.removeChild(e)}(t)}}}},761:e=>{e.exports=function(e){var t=[];return t.toString=function(){return this.map((function(t){var a=e(t);return t[2]?"@media ".concat(t[2]," {").concat(a,"}"):a})).join("")},t.i=function(e,a,i){"string"==typeof e&&(e=[[null,e,""]]);var r={};if(i)for(var n=0;n<this.length;n++){var s=this[n][0];null!=s&&(r[s]=!0)}for(var l=0;l<e.length;l++){var o=[].concat(e[l]);i&&r[o[0]]||(a&&(o[2]?o[2]="".concat(a," and ").concat(o[2]):o[2]=a),t.push(o))}},t}},80:e=>{e.exports=function(e,t){return t||(t={}),"string"!=typeof(e=e&&e.__esModule?e.default:e)?e:(/^['"].*['"]$/.test(e)&&(e=e.slice(1,-1)),t.hash&&(e+=t.hash),/["'() \t\n]/.test(e)||t.needQuotes?'"'.concat(e.replace(/"/g,'\\"').replace(/\n/g,"\\n"),'"'):e)}},662:(e,t,a)=>{a.r(t);var i={};a.r(i),a.d(i,{default:()=>Y});var r={};a.r(r),a.d(r,{default:()=>ee});var n={};a.r(n),a.d(n,{default:()=>te});var s={};a.r(s),a.d(s,{default:()=>ae});var l={};a.r(l),a.d(l,{default:()=>ie});var o={};a.r(o),a.d(o,{default:()=>re});var c={};a.r(c),a.d(c,{default:()=>ne});var d={};a.r(d),a.d(d,{default:()=>se});var h={};a.r(h),a.d(h,{default:()=>le});var u={};a.r(u),a.d(u,{default:()=>oe});var p={};a.r(p),a.d(p,{default:()=>ce});var m={};a.r(m),a.d(m,{default:()=>de});var f={};a.r(f),a.d(f,{default:()=>he});var g={};a.r(g),a.d(g,{default:()=>ue});var b={};a.r(b),a.d(b,{default:()=>pe});var v={};a.r(v),a.d(v,{default:()=>me});var y={};a.r(y),a.d(y,{default:()=>fe});var k={};a.r(k),a.d(k,{default:()=>ge});var w={};a.r(w),a.d(w,{default:()=>be});var x={};a.r(x),a.d(x,{default:()=>ve});var z={};a.r(z),a.d(z,{default:()=>ye});var T={};a.r(T),a.d(T,{default:()=>ke});var _={};a.r(_),a.d(_,{default:()=>Ee});var C={};a.r(C),a.d(C,{default:()=>Fe});var H={};a.r(H),a.d(H,{default:()=>Be});var O={};a.r(O),a.d(O,{default:()=>Me});var S={};a.r(S),a.d(S,{default:()=>Je});var q={};a.r(q),a.d(q,{default:()=>Ue});var A={};a.r(A),a.d(A,{initialise:()=>Xe});var I={};a.r(I),a.d(I,{default:()=>Ve});var j={};a.r(j),a.d(j,{default:()=>Ye});var R={};a.r(R),a.d(R,{default:()=>et});var E={};a.r(E),a.d(E,{initialise:()=>rt});var N={};a.r(N),a.d(N,{initialise:()=>ct});var F={};a.r(F),a.d(F,{default:()=>dt});var L={};a.r(L),a.d(L,{data:()=>ut});var Z={};a.r(Z),a.d(Z,{data:()=>mt});var D={};a.r(D),a.d(D,{data:()=>vt,default:()=>yt});var B={};a.r(B),a.d(B,{data:()=>zt,initialise:()=>xt});var P={};a.r(P),a.d(P,{data:()=>_t});var M={};a.r(M),a.d(M,{data:()=>Ht});var G={};a.r(G),a.d(G,{data:()=>St});var J={};a.r(J),a.d(J,{initialise:()=>It});var U={};a.r(U),a.d(U,{default:()=>Nt,initialise:()=>Et});var W={};a.r(W),a.d(W,{default:()=>Gt,initialise:()=>Mt});var K={};a.r(K),a.d(K,{default:()=>Jt});var Q={};a.r(Q),a.d(Q,{default:()=>Ut});var X={};a.r(X),a.d(X,{initialise:()=>Xt});var V={};a.r(V);const Y={path:"heart:actors/adversary/sheet.html",source:'{{> "heart:actors/base/sheet.html" type="adversary"}}'},ee={path:"heart:actors/base/sheet.html",source:'{{#> "heart:common/sheet.html" documentName="actor" type=type}}\n    {{editor content=data.data.description target="data.description" button=true editable=editable owner=owner}}\n{{/ "heart:common/sheet.html" }}'},te={path:"heart:actors/character/sheet.html",source:'{{#*inline "itemList"}}\n    {{#with (lookup actor.itemTypes type) as |list|}}\n    {{#if list.length}}\n    <div class="item-list">\n        {{#each list as |item|}}\n            <div data-item-id="{{item.data._id}}" class="flexrow item">\n                <div>\n                    {{> @partial-block item=item }}\n                </div>\n            \n                <div class="right">\n                    <a data-action="view"><span class="fas fa-eye"></span></a>\n                    {{#if item.isOwner}}\n                    <a data-action="delete"><span class="fas fa-trash"></span></a>\n                    {{/if}}\n                </div>\n            </div>\n        {{/each}}\n    </div>\n    {{/if}}\n    {{/with}}\n{{/inline}}\n<div>\n<div class="heart flexrow buttons sticky">\n    <button data-action="prepare-request-roll"><span class="fas fa-dice"></span> {{localizeHeart "perform" "request-roll"}}</button>\n    <button data-action="roll"><span class="fas fa-dice"></span> {{localizeHeart "perform" "roll"}}</button>\n    <button data-action="stress-roll"><span class="fas fa-dice"></span> {{localizeHeart "perform" "roll-stress"}}</button>\n    <button data-action="fallout-roll"><span class="fas fa-dice"></span> {{localizeHeart "perform" "roll-fallout"}}</button>\n</div>\n<form class="heart sheet actor character {{cssClass}}" autocomplete="off">\n    <div class="grid-2 place-top">\n        <img class="profile" src="{{data.img}}" title="{{actor.name}}" data-edit="img"/>\n        <div class="grid-3 resistances place-top">\n            <div></div>\n            <div></div>\n            <h3 class="center">{{localizeHeart "resistance" "protection" "label-multiple"}}</h3>\n            {{#each actor.data.data.resistances as |resistance name|}}\n                <h3 class="left">{{localizeHeart "resistance" name}}</h3>\n                <div class="red" data-target=\'data.resistances.{{name}}.value\'>{{{ordered-checkable resistance.value 10}}}</div>\n                <div class="red" data-target=\'data.resistances.{{name}}.protection\'>{{{ordered-checkable resistance.protection 5}}}</div>\n            {{/each}}\n        </div>\n        <div class="info">\n            <div class="grid-2 auto-first-col place-center">\n                <h2>{{localizeHeart "character" "name"}}</h2>\n                <input name="name" value="{{actor.name}}"/>\n                <h2>{{localizeHeart "character" "class"}}</h2>\n                <input name="data.class" value="{{actor.data.data.class}}"/>\n                <h2>{{localizeHeart "character" "calling"}}</h2>\n                {{#if callingItem}}\n                <div data-item-id="{{callingItem.data._id}}" class="flexrow calling item">\n                    <div class="name">{{callingItem.name}}</div>\n                    <div class="right">\n                        <a data-action="view"><span class="fas fa-eye"></span></a>\n                        {{#if callingItem.isOwner}}\n                        <a data-action="delete"><span class="fas fa-trash"></span></a>\n                        {{/if}}\n                    </div>\n                </div>\n                {{else}}\n                <input name="data.calling" value="{{actor.data.data.calling}}"/>\n                {{/if}}\n            </div>\n        </div>\n        <div class="beats">\n            <h2>\n                {{localizeHeart "beat" "active" "label-multiple"}}\n                {{#if actor.isOwner}}\n                <div class="right">\n                    <a data-action="add" data-type="beat"><span class="fas fa-plus"></span></a>\n                </div>\n                {{/if}}\n            </h2>\n            {{#> itemList type="beat" actor=actor}}\n            {{{item.data.data.description}}}\n            {{/itemList}}\n            <div class="item-list">\n            {{#each callingItem.data.data.children as |beat|}}\n                {{#if (and (eq beat.type "beat") beat.data.active (not beat.data.completed))}}\n                <div data-item-id="{{beat.data._id}}" class="flexrow item">\n                <div>{{{beat.data.description}}}</div>\n                \n                <div class="right">\n                    <a data-action="view"><span class="fas fa-eye"></span></a>\n                    {{#if ../actor.isOwner}}\n                    <a data-action="delete"><span class="fas fa-trash"></span></a>\n                    {{/if}}\n                </div>\n                </div>\n                {{/if}}\n            {{/each}}\n        </div>\n            {{editor content=actor.data.data.active_beats target="data.active_beats" button=true editable=editable owner=owner}}\n        </div>\n        \n        <div class="equipment">\n            <h2>{{localizeHeart "equipment" "label-multiple"}}\n                {{#if actor.isOwner}}\n                <div class="right">\n                    <a data-action="add" data-type="equipment"><span class="fas fa-plus"></span></a>\n                </div>\n                {{/if}}\n            </h2>\n            {{#> itemList type="equipment"  actor=actor}}\n                {{item.name}}\n                ({{localizeHeart "equipment" "type" item.data.data.type}}, <a data-action="item-roll"><span class="fas fa-dice"></span> {{item.data.data.di_size}}</a>\n                {{#if item.data.data.tags.length}}\n                , {{join ", " array=item.data.data.tags}}\n                {{/if}})\n            {{/itemList}}\n            {{editor content=actor.data.data.equipment target="data.equipment" button=true editable=editable owner=owner}}\n        </div>\n\n        <div class="resources">\n            <h2>{{localizeHeart "resource" "label-multiple"}}\n                {{#if actor.isOwner}}\n                <div class="top right">\n                    <a data-action="add" data-type="resource"><span class="fas fa-plus"></span></a>\n                </div>\n                {{/if}}\n            </h2>\n            {{#> itemList type="resource" actor=actor}}\n            {{item.name}}\n            (<a data-action="item-roll"><span class="fas fa-dice"></span> {{item.data.data.di_size}}</a>, {{localizeHeart "domain" item.data.data.domain}}\n            {{#if item.data.data.tags.length}}\n            , {{join ", "  array=item.data.data.tags}}\n            {{/if}})\n            {{/itemList}}\n            {{editor content=actor.data.data.resources target="data.resources" button=true editable=editable owner=owner}}\n        </div>\n        <div class="abilities">\n            <h2>\n                {{localizeHeart "ability"  "label-multiple"}}\n                {{#if actor.isOwner}}\n                <div class="top right">\n                    <a data-action="add" data-type="ability"><span class="fas fa-plus"></span></a>\n                </div>\n                {{/if}}\n            </h2>\n            \n            {{#> itemList type="ability" actor=actor}}\n            {{item.name}}\n            {{/itemList}}\n            {{editor content=actor.data.data.abilities target="data.abilities" button=true editable=editable owner=owner}}\n        </div>\n\n        <div class="fallout">\n            <h2>\n                {{localizeHeart "fallout" "label-multiple"}}\n                {{#if actor.isOwner}}\n                <div class="top right">\n                    <a data-action="add" data-type="fallout"><span class="fas fa-plus"></span></a>\n                </div>\n                {{/if}}\n            </h2>\n            {{#> itemList type="fallout" actor=actor}}\n            {{item.name}}\n            {{/itemList}}\n            {{editor content=actor.data.data.fallout target="data.fallout" button=true editable=editable owner=owner}}\n        </div>\n\n        <div class="skills grid-2 auto-first-col">\n            <h3 class="center">{{localizeHeart "skill" "label-multiple"}}</h3>\n            <h3 class="faded">{{localizeHeart "skill" "knack" "label-multiple"}}</h3>\n            {{#each actor.data.data.skills as |skill name|}}\n                <div class="flexrow">\n                    <input type="checkbox" name="data.skills.{{name}}.value" {{checked skill.value}}/>\n                    <span class="bold">{{localizeHeart "skill" name}}</span>\n                </div>\n                <input name="data.skills.{{name}}.knack" value="{{skill.knack}}"/>\n            {{/each}}\n        </div>\n\n        <div class="domains grid-2 auto-first-col">\n            <h3 class="center">{{localizeHeart "domain" "label-multiple"}}</h3>\n            <h3 class="faded">{{localizeHeart "domain" "knack" "label-multiple"}}</h3>\n            {{#each actor.data.data.domains as |domain name|}}\n                <div class="flexrow">\n                    <input type="checkbox" name="data.domains.{{name}}.value" {{checked domain.value}}/>\n                    <span class="bold">{{localizeHeart "domain" name}}</span>\n                </div>\n                <input name="data.domains.{{name}}.knack" value="{{domain.knack}}"/>\n            {{/each}}\n        </div>\n        \n        <h3 class="center wide">{{localizeHeart "character" "notes"}}</h3>\n        <div class="wide">\n            {{editor content=actor.data.data.notes target="data.notes" button=true editable=editable owner=owner}}\n        </div>\n    </div>\n</form>\n</div>'},ae={path:"heart:actors/delve/sheet.html",source:'{{> "heart:actors/base/sheet.html" type="delve"}}'},ie={path:"heart:actors/landmark/sheet.html",source:'{{> "heart:actors/base/sheet.html" type="landmark"}}'},re={path:"heart:applications/base/application.html",source:'<form class="heart form {{type}} {{classes}} grid-2 auto-first-col">\n    <div class="wide description">\n    {{localizeHeart "applications" type "description"}}\n    </div>\n    {{> @partial-block}}\n    <div class="wide grid-2">\n        <button data-action=\'cancel\'><span class="fas fa-times"></span> {{localizeHeart \'cancel\'}}</button>\n        <button data-action=\'submit\'><span class="fas fa-dice"></span> {{localizeHeart \'roll\'}}</button>\n    </div>\n</form>'},ne={path:"heart:applications/prepare-roll-request/application.html",source:'{{#> "heart:applications/base/application.html" type="prepare-roll-request"}}\n<label>\n    {{localizeHeart "difficulty" "label-single"}}\n</label>\n<select name="difficulty">\n    {{selectOptions difficulties}}\n</select>\n\n<label>\n    {{localizeHeart "character" "label-multiple"}}\n</label>\n<div class="options">\n    {{#each characters as |character char_id|}}\n    {{#with (randomID) as |id|}}\n    <input class="hidden" type="checkbox" id="{{id}}" name="character" value="{{char_id}}" checked/>\n    <label for="{{id}}" class="option">\n        {{character}}\n    </label>\n    {{/with}}\n    {{/each}}\n</div>\n\n<label>\n    {{localizeHeart "skill" "label-multiple"}}\n</label>\n<div class="options">\n    {{#each skills as |skill name|}}\n    {{#with (randomID) as |id|}}\n    <input class="hidden" type="checkbox" id="{{id}}" name="skill" value="{{name}}"/>\n    <label for="{{id}}" class="option">\n        {{skill}}\n    </label>\n    {{/with}}\n    {{/each}}\n</div>\n\n\n<label>\n    {{localizeHeart "domain" "label-multiple"}}\n</label>\n<div class="options">\n    {{#each domains as |domain name|}}\n    {{#with (randomID) as |id|}}\n    <input class="hidden" type="checkbox" id="{{id}}" name="domain" value="{{name}}"/>\n    <label for="{{id}}" class="option">\n        {{domain}}\n    </label>\n    {{/with}}\n    {{/each}}\n</div>\n\n<label>\n    {{localizeHeart "character" "label-valid-helpers"}}\n</label>\n<div class="options">\n    {{#each characters as |character char_id|}}\n    {{#with (randomID) as |id|}}\n    <input class="hidden" type="checkbox" id="{{id}}" name="helper" value="{{char_id}}" checked/>\n    <label for="{{id}}" class="option">\n        {{character}}\n    </label>\n    {{/with}}\n    {{/each}}\n</div>\n{{/ "heart:applications/base/application.html"}}'},se={path:"heart:applications/prepare-roll-request/chat-message.html",source:'<form class="heart roll-request grid-2 auto-first-col place-center">\n    <h1 class="wide title-font ">{{localizeHeart "rolls" "roll-request" "label"}}</h1>\n    <label class="title-font">{{localizeHeart "difficulty" "label-single"}}</label>\n    <div>\n        {{localizeHeart "difficulty" difficulty}}\n        <input type="hidden" name="difficulty" value="{{difficulty}}"/>\n    </div>\n\n    <label class="title-font">{{localizeHeart "skill" "label-single"}}</label>\n    {{#if (lt skills.length 2)}}\n        {{#if (eq skills.length 1)}}\n            <div>\n                {{localizeHeart "skill" (lookup skills 0)}}\n                <input type="hidden" name="skill" value="{{lookup skills 0}}"/>\n            </div>\n        {{else}}\n            <div>{{localizeHeart "none"}}</div>\n        {{/if}}\n    {{else}}\n    <select name="skill">\n        {{#each skills as |skill|}}\n        <option value="{{skill}}">{{localizeHeart "skill" skill}}</option>\n        {{/each}}\n    </select>\n    {{/if}}\n\n    <label class="title-font">{{localizeHeart "domain" "label-single"}}</label>\n    {{#if (lt domains.length 2)}}\n        {{#if (eq domains.length 1)}}\n        <div>\n            {{localizeHeart "domain" (lookup domains 0)}}\n            <input type="hidden" name="domain" value="{{lookup domains 0}}"/>\n        </div>\n        {{else}}\n            <div>{{localizeHeart "none"}}</div>\n        {{/if}}\n    {{else}}\n    <select name="domain">\n        {{#each domains as |domain|}}\n        <option value="{{domain}}">{{localizeHeart "domain" domain}}</option>\n        {{/each}}\n    </select>\n    {{/if}}\n\n    <label class="title-font">{{localizeHeart "mastery" "short"}}</label>\n    <input class="invert" type="checkbox" name="mastery"/>\n\n    <label class="title-font">{{localizeHeart "help"}}</label>\n    {{#if validHelpers}}\n    <select name="helper" multiple>\n        {{#each validHelpers as |helper_id|}}\n        {{#with (getActor helper_id) as |actor|}}\n        <option value="{{helper_id}}">{{actor.name}}</option>\n        {{/with}}\n        {{/each}}\n    </select>\n    {{else}}\n    <div>{{localizeHeart "none"}}</div>\n    {{/if}}\n\n    <div class="wide">\n        {{#each characters as |character|}}\n        {{#with (getActor character) as |actor|}}\n        {{#if actor.isOwner}}\n            <button data-action="roll" data-character="{{character}}"> <span class="fas fa-dice"></span> {{actor.name}}</button>\n        {{/if}}\n        {{/with}}\n        {{/each}}\n    </div>\n</form>'},le={path:"heart:applications/requirement-form/application.html",source:'{{#> "heart:applications/base/application.html" type=options.type}}\n{{#each options.requirements as |entry name|}}\n<label>\n    {{entry.label}}\n</label>\n{{#if entry.isCheckbox}}\n    <input type="checkbox" name="{{name}}" value="{{entry.value}}"/>\n{{else}}\n    <select name="{{name}}" {{#if entry.isMany}}multiple{{/if}}>\n        {{#each entry.options as |label value|}}\n            <option value="{{value}}">{{label}}</option>\n        {{/each}}\n    </select>\n{{/if}}\n{{/each}}\n{{/ "heart:applications/base/application.html"}}'},oe={path:"heart:common/sheet.html",source:'<form class="heart sheet base {{documentName}} {{type}} {{cssClass}} flexcol" autocomplete="off">\n    <div class="info">\n        <img class="profile" src="{{data.img}}" title="{{data.name}}" data-edit="img" />\n        <div class="text">\n            <input name="name" value="{{data.name}}" placeholder="{{localizeHeart type \'name\'}}" />\n            <div class="subtitle">{{localizeHeart type "label-single"}}</div>        \n        </div>\n    </div>\n    {{> @partial-block }}\n</form>'},ce={path:"heart:items/ability/sheet.html",source:'{{#> "heart:items/base/sheet.html" type="ability"}}\n{{/ "heart:items/base/sheet.html" }}'},de={path:"heart:items/base/sheet.html",source:'{{#> "heart:common/sheet.html" documentName="item" type=type}}\n    {{log this}}\n    {{#if data.data.di_size}}\n    <div class="grid-2 auto-first-col place-center" style="flex: auto 0 0">\n        <label>\n            {{localizeHeart "di_size" "label-single"}}\n        </label>\n        {{#if editable}}\n        <select name="data.di_size">\n            {{selectOptions di_sizes selected=data.data.di_size}}\n        </select>\n        \n        {{else}}\n        {{data.data.di_size}}\n        {{/if}}\n        \n        {{> @partial-block }}\n    </div>\n        \n    {{/if}}\n    {{editor content=data.data.description target="data.description" button=true editable=editable owner=owner}}\n{{/ "heart:common/sheet.html" }}'},he={path:"heart:items/beat/sheet.html",source:'{{#> "heart:items/base/sheet.html" type="beat"}}\n{{/ "heart:items/base/sheet.html" }}'},ue={path:"heart:items/calling/sheet.html",source:'<form class="heart sheet base Item calling {{cssClass}}" autocomplete="off">\n    <h1>\n        {{#if (and editable (not item.isOwned))}}\n        <input name="name" value="{{data.name}}"/>\n        {{else}}\n        {{item.name}}\n        {{/if}}\n    </h1>\n    <div class="description">\n        {{#if (and editable (not item.isOwned))}}\n        {{editor content=data.data.description target="data.description" button=true editable=editable owner=owner}}\n        {{else}}\n        {{{data.data.description}}}\n        {{/if}}\n    </div>\n\n    <h4>\n        {{localizeHeart "calling" "questions" "prompt"}}\n        {{#if (and editable (not item.isOwned))}}\n        <a class="right" data-action="add-question"><span class="fas fa-plus"></span> {{localizeHeart "calling" "questions" "add"}}</a>\n        {{/if}}\n    </h4>\n    <ul>\n    {{#each data.data.questions as |question id|}}\n        <li data-id="{{id}}">\n            <div class="flexrow">\n                {{#if ../item.isOwned}}\n                <div>\n                    <div class="question">{{{question.question}}}</div>\n                    {{#if ../editable}}\n                    {{editor content=question.answer target=(join "." "data.questions" id "answer") button=true editable=../editable owner=owner}}\n                    {{else}}\n                    <div>{{{question.answer}}}</div>\n                    {{/if}}\n                </div>\n                {{else}}\n                    {{#if ../editable}}\n                    <div class="question">\n                        {{editor content=question.question target=(join "." "data.questions" id "question") button=true editable=../editable owner=owner}}\n                    </div>\n                    {{else}}\n                    <div>{{{question.question}}}</div>\n                    {{/if}}\n                {{/if}}\n                {{#if (and ../editable (not ../item.isOwned))}}\n                <a class="action" data-action="delete-question"><span class="fas fa-trash"></span> {{localizeHeart "calling" "questions" "delete"}}</a>\n                {{/if}}\n            </div>    \n        </li>\n    {{/each}}\n    </ul>\n\n    <h2>\n        {{#if (eq data.data.abilities.length 1)}}\n            {{localizeHeart "calling" "core-ability" "label-single"}}\n        {{else}}\n            {{localizeHeart "calling" "core-ability" "label-multiple"}}\n        {{/if}}\n        {{#if (and editable (not item.isOwned))}}\n        <a class="right" data-action="add-child" data-type="ability"><span class="fas fa-plus"></span> {{localizeHeart "calling" "core-ability" "add"}}</a>\n        {{/if}}\n    </h2>\n    <div class="item-list">\n        {{#each childrenTypes.ability as |ability|}}\n        <div data-child-id="{{ability._id}}" class="flexrow item">\n            <div>\n                <span class="name">{{ability.name}}</span>\n                {{{ability.data.description}}}\n            </div>\n            {{#if (and ../editable (not ../item.isOwned))}}\n            <a class="action" data-action="edit-child"><span class="fas fa-edit"></span></a>\n            <a class="action" data-action="delete-child"><span class="fas fa-trash"></span></a>\n            {{/if}}\n        </div>\n        {{/each}}\n    </div>\n\n    <h2>\n        {{localizeHeart "beat" "minor-beat" "label-multiple"}}\n        {{#if (and editable (not item.isOwned))}}\n        <a class="right" data-action="add-child" data-type="beat" data-data=\'{"type": "minor"}\'><span class="fas fa-plus"></span> {{localizeHeart "beat" "minor-beat" "add"}}</a>\n        {{/if}}\n    </h2>\n    <div class="item-list">\n        {{#each minorBeats as |beat|}}\n            <div data-child-id="{{beat._id}}" class="flexrow item">\n                <input type="checkbox" name="data.children.{{beat._id}}.data.active" {{checked beat.data.active}} {{#if (not ../item.isOwned)}}disabled{{/if}} title="{{localizeHeart \'beat\' \'activate\'}}"/>\n                <input type="checkbox" name="data.children.{{beat._id}}.data.completed" {{checked beat.data.completed}} {{#if (not beat.data.active)}}disabled{{/if}} title="{{localizeHeart \'beat\' \'complete\'}}"/>\n                <div>{{{beat.data.description}}}</div>\n                {{#if (and ../editable (not ../item.isOwned))}}\n                <div class="right">\n                    <a class="action" data-action="edit-child"><span class="fas fa-edit"></span></a>\n                    <a class="action" data-action="delete-child"><span class="fas fa-trash"></span></a>\n                </div>\n                {{/if}}\n            </div>\n        {{/each}}\n    </div>\n\n    <h2>\n        {{localizeHeart "beat" "major-beat" "label-multiple"}}\n        {{#if (and editable (not item.isOwned))}}\n        <a class="right" data-action="add-child" data-type="beat" data-data=\'{"type": "major"}\'><span class="fas fa-plus"></span> {{localizeHeart "beat" "major-beat" "add"}}</a>\n        {{/if}}\n    </h2>\n    <div class="item-list">\n    {{#each majorBeats as |beat|}}\n    <div data-child-id="{{beat._id}}" class="flexrow item">\n        <input type="checkbox" name="data.children.{{beat._id}}.active" {{checked beat.active}} {{#if (not ../item.isOwned)}}disabled{{/if}} title="{{localizeHeart \'beat\' \'activate\'}}"/>\n        <input type="checkbox" name="data.children.{{beat._id}}.completed" {{checked beat.completed}} {{#if (not beat.active)}}disabled{{/if}} title="{{localizeHeart \'beat\' \'complete\'}}"/>\n        <div>{{{beat.data.description}}}</div>\n        {{#if (and ../editable (not ../item.isOwned))}}\n        <a class="action" data-action="edit-child"><span class="fas fa-edit"></span></a>\n        <a class="action" data-action="delete-child"><span class="fas fa-trash"></span></a>\n        {{/if}}\n    </div>\n    {{/each}}\n    </div>\n\n    <h2>\n        {{localizeHeart "beat" "zenith-beat" "label-multiple"}}\n        {{#if (and editable (not item.isOwned))}}\n        <a class="right" data-action="add-child" data-type="beat" data-data=\'{"type": "zenith"}\'><span class="fas fa-plus"></span> {{localizeHeart "beat" "zenith-beat" "add"}}</a>\n        {{/if}}\n    </h2>\n    <div class="item-list">\n    {{#each zenithBeats as |beat|}}\n    <div data-child-id="{{beat._id}}" class="flexrow item">\n        <input type="checkbox" name="data.children.{{beat._id}}.active" {{checked beat.active}} {{#if (not ../item.isOwned)}}disabled{{/if}} title="{{localizeHeart \'beat\' \'activate\'}}"/>\n        <input type="checkbox" name="data.children.{{beat._id}}.completed" {{checked beat.completed}} {{#if (not beat.active)}}disabled{{/if}} title="{{localizeHeart \'beat\' \'complete\'}}"/>\n        <div>{{{beat.data.description}}}</div>\n        {{#if (and ../editable (not ../item.isOwned))}}\n        <a class="action" data-action="edit-child"><span class="fas fa-edit"></span></a>\n        <a class="action" data-action="delete-child"><span class="fas fa-trash"></span></a>\n        {{/if}}\n    </div>\n    {{/each}}\n</div>\n</form>'},pe={path:"heart:items/equipment/sheet.html",source:'{{#> "heart:items/base/sheet.html" type="equipment"}}\n<label>{{localizeHeart "equipment" "type" "label-single"}}</label>\n<select name="data.type">\n    {{selectOptions equipment_types selected=data.data.type}}\n</select>\n{{/ "heart:items/base/sheet.html" }}'},me={path:"heart:items/fallout/sheet.html",source:'{{#> "heart:items/base/sheet.html" type="fallout"}}\n{{/ "heart:items/base/sheet.html" }}'},fe={path:"heart:items/haunt/sheet.html",source:'{{#> "heart:items/base/sheet.html" type="haunt"}}\n{{/ "heart:items/base/sheet.html" }}'},ge={path:"heart:items/resource/sheet.html",source:'{{#> "heart:items/base/sheet.html" type="resource"}}\n<label>\n    {{localizeHeart "domain" "label-single"}}\n</label>\n{{#if editable}}\n    <select name="data.domain">\n        {{selectOptions domains selected=data.data.domain}}\n    </select>\n{{else}}\n    {{localizeHeart "domain" data.data.domain}}\n{{/if}}\n\n{{/ "heart:items/base/sheet.html"}}'},be={path:"heart:rolls/fallout-roll/roll.html",source:'<div class="dice-roll heart fallout-roll">\n    {{#if flavor}}\n    <div class="dice-flavor">{{flavor}}</div>\n    {{/if}}\n    <div class="dice-result">\n        <div class="dice-formula">{{description}}</div>\n        {{{tooltip}}}\n        <h4 class="dice-total text">{{localizeHeart \'rolls\' \'fallout-roll\' \'results\' result}}</h4>\n    </div>\n</div>'},ve={path:"heart:rolls/heart-roll/roll.html",source:'<form class="dice-roll heart heart-roll">\n    <input type="hidden" name="character" value="{{character}}"/>\n    {{#if flavor}}\n    <div class="dice-flavor">{{flavor}}</div>\n    {{/if}}\n    <div class="dice-result">\n        <div class="dice-formula">{{description}}</div>\n        {{{tooltip}}}\n        <div class="flexrow">\n            <h4 class="dice-total text">{{localizeHeart "result" result}}</h4>\n            {{#if (and showStressRollButton (lookup (getActor character) "isOwner"))}}\n            <button class="icon-button" data-action=\'roll-stress\' title="{{localizeHeart \'rolls\' \'stress-roll\' \'action\'}}">\n                <span class="fas fa-dice"></span>\n            </button>\n            {{/if}}\n        </div>\n    </div>\n</form>'},ye={path:"heart:rolls/heart-roll/tooltip.html",source:'<div class="dice-tooltip" style="display: none;">\n    {{#each parts}}\n    <section class="tooltip-part">\n        <div class="dice">\n            <header class="part-header">\n                {{#if this.flavor}}<span class="part-formula">{{this.flavor}}</span>{{/if}}\n            </header>\n            <ol class="dice-rolls">\n            {{#each this.rolls as |roll index|}}\n                {{#if (numEq @../index ../../kept)}}\n                <li class="roll {{this.classes}}">{{{roll.result}}}</li>\n                {{else}}\n                <li class="roll discarded {{this.classes}}">{{{roll.result}}}</li>\n                {{/if}}\n            {{/each}}\n            </ol>\n        </div>\n    </section>\n    {{/each}}\n</div>\n'},ke={path:"heart:rolls/stress-roll/roll.html",source:'<form class="dice-roll heart stress-roll">\n    <input type="hidden" name="character" value="{{character}}"/>\n    {{#if flavor}}\n    <div class="dice-flavor">{{flavor}}</div>\n    {{/if}}\n    <div class="dice-result">\n        <div class="dice-formula">{{description}}</div>\n        {{{tooltip}}}\n        <div class="flexrow">\n            <h4 class="dice-total">{{total}} {{localizeHeart \'stress\'}}</h4>\n            {{#if showTakeStressButton}}\n            <button class="icon-button" data-action="take-stress" title="{{localizeHeart \'rolls\' \'stress-roll\' \'take-stress\' }}">\n                <span class="fas fa-heart-broken"></span>\n            </button>\n            {{/if}}\n            {{#if showFalloutRollButton}}\n            <button class="icon-button" data-action="roll-fallout" title="{{localizeHeart \'rolls\' \'fallout-roll\' \'action\' }}">\n                <span class="fas fa-radiation-alt"></span>\n            </button>\n            {{/if}}\n        </div>\n    </div>\n</form>'};var we=a(379),xe=a.n(we),ze=a(795),Te=a.n(ze),_e=a(695),Ce=a.n(_e),He=a(216),Oe=a.n(He),Se=a(402),qe={styleTagTransform:function(e,t){if(t.styleSheet)t.styleSheet.cssText=e;else{for(;t.firstChild;)t.removeChild(t.firstChild);t.appendChild(document.createTextNode(e))}},setAttributes:function(e){var t=a.nc;t&&e.setAttribute("nonce",t)},insert:function(e){var t=Ce()("head");if(!t)throw new Error("Couldn't find a style target. This probably means that the value for the 'insert' parameter is invalid.");t.appendChild(e)}};qe.domAPI=Te(),qe.insertStyleElement=Oe(),xe()(Se.Z,qe),Se.Z&&Se.Z.locals&&Se.Z.locals;var Ae=a(746),Ie={styleTagTransform:function(e,t){if(t.styleSheet)t.styleSheet.cssText=e;else{for(;t.firstChild;)t.removeChild(t.firstChild);t.appendChild(document.createTextNode(e))}},setAttributes:function(e){var t=a.nc;t&&e.setAttribute("nonce",t)},insert:function(e){var t=Ce()("head");if(!t)throw new Error("Couldn't find a style target. This probably means that the value for the 'insert' parameter is invalid.");t.appendChild(e)}};Ie.domAPI=Te(),Ie.insertStyleElement=Oe(),xe()(Ae.Z,Ie),Ae.Z&&Ae.Z.locals&&Ae.Z.locals;var je=a(875),Re={styleTagTransform:function(e,t){if(t.styleSheet)t.styleSheet.cssText=e;else{for(;t.firstChild;)t.removeChild(t.firstChild);t.appendChild(document.createTextNode(e))}},setAttributes:function(e){var t=a.nc;t&&e.setAttribute("nonce",t)},insert:function(e){var t=Ce()("head");if(!t)throw new Error("Couldn't find a style target. This probably means that the value for the 'insert' parameter is invalid.");t.appendChild(e)}};function $e(e){return class extends e{get template(){return oe.path}get default_img(){return CONST.DEFAULT_TOKEN}get img(){return systems/heart/assets/battle-gear.svg}getData(){const e=super.getData();return e.data.img===this.default_img&&(e.data.img=this.img),e}}}Re.domAPI=Te(),Re.insertStyleElement=Oe(),xe()(je.Z,Re),je.Z&&je.Z.locals&&je.Z.locals;class Ee extends($e(ActorSheet)){static get type(){return"base"}get template(){return ee.path}get img(){return this.default_img}getData(){const e=super.getData(),t={};return Object.keys(CONFIG.Item.typeLabels).forEach((e=>{t[e]=[]})),this.actor.items.forEach((e=>{t[e.type].push(e)})),e.heart=t,e}}const Ne=JSON.parse('{"v":{"adversary":{"names":"","descriptors":"","motivation":"","difficulty":"","resistance":"","protection":"","resources":[],"equipment":"","special":""}}}');class Fe extends Ee{static get type(){return Object.keys(Ne.v)[0]}get template(){return Y.path}get img(){return"systems/heart/assets/high-punch.svg"}}var Le=a(963),Ze={styleTagTransform:function(e,t){if(t.styleSheet)t.styleSheet.cssText=e;else{for(;t.firstChild;)t.removeChild(t.firstChild);t.appendChild(document.createTextNode(e))}},setAttributes:function(e){var t=a.nc;t&&e.setAttribute("nonce",t)},insert:function(e){var t=Ce()("head");if(!t)throw new Error("Couldn't find a style target. This probably means that the value for the 'insert' parameter is invalid.");t.appendChild(e)}};Ze.domAPI=Te(),Ze.insertStyleElement=Oe(),xe()(Le.Z,Ze),Le.Z&&Le.Z.locals&&Le.Z.locals;const De=JSON.parse('{"v":{"character":{"templates":["resistance","skills","domains"],"class":"","calling":"","active_beats":[],"equipment":[],"resources":[],"abilities":[],"fallout":[],"notes":""}}}');class Be extends Ee{static get defaultOptions(){const e=super.defaultOptions;return mergeObject(e,{dragDrop:[{dragSelector:".item",dropSelector:null}]})}async _onDropItemCreate(e){return"calling"===e.type&&this.actor.itemTypes.calling.forEach((e=>{e.delete()})),super._onDropItemCreate(e)}static get type(){return Object.keys(De.v)[0]}get template(){return te.path}get img(){return"systems/heart/assets/high-punch.svg"}getData(){const e=super.getData(),t=this.actor.items.find((e=>"calling"===e.type));return e.callingItem=t,e}activateListeners(e){super.activateListeners(e),e.find(".ordered-checkable-box:not(.checked)").click((e=>{e.preventDefault();const t=e.currentTarget,a=parseInt(t.dataset.index),i={};i[t.parentElement.dataset.target]=a+1,this.actor.update(i)})),e.find(".ordered-checkable-box.checked").click((e=>{e.preventDefault();const t=e.currentTarget,a=parseInt(t.dataset.index),i=t.parentElement.dataset.target,r={};a+1===getProperty(this.actor.data,i)?r[i]=a:r[i]=a+1,this.actor.update(r)})),e.find("[data-action=prepare-request-roll]").click((e=>{new game.heart.applications.PrepareRollRequestApplication({}).render(!0)})),e.find("[data-action=add][data-type]").click((e=>{const t=$(e.currentTarget).data("type"),a=new CONFIG.Item.documentClass({type:t,name:`New ${t}`});this.actor.createEmbeddedDocuments("Item",[a.toObject()])})),e.find("[data-action=view]").click((e=>{const t=$(e.currentTarget).closest("[data-item-id]").data("itemId");this.actor.items.get(t).sheet.render(!0)})),e.find("[data-action=delete]").click((e=>{const t=$(e.currentTarget).closest("[data-item-id]").data("itemId");this.actor.items.get(t).delete()})),e.find("[data-action=item-roll]").click((async e=>{const t=$(e.currentTarget).closest("[data-item-id]").data("itemId"),a=this.actor.items.get(t),i=game.heart.rolls.ItemRoll.build({item:a});await i.evaluate({async:!0}),i.toMessage({flavor:`${a.name} (<span class="item-type">${a.type}</span>)`,speaker:{actor:this.actor.id}})})),e.find("[data-action=roll]").click((async e=>{(await game.heart.rolls.HeartRoll.build({character:this.actor.id})).toMessage({speaker:{actor:this.actor.id}})})),e.find("[data-action=stress-roll]").click((async e=>{(await game.heart.rolls.StressRoll.build({character:this.actor.id})).toMessage({speaker:{actor:this.actor.id}})})),e.find("[data-action=fallout-roll]").click((async e=>{(await game.heart.rolls.FalloutRoll.build({character:this.actor.id})).toMessage({speaker:{actor:this.actor.id}})}))}}const Pe=JSON.parse('{"v":{"delve":{"domains":[],"tier":[],"stress":"","resistance":10,"events":[],"connection":"","description":""}}}');class Me extends Ee{static get type(){return Object.keys(Pe.v)[0]}get template(){return ae.path}get img(){return"systems/heart/assets/dungeon-light.svg"}}const Ge=JSON.parse('{"v":{"landmark":{"domains":[],"description":"","stress":"d4","haunts":[]}}}');class Je extends Ee{static get type(){return Object.keys(Ge.v)[0]}get template(){return ie.path}get img(){return"systems/heart/assets/occupy.svg"}}function Ue(e){return new Proxy(e,{get:(e,t,a)=>"totalStress"===t?Object.values(e.data.data.resistances).reduce(((e,t)=>e+t.value),0):"calling"===t?e.items.find((e=>"calling"===e.type)):void 0})}var We=[C,_,H,O,S],Ke=[q];class Qe extends Actor{get proxy(){return void 0===this._proxy&&void 0!==this.constructor.proxies[this.type]&&(this._proxy=this.constructor.proxies[this.type](this)),this._proxy}}function Xe(){console.log("heart | Registering actor sheets"),Actors.unregisterSheet("core",ActorSheet),We.forEach((function(e){const t=e.default,a=t.type;void 0===game.heart.actors&&(game.heart.actors={}),void 0===game.heart.actors[a]&&(game.heart.actors[a]={}),CONFIG.Actor.typeLabels[a]=`heart.${a}.label-single`,game.heart.actors[a].sheet=t,"base"!==a&&Actors.registerSheet("heart",t,{types:[a],makeDefault:!0,label:`heart.${a}`})})),CONFIG.Actor.documentClass=Qe,Ke.forEach((function(e){Qe.proxies[e.default.name.toLowerCase()]=e.default}))}Qe.proxies={};class Ve extends FormApplication{static get defaultOptions(){return foundry.utils.mergeObject(super.defaultOptions,{classes:["form","heart",this.formType]})}static get formType(){return"base"}static async build(e,t){try{const a=Object.entries(e).reduce(((e,[t,a])=>(e[t]=a.value[0],e)),{});await this._roll(a,t)}catch(a){return new this({},{heart:e,msg:t}).render(!0)}}static async _roll(e){ui.notifications.error(`_roll has not been defined for ${this.formType}`)}get title(){return"base"!==this.constructor.formType?game.i18n.localize(`heart.applications.${this.constructor.formType}.title`):super.title}activateListeners(e){e.find("button").click((e=>{e.preventDefault()})),e.find("[data-action=cancel]").click((e=>{this.close()}))}}class Ye extends Ve{static get defaultOptions(){return foundry.utils.mergeObject(super.defaultOptions,{template:ne.path})}static get formType(){return"prepare-roll-request"}getData(){const e=super.getData();return mergeObject(e,{characters:game.actors.filter((e=>"character"===e.type)).reduce(((e,t)=>(e[t.id]=t.name,e)),{}),skills:game.heart.skills.reduce(((e,t)=>(e[t]=game.i18n.localize(`heart.skill.${t}`),e)),{}),domains:game.heart.domains.reduce(((e,t)=>(e[t]=game.i18n.localize(`heart.domain.${t}`),e)),{}),difficulties:game.heart.difficulties.reduce(((e,t)=>(e[t]=game.i18n.localize(`heart.difficulty.${t}`),e)),{})})}activateListeners(e){super.activateListeners(e);const t=e.get(0);e.find("[data-action=submit]").click((async e=>{const a=new FormData(t),i=a.get("difficulty"),r=a.getAll("character"),n=a.getAll("skill"),s=a.getAll("domain"),l=a.getAll("helper");CONFIG.ChatMessage.documentClass.create({flags:{heart:{"roll-request":{difficulty:i,characters:r,skills:n,domains:s,validHelpers:l}}}}),this.close()}))}}class et extends Ve{static get defaultOptions(){return foundry.utils.mergeObject(super.defaultOptions,{template:le.path})}static get formType(){return"requirement"}static build({requirements:e,callback:t,type:a}){new this({},{type:a,requirements:e,callback:t}).render(this)}activateListeners(e){super.activateListeners(e);const t=e.get(0);e.find("[data-action=submit]").click((async e=>{const a=new FormData(t),i=Object.entries(this.options.requirements).reduce(((e,[t,i])=>{if(i.isCheckbox){const i=a.get(t);e[t]=null!==i}else i.isMany?e[t]=a.getAll(t):e[t]=a.get(t);return e}),{});this.options.callback(i),this.close()}))}}var tt=a(780),at={styleTagTransform:function(e,t){if(t.styleSheet)t.styleSheet.cssText=e;else{for(;t.firstChild;)t.removeChild(t.firstChild);t.appendChild(document.createTextNode(e))}},setAttributes:function(e){var t=a.nc;t&&e.setAttribute("nonce",t)},insert:function(e){var t=Ce()("head");if(!t)throw new Error("Couldn't find a style target. This probably means that the value for the 'insert' parameter is invalid.");t.appendChild(e)}};at.domAPI=Te(),at.insertStyleElement=Oe(),xe()(tt.Z,at),tt.Z&&tt.Z.locals&&tt.Z.locals;var it=[I,j,R];function rt(){console.log("heart | Registering applications"),void 0===game.heart.applications&&(game.heart.applications={}),it.forEach((function(e){game.heart.applications[e.default.name]=e.default,e.initialise&&e.initialise()}))}var nt=a(429),st={styleTagTransform:function(e,t){if(t.styleSheet)t.styleSheet.cssText=e;else{for(;t.firstChild;)t.removeChild(t.firstChild);t.appendChild(document.createTextNode(e))}},setAttributes:function(e){var t=a.nc;t&&e.setAttribute("nonce",t)},insert:function(e){var t=Ce()("head");if(!t)throw new Error("Couldn't find a style target. This probably means that the value for the 'insert' parameter is invalid.");t.appendChild(e)}};st.domAPI=Te(),st.insertStyleElement=Oe(),xe()(nt.Z,st),nt.Z&&nt.Z.locals&&nt.Z.locals;class lt extends ChatMessage{get isRollRequest(){return void 0!==this.getFlag("heart","roll-request")}get stressRoll(){if(this.roll instanceof game.heart.rolls.StressRoll)return this.roll;const e=this.getFlag("heart","stress-roll");return void 0!==e?CONFIG.Dice.rolls.find((t=>t.name===e.class)).fromData(e):void 0}async setStressRoll(e){const t=e.toJSON();await this.setFlag("heart","stress-roll",t)}get showStressRollButton(){const e=this.getFlag("heart","show-stress-roll-button");return void 0===this.stressRoll&&(void 0===e||Boolean(e))}set showStressRollButton(e){return this.setFlag("heart","show-stress-roll-button",e)}get showTakeStressButton(){const e=this.getFlag("heart","show-take-stress-button");return void 0!==this.stressRoll&&(void 0===e||Boolean(e))}set showTakeStressButton(e){return this.setFlag("heart","show-take-stress-button",e)}get falloutRoll(){if(this.roll instanceof game.heart.rolls.FalloutRoll)return this.roll;const e=this.getFlag("heart","fallout-roll");return void 0!==e?CONFIG.Dice.rolls.find((t=>t.name===e.class)).fromData(e):void 0}set falloutRoll(e){const t=e.toJSON();this.setFlag("heart","fallout-roll",t)}get showFalloutRollButton(){const e=this.getFlag("heart","show-fallout-roll-button");return void 0===this.falloutRoll&&(void 0===e||Boolean(e))}set showFalloutRollButton(e){return this.setFlag("heart","show-fallout-roll-button",e)}async getHTML(){const e=await super.getHTML();if(this.isRoll&&this.isContentVisible){if(e.find(".message-content").html(await this.roll.render({isPrivate:!1,showStressRollButton:this.showStressRollButton,showTakeStressButton:this.showTakeStressButton,showFalloutRollButton:this.showFalloutRollButton})),this.stressRoll&&this.stressRoll!==this.roll){const t=await this.stressRoll.render({isPrivate:!1,showTakeStressButton:this.showTakeStressButton,showFalloutRollButton:this.showFalloutRollButton});e.append($('<div class="message-content"></div>').append(t))}if(this.falloutRoll&&this.falloutRoll!==this.roll){const t=await this.falloutRoll.render({isPrivate:!1});e.append($('<div class="message-content"></div>').append(t))}}if(this.isRollRequest){const t=this.getFlag("heart","roll-request"),a=await renderTemplate("heart:applications/prepare-roll-request/chat-message.html",t);e.append(a)}return e}}function ot(e){e.on("click","form button",(e=>{e.preventDefault()})),e.on("click","form.roll-request [data-action=roll][data-character]",(e=>{const t=$(e.currentTarget),{character:a}=t.data(),i=t.closest("form.roll-request"),r=new FormData(i.get(0));r.set("character",a);const n=game.heart.applications.PrepareRollApplication.getBuildData({character:[a],difficulty:i.find("[name=difficulty]").map(((e,t)=>t.value)).get(),skill:i.find("[name=skill]").map(((e,t)=>t.value)).get(),domain:i.find("[name=domain]").map(((e,t)=>t.value)).get(),helper:i.find("[name=helper]").map(((e,t)=>t.value)).get()},r);return game.heart.applications.PrepareRollApplication.build(n)}))}function ct(){console.log("heart | Registering ChatMessage"),CONFIG.ChatMessage.documentClass=lt,Hooks.once("renderChatLog",((e,t,a)=>ot(t))),Hooks.once("renderChatPopout",((e,t,a)=>ot(t)))}class dt extends($e(ItemSheet)){static get type(){return"base"}get template(){return de.path}get default_img(){return"icons/svg/item-bag.svg"}get img(){return this.default_img}get children(){return Object.values(this.item.data.data.children||{})}get childrenTypes(){return this.children.reduce(((e,t)=>(void 0===e[t.type]?e[t.type]=[t]:e[t.type].push(t),e)),{})}activateListeners(e){super.activateListeners(e),e.find("[data-action=add-child][data-type]").click((e=>{const t=$(e.currentTarget),a=t.data("document-name")||"Item",i=t.data("type");let r=t.data("data")||{};const n=randomID(),s=new CONFIG[a].documentClass({_id:n,type:i,name:`New ${i}`,data:r}).toObject();s.documentName=a,this.item.update({[`data.children.${n}`]:s})})),e.find("[data-child-id] [data-action=edit-child]").click((e=>{const t=$(e.currentTarget).closest("[data-child-id]").data("childId"),a=this.item.data.data.children[t],i=a.documentName;new CONFIG[i].documentClass(a,{parentItem:this.item}).sheet.render(!0)})),e.find("[data-child-id] [data-action=delete-child]").click((async e=>{const t=$(e.currentTarget).closest("[data-child-id]").data("childId");await this.item.update({[`data.children.-=${t}`]:null}),this.render(!0)}))}getData(){const e=super.getData();return e.di_sizes=game.heart.di_sizes.reduce(((e,t)=>(e[t]=game.i18n.format("heart.di_size.d(N)",{N:t.replace(/^d/,"")}),e)),{}),e.domains=game.heart.domains.reduce(((e,t)=>(e[t]=game.i18n.localize(`heart.domain.${t}`),e)),{}),e.equipment_types=game.heart.equipment_types.reduce(((e,t)=>(e[t]=game.i18n.localize(`heart.equipment.type.${t}`),e)),{}),e.children=this.children,e.childrenTypes=this.childrenTypes,e}}const ht=JSON.parse('{"c":{"ability":{"templates":["has_description"],"mechanics":""}}}'),ut=Object.freeze({type:Object.keys(ht.c)[0],img:"systems/heart/assets/skills.svg",template:ce.path}),pt=JSON.parse('{"c":{"beat":{"templates":["has_description"],"type":"minor","active":false,"completed":false}}}'),mt=Object.freeze({type:Object.keys(pt.c)[0],img:"systems/heart/assets/drum.svg",template:he.path}),ft=JSON.parse('{"c":{"calling":{"templates":["has_description","has_children"],"questions":{},"mark":null}}}');var gt=a(621),bt={styleTagTransform:function(e,t){if(t.styleSheet)t.styleSheet.cssText=e;else{for(;t.firstChild;)t.removeChild(t.firstChild);t.appendChild(document.createTextNode(e))}},setAttributes:function(e){var t=a.nc;t&&e.setAttribute("nonce",t)},insert:function(e){var t=Ce()("head");if(!t)throw new Error("Couldn't find a style target. This probably means that the value for the 'insert' parameter is invalid.");t.appendChild(e)}};bt.domAPI=Te(),bt.insertStyleElement=Oe(),xe()(gt.Z,bt),gt.Z&&gt.Z.locals&&gt.Z.locals;const vt=Object.freeze({type:Object.keys(ft.c)[0],img:"systems/heart/assets/drum.svg",template:ue.path}),yt=class extends dt{static get type(){return vt.type}get template(){return vt.template}get img(){return vt.img}getData(){const e=super.getData();return e.minorBeats=(this.childrenTypes.beat||[]).filter((e=>"minor"===e.data.type)),e.majorBeats=(this.childrenTypes.beat||[]).filter((e=>"major"===e.data.type)),e.zenithBeats=(this.childrenTypes.beat||[]).filter((e=>"zenith"===e.data.type)),e}activateListeners(e){super.activateListeners(e),e.find("[data-action=add-question]").click((e=>{const t=randomID();this.item.update({[`data.questions.${t}`]:{question:"",answer:""}})})),e.find("[data-action=delete-question]").click((e=>{const t=$(e.currentTarget).closest("[data-id]").data("id");this.item.update({[`data.questions.-=${t}`]:null})}))}},kt=JSON.parse('{"c":{"equipment":{"templates":["is_rollable","has_description"],"type":"miscellaneous"}}}'),wt=["miscellaneous","delve","kill","mend"];function xt(){game.heart.equipment_types=wt}const zt=Object.freeze({type:Object.keys(kt.c)[0],img:"systems/heart/assets/battle-gear.svg",template:pe.path}),Tt=JSON.parse('{"c":{"fallout":{"templates":["has_description"]}}}'),_t=Object.freeze({type:Object.keys(Tt.c)[0],img:"systems/heart/assets/fallout-shelter.svg",template:me.path}),Ct=JSON.parse('{"c":{"haunt":{"templates":["has_description"]}}}'),Ht=Object.freeze({type:Object.keys(Ct.c)[0],img:"systems/heart/assets/prayer.svg",template:fe.path}),Ot=JSON.parse('{"c":{"resource":{"templates":["is_rollable","has_description"],"domain":""}}}'),St=Object.freeze({type:Object.keys(Ot.c)[0],img:"systems/heart/assets/ore.svg",template:ge.path});var qt=[L,F,Z,D,B,P,M,G];class At extends Item{constructor(e={},t={}){super(e,t),Object.defineProperty(this,"parentItem",{value:t.parentItem||null,writable:!1})}get isChild(){return null!==this.parentItem}async update(e={},t={}){if(this.isChild){const t=this.parentItem.update({[`data.children.${this.data._id}`]:e});return t.then((e=>{const t=e.data.data.children[this.data._id];mergeObject(this.data._source,t),mergeObject(this.data,t)})),t}return super.update(e,t)}}function It(){console.log("heart | Assigning new Item documentClass"),CONFIG.Item.documentClass=At,console.log("heart | Registering item sheets"),Items.unregisterSheet("core",ItemSheet),qt.forEach((e=>{const t=e.data;let a;a=void 0!==e.default?e.default:t.sheet instanceof ItemSheet?t.sheet:function(e){const t=Object.freeze({...e});return class extends dt{static get type(){return e.type}get template(){return t.template}get img(){return t.img}}}(t);const i=a.type;console.log(`heart | -- Registering ${i} sheet`),void 0===game.heart.items&&(game.heart.items={}),void 0===game.heart.items[i]&&(game.heart.items[i]={}),game.heart.items[i].sheet=a,e.initialise&&e.initialise(),"base"!==i&&(CONFIG.Item.typeLabels[i]=`heart.${i}.label-single`,Items.registerSheet("heart",a,{types:[i],makeDefault:!0,label:`heart.${i}.label-single`}))}))}var jt=a(979),Rt={styleTagTransform:function(e,t){if(t.styleSheet)t.styleSheet.cssText=e;else{for(;t.firstChild;)t.removeChild(t.firstChild);t.appendChild(document.createTextNode(e))}},setAttributes:function(e){var t=a.nc;t&&e.setAttribute("nonce",t)},insert:function(e){var t=Ce()("head");if(!t)throw new Error("Couldn't find a style target. This probably means that the value for the 'insert' parameter is invalid.");t.appendChild(e)}};Rt.domAPI=Te(),Rt.insertStyleElement=Oe(),xe()(jt.Z,Rt),jt.Z&&jt.Z.locals&&jt.Z.locals;const $t={"no-fallout":(e,t)=>e>t,"minor-fallout":(e,t)=>e<=t&&e<=6,"major-fallout":(e,t)=>e<=t&&e>6};function Et(){game.heart.fallout_results=Object.keys($t)}class Nt extends Roll{static get CHAT_TEMPLATE(){return be.path}static get requirements(){const e=game.actors.filter((e=>"character"===e.type));return{character:{label:game.i18n.localize("heart.character.label-single"),options:e.reduce(((e,t)=>(e[t.data._id]=t.name,e)),{})}}}static build({character:e}={},t={},a={}){return new Promise(((i,r)=>{const n=this.requirements;void 0!==e&&delete n.character;const s={character:e};if(!(Object.keys(n).length>0))return i(this._build(s,t,a));game.heart.applications.RequirementApplication.build({requirements:n,callback:e=>{mergeObject(s,e),i(this._build(s,t,a))},type:"prepare-fallout-roll"})}))}static _build({character:e},t={},a={}){const i=game.actors.get(e).proxy;return a.totalStress=i.totalStress,new this("1d12",t,a)}get result(){return Object.keys($t).find((e=>$t[e](this.total,this.options.totalStress)))}async render(e={}){const t=(e=foundry.utils.mergeObject({user:game.user.id,flavor:null,template:this.constructor.CHAT_TEMPLATE,blind:!1},e)).isPrivate;this._evaluated||await this.evaluate({async:!0});const a=game.i18n.format("heart.rolls.fallout-roll.description(totalStress)",{totalStress:this.options.totalStress}),i={description:t?"???":a,formula:t?"???":this._formula,flavor:t?null:e.flavor,user:e.user,tooltip:t?"":await this.getTooltip(),total:t?"?":this.total,result:t?"?":this.result};return renderTemplate(e.template,i)}}var Ft=a(107),Lt={styleTagTransform:function(e,t){if(t.styleSheet)t.styleSheet.cssText=e;else{for(;t.firstChild;)t.removeChild(t.firstChild);t.appendChild(document.createTextNode(e))}},setAttributes:function(e){var t=a.nc;t&&e.setAttribute("nonce",t)},insert:function(e){var t=Ce()("head");if(!t)throw new Error("Couldn't find a style target. This probably means that the value for the 'insert' parameter is invalid.");t.appendChild(e)}};Lt.domAPI=Te(),Lt.insertStyleElement=Oe(),xe()(Ft.Z,Lt),Ft.Z&&Ft.Z.locals&&Ft.Z.locals;const Zt={standard:0,risky:1,dangerous:2,impossible:1/0},Dt={critical_failure:[1,1],failure:[2,5],success_at_a_cost:[6,7],success:[8,9],critical_success:[10,10]},Bt={critical_failure:[1,1],failure:[2,9],success_at_a_cost:[10,10]},Pt=["critical_failure","failure","success_at_a_cost"];function Mt(){const e={...Dt,...Bt};game.heart.difficulties=Object.keys(Zt),game.heart.results=Object.keys(e),game.heart.stress_results=Pt}class Gt extends Roll{static get CHAT_TEMPLATE(){return ve.path}static get TOOLTIP_TEMPLATE(){return ye.path}static get requirements(){const e=game.actors.filter((e=>"character"===e.type)),t=game.heart.skills,a=game.heart.domains,i=game.heart.difficulties;return{character:{label:game.i18n.localize("heart.character.label-single"),options:e.reduce(((e,t)=>(e[t.data._id]=t.name,e)),{})},difficulty:{label:game.i18n.localize("heart.difficulty.label-single"),options:i.reduce(((e,t)=>(e[t]=game.i18n.localize(`heart.difficulty.${t}`),e)),{})},skill:{label:game.i18n.localize("heart.skill.label-single"),options:t.reduce(((e,t)=>(e[t]=game.i18n.localize(`heart.skill.${t}`),e)),{})},domain:{label:game.i18n.localize("heart.domain.label-single"),options:a.reduce(((e,t)=>(e[t]=game.i18n.localize(`heart.domain.${t}`),e)),{})},mastery:{label:game.i18n.localize("heart.mastery.label-single"),isCheckbox:!0},helpers:{label:game.i18n.localize("heart.helper.label-single"),isMany:!0,options:e.reduce(((e,t)=>(e[t.data._id]=t.name,e)),{})}}}static build(e={},t={},a={}){return new Promise(((i,r)=>{let{character:n,skill:s,domain:l,mastery:o,helpers:c,difficulty:d}=e;const h=this.requirements;void 0!==n&&delete h.character,void 0!==d&&delete h.difficulty,void 0!==s&&delete h.skill,void 0!==l&&delete h.domain,void 0!==o&&delete h.mastery,void 0!==c&&delete h.helpers;const u={character:n,difficulty:d,skill:s,domain:l,mastery:o,helpers:c};if(!(Object.keys(h).length>0))return i(this._build(u,t,a));game.heart.applications.RequirementApplication.build({requirements:h,callback:e=>{mergeObject(u,e),i(this._build(u,t,a))},type:"prepare-roll"})}))}static _build({character:e,difficulty:t,skill:a,domain:i,mastery:r,helpers:n}={},s={},l={}){const o=game.actors.get(e);a=o.data.data.skills[a].value?a:void 0,i=o.data.data.domains[i].value?i:void 0,n=n.filter((t=>t!==e));let c=[];[game.i18n.localize("heart.rolls.roll.base"),a?game.i18n.localize(`heart.skill.${a}`):void 0,i?game.i18n.localize(`heart.domain.${i}`):void 0,!!r&&game.i18n.localize("heart.mastery.label-short"),...n].forEach((e=>{e&&c.push(`1d10[${e}]`)})),"impossible"===t&&(c=[]);const d=Zt[t],h=d>0?`dh${d}`:"",u=`{${c.join(", ")}}${h}kh`;return l.character=e,l.result_set=c.length>d?"normal":"difficult",l.skill=a,l.domain=i,l.mastery=r,l.difficulty=t,l.helpers=n,new this(u,s,l)}get result(){if("impossible"===this.options.difficulty)return"failure";let e=Dt;return"difficult"===this.options.result_set&&(e=Bt),Object.keys(e).find((t=>{const[a,i]=e[t];return a<=this.total&&this.total<=i}))}async render(e={}){const t=(e=foundry.utils.mergeObject({user:game.user.id,flavor:null,template:this.constructor.CHAT_TEMPLATE,blind:!1},e)).isPrivate,a=void 0!==e.showStressRollButton&&e.showStressRollButton;this._evaluated||await this.evaluate({async:!0});const i=game.i18n.format("heart.rolls.roll.description(difficulty,count)",{difficulty:game.i18n.localize(`heart.difficulty.${this.options.difficulty}`),count:this.dice.length}),r={character:e.character||this.options.character,description:t?"???":i,formula:t?"???":this._formula,flavor:t?null:e.flavor,user:e.user,tooltip:t?"":await this.getTooltip(),showStressRollButton:!t&&a&&Pt.includes(this.result),total:t?"?":this.total,result:t?"?":this.result};return renderTemplate(e.template,r)}async getTooltip(){const e=this.dice.map((e=>e.getTooltipData())),t=this.dice.findIndex((e=>e.total==this.total));return renderTemplate(this.constructor.TOOLTIP_TEMPLATE,{kept:t,parts:e})}static activateListeners(e){e.on("click",".heart-roll [data-action=roll-stress]",(async function(e){const t=$(e.currentTarget).closest(".chat-message").data("messageId"),a=game.messages.get(t),i=a.roll;i._evaluated||await this.evaluate({async:!0});const r=await game.heart.rolls.StressRoll.build({character:i.options.character,result:i.result},a);await r.evaluate({async:!0}),await a.setStressRoll(r),a.showStressRollButton=!1}))}}class Jt extends Roll{static build({item:e}={},t={},a={}){return a.item=e,new this(e.data.data.di_size,t,a)}}class Ut extends Roll{static get CHAT_TEMPLATE(){return ke.path}static get requirements(){const e=game.actors.filter((e=>"character"===e.type)),t=game.heart.stress_results,a=game.heart.stress_dice;return{character:{label:game.i18n.localize("heart.character.label-single"),options:e.reduce(((e,t)=>(e[t.data._id]=t.name,e)),{})},result:{label:game.i18n.localize("heart.result.label-single"),options:t.reduce(((e,t)=>(e[t]=game.i18n.localize(`heart.result.${t}`),e)),{})},di_size:{label:game.i18n.localize("heart.di_size.label-single"),options:a.reduce(((e,t)=>(e[t]=game.i18n.format("heart.di_size.d(N)",{N:t.replace(/^d/,"")}),e)),{})}}}static build({result:e,di_size:t,character:a}={},i={},r={}){return new Promise(((n,s)=>{const l=this.requirements;void 0!==e&&delete l.result,void 0!==t&&delete l.di_size,void 0!==a&&delete l.character;const o={result:e,di_size:t,character:a};if(!(Object.keys(l).length>0))return n(this._build(o,i,r));game.heart.applications.RequirementApplication.build({requirements:l,callback:e=>{mergeObject(o,e),n(this._build(o,i,r))},type:"prepare-stress-roll"})}))}static _build({result:e,di_size:t,character:a},i={},r={}){r.result=e,r.di_size=t,r.character=a;let n=t;return"critical_failure"===e&&(n=`2 * {${t}}`),new this(n,i,r)}async render(e={}){const t=(e=foundry.utils.mergeObject({user:game.user.id,flavor:null,template:this.constructor.CHAT_TEMPLATE,blind:!1},e)).isPrivate,a=void 0!==e.showTakeStressButton&&e.showTakeStressButton,i=void 0!==e.showFalloutRollButton&&e.showFalloutRollButton;this._evaluated||await this.evaluate({async:!0});const r=game.i18n.format("heart.rolls.stress-roll.description(di_size)",{di_size:this.options.di_size,result:game.i18n.localize(`heart.result:${this.options.result}`)}),n={character:e.character||this.options.character,description:t?"???":r,formula:t?"???":this._formula,flavor:t?null:e.flavor,user:e.user,tooltip:t?"":await this.getTooltip(),showTakeStressButton:!t&&a,showFalloutRollButton:!t&&!a&&i,total:t?"?":this.total,result:t?"?":this.result};return renderTemplate(e.template,n)}async takeStress(e,t="blood"){return new Promise(((t,a)=>{e=e||this.options.character,game.heart.applications.RequirementApplication.build({requirements:{resistance:{options:game.heart.resistances.reduce(((e,t)=>(e[t]=game.i18n.localize(`heart.resistance.${t}`),e)),{})}},callback:({resistance:i})=>{const r=game.actors.get(e),n={},s=r.data.data.resistances[i],l=this.total;void 0===l&&(ui.notifications.error("Somehow this roll isn't evaluated",this),a());const o=(s.value||0)+Math.max(0,parseInt(l)-s.protection);n[`data.resistances.${i}.value`]=o,r.update(n),t()},type:"take-stress"})}))}asybuildFalloutRoll(e){return e=e||this.options.character,game.heart.rolls.FalloutRoll.build({character:e})}static activateListeners(e){e.on("click",".stress-roll [data-action=take-stress]",(async function(e){e.preventDefault();const t=$(e.currentTarget).closest(".chat-message").data("messageId"),a=game.messages.get(t),i=a.stressRoll,r=i.options.character;await i.takeStress(r),a.showTakeStressButton=!1,a.showFalloutRollButton=!0})),e.on("click",".stress-roll [data-action=roll-fallout]",(async function(e){e.preventDefault();const t=$(e.currentTarget).closest(".chat-message").data("messageId"),a=game.messages.get(t),i=a.stressRoll,r=await game.heart.rolls.FalloutRoll.build({character:i.options.character});await r.evaluate({async:!0}),a.falloutRoll=r,a.showFalloutRollButton=!1}))}}var Wt=a(361),Kt={styleTagTransform:function(e,t){if(t.styleSheet)t.styleSheet.cssText=e;else{for(;t.firstChild;)t.removeChild(t.firstChild);t.appendChild(document.createTextNode(e))}},setAttributes:function(e){var t=a.nc;t&&e.setAttribute("nonce",t)},insert:function(e){var t=Ce()("head");if(!t)throw new Error("Couldn't find a style target. This probably means that the value for the 'insert' parameter is invalid.");t.appendChild(e)}};Kt.domAPI=Te(),Kt.insertStyleElement=Oe(),xe()(Wt.Z,Kt),Wt.Z&&Wt.Z.locals&&Wt.Z.locals;var Qt=[U,W,K,Q];function Xt(){console.log("heart | Registering rolls"),Qt.forEach((e=>{const t=e.default,a=CONFIG.Dice.rolls.findIndex((e=>e.name===t.name));a<0?CONFIG.Dice.rolls.push(t):CONFIG.Dice.rolls[a]=t,void 0===game.heart.rolls&&(game.heart.rolls={}),game.heart.rolls[t.name]=t,void 0!==t.activateListeners&&(Hooks.on("renderChatLog",((e,a,i)=>t.activateListeners(a))),Hooks.on("renderChatPopout",((e,a,i)=>t.activateListeners(a)))),void 0!==e.initialise&&e.initialise()}))}var Vt=[i,r,n,s,l,o,c,d,h,u,p,m,f,g,b,v,y,k,w,x,z,T],Yt=[A,E,N,V,J,X];Hooks.once("init",(function(){Hooks._ids={},Hooks._hooks.renderChatLog=[],Hooks._hooks.renderChatPopout=[],Vt.forEach((function(e){const t=e.default,a=Handlebars.compile(t.source);Handlebars.registerPartial(t.path,a),_templateCache[t.path]=a})),game.heart={difficulties:["standard","risky","dangerous","impossible"],resistances:["blood","mind","echo","fortune","supplies"],skills:["compel","delve","discern","endure","evade","hunt","kill","mend","sneak"],domains:["cursed","desolate","haven","occult","religion","technology","warren","wild"],stress_dice:["d4","d6","d8","d10","d12"],di_sizes:["d4","d6","d8","d10","d12"]},console.log(`heart | Registering ${Yt.length} modules`),Yt.forEach((e=>{void 0!==e.initialise&&e.initialise()})),Handlebars.registerHelper("ordered-checkable",(function(e,t){let a="";for(let i=0;i<t;i++)a+=`<a data-index="${i}" class="ordered-checkable-box${i<e?" checked":""}"></a>`;return a})),Handlebars.registerHelper("join",(function(e,...t){const a=t.pop().hash.array||[];return[...t,...a].join(e)})),Handlebars.registerHelper("concat",(function(e,t){return e+t})),Handlebars.registerHelper("titlecase",(function(e){return e[0].toUpperCase()+e.slice(1)})),Handlebars.registerHelper("includes",(function(e,t,a){return void 0===e?(console.warn("includes has undefined array",e,t,a),!1):e.includes(t)})),Handlebars.registerHelper("randomID",(function(){return randomID()})),Handlebars.registerHelper("numEq",(function(e,t){return e==t})),Handlebars.registerHelper("not",(function(e){return!Boolean(e)})),Handlebars.registerHelper("notification",(function(e,t,a){const i=Boolean(e)?"check":"times";let r=a.hash.optional?"optional":"required";return`<span class="fas fa-${i}-circle" data-notification="${r}" data-target="${t}" title="${game.i18n.localize(`heart.notification:${r}`)}" data-type="${a.hash.type}"></span>`})),Handlebars.registerHelper("getActor",(function(e){return game.actors.get(e)})),Handlebars.registerHelper("localizeHeart",(function(...e){const t=e.splice(-1,1)[0],a=`heart.${e.join(".")}`;return HandlebarsHelpers.localize(a,t)})),Handlebars.registerHelper("ownsAnyActors",(function(e){for(let t of e){const e=game.actors.get(t);if(e&&e.isOwner)return!0}return!1}))})),Hooks.once("ready",(function(){game.settings.register("heart","normalActionTable",{name:"Normal Actions RollTable Source",hint:"When we roll d10 for normal actions, use this table",scope:"world",config:!0,default:"Compendium.heart.action-tables.eEJiBJABFXLu1QKR",type:String}),game.settings.register("heart","difficultActionTable",{name:"Difficult Actions RollTable Source",hint:"When we roll d10 for difficult actions, use this table",scope:"world",config:!0,default:"Compendium.heart.action-tables.GkSEWldXerpMjmkG",type:String})}))},239:(e,t,a)=>{e.exports=a.p+"ece5e5658ae157a8cf70.ttf"}},t={};function a(i){var r=t[i];if(void 0!==r)return r.exports;var n=t[i]={id:i,exports:{}};return e[i](n,n.exports,a),n.exports}a.n=e=>{var t=e&&e.__esModule?()=>e.default:()=>e;return a.d(t,{a:t}),t},a.d=(e,t)=>{for(var i in t)a.o(t,i)&&!a.o(e,i)&&Object.defineProperty(e,i,{enumerable:!0,get:t[i]})},a.o=(e,t)=>Object.prototype.hasOwnProperty.call(e,t),a.r=e=>{"undefined"!=typeof Symbol&&Symbol.toStringTag&&Object.defineProperty(e,Symbol.toStringTag,{value:"Module"}),Object.defineProperty(e,"__esModule",{value:!0})},a.p="/systems/heart/",a(662)})();
+/******/ (() => { // webpackBootstrap
+/******/ 	"use strict";
+/******/ 	var __webpack_modules__ = ({
+
+/***/ 875:
+/***/ ((module, __webpack_exports__, __webpack_require__) => {
+
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "Z": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(761);
+/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0__);
+// Imports
+
+var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
+// Module
+___CSS_LOADER_EXPORT___.push([module.id, ".heart.sheet.actor h2{font-family:\"MelmaCracked\";text-transform:uppercase;color:#630000;border:0;font-weight:bold;margin:0;padding:0;flex-grow:0}.heart.sheet.actor h2>div{font-size:1rem;color:#000}.heart.sheet.actor h3{font-family:\"MelmaCracked\";font-size:1.5em;text-transform:uppercase;color:#630000;border:0;font-weight:bold;margin:0;padding:0;flex-grow:0}.heart.sheet.actor .editor-content{font-size:15px;line-height:20px;background-image:-moz-linear-gradient(top, transparent, transparent 19px, rgba(99, 0, 0, 0.2) 0px);background-image:-webkit-linear-gradient(top, transparent, transparent 19px, rgba(99, 0, 0, 0.2) 0px);background-size:100% 20px;min-height:8em}.heart.sheet.actor .editor-content p{margin:0}.heart.sheet.actor.base img.profile{flex-grow:1;background:rgba(0,0,0,.5);cursor:pointer;max-height:6em}.heart.sheet.actor.base .text{flex-grow:3;display:flex;flex-flow:column}.heart.sheet.actor.base input[name=name]{grid-area:1/2/2/3;flex-grow:0;font-size:2em;border:0;align-self:bottom;text-align:center;background:none;color:#630000;font-weight:bold}.heart.sheet.actor.base .actor-type{color:#2c2c2c;font-size:1.2em;text-transform:uppercase;font-style:italic;align-self:top;flex-grow:0;text-align:center}", ""]);
+// Exports
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
+
+
+/***/ }),
+
+/***/ 963:
+/***/ ((module, __webpack_exports__, __webpack_require__) => {
+
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "Z": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(761);
+/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0__);
+// Imports
+
+var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
+// Module
+___CSS_LOADER_EXPORT___.push([module.id, ".sticky{position:sticky;top:0;z-index:1}.heart.sheet.actor.character{position:relative;background:#fff}.heart.sheet.actor.character .info .grid-2{grid-gap:1em;align-items:center}.heart.sheet.actor.character .calling{align-items:top}.heart.sheet.actor.character .calling .name{font-weight:bold;text-transform:uppercase;font-size:1.5em}.heart.sheet.actor.character img.profile{object-fit:contain;height:100%;min-height:100px;border:0}.heart.sheet.actor.character .faded{opacity:66%}.heart.sheet.actor.character .right{float:right;flex:auto 0 0}.heart.sheet.actor.character .col{margin:0 .5em}.heart.sheet.actor.character .grid-2 input:not([type]){border:0;border-bottom:1px dotted #630000;font-size:1.5em}.heart.sheet.actor.character .grid-3{display:grid;grid-template-columns:1fr 1fr 1fr;place-items:stretch;column-gap:.5em}.heart.sheet.actor.character .grid-3.resistances{grid-template-columns:auto 1fr auto;align-items:start;justify-content:top}.heart.sheet.actor.character .grid-3.resistances.left{justify-self:left}.heart.sheet.actor.character .bold{font-weight:bold;font-size:16px}", ""]);
+// Exports
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
+
+
+/***/ }),
+
+/***/ 780:
+/***/ ((module, __webpack_exports__, __webpack_require__) => {
+
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "Z": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(761);
+/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0__);
+// Imports
+
+var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
+// Module
+___CSS_LOADER_EXPORT___.push([module.id, ".heart.form .options,.chat-message .options{display:flex;align-items:center;justify-content:start}.heart.form .options .option,.chat-message .options .option{color:#000;font-family:\"Alegreya\";border:1px solid #000;border-radius:5px;background:#fff;margin:2px;padding:4px;display:inline-block;text-transform:uppercase}.heart.form input:checked+.option,.chat-message input:checked+.option{background:#630000;color:#fff}.heart.form .window-content{background:#fff}.heart.form label{font-weight:bold;font-family:\"MelmaCracked\";display:flex;align-items:center;justify-content:start;text-align:left}.heart.form .description{text-align:center}", ""]);
+// Exports
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
+
+
+/***/ }),
+
+/***/ 429:
+/***/ ((module, __webpack_exports__, __webpack_require__) => {
+
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "Z": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(761);
+/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0__);
+// Imports
+
+var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
+// Module
+___CSS_LOADER_EXPORT___.push([module.id, ".chat-message{background:#630000;color:#fff;border-color:#949494}.chat-message .item-type{text-transform:capitalize}.chat-message .message-header{color:#fff}.chat-message .dice-roll .dice-formula,.chat-message .dice-roll .dice-total{background:#fff;color:#630000;border-color:#949494}.chat-message .dice-roll .dice-formula{background:#000;color:#fff;font-size:1.2em;padding:.2em}.chat-message .dice-roll .dice .part-header{border-bottom-color:#fff}.chat-message .dice-roll .dice .part-header .part-formula{text-transform:uppercase}.chat-message .dice-roll .dice .dice-rolls .roll.discarded{filter:sepia(0.5) contrast(0.75) opacity(0.5)}.chat-message .message-content+.message-content{margin-top:.5em}.chat-message .heart h1{border:0;text-align:center}.chat-message .heart button{background:#949494;color:#fff}.chat-message .heart button .fas{padding:0 .5em}.chat-message .heart button+button{margin-top:.2em}.chat-message .roll-request{background:#000;padding:1em;border-radius:.5em;font-size:1.1em}.chat-message .roll-request label{display:flex;align-items:center;justify-items:end;place-content:end}.chat-message .roll-request select{color:#fff;appearance:none;width:100%;overflow:auto}.chat-message .roll-request select option{appearance:none;text-align:center;background:#000}.chat-message .roll-request button>*{text-overflow:ellipsis}.chat-message .roll-request .options{align-items:stretch;flex-wrap:wrap}.chat-message .roll-request .options .option img{height:3em;width:100%;object-fit:contain;border:0;background:rgba(0,0,0,.5);padding:0;margin:0;border-radius:0}", ""]);
+// Exports
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
+
+
+/***/ }),
+
+/***/ 746:
+/***/ ((module, __webpack_exports__, __webpack_require__) => {
+
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "Z": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(761);
+/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0__);
+// Imports
+
+var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
+// Module
+___CSS_LOADER_EXPORT___.push([module.id, ".heart.sheet img.profile{flex-grow:1;background:rgba(0,0,0,.5);cursor:pointer}.heart.sheet .text{flex-grow:3;display:flex;flex-flow:column}.heart.sheet .subtitle{color:#2c2c2c;font-size:1.2em;text-transform:uppercase;font-style:italic;align-self:top;flex-grow:0;text-align:center}.heart.sheet .editor-content{font-size:15px;line-height:20px;background-image:-moz-linear-gradient(top, transparent, transparent 19px, rgba(99, 0, 0, 0.2) 0px);background-image:-webkit-linear-gradient(top, transparent, transparent 19px, rgba(99, 0, 0, 0.2) 0px);background-size:100% 20px;min-height:8em}.heart.sheet .editor-content p{margin:0}.heart.sheet .item-list{font-size:1.2em}.heart.sheet.base .info{display:flex;flex:0% 0 1;flex-flow:row wrap;place-items:center;place-content:center;background:#949494}.heart.sheet.base .info>*{flex:0% 1 1}.heart.sheet.base img.profile{flex-grow:1;background:rgba(0,0,0,.5);cursor:pointer;max-height:6em}.heart.sheet.base .text{flex-grow:3;display:flex;flex-flow:column}.heart.sheet.base input[name=name]{grid-area:1/2/2/3;flex-grow:0;font-size:2em;border:0;align-self:bottom;text-align:center;background:none;color:#630000;font-weight:bold}", ""]);
+// Exports
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
+
+
+/***/ }),
+
+/***/ 402:
+/***/ ((module, __webpack_exports__, __webpack_require__) => {
+
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "Z": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(761);
+/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _node_modules_css_loader_dist_runtime_getUrl_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(80);
+/* harmony import */ var _node_modules_css_loader_dist_runtime_getUrl_js__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_getUrl_js__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _fonts_melma_MelmaCracked_ttf__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(239);
+// Imports
+
+
+
+var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
+___CSS_LOADER_EXPORT___.push([module.id, "@import url(https://fonts.googleapis.com/css2?family=Alegreya:ital,wght@0,400;0,500;0,600;1,400&display=swap);"]);
+var ___CSS_LOADER_URL_REPLACEMENT_0___ = _node_modules_css_loader_dist_runtime_getUrl_js__WEBPACK_IMPORTED_MODULE_1___default()(_fonts_melma_MelmaCracked_ttf__WEBPACK_IMPORTED_MODULE_2__);
+// Module
+___CSS_LOADER_EXPORT___.push([module.id, "@font-face{font-family:\"MelmaCracked\";src:url(" + ___CSS_LOADER_URL_REPLACEMENT_0___ + ")}.title-font{font-family:\"MelmaCracked\"}input.hidden{display:none !important}input.toggle-display~*{max-height:0;overflow:hidden;transition:max-height .2s ease-out}input.toggle-display:checked~*{max-height:20em;transition:max-height .2s ease-in}.toggle-button{font-family:\"MelmaCracked\";color:#000;font-size:1.5em;text-align:center;display:flex;flex-flow:row wrap;justify-content:center;padding:.2em;margin:.3em 0;border-radius:.2em;background:#fff;border:3px solid #000;cursor:pointer}.chat-message{background:#630000;color:#fff;border-color:#949494}.chat-message .message-header{color:#fff}.chat-message .dice-roll .dice-formula,.chat-message .dice-roll .dice-total{background:#fff;color:#630000;border-color:#949494}.chat-message .dice-roll .dice-formula{background:#000;color:#fff}.chat-message .dice-roll .dice .part-header{border-bottom-color:#fff}.chat-message .dice-roll .dice .part-header .part-formula{text-transform:uppercase}.chat-message .dice-roll .dice .dice-rolls .roll.discarded{filter:sepia(0.5) contrast(0.75) opacity(0.5)}.chat-message .message-content+.message-content{margin-top:.5em}.chat-message .heart button{background:#949494;color:#fff}.chat-message .heart button .fas{padding:0 .5em}.chat-message .heart button+button{margin-top:.2em}.heart{font-family:\"Alegreya\",serif}.heart input{font-family:inherit}.heart button{font-family:\"Alegreya\";background:#630000;color:#fff;border-color:#2c2c2c;font-size:1rem;text-transform:uppercase;font-weight:bold;cursor:pointer}.heart.buttons{display:flex;flex-flow:row wrap;background:#000}.heart.buttons>*{flex:50px 1 0;min-width:200px}.heart table{border:0}.heart .ordered-checkable-box{flex:14px 0 0}.heart .ordered-checkable-box::after,.heart .ordered-checkable-box.checked::after{content:\"\";display:inline-block;width:14px;height:14px;border:3px solid #000;margin:0 2px}.heart .ordered-checkable-box.checked::after{background-image:linear-gradient(90deg, #000 0%, #000 100%);background-size:12px 12px;background-position:center;background-repeat:no-repeat}.heart input[type=checkbox]{flex:14px 0 0;appearance:none;display:inline-block;width:14px;height:14px;border:3px solid #000;margin:0 2px;box-sizing:content-box}.heart input[type=checkbox]:checked{background-image:linear-gradient(90deg, #000 0%, #000 100%);background-size:12px 12px;background-position:center;background-repeat:no-repeat}.heart input[type=checkbox]:disabled{background-image:linear-gradient(90deg, #949494 0%, #949494 100%);background-size:12px 12px;background-position:center;background-repeat:no-repeat}.heart input[type=checkbox].invert{border-color:#fff}.heart input[type=checkbox].invert:checked{background-image:linear-gradient(90deg, #fff 0%, #fff 100%)}.heart .red .ordered-checkable-box::after,.heart .red .ordered-checkable-box.checked:after{border-color:#630000}.heart .red .ordered-checkable-box.checked::after{background-image:linear-gradient(90deg, #630000 0%, #630000 100%)}.window-app .window-content{padding:0}.window-app .window-content>*{padding:8px}.grid-2{display:grid;grid-template-columns:1fr 1fr;place-items:stretch;grid-gap:.5em;margin:.5em}.grid-2.auto-first-col{grid-template-columns:auto 1fr;margin:.5em 0}.grid-2 .wide{grid-column:1/3}.grid-2.place-center{place-content:center}.grid-2.place-top{align-items:start}", ""]);
+// Exports
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
+
+
+/***/ }),
+
+/***/ 621:
+/***/ ((module, __webpack_exports__, __webpack_require__) => {
+
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "Z": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(761);
+/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0__);
+// Imports
+
+var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
+// Module
+___CSS_LOADER_EXPORT___.push([module.id, "form.heart.calling{display:block;font-size:1.1em}form.heart.calling h1,form.heart.calling h2{font-family:\"MelmaCracked\"}form.heart.calling h1,form.heart.calling h2,form.heart.calling h3{text-transform:uppercase}form.heart.calling h4{font-weight:bold}form.heart.calling h1,form.heart.calling h2,form.heart.calling h3,form.heart.calling h4{border:0;margin:0;flex:auto 0 0}form.heart.calling h1 .right,form.heart.calling h2 .right,form.heart.calling h3 .right,form.heart.calling h4 .right{float:right;font-family:Alegreya;font-size:.8em}form.heart.calling h1{background:#630000;color:#fff;padding:.2em}form.heart.calling h1 input{color:#fff !important;border:0;width:100%;font-size:1em !important;text-align:left !important}form.heart.calling h2{color:#630000;padding:.2em 0}form.heart.calling .description{flex:auto 0 0;font-size:1.2em;font-style:italic;padding:0 1em;margin:.5em}form.heart.calling .description .editor-content{font-size:1.7em !important;line-height:1em;background:rgba(0,0,0,.1);min-height:6.5em;padding:.5em;text-align:center}form.heart.calling li .action{padding:.2em}form.heart.calling .action{flex:auto 0 0}form.heart.calling p{margin:0}form.heart.calling p+p{margin-top:.2em}form.heart.calling .flexrow{align-content:center}form.heart.calling .right{flex:auto 0 0}form.heart.calling .question{font-weight:bold;font-style:italic}form.heart.calling .question .editor-content{min-height:7em !important}form.heart.calling .name{text-transform:uppercase;font-weight:bold;color:#630000}", ""]);
+// Exports
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
+
+
+/***/ }),
+
+/***/ 979:
+/***/ ((module, __webpack_exports__, __webpack_require__) => {
+
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "Z": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(761);
+/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0__);
+// Imports
+
+var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
+// Module
+___CSS_LOADER_EXPORT___.push([module.id, ".heart.fallout-roll .dice-total{font-family:\"MelmaCracked\"}", ""]);
+// Exports
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
+
+
+/***/ }),
+
+/***/ 107:
+/***/ ((module, __webpack_exports__, __webpack_require__) => {
+
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "Z": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(761);
+/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0__);
+// Imports
+
+var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
+// Module
+___CSS_LOADER_EXPORT___.push([module.id, ".heart.heart-roll .dice-total{font-family:\"MelmaCracked\"}.heart.heart-roll .dice-tooltip{text-align:center;display:flex;flex-flow:row wrap;align-items:flex-end}.heart.heart-roll .dice-tooltip .tooltip-part{flex:33% 1 1;text-align:center}.heart.heart-roll .dice-tooltip .tooltip-part .dice-rolls{text-align:center;display:flex;flex-flow:row wrap;justify-content:center}.heart.heart-roll+.heart.heart-roll{margin-top:.5em}", ""]);
+// Exports
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
+
+
+/***/ }),
+
+/***/ 361:
+/***/ ((module, __webpack_exports__, __webpack_require__) => {
+
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "Z": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(761);
+/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0__);
+// Imports
+
+var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
+// Module
+___CSS_LOADER_EXPORT___.push([module.id, ".heart.dice-roll .flexrow .dice-total{flex:1;display:flex;place-items:center;place-content:center}.heart.dice-roll .flexrow .icon-button{padding:0;flex:1em 0 0}.heart.dice-roll .flexrow .icon-button+.icon-button{margin:0}", ""]);
+// Exports
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
+
+
+/***/ }),
+
+/***/ 695:
+/***/ ((module) => {
+
+
+
+var memo = {};
+/* istanbul ignore next  */
+
+function getTarget(target) {
+  if (typeof memo[target] === "undefined") {
+    var styleTarget = document.querySelector(target); // Special case to return head of iframe instead of iframe itself
+
+    if (window.HTMLIFrameElement && styleTarget instanceof window.HTMLIFrameElement) {
+      try {
+        // This will throw an exception if access to iframe is blocked
+        // due to cross-origin restrictions
+        styleTarget = styleTarget.contentDocument.head;
+      } catch (e) {
+        // istanbul ignore next
+        styleTarget = null;
+      }
+    }
+
+    memo[target] = styleTarget;
+  }
+
+  return memo[target];
+}
+
+module.exports = getTarget;
+
+/***/ }),
+
+/***/ 379:
+/***/ ((module) => {
+
+
+
+var stylesInDom = [];
+
+function getIndexByIdentifier(identifier) {
+  var result = -1;
+
+  for (var i = 0; i < stylesInDom.length; i++) {
+    if (stylesInDom[i].identifier === identifier) {
+      result = i;
+      break;
+    }
+  }
+
+  return result;
+}
+
+function modulesToDom(list, options) {
+  var idCountMap = {};
+  var identifiers = [];
+
+  for (var i = 0; i < list.length; i++) {
+    var item = list[i];
+    var id = options.base ? item[0] + options.base : item[0];
+    var count = idCountMap[id] || 0;
+    var identifier = "".concat(id, " ").concat(count);
+    idCountMap[id] = count + 1;
+    var index = getIndexByIdentifier(identifier);
+    var obj = {
+      css: item[1],
+      media: item[2],
+      sourceMap: item[3]
+    };
+
+    if (index !== -1) {
+      stylesInDom[index].references++;
+      stylesInDom[index].updater(obj);
+    } else {
+      stylesInDom.push({
+        identifier: identifier,
+        updater: addStyle(obj, options),
+        references: 1
+      });
+    }
+
+    identifiers.push(identifier);
+  }
+
+  return identifiers;
+}
+
+function addStyle(obj, options) {
+  var api = options.domAPI(options);
+  api.update(obj);
+  return function updateStyle(newObj) {
+    if (newObj) {
+      if (newObj.css === obj.css && newObj.media === obj.media && newObj.sourceMap === obj.sourceMap) {
+        return;
+      }
+
+      api.update(obj = newObj);
+    } else {
+      api.remove();
+    }
+  };
+}
+
+module.exports = function (list, options) {
+  options = options || {};
+  list = list || [];
+  var lastIdentifiers = modulesToDom(list, options);
+  return function update(newList) {
+    newList = newList || [];
+
+    for (var i = 0; i < lastIdentifiers.length; i++) {
+      var identifier = lastIdentifiers[i];
+      var index = getIndexByIdentifier(identifier);
+      stylesInDom[index].references--;
+    }
+
+    var newLastIdentifiers = modulesToDom(newList, options);
+
+    for (var _i = 0; _i < lastIdentifiers.length; _i++) {
+      var _identifier = lastIdentifiers[_i];
+
+      var _index = getIndexByIdentifier(_identifier);
+
+      if (stylesInDom[_index].references === 0) {
+        stylesInDom[_index].updater();
+
+        stylesInDom.splice(_index, 1);
+      }
+    }
+
+    lastIdentifiers = newLastIdentifiers;
+  };
+};
+
+/***/ }),
+
+/***/ 216:
+/***/ ((module) => {
+
+
+
+/* istanbul ignore next  */
+function insertStyleElement(options) {
+  var style = document.createElement("style");
+  options.setAttributes(style, options.attributes);
+  options.insert(style);
+  return style;
+}
+
+module.exports = insertStyleElement;
+
+/***/ }),
+
+/***/ 795:
+/***/ ((module) => {
+
+
+
+/* istanbul ignore next  */
+function apply(style, options, obj) {
+  var css = obj.css;
+  var media = obj.media;
+  var sourceMap = obj.sourceMap;
+
+  if (media) {
+    style.setAttribute("media", media);
+  } else {
+    style.removeAttribute("media");
+  }
+
+  if (sourceMap && typeof btoa !== "undefined") {
+    css += "\n/*# sourceMappingURL=data:application/json;base64,".concat(btoa(unescape(encodeURIComponent(JSON.stringify(sourceMap)))), " */");
+  } // For old IE
+
+  /* istanbul ignore if  */
+
+
+  options.styleTagTransform(css, style);
+}
+
+function removeStyleElement(style) {
+  // istanbul ignore if
+  if (style.parentNode === null) {
+    return false;
+  }
+
+  style.parentNode.removeChild(style);
+}
+/* istanbul ignore next  */
+
+
+function domAPI(options) {
+  var style = options.insertStyleElement(options);
+  return {
+    update: function update(obj) {
+      apply(style, options, obj);
+    },
+    remove: function remove() {
+      removeStyleElement(style);
+    }
+  };
+}
+
+module.exports = domAPI;
+
+/***/ }),
+
+/***/ 761:
+/***/ ((module) => {
+
+
+
+/*
+  MIT License http://www.opensource.org/licenses/mit-license.php
+  Author Tobias Koppers @sokra
+*/
+// css base code, injected by the css-loader
+// eslint-disable-next-line func-names
+module.exports = function (cssWithMappingToString) {
+  var list = []; // return the list of modules as css string
+
+  list.toString = function toString() {
+    return this.map(function (item) {
+      var content = cssWithMappingToString(item);
+
+      if (item[2]) {
+        return "@media ".concat(item[2], " {").concat(content, "}");
+      }
+
+      return content;
+    }).join("");
+  }; // import a list of modules into the list
+  // eslint-disable-next-line func-names
+
+
+  list.i = function (modules, mediaQuery, dedupe) {
+    if (typeof modules === "string") {
+      // eslint-disable-next-line no-param-reassign
+      modules = [[null, modules, ""]];
+    }
+
+    var alreadyImportedModules = {};
+
+    if (dedupe) {
+      for (var i = 0; i < this.length; i++) {
+        // eslint-disable-next-line prefer-destructuring
+        var id = this[i][0];
+
+        if (id != null) {
+          alreadyImportedModules[id] = true;
+        }
+      }
+    }
+
+    for (var _i = 0; _i < modules.length; _i++) {
+      var item = [].concat(modules[_i]);
+
+      if (dedupe && alreadyImportedModules[item[0]]) {
+        // eslint-disable-next-line no-continue
+        continue;
+      }
+
+      if (mediaQuery) {
+        if (!item[2]) {
+          item[2] = mediaQuery;
+        } else {
+          item[2] = "".concat(mediaQuery, " and ").concat(item[2]);
+        }
+      }
+
+      list.push(item);
+    }
+  };
+
+  return list;
+};
+
+/***/ }),
+
+/***/ 80:
+/***/ ((module) => {
+
+
+
+module.exports = function (url, options) {
+  if (!options) {
+    // eslint-disable-next-line no-param-reassign
+    options = {};
+  } // eslint-disable-next-line no-underscore-dangle, no-param-reassign
+
+
+  url = url && url.__esModule ? url.default : url;
+
+  if (typeof url !== "string") {
+    return url;
+  } // If url is already wrapped in quotes, remove them
+
+
+  if (/^['"].*['"]$/.test(url)) {
+    // eslint-disable-next-line no-param-reassign
+    url = url.slice(1, -1);
+  }
+
+  if (options.hash) {
+    // eslint-disable-next-line no-param-reassign
+    url += options.hash;
+  } // Should url be wrapped?
+  // See https://drafts.csswg.org/css-values-3/#urls
+
+
+  if (/["'() \t\n]/.test(url) || options.needQuotes) {
+    return "\"".concat(url.replace(/"/g, '\\"').replace(/\n/g, "\\n"), "\"");
+  }
+
+  return url;
+};
+
+/***/ }),
+
+/***/ 662:
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+// ESM COMPAT FLAG
+__webpack_require__.r(__webpack_exports__);
+
+// NAMESPACE OBJECT: ./src/actors/adversary/sheet.html
+var sheet_namespaceObject = {};
+__webpack_require__.r(sheet_namespaceObject);
+__webpack_require__.d(sheet_namespaceObject, {
+  "default": () => (sheet)
+});
+
+// NAMESPACE OBJECT: ./src/actors/base/sheet.html
+var base_sheet_namespaceObject = {};
+__webpack_require__.r(base_sheet_namespaceObject);
+__webpack_require__.d(base_sheet_namespaceObject, {
+  "default": () => (base_sheet)
+});
+
+// NAMESPACE OBJECT: ./src/actors/character/sheet.html
+var character_sheet_namespaceObject = {};
+__webpack_require__.r(character_sheet_namespaceObject);
+__webpack_require__.d(character_sheet_namespaceObject, {
+  "default": () => (character_sheet)
+});
+
+// NAMESPACE OBJECT: ./src/actors/delve/sheet.html
+var delve_sheet_namespaceObject = {};
+__webpack_require__.r(delve_sheet_namespaceObject);
+__webpack_require__.d(delve_sheet_namespaceObject, {
+  "default": () => (delve_sheet)
+});
+
+// NAMESPACE OBJECT: ./src/actors/landmark/sheet.html
+var landmark_sheet_namespaceObject = {};
+__webpack_require__.r(landmark_sheet_namespaceObject);
+__webpack_require__.d(landmark_sheet_namespaceObject, {
+  "default": () => (landmark_sheet)
+});
+
+// NAMESPACE OBJECT: ./src/applications/base/application.html
+var application_namespaceObject = {};
+__webpack_require__.r(application_namespaceObject);
+__webpack_require__.d(application_namespaceObject, {
+  "default": () => (application)
+});
+
+// NAMESPACE OBJECT: ./src/applications/prepare-roll-request/application.html
+var prepare_roll_request_application_namespaceObject = {};
+__webpack_require__.r(prepare_roll_request_application_namespaceObject);
+__webpack_require__.d(prepare_roll_request_application_namespaceObject, {
+  "default": () => (prepare_roll_request_application)
+});
+
+// NAMESPACE OBJECT: ./src/applications/prepare-roll-request/chat-message.html
+var chat_message_namespaceObject = {};
+__webpack_require__.r(chat_message_namespaceObject);
+__webpack_require__.d(chat_message_namespaceObject, {
+  "default": () => (chat_message)
+});
+
+// NAMESPACE OBJECT: ./src/applications/requirement-form/application.html
+var requirement_form_application_namespaceObject = {};
+__webpack_require__.r(requirement_form_application_namespaceObject);
+__webpack_require__.d(requirement_form_application_namespaceObject, {
+  "default": () => (requirement_form_application)
+});
+
+// NAMESPACE OBJECT: ./src/common/sheet.html
+var common_sheet_namespaceObject = {};
+__webpack_require__.r(common_sheet_namespaceObject);
+__webpack_require__.d(common_sheet_namespaceObject, {
+  "default": () => (common_sheet)
+});
+
+// NAMESPACE OBJECT: ./src/items/ability/sheet.html
+var ability_sheet_namespaceObject = {};
+__webpack_require__.r(ability_sheet_namespaceObject);
+__webpack_require__.d(ability_sheet_namespaceObject, {
+  "default": () => (ability_sheet)
+});
+
+// NAMESPACE OBJECT: ./src/items/base/sheet.html
+var items_base_sheet_namespaceObject = {};
+__webpack_require__.r(items_base_sheet_namespaceObject);
+__webpack_require__.d(items_base_sheet_namespaceObject, {
+  "default": () => (items_base_sheet)
+});
+
+// NAMESPACE OBJECT: ./src/items/beat/sheet.html
+var beat_sheet_namespaceObject = {};
+__webpack_require__.r(beat_sheet_namespaceObject);
+__webpack_require__.d(beat_sheet_namespaceObject, {
+  "default": () => (beat_sheet)
+});
+
+// NAMESPACE OBJECT: ./src/items/calling/sheet.html
+var calling_sheet_namespaceObject = {};
+__webpack_require__.r(calling_sheet_namespaceObject);
+__webpack_require__.d(calling_sheet_namespaceObject, {
+  "default": () => (calling_sheet)
+});
+
+// NAMESPACE OBJECT: ./src/items/equipment/sheet.html
+var equipment_sheet_namespaceObject = {};
+__webpack_require__.r(equipment_sheet_namespaceObject);
+__webpack_require__.d(equipment_sheet_namespaceObject, {
+  "default": () => (equipment_sheet)
+});
+
+// NAMESPACE OBJECT: ./src/items/fallout/sheet.html
+var fallout_sheet_namespaceObject = {};
+__webpack_require__.r(fallout_sheet_namespaceObject);
+__webpack_require__.d(fallout_sheet_namespaceObject, {
+  "default": () => (fallout_sheet)
+});
+
+// NAMESPACE OBJECT: ./src/items/haunt/sheet.html
+var haunt_sheet_namespaceObject = {};
+__webpack_require__.r(haunt_sheet_namespaceObject);
+__webpack_require__.d(haunt_sheet_namespaceObject, {
+  "default": () => (haunt_sheet)
+});
+
+// NAMESPACE OBJECT: ./src/items/resource/sheet.html
+var resource_sheet_namespaceObject = {};
+__webpack_require__.r(resource_sheet_namespaceObject);
+__webpack_require__.d(resource_sheet_namespaceObject, {
+  "default": () => (resource_sheet)
+});
+
+// NAMESPACE OBJECT: ./src/rolls/fallout-roll/roll.html
+var roll_namespaceObject = {};
+__webpack_require__.r(roll_namespaceObject);
+__webpack_require__.d(roll_namespaceObject, {
+  "default": () => (roll)
+});
+
+// NAMESPACE OBJECT: ./src/rolls/heart-roll/roll.html
+var heart_roll_roll_namespaceObject = {};
+__webpack_require__.r(heart_roll_roll_namespaceObject);
+__webpack_require__.d(heart_roll_roll_namespaceObject, {
+  "default": () => (heart_roll_roll)
+});
+
+// NAMESPACE OBJECT: ./src/rolls/heart-roll/tooltip.html
+var tooltip_namespaceObject = {};
+__webpack_require__.r(tooltip_namespaceObject);
+__webpack_require__.d(tooltip_namespaceObject, {
+  "default": () => (tooltip)
+});
+
+// NAMESPACE OBJECT: ./src/rolls/stress-roll/roll.html
+var stress_roll_roll_namespaceObject = {};
+__webpack_require__.r(stress_roll_roll_namespaceObject);
+__webpack_require__.d(stress_roll_roll_namespaceObject, {
+  "default": () => (stress_roll_roll)
+});
+
+// NAMESPACE OBJECT: ./src/actors/base/sheet.js
+var src_actors_base_sheet_namespaceObject = {};
+__webpack_require__.r(src_actors_base_sheet_namespaceObject);
+__webpack_require__.d(src_actors_base_sheet_namespaceObject, {
+  "default": () => (HeartActorSheet)
+});
+
+// NAMESPACE OBJECT: ./src/actors/adversary/sheet.js
+var adversary_sheet_namespaceObject = {};
+__webpack_require__.r(adversary_sheet_namespaceObject);
+__webpack_require__.d(adversary_sheet_namespaceObject, {
+  "default": () => (EquipmentSheet)
+});
+
+// NAMESPACE OBJECT: ./src/actors/character/sheet.js
+var actors_character_sheet_namespaceObject = {};
+__webpack_require__.r(actors_character_sheet_namespaceObject);
+__webpack_require__.d(actors_character_sheet_namespaceObject, {
+  "default": () => (CharacterSheet)
+});
+
+// NAMESPACE OBJECT: ./src/actors/delve/sheet.js
+var actors_delve_sheet_namespaceObject = {};
+__webpack_require__.r(actors_delve_sheet_namespaceObject);
+__webpack_require__.d(actors_delve_sheet_namespaceObject, {
+  "default": () => (DelveSheet)
+});
+
+// NAMESPACE OBJECT: ./src/actors/landmark/sheet.js
+var actors_landmark_sheet_namespaceObject = {};
+__webpack_require__.r(actors_landmark_sheet_namespaceObject);
+__webpack_require__.d(actors_landmark_sheet_namespaceObject, {
+  "default": () => (LandmarkSheet)
+});
+
+// NAMESPACE OBJECT: ./src/actors/character/proxy.js
+var proxy_namespaceObject = {};
+__webpack_require__.r(proxy_namespaceObject);
+__webpack_require__.d(proxy_namespaceObject, {
+  "default": () => (Character)
+});
+
+// NAMESPACE OBJECT: ./src/actors/index.js
+var actors_namespaceObject = {};
+__webpack_require__.r(actors_namespaceObject);
+__webpack_require__.d(actors_namespaceObject, {
+  "initialise": () => (initialise)
+});
+
+// NAMESPACE OBJECT: ./src/applications/base/application.js
+var base_application_namespaceObject = {};
+__webpack_require__.r(base_application_namespaceObject);
+__webpack_require__.d(base_application_namespaceObject, {
+  "default": () => (HeartApplication)
+});
+
+// NAMESPACE OBJECT: ./src/applications/prepare-roll-request/application.js
+var applications_prepare_roll_request_application_namespaceObject = {};
+__webpack_require__.r(applications_prepare_roll_request_application_namespaceObject);
+__webpack_require__.d(applications_prepare_roll_request_application_namespaceObject, {
+  "default": () => (PrepareRollRequestApplication)
+});
+
+// NAMESPACE OBJECT: ./src/applications/requirement-form/application.js
+var applications_requirement_form_application_namespaceObject = {};
+__webpack_require__.r(applications_requirement_form_application_namespaceObject);
+__webpack_require__.d(applications_requirement_form_application_namespaceObject, {
+  "default": () => (RequirementApplication)
+});
+
+// NAMESPACE OBJECT: ./src/applications/index.js
+var applications_namespaceObject = {};
+__webpack_require__.r(applications_namespaceObject);
+__webpack_require__.d(applications_namespaceObject, {
+  "initialise": () => (applications_initialise)
+});
+
+// NAMESPACE OBJECT: ./src/chat-messages/index.js
+var chat_messages_namespaceObject = {};
+__webpack_require__.r(chat_messages_namespaceObject);
+__webpack_require__.d(chat_messages_namespaceObject, {
+  "initialise": () => (chat_messages_initialise)
+});
+
+// NAMESPACE OBJECT: ./src/items/base/sheet.js
+var src_items_base_sheet_namespaceObject = {};
+__webpack_require__.r(src_items_base_sheet_namespaceObject);
+__webpack_require__.d(src_items_base_sheet_namespaceObject, {
+  "default": () => (HeartItemSheet)
+});
+
+// NAMESPACE OBJECT: ./src/items/ability/sheet.js
+var items_ability_sheet_namespaceObject = {};
+__webpack_require__.r(items_ability_sheet_namespaceObject);
+__webpack_require__.d(items_ability_sheet_namespaceObject, {
+  "data": () => (data)
+});
+
+// NAMESPACE OBJECT: ./src/items/beat/sheet.js
+var items_beat_sheet_namespaceObject = {};
+__webpack_require__.r(items_beat_sheet_namespaceObject);
+__webpack_require__.d(items_beat_sheet_namespaceObject, {
+  "data": () => (sheet_data)
+});
+
+// NAMESPACE OBJECT: ./src/items/calling/sheet.js
+var src_items_calling_sheet_namespaceObject = {};
+__webpack_require__.r(src_items_calling_sheet_namespaceObject);
+__webpack_require__.d(src_items_calling_sheet_namespaceObject, {
+  "data": () => (calling_sheet_data),
+  "default": () => (src_items_calling_sheet_0)
+});
+
+// NAMESPACE OBJECT: ./src/items/equipment/sheet.js
+var items_equipment_sheet_namespaceObject = {};
+__webpack_require__.r(items_equipment_sheet_namespaceObject);
+__webpack_require__.d(items_equipment_sheet_namespaceObject, {
+  "data": () => (equipment_sheet_data),
+  "initialise": () => (sheet_initialise)
+});
+
+// NAMESPACE OBJECT: ./src/items/fallout/sheet.js
+var items_fallout_sheet_namespaceObject = {};
+__webpack_require__.r(items_fallout_sheet_namespaceObject);
+__webpack_require__.d(items_fallout_sheet_namespaceObject, {
+  "data": () => (fallout_sheet_data)
+});
+
+// NAMESPACE OBJECT: ./src/items/haunt/sheet.js
+var items_haunt_sheet_namespaceObject = {};
+__webpack_require__.r(items_haunt_sheet_namespaceObject);
+__webpack_require__.d(items_haunt_sheet_namespaceObject, {
+  "data": () => (haunt_sheet_data)
+});
+
+// NAMESPACE OBJECT: ./src/items/resource/sheet.js
+var items_resource_sheet_namespaceObject = {};
+__webpack_require__.r(items_resource_sheet_namespaceObject);
+__webpack_require__.d(items_resource_sheet_namespaceObject, {
+  "data": () => (resource_sheet_data)
+});
+
+// NAMESPACE OBJECT: ./src/items/index.js
+var items_namespaceObject = {};
+__webpack_require__.r(items_namespaceObject);
+__webpack_require__.d(items_namespaceObject, {
+  "initialise": () => (items_initialise)
+});
+
+// NAMESPACE OBJECT: ./src/rolls/fallout-roll/roll.js
+var rolls_fallout_roll_roll_namespaceObject = {};
+__webpack_require__.r(rolls_fallout_roll_roll_namespaceObject);
+__webpack_require__.d(rolls_fallout_roll_roll_namespaceObject, {
+  "default": () => (FalloutRoll),
+  "initialise": () => (roll_initialise)
+});
+
+// NAMESPACE OBJECT: ./src/rolls/heart-roll/roll.js
+var src_rolls_heart_roll_roll_namespaceObject = {};
+__webpack_require__.r(src_rolls_heart_roll_roll_namespaceObject);
+__webpack_require__.d(src_rolls_heart_roll_roll_namespaceObject, {
+  "default": () => (HeartRoll),
+  "initialise": () => (heart_roll_roll_initialise)
+});
+
+// NAMESPACE OBJECT: ./src/rolls/item-roll/roll.js
+var item_roll_roll_namespaceObject = {};
+__webpack_require__.r(item_roll_roll_namespaceObject);
+__webpack_require__.d(item_roll_roll_namespaceObject, {
+  "default": () => (ItemRoll)
+});
+
+// NAMESPACE OBJECT: ./src/rolls/stress-roll/roll.js
+var rolls_stress_roll_roll_namespaceObject = {};
+__webpack_require__.r(rolls_stress_roll_roll_namespaceObject);
+__webpack_require__.d(rolls_stress_roll_roll_namespaceObject, {
+  "default": () => (StressRoll)
+});
+
+// NAMESPACE OBJECT: ./src/rolls/index.js
+var rolls_namespaceObject = {};
+__webpack_require__.r(rolls_namespaceObject);
+__webpack_require__.d(rolls_namespaceObject, {
+  "initialise": () => (rolls_initialise)
+});
+
+// NAMESPACE OBJECT: ./src/index.js
+var src_namespaceObject_0 = {};
+__webpack_require__.r(src_namespaceObject_0);
+
+;// CONCATENATED MODULE: ./src/actors/adversary/sheet.html
+/* harmony default export */ const sheet = ({"path":"heart:actors/adversary/sheet.html","source":"{{> \"heart:actors/base/sheet.html\" type=\"adversary\"}}"});
+;// CONCATENATED MODULE: ./src/actors/base/sheet.html
+/* harmony default export */ const base_sheet = ({"path":"heart:actors/base/sheet.html","source":"{{#> \"heart:common/sheet.html\" documentName=\"actor\" type=type}}\n    {{editor content=data.data.description target=\"data.description\" button=true editable=editable owner=owner}}\n{{/ \"heart:common/sheet.html\" }}"});
+;// CONCATENATED MODULE: ./src/actors/character/sheet.html
+/* harmony default export */ const character_sheet = ({"path":"heart:actors/character/sheet.html","source":"{{#*inline \"itemList\"}}\n    {{#with (lookup actor.itemTypes type) as |list|}}\n    {{#if list.length}}\n    <div class=\"item-list\">\n        {{#each list as |item|}}\n            <div data-item-id=\"{{item.data._id}}\" class=\"flexrow item\">\n                <div>\n                    {{> @partial-block item=item }}\n                </div>\n            \n                <div class=\"right\">\n                    <a data-action=\"view\"><span class=\"fas fa-eye\"></span></a>\n                    {{#if item.isOwner}}\n                    <a data-action=\"delete\"><span class=\"fas fa-trash\"></span></a>\n                    {{/if}}\n                </div>\n            </div>\n        {{/each}}\n    </div>\n    {{/if}}\n    {{/with}}\n{{/inline}}\n<div>\n<div class=\"heart flexrow buttons sticky\">\n    <button data-action=\"prepare-request-roll\"><span class=\"fas fa-dice\"></span> {{localizeHeart \"perform\" \"request-roll\"}}</button>\n    <button data-action=\"roll\"><span class=\"fas fa-dice\"></span> {{localizeHeart \"perform\" \"roll\"}}</button>\n    <button data-action=\"stress-roll\"><span class=\"fas fa-dice\"></span> {{localizeHeart \"perform\" \"roll-stress\"}}</button>\n    <button data-action=\"fallout-roll\"><span class=\"fas fa-dice\"></span> {{localizeHeart \"perform\" \"roll-fallout\"}}</button>\n</div>\n<form class=\"heart sheet actor character {{cssClass}}\" autocomplete=\"off\">\n    <div class=\"grid-2 place-top\">\n        <img class=\"profile\" src=\"{{data.img}}\" title=\"{{actor.name}}\" data-edit=\"img\"/>\n        <div class=\"grid-3 resistances place-top\">\n            <div></div>\n            <div></div>\n            <h3 class=\"center\">{{localizeHeart \"resistance\" \"protection\" \"label-multiple\"}}</h3>\n            {{#each actor.data.data.resistances as |resistance name|}}\n                <h3 class=\"left\">{{localizeHeart \"resistance\" name}}</h3>\n                <div class=\"red\" data-target='data.resistances.{{name}}.value'>{{{ordered-checkable resistance.value 10}}}</div>\n                <div class=\"red\" data-target='data.resistances.{{name}}.protection'>{{{ordered-checkable resistance.protection 5}}}</div>\n            {{/each}}\n        </div>\n        <div class=\"info\">\n            <div class=\"grid-2 auto-first-col place-center\">\n                <h2>{{localizeHeart \"character\" \"name\"}}</h2>\n                <input name=\"name\" value=\"{{actor.name}}\"/>\n                <h2>{{localizeHeart \"character\" \"class\"}}</h2>\n                <input name=\"data.class\" value=\"{{actor.data.data.class}}\"/>\n                <h2>{{localizeHeart \"character\" \"calling\"}}</h2>\n                {{#if callingItem}}\n                <div data-item-id=\"{{callingItem.data._id}}\" class=\"flexrow calling item\">\n                    <div class=\"name\">{{callingItem.name}}</div>\n                    <div class=\"right\">\n                        <a data-action=\"view\"><span class=\"fas fa-eye\"></span></a>\n                        {{#if callingItem.isOwner}}\n                        <a data-action=\"delete\"><span class=\"fas fa-trash\"></span></a>\n                        {{/if}}\n                    </div>\n                </div>\n                {{else}}\n                <input name=\"data.calling\" value=\"{{actor.data.data.calling}}\"/>\n                {{/if}}\n            </div>\n        </div>\n        <div class=\"beats\">\n            <h2>\n                {{localizeHeart \"beat\" \"active\" \"label-multiple\"}}\n                {{#if actor.isOwner}}\n                <div class=\"right\">\n                    <a data-action=\"add\" data-type=\"beat\"><span class=\"fas fa-plus\"></span></a>\n                </div>\n                {{/if}}\n            </h2>\n            {{#> itemList type=\"beat\" actor=actor}}\n            {{{item.data.data.description}}}\n            {{/itemList}}\n            <div class=\"item-list\">\n            {{#each callingItem.data.data.children as |beat|}}\n                {{#if (and (eq beat.type \"beat\") beat.data.active (not beat.data.completed))}}\n                <div data-item-id=\"{{beat.data._id}}\" class=\"flexrow item\">\n                <div>{{{beat.data.description}}}</div>\n                \n                <div class=\"right\">\n                    <a data-action=\"view\"><span class=\"fas fa-eye\"></span></a>\n                    {{#if ../actor.isOwner}}\n                    <a data-action=\"delete\"><span class=\"fas fa-trash\"></span></a>\n                    {{/if}}\n                </div>\n                </div>\n                {{/if}}\n            {{/each}}\n        </div>\n            {{editor content=actor.data.data.active_beats target=\"data.active_beats\" button=true editable=editable owner=owner}}\n        </div>\n        \n        <div class=\"equipment\">\n            <h2>{{localizeHeart \"equipment\" \"label-multiple\"}}\n                {{#if actor.isOwner}}\n                <div class=\"right\">\n                    <a data-action=\"add\" data-type=\"equipment\"><span class=\"fas fa-plus\"></span></a>\n                </div>\n                {{/if}}\n            </h2>\n            {{#> itemList type=\"equipment\"  actor=actor}}\n                {{item.name}}\n                ({{localizeHeart \"equipment\" \"type\" item.data.data.type}}, <a data-action=\"item-roll\"><span class=\"fas fa-dice\"></span> {{item.data.data.di_size}}</a>\n                {{#if item.data.data.tags.length}}\n                , {{join \", \" array=item.data.data.tags}}\n                {{/if}})\n            {{/itemList}}\n            {{editor content=actor.data.data.equipment target=\"data.equipment\" button=true editable=editable owner=owner}}\n        </div>\n\n        <div class=\"resources\">\n            <h2>{{localizeHeart \"resource\" \"label-multiple\"}}\n                {{#if actor.isOwner}}\n                <div class=\"top right\">\n                    <a data-action=\"add\" data-type=\"resource\"><span class=\"fas fa-plus\"></span></a>\n                </div>\n                {{/if}}\n            </h2>\n            {{#> itemList type=\"resource\" actor=actor}}\n            {{item.name}}\n            (<a data-action=\"item-roll\"><span class=\"fas fa-dice\"></span> {{item.data.data.di_size}}</a>, {{localizeHeart \"domain\" item.data.data.domain}}\n            {{#if item.data.data.tags.length}}\n            , {{join \", \"  array=item.data.data.tags}}\n            {{/if}})\n            {{/itemList}}\n            {{editor content=actor.data.data.resources target=\"data.resources\" button=true editable=editable owner=owner}}\n        </div>\n        <div class=\"abilities\">\n            <h2>\n                {{localizeHeart \"ability\"  \"label-multiple\"}}\n                {{#if actor.isOwner}}\n                <div class=\"top right\">\n                    <a data-action=\"add\" data-type=\"ability\"><span class=\"fas fa-plus\"></span></a>\n                </div>\n                {{/if}}\n            </h2>\n            \n            {{#> itemList type=\"ability\" actor=actor}}\n            {{item.name}}\n            {{/itemList}}\n            {{editor content=actor.data.data.abilities target=\"data.abilities\" button=true editable=editable owner=owner}}\n        </div>\n\n        <div class=\"fallout\">\n            <h2>\n                {{localizeHeart \"fallout\" \"label-multiple\"}}\n                {{#if actor.isOwner}}\n                <div class=\"top right\">\n                    <a data-action=\"add\" data-type=\"fallout\"><span class=\"fas fa-plus\"></span></a>\n                </div>\n                {{/if}}\n            </h2>\n            {{#> itemList type=\"fallout\" actor=actor}}\n            {{item.name}}\n            {{/itemList}}\n            {{editor content=actor.data.data.fallout target=\"data.fallout\" button=true editable=editable owner=owner}}\n        </div>\n\n        <div class=\"skills grid-2 auto-first-col\">\n            <h3 class=\"center\">{{localizeHeart \"skill\" \"label-multiple\"}}</h3>\n            <h3 class=\"faded\">{{localizeHeart \"skill\" \"knack\" \"label-multiple\"}}</h3>\n            {{#each actor.data.data.skills as |skill name|}}\n                <div class=\"flexrow\">\n                    <input type=\"checkbox\" name=\"data.skills.{{name}}.value\" {{checked skill.value}}/>\n                    <span class=\"bold\">{{localizeHeart \"skill\" name}}</span>\n                </div>\n                <input name=\"data.skills.{{name}}.knack\" value=\"{{skill.knack}}\"/>\n            {{/each}}\n        </div>\n\n        <div class=\"domains grid-2 auto-first-col\">\n            <h3 class=\"center\">{{localizeHeart \"domain\" \"label-multiple\"}}</h3>\n            <h3 class=\"faded\">{{localizeHeart \"domain\" \"knack\" \"label-multiple\"}}</h3>\n            {{#each actor.data.data.domains as |domain name|}}\n                <div class=\"flexrow\">\n                    <input type=\"checkbox\" name=\"data.domains.{{name}}.value\" {{checked domain.value}}/>\n                    <span class=\"bold\">{{localizeHeart \"domain\" name}}</span>\n                </div>\n                <input name=\"data.domains.{{name}}.knack\" value=\"{{domain.knack}}\"/>\n            {{/each}}\n        </div>\n        \n        <h3 class=\"center wide\">{{localizeHeart \"character\" \"notes\"}}</h3>\n        <div class=\"wide\">\n            {{editor content=actor.data.data.notes target=\"data.notes\" button=true editable=editable owner=owner}}\n        </div>\n    </div>\n</form>\n</div>"});
+;// CONCATENATED MODULE: ./src/actors/delve/sheet.html
+/* harmony default export */ const delve_sheet = ({"path":"heart:actors/delve/sheet.html","source":"{{> \"heart:actors/base/sheet.html\" type=\"delve\"}}"});
+;// CONCATENATED MODULE: ./src/actors/landmark/sheet.html
+/* harmony default export */ const landmark_sheet = ({"path":"heart:actors/landmark/sheet.html","source":"{{> \"heart:actors/base/sheet.html\" type=\"landmark\"}}"});
+;// CONCATENATED MODULE: ./src/applications/base/application.html
+/* harmony default export */ const application = ({"path":"heart:applications/base/application.html","source":"<form class=\"heart form {{type}} {{classes}} grid-2 auto-first-col\">\n    <div class=\"wide description\">\n    {{localizeHeart \"applications\" type \"description\"}}\n    </div>\n    {{> @partial-block}}\n    <div class=\"wide grid-2\">\n        <button data-action='cancel'><span class=\"fas fa-times\"></span> {{localizeHeart 'cancel'}}</button>\n        <button data-action='submit'><span class=\"fas fa-dice\"></span> {{localizeHeart 'roll'}}</button>\n    </div>\n</form>"});
+;// CONCATENATED MODULE: ./src/applications/prepare-roll-request/application.html
+/* harmony default export */ const prepare_roll_request_application = ({"path":"heart:applications/prepare-roll-request/application.html","source":"{{#> \"heart:applications/base/application.html\" type=\"prepare-roll-request\"}}\n<label>\n    {{localizeHeart \"difficulty\" \"label-single\"}}\n</label>\n<select name=\"difficulty\">\n    {{selectOptions difficulties}}\n</select>\n\n<label>\n    {{localizeHeart \"character\" \"label-multiple\"}}\n</label>\n<div class=\"options\">\n    {{#each characters as |character char_id|}}\n    {{#with (randomID) as |id|}}\n    <input class=\"hidden\" type=\"checkbox\" id=\"{{id}}\" name=\"character\" value=\"{{char_id}}\" checked/>\n    <label for=\"{{id}}\" class=\"option\">\n        {{character}}\n    </label>\n    {{/with}}\n    {{/each}}\n</div>\n\n<label>\n    {{localizeHeart \"skill\" \"label-multiple\"}}\n</label>\n<div class=\"options\">\n    {{#each skills as |skill name|}}\n    {{#with (randomID) as |id|}}\n    <input class=\"hidden\" type=\"checkbox\" id=\"{{id}}\" name=\"skill\" value=\"{{name}}\"/>\n    <label for=\"{{id}}\" class=\"option\">\n        {{skill}}\n    </label>\n    {{/with}}\n    {{/each}}\n</div>\n\n\n<label>\n    {{localizeHeart \"domain\" \"label-multiple\"}}\n</label>\n<div class=\"options\">\n    {{#each domains as |domain name|}}\n    {{#with (randomID) as |id|}}\n    <input class=\"hidden\" type=\"checkbox\" id=\"{{id}}\" name=\"domain\" value=\"{{name}}\"/>\n    <label for=\"{{id}}\" class=\"option\">\n        {{domain}}\n    </label>\n    {{/with}}\n    {{/each}}\n</div>\n\n<label>\n    {{localizeHeart \"character\" \"label-valid-helpers\"}}\n</label>\n<div class=\"options\">\n    {{#each characters as |character char_id|}}\n    {{#with (randomID) as |id|}}\n    <input class=\"hidden\" type=\"checkbox\" id=\"{{id}}\" name=\"helper\" value=\"{{char_id}}\" checked/>\n    <label for=\"{{id}}\" class=\"option\">\n        {{character}}\n    </label>\n    {{/with}}\n    {{/each}}\n</div>\n{{/ \"heart:applications/base/application.html\"}}"});
+;// CONCATENATED MODULE: ./src/applications/prepare-roll-request/chat-message.html
+/* harmony default export */ const chat_message = ({"path":"heart:applications/prepare-roll-request/chat-message.html","source":"<form class=\"heart roll-request grid-2 auto-first-col place-center\">\n    <h1 class=\"wide title-font \">{{localizeHeart \"rolls\" \"roll-request\" \"label\"}}</h1>\n    <label class=\"title-font\">{{localizeHeart \"difficulty\" \"label-single\"}}</label>\n    <div>\n        {{localizeHeart \"difficulty\" difficulty}}\n        <input type=\"hidden\" name=\"difficulty\" value=\"{{difficulty}}\"/>\n    </div>\n\n    <label class=\"title-font\">{{localizeHeart \"skill\" \"label-single\"}}</label>\n    {{#if (lt skills.length 2)}}\n        {{#if (eq skills.length 1)}}\n            <div>\n                {{localizeHeart \"skill\" (lookup skills 0)}}\n                <input type=\"hidden\" name=\"skill\" value=\"{{lookup skills 0}}\"/>\n            </div>\n        {{else}}\n            <div>{{localizeHeart \"none\"}}</div>\n        {{/if}}\n    {{else}}\n    <select name=\"skill\">\n        {{#each skills as |skill|}}\n        <option value=\"{{skill}}\">{{localizeHeart \"skill\" skill}}</option>\n        {{/each}}\n    </select>\n    {{/if}}\n\n    <label class=\"title-font\">{{localizeHeart \"domain\" \"label-single\"}}</label>\n    {{#if (lt domains.length 2)}}\n        {{#if (eq domains.length 1)}}\n        <div>\n            {{localizeHeart \"domain\" (lookup domains 0)}}\n            <input type=\"hidden\" name=\"domain\" value=\"{{lookup domains 0}}\"/>\n        </div>\n        {{else}}\n            <div>{{localizeHeart \"none\"}}</div>\n        {{/if}}\n    {{else}}\n    <select name=\"domain\">\n        {{#each domains as |domain|}}\n        <option value=\"{{domain}}\">{{localizeHeart \"domain\" domain}}</option>\n        {{/each}}\n    </select>\n    {{/if}}\n\n    <label class=\"title-font\">{{localizeHeart \"mastery\" \"short\"}}</label>\n    <input class=\"invert\" type=\"checkbox\" name=\"mastery\"/>\n\n    <label class=\"title-font\">{{localizeHeart \"help\"}}</label>\n    {{#if validHelpers}}\n    <select name=\"helper\" multiple>\n        {{#each validHelpers as |helper_id|}}\n        {{#with (getActor helper_id) as |actor|}}\n        <option value=\"{{helper_id}}\">{{actor.name}}</option>\n        {{/with}}\n        {{/each}}\n    </select>\n    {{else}}\n    <div>{{localizeHeart \"none\"}}</div>\n    {{/if}}\n\n    <div class=\"wide\">\n        {{#each characters as |character|}}\n        {{#with (getActor character) as |actor|}}\n        {{#if actor.isOwner}}\n            <button data-action=\"roll\" data-character=\"{{character}}\"> <span class=\"fas fa-dice\"></span> {{actor.name}}</button>\n        {{/if}}\n        {{/with}}\n        {{/each}}\n    </div>\n</form>"});
+;// CONCATENATED MODULE: ./src/applications/requirement-form/application.html
+/* harmony default export */ const requirement_form_application = ({"path":"heart:applications/requirement-form/application.html","source":"{{#> \"heart:applications/base/application.html\" type=options.type}}\n{{#each options.requirements as |entry name|}}\n<label>\n    {{entry.label}}\n</label>\n{{#if entry.isCheckbox}}\n    <input type=\"checkbox\" name=\"{{name}}\" value=\"{{entry.value}}\"/>\n{{else}}\n    <select name=\"{{name}}\" {{#if entry.isMany}}multiple{{/if}}>\n        {{#each entry.options as |label value|}}\n            <option value=\"{{value}}\">{{label}}</option>\n        {{/each}}\n    </select>\n{{/if}}\n{{/each}}\n{{/ \"heart:applications/base/application.html\"}}"});
+;// CONCATENATED MODULE: ./src/common/sheet.html
+/* harmony default export */ const common_sheet = ({"path":"heart:common/sheet.html","source":"<form class=\"heart sheet base {{documentName}} {{type}} {{cssClass}} flexcol\" autocomplete=\"off\">\n    <div class=\"info\">\n        <img class=\"profile\" src=\"{{data.img}}\" title=\"{{data.name}}\" data-edit=\"img\" />\n        <div class=\"text\">\n            <input name=\"name\" value=\"{{data.name}}\" placeholder=\"{{localizeHeart type 'name'}}\" />\n            <div class=\"subtitle\">{{localizeHeart type \"label-single\"}}</div>        \n        </div>\n    </div>\n    {{> @partial-block }}\n</form>"});
+;// CONCATENATED MODULE: ./src/items/ability/sheet.html
+/* harmony default export */ const ability_sheet = ({"path":"heart:items/ability/sheet.html","source":"{{#> \"heart:items/base/sheet.html\" type=\"ability\"}}\n{{/ \"heart:items/base/sheet.html\" }}"});
+;// CONCATENATED MODULE: ./src/items/base/sheet.html
+/* harmony default export */ const items_base_sheet = ({"path":"heart:items/base/sheet.html","source":"{{#> \"heart:common/sheet.html\" documentName=\"item\" type=type}}\n    {{log this}}\n    {{#if data.data.di_size}}\n    <div class=\"grid-2 auto-first-col place-center\" style=\"flex: auto 0 0\">\n        <label>\n            {{localizeHeart \"di_size\" \"label-single\"}}\n        </label>\n        {{#if editable}}\n        <select name=\"data.di_size\">\n            {{selectOptions di_sizes selected=data.data.di_size}}\n        </select>\n        \n        {{else}}\n        {{data.data.di_size}}\n        {{/if}}\n        \n        {{> @partial-block }}\n    </div>\n        \n    {{/if}}\n    {{editor content=data.data.description target=\"data.description\" button=true editable=editable owner=owner}}\n{{/ \"heart:common/sheet.html\" }}"});
+;// CONCATENATED MODULE: ./src/items/beat/sheet.html
+/* harmony default export */ const beat_sheet = ({"path":"heart:items/beat/sheet.html","source":"{{#> \"heart:items/base/sheet.html\" type=\"beat\"}}\n{{/ \"heart:items/base/sheet.html\" }}"});
+;// CONCATENATED MODULE: ./src/items/calling/sheet.html
+/* harmony default export */ const calling_sheet = ({"path":"heart:items/calling/sheet.html","source":"<form class=\"heart sheet base Item calling {{cssClass}}\" autocomplete=\"off\">\n    <h1>\n        {{#if (and editable (not item.isOwned))}}\n        <input name=\"name\" value=\"{{data.name}}\"/>\n        {{else}}\n        {{item.name}}\n        {{/if}}\n    </h1>\n    <div class=\"description\">\n        {{#if (and editable (not item.isOwned))}}\n        {{editor content=data.data.description target=\"data.description\" button=true editable=editable owner=owner}}\n        {{else}}\n        {{{data.data.description}}}\n        {{/if}}\n    </div>\n\n    <h4>\n        {{localizeHeart \"calling\" \"questions\" \"prompt\"}}\n        {{#if (and editable (not item.isOwned))}}\n        <a class=\"right\" data-action=\"add-question\"><span class=\"fas fa-plus\"></span> {{localizeHeart \"calling\" \"questions\" \"add\"}}</a>\n        {{/if}}\n    </h4>\n    <ul>\n    {{#each data.data.questions as |question id|}}\n        <li data-id=\"{{id}}\">\n            <div class=\"flexrow\">\n                {{#if ../item.isOwned}}\n                <div>\n                    <div class=\"question\">{{{question.question}}}</div>\n                    {{#if ../editable}}\n                    {{editor content=question.answer target=(join \".\" \"data.questions\" id \"answer\") button=true editable=../editable owner=owner}}\n                    {{else}}\n                    <div>{{{question.answer}}}</div>\n                    {{/if}}\n                </div>\n                {{else}}\n                    {{#if ../editable}}\n                    <div class=\"question\">\n                        {{editor content=question.question target=(join \".\" \"data.questions\" id \"question\") button=true editable=../editable owner=owner}}\n                    </div>\n                    {{else}}\n                    <div>{{{question.question}}}</div>\n                    {{/if}}\n                {{/if}}\n                {{#if (and ../editable (not ../item.isOwned))}}\n                <a class=\"action\" data-action=\"delete-question\"><span class=\"fas fa-trash\"></span> {{localizeHeart \"calling\" \"questions\" \"delete\"}}</a>\n                {{/if}}\n            </div>    \n        </li>\n    {{/each}}\n    </ul>\n\n    <h2>\n        {{#if (eq data.data.abilities.length 1)}}\n            {{localizeHeart \"calling\" \"core-ability\" \"label-single\"}}\n        {{else}}\n            {{localizeHeart \"calling\" \"core-ability\" \"label-multiple\"}}\n        {{/if}}\n        {{#if (and editable (not item.isOwned))}}\n        <a class=\"right\" data-action=\"add-child\" data-type=\"ability\"><span class=\"fas fa-plus\"></span> {{localizeHeart \"calling\" \"core-ability\" \"add\"}}</a>\n        {{/if}}\n    </h2>\n    <div class=\"item-list\">\n        {{#each childrenTypes.ability as |ability|}}\n        <div data-child-id=\"{{ability._id}}\" class=\"flexrow item\">\n            <div>\n                <span class=\"name\">{{ability.name}}</span>\n                {{{ability.data.description}}}\n            </div>\n            {{#if (and ../editable (not ../item.isOwned))}}\n            <a class=\"action\" data-action=\"edit-child\"><span class=\"fas fa-edit\"></span></a>\n            <a class=\"action\" data-action=\"delete-child\"><span class=\"fas fa-trash\"></span></a>\n            {{/if}}\n        </div>\n        {{/each}}\n    </div>\n\n    <h2>\n        {{localizeHeart \"beat\" \"minor-beat\" \"label-multiple\"}}\n        {{#if (and editable (not item.isOwned))}}\n        <a class=\"right\" data-action=\"add-child\" data-type=\"beat\" data-data='{\"type\": \"minor\"}'><span class=\"fas fa-plus\"></span> {{localizeHeart \"beat\" \"minor-beat\" \"add\"}}</a>\n        {{/if}}\n    </h2>\n    <div class=\"item-list\">\n        {{#each minorBeats as |beat|}}\n            <div data-child-id=\"{{beat._id}}\" class=\"flexrow item\">\n                <input type=\"checkbox\" name=\"data.children.{{beat._id}}.data.active\" {{checked beat.data.active}} {{#if (not ../item.isOwned)}}disabled{{/if}} title=\"{{localizeHeart 'beat' 'activate'}}\"/>\n                <input type=\"checkbox\" name=\"data.children.{{beat._id}}.data.completed\" {{checked beat.data.completed}} {{#if (not beat.data.active)}}disabled{{/if}} title=\"{{localizeHeart 'beat' 'complete'}}\"/>\n                <div>{{{beat.data.description}}}</div>\n                {{#if (and ../editable (not ../item.isOwned))}}\n                <div class=\"right\">\n                    <a class=\"action\" data-action=\"edit-child\"><span class=\"fas fa-edit\"></span></a>\n                    <a class=\"action\" data-action=\"delete-child\"><span class=\"fas fa-trash\"></span></a>\n                </div>\n                {{/if}}\n            </div>\n        {{/each}}\n    </div>\n\n    <h2>\n        {{localizeHeart \"beat\" \"major-beat\" \"label-multiple\"}}\n        {{#if (and editable (not item.isOwned))}}\n        <a class=\"right\" data-action=\"add-child\" data-type=\"beat\" data-data='{\"type\": \"major\"}'><span class=\"fas fa-plus\"></span> {{localizeHeart \"beat\" \"major-beat\" \"add\"}}</a>\n        {{/if}}\n    </h2>\n    <div class=\"item-list\">\n    {{#each majorBeats as |beat|}}\n    <div data-child-id=\"{{beat._id}}\" class=\"flexrow item\">\n        <input type=\"checkbox\" name=\"data.children.{{beat._id}}.active\" {{checked beat.active}} {{#if (not ../item.isOwned)}}disabled{{/if}} title=\"{{localizeHeart 'beat' 'activate'}}\"/>\n        <input type=\"checkbox\" name=\"data.children.{{beat._id}}.completed\" {{checked beat.completed}} {{#if (not beat.active)}}disabled{{/if}} title=\"{{localizeHeart 'beat' 'complete'}}\"/>\n        <div>{{{beat.data.description}}}</div>\n        {{#if (and ../editable (not ../item.isOwned))}}\n        <a class=\"action\" data-action=\"edit-child\"><span class=\"fas fa-edit\"></span></a>\n        <a class=\"action\" data-action=\"delete-child\"><span class=\"fas fa-trash\"></span></a>\n        {{/if}}\n    </div>\n    {{/each}}\n    </div>\n\n    <h2>\n        {{localizeHeart \"beat\" \"zenith-beat\" \"label-multiple\"}}\n        {{#if (and editable (not item.isOwned))}}\n        <a class=\"right\" data-action=\"add-child\" data-type=\"beat\" data-data='{\"type\": \"zenith\"}'><span class=\"fas fa-plus\"></span> {{localizeHeart \"beat\" \"zenith-beat\" \"add\"}}</a>\n        {{/if}}\n    </h2>\n    <div class=\"item-list\">\n    {{#each zenithBeats as |beat|}}\n    <div data-child-id=\"{{beat._id}}\" class=\"flexrow item\">\n        <input type=\"checkbox\" name=\"data.children.{{beat._id}}.active\" {{checked beat.active}} {{#if (not ../item.isOwned)}}disabled{{/if}} title=\"{{localizeHeart 'beat' 'activate'}}\"/>\n        <input type=\"checkbox\" name=\"data.children.{{beat._id}}.completed\" {{checked beat.completed}} {{#if (not beat.active)}}disabled{{/if}} title=\"{{localizeHeart 'beat' 'complete'}}\"/>\n        <div>{{{beat.data.description}}}</div>\n        {{#if (and ../editable (not ../item.isOwned))}}\n        <a class=\"action\" data-action=\"edit-child\"><span class=\"fas fa-edit\"></span></a>\n        <a class=\"action\" data-action=\"delete-child\"><span class=\"fas fa-trash\"></span></a>\n        {{/if}}\n    </div>\n    {{/each}}\n</div>\n</form>"});
+;// CONCATENATED MODULE: ./src/items/equipment/sheet.html
+/* harmony default export */ const equipment_sheet = ({"path":"heart:items/equipment/sheet.html","source":"{{#> \"heart:items/base/sheet.html\" type=\"equipment\"}}\n<label>{{localizeHeart \"equipment\" \"type\" \"label-single\"}}</label>\n<select name=\"data.type\">\n    {{selectOptions equipment_types selected=data.data.type}}\n</select>\n{{/ \"heart:items/base/sheet.html\" }}"});
+;// CONCATENATED MODULE: ./src/items/fallout/sheet.html
+/* harmony default export */ const fallout_sheet = ({"path":"heart:items/fallout/sheet.html","source":"{{#> \"heart:items/base/sheet.html\" type=\"fallout\"}}\n{{/ \"heart:items/base/sheet.html\" }}"});
+;// CONCATENATED MODULE: ./src/items/haunt/sheet.html
+/* harmony default export */ const haunt_sheet = ({"path":"heart:items/haunt/sheet.html","source":"{{#> \"heart:items/base/sheet.html\" type=\"haunt\"}}\n{{/ \"heart:items/base/sheet.html\" }}"});
+;// CONCATENATED MODULE: ./src/items/resource/sheet.html
+/* harmony default export */ const resource_sheet = ({"path":"heart:items/resource/sheet.html","source":"{{#> \"heart:items/base/sheet.html\" type=\"resource\"}}\n<label>\n    {{localizeHeart \"domain\" \"label-single\"}}\n</label>\n{{#if editable}}\n    <select name=\"data.domain\">\n        {{selectOptions domains selected=data.data.domain}}\n    </select>\n{{else}}\n    {{localizeHeart \"domain\" data.data.domain}}\n{{/if}}\n\n{{/ \"heart:items/base/sheet.html\"}}"});
+;// CONCATENATED MODULE: ./src/rolls/fallout-roll/roll.html
+/* harmony default export */ const roll = ({"path":"heart:rolls/fallout-roll/roll.html","source":"<div class=\"dice-roll heart fallout-roll\">\n    {{#if flavor}}\n    <div class=\"dice-flavor\">{{flavor}}</div>\n    {{/if}}\n    <div class=\"dice-result\">\n        <div class=\"dice-formula\">{{description}}</div>\n        {{{tooltip}}}\n        <h4 class=\"dice-total text\">{{localizeHeart 'rolls' 'fallout-roll' 'results' result}}</h4>\n    </div>\n</div>"});
+;// CONCATENATED MODULE: ./src/rolls/heart-roll/roll.html
+/* harmony default export */ const heart_roll_roll = ({"path":"heart:rolls/heart-roll/roll.html","source":"<form class=\"dice-roll heart heart-roll\">\n    <input type=\"hidden\" name=\"character\" value=\"{{character}}\"/>\n    {{#if flavor}}\n    <div class=\"dice-flavor\">{{flavor}}</div>\n    {{/if}}\n    <div class=\"dice-result\">\n        <div class=\"dice-formula\">{{description}}</div>\n        {{{tooltip}}}\n        <div class=\"flexrow\">\n            <h4 class=\"dice-total text\">{{localizeHeart \"result\" result}}</h4>\n            {{#if (and showStressRollButton (lookup (getActor character) \"isOwner\"))}}\n            <button class=\"icon-button\" data-action='roll-stress' title=\"{{localizeHeart 'rolls' 'stress-roll' 'action'}}\">\n                <span class=\"fas fa-dice\"></span>\n            </button>\n            {{/if}}\n        </div>\n    </div>\n</form>"});
+;// CONCATENATED MODULE: ./src/rolls/heart-roll/tooltip.html
+/* harmony default export */ const tooltip = ({"path":"heart:rolls/heart-roll/tooltip.html","source":"<div class=\"dice-tooltip\" style=\"display: none;\">\n    {{#each parts}}\n    <section class=\"tooltip-part\">\n        <div class=\"dice\">\n            <header class=\"part-header\">\n                {{#if this.flavor}}<span class=\"part-formula\">{{this.flavor}}</span>{{/if}}\n            </header>\n            <ol class=\"dice-rolls\">\n            {{#each this.rolls as |roll index|}}\n                {{#if (numEq @../index ../../kept)}}\n                <li class=\"roll {{this.classes}}\">{{{roll.result}}}</li>\n                {{else}}\n                <li class=\"roll discarded {{this.classes}}\">{{{roll.result}}}</li>\n                {{/if}}\n            {{/each}}\n            </ol>\n        </div>\n    </section>\n    {{/each}}\n</div>\n"});
+;// CONCATENATED MODULE: ./src/rolls/stress-roll/roll.html
+/* harmony default export */ const stress_roll_roll = ({"path":"heart:rolls/stress-roll/roll.html","source":"<form class=\"dice-roll heart stress-roll\">\n    <input type=\"hidden\" name=\"character\" value=\"{{character}}\"/>\n    {{#if flavor}}\n    <div class=\"dice-flavor\">{{flavor}}</div>\n    {{/if}}\n    <div class=\"dice-result\">\n        <div class=\"dice-formula\">{{description}}</div>\n        {{{tooltip}}}\n        <div class=\"flexrow\">\n            <h4 class=\"dice-total\">{{total}} {{localizeHeart 'stress'}}</h4>\n            {{#if showTakeStressButton}}\n            <button class=\"icon-button\" data-action=\"take-stress\" title=\"{{localizeHeart 'rolls' 'stress-roll' 'take-stress' }}\">\n                <span class=\"fas fa-heart-broken\"></span>\n            </button>\n            {{/if}}\n            {{#if showFalloutRollButton}}\n            <button class=\"icon-button\" data-action=\"roll-fallout\" title=\"{{localizeHeart 'rolls' 'fallout-roll' 'action' }}\">\n                <span class=\"fas fa-radiation-alt\"></span>\n            </button>\n            {{/if}}\n        </div>\n    </div>\n</form>"});
+// EXTERNAL MODULE: ./node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js
+var injectStylesIntoStyleTag = __webpack_require__(379);
+var injectStylesIntoStyleTag_default = /*#__PURE__*/__webpack_require__.n(injectStylesIntoStyleTag);
+// EXTERNAL MODULE: ./node_modules/style-loader/dist/runtime/styleDomAPI.js
+var styleDomAPI = __webpack_require__(795);
+var styleDomAPI_default = /*#__PURE__*/__webpack_require__.n(styleDomAPI);
+// EXTERNAL MODULE: ./node_modules/style-loader/dist/runtime/getTarget.js
+var getTarget = __webpack_require__(695);
+var getTarget_default = /*#__PURE__*/__webpack_require__.n(getTarget);
+// EXTERNAL MODULE: ./node_modules/style-loader/dist/runtime/insertStyleElement.js
+var insertStyleElement = __webpack_require__(216);
+var insertStyleElement_default = /*#__PURE__*/__webpack_require__.n(insertStyleElement);
+// EXTERNAL MODULE: ./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./src/index.sass
+var cjs_js_src = __webpack_require__(402);
+;// CONCATENATED MODULE: ./src/index.sass
+
+      
+      
+      
+      
+      
+      
+      
+
+var options = {};
+
+options.styleTagTransform = function(css, style){
+      if (style.styleSheet) {
+        style.styleSheet.cssText = css;
+      } else {
+      while (style.firstChild) {
+        style.removeChild(style.firstChild);
+      }
+
+      style.appendChild(document.createTextNode(css));
+    }
+  };
+options.setAttributes = function(style) {
+        var nonce =
+           true ? __webpack_require__.nc : 0;
+
+        if (nonce) {
+          style.setAttribute("nonce", nonce);
+        }
+      };
+options.insert = function(style){
+    var target = getTarget_default()("head");
+
+    if (!target) {
+      throw new Error(
+        "Couldn't find a style target. This probably means that the value for the 'insert' parameter is invalid."
+      );
+    }
+
+    target.appendChild(style);
+  };
+options.domAPI = (styleDomAPI_default());
+options.insertStyleElement = (insertStyleElement_default());
+
+var update = injectStylesIntoStyleTag_default()(cjs_js_src/* default */.Z, options);
+
+
+
+
+       /* harmony default export */ const src = (cjs_js_src/* default */.Z && cjs_js_src/* default.locals */.Z.locals ? cjs_js_src/* default.locals */.Z.locals : undefined);
+
+// EXTERNAL MODULE: ./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./src/common/sheet.sass
+var cjs_js_src_common_sheet = __webpack_require__(746);
+;// CONCATENATED MODULE: ./src/common/sheet.sass
+
+      
+      
+      
+      
+      
+      
+      
+
+var sheet_options = {};
+
+sheet_options.styleTagTransform = function(css, style){
+      if (style.styleSheet) {
+        style.styleSheet.cssText = css;
+      } else {
+      while (style.firstChild) {
+        style.removeChild(style.firstChild);
+      }
+
+      style.appendChild(document.createTextNode(css));
+    }
+  };
+sheet_options.setAttributes = function(style) {
+        var nonce =
+           true ? __webpack_require__.nc : 0;
+
+        if (nonce) {
+          style.setAttribute("nonce", nonce);
+        }
+      };
+sheet_options.insert = function(style){
+    var target = getTarget_default()("head");
+
+    if (!target) {
+      throw new Error(
+        "Couldn't find a style target. This probably means that the value for the 'insert' parameter is invalid."
+      );
+    }
+
+    target.appendChild(style);
+  };
+sheet_options.domAPI = (styleDomAPI_default());
+sheet_options.insertStyleElement = (insertStyleElement_default());
+
+var sheet_update = injectStylesIntoStyleTag_default()(cjs_js_src_common_sheet/* default */.Z, sheet_options);
+
+
+
+
+       /* harmony default export */ const src_common_sheet = (cjs_js_src_common_sheet/* default */.Z && cjs_js_src_common_sheet/* default.locals */.Z.locals ? cjs_js_src_common_sheet/* default.locals */.Z.locals : undefined);
+
+// EXTERNAL MODULE: ./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./src/actors/base/sheet.sass
+var actors_base_sheet = __webpack_require__(875);
+;// CONCATENATED MODULE: ./src/actors/base/sheet.sass
+
+      
+      
+      
+      
+      
+      
+      
+
+var base_sheet_options = {};
+
+base_sheet_options.styleTagTransform = function(css, style){
+      if (style.styleSheet) {
+        style.styleSheet.cssText = css;
+      } else {
+      while (style.firstChild) {
+        style.removeChild(style.firstChild);
+      }
+
+      style.appendChild(document.createTextNode(css));
+    }
+  };
+base_sheet_options.setAttributes = function(style) {
+        var nonce =
+           true ? __webpack_require__.nc : 0;
+
+        if (nonce) {
+          style.setAttribute("nonce", nonce);
+        }
+      };
+base_sheet_options.insert = function(style){
+    var target = getTarget_default()("head");
+
+    if (!target) {
+      throw new Error(
+        "Couldn't find a style target. This probably means that the value for the 'insert' parameter is invalid."
+      );
+    }
+
+    target.appendChild(style);
+  };
+base_sheet_options.domAPI = (styleDomAPI_default());
+base_sheet_options.insertStyleElement = (insertStyleElement_default());
+
+var base_sheet_update = injectStylesIntoStyleTag_default()(actors_base_sheet/* default */.Z, base_sheet_options);
+
+
+
+
+       /* harmony default export */ const src_actors_base_sheet = (actors_base_sheet/* default */.Z && actors_base_sheet/* default.locals */.Z.locals ? actors_base_sheet/* default.locals */.Z.locals : undefined);
+
+;// CONCATENATED MODULE: ./src/common/sheet.js
+
+
+function HeartSheetMixin(baseClass) {
+    return class extends baseClass {
+        get template() {
+            return common_sheet.path;
+        }
+
+        get default_img() {
+            return CONST.DEFAULT_TOKEN;
+        }
+
+        get img() {
+            return systems/heart/assets/battle-gear.svg;
+        }
+
+        getData() {
+            const data = super.getData();
+            if (data.data.img === this.default_img) {
+                data.data.img = this.img;
+            }
+            return data;
+        }
+    };
+}
+
+;// CONCATENATED MODULE: ./src/actors/base/sheet.js
+
+
+
+
+class HeartActorSheet extends HeartSheetMixin(ActorSheet) {
+    static get type() { return 'base'; }
+    
+    get template() {
+        return base_sheet.path;
+    }
+
+    get img() {
+        return this.default_img;
+    }
+
+    getData() {
+        const data = super.getData();
+
+        const items = {};
+        Object.keys(CONFIG.Item.typeLabels).forEach((type) => {
+            items[type] = [];
+        });
+
+        this.actor.items.forEach((item) => {
+            items[item.type].push(item);
+        });
+
+        data.heart = items;
+
+        return data;
+    }
+}
+;// CONCATENATED MODULE: ./src/actors/adversary/template.json
+const template_namespaceObject = JSON.parse('{"v":{"adversary":{"names":"","descriptors":"","motivation":"","difficulty":"","resistance":"","protection":"","resources":[],"equipment":"","special":""}}}');
+;// CONCATENATED MODULE: ./src/actors/adversary/sheet.js
+
+
+
+
+class EquipmentSheet extends HeartActorSheet {
+    static get type() { return Object.keys(template_namespaceObject.v)[0]; }
+
+    get template() {
+        return sheet.path;
+    }
+
+    get img() {
+        return 'systems/heart/assets/high-punch.svg';
+    }
+}
+// EXTERNAL MODULE: ./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./src/actors/character/character.sass
+var character = __webpack_require__(963);
+;// CONCATENATED MODULE: ./src/actors/character/character.sass
+
+      
+      
+      
+      
+      
+      
+      
+
+var character_options = {};
+
+character_options.styleTagTransform = function(css, style){
+      if (style.styleSheet) {
+        style.styleSheet.cssText = css;
+      } else {
+      while (style.firstChild) {
+        style.removeChild(style.firstChild);
+      }
+
+      style.appendChild(document.createTextNode(css));
+    }
+  };
+character_options.setAttributes = function(style) {
+        var nonce =
+           true ? __webpack_require__.nc : 0;
+
+        if (nonce) {
+          style.setAttribute("nonce", nonce);
+        }
+      };
+character_options.insert = function(style){
+    var target = getTarget_default()("head");
+
+    if (!target) {
+      throw new Error(
+        "Couldn't find a style target. This probably means that the value for the 'insert' parameter is invalid."
+      );
+    }
+
+    target.appendChild(style);
+  };
+character_options.domAPI = (styleDomAPI_default());
+character_options.insertStyleElement = (insertStyleElement_default());
+
+var character_update = injectStylesIntoStyleTag_default()(character/* default */.Z, character_options);
+
+
+
+
+       /* harmony default export */ const character_character = (character/* default */.Z && character/* default.locals */.Z.locals ? character/* default.locals */.Z.locals : undefined);
+
+;// CONCATENATED MODULE: ./src/actors/character/template.json
+const character_template_namespaceObject = JSON.parse('{"v":{"character":{"templates":["resistance","skills","domains"],"class":"","calling":"","active_beats":[],"equipment":[],"resources":[],"abilities":[],"fallout":[],"notes":""}}}');
+;// CONCATENATED MODULE: ./src/actors/character/sheet.js
+
+
+
+
+
+class CharacterSheet extends HeartActorSheet {
+    static get defaultOptions() {
+        const defaultOptions = super.defaultOptions;
+        return mergeObject(defaultOptions, {
+            dragDrop: [{dragSelector: '.item', dropSelector: null}]
+        })
+    }
+
+    async _onDropItemCreate(itemData) {
+        if(itemData.type === 'calling') {
+            this.actor.itemTypes.calling.forEach(item => {
+                item.delete();
+            });
+        }
+
+        return super._onDropItemCreate(itemData);
+    }
+
+    static get type() { return Object.keys(character_template_namespaceObject.v)[0]; }
+
+    get template() {
+        return character_sheet.path;
+    }
+
+    get img() {
+        return 'systems/heart/assets/high-punch.svg';
+    }
+
+    getData() {
+        const data = super.getData();
+        const callingItem = this.actor.items.find(x => x.type === 'calling');
+        data.callingItem = callingItem;
+        return data;
+    }
+
+    activateListeners(html) {
+        super.activateListeners(html);
+
+        html.find('.ordered-checkable-box:not(.checked)').click(ev => {
+            ev.preventDefault();
+            const element = ev.currentTarget;
+            const index = parseInt(element.dataset.index);
+            const parent = element.parentElement;
+            const target = parent.dataset.target;
+
+            const data = {};
+            data[target] = index + 1;
+            this.actor.update(data);
+        });
+
+        html.find('.ordered-checkable-box.checked').click(ev => {
+            ev.preventDefault();
+            const element = ev.currentTarget;
+            const index = parseInt(element.dataset.index);
+            const parent = element.parentElement;
+            const target = parent.dataset.target;
+
+            const data = {};
+            if (index + 1 === getProperty(this.actor.data, target)) {
+                data[target] = index;
+            } else {
+                data[target] = index + 1;
+            }
+            this.actor.update(data);
+        });
+
+        
+        html.find('[data-action=prepare-request-roll]').click(ev => {
+            new game.heart.applications.PrepareRollRequestApplication({}).render(true);
+        });
+
+        html.find('[data-action=add][data-type]').click(ev => {
+            const type = $(ev.currentTarget).data('type');
+            const doc = new CONFIG.Item.documentClass({
+                type,
+                name: `New ${type}`
+            });
+
+            
+            this.actor.createEmbeddedDocuments('Item', [doc.toObject()]);
+        });
+
+        html.find('[data-action=view]').click(ev => {
+            const id = $(ev.currentTarget).closest('[data-item-id]').data('itemId');
+            const item = this.actor.items.get(id);
+            item.sheet.render(true);
+        });
+
+        html.find('[data-action=delete]').click(ev => {
+            const id = $(ev.currentTarget).closest('[data-item-id]').data('itemId');
+            const item = this.actor.items.get(id);
+            item.delete();
+        });
+
+        html.find('[data-action=item-roll]').click(async ev => {
+            const id = $(ev.currentTarget).closest('[data-item-id]').data('itemId');
+            const item = this.actor.items.get(id);
+
+            const roll = game.heart.rolls.ItemRoll.build({item});
+            await roll.evaluate({async: true});
+
+            roll.toMessage({
+                flavor: `${item.name} (<span class="item-type">${item.type}</span>)`,
+                speaker: {actor: this.actor.id}
+            });
+        });
+        
+        html.find('[data-action=roll]').click(async ev => {
+            const roll = await  game.heart.rolls.HeartRoll.build({
+                character: this.actor.id
+            });
+
+            roll.toMessage({
+                speaker: {actor: this.actor.id}
+            });
+        });
+
+        html.find('[data-action=stress-roll]').click(async ev => {
+            const roll = await game.heart.rolls.StressRoll.build({
+                character: this.actor.id
+            });
+
+            roll.toMessage({
+                speaker: {actor: this.actor.id}
+            });
+        });
+
+        html.find('[data-action=fallout-roll]').click(async ev => {
+            const roll = await game.heart.rolls.FalloutRoll.build({
+                character: this.actor.id
+            });
+
+            roll.toMessage({
+                speaker: {actor: this.actor.id}
+            });
+        });
+    }
+}
+;// CONCATENATED MODULE: ./src/actors/delve/template.json
+const delve_template_namespaceObject = JSON.parse('{"v":{"delve":{"domains":[],"tier":[],"stress":"","resistance":10,"events":[],"connection":"","description":""}}}');
+;// CONCATENATED MODULE: ./src/actors/delve/sheet.js
+
+
+
+
+class DelveSheet extends HeartActorSheet {
+    static get type() { return Object.keys(delve_template_namespaceObject.v)[0]; }
+    
+    get template() {
+        return delve_sheet.path;
+    }
+
+    get img() {
+        return 'systems/heart/assets/dungeon-light.svg';
+    }
+}
+;// CONCATENATED MODULE: ./src/actors/landmark/template.json
+const landmark_template_namespaceObject = JSON.parse('{"v":{"landmark":{"domains":[],"description":"","stress":"d4","haunts":[]}}}');
+;// CONCATENATED MODULE: ./src/actors/landmark/sheet.js
+
+
+
+
+class LandmarkSheet extends HeartActorSheet {
+    static get type() { return Object.keys(landmark_template_namespaceObject.v)[0]; }
+
+    get template() {
+        return landmark_sheet.path;
+    }
+
+    get img() {
+        return 'systems/heart/assets/occupy.svg';
+    }
+}
+;// CONCATENATED MODULE: ./src/actors/character/proxy.js
+function Character(actor) {
+    return new Proxy(actor, {
+        get(actor, name, proxy) {
+            if(name === 'totalStress') {
+                return Object.values(actor.data.data.resistances).reduce((sum, resistance) => {
+                    return sum + resistance.value;
+                }, 0);
+            }
+
+            if(name === 'calling') {
+                const calling = actor.items.find(x => x.type === 'calling');
+                return calling;
+            }
+        }
+    });
+}
+;// CONCATENATED MODULE: ./src/actors/index.js
+
+     var sheet_modules = [adversary_sheet_namespaceObject, src_actors_base_sheet_namespaceObject, actors_character_sheet_namespaceObject, actors_delve_sheet_namespaceObject, actors_landmark_sheet_namespaceObject];
+ var proxies = [proxy_namespaceObject];
+
+class HeartActor extends Actor {
+    get proxy() {
+        if(this._proxy === undefined && this.constructor.proxies[this.type] !== undefined) {
+            this._proxy = this.constructor.proxies[this.type](this);
+        }
+
+        return this._proxy;
+    }
+}
+
+HeartActor.proxies = {};
+
+function initialise() {
+    console.log('heart | Registering actor sheets');
+    Actors.unregisterSheet('core', ActorSheet);
+
+    sheet_modules.forEach(function(module) {
+        const Sheet = module.default;
+        const type = Sheet.type;
+
+        if(game.heart.actors === undefined) {
+            game.heart.actors = {}
+        }
+
+        if(game.heart.actors[type] === undefined) {
+            game.heart.actors[type] = {}
+        }
+        
+        CONFIG.Actor.typeLabels[type] = `heart.${type}.label-single`;
+
+        game.heart.actors[type].sheet = Sheet
+
+        if(type === 'base') return;
+
+        Actors.registerSheet('heart', Sheet, {
+            types: [type],
+            makeDefault: true,
+            label: `heart.${type}`
+        });
+    });
+
+    CONFIG.Actor.documentClass = HeartActor;
+
+    proxies.forEach(function(module) {
+        HeartActor.proxies[module.default.name.toLowerCase()] = module.default;
+    });
+}
+;// CONCATENATED MODULE: ./src/applications/base/application.js
+class HeartApplication extends FormApplication {
+    static get defaultOptions() {
+        return foundry.utils.mergeObject(super.defaultOptions, {
+            classes: ["form", "heart", this.formType],
+        });
+    }
+
+    static get formType() {
+        return 'base'
+    }
+    
+    static async build(data, msg) {
+        try {
+            const valueData = Object.entries(data).reduce((map, [key, build]) => {
+                map[key] = build.value[0];
+                return map;
+            }, {});
+
+            await this._roll(valueData, msg);
+        } catch(err) {
+            return (new this({}, {
+                heart: data,
+                msg
+            })).render(true);
+        }
+    }
+
+    static async _roll(data) {
+        ui.notifications.error(`_roll has not been defined for ${this.formType}`);
+    }
+    
+    get title() {
+        if(this.constructor.formType !== 'base') {
+            return game.i18n.localize(`heart.applications.${this.constructor.formType}.title`);
+        } else {
+            return super.title
+        }
+    }
+
+
+    activateListeners(html) {
+        html.find('button').click(ev => {
+            ev.preventDefault();
+        });
+
+        html.find('[data-action=cancel]').click(ev => {
+            this.close();
+        });
+    }
+}
+;// CONCATENATED MODULE: ./src/applications/prepare-roll-request/application.js
+
+
+
+class PrepareRollRequestApplication extends HeartApplication {
+    static get defaultOptions() {
+        return foundry.utils.mergeObject(super.defaultOptions, {
+            template: prepare_roll_request_application.path,
+        });
+    }
+
+    static get formType() {
+        return 'prepare-roll-request';
+    }
+
+    getData() {
+        const data = super.getData();
+        return mergeObject(data, {
+            'characters': game.actors.filter(actor => actor.type === 'character').reduce((map, char) => {
+                map[char.id] = char.name;
+                return map;
+            }, {}),
+            'skills': game.heart.skills.reduce((map, skill) => {
+                map[skill] = game.i18n.localize(`heart.skill.${skill}`);
+                return map;
+            }, {}),
+            'domains': game.heart.domains.reduce((map, domain) => {
+                map[domain] = game.i18n.localize(`heart.domain.${domain}`);
+                return map;
+            }, {}),
+            'difficulties': game.heart.difficulties.reduce((map, difficulty) => {
+                map[difficulty] = game.i18n.localize(`heart.difficulty.${difficulty}`);
+                return map;
+            }, {}),
+        });
+    }
+    
+    activateListeners(html) {
+        super.activateListeners(html);
+        const form = html.get(0);
+
+        html.find('[data-action=submit]').click(async ev => {
+            const data = new FormData(form);
+
+            const difficulty = data.get('difficulty');
+            const characters = data.getAll('character');
+            const skills = data.getAll('skill');
+            const domains = data.getAll('domain');
+            const validHelpers = data.getAll('helper');
+
+            CONFIG.ChatMessage.documentClass.create({
+                flags: {
+                    heart: {
+                        ["roll-request"]: {
+                            difficulty,
+                            characters,
+                            skills,
+                            domains,
+                            validHelpers,
+                        }
+                    }
+                }
+            });
+
+            this.close();
+        });
+    }
+}
+;// CONCATENATED MODULE: ./src/applications/requirement-form/application.js
+
+
+
+class RequirementApplication extends HeartApplication {
+    static get defaultOptions() {
+        return foundry.utils.mergeObject(super.defaultOptions, {
+            template: requirement_form_application.path,
+        });
+    }
+
+    static get formType() {
+        return 'requirement'
+    }
+
+    static build({requirements, callback, type}) {
+        new this({}, {
+            type,
+            requirements,
+            callback
+        }).render(this);
+    }
+    
+    activateListeners(html) {
+        super.activateListeners(html);
+        const form = html.get(0);
+
+        html.find('[data-action=submit]').click(async ev => {
+            const data = new FormData(form);
+
+            const output = Object.entries(this.options.requirements).reduce((map, [key, requirement]) => {
+                if(requirement.isCheckbox) {
+                    const value = data.get(key);
+                    map[key] = value !== null;
+                } else if(requirement.isMany) {
+                    map[key] = data.getAll(key);
+                } else {
+                    map[key] = data.get(key);
+                }
+
+                return map;
+            }, {});
+
+            this.options.callback(output);
+            this.close()
+        });
+    }
+}
+// EXTERNAL MODULE: ./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./src/applications/application.sass
+var applications_application = __webpack_require__(780);
+;// CONCATENATED MODULE: ./src/applications/application.sass
+
+      
+      
+      
+      
+      
+      
+      
+
+var application_options = {};
+
+application_options.styleTagTransform = function(css, style){
+      if (style.styleSheet) {
+        style.styleSheet.cssText = css;
+      } else {
+      while (style.firstChild) {
+        style.removeChild(style.firstChild);
+      }
+
+      style.appendChild(document.createTextNode(css));
+    }
+  };
+application_options.setAttributes = function(style) {
+        var nonce =
+           true ? __webpack_require__.nc : 0;
+
+        if (nonce) {
+          style.setAttribute("nonce", nonce);
+        }
+      };
+application_options.insert = function(style){
+    var target = getTarget_default()("head");
+
+    if (!target) {
+      throw new Error(
+        "Couldn't find a style target. This probably means that the value for the 'insert' parameter is invalid."
+      );
+    }
+
+    target.appendChild(style);
+  };
+application_options.domAPI = (styleDomAPI_default());
+application_options.insertStyleElement = (insertStyleElement_default());
+
+var application_update = injectStylesIntoStyleTag_default()(applications_application/* default */.Z, application_options);
+
+
+
+
+       /* harmony default export */ const src_applications_application = (applications_application/* default */.Z && applications_application/* default.locals */.Z.locals ? applications_application/* default.locals */.Z.locals : undefined);
+
+;// CONCATENATED MODULE: ./src/applications/index.js
+   var modules = [base_application_namespaceObject, applications_prepare_roll_request_application_namespaceObject, applications_requirement_form_application_namespaceObject];
+
+
+function applications_initialise() {
+    console.log('heart | Registering applications');
+    if(game.heart.applications === undefined) {
+        game.heart.applications = {};
+    }
+
+    modules.forEach(function(module) {
+        game.heart.applications[module.default.name] = module.default;
+        if(module.initialise) {
+            module.initialise();
+        }
+    });
+}
+// EXTERNAL MODULE: ./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./src/chat-messages/chat-message.sass
+var chat_messages_chat_message = __webpack_require__(429);
+;// CONCATENATED MODULE: ./src/chat-messages/chat-message.sass
+
+      
+      
+      
+      
+      
+      
+      
+
+var chat_message_options = {};
+
+chat_message_options.styleTagTransform = function(css, style){
+      if (style.styleSheet) {
+        style.styleSheet.cssText = css;
+      } else {
+      while (style.firstChild) {
+        style.removeChild(style.firstChild);
+      }
+
+      style.appendChild(document.createTextNode(css));
+    }
+  };
+chat_message_options.setAttributes = function(style) {
+        var nonce =
+           true ? __webpack_require__.nc : 0;
+
+        if (nonce) {
+          style.setAttribute("nonce", nonce);
+        }
+      };
+chat_message_options.insert = function(style){
+    var target = getTarget_default()("head");
+
+    if (!target) {
+      throw new Error(
+        "Couldn't find a style target. This probably means that the value for the 'insert' parameter is invalid."
+      );
+    }
+
+    target.appendChild(style);
+  };
+chat_message_options.domAPI = (styleDomAPI_default());
+chat_message_options.insertStyleElement = (insertStyleElement_default());
+
+var chat_message_update = injectStylesIntoStyleTag_default()(chat_messages_chat_message/* default */.Z, chat_message_options);
+
+
+
+
+       /* harmony default export */ const src_chat_messages_chat_message = (chat_messages_chat_message/* default */.Z && chat_messages_chat_message/* default.locals */.Z.locals ? chat_messages_chat_message/* default.locals */.Z.locals : undefined);
+
+;// CONCATENATED MODULE: ./src/chat-messages/index.js
+
+
+class HeartChatMessage extends ChatMessage {
+    get isRollRequest() {
+        return this.getFlag('heart', 'roll-request') !== undefined;
+    }
+
+    get stressRoll() {
+        if(this.roll instanceof game.heart.rolls.StressRoll) {
+            return this.roll;
+        }
+
+        const json = this.getFlag('heart', 'stress-roll');
+        if (json === undefined) {
+            return
+        }
+        const Roll = CONFIG.Dice.rolls.find(x => x.name === json.class);
+        const roll = Roll.fromData(json);
+        return roll;
+    }
+
+    async setStressRoll(roll) {
+        const json = roll.toJSON()
+        await this.setFlag('heart', 'stress-roll', json);
+    }
+
+    get showStressRollButton() {
+        const showStressRollButton = this.getFlag('heart', 'show-stress-roll-button')
+        if (this.stressRoll !== undefined) {
+            return false;
+        }
+        if (showStressRollButton === undefined) {
+            return true
+        } else {
+            return Boolean(showStressRollButton);
+        }
+    }
+
+    set showStressRollButton(value) {
+        return this.setFlag('heart', 'show-stress-roll-button', value);
+    }
+
+    get showTakeStressButton() {
+        const showTakeStressButton = this.getFlag('heart', 'show-take-stress-button')
+        if(this.stressRoll !== undefined) {
+            if (showTakeStressButton === undefined) {
+                return true
+            } else {
+                return Boolean(showTakeStressButton);
+            }
+        } else {
+            return false;
+        }
+    }
+
+    set showTakeStressButton(value) {
+        return this.setFlag('heart', 'show-take-stress-button', value);
+    }
+
+    get falloutRoll() {
+        if(this.roll instanceof game.heart.rolls.FalloutRoll) {
+            return this.roll;
+        }
+
+        const json = this.getFlag('heart', 'fallout-roll');
+        if (json === undefined) {
+            return
+        }
+        const Roll = CONFIG.Dice.rolls.find(x => x.name === json.class);
+        const roll = Roll.fromData(json);
+        return roll;
+    }
+
+    set falloutRoll(roll) {
+        const json = roll.toJSON()
+        this.setFlag('heart', 'fallout-roll', json);
+        return
+    }
+
+    get showFalloutRollButton() {
+        const showFalloutRollButton = this.getFlag('heart', 'show-fallout-roll-button')
+        if (this.falloutRoll !== undefined) {
+            return false;
+        }
+        if (showFalloutRollButton === undefined) {
+            return true
+        } else {
+            return Boolean(showFalloutRollButton);
+        }
+    }
+
+    set showFalloutRollButton(value) {
+        return this.setFlag('heart', 'show-fallout-roll-button', value);
+    }
+
+    async getHTML() {
+        const html = await super.getHTML();
+
+        if (this.isRoll && this.isContentVisible) {
+            html.find('.message-content').html(
+                await this.roll.render({
+                    isPrivate: false,
+                    showStressRollButton: this.showStressRollButton,
+                    showTakeStressButton: this.showTakeStressButton,
+                    showFalloutRollButton: this.showFalloutRollButton,
+                })
+            )
+
+            if (this.stressRoll && this.stressRoll !== this.roll) {
+                const stressContent = await this.stressRoll.render({ isPrivate: false, showTakeStressButton: this.showTakeStressButton, showFalloutRollButton: this.showFalloutRollButton });
+                html.append(
+                    $('<div class="message-content"></div>').append(stressContent)
+                );
+            }
+
+            if (this.falloutRoll && this.falloutRoll !== this.roll) {
+                const falloutContent = await this.falloutRoll.render({ isPrivate: false });
+                html.append(
+                    $('<div class="message-content"></div>').append(falloutContent)
+                );
+            }
+        }
+
+        if(this.isRollRequest) {
+            const data = this.getFlag('heart', 'roll-request');
+            const content = await renderTemplate('heart:applications/prepare-roll-request/chat-message.html', data);
+            html.append(content)
+        }
+
+        return html;
+    }
+}
+
+function activateListeners(html) {
+
+    html.on('click', 'form button', ev => {
+        ev.preventDefault();
+    });
+
+    html.on('click', 'form.roll-request [data-action=roll][data-character]', (ev) => {
+        const button = $(ev.currentTarget);
+        const {
+            character
+        } = button.data();
+
+        const form = button.closest('form.roll-request');
+        const data = new FormData(form.get(0));
+        data.set('character', character);
+
+        const buildData = game.heart.applications.PrepareRollApplication.getBuildData({
+            character: [character],
+            difficulty: form.find(`[name=difficulty]`).map((_, ev) => ev.value).get(),
+            skill: form.find(`[name=skill]`).map((_, ev) => ev.value).get(),
+            domain: form.find(`[name=domain]`).map((_, ev) => ev.value).get(),
+            helper: form.find(`[name=helper]`).map((_, ev) => ev.value).get(),
+        }, data);
+
+        return game.heart.applications.PrepareRollApplication.build(buildData);
+    });
+}
+
+function chat_messages_initialise() {
+    console.log('heart | Registering ChatMessage');
+    CONFIG.ChatMessage.documentClass = HeartChatMessage;
+
+    Hooks.once('renderChatLog', (app, html, data) => activateListeners(html));
+    Hooks.once('renderChatPopout', (app, html, data) => activateListeners(html));
+}
+;// CONCATENATED MODULE: ./src/items/base/sheet.js
+
+
+
+class HeartItemSheet extends HeartSheetMixin(ItemSheet) {
+    static get type() { return 'base'; }
+
+    get template() {
+        return items_base_sheet.path;
+    }
+
+    get default_img() {
+        return 'icons/svg/item-bag.svg';
+    }
+
+    get img() {
+        return this.default_img;
+    }
+
+    get children() {
+        return Object.values(this.item.data.data.children || {});
+    }
+
+    get childrenTypes() {
+        return this.children.reduce((map, value) => {
+            if(map[value.type] === undefined) {
+                map[value.type] = [value];
+            } else {
+                map[value.type].push(value);
+            }
+
+            return map;
+        }, {});
+    }
+
+    activateListeners(html) {
+        super.activateListeners(html);
+
+        html.find('[data-action=add-child][data-type]').click(ev => {
+            const target = $(ev.currentTarget);
+            const documentName = target.data('document-name') || 'Item';
+            const type = target.data('type');
+            let itemData = target.data('data') || {};
+
+            const id = randomID();
+            const data = new CONFIG[documentName].documentClass({_id: id, type: type, name: `New ${type}`, data: itemData}).toObject();
+            data.documentName = documentName;
+            
+            this.item.update({[`data.children.${id}`]: data});
+        });
+
+        html.find('[data-child-id] [data-action=edit-child]').click(ev => {
+            const target = $(ev.currentTarget);
+            const id = target.closest('[data-child-id]').data('childId');
+            const itemData = this.item.data.data.children[id];
+            const documentName = itemData.documentName;
+            const item = new CONFIG[documentName].documentClass(itemData, {parentItem: this.item});
+            item.sheet.render(true);
+        });
+
+        html.find('[data-child-id] [data-action=delete-child]').click(async ev => {
+            const target = $(ev.currentTarget);
+            const id = target.closest('[data-child-id]').data('childId');
+            await this.item.update({[`data.children.-=${id}`]: null});
+            this.render(true);
+        });
+    }
+
+    getData() {
+        const data = super.getData();
+        data.di_sizes = game.heart.di_sizes.reduce((map, di) => {
+            map[di] = game.i18n.format('heart.di_size.d(N)', {N: di.replace(/^d/, '')})
+            return map;
+        }, {});
+
+        data.domains = game.heart.domains.reduce((map, domain) => {
+            map[domain] = game.i18n.localize(`heart.domain.${domain}`)
+            return map;
+        }, {});
+
+        data.equipment_types = game.heart.equipment_types.reduce((map, equipment_type) => {
+            map[equipment_type] = game.i18n.localize(`heart.equipment.type.${equipment_type}`)
+            return map;
+        }, {});
+
+        data.children = this.children;
+        data.childrenTypes = this.childrenTypes;
+
+        return data;
+    }
+}
+;// CONCATENATED MODULE: ./src/items/ability/template.json
+const ability_template_namespaceObject = JSON.parse('{"c":{"ability":{"templates":["has_description"],"mechanics":""}}}');
+;// CONCATENATED MODULE: ./src/items/ability/sheet.js
+
+
+
+const data = Object.freeze({
+    type: Object.keys(ability_template_namespaceObject.c)[0],
+    img: 'systems/heart/assets/skills.svg',
+    template: ability_sheet.path,
+});
+
+
+;// CONCATENATED MODULE: ./src/items/beat/template.json
+const beat_template_namespaceObject = JSON.parse('{"c":{"beat":{"templates":["has_description"],"type":"minor","active":false,"completed":false}}}');
+;// CONCATENATED MODULE: ./src/items/beat/sheet.js
+
+
+
+const sheet_data = Object.freeze({
+    type: Object.keys(beat_template_namespaceObject.c)[0],
+    img: 'systems/heart/assets/drum.svg',
+    template: beat_sheet.path,
+});
+
+
+;// CONCATENATED MODULE: ./src/items/calling/template.json
+const calling_template_namespaceObject = JSON.parse('{"c":{"calling":{"templates":["has_description","has_children"],"questions":{},"mark":null}}}');
+// EXTERNAL MODULE: ./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./src/items/calling/sheet.sass
+var items_calling_sheet = __webpack_require__(621);
+;// CONCATENATED MODULE: ./src/items/calling/sheet.sass
+
+      
+      
+      
+      
+      
+      
+      
+
+var calling_sheet_options = {};
+
+calling_sheet_options.styleTagTransform = function(css, style){
+      if (style.styleSheet) {
+        style.styleSheet.cssText = css;
+      } else {
+      while (style.firstChild) {
+        style.removeChild(style.firstChild);
+      }
+
+      style.appendChild(document.createTextNode(css));
+    }
+  };
+calling_sheet_options.setAttributes = function(style) {
+        var nonce =
+           true ? __webpack_require__.nc : 0;
+
+        if (nonce) {
+          style.setAttribute("nonce", nonce);
+        }
+      };
+calling_sheet_options.insert = function(style){
+    var target = getTarget_default()("head");
+
+    if (!target) {
+      throw new Error(
+        "Couldn't find a style target. This probably means that the value for the 'insert' parameter is invalid."
+      );
+    }
+
+    target.appendChild(style);
+  };
+calling_sheet_options.domAPI = (styleDomAPI_default());
+calling_sheet_options.insertStyleElement = (insertStyleElement_default());
+
+var calling_sheet_update = injectStylesIntoStyleTag_default()(items_calling_sheet/* default */.Z, calling_sheet_options);
+
+
+
+
+       /* harmony default export */ const src_items_calling_sheet = (items_calling_sheet/* default */.Z && items_calling_sheet/* default.locals */.Z.locals ? items_calling_sheet/* default.locals */.Z.locals : undefined);
+
+;// CONCATENATED MODULE: ./src/items/calling/sheet.js
+
+
+
+
+
+
+const calling_sheet_data = Object.freeze({
+    type: Object.keys(calling_template_namespaceObject.c)[0],
+    img: 'systems/heart/assets/drum.svg',
+    template: calling_sheet.path,
+});
+
+/* harmony default export */ const src_items_calling_sheet_0 = (class extends HeartItemSheet {
+    static get type() { return calling_sheet_data.type; }
+
+    get template() {
+        return calling_sheet_data.template;
+    }
+
+    get img() {
+        return calling_sheet_data.img;
+    }
+
+    getData() {
+        const data = super.getData();
+        data.minorBeats = (this.childrenTypes.beat || []).filter(x => x.data.type === 'minor');
+        data.majorBeats = (this.childrenTypes.beat || []).filter(x => x.data.type === 'major');
+        data.zenithBeats = (this.childrenTypes.beat || []).filter(x => x.data.type === 'zenith');
+        return data;
+    }
+
+    activateListeners(html) {
+        super.activateListeners(html);
+
+        html.find('[data-action=add-question]').click(ev => {
+            const id = randomID();
+            this.item.update({[`data.questions.${id}`]: {
+                question: '',
+                answer: ''
+            }});
+        });
+
+        html.find('[data-action=delete-question]').click(ev => {
+            const target = $(ev.currentTarget);
+            const id = target.closest ('[data-id]').data('id');
+            this.item.update({[`data.questions.-=${id}`]: null});
+        });
+    }
+});
+
+
+;// CONCATENATED MODULE: ./src/items/equipment/template.json
+const equipment_template_namespaceObject = JSON.parse('{"c":{"equipment":{"templates":["is_rollable","has_description"],"type":"miscellaneous"}}}');
+;// CONCATENATED MODULE: ./src/items/equipment/sheet.js
+
+
+
+const types = ['miscellaneous', 'delve', 'kill', 'mend'];
+
+function sheet_initialise() {
+    game.heart.equipment_types = types;
+}
+
+const equipment_sheet_data = Object.freeze({
+    type: Object.keys(equipment_template_namespaceObject.c)[0],
+    img: 'systems/heart/assets/battle-gear.svg',
+    template: equipment_sheet.path,
+});
+
+
+;// CONCATENATED MODULE: ./src/items/fallout/template.json
+const fallout_template_namespaceObject = JSON.parse('{"c":{"fallout":{"templates":["has_description"]}}}');
+;// CONCATENATED MODULE: ./src/items/fallout/sheet.js
+
+
+
+const fallout_sheet_data = Object.freeze({
+    type: Object.keys(fallout_template_namespaceObject.c)[0],
+    img: 'systems/heart/assets/fallout-shelter.svg',
+    template: fallout_sheet.path,
+});
+
+
+;// CONCATENATED MODULE: ./src/items/haunt/template.json
+const haunt_template_namespaceObject = JSON.parse('{"c":{"haunt":{"templates":["has_description"]}}}');
+;// CONCATENATED MODULE: ./src/items/haunt/sheet.js
+
+
+
+const haunt_sheet_data = Object.freeze({
+    type: Object.keys(haunt_template_namespaceObject.c)[0],
+    img: 'systems/heart/assets/prayer.svg',
+    template: haunt_sheet.path,
+});
+
+
+;// CONCATENATED MODULE: ./src/items/resource/template.json
+const resource_template_namespaceObject = JSON.parse('{"c":{"resource":{"templates":["is_rollable","has_description"],"domain":""}}}');
+;// CONCATENATED MODULE: ./src/items/resource/sheet.js
+
+
+
+const resource_sheet_data = Object.freeze({
+    type: Object.keys(resource_template_namespaceObject.c)[0],
+    img: 'systems/heart/assets/ore.svg',
+    template: resource_sheet.path,
+});
+
+
+;// CONCATENATED MODULE: ./src/items/index.js
+
+        var sheetModules = [items_ability_sheet_namespaceObject, src_items_base_sheet_namespaceObject, items_beat_sheet_namespaceObject, src_items_calling_sheet_namespaceObject, items_equipment_sheet_namespaceObject, items_fallout_sheet_namespaceObject, items_haunt_sheet_namespaceObject, items_resource_sheet_namespaceObject];
+
+class HeartItem extends Item {
+    constructor(data={}, context={}) {
+        super(data, context);
+
+        Object.defineProperty(this, "parentItem", {
+          value: context.parentItem || null,
+          writable: false
+        });
+    }
+
+    get isChild() {
+        return this.parentItem !== null;
+    }
+
+    async update(data={}, context={}) {
+        if(this.isChild) {
+            const update = this.parentItem.update({
+                [`data.children.${this.data._id}`]: data
+            });
+            
+            update.then(parent => {
+                const child = parent.data.data.children[this.data._id];
+                mergeObject(this.data._source, child);
+                mergeObject(this.data, child);
+            });
+
+            return update;
+        } else {
+            return super.update(data, context);
+        }
+    }
+}
+
+
+function ItemSheetFactory(data) {
+    const safe_data = Object.freeze({...data});
+    return class extends HeartItemSheet {
+        static get type() { return data.type; }
+
+        get template() {
+            return safe_data.template;
+        }
+    
+        get img() {
+            return safe_data.img;
+        }
+    }
+}
+
+function items_initialise() {
+    console.log('heart | Assigning new Item documentClass');
+    CONFIG.Item.documentClass = HeartItem;
+    console.log('heart | Registering item sheets');
+    Items.unregisterSheet('core', ItemSheet);
+    sheetModules.forEach((module) => {
+        
+        const data = module.data;
+        let Sheet;
+        if(module.default !== undefined) {
+            Sheet = module.default;
+        } else if(data.sheet instanceof ItemSheet) {
+            Sheet = data.sheet
+        } else {
+            Sheet = ItemSheetFactory(data);
+        }
+
+        const type = Sheet.type;
+
+        console.log(`heart | -- Registering ${type} sheet`);
+        if(game.heart.items === undefined) {
+            game.heart.items = {}
+        }
+
+        if(game.heart.items[type] === undefined) {
+            game.heart.items[type] = {}
+        }
+
+        game.heart.items[type].sheet = Sheet
+        if(module.initialise) {
+            module.initialise();
+        }
+
+        if(type === 'base') return;
+        
+        CONFIG.Item.typeLabels[type] = `heart.${type}.label-single`;
+        Items.registerSheet('heart', Sheet, {
+            types: [type],
+            makeDefault: true,
+            label: `heart.${type}.label-single`
+        });
+    });
+}
+// EXTERNAL MODULE: ./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./src/rolls/fallout-roll/roll.sass
+var fallout_roll_roll = __webpack_require__(979);
+;// CONCATENATED MODULE: ./src/rolls/fallout-roll/roll.sass
+
+      
+      
+      
+      
+      
+      
+      
+
+var roll_options = {};
+
+roll_options.styleTagTransform = function(css, style){
+      if (style.styleSheet) {
+        style.styleSheet.cssText = css;
+      } else {
+      while (style.firstChild) {
+        style.removeChild(style.firstChild);
+      }
+
+      style.appendChild(document.createTextNode(css));
+    }
+  };
+roll_options.setAttributes = function(style) {
+        var nonce =
+           true ? __webpack_require__.nc : 0;
+
+        if (nonce) {
+          style.setAttribute("nonce", nonce);
+        }
+      };
+roll_options.insert = function(style){
+    var target = getTarget_default()("head");
+
+    if (!target) {
+      throw new Error(
+        "Couldn't find a style target. This probably means that the value for the 'insert' parameter is invalid."
+      );
+    }
+
+    target.appendChild(style);
+  };
+roll_options.domAPI = (styleDomAPI_default());
+roll_options.insertStyleElement = (insertStyleElement_default());
+
+var roll_update = injectStylesIntoStyleTag_default()(fallout_roll_roll/* default */.Z, roll_options);
+
+
+
+
+       /* harmony default export */ const rolls_fallout_roll_roll = (fallout_roll_roll/* default */.Z && fallout_roll_roll/* default.locals */.Z.locals ? fallout_roll_roll/* default.locals */.Z.locals : undefined);
+
+;// CONCATENATED MODULE: ./src/rolls/fallout-roll/roll.js
+
+
+
+const fallout_results = {
+    'no-fallout': (total, totalStress) => total > totalStress,
+    'minor-fallout': (total, totalStress) => total <= totalStress && total <= 6,
+    'major-fallout': (total, totalStress) => total <= totalStress && total > 6
+};
+
+function roll_initialise() {
+    game.heart.fallout_results = Object.keys(fallout_results);
+}
+
+class FalloutRoll extends Roll {
+    static get CHAT_TEMPLATE() { return roll.path; }
+
+    static get requirements() {
+        const characters = game.actors.filter(x => x.type === 'character');
+        return {
+            character: {
+                label: game.i18n.localize(`heart.character.label-single`),
+                options: characters.reduce((map, char) => {
+                    map[char.data._id] = char.name
+                    return map;
+                }, {})
+            }, 
+        }
+    }
+
+    static build({character}={}, data={}, options={}) {
+        return new Promise((resolve, reject) => {
+            const requirements = this.requirements;
+        
+            if(character !== undefined) delete requirements.character;
+
+            const buildData = {character};
+            if(Object.keys(requirements).length > 0) {
+                game.heart.applications.RequirementApplication.build({
+                    requirements,
+                    callback: moreData => {
+                        mergeObject(buildData, moreData)
+                        resolve(this._build(buildData, data, options));
+                    },
+                    type: 'prepare-fallout-roll',
+                });
+            } else {
+                return resolve(this._build(buildData, data, options));
+            }
+        })
+    }
+
+    static _build({character}, data={}, options={}) {
+        const actor = game.actors.get(character).proxy;
+        options.totalStress = actor.totalStress;
+        return new this('1d12', data, options);
+    }
+
+    get result() {
+        return Object.keys(fallout_results).find(result => fallout_results[result](this.total, this.options.totalStress));
+    }
+
+    async render(chatOptions = {}) {
+        chatOptions = foundry.utils.mergeObject({
+            user: game.user.id,
+            flavor: null,
+            template: this.constructor.CHAT_TEMPLATE,
+            blind: false
+        }, chatOptions);
+        const isPrivate = chatOptions.isPrivate;
+
+        // Execute the roll, if needed
+        if (!this._evaluated) await this.evaluate({ async: true });
+
+        const description = game.i18n.format('heart.rolls.fallout-roll.description(totalStress)', {
+            totalStress: this.options.totalStress
+        });
+
+        // Define chat data
+        const chatData = {
+            description: isPrivate ? '???' : description,
+            formula: isPrivate ? "???" : this._formula,
+            flavor: isPrivate ? null : chatOptions.flavor,
+            user: chatOptions.user,
+            tooltip: isPrivate ? "" : await this.getTooltip(),
+            total: isPrivate ? "?" : this.total,
+            result: isPrivate ? "?" : this.result
+        };
+
+        // Render the roll display template
+        return renderTemplate(chatOptions.template, chatData);
+    }
+}
+// EXTERNAL MODULE: ./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./src/rolls/heart-roll/roll.sass
+var rolls_heart_roll_roll = __webpack_require__(107);
+;// CONCATENATED MODULE: ./src/rolls/heart-roll/roll.sass
+
+      
+      
+      
+      
+      
+      
+      
+
+var heart_roll_roll_options = {};
+
+heart_roll_roll_options.styleTagTransform = function(css, style){
+      if (style.styleSheet) {
+        style.styleSheet.cssText = css;
+      } else {
+      while (style.firstChild) {
+        style.removeChild(style.firstChild);
+      }
+
+      style.appendChild(document.createTextNode(css));
+    }
+  };
+heart_roll_roll_options.setAttributes = function(style) {
+        var nonce =
+           true ? __webpack_require__.nc : 0;
+
+        if (nonce) {
+          style.setAttribute("nonce", nonce);
+        }
+      };
+heart_roll_roll_options.insert = function(style){
+    var target = getTarget_default()("head");
+
+    if (!target) {
+      throw new Error(
+        "Couldn't find a style target. This probably means that the value for the 'insert' parameter is invalid."
+      );
+    }
+
+    target.appendChild(style);
+  };
+heart_roll_roll_options.domAPI = (styleDomAPI_default());
+heart_roll_roll_options.insertStyleElement = (insertStyleElement_default());
+
+var heart_roll_roll_update = injectStylesIntoStyleTag_default()(rolls_heart_roll_roll/* default */.Z, heart_roll_roll_options);
+
+
+
+
+       /* harmony default export */ const src_rolls_heart_roll_roll = (rolls_heart_roll_roll/* default */.Z && rolls_heart_roll_roll/* default.locals */.Z.locals ? rolls_heart_roll_roll/* default.locals */.Z.locals : undefined);
+
+;// CONCATENATED MODULE: ./src/rolls/heart-roll/roll.js
+
+
+
+
+
+const difficulty_reductions = {
+    standard: 0,
+    risky: 1,
+    dangerous: 2,
+    impossible: Infinity,
+}
+
+const normal_results = {
+    'critical_failure': [1, 1],
+    'failure': [2, 5],
+    'success_at_a_cost': [6, 7],
+    'success': [8, 9],
+    'critical_success': [10, 10]
+};
+
+const difficult_results = {
+    'critical_failure': [1, 1],
+    'failure': [2, 9],
+    'success_at_a_cost': [10, 10],
+}
+
+const stress_results = [
+    'critical_failure',
+    'failure',
+    'success_at_a_cost'
+];
+
+function heart_roll_roll_initialise() {
+    const results = {...normal_results, ...difficult_results};
+    game.heart.difficulties = Object.keys(difficulty_reductions);
+    game.heart.results = Object.keys(results);
+    game.heart.stress_results = stress_results;
+}
+
+class HeartRoll extends Roll {
+    static get CHAT_TEMPLATE() { return heart_roll_roll.path; }
+    static get TOOLTIP_TEMPLATE() { return tooltip.path; } 
+
+    static get requirements() {
+        const characters = game.actors.filter(x => x.type === 'character');
+        const skills = game.heart.skills;
+        const domains = game.heart.domains;
+        const difficulties = game.heart.difficulties;
+        return {
+            character: {
+                label: game.i18n.localize(`heart.character.label-single`),
+                options: characters.reduce((map, char) => {
+                    map[char.data._id] = char.name
+                    return map;
+                }, {})
+            }, 
+            difficulty: {
+                label: game.i18n.localize(`heart.difficulty.label-single`),
+                options: difficulties.reduce((map, difficulty) => {
+                    map[difficulty] = game.i18n.localize(`heart.difficulty.${difficulty}`)
+                    return map;
+                }, {})
+            }, 
+            skill: {
+                label: game.i18n.localize(`heart.skill.label-single`),
+                options: skills.reduce((map, skill) => {
+                    map[skill] = game.i18n.localize(`heart.skill.${skill}`)
+                    return map;
+                }, {})
+            }, 
+            domain: {
+                label: game.i18n.localize(`heart.domain.label-single`),
+                options: domains.reduce((map, domain) => {
+                    map[domain] = game.i18n.localize(`heart.domain.${domain}`)
+                    return map;
+                }, {})
+            }, 
+            mastery: {
+                label: game.i18n.localize(`heart.mastery.label-single`),
+                isCheckbox: true,
+            }, 
+            helpers: {
+                label: game.i18n.localize(`heart.helper.label-single`),
+                isMany: true,
+                options: characters.reduce((map, char) => {
+                    map[char.data._id] = char.name
+                    return map;
+                }, {})
+            }
+        }
+    }
+
+    static build(pools = {}, data={}, options={}) {
+        return new Promise((resolve, reject) => {
+            let {
+                character,
+                skill,
+                domain,
+                mastery,
+                helpers,
+                difficulty
+            } = pools;
+
+            const requirements = this.requirements;
+        
+            if(character !== undefined) delete requirements.character;
+            if(difficulty !== undefined) delete requirements.difficulty;
+            if(skill !== undefined) delete requirements.skill;
+            if(domain !== undefined) delete requirements.domain;
+            if(mastery !== undefined) delete requirements.mastery;
+            if(helpers !== undefined) delete requirements.helpers;
+
+            const buildData = {
+                character,
+                difficulty,
+                skill,
+                domain,
+                mastery,
+                helpers,
+            };
+
+            if(Object.keys(requirements).length > 0) {
+                game.heart.applications.RequirementApplication.build({
+                    requirements,
+                    callback: moreData => {
+                        mergeObject(buildData, moreData)
+                        resolve(this._build(buildData, data, options));
+                    },
+                    type: 'prepare-roll',
+                });
+            } else {
+                return resolve(this._build(buildData, data, options));
+            }
+        })
+    }
+
+    static _build({character, difficulty, skill, domain, mastery, helpers}={}, data={}, options={}) {
+        const actor = game.actors.get(character);
+
+        skill = actor.data.data.skills[skill].value ? skill : undefined;
+        domain = actor.data.data.domains[domain].value ? domain : undefined;
+        helpers = helpers.filter(x => x !== character);
+
+        let formula_terms = [];
+        [
+            game.i18n.localize('heart.rolls.roll.base'),
+            skill ? game.i18n.localize(`heart.skill.${skill}`) : undefined,
+            domain ? game.i18n.localize(`heart.domain.${domain}`) : undefined, 
+            mastery ? game.i18n.localize(`heart.mastery.label-short`) : false,
+            ...helpers].forEach(flavor => {
+            if (!flavor) return;
+            formula_terms.push(`1d10[${flavor}]`);
+        });
+
+
+        if(difficulty === 'impossible') {
+            formula_terms = [];
+        }
+
+        const difficulty_reduction = difficulty_reductions[difficulty];
+        const difficulty_modifier = difficulty_reduction > 0 ? `dh${difficulty_reduction}` : ''
+        const formula = `{${formula_terms.join(', ')}}${difficulty_modifier}kh`;
+
+        options.character = character;
+        options.result_set = formula_terms.length > difficulty_reduction ? 'normal' : 'difficult';
+        options.skill = skill;
+        options.domain = domain;
+        options.mastery = mastery;
+        options.difficulty = difficulty;
+        options.helpers = helpers;
+
+        return new this(formula, data, options);
+    }
+
+    get result() {
+        if(this.options.difficulty === 'impossible') {
+            return 'failure';   
+        }
+
+        let results = normal_results;
+        if(this.options.result_set === 'difficult') {
+            results = difficult_results;
+        }
+
+        return Object.keys(results).find(result => {
+            const [minVal, maxVal] = results[result];
+            return minVal <= this.total && this.total <= maxVal;
+        });
+    }
+
+    async render(chatOptions = {}) {
+        chatOptions = foundry.utils.mergeObject({
+            user: game.user.id,
+            flavor: null,
+            template: this.constructor.CHAT_TEMPLATE,
+            blind: false
+        }, chatOptions);
+        const isPrivate = chatOptions.isPrivate;
+
+        const showStressRollButton = chatOptions.showStressRollButton !== undefined ? chatOptions.showStressRollButton : false;
+
+        // Execute the roll, if needed
+        if (!this._evaluated) await this.evaluate({ async: true });
+
+        const description = game.i18n.format('heart.rolls.roll.description(difficulty,count)', {
+            difficulty: game.i18n.localize(`heart.difficulty.${this.options.difficulty}`),
+            count: this.dice.length
+        });
+
+        // Define chat data
+        const chatData = {
+            character: chatOptions.character || this.options.character,
+            description: isPrivate ? '???' : description,
+            formula: isPrivate ? "???" : this._formula,
+            flavor: isPrivate ? null : chatOptions.flavor,
+            user: chatOptions.user,
+            tooltip: isPrivate ? "" : await this.getTooltip(),
+            showStressRollButton: isPrivate ? false : showStressRollButton && stress_results.includes(this.result),
+            total: isPrivate ? "?" : this.total,
+            result: isPrivate ? "?" : this.result
+        };
+
+        // Render the roll display template
+        return renderTemplate(chatOptions.template, chatData);
+    }
+
+    async getTooltip() {
+        const parts = this.dice.map(d => d.getTooltipData());
+        const kept = this.dice.findIndex(d => d.total == this.total);
+        return renderTemplate(this.constructor.TOOLTIP_TEMPLATE, {
+            kept,
+            parts 
+        });
+    }
+
+    static activateListeners(html) {
+        html.on('click', '.heart-roll [data-action=roll-stress]', async function(ev) {
+            const target = $(ev.currentTarget);
+            const msgElement = target.closest('.chat-message');
+            const messageId = msgElement.data('messageId');
+            const msg = game.messages.get(messageId);
+            const roll = msg.roll;
+
+            
+            if (!roll._evaluated) await this.evaluate({ async: true });
+            const stressRoll = await game.heart.rolls.StressRoll.build({
+                character: roll.options.character,
+                result: roll.result,
+            }, msg);
+
+            await stressRoll.evaluate({async: true});
+
+            await msg.setStressRoll(stressRoll);
+            msg.showStressRollButton = false;
+        });
+    }
+}
+;// CONCATENATED MODULE: ./src/rolls/item-roll/roll.js
+class ItemRoll extends Roll {
+    static build({item} = {}, data={}, options={}) {
+        options.item = item;
+        return new this(item.data.data.di_size, data, options);
+    }
+}
+;// CONCATENATED MODULE: ./src/rolls/stress-roll/roll.js
+
+
+class StressRoll extends Roll {
+    static get CHAT_TEMPLATE() { return stress_roll_roll.path; }
+
+    static get requirements() {
+        const characters = game.actors.filter(x => x.type === 'character');
+        const results = game.heart.stress_results;
+        const di_sizes = game.heart.stress_dice;
+        return {
+            character: {
+                label: game.i18n.localize(`heart.character.label-single`),
+                options: characters.reduce((map, char) => {
+                    map[char.data._id] = char.name
+                    return map;
+                }, {})
+            }, 
+            result: {
+                label: game.i18n.localize(`heart.result.label-single`),
+                options: results.reduce((map, difficulty) => {
+                    map[difficulty] = game.i18n.localize(`heart.result.${difficulty}`)
+                    return map;
+                }, {})
+            }, 
+            di_size: {
+                label: game.i18n.localize(`heart.di_size.label-single`),
+                options: di_sizes.reduce((map, di_size) => {
+                    map[di_size] = game.i18n.format(`heart.di_size.d(N)`, {N: di_size.replace(/^d/, '')})
+                    return map;
+                }, {})
+            }
+        };
+    }
+
+    static build({result, di_size, character}={}, data={}, options={}) {
+        return new Promise((resolve, reject) => {
+            const requirements = this.requirements;
+        
+            if(result !== undefined) delete requirements.result;
+            if(di_size !== undefined) delete requirements.di_size;
+            if(character !== undefined) delete requirements.character;
+
+            const buildData = {
+                result,
+                di_size,
+                character
+            };
+
+            if(Object.keys(requirements).length > 0) {
+                game.heart.applications.RequirementApplication.build({
+                    requirements,
+                    callback: moreData => {
+                        mergeObject(buildData, moreData)
+                        resolve(this._build(buildData, data, options));
+                    },
+                    type: 'prepare-stress-roll',
+                });
+            } else {
+                return resolve(this._build(buildData, data, options));
+            }
+        })
+    }
+
+    static _build({result, di_size, character}, data={}, options={}) {
+        options.result = result;
+        options.di_size = di_size;
+        options.character = character;
+
+        let formula = di_size;
+        if(result === 'critical_failure') {
+            formula = `2 * {${di_size}}`;
+        }
+
+        return new this(formula, data, options);
+    }
+
+    async render(chatOptions = {}) {
+        chatOptions = foundry.utils.mergeObject({
+            user: game.user.id,
+            flavor: null,
+            template: this.constructor.CHAT_TEMPLATE,
+            blind: false
+        }, chatOptions);
+        const isPrivate = chatOptions.isPrivate;
+
+        
+        const showTakeStressButton = chatOptions.showTakeStressButton !== undefined ? chatOptions.showTakeStressButton : false;
+        const showFalloutRollButton = chatOptions.showFalloutRollButton !== undefined ? chatOptions.showFalloutRollButton : false;
+
+        // Execute the roll, if needed
+        if (!this._evaluated) await this.evaluate({ async: true });
+
+        const description = game.i18n.format('heart.rolls.stress-roll.description(di_size)', {
+            di_size: this.options.di_size,
+            result: game.i18n.localize(`heart.result:${this.options.result}`)
+        });
+
+        // Define chat data
+        const chatData = {
+            character: chatOptions.character || this.options.character,
+            description: isPrivate ? '???' : description,
+            formula: isPrivate ? "???" : this._formula,
+            flavor: isPrivate ? null : chatOptions.flavor,
+            user: chatOptions.user,
+            tooltip: isPrivate ? "" : await this.getTooltip(),
+            showTakeStressButton: isPrivate ? false : showTakeStressButton,
+            showFalloutRollButton: isPrivate ? false : !showTakeStressButton && showFalloutRollButton,
+            total: isPrivate ? "?" : this.total,
+            result: isPrivate ? "?" : this.result
+        };
+
+        // Render the roll display template
+        return renderTemplate(chatOptions.template, chatData);
+    }
+
+    async takeStress(character, resistance='blood') {
+        return new Promise((resolve, reject) => {
+            character = character || this.options.character;
+
+            game.heart.applications.RequirementApplication.build({
+                requirements: {
+                    resistance: {
+                        options: game.heart.resistances.reduce((map, resistance) => {
+                            map[resistance] = game.i18n.localize(`heart.resistance.${resistance}`)
+                            return map;
+                        }, {})
+                    }
+                }, 
+                callback: ({resistance}) => {
+                    
+                    const actor = game.actors.get(character);
+                    const updateData = {};
+                    const resistanceBlock = actor.data.data.resistances[resistance];
+                    const total = this.total;
+                    if(total === undefined) {
+                        ui.notifications.error(`Somehow this roll isn't evaluated`, this);
+                        reject();
+                    }
+                    const newValue = (resistanceBlock.value || 0) + Math.max(0, parseInt(total) - resistanceBlock.protection);
+                    updateData[`data.resistances.${resistance}.value`] = newValue;
+                    actor.update(updateData)
+                    resolve();
+                },
+                type: "take-stress"
+            });
+        });
+    }
+
+    asybuildFalloutRoll(character) {
+        character = character || this.options.character;
+        return game.heart.rolls.FalloutRoll.build({
+            character
+        });
+    }
+
+    static activateListeners(html) {
+        html.on('click', '.stress-roll [data-action=take-stress]', async function(ev) {
+            ev.preventDefault();
+            const target = $(ev.currentTarget);
+            const msgElement = target.closest('.chat-message');
+            const messageId = msgElement.data('messageId');
+            const msg = game.messages.get(messageId);
+            const stressRoll = msg.stressRoll;
+            const actor_id = stressRoll.options.character;
+            await stressRoll.takeStress(actor_id)
+            msg.showTakeStressButton = false;
+            msg.showFalloutRollButton = true;
+        });
+
+        html.on('click', '.stress-roll [data-action=roll-fallout]', async function(ev) {
+            ev.preventDefault();
+            const target = $(ev.currentTarget);
+            const msgElement = target.closest('.chat-message');
+            const messageId = msgElement.data('messageId');
+            const msg = game.messages.get(messageId);
+            const stressRoll = msg.stressRoll;
+            const falloutRoll = await game.heart.rolls.FalloutRoll.build({
+                character: stressRoll.options.character
+            });
+
+            await falloutRoll.evaluate({async: true});
+            
+            msg.falloutRoll = falloutRoll;
+            msg.showFalloutRollButton = false;
+        });
+    }
+}
+// EXTERNAL MODULE: ./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./src/rolls/roll.sass
+var rolls_roll = __webpack_require__(361);
+;// CONCATENATED MODULE: ./src/rolls/roll.sass
+
+      
+      
+      
+      
+      
+      
+      
+
+var rolls_roll_options = {};
+
+rolls_roll_options.styleTagTransform = function(css, style){
+      if (style.styleSheet) {
+        style.styleSheet.cssText = css;
+      } else {
+      while (style.firstChild) {
+        style.removeChild(style.firstChild);
+      }
+
+      style.appendChild(document.createTextNode(css));
+    }
+  };
+rolls_roll_options.setAttributes = function(style) {
+        var nonce =
+           true ? __webpack_require__.nc : 0;
+
+        if (nonce) {
+          style.setAttribute("nonce", nonce);
+        }
+      };
+rolls_roll_options.insert = function(style){
+    var target = getTarget_default()("head");
+
+    if (!target) {
+      throw new Error(
+        "Couldn't find a style target. This probably means that the value for the 'insert' parameter is invalid."
+      );
+    }
+
+    target.appendChild(style);
+  };
+rolls_roll_options.domAPI = (styleDomAPI_default());
+rolls_roll_options.insertStyleElement = (insertStyleElement_default());
+
+var rolls_roll_update = injectStylesIntoStyleTag_default()(rolls_roll/* default */.Z, rolls_roll_options);
+
+
+
+
+       /* harmony default export */ const src_rolls_roll = (rolls_roll/* default */.Z && rolls_roll/* default.locals */.Z.locals ? rolls_roll/* default.locals */.Z.locals : undefined);
+
+;// CONCATENATED MODULE: ./src/rolls/index.js
+    var rollModules = [rolls_fallout_roll_roll_namespaceObject, src_rolls_heart_roll_roll_namespaceObject, item_roll_roll_namespaceObject, rolls_stress_roll_roll_namespaceObject];
+
+
+function rolls_initialise() {
+    console.log('heart | Registering rolls');
+    rollModules.forEach((module) => {
+        const Roll = module.default;
+
+        const index = CONFIG.Dice.rolls.findIndex(x => x.name === Roll.name)
+        if (index < 0) {
+            CONFIG.Dice.rolls.push(Roll);
+        } else {
+            CONFIG.Dice.rolls[index] = Roll;
+        }
+        
+        if (game.heart.rolls === undefined) {
+            game.heart.rolls = {}
+        }
+        
+        game.heart.rolls[Roll.name] = Roll;
+
+        if(Roll.activateListeners !== undefined) {
+            Hooks.on('renderChatLog', (app, html, data) => Roll.activateListeners(html));
+            Hooks.on('renderChatPopout', (app, html, data) => Roll.activateListeners(html));
+        }
+    
+        if(module.initialise !== undefined) {
+            module.initialise()
+        }
+    });
+}
+;// CONCATENATED MODULE: ./src/index.js
+                      var templates = [sheet_namespaceObject, base_sheet_namespaceObject, character_sheet_namespaceObject, delve_sheet_namespaceObject, landmark_sheet_namespaceObject, application_namespaceObject, prepare_roll_request_application_namespaceObject, chat_message_namespaceObject, requirement_form_application_namespaceObject, common_sheet_namespaceObject, ability_sheet_namespaceObject, items_base_sheet_namespaceObject, beat_sheet_namespaceObject, calling_sheet_namespaceObject, equipment_sheet_namespaceObject, fallout_sheet_namespaceObject, haunt_sheet_namespaceObject, resource_sheet_namespaceObject, roll_namespaceObject, heart_roll_roll_namespaceObject, tooltip_namespaceObject, stress_roll_roll_namespaceObject];
+
+
+
+      var src_modules = [actors_namespaceObject, applications_namespaceObject, chat_messages_namespaceObject, src_namespaceObject_0, items_namespaceObject, rolls_namespaceObject];
+
+function activateTemplates() {
+    templates.forEach(function(module) {
+        const template = module.default;
+        const compiled = Handlebars.compile(template.source);
+        Handlebars.registerPartial(template.path, compiled);
+        _templateCache[template.path] = compiled;
+    });
+}
+
+function registerSettings() {
+    game.settings.register('heart', 'normalActionTable', {
+        name: 'Normal Actions RollTable Source',
+        hint: 'When we roll d10 for normal actions, use this table',
+        scope: 'world',
+        config: true,
+        default: 'Compendium.heart.action-tables.eEJiBJABFXLu1QKR',
+        type: String,
+    });
+
+    game.settings.register('heart', 'difficultActionTable', {
+        name: 'Difficult Actions RollTable Source',
+        hint: 'When we roll d10 for difficult actions, use this table',
+        scope: 'world',
+        config: true,
+        default: 'Compendium.heart.action-tables.GkSEWldXerpMjmkG',
+        type: String,
+    });
+}
+
+function src_initialise() {
+    Hooks._ids = {};
+    Hooks._hooks.renderChatLog = [];
+    Hooks._hooks.renderChatPopout = [];
+
+    activateTemplates();
+
+    game.heart = {
+        difficulties: ['standard', 'risky', 'dangerous', 'impossible'],
+        resistances: ['blood', 'mind', 'echo', 'fortune', 'supplies'],
+        skills: ['compel', 'delve', 'discern', 'endure', 'evade', 'hunt', 'kill', 'mend','sneak'],
+        domains: ['cursed', 'desolate', 'haven', 'occult', 'religion', 'technology', 'warren', 'wild'],
+        stress_dice: ['d4', 'd6', 'd8', 'd10', 'd12'],
+        di_sizes: ['d4', 'd6', 'd8', 'd10', 'd12'],
+    };
+
+    console.log(`heart | Registering ${src_modules.length} modules`);
+    src_modules.forEach(module => {
+        if(module.initialise !== undefined) {
+            module.initialise();
+        }
+    });
+
+    Handlebars.registerHelper('ordered-checkable', function(value, max) {
+        let output = '';
+        for(let i=0; i<max; i++) {
+            output += `<a data-index="${i}" class="ordered-checkable-box${i < value ? ' checked': ''}"></a>`;
+        }
+        return output;
+    });
+
+    Handlebars.registerHelper('join', function(separator, ...items) {
+        const options = items.pop();
+        const array = options.hash.array || [];
+        return [...items, ...array].join(separator);
+    });
+
+    Handlebars.registerHelper('concat', function(a, b) {
+        return a + b;
+    });
+
+    Handlebars.registerHelper('titlecase', function(a) {
+        return a[0].toUpperCase() + a.slice(1);
+    });
+
+    Handlebars.registerHelper('includes', function(array, item, options) {
+        if(array === undefined) {
+            console.warn('includes has undefined array', array, item, options);
+            return false;
+        }
+        return array.includes(item);
+    });
+
+    Handlebars.registerHelper('randomID', function() {
+        return randomID();
+    });
+
+    Handlebars.registerHelper('numEq', function(a, b) {
+        return a == b;
+    });
+
+    Handlebars.registerHelper('not', function(a) {
+        return !Boolean(a);
+    });
+
+    Handlebars.registerHelper('notification', function(target, targetName, options) {
+        const fa = Boolean(target) ? 'check': 'times';
+        let type = options.hash.optional ? 'optional' : 'required';
+        const title = game.i18n.localize(`heart.notification:${type}`);
+        return `<span class="fas fa-${fa}-circle" data-notification="${type}" data-target="${targetName}" title="${title}" data-type="${options.hash.type}"></span>`;
+    });
+
+    Handlebars.registerHelper('getActor', function(id) {
+        return game.actors.get(id);
+    });
+
+    Handlebars.registerHelper('localizeHeart', function(...args) {
+        const options = args.splice(-1, 1)[0];
+        const value = `heart.${args.join('.')}`;
+        return HandlebarsHelpers.localize(value, options)
+    });
+
+    Handlebars.registerHelper('ownsAnyActors', function(ids) {
+        for(let id of ids) {
+            const actor = game.actors.get(id);
+            if(!actor) continue;
+
+            if(actor.isOwner) return true;
+        }
+
+        return false;
+    });
+}
+
+Hooks.once('init', src_initialise);
+
+Hooks.once('ready', function() {
+    registerSettings();
+});
+
+if (false) {}
+
+
+/***/ }),
+
+/***/ 239:
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+module.exports = __webpack_require__.p + "ece5e5658ae157a8cf70.ttf";
+
+/***/ })
+
+/******/ 	});
+/************************************************************************/
+/******/ 	// The module cache
+/******/ 	var __webpack_module_cache__ = {};
+/******/ 	
+/******/ 	// The require function
+/******/ 	function __webpack_require__(moduleId) {
+/******/ 		// Check if module is in cache
+/******/ 		var cachedModule = __webpack_module_cache__[moduleId];
+/******/ 		if (cachedModule !== undefined) {
+/******/ 			return cachedModule.exports;
+/******/ 		}
+/******/ 		// Create a new module (and put it into the cache)
+/******/ 		var module = __webpack_module_cache__[moduleId] = {
+/******/ 			id: moduleId,
+/******/ 			// no module.loaded needed
+/******/ 			exports: {}
+/******/ 		};
+/******/ 	
+/******/ 		// Execute the module function
+/******/ 		__webpack_modules__[moduleId](module, module.exports, __webpack_require__);
+/******/ 	
+/******/ 		// Return the exports of the module
+/******/ 		return module.exports;
+/******/ 	}
+/******/ 	
+/************************************************************************/
+/******/ 	/* webpack/runtime/compat get default export */
+/******/ 	(() => {
+/******/ 		// getDefaultExport function for compatibility with non-harmony modules
+/******/ 		__webpack_require__.n = (module) => {
+/******/ 			var getter = module && module.__esModule ?
+/******/ 				() => (module['default']) :
+/******/ 				() => (module);
+/******/ 			__webpack_require__.d(getter, { a: getter });
+/******/ 			return getter;
+/******/ 		};
+/******/ 	})();
+/******/ 	
+/******/ 	/* webpack/runtime/define property getters */
+/******/ 	(() => {
+/******/ 		// define getter functions for harmony exports
+/******/ 		__webpack_require__.d = (exports, definition) => {
+/******/ 			for(var key in definition) {
+/******/ 				if(__webpack_require__.o(definition, key) && !__webpack_require__.o(exports, key)) {
+/******/ 					Object.defineProperty(exports, key, { enumerable: true, get: definition[key] });
+/******/ 				}
+/******/ 			}
+/******/ 		};
+/******/ 	})();
+/******/ 	
+/******/ 	/* webpack/runtime/hasOwnProperty shorthand */
+/******/ 	(() => {
+/******/ 		__webpack_require__.o = (obj, prop) => (Object.prototype.hasOwnProperty.call(obj, prop))
+/******/ 	})();
+/******/ 	
+/******/ 	/* webpack/runtime/make namespace object */
+/******/ 	(() => {
+/******/ 		// define __esModule on exports
+/******/ 		__webpack_require__.r = (exports) => {
+/******/ 			if(typeof Symbol !== 'undefined' && Symbol.toStringTag) {
+/******/ 				Object.defineProperty(exports, Symbol.toStringTag, { value: 'Module' });
+/******/ 			}
+/******/ 			Object.defineProperty(exports, '__esModule', { value: true });
+/******/ 		};
+/******/ 	})();
+/******/ 	
+/******/ 	/* webpack/runtime/publicPath */
+/******/ 	(() => {
+/******/ 		__webpack_require__.p = "/systems/heart/";
+/******/ 	})();
+/******/ 	
+/************************************************************************/
+/******/ 	
+/******/ 	// startup
+/******/ 	// Load entry module and return exports
+/******/ 	// This entry module doesn't tell about it's top-level declarations so it can't be inlined
+/******/ 	var __webpack_exports__ = __webpack_require__(662);
+/******/ 	
+/******/ })()
+;
