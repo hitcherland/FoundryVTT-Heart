@@ -3,16 +3,6 @@ import './index.sass';
 import './common/sheet.sass';
 
 import modules from './**/index.js';
-import './**/lang/*.json';
-import './**/template.json';
-
-/*
-import {activateRollListeners} from './module/roll/chat-log.js';
-import {PrepareRollRequestApplication} from './module/applications/prepare-roll-request.js';
-import {PrepareRollApplication} from './module/applications/prepare-roll.js';
-import {PrepareStressRollApplication} from './module/applications/prepare-stress-roll.js';
-import {PrepareFalloutRollApplication} from './module/applications/prepare-fallout-roll.js';
-*/
 
 function activateTemplates() {
     templates.forEach(function(module) {
