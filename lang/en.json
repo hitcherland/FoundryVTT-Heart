@@ -53,7 +53,7 @@
             },
             "prepare-stress-roll": {
                 "title": "Prepare Stress Roll",
-                "description": "Pick a character, a stress-inducing result type, and a di size to roll stress with."
+                "description": "Pick a character, a stress-inducing result type, and a die size to roll stress with."
             },
             "take-stress": {
                 "description": "Pick a resistance to take stress in."
@@ -136,9 +136,9 @@
         "cancel": "Cancel",
         "help": "Help",
         "none": "N/A",
-        "di_size": {
-            "label-single": "Di Size",
-            "label-multiple": "Di Sizes",
+        "die_size": {
+            "label-single": "Die Size",
+            "label-multiple": "Die Sizes",
             "d(N)": "D{N}"
         },
         "skill": {
@@ -209,7 +209,7 @@
                 "action": "Roll Stress",
                 "take-stress": "Take Stress",
                 "prepare": "Prepare Stress Roll",
-                "description(di_size)": "{di_size} Stress Roll"
+                "description(die_size)": "{die_size} Stress Roll"
             }
         },
         "difficulty": {
