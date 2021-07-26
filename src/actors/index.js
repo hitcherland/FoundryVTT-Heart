@@ -46,6 +46,8 @@ export function initialise() {
     CONFIG.Actor.documentClass = HeartActor;
 
     proxies.forEach(function(module) {
-        HeartActor.proxies[module.default.name.toLowerCase()] = module.default;
+        Object.entries(module.default).forEach(([type, proxy]) => {
+            HeartActor.proxies[type] = proxy;
+        });
     });
 }

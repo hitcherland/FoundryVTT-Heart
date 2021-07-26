@@ -137,7 +137,7 @@ function activateListeners(html) {
         ev.preventDefault();
     });
 
-    html.on('click', 'form.roll-request [data-action=roll][data-character]', (ev) => {
+    html.on('click', 'form.roll-request [data-action=roll][data-character]', async (ev) => {
         const button = $(ev.currentTarget);
         const {
             character
@@ -145,17 +145,17 @@ function activateListeners(html) {
 
         const form = button.closest('form.roll-request');
         const data = new FormData(form.get(0));
-        data.set('character', character);
 
-        const buildData = game.heart.applications.PrepareRollApplication.getBuildData({
-            character: [character],
-            difficulty: form.find(`[name=difficulty]`).map((_, ev) => ev.value).get(),
-            skill: form.find(`[name=skill]`).map((_, ev) => ev.value).get(),
-            domain: form.find(`[name=domain]`).map((_, ev) => ev.value).get(),
-            helper: form.find(`[name=helper]`).map((_, ev) => ev.value).get(),
-        }, data);
+        const roll = await game.heart.rolls.HeartRoll.build({
+            character: character,
+            difficulty: data.get('difficulty'),
+            skill: data.get('skill'),
+            domain: data.get('domain'),
+            mastery: data.get('mastery') === "on",
+            helpers: data.getAll('helper'),
+        });
 
-        return game.heart.applications.PrepareRollApplication.build(buildData);
+        roll.toMessage({speaker: { actor: character }});
     });
 }
 

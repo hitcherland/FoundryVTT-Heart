@@ -5,9 +5,10 @@ const FoundryVTTSymlinkPlugin = require('./dev-utils/foundryvtt-symlink');
 const FoundryVTTTemplateMerger = require('./dev-utils/foundryvtt-template-merger');
 const FoundryVTTTranslationMerger = require('./dev-utils/foundryvtt-translation-merger');
 const config = require('./foundryvtt.config.js');
+const TerserPlugin = require('terser-webpack-plugin');
 
 // auto calculated values
-const {type, name} = config;
+const { type, name } = config;
 const distPath = path.resolve(__dirname, 'dist');
 const publicPath = `/${type}s/${name}/`;
 
@@ -24,16 +25,16 @@ function transformManifest(content) {
     manifest.minimumCoreVersion = config.minimumCoreVersion;
 
     // Optional
-    if(manifest.esmodules === undefined) manifest.esmodules = [`${name}.js`];
-    if(manifest.compatibleCoreVersion === undefined) manifest.compatibleCoreVersion = config.compatibleCoreVersion;
+    if (manifest.esmodules === undefined) manifest.esmodules = [`${name}.js`];
+    if (manifest.compatibleCoreVersion === undefined) manifest.compatibleCoreVersion = config.compatibleCoreVersion;
 
     const githubRepo = config.githubRepo;
     const githubBranch = config.githubBranch;
-    if(githubRepo) {
-        if(manifest.url === undefined) manifest.url = `https://github.com/${githubRepo}`;
-        if(manifest.manifest === undefined) manifest.manifest = `https://raw.githubusercontent.com/${githubRepo}/${config.version}/${type}.json`;
-        if(manifest.readme === undefined) manifest.readme = `https://raw.githubusercontent.com/${githubRepo}/${config.version}/README.md`;
-        if(manifest.download === undefined) manifest.download = `https://github.com/${githubRepo}/archive/refs/tags/${config.version}.zip`;
+    if (githubRepo) {
+        if (manifest.url === undefined) manifest.url = `https://github.com/${githubRepo}`;
+        if (manifest.manifest === undefined) manifest.manifest = `https://raw.githubusercontent.com/${githubRepo}/${config.version}/${type}.json`;
+        if (manifest.readme === undefined) manifest.readme = `https://raw.githubusercontent.com/${githubRepo}/${config.version}/README.md`;
+        if (manifest.download === undefined) manifest.download = `https://github.com/${githubRepo}/archive/refs/tags/${config.version}.zip`;
     }
 
     // Return as nicely parsed string
@@ -49,6 +50,14 @@ module.exports = {
         clean: true,
         publicPath: publicPath,
     },
+    optimization: {
+        minimize: true,
+        minimizer: [new TerserPlugin({
+            terserOptions: {
+                keep_classnames: true
+            }
+        })],
+    },
     module: {
         rules: [
             {
@@ -63,7 +72,7 @@ module.exports = {
             {
                 test: /lang\/.*.json/,
                 use: {
-                    
+
                 }
             },
             {
@@ -82,8 +91,8 @@ module.exports = {
                 ],
             },
             {
-              test: /\.(woff|woff2|eot|ttf|otf)$/i,
-              type: 'asset/resource',
+                test: /\.(woff|woff2|eot|ttf|otf)$/i,
+                type: 'asset/resource',
             },
         ],
     },
