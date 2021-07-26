@@ -1,7 +1,6 @@
 // modules we need
 const path = require('path');
 const CopyPlugin = require('copy-webpack-plugin');
-const ExtraWatchWebpackPlugin = require('extra-watch-webpack-plugin');
 const FoundryVTTSymlinkPlugin = require('./dev-utils/foundryvtt-symlink');
 const FoundryVTTTemplateMerger = require('./dev-utils/foundryvtt-template-merger');
 const FoundryVTTTranslationMerger = require('./dev-utils/foundryvtt-translation-merger');
