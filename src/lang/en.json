@@ -9,9 +9,9 @@
         "label-helpers": "Helping Characters",
         "label-valid-helpers": "Characters Who Could Help"
     },
-    "di_size": {
-        "label-single": "Di Size",
-        "label-multiple": "Di Sizes",
+    "die_size": {
+        "label-single": "Die Size",
+        "label-multiple": "Die Sizes",
         "d(N)": "D{N}"
     },
     "skill": {

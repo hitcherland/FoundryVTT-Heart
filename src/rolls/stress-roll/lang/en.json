@@ -6,7 +6,7 @@
             "action": "Roll Stress",
             "take-stress": "Take Stress",
             "prepare": "Prepare Stress Roll",
-            "description(di_size)": "{di_size} Stress Roll"
+            "description(die_size)": "{die_size} Stress Roll"
         }
     }
 }

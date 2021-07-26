@@ -1,17 +1,17 @@
 {{#> "heart:common/sheet.html" documentName="item" type=type}}
     {{log this}}
-    {{#if data.data.di_size}}
+    {{#if data.data.die_size}}
     <div class="grid-2 auto-first-col place-center" style="flex: auto 0 0">
         <label>
-            {{localizeHeart "di_size" "label-single"}}
+            {{localizeHeart "die_size" "label-single"}}
         </label>
         {{#if editable}}
-        <select name="data.di_size">
-            {{selectOptions di_sizes selected=data.data.di_size}}
+        <select name="data.die_size">
+            {{selectOptions die_sizes selected=data.data.die_size}}
         </select>
         
         {{else}}
-        {{data.data.di_size}}
+        {{data.data.die_size}}
         {{/if}}
         
         {{> @partial-block }}

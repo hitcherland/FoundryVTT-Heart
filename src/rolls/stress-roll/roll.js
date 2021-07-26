@@ -6,7 +6,7 @@ export default class StressRoll extends Roll {
     static get requirements() {
         const characters = game.actors.filter(x => x.type === 'character');
         const results = game.heart.stress_results;
-        const di_sizes = game.heart.stress_dice;
+        const die_sizes = game.heart.stress_dice;
         return {
             character: {
                 label: game.i18n.localize(`heart.character.label-single`),
@@ -22,27 +22,27 @@ export default class StressRoll extends Roll {
                     return map;
                 }, {})
             }, 
-            di_size: {
-                label: game.i18n.localize(`heart.di_size.label-single`),
-                options: di_sizes.reduce((map, di_size) => {
-                    map[di_size] = game.i18n.format(`heart.di_size.d(N)`, {N: di_size.replace(/^d/, '')})
+            die_size: {
+                label: game.i18n.localize(`heart.die_size.label-single`),
+                options: die_sizes.reduce((map, die_size) => {
+                    map[die_size] = game.i18n.format(`heart.die_size.d(N)`, {N: die_size.replace(/^d/, '')})
                     return map;
                 }, {})
             }
         };
     }
 
-    static build({result, di_size, character}={}, data={}, options={}) {
+    static build({result, die_size, character}={}, data={}, options={}) {
         return new Promise((resolve, reject) => {
             const requirements = this.requirements;
         
             if(result !== undefined) delete requirements.result;
-            if(di_size !== undefined) delete requirements.di_size;
+            if(die_size !== undefined) delete requirements.die_size;
             if(character !== undefined) delete requirements.character;
 
             const buildData = {
                 result,
-                di_size,
+                die_size,
                 character
             };
 
@@ -61,14 +61,14 @@ export default class StressRoll extends Roll {
         })
     }
 
-    static _build({result, di_size, character}, data={}, options={}) {
+    static _build({result, die_size, character}, data={}, options={}) {
         options.result = result;
-        options.di_size = di_size;
+        options.die_size = die_size;
         options.character = character;
 
-        let formula = di_size;
+        let formula = die_size;
         if(result === 'critical_failure') {
-            formula = `2 * {${di_size}}`;
+            formula = `2 * {${die_size}}`;
         }
 
         return new this(formula, data, options);
@@ -90,8 +90,8 @@ export default class StressRoll extends Roll {
         // Execute the roll, if needed
         if (!this._evaluated) await this.evaluate({ async: true });
 
-        const description = game.i18n.format('heart.rolls.stress-roll.description(di_size)', {
-            di_size: this.options.di_size,
+        const description = game.i18n.format('heart.rolls.stress-roll.description(die_size)', {
+            die_size: this.options.die_size,
             result: game.i18n.localize(`heart.result:${this.options.result}`)
         });
 

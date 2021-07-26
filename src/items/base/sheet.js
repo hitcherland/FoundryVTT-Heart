@@ -67,8 +67,8 @@ export default class HeartItemSheet extends HeartSheetMixin(ItemSheet) {
 
     getData() {
         const data = super.getData();
-        data.di_sizes = game.heart.di_sizes.reduce((map, di) => {
-            map[di] = game.i18n.format('heart.di_size.d(N)', {N: di.replace(/^d/, '')})
+        data.die_sizes = game.heart.die_sizes.reduce((map, die) => {
+            map[die] = game.i18n.format('heart.die_size.d(N)', {N: die.replace(/^d/, '')})
             return map;
         }, {});
 

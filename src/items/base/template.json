@@ -2,7 +2,7 @@
     "Item": {   
         "templates": {
             "is_rollable": {
-                "di_size": "d4"
+                "die_size": "d4"
             },
             "has_description": {
                 "description": ""
