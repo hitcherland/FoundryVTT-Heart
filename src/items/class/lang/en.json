@@ -1,0 +1,49 @@
+{
+    "class": {
+        "label-single": "Class",
+        "label-multiple": "Classes",
+        "questions": {
+            "prompt": "When you create your character, answer these questions:",
+            "add": "Add Question",
+            "delete": "Delete"
+        },
+        "core-traits": {
+            "label-single": "Core Trait",
+            "label-multiple": "Core Traits",
+            "add": "Add Core Trait",
+            "delete": "Delete"
+        },
+        "core-ability": {
+            "label-single": "Core Ability",
+            "label-multiple": "Core Abilities",
+            "add": "Add Core Ability",
+            "delete": "Delete"
+        },
+        "minor-ability": {
+            "label-single": "Minor Ability",
+            "label-multiple": "Minor Abilities",
+            "add": "Add Minor Ability",
+            "delete": "Delete"
+        },
+        "major-ability": {
+            "label-single": "Major Ability",
+            "label-multiple": "Major Abilities",
+            "add": "Add Major Ability",
+            "delete": "Delete"
+        },
+        "zenith-ability": {
+            "label-single": "Zenith Ability",
+            "label-multiple": "Zenith Abilities",
+            "add": "Add Zenith Ability",
+            "delete": "Delete"
+        },
+        "resource": {
+            "add": "Add Class Resource",
+            "delete": "Delete"
+        },
+        "equipment": {
+            "add": "Add Class Equipment",
+            "delete": "Delete"
+        }
+    }
+}

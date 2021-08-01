@@ -1,3 +1,17 @@
+{{#*inline "beatSection"}}
+<h2>
+    {{localizeHeart "beat" (join "" type "-beat") "label-multiple"}}
+    {{#if (and editable (not item.isOwned))}}
+    <a class="right" data-action="add-child" data-type="beat" data-data='{"type": "{{type}}"}'><span class="fas fa-plus"></span> {{localizeHeart "beat" (join "" type "-beat") "add"}}</a>
+    {{/if}}
+</h2>
+<div class="item-list">
+    {{#each beats as |beat|}}
+        {{> "heart:items/beat/preview.html" item=beat}}
+    {{/each}}
+</div>
+{{/inline}}
+
 <form class="heart sheet base Item calling {{cssClass}}" autocomplete="off">
     <h1>
         {{#if (and editable (not item.isOwned))}}
@@ -50,6 +64,7 @@
     {{/each}}
     </ul>
 
+
     <h2>
         {{#if (eq data.data.abilities.length 1)}}
             {{localizeHeart "calling" "core-ability" "label-single"}}
@@ -62,78 +77,11 @@
     </h2>
     <div class="item-list">
         {{#each childrenTypes.ability as |ability|}}
-        <div data-child-id="{{ability._id}}" class="flexrow item">
-            <div>
-                <span class="name">{{ability.name}}</span>
-                {{{ability.data.description}}}
-            </div>
-            {{#if (and ../editable (not ../item.isOwned))}}
-            <a class="action" data-action="edit-child"><span class="fas fa-edit"></span></a>
-            <a class="action" data-action="delete-child"><span class="fas fa-trash"></span></a>
-            {{/if}}
-        </div>
+            {{> "heart:items/ability/preview.html" item=ability}}
         {{/each}}
     </div>
 
-    <h2>
-        {{localizeHeart "beat" "minor-beat" "label-multiple"}}
-        {{#if (and editable (not item.isOwned))}}
-        <a class="right" data-action="add-child" data-type="beat" data-data='{"type": "minor"}'><span class="fas fa-plus"></span> {{localizeHeart "beat" "minor-beat" "add"}}</a>
-        {{/if}}
-    </h2>
-    <div class="item-list">
-        {{#each minorBeats as |beat|}}
-            <div data-child-id="{{beat._id}}" class="flexrow item">
-                <input type="checkbox" name="data.children.{{beat._id}}.data.active" {{checked beat.data.active}} {{#if (not ../item.isOwned)}}disabled{{/if}} title="{{localizeHeart 'beat' 'activate'}}"/>
-                <input type="checkbox" name="data.children.{{beat._id}}.data.completed" {{checked beat.data.completed}} {{#if (not beat.data.active)}}disabled{{/if}} title="{{localizeHeart 'beat' 'complete'}}"/>
-                <div>{{{beat.data.description}}}</div>
-                {{#if (and ../editable (not ../item.isOwned))}}
-                <div class="right">
-                    <a class="action" data-action="edit-child"><span class="fas fa-edit"></span></a>
-                    <a class="action" data-action="delete-child"><span class="fas fa-trash"></span></a>
-                </div>
-                {{/if}}
-            </div>
-        {{/each}}
-    </div>
-
-    <h2>
-        {{localizeHeart "beat" "major-beat" "label-multiple"}}
-        {{#if (and editable (not item.isOwned))}}
-        <a class="right" data-action="add-child" data-type="beat" data-data='{"type": "major"}'><span class="fas fa-plus"></span> {{localizeHeart "beat" "major-beat" "add"}}</a>
-        {{/if}}
-    </h2>
-    <div class="item-list">
-    {{#each majorBeats as |beat|}}
-    <div data-child-id="{{beat._id}}" class="flexrow item">
-        <input type="checkbox" name="data.children.{{beat._id}}.active" {{checked beat.active}} {{#if (not ../item.isOwned)}}disabled{{/if}} title="{{localizeHeart 'beat' 'activate'}}"/>
-        <input type="checkbox" name="data.children.{{beat._id}}.completed" {{checked beat.completed}} {{#if (not beat.active)}}disabled{{/if}} title="{{localizeHeart 'beat' 'complete'}}"/>
-        <div>{{{beat.data.description}}}</div>
-        {{#if (and ../editable (not ../item.isOwned))}}
-        <a class="action" data-action="edit-child"><span class="fas fa-edit"></span></a>
-        <a class="action" data-action="delete-child"><span class="fas fa-trash"></span></a>
-        {{/if}}
-    </div>
-    {{/each}}
-    </div>
-
-    <h2>
-        {{localizeHeart "beat" "zenith-beat" "label-multiple"}}
-        {{#if (and editable (not item.isOwned))}}
-        <a class="right" data-action="add-child" data-type="beat" data-data='{"type": "zenith"}'><span class="fas fa-plus"></span> {{localizeHeart "beat" "zenith-beat" "add"}}</a>
-        {{/if}}
-    </h2>
-    <div class="item-list">
-    {{#each zenithBeats as |beat|}}
-    <div data-child-id="{{beat._id}}" class="flexrow item">
-        <input type="checkbox" name="data.children.{{beat._id}}.active" {{checked beat.active}} {{#if (not ../item.isOwned)}}disabled{{/if}} title="{{localizeHeart 'beat' 'activate'}}"/>
-        <input type="checkbox" name="data.children.{{beat._id}}.completed" {{checked beat.completed}} {{#if (not beat.active)}}disabled{{/if}} title="{{localizeHeart 'beat' 'complete'}}"/>
-        <div>{{{beat.data.description}}}</div>
-        {{#if (and ../editable (not ../item.isOwned))}}
-        <a class="action" data-action="edit-child"><span class="fas fa-edit"></span></a>
-        <a class="action" data-action="delete-child"><span class="fas fa-trash"></span></a>
-        {{/if}}
-    </div>
-    {{/each}}
-</div>
+    {{> beatSection beats=minorBeats type="minor"}}
+    {{> beatSection beats=majorBeats type="major"}}
+    {{> beatSection beats=zenithBeats type="zenith"}}
 </form>

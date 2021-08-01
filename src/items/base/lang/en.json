@@ -1,6 +1,12 @@
 {
     "base": {
         "label-single": "base",
-        "label-multiple": "bases"
+        "label-multiple": "bases",
+        "open-parent": "Open Parent",
+        "activate": "Activate",
+        "deactivate": "Deactivate",
+        "complete": "Complete",
+        "uncomplete": "Uncomplete",
+        "view": "Open Sheet"
     }
 }

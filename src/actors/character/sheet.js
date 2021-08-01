@@ -18,6 +18,12 @@ export default class CharacterSheet extends HeartActorSheet {
             });
         }
 
+        if(itemData.type === 'class') {
+            this.actor.itemTypes.class.forEach(item => {
+                item.delete();
+            });
+        }
+
         return super._onDropItemCreate(itemData);
     }
 
@@ -33,8 +39,11 @@ export default class CharacterSheet extends HeartActorSheet {
 
     getData() {
         const data = super.getData();
-        const callingItem = this.actor.items.find(x => x.type === 'calling');
+        const callingItem = this.actor.proxy.calling;
+        const classItem = this.actor.proxy.class;
         data.callingItem = callingItem;
+        data.classItem = classItem;
+        data.showTextboxesBelowItems = game.settings.get('heart', 'showTextboxesBelowItems')
         return data;
     }
 
@@ -85,21 +94,21 @@ export default class CharacterSheet extends HeartActorSheet {
             this.actor.createEmbeddedDocuments('Item', [doc.toObject()]);
         });
 
-        html.find('[data-action=view]').click(ev => {
-            const id = $(ev.currentTarget).closest('[data-item-id]').data('itemId');
-            const item = this.actor.items.get(id);
+        html.find('[data-action=view]').click(async ev => {
+            const uuid = $(ev.currentTarget).closest('[data-item-id]').data('itemId');
+            const item = await fromUuid(uuid);
             item.sheet.render(true);
         });
 
-        html.find('[data-action=delete]').click(ev => {
-            const id = $(ev.currentTarget).closest('[data-item-id]').data('itemId');
-            const item = this.actor.items.get(id);
+        html.find('[data-action=delete]').click(async ev => {
+            const uuid = $(ev.currentTarget).closest('[data-item-id]').data('itemId');
+            const item = await fromUuid(uuid);
             item.delete();
         });
 
         html.find('[data-action=item-roll]').click(async ev => {
-            const id = $(ev.currentTarget).closest('[data-item-id]').data('itemId');
-            const item = this.actor.items.get(id);
+            const uuid = $(ev.currentTarget).closest('[data-item-id]').data('itemId');
+            const item = await fromUuid(uuid);
 
             const roll = game.heart.rolls.ItemRoll.build({item});
             await roll.evaluate({async: true});
@@ -138,6 +147,44 @@ export default class CharacterSheet extends HeartActorSheet {
             roll.toMessage({
                 speaker: {actor: this.actor.id}
             });
+        });
+
+        
+        html.find('[data-item-id] [data-action=open-parent]').click(async ev => {
+            console.warn("open-parent", ev.currentTarget);
+            const target = $(ev.currentTarget);
+            const uuid = target.closest('[data-item-id]').data('itemId');
+            const item = await fromUuid(uuid);
+            const parent = item.parentItem;
+            parent.sheet.render(true);
+        });
+
+        html.find('[data-item-id] [data-action=activate]').click(async ev => {
+            const target = $(ev.currentTarget);
+            const uuid = target.closest('[data-item-id]').data('itemId');
+            const item = await fromUuid(uuid);
+            item.update({'data.active': true});
+        });
+
+        html.find('[data-item-id] [data-action=deactivate]').click(async ev => {
+            const target = $(ev.currentTarget);
+            const uuid = target.closest('[data-item-id]').data('itemId');
+            const item = await fromUuid(uuid);
+            item.update({'data.active': false});
+        });
+        
+        html.find('[data-item-id] [data-action=complete]').click(async ev => {
+            const target = $(ev.currentTarget);
+            const uuid = target.closest('[data-item-id]').data('itemId');
+            const item = await fromUuid(uuid);
+            item.update({'data.complete': true});
+        });
+
+        html.find('[data-item-id] [data-action=uncomplete]').click(async ev => {
+            const target = $(ev.currentTarget);
+            const uuid = target.closest('[data-item-id]').data('itemId');
+            const item = await fromUuid(uuid);
+            item.update({'data.complete': false});
         });
     }
 }

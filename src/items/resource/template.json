@@ -1,7 +1,7 @@
 {
     "Item": {   
         "resource": {
-            "templates": ["is_rollable", "has_description"],
+            "templates": ["is_rollable", "has_description", "is_activatable", "is_completable"],
             "domain": ""
         }
     }

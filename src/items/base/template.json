@@ -9,6 +9,12 @@
             },
             "has_children": {
                 "children": {}
+            },
+            "is_activatable": {
+                "active": false
+            },
+            "is_completable": {
+                "complete": false
             }
         }
     }

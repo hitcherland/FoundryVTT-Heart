@@ -1,5 +1,6 @@
 import HeartItemSheet from './base/sheet';
 import sheetModules from './**/sheet.js';
+import proxies from './*/proxy.js';
 
 class HeartItem extends Item {
     constructor(data={}, context={}) {
@@ -11,18 +12,38 @@ class HeartItem extends Item {
         });
     }
 
+    get proxy() {
+        if(this._proxy === undefined && this.constructor.proxies[this.type] !== undefined) {
+            this._proxy = this.constructor.proxies[this.type](this);
+        }
+
+        return this._proxy;
+    }
+
     get isChild() {
         return this.parentItem !== null;
+    }
+    
+    get effects() {
+        if(this.proxy !== undefined) {
+            const effects = new Collection(super.effects.entries());
+            this.proxy.effects.forEach(effect => {
+                effects.set(effect.id, effect);
+            });
+            return effects;
+        } else {
+            return super.effects;
+        }
     }
 
     async update(data={}, context={}) {
         if(this.isChild) {
             const update = this.parentItem.update({
-                [`data.children.${this.data._id}`]: data
+                [`data.children.${this.id}`]: data
             });
             
             update.then(parent => {
-                const child = parent.data.data.children[this.data._id];
+                const child = this.parentItem.data.data.children[this.id];
                 mergeObject(this.data._source, child);
                 mergeObject(this.data, child);
             });
@@ -32,7 +53,53 @@ class HeartItem extends Item {
             return super.update(data, context);
         }
     }
+
+    get uuid() {
+        if(!this.isChild) {
+            return super.uuid;
+        } else {
+            return this.parentItem.uuid + '.@' + super.uuid;
+        }
+    }
+
+    get children() {
+        if(this.data.data.children === undefined) 
+            return;
+        
+        const map = new Collection();
+        Object.entries(this.data.data.children).forEach(([key, value]) => {
+            map.set(key, this.getEmbeddedDocument('@' + value.documentName, key));
+        });
+
+        return map;
+    }
+
+    async delete() {
+        if(this.isChild)
+            await this.parentItem.update({[`data.children.-=${this.id}`]: null});
+        super.delete();
+    }
+
+    getEmbeddedDocument(embeddedName, embeddedId) {
+        if(embeddedName.startsWith('@')) {
+            if(this.data.data.children === undefined) 
+            return;
+        
+            const child_data = this.data.data.children[embeddedId];
+            if(child_data === undefined)
+                return undefined;
+            const documentName = embeddedName.slice(1) || child_data.documentName;
+            return new CONFIG[documentName].documentClass(child_data, {
+                parentItem: this
+            });
+        } else {
+            console.warn(this, embeddedName, embeddedId);
+            return super.getEmbeddedDocument(embeddedName, embeddedId);
+        }
+    }
 }
+
+HeartItem.proxies = {};
 
 
 function ItemSheetFactory(data) {
@@ -90,6 +157,12 @@ export function initialise() {
             types: [type],
             makeDefault: true,
             label: `heart.${type}.label-single`
+        });
+    });
+
+    proxies.forEach(function(module) {
+        Object.entries(module.default).forEach(([type, proxy]) => {
+            HeartItem.proxies[type] = proxy;
         });
     });
 }

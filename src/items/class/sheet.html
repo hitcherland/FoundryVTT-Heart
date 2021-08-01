@@ -1,0 +1,78 @@
+{{#*inline "abilitySection"}}
+<h2>
+    {{localizeHeart "class" (join "" type "-ability") "label-multiple"}}
+    {{#if (and editable (not item.isOwned))}}
+    <a class="right" data-action="add-child" data-type="ability" data-data='{"type": "{{type}}"{{#if (eq type "core")}}, "active": true{{/if}} }'><span class="fas fa-plus"></span> {{localizeHeart "class" (join "" type "-ability") "add"}}</a>
+    {{/if}}
+</h2>
+<div class="item-list">
+    {{#each abilities as |ability|}}
+        {{> "heart:items/ability/preview.html" item=ability}}
+    {{/each}}
+</div>
+{{/inline}}
+
+<form class="heart sheet base Item class {{cssClass}}" autocomplete="off">
+    <h1>
+        {{#if (and editable (not item.isOwned))}}
+        <input name="name" value="{{data.name}}"/>
+        {{else}}
+        {{item.name}}
+        {{/if}}
+    </h1>
+    <div class="description">
+        {{#if (and editable (not item.isOwned))}}
+        {{editor content=data.data.description target="data.description" button=true editable=editable owner=owner}}
+        {{else}}
+        {{{data.data.description}}}
+        {{/if}}
+    </div>
+
+    <h2>
+        {{localizeHeart "class" "core-traits" "label-multiple"}}
+    </h2>
+    <div class="grid-2">
+        <div class="title-font">{{localizeHeart "skill" "label-single"}}</div>
+        {{#if (and editable (not item.isOwned))}}
+        <select name="data.core_skill">
+            {{selectOptions skills selected=data.data.core_skill}}
+        </select>
+        {{else}}
+        <div>{{localizeHeart "skill" data.data.core_skill}}</div>
+        {{/if}}
+
+        <div class="title-font">{{localizeHeart "domain" "label-single"}}</div>
+        {{#if (and editable (not item.isOwned))}}
+        <select name="data.core_domain">
+            {{selectOptions domains selected=data.data.core_domain}}
+        </select>
+        {{else}}
+        <div>{{localizeHeart "domain" data.data.core_domain}}</div>
+        {{/if}}
+
+        <div class="title-font">{{localizeHeart "resource" "label-single"}}</div>
+        <div>
+            <a class="right" data-action="add-child" data-type="resource"><span class="fas fa-plus"></span> {{localizeHeart "class" "resource" "add"}}</a>
+        </div>
+        <div class="wide">
+            {{#each lookup(childrenTypes "resource") as |item|}}
+                {{> "heart:items/resource/preview.html"}}
+            {{/each}}
+        </div>
+    
+        <div class="title-font">{{localizeHeart "equipment" "label-single"}}</div>
+        <div>
+            <a class="right" data-action="add-child" data-type="equipment"><span class="fas fa-plus"></span> {{localizeHeart "class" "equipment" "add"}}</a>
+        </div>
+        <div class="wide">
+            {{#each lookup(childrenTypes "equipment") as |item|}}
+                {{> "heart:items/equipment/preview.html"}}
+            {{/each}}
+        </div>
+    </div>
+
+    {{> abilitySection abilities=coreAbilities type="core"}}
+    {{> abilitySection abilities=minorAbilities type="minor"}}
+    {{> abilitySection abilities=majorAbilities type="major"}}
+    {{> abilitySection abilities=zenithAbilities type="zenith"}}
+</form>

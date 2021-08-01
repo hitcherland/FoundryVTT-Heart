@@ -23,9 +23,9 @@ export default class extends HeartItemSheet {
 
     getData() {
         const data = super.getData();
-        data.minorBeats = (this.childrenTypes.beat || []).filter(x => x.data.type === 'minor');
-        data.majorBeats = (this.childrenTypes.beat || []).filter(x => x.data.type === 'major');
-        data.zenithBeats = (this.childrenTypes.beat || []).filter(x => x.data.type === 'zenith');
+        data.minorBeats = this.item.children.filter(x => x.type === 'beat' && x.data.data.type === 'minor');
+        data.majorBeats = this.item.children.filter(x => x.type === 'beat' && x.data.data.type === 'major');
+        data.zenithBeats = this.item.children.filter(x => x.type === 'beat' && x.data.data.type === 'zenith');
         return data;
     }
 

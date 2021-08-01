@@ -1,5 +1,6 @@
 import sheetHTML from './sheet.html';
 import HeartSheetMixin from '../../common/sheet';
+import './preview.sass';
 
 export default class HeartItemSheet extends HeartSheetMixin(ItemSheet) {
     static get type() { return 'base'; }
@@ -17,11 +18,11 @@ export default class HeartItemSheet extends HeartSheetMixin(ItemSheet) {
     }
 
     get children() {
-        return Object.values(this.item.data.data.children || {});
+        return this.item.children;
     }
 
     get childrenTypes() {
-        return this.children.reduce((map, value) => {
+        return this.item.children?.reduce((map, value) => {
             if(map[value.type] === undefined) {
                 map[value.type] = [value];
             } else {
@@ -48,20 +49,54 @@ export default class HeartItemSheet extends HeartSheetMixin(ItemSheet) {
             this.item.update({[`data.children.${id}`]: data});
         });
 
-        html.find('[data-child-id] [data-action=edit-child]').click(ev => {
+        html.find('[data-item-id] [data-action=edit-child], [data-item-id] [data-action=view]').click(async ev => {
             const target = $(ev.currentTarget);
-            const id = target.closest('[data-child-id]').data('childId');
-            const itemData = this.item.data.data.children[id];
-            const documentName = itemData.documentName;
-            const item = new CONFIG[documentName].documentClass(itemData, {parentItem: this.item});
+            const uuid = target.closest('[data-item-id]').data('itemId');
+            const item = await fromUuid(uuid);
             item.sheet.render(true);
         });
 
-        html.find('[data-child-id] [data-action=delete-child]').click(async ev => {
+        html.find('[data-item-id] [data-action=delete-child]').click(async ev => {
             const target = $(ev.currentTarget);
-            const id = target.closest('[data-child-id]').data('childId');
-            await this.item.update({[`data.children.-=${id}`]: null});
+            const uuid = target.closest('[data-item-id]').data('itemId');
+            const item = await fromUuid(uuid);
+            item.delete();
             this.render(true);
+        });
+
+        html.find('[data-item-id] [data-action=activate]').click(async ev => {
+            const target = $(ev.currentTarget);
+            const uuid = target.closest('[data-item-id]').data('itemId');
+            const item = await fromUuid(uuid);
+            item.update({'data.active': true});
+        });
+
+        html.find('[data-item-id] [data-action=view]').click(async ev => {
+            const target = $(ev.currentTarget);
+            const uuid = target.closest('[data-item-id]').data('itemId');
+            const item = await fromUuid(uuid);
+            item.update({'data.active': false});
+        });
+
+        html.find('[data-item-id] [data-action=deactivate]').click(async ev => {
+            const target = $(ev.currentTarget);
+            const uuid = target.closest('[data-item-id]').data('itemId');
+            const item = await fromUuid(uuid);
+            item.update({'data.active': false});
+        });
+
+        html.find('[data-item-id] [data-action=complete]').click(async ev => {
+            const target = $(ev.currentTarget);
+            const uuid = target.closest('[data-item-id]').data('itemId');
+            const item = await fromUuid(uuid);
+            item.update({'data.complete': true});
+        });
+
+        html.find('[data-item-id] [data-action=uncomplete]').click(async ev => {
+            const target = $(ev.currentTarget);
+            const uuid = target.closest('[data-item-id]').data('itemId');
+            const item = await fromUuid(uuid);
+            item.update({'data.complete': false});
         });
     }
 
@@ -69,6 +104,11 @@ export default class HeartItemSheet extends HeartSheetMixin(ItemSheet) {
         const data = super.getData();
         data.die_sizes = game.heart.die_sizes.reduce((map, die) => {
             map[die] = game.i18n.format('heart.die_size.d(N)', {N: die.replace(/^d/, '')})
+            return map;
+        }, {});
+
+        data.skills = game.heart.skills.reduce((map, skill) => {
+            map[skill] = game.i18n.localize(`heart.skill.${skill}`)
             return map;
         }, {});
 

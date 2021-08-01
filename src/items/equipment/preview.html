@@ -1,0 +1,7 @@
+{{#> "heart:items/base/preview.html" }}
+    {{item.name}}
+    ({{localizeHeart "equipment" "type" item.data.data.type}}, <a data-action="item-roll"><span class="fas fa-dice"></span> {{item.data.data.die_size}}</a>
+    {{#if item.data.data.tags.length}}
+    , {{join ", " array=item.data.data.tags}}
+    {{/if}})
+{{/ "heart:items/base/preview.html"}}

@@ -14,22 +14,13 @@ function activateTemplates() {
 }
 
 function registerSettings() {
-    game.settings.register('heart', 'normalActionTable', {
-        name: 'Normal Actions RollTable Source',
-        hint: 'When we roll d10 for normal actions, use this table',
-        scope: 'world',
+    game.settings.register('heart', 'showTextboxesBelowItems', {
+        name: 'Show Textboxes Below Item Lists',
+        hint: 'On the character sheet, toggle the legacy text boxes',
+        scope: 'client',
         config: true,
-        default: 'Compendium.heart.action-tables.eEJiBJABFXLu1QKR',
-        type: String,
-    });
-
-    game.settings.register('heart', 'difficultActionTable', {
-        name: 'Difficult Actions RollTable Source',
-        hint: 'When we roll d10 for difficult actions, use this table',
-        scope: 'world',
-        config: true,
-        default: 'Compendium.heart.action-tables.GkSEWldXerpMjmkG',
-        type: String,
+        default: true,
+        type: Boolean,
     });
 }
 

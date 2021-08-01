@@ -5,6 +5,20 @@
     top: 0
     z-index: 1
 
+.section
+    padding: 0.5em
+
+.item-list
+    &> *
+        padding: 0.5em
+        margin: 0.5em 0
+        border: 1px solid rgba(99, 0, 0, 0.2)
+        border-radius: 5px
+
+a[disabled]
+    opacity: 0.5
+    pointer-events: none
+
 .heart.sheet.actor.character
     position: relative
     background: white
@@ -13,7 +27,7 @@
         grid-gap: 1em
         align-items: center
 
-    .calling
+    .calling, .class
         align-items: top
         .name
             font-weight: bold

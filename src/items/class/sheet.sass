@@ -1,0 +1,89 @@
+@use '../../util'
+
+form.heart.class
+    display: block
+    font-size: 1.1em
+
+    h1, h2
+        font-family: 'MelmaCracked'
+        
+
+    h1, h2, h3
+        text-transform: uppercase
+    
+    h4
+        font-weight: bold
+
+    
+    h1, h2, h3, h4
+        border: 0
+        margin: 0
+        flex: auto 0 0
+
+        .right
+            float: right
+            font-family: Alegreya
+            font-size: 0.8em
+
+    h1
+        background: util.$red
+        color: util.$white
+        padding: 0.2em
+
+        input
+            color: util.$white !important
+            border: 0
+            width: 100%
+            font-size: 1em !important
+            text-align: left !important
+
+    h2
+        color: util.$red
+        padding: 0.2em 0
+
+    .description
+        flex: auto 0 0
+        font-size: 1.2em
+        font-style: italic
+        padding: 0 1em
+        margin: 0.5em
+
+        .editor-content
+            font-size: 1.7em !important
+            line-height: 1em
+            background: rgba(0, 0, 0, 0.1)
+            min-height: 6.5em
+            padding: 0.5em
+            text-align: center
+
+    li .action
+        padding: 0.2em
+
+    .action
+        flex: auto 0 0
+
+    p
+        margin: 0
+        & + p
+            margin-top: 0.2em
+
+    .flexrow
+        align-content: center
+
+    .right
+        flex: auto 0 0
+
+    .question
+        font-weight: bold
+        font-style: italic
+
+        
+        .editor-content
+            min-height: 7em !important
+
+        
+    .name
+        text-transform: uppercase
+        font-weight: bold
+        color: util.$red
+        

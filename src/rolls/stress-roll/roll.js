@@ -11,7 +11,7 @@ export default class StressRoll extends Roll {
             character: {
                 label: game.i18n.localize(`heart.character.label-single`),
                 options: characters.reduce((map, char) => {
-                    map[char.data._id] = char.name
+                    map[char.id] = char.name
                     return map;
                 }, {})
             }, 

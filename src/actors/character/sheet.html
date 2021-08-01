@@ -3,14 +3,14 @@
     {{#if list.length}}
     <div class="item-list">
         {{#each list as |item|}}
-            <div data-item-id="{{item.data._id}}" class="flexrow item">
+            <div data-item-id="{{item.uuid}}" class="flexrow item">
                 <div>
                     {{> @partial-block item=item }}
                 </div>
             
                 <div class="right">
                     <a data-action="view"><span class="fas fa-eye"></span></a>
-                    {{#if item.isOwner}}
+                    {{#if (and item.isOwner (not item.isChild))}}
                     <a data-action="delete"><span class="fas fa-trash"></span></a>
                     {{/if}}
                 </div>
@@ -20,6 +20,57 @@
     {{/if}}
     {{/with}}
 {{/inline}}
+
+{{#*inline "itemList2"}}
+    {{#with (lookup actor.proxy type) as |list|}}
+    {{#if list.length}}
+    <div class="item-list">
+        {{#each list as |item|}}
+            <div data-item-id="{{item.uuid}}" class="flexrow item">
+                <div>
+                    {{> @partial-block item=item }}
+                </div>
+            
+                <div class="right">
+                    <a data-action="view"><span class="fas fa-eye"></span></a>
+                    {{#if (and item.isOwner (not item.isChild))}}
+                    <a data-action="delete"><span class="fas fa-trash"></span></a>
+                    {{/if}}
+                </div>
+            </div>
+        {{/each}}
+    </div>
+    {{/if}}
+    {{/with}}
+{{/inline}}
+
+{{#*inline "itemListSection"}}
+<div class="section {{localizeHeart type 'label-multiple'}}">
+    <h2>
+        {{#if overrideTitle}}
+        {{overrideTitle}}
+        {{else}}
+        {{localizeHeart type "label-multiple"}}
+        {{/if}}
+        {{#if actor.isOwner}}
+        <div class="right">
+            <a data-action="add" data-type="{{type}}"><span class="fas fa-plus"></span></a>
+        </div>
+        {{/if}}
+    </h2>
+
+    <div class="item-list">
+    {{#each list as |item|}}
+        {{> (join "/" "heart:items" type "preview.html") item=item dataPath="???"}}
+    {{/each}}
+    </div>
+    
+    {{#if (and showTextboxesBelowItems description_path)}}
+    {{editor content=(lookup actor.data description_path) target="{{description_path}}" button=true editable=editable owner=owner}}
+    {{/if}}
+</div>
+{{/inline}}
+
 <div>
 <div class="heart flexrow buttons sticky">
     <button data-action="prepare-request-roll"><span class="fas fa-dice"></span> {{localizeHeart "perform" "request-roll"}}</button>
@@ -30,7 +81,7 @@
 <form class="heart sheet actor character {{cssClass}}" autocomplete="off">
     <div class="grid-2 place-top">
         <img class="profile" src="{{data.img}}" title="{{actor.name}}" data-edit="img"/>
-        <div class="grid-3 resistances place-top">
+        <div class="section grid-3 resistances place-top">
             <div></div>
             <div></div>
             <h3 class="center">{{localizeHeart "resistance" "protection" "label-multiple"}}</h3>
@@ -40,20 +91,33 @@
                 <div class="red" data-target='data.resistances.{{name}}.protection'>{{{ordered-checkable resistance.protection 5}}}</div>
             {{/each}}
         </div>
-        <div class="info">
+        
+        <div class="section info">
             <div class="grid-2 auto-first-col place-center">
                 <h2>{{localizeHeart "character" "name"}}</h2>
                 <input name="name" value="{{actor.name}}"/>
                 <h2>{{localizeHeart "character" "class"}}</h2>
+                {{#if classItem}}
+                <div data-item-id="{{classItem.uuid}}" class="flexrow class item">
+                    <div class="name">{{classItem.name}}</div>
+                    <div class="right">
+                        <a data-action="view"><span class="fas fa-eye"></span></a>
+                        {{#if classItem.isOwner}}
+                        <a data-action="delete"><span class="fas fa-trash"></span></a>
+                        {{/if}}
+                    </div>
+                </div>
+                {{else}}
                 <input name="data.class" value="{{actor.data.data.class}}"/>
+                {{/if}}
                 <h2>{{localizeHeart "character" "calling"}}</h2>
                 {{#if callingItem}}
-                <div data-item-id="{{callingItem.data._id}}" class="flexrow calling item">
+                <div data-item-id="{{callingItem.uuid}}" class="flexrow calling item">
                     <div class="name">{{callingItem.name}}</div>
                     <div class="right">
                         <a data-action="view"><span class="fas fa-eye"></span></a>
                         {{#if callingItem.isOwner}}
-                        <a data-action="delete"><span class="fas fa-trash"></span></a>
+                        <a data-action="delete"<span class="fas fa-trash"></span></a>
                         {{/if}}
                     </div>
                 </div>
@@ -62,104 +126,14 @@
                 {{/if}}
             </div>
         </div>
-        <div class="beats">
-            <h2>
-                {{localizeHeart "beat" "active" "label-multiple"}}
-                {{#if actor.isOwner}}
-                <div class="right">
-                    <a data-action="add" data-type="beat"><span class="fas fa-plus"></span></a>
-                </div>
-                {{/if}}
-            </h2>
-            {{#> itemList type="beat" actor=actor}}
-            {{{item.data.data.description}}}
-            {{/itemList}}
-            <div class="item-list">
-            {{#each callingItem.data.data.children as |beat|}}
-                {{#if (and (eq beat.type "beat") beat.data.active (not beat.data.completed))}}
-                <div data-item-id="{{beat.data._id}}" class="flexrow item">
-                <div>{{{beat.data.description}}}</div>
-                
-                <div class="right">
-                    <a data-action="view"><span class="fas fa-eye"></span></a>
-                    {{#if ../actor.isOwner}}
-                    <a data-action="delete"><span class="fas fa-trash"></span></a>
-                    {{/if}}
-                </div>
-                </div>
-                {{/if}}
-            {{/each}}
-        </div>
-            {{editor content=actor.data.data.active_beats target="data.active_beats" button=true editable=editable owner=owner}}
-        </div>
-        
-        <div class="equipment">
-            <h2>{{localizeHeart "equipment" "label-multiple"}}
-                {{#if actor.isOwner}}
-                <div class="right">
-                    <a data-action="add" data-type="equipment"><span class="fas fa-plus"></span></a>
-                </div>
-                {{/if}}
-            </h2>
-            {{#> itemList type="equipment"  actor=actor}}
-                {{item.name}}
-                ({{localizeHeart "equipment" "type" item.data.data.type}}, <a data-action="item-roll"><span class="fas fa-dice"></span> {{item.data.data.die_size}}</a>
-                {{#if item.data.data.tags.length}}
-                , {{join ", " array=item.data.data.tags}}
-                {{/if}})
-            {{/itemList}}
-            {{editor content=actor.data.data.equipment target="data.equipment" button=true editable=editable owner=owner}}
-        </div>
 
-        <div class="resources">
-            <h2>{{localizeHeart "resource" "label-multiple"}}
-                {{#if actor.isOwner}}
-                <div class="top right">
-                    <a data-action="add" data-type="resource"><span class="fas fa-plus"></span></a>
-                </div>
-                {{/if}}
-            </h2>
-            {{#> itemList type="resource" actor=actor}}
-            {{item.name}}
-            (<a data-action="item-roll"><span class="fas fa-dice"></span> {{item.data.data.die_size}}</a>, {{localizeHeart "domain" item.data.data.domain}}
-            {{#if item.data.data.tags.length}}
-            , {{join ", "  array=item.data.data.tags}}
-            {{/if}})
-            {{/itemList}}
-            {{editor content=actor.data.data.resources target="data.resources" button=true editable=editable owner=owner}}
-        </div>
-        <div class="abilities">
-            <h2>
-                {{localizeHeart "ability"  "label-multiple"}}
-                {{#if actor.isOwner}}
-                <div class="top right">
-                    <a data-action="add" data-type="ability"><span class="fas fa-plus"></span></a>
-                </div>
-                {{/if}}
-            </h2>
-            
-            {{#> itemList type="ability" actor=actor}}
-            {{item.name}}
-            {{/itemList}}
-            {{editor content=actor.data.data.abilities target="data.abilities" button=true editable=editable owner=owner}}
-        </div>
+        {{> itemListSection type="beat" list=actor.proxy.beats description_path="data.active_beats" overrideTitle=(localizeHeart "beat" "active" "label-multiple")}}
+        {{> itemListSection type="equipment" list=(lookup actor.itemTypes "equipment") description_path="data.equipment"}}
+        {{> itemListSection type="resource" list=(lookup actor.itemTypes "resource") description_path="data.resources"}}
+        {{> itemListSection type="ability" list=actor.proxy.abilities description_path="data.abilities"}}
+        {{> itemListSection type="fallout" list=(lookup actor.itemTypes "fallout") description_path="data.fallout"}}
 
-        <div class="fallout">
-            <h2>
-                {{localizeHeart "fallout" "label-multiple"}}
-                {{#if actor.isOwner}}
-                <div class="top right">
-                    <a data-action="add" data-type="fallout"><span class="fas fa-plus"></span></a>
-                </div>
-                {{/if}}
-            </h2>
-            {{#> itemList type="fallout" actor=actor}}
-            {{item.name}}
-            {{/itemList}}
-            {{editor content=actor.data.data.fallout target="data.fallout" button=true editable=editable owner=owner}}
-        </div>
-
-        <div class="skills grid-2 auto-first-col">
+        <div class="section skills grid-2 auto-first-col">
             <h3 class="center">{{localizeHeart "skill" "label-multiple"}}</h3>
             <h3 class="faded">{{localizeHeart "skill" "knack" "label-multiple"}}</h3>
             {{#each actor.data.data.skills as |skill name|}}
@@ -171,7 +145,7 @@
             {{/each}}
         </div>
 
-        <div class="domains grid-2 auto-first-col">
+        <div class="section domains grid-2 auto-first-col">
             <h3 class="center">{{localizeHeart "domain" "label-multiple"}}</h3>
             <h3 class="faded">{{localizeHeart "domain" "knack" "label-multiple"}}</h3>
             {{#each actor.data.data.domains as |domain name|}}
@@ -183,8 +157,8 @@
             {{/each}}
         </div>
         
-        <h3 class="center wide">{{localizeHeart "character" "notes"}}</h3>
-        <div class="wide">
+        <div class="section center wide notes">
+            <h3>{{localizeHeart "character" "notes"}}</h3>
             {{editor content=actor.data.data.notes target="data.notes" button=true editable=editable owner=owner}}
         </div>
     </div>

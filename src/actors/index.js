@@ -10,6 +10,35 @@ class HeartActor extends Actor {
 
         return this._proxy;
     }
+
+    get effects() {
+        if(this.proxy !== undefined) {
+            const effects = new Collection(super.effects.entries());
+            this.proxy.effects.forEach(effect => {
+                effects.set(effect.id, effect);
+            });
+            return effects;
+        } else {
+            return super.effects;
+        }
+    }
+
+    getEmbeddedDocument(embeddedName, embeddedId) {
+        if(embeddedName.startsWith('@')) {
+            if(this.data.data.children === undefined) 
+            return;
+        
+            const child_data = this.data.data.children[embeddedId];
+            if(child_data === undefined)
+                return undefined;
+            const documentName = embeddedName.slice(1) || child_data.documentName;
+            return new CONFIG[documentName].documentClass(child_data, {
+                parentItem: this
+            });
+        } else {
+            return super.getEmbeddedDocument(embeddedName, embeddedId);
+        }
+    };
 }
 
 HeartActor.proxies = {};

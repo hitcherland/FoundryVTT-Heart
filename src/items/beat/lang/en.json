@@ -3,8 +3,8 @@
         "label-single": "Beat",
         "label-multiple": "Beats",
         "add": "Add Beat",
-        "activate": "Mark as Activate",
-        "complete": "Mark as Complete",
+        "activate": "Activate",
+        "complete": "Complete",
         "active": {  
             "label-single": "Active Beat",
             "label-multiple": "Active Beats"
