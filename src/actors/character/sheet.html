@@ -1,49 +1,3 @@
-{{#*inline "itemList"}}
-    {{#with (lookup actor.itemTypes type) as |list|}}
-    {{#if list.length}}
-    <div class="item-list">
-        {{#each list as |item|}}
-            <div data-item-id="{{item.uuid}}" class="flexrow item">
-                <div>
-                    {{> @partial-block item=item }}
-                </div>
-            
-                <div class="right">
-                    <a data-action="view"><span class="fas fa-eye"></span></a>
-                    {{#if (and item.isOwner (not item.isChild))}}
-                    <a data-action="delete" title="{{localizeHeart 'base' 'delete'}}"><span class="fas fa-trash"></span></a>
-                    {{/if}}
-                </div>
-            </div>
-        {{/each}}
-    </div>
-    {{/if}}
-    {{/with}}
-{{/inline}}
-
-{{#*inline "itemList2"}}
-    {{#with (lookup actor.proxy type) as |list|}}
-    {{#if list.length}}
-    <div class="item-list">
-        {{#each list as |item|}}
-            <div data-item-id="{{item.uuid}}" class="flexrow item">
-                <div>
-                    {{> @partial-block item=item }}
-                </div>
-            
-                <div class="right">
-                    <a data-action="view"><span class="fas fa-eye"></span></a>
-                    {{#if (and item.isOwner (not item.isChild))}}
-                    <a data-action="delete" title="{{localizeHeart 'base' 'delete'}}"><span class="fas fa-trash"></span></a>
-                    {{/if}}
-                </div>
-            </div>
-        {{/each}}
-    </div>
-    {{/if}}
-    {{/with}}
-{{/inline}}
-
 {{#*inline "itemListSection"}}
 <div class="section {{localizeHeart type 'label-multiple'}}">
     <h2>
@@ -101,7 +55,7 @@
                 <div data-item-id="{{classItem.uuid}}" class="flexrow class item">
                     <div class="name">{{classItem.name}}</div>
                     <div class="right">
-                        <a data-action="view"><span class="fas fa-eye"></span></a>
+                        <a data-action="view" title="{{localizeHeart 'base' 'view'}}"><span class="fas fa-eye"></span></a>
                         {{#if classItem.isOwner}}
                         <a data-action="delete" title="{{localizeHeart 'base' 'delete'}}"><span class="fas fa-trash"></span></a>
                         {{/if}}
@@ -115,7 +69,7 @@
                 <div data-item-id="{{callingItem.uuid}}" class="flexrow calling item">
                     <div class="name">{{callingItem.name}}</div>
                     <div class="right">
-                        <a data-action="view"><span class="fas fa-eye"></span></a>
+                        <a data-action="view" title="{{localizeHeart 'base' 'view'}}"><span class="fas fa-eye"></span></a>
                         {{#if callingItem.isOwner}}
                         <a data-action="delete" title="{{localizeHeart 'base' 'delete'}}"><span class="fas fa-trash"></span></a>
                         {{/if}}
