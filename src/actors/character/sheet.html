@@ -15,7 +15,7 @@
 
     <div class="item-list">
     {{#each list as |item|}}
-        {{> (join "/" "heart:items" type "preview.html") item=item dataPath="???"}}
+        {{> (join "/" "heart:items" type "preview.html") item=item dataPath="???" hideInactive=../hideInactive}}
     {{/each}}
     </div>
     
@@ -33,7 +33,6 @@
     <button data-action="fallout-roll"><span class="fas fa-dice"></span> {{localizeHeart "perform" "roll-fallout"}}</button>
 </div>
 <form class="heart sheet actor character {{cssClass}}" autocomplete="off">
-    <div class="grid-2 place-top">
         <img class="profile" src="{{data.img}}" title="{{actor.name}}" data-edit="img"/>
         <div class="section grid-3 resistances place-top">
             <div></div>
@@ -84,7 +83,7 @@
         {{> itemListSection type="beat" list=actor.proxy.beats description_path="data.active_beats" overrideTitle=(localizeHeart "beat" "active" "label-multiple")}}
         {{> itemListSection type="equipment" list=actor.proxy.equipment description_path="data.equipment"}}
         {{> itemListSection type="resource" list=actor.proxy.resources description_path="data.resources"}}
-        {{> itemListSection type="ability" list=actor.proxy.abilities description_path="data.abilities"}}
+        {{> itemListSection type="ability" list=actor.proxy.abilities description_path="data.abilities" hideInactive=true}}
         {{> itemListSection type="fallout" list=(lookup actor.itemTypes "fallout") description_path="data.fallout"}}
 
         <div class="section skills grid-2 auto-first-col">
@@ -115,6 +114,5 @@
             <h3>{{localizeHeart "character" "notes"}}</h3>
             {{editor content=actor.data.data.notes target="data.notes" button=true editable=editable owner=owner}}
         </div>
-    </div>
 </form>
 </div>

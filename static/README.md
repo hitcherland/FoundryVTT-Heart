@@ -100,3 +100,4 @@ An example chat message as a result:
 - [x] Make "class" and "calling" items
 - [ ] Look into making class and calling packs
 - [ ] Add editable tags to taggables (resources, equipment etc)
+- [ ] Add ability to include and control the minor abilities defined inside Major Abilities.

@@ -23,6 +23,9 @@ a[disabled]
     position: relative
     background: white
 
+    h3
+        font-size: 1.5em
+
     .info .grid-2
         grid-gap: 1em
         align-items: center
@@ -36,9 +39,11 @@ a[disabled]
     
     img.profile
         object-fit: contain
-        height: 100%
+        width: 100%
         min-height: 100px
+        max-height: 256px
         border: 0
+        background: util.$red-transparent
 
     .faded
         opacity: 66%
@@ -63,9 +68,9 @@ a[disabled]
         column-gap: 0.5em
 
         &.resistances
-            grid-template-columns: auto 1fr auto
+            grid-template-columns: auto auto auto
             align-items: start
-            justify-content: top
+            justify-content: space-evenly
 
             &.left
                 justify-self: left

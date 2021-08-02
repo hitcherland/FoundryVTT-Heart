@@ -7,7 +7,7 @@
 </h2>
 <div class="item-list">
     {{#each abilities as |ability|}}
-        {{> "heart:items/ability/preview.html" item=ability}}
+        {{> "heart:items/ability/preview.html" item=ability showActivate=true}}
     {{/each}}
 </div>
 {{/inline}}
@@ -79,7 +79,7 @@
                     </div>
                     {{#each (lookup ../childrenTypes "equipment") as |item|}}
                         {{#if (eq item.data.data.group groupId )}}
-                            {{> "heart:items/equipment/preview.html" item=item hideActivate=true}}
+                            {{> "heart:items/equipment/preview.html" item=item}}
                         {{/if}}
                     {{/each}}
                     {{#if (and ../user.isGM (not ../item.isChild) (not ../item.isOwned)) }}

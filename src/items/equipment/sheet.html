@@ -1,6 +1,8 @@
 {{#> "heart:items/base/sheet.html" type="equipment"}}
-<label>{{localizeHeart "equipment" "type" "label-single"}}</label>
-<select name="data.type">
-    {{selectOptions equipment_types selected=data.data.type}}
-</select>
+<div class="grid-2 auto-first-col place-center" style="flex: auto 0 0">
+    <label>{{localizeHeart "equipment" "type" "label-single"}}</label>
+    <select name="data.type">
+        {{selectOptions equipment_types selected=data.data.type}}
+    </select>
+</div>
 {{/ "heart:items/base/sheet.html" }}

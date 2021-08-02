@@ -25,7 +25,7 @@ class HeartItem extends Item {
     }
 
     get effects() {
-        if (this.proxy !== undefined) {
+        if (this.proxy !== undefined && this.proxy.effects !== undefined) {
             const effects = new Collection(super.effects.entries());
             this.proxy.effects.forEach(effect => {
                 effects.set(effect.id, effect);
@@ -63,8 +63,13 @@ class HeartItem extends Item {
     }
 
     get children() {
-        if (this.data.data.children === undefined)
-            return;
+        if (this.data.data.children === undefined) {
+            if(game.system.model.Item[this.type].children !== undefined) {
+                return new Collection();
+            } else {
+                return
+            }
+        }
 
         const map = new Collection();
         Object.entries(this.data.data.children).forEach(([key, value]) => {
@@ -74,6 +79,14 @@ class HeartItem extends Item {
         return map;
     }
 
+    get childrenTypes() {
+        return this.children.reduce((map, child) => {
+            if(map[child.type] === undefined)
+                map[child.type] = [];
+
+            map[child.type].push(child);
+        }, {});
+    }
 
     get isOwner() {
         if (!this.isChild) {

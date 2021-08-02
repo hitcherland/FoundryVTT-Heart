@@ -1,6 +1,12 @@
 {
     "ability": {
         "label-single": "Ability",
-        "label-multiple": "Abilities"
+        "label-multiple": "Abilities",
+        "add-child-ability": "Add Nested Ability",
+        "type": {
+            "minor": "Minor",
+            "major": "Major",
+            "zenith": "Zenith"
+        }
     }
 }

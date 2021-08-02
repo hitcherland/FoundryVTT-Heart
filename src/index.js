@@ -65,6 +65,10 @@ function initialise() {
         return a + b;
     });
 
+    Handlebars.registerHelper('undef', function(a) {
+        return a === undefined;
+    });
+
     Handlebars.registerHelper('titlecase', function(a) {
         return a[0].toUpperCase() + a.slice(1);
     });

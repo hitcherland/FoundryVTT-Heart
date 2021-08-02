@@ -1,6 +1,6 @@
 {{#> "heart:common/sheet.html" documentName="item" type=type}}
-    {{#if data.data.die_size}}
     <div class="grid-2 auto-first-col place-center" style="flex: auto 0 0">
+    {{#if data.data.die_size}}
         <label>
             {{localizeHeart "die_size" "label-single"}}
         </label>
@@ -12,10 +12,25 @@
         {{else}}
         {{data.data.die_size}}
         {{/if}}
-        
-        {{> @partial-block }}
-    </div>
-        
     {{/if}}
+    {{#if item.isOwner }}
+        {{#if (not (undef data.data.active))}}
+            <label>
+                {{localizeHeart "base" "is-active"}}
+            </label>
+            <input type="checkbox" value="data.active" {{checked data.data.active}}/>
+        {{/if}}
+
+        {{#if (not (undef data.data.complete))}}
+            <label>
+                {{localizeHeart "base" "is-complete"}}
+            </label>
+            <input type="checkbox" value="data.complete" {{checked data.data.complete}}/>
+        {{/if}}
+    {{/if}}
+    </div>
+
     {{editor content=data.data.description target="data.description" button=true editable=editable owner=owner}}
+        
+    {{> @partial-block }}
 {{/ "heart:common/sheet.html" }}

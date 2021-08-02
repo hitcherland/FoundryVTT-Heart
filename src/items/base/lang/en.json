@@ -8,6 +8,8 @@
         "complete": "Complete",
         "uncomplete": "Uncomplete",
         "delete": "Delete",
-        "view": "Open Sheet"
+        "view": "Open Sheet",
+        "is-active": "Is Active?",
+        "is-complete": "Is Complete?"
     }
 }

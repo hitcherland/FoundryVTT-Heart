@@ -1,5 +1,4 @@
 <div data-item-id="{{item.uuid}}" class="item preview {{item.type}}">
-    
     <div class="actionbar">
         <a data-action="view" title="{{localizeHeart 'base' 'view'}}"><span class="fas fa-eye"></span></a>
         {{#if item.isOwner}}
@@ -10,7 +9,7 @@
                 <a data-action="complete" title="{{localizeHeart 'base' 'complete'}}"><span class="fas fa-check"></span></a>
                 {{/if}}
             {{/if}}
-            {{#if (and (not hideActivate) item.isChild showActivate)}}
+            {{#if showActivate}}
                 {{#if item.data.data.active}}
                 <a data-action="deactivate" title="{{localizeHeart 'base' 'deactivate'}}"><span class="fas fa-toggle-on"></span></a>
                 {{else}}
