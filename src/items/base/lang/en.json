@@ -7,6 +7,7 @@
         "deactivate": "Deactivate",
         "complete": "Complete",
         "uncomplete": "Uncomplete",
+        "delete": "Delete",
         "view": "Open Sheet"
     }
 }
