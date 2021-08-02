@@ -29,6 +29,30 @@ export default class extends HeartItemSheet {
         data.zenithAbilities = this.item.children.filter(x => x.type === 'ability' && x.data.data.type === 'zenith');
         return data;
     }
+
+    activateListeners(html) {
+        super.activateListeners(html);
+
+        html.find('[data-action=add-equipment-group]').click(ev => {
+            const id = randomID();
+            const groups = this.item.data.data.equipment_groups || [];
+            groups.push(id);
+            return this.item.update({'data.equipment_groups': groups});
+        });
+
+        html.find('[data-group-id] [data-action=delete-equipment-group]').click(async ev => {
+            const target = $(ev.currentTarget);
+            const groupId = target.closest('[data-group-id]').data('groupId');
+            const groups = this.item.data.data.equipment_groups.filter(x => x === groupId);
+            
+            this.item.children.filter(x => x.type === 'resource' && x.data.data.group === groupId).forEach(item => {
+               item.delete();
+            });
+
+            return this.item.update({'data.equipment_groups': groups});
+
+        });
+    }
 }
 
 export {

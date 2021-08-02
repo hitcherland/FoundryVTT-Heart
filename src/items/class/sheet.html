@@ -31,7 +31,7 @@
     <h2>
         {{localizeHeart "class" "core-traits" "label-multiple"}}
     </h2>
-    <div class="grid-2">
+    <div class="grid-2 auto-first-col">
         <div class="title-font">{{localizeHeart "skill" "label-single"}}</div>
         {{#if (and editable (not item.isOwned))}}
         <select name="data.core_skill">
@@ -64,12 +64,28 @@
     
         <div class="title-font">{{localizeHeart "equipment" "label-single"}}</div>
         <div>
-            <a class="right" data-action="add-child" data-type="equipment"><span class="fas fa-plus"></span> {{localizeHeart "class" "equipment" "add"}}</a>
-        </div>
-        <div class="wide">
-            {{#each (lookup childrenTypes "equipment") as |item|}}
-                {{> "heart:items/equipment/preview.html"}}
+            {{#if (gt item.data.data.equipment_groups.length 1)}}
+                {{localizeHeart "class" "equipment" "pick-one"}}
+            {{/if}}
+            {{#each item.data.data.equipment_groups as |groupId|}}
+                <div class="equipment-group">
+                    {{#each (lookup ../childrenTypes "equipment") as |item|}}
+                        {{#if (eq item.data.data.group groupId )}}
+                            {{> "heart:items/equipment/preview.html" item=item}}
+                        {{/if}}
+                    {{/each}}
+                    {{#if ../user.isGM }}
+                    <div class="flexcol">
+                        <a class="right" data-action="add-child" data-type="equipment" data-data='{"name": "New Resource", "domain": "cursed", "group": "{{groupId}}"}'><span class="fas fa-plus"></span> {{localizeHeart "class" "equipment" "add"}}</a>
+                        <a class="right" data-action="delete-equipment-group"><span class="fas fa-trash"></span> {{localizeHeart "class" "equipment" "delete-group"}}</a>
+                    </div>
+                    {{/if}}
+                </div>
             {{/each}}
+            
+            {{#if user.isGM }}
+                <a class="right" data-action="add-equipment-group"><span class="fas fa-plus"></span> {{localizeHeart "class" "equipment" "add-group"}}</a>
+            {{/if}}          
         </div>
     </div>
 

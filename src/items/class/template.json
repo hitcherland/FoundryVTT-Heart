@@ -4,7 +4,8 @@
             "templates": ["has_description", "has_children"],
             "type": "core",
             "core_skill": "hunt",
-            "core_domain": "cursed"
+            "core_domain": "cursed",
+            "equipment_groups": ["core"]
         }
     }
 }

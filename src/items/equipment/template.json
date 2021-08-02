@@ -2,7 +2,8 @@
     "Item": {   
         "equipment": {
             "templates": ["is_rollable", "has_description", "is_activatable"],
-            "type": "miscellaneous"
+            "type": "miscellaneous",
+            "group": "core"
         }
     }
 }

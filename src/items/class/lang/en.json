@@ -42,8 +42,11 @@
             "delete": "Delete"
         },
         "equipment": {
+            "pick-one": "Pick One",
             "add": "Add Class Equipment",
-            "delete": "Delete"
+            "delete": "Delete",
+            "add-group": "Add Equipment Group",
+            "delete-group": "Delete Group",
         }
     }
 }
