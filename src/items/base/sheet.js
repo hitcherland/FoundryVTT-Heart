@@ -71,13 +71,6 @@ export default class HeartItemSheet extends HeartSheetMixin(ItemSheet) {
             this.render(true);
         });
 
-        html.find('[data-item-id] [data-action=activate]').click(async ev => {
-            const target = $(ev.currentTarget);
-            const uuid = target.closest('[data-item-id]').data('itemId');
-            const item = await fromUuid(uuid);
-            item.update({ 'data.active': true });
-        });
-
         html.find('[data-item-id] [data-action=view]').click(async ev => {
             const target = $(ev.currentTarget);
             const uuid = target.closest('[data-item-id]').data('itemId');
@@ -88,6 +81,13 @@ export default class HeartItemSheet extends HeartSheetMixin(ItemSheet) {
             }
             const item = await fromUuid(uuid);
             item.update({ 'data.active': false });
+        });
+
+        html.find('[data-item-id] [data-action=activate]').click(async ev => {
+            const target = $(ev.currentTarget);
+            const uuid = target.closest('[data-item-id]').data('itemId');
+            const item = await fromUuid(uuid);
+            item.update({ 'data.active': true });
         });
 
         html.find('[data-item-id] [data-action=deactivate]').click(async ev => {

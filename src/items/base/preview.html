@@ -10,7 +10,7 @@
                 <a data-action="complete" title="{{localizeHeart 'base' 'complete'}}"><span class="fas fa-check"></span></a>
                 {{/if}}
             {{/if}}
-            {{#if (and item.isChild showActivate)}}
+            {{#if (and (not hideActivate) item.isChild showActivate)}}
                 {{#if item.data.data.active}}
                 <a data-action="deactivate" title="{{localizeHeart 'base' 'deactivate'}}"><span class="fas fa-toggle-on"></span></a>
                 {{else}}

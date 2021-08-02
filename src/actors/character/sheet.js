@@ -12,16 +12,18 @@ export default class CharacterSheet extends HeartActorSheet {
     }
 
     async _onDropItemCreate(itemData) {
-        if(itemData.type === 'calling') {
-            this.actor.itemTypes.calling.forEach(item => {
-                item.delete();
-            });
-        }
-
-        if(itemData.type === 'class') {
-            this.actor.itemTypes.class.forEach(item => {
-                item.delete();
-            });
+        if(this.actor.type === 'character') {
+            if(itemData.type === 'calling' ) {
+                this.actor.itemTypes.calling.forEach(item => {
+                    item.delete();
+                });
+            }
+    
+            if(itemData.type === 'class') {
+                this.actor.itemTypes.class.forEach(item => {
+                    item.delete();
+                });
+            }
         }
 
         return super._onDropItemCreate(itemData);

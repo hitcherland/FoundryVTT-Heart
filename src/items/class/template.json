@@ -5,7 +5,8 @@
             "type": "core",
             "core_skill": "hunt",
             "core_domain": "cursed",
-            "equipment_groups": ["core"]
+            "equipment_groups": ["core"],
+            "active_equipment_group": ""
         }
     }
 }

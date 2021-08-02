@@ -82,8 +82,8 @@
         </div>
 
         {{> itemListSection type="beat" list=actor.proxy.beats description_path="data.active_beats" overrideTitle=(localizeHeart "beat" "active" "label-multiple")}}
-        {{> itemListSection type="equipment" list=(lookup actor.itemTypes "equipment") description_path="data.equipment"}}
-        {{> itemListSection type="resource" list=(lookup actor.itemTypes "resource") description_path="data.resources"}}
+        {{> itemListSection type="equipment" list=actor.proxy.equipment description_path="data.equipment"}}
+        {{> itemListSection type="resource" list=actor.proxy.resources description_path="data.resources"}}
         {{> itemListSection type="ability" list=actor.proxy.abilities description_path="data.abilities"}}
         {{> itemListSection type="fallout" list=(lookup actor.itemTypes "fallout") description_path="data.fallout"}}
 

@@ -92,4 +92,11 @@ form.heart.class
         margin: 5px 0
         padding: 5px
         border-radius: 3px
-        border: 1px solid util.$red
+        border: 1px dashed util.$red
+
+        &:hover
+            box-shadow: 0px 0px 5px util.$red
+            cursor: pointer
+
+        &.active
+            border-style: solid
