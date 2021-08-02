@@ -13,9 +13,9 @@
             {{#if item.isChild}}
                 {{#if showActivate}}
                     {{#if item.data.data.active}}
-                    <a data-action="deactivate" title="{{localizeHeart 'base' 'deactivate'}}"><span class="fas fa-toggle-off"></span></a>
+                    <a data-action="deactivate" title="{{localizeHeart 'base' 'deactivate'}}"><span class="fas fa-toggle-on"></span></a>
                     {{else}}
-                    <a data-action="activate" title="{{localizeHeart 'base' 'activate'}}"><span class="fas fa-toggle-on"></span></a>
+                    <a data-action="activate" title="{{localizeHeart 'base' 'activate'}}"><span class="fas fa-toggle-off"></span></a>
                     {{/if}}
                 {{/if}}
             {{else}}
