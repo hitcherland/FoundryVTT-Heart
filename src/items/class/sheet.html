@@ -55,7 +55,7 @@
             <a class="right" data-action="add-child" data-type="resource"><span class="fas fa-plus"></span> {{localizeHeart "class" "resource" "add"}}</a>
         </div>
         <div class="wide">
-            {{#each lookup(childrenTypes "resource") as |item|}}
+            {{#each (lookup childrenTypes "resource") as |item|}}
                 {{> "heart:items/resource/preview.html"}}
             {{/each}}
         </div>
@@ -65,7 +65,7 @@
             <a class="right" data-action="add-child" data-type="equipment"><span class="fas fa-plus"></span> {{localizeHeart "class" "equipment" "add"}}</a>
         </div>
         <div class="wide">
-            {{#each lookup(childrenTypes "equipment") as |item|}}
+            {{#each (lookup childrenTypes "equipment") as |item|}}
                 {{> "heart:items/equipment/preview.html"}}
             {{/each}}
         </div>
