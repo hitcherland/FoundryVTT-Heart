@@ -77,7 +77,9 @@ class HeartItem extends Item {
     async delete() {
         if(this.isChild)
             await this.parentItem.update({[`data.children.-=${this.id}`]: null});
+        try {
         super.delete();
+        } catch(err) {}
     }
 
     getEmbeddedDocument(embeddedName, embeddedId) {
