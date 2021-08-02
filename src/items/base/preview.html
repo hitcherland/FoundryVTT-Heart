@@ -2,23 +2,22 @@
     
     <div class="actionbar">
         <a data-action="view" title="{{localizeHeart 'base' 'view'}}"><span class="fas fa-eye"></span></a>
-        {{#if showComplete}}
-            {{#if item.data.data.complete}}
-            <a data-action="uncomplete" title="{{localizeHeart 'base' 'uncomplete'}}"><span class="fas fa-times"></span></a>
-            {{else}}
-            <a data-action="complete" title="{{localizeHeart 'base' 'complete'}}"><span class="fas fa-check"></span></a>
-            {{/if}}
-        {{/if}}
         {{#if item.isOwner}}
-            {{#if item.isChild}}
-                {{#if showActivate}}
-                    {{#if item.data.data.active}}
-                    <a data-action="deactivate" title="{{localizeHeart 'base' 'deactivate'}}"><span class="fas fa-toggle-on"></span></a>
-                    {{else}}
-                    <a data-action="activate" title="{{localizeHeart 'base' 'activate'}}"><span class="fas fa-toggle-off"></span></a>
-                    {{/if}}
+            {{#if showComplete}}
+                {{#if item.data.data.complete}}
+                <a data-action="uncomplete" title="{{localizeHeart 'base' 'uncomplete'}}"><span class="fas fa-times"></span></a>
+                {{else}}
+                <a data-action="complete" title="{{localizeHeart 'base' 'complete'}}"><span class="fas fa-check"></span></a>
                 {{/if}}
-            {{else}}
+            {{/if}}
+            {{#if (and item.isChild showActivate)}}
+                {{#if item.data.data.active}}
+                <a data-action="deactivate" title="{{localizeHeart 'base' 'deactivate'}}"><span class="fas fa-toggle-on"></span></a>
+                {{else}}
+                <a data-action="activate" title="{{localizeHeart 'base' 'activate'}}"><span class="fas fa-toggle-off"></span></a>
+                {{/if}}
+            {{/if}}
+            {{#if (not (or item.parentItem.isChild item.parentItem.isOwned))}}
                 <a data-action="delete" title="{{localizeHeart 'base' 'delete'}}"><span class="fas fa-trash"></span></a>
             {{/if}}
         {{/if}}

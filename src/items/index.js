@@ -74,6 +74,15 @@ class HeartItem extends Item {
         return map;
     }
 
+    
+    get isOwner() {
+        if(!this.isChild) {
+            return this.testUserPermission(game.user, "OWNER");
+        }
+
+        return this.parentItem.testUserPermission(game.user, "OWNER");
+    }
+
     async delete() {
         if(this.isChild)
             await this.parentItem.update({[`data.children.-=${this.id}`]: null});

@@ -49,14 +49,14 @@ export default class HeartItemSheet extends HeartSheetMixin(ItemSheet) {
             this.item.update({[`data.children.${id}`]: data});
         });
 
-        html.find('[data-item-id] [data-action=edit-child], [data-item-id] [data-action=view]').click(async ev => {
+        html.find('[data-item-id] [data-action=view]').click(async ev => {
             const target = $(ev.currentTarget);
             const uuid = target.closest('[data-item-id]').data('itemId');
             const item = await fromUuid(uuid);
             item.sheet.render(true);
         });
 
-        html.find('[data-item-id] [data-action=delete-child]').click(async ev => {
+        html.find('[data-item-id] [data-action=delete]').click(async ev => {
             const target = $(ev.currentTarget);
             const uuid = target.closest('[data-item-id]').data('itemId');
             const item = await fromUuid(uuid);
@@ -74,6 +74,11 @@ export default class HeartItemSheet extends HeartSheetMixin(ItemSheet) {
         html.find('[data-item-id] [data-action=view]').click(async ev => {
             const target = $(ev.currentTarget);
             const uuid = target.closest('[data-item-id]').data('itemId');
+            if(!Boolean(uuid)) {
+                console.error('Invalid target has no data-item-id attribute', ev.currentTarget);
+                ui.notifications.error('Invalid uuid');
+                return;
+            }
             const item = await fromUuid(uuid);
             item.update({'data.active': false});
         });
@@ -102,6 +107,8 @@ export default class HeartItemSheet extends HeartSheetMixin(ItemSheet) {
 
     getData() {
         const data = super.getData();
+        data.user = game.user;
+        
         data.die_sizes = game.heart.die_sizes.reduce((map, die) => {
             map[die] = game.i18n.format('heart.die_size.d(N)', {N: die.replace(/^d/, '')})
             return map;

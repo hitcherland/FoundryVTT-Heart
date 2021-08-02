@@ -52,12 +52,14 @@
 
         <div class="title-font">{{localizeHeart "resource" "label-single"}}</div>
         <div>
-            <a class="right" data-action="add-child" data-type="resource"><span class="fas fa-plus"></span> {{localizeHeart "class" "resource" "add"}}</a>
+            {{#each (lookup childrenTypes "resource") as |resource|}}
+                {{> "heart:items/resource/preview.html" item=resource user=../user}}
+            {{/each}}
+            {{#if user.isGM }}
+            <a class="right" data-action="add-child" data-type="resource" data-data='{"name": "New Resource", "domain": "cursed"}'><span class="fas fa-plus"></span> {{localizeHeart "class" "resource" "add"}}</a>
+            {{/if}}
         </div>
         <div class="wide">
-            {{#each (lookup childrenTypes "resource") as |item|}}
-                {{> "heart:items/resource/preview.html"}}
-            {{/each}}
         </div>
     
         <div class="title-font">{{localizeHeart "equipment" "label-single"}}</div>
