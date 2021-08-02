@@ -97,5 +97,6 @@ An example chat message as a result:
 - [x] Cleanup translation file
 - [x] Cleanup CSS file
 - [ ] Add ChatMessage buttons to clear stress when receiving fallout
-- [ ] Make "class" and "calling" items
+- [x] Make "class" and "calling" items
 - [ ] Look into making class and calling packs
+- [ ] Add editable tags to taggables (resources, equipment etc)
