@@ -10,6 +10,8 @@ class HeartItem extends Item {
             value: context.parentItem || null,
             writable: false
         });
+
+        this.children;
     }
 
     get proxy() {
@@ -36,24 +38,6 @@ class HeartItem extends Item {
         }
     }
 
-    async update(data = {}, context = {}) {
-        if (this.isChild) {
-            const update = this.parentItem.update({
-                [`data.children.${this.id}`]: data
-            });
-
-            update.then(parent => {
-                const child = this.parentItem.data.data.children[this.id];
-                mergeObject(this.data._source, child);
-                mergeObject(this.data, child);
-            });
-
-            return update;
-        } else {
-            return super.update(data, context);
-        }
-    }
-
     get uuid() {
         if (!this.isChild) {
             return super.uuid;
@@ -63,6 +47,9 @@ class HeartItem extends Item {
     }
 
     get children() {
+        if(this._children !== undefined)
+            return this._children;
+        
         if (this.data.data.children === undefined) {
             if(game.system.model.Item[this.type].children !== undefined) {
                 return new Collection();
@@ -72,9 +59,15 @@ class HeartItem extends Item {
         }
 
         const map = new Collection();
-        Object.entries(this.data.data.children).forEach(([key, value]) => {
-            map.set(key, this.getEmbeddedDocument('@' + value.documentName, key));
+        Object.entries(this.data.data.children).forEach(([key, data]) => {
+            const documentName = data.documentName;
+            const child = new CONFIG[documentName].documentClass(data, {
+                parentItem: this
+            });
+            map.set(key, child);
         });
+
+        this._children = map;
 
         return map;
     }
@@ -85,6 +78,7 @@ class HeartItem extends Item {
                 map[child.type] = [];
 
             map[child.type].push(child);
+            return map;
         }, {});
     }
 
@@ -96,12 +90,62 @@ class HeartItem extends Item {
         return this.parentItem.testUserPermission(game.user, "OWNER");
     }
 
+    async update(data = {}, context = {}) {
+        if (this.isChild) {
+            await this.parentItem.updateChildren({[`${this.id}`]: data}, context);
+        } else {
+            return await super.update(data, context);
+        }
+    }
+
+    async refreshChildren() {
+        if(this.children === undefined || this.children.size === 0) return;
+
+        await Promise.all(this.children.map(async (child) => {
+            mergeObject(child.data._source, this.data.data.children[child.id]);
+            child.prepareData();
+
+            if(child.children?.size ?? 0 >= 0) {
+                child.refreshChildren();
+            }
+            
+            if(child.sheet.rendered)
+                await child.sheet.render();
+        }));
+    }
+
+    async updateChildren(data={}, context={}) {
+        const ctx = {...context, render: false};
+        const updates = await this.update({'data.children': data}, ctx);
+        if(updates === undefined) return;
+
+        this.refreshChildren();     
+        
+        if(this.sheet.rendered) {
+            await this.sheet.render(true);
+        }
+        return updates;
+    }
+    
     async delete() {
-        if (this.isChild)
-            await this.parentItem.update({ [`data.children.-=${this.id}`]: null });
-        try {
-            super.delete();
-        } catch (err) { }
+        if (this.isChild) {
+            if(this.sheet.rendered)
+                await this.sheet.close()
+            
+            await this.parentItem.deleteChildren([this.id]);
+        } else
+            return super.delete();
+    }
+
+    async deleteChildren(ids) {
+        if(this.data.data.children === undefined) return;
+
+        const updates = {};
+        ids.forEach(id => {
+            this.children.delete(id);
+            updates[`data.children.-=${id}`] = null
+        });
+        return await this.update(updates);
     }
 
     getEmbeddedDocument(embeddedName, embeddedId) {
@@ -109,13 +153,7 @@ class HeartItem extends Item {
             if (this.data.data.children === undefined)
                 return;
 
-            const child_data = this.data.data.children[embeddedId];
-            if (child_data === undefined)
-                return undefined;
-            const documentName = embeddedName.slice(1) || child_data.documentName;
-            return new CONFIG[documentName].documentClass(child_data, {
-                parentItem: this
-            });
+            return this.children.get(embeddedId);
         } else {
             return super.getEmbeddedDocument(embeddedName, embeddedId);
         }

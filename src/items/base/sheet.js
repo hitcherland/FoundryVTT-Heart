@@ -50,8 +50,12 @@ export default class HeartItemSheet extends HeartSheetMixin(ItemSheet) {
             let itemData = target.data('data') || {};
 
             const id = randomID();
-            const data = new CONFIG[documentName].documentClass({ _id: id, type: type, name: `New ${type}`, data: itemData }).toObject();
+            const child = new CONFIG[documentName].documentClass({ _id: id, type: type, name: `New ${type}`, data: itemData }, {
+                parentItem: this.item
+            });
+            const data = child.toObject();
             data.documentName = documentName;
+            this.item.children.set(id, child);
 
             this.item.update({ [`data.children.${id}`]: data });
         });
@@ -67,8 +71,9 @@ export default class HeartItemSheet extends HeartSheetMixin(ItemSheet) {
             const target = $(ev.currentTarget);
             const uuid = target.closest('[data-item-id]').data('itemId');
             const item = await fromUuid(uuid);
-            item.delete();
-            this.render(true);
+            if(item === null) return;
+            await item.delete();
+            await this.render(true);
         });
 
         html.find('[data-item-id] [data-action=view]').click(async ev => {

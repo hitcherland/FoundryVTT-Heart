@@ -86,10 +86,14 @@ export default class CharacterSheet extends HeartActorSheet {
         });
 
         html.find('[data-action=add][data-type]').click(ev => {
-            const type = $(ev.currentTarget).data('type');
+            const target = $(ev.currentTarget);
+            const type = target.data('type');
+            const itemData = target.data('data') || {};
+
             const doc = new CONFIG.Item.documentClass({
                 type,
-                name: `New ${type}`
+                name: `New ${type}`,
+                data: itemData
             });
 
             

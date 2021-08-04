@@ -8,14 +8,14 @@
         {{/if}}
         {{#if actor.isOwner}}
         <div class="right">
-            <a data-action="add" data-type="{{type}}"><span class="fas fa-plus"></span></a>
+            <a data-action="add" data-type="{{type}}" data-data='{"active": true}'><span class="fas fa-plus"></span></a>
         </div>
         {{/if}}
     </h2>
 
     <div class="item-list">
     {{#each list as |item|}}
-        {{> (join "/" "heart:items" type "preview.html") item=item dataPath="???" hideInactive=../hideInactive}}
+        {{> (join "/" "heart:items" type "preview.html") item=item dataPath="???" hideInactive=../hideInactive showActivate=../showActivate}}
     {{/each}}
     </div>
     
@@ -81,7 +81,7 @@
         </div>
 
         {{> itemListSection type="beat" list=actor.proxy.beats description_path="data.active_beats" overrideTitle=(localizeHeart "beat" "active" "label-multiple")}}
-        {{> itemListSection type="equipment" list=actor.proxy.equipment description_path="data.equipment"}}
+        {{> itemListSection type="equipment" list=actor.proxy.equipment description_path="data.equipment" showActivate=true}}
         {{> itemListSection type="resource" list=actor.proxy.resources description_path="data.resources"}}
         {{> itemListSection type="ability" list=actor.proxy.abilities description_path="data.abilities" hideInactive=true}}
         {{> itemListSection type="fallout" list=(lookup actor.itemTypes "fallout") description_path="data.fallout"}}

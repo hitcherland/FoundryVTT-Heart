@@ -10,7 +10,7 @@
     <div>
         {{#each item.proxy.abilities as |ability|}}
             {{#if (or (not ../hideInactive) ability.data.data.active)}}
-            {{> "heart:items/ability/preview.html" item=ability showTypeInTitle=true showActivate=true}}
+            {{> "heart:items/ability/preview.html" document=../document item=ability showTypeInTitle=true showActivate=true}}
             {{/if}}
         {{/each}}
     </div>

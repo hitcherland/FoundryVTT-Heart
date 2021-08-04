@@ -16,7 +16,7 @@
                 <a data-action="activate" title="{{localizeHeart 'base' 'activate'}}"><span class="fas fa-toggle-off"></span></a>
                 {{/if}}
             {{/if}}
-            {{#if (not (or item.parentItem.isChild item.parentItem.isOwned))}}
+            {{#if (or (not item.isChild) (eq document.id item.parentItem.id)) }}
                 <a data-action="delete" title="{{localizeHeart 'base' 'delete'}}"><span class="fas fa-trash"></span></a>
             {{/if}}
         {{/if}}

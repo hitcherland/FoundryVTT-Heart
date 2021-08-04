@@ -2,7 +2,7 @@
 
 <div>
     {{#each item.proxy.abilities as |ability|}}
-        {{> "heart:items/ability/preview.html" item=ability}}
+        {{> "heart:items/ability/preview.html" document=../document item=ability}}
     {{/each}}
     <a data-action="add-child" data-type="ability" data-data='{"type": "minor", "name": "New Ability"}'><span class="fas fa-plus"></span> {{localizeHeart "ability" "add-child-ability"}}</a>
 </div>

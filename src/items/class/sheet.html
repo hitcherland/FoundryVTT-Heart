@@ -7,7 +7,7 @@
 </h2>
 <div class="item-list">
     {{#each abilities as |ability|}}
-        {{> "heart:items/ability/preview.html" item=ability showActivate=true}}
+        {{> "heart:items/ability/preview.html" document=../document item=ability showActivate=true}}
     {{/each}}
 </div>
 {{/inline}}
@@ -53,7 +53,7 @@
         <div class="title-font">{{localizeHeart "resource" "label-single"}}</div>
         <div>
             {{#each (lookup childrenTypes "resource") as |resource|}}
-                {{> "heart:items/resource/preview.html" item=resource user=../user}}
+                {{> "heart:items/resource/preview.html" document=../document item=resource user=../user}}
             {{/each}}
             
             {{#if (and user.isGM (not item.isChild) (not item.isOwned)) }}
@@ -79,7 +79,7 @@
                     </div>
                     {{#each (lookup ../childrenTypes "equipment") as |item|}}
                         {{#if (eq item.data.data.group groupId )}}
-                            {{> "heart:items/equipment/preview.html" item=item}}
+                            {{> "heart:items/equipment/preview.html" document=../document item=item showActivate=false}}
                         {{/if}}
                     {{/each}}
                     {{#if (and ../user.isGM (not ../item.isChild) (not ../item.isOwned)) }}
