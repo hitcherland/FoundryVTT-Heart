@@ -109,7 +109,7 @@ export default class CharacterSheet extends HeartActorSheet {
         html.find('[data-action=delete]').click(async ev => {
             const uuid = $(ev.currentTarget).closest('[data-item-id]').data('itemId');
             const item = await fromUuid(uuid);
-            item.delete();
+            item.deleteDialog();
         });
 
         html.find('[data-action=item-roll]').click(async ev => {
@@ -153,16 +153,6 @@ export default class CharacterSheet extends HeartActorSheet {
             roll.toMessage({
                 speaker: {actor: this.actor.id}
             });
-        });
-
-        
-        html.find('[data-item-id] [data-action=open-parent]').click(async ev => {
-            console.warn("open-parent", ev.currentTarget);
-            const target = $(ev.currentTarget);
-            const uuid = target.closest('[data-item-id]').data('itemId');
-            const item = await fromUuid(uuid);
-            const parent = item.parentItem;
-            parent.sheet.render(true);
         });
 
         html.find('[data-item-id] [data-action=activate]').click(async ev => {

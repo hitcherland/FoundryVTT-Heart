@@ -14,6 +14,15 @@ function activateTemplates() {
 }
 
 function registerSettings() {
+    game.settings.register('heart', 'showStartupMessage', {
+        name: 'Show Startup Message',
+        hint: 'Show the startup message, which provides a brief tutorial on how to use Heart.',
+        scope: 'client',
+        config: true,
+        default: true,
+        type: Boolean,
+    });
+
     game.settings.register('heart', 'showTextboxesBelowItems', {
         name: 'Show Textboxes Below Item Lists',
         hint: 'On the character sheet, toggle the legacy text boxes',
@@ -126,6 +135,28 @@ Hooks.once('init', initialise);
 
 Hooks.once('ready', function() {
     registerSettings();
+    if(game.settings.get('heart', 'showStartupMessage')) {
+         let d = new Dialog({
+          title: game.i18n.format("heart.dialog.title(VERSION)", {VERSION: game.system.data.version}),
+          content: game.i18n.format("heart.dialog.content(VERSION)", {VERSION: game.system.data.version}),
+          buttons: {
+           close: {
+            icon: '<i class="fas fa-times"></i>',
+            label: game.i18n.localize("heart.dialog.skip"),
+            callback: () => {}
+           },
+           prevent: {
+            icon: '<i class="fas fa-check"></i>',
+            label: game.i18n.localize("heart.dialog.dont-show-again"),
+            callback: () => game.settings.set('heart', 'showStartupMessage', false)
+           }
+          },
+          default: "skip",
+          render: html => {},
+          close: html => {}
+         });
+         d.render(true);
+    }
 });
 
 if (module.hot) {

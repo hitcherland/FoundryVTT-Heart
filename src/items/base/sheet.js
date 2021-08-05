@@ -72,48 +72,47 @@ export default class HeartItemSheet extends HeartSheetMixin(ItemSheet) {
             const uuid = target.closest('[data-item-id]').data('itemId');
             const item = await fromUuid(uuid);
             if(item === null) return;
-            await item.delete();
-            await this.render(true);
+            await item.deleteDialog();
+            //await this.render(true);
         });
 
         html.find('[data-item-id] [data-action=view]').click(async ev => {
             const target = $(ev.currentTarget);
             const uuid = target.closest('[data-item-id]').data('itemId');
-            if (!Boolean(uuid)) {
-                console.error('Invalid target has no data-item-id attribute', ev.currentTarget);
-                ui.notifications.error('Invalid uuid');
-                return;
-            }
             const item = await fromUuid(uuid);
-            item.update({ 'data.active': false });
+            item.render(true);
         });
 
         html.find('[data-item-id] [data-action=activate]').click(async ev => {
             const target = $(ev.currentTarget);
             const uuid = target.closest('[data-item-id]').data('itemId');
             const item = await fromUuid(uuid);
-            item.update({ 'data.active': true });
+            await item.update({ 'data.active': true });
+            this.render(true);
         });
 
         html.find('[data-item-id] [data-action=deactivate]').click(async ev => {
             const target = $(ev.currentTarget);
             const uuid = target.closest('[data-item-id]').data('itemId');
             const item = await fromUuid(uuid);
-            item.update({ 'data.active': false });
+            await item.update({ 'data.active': false });
+            this.render(true);
         });
 
         html.find('[data-item-id] [data-action=complete]').click(async ev => {
             const target = $(ev.currentTarget);
             const uuid = target.closest('[data-item-id]').data('itemId');
             const item = await fromUuid(uuid);
-            item.update({ 'data.complete': true });
+            await item.update({ 'data.complete': true });
+            this.render(true);
         });
 
         html.find('[data-item-id] [data-action=uncomplete]').click(async ev => {
             const target = $(ev.currentTarget);
             const uuid = target.closest('[data-item-id]').data('itemId');
             const item = await fromUuid(uuid);
-            item.update({ 'data.complete': false });
+            await item.update({ 'data.complete': false });
+            this.render(true);
         });
     }
 

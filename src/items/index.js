@@ -121,9 +121,12 @@ class HeartItem extends Item {
 
         this.refreshChildren();
 
-        if (this.sheet.rendered) {
+        if (this.sheet.rendered)
             await this.sheet.render(true);
-        }
+        
+        if(this.isEmbedded && this.parent.sheet.rendered)
+            await this.parent.sheet.render(true);
+            
         return updates;
     }
 

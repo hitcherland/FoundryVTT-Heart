@@ -1,13 +1,13 @@
 {{#*inline "beatSection"}}
 <h2>
     {{localizeHeart "beat" (join "" type "-beat") "label-multiple"}}
-    {{#if (and editable (not item.isOwned))}}
+    {{#if user.isGM }}
     <a class="right" data-action="add-child" data-type="beat" data-data='{"type": "{{type}}"}'><span class="fas fa-plus"></span> {{localizeHeart "beat" (join "" type "-beat") "add"}}</a>
     {{/if}}
 </h2>
 <div class="item-list">
     {{#each beats as |beat|}}
-        {{> "heart:items/beat/preview.html" item=beat}}
+        {{> "heart:items/beat/preview.html" item=beat showDelete=../user.isGM}}
     {{/each}}
 </div>
 {{/inline}}
@@ -30,7 +30,7 @@
 
     <h4>
         {{localizeHeart "calling" "questions" "prompt"}}
-        {{#if (and editable (not item.isOwned))}}
+        {{#if user.isGM }}
         <a class="right" data-action="add-question"><span class="fas fa-plus"></span> {{localizeHeart "calling" "questions" "add"}}</a>
         {{/if}}
     </h4>
@@ -56,7 +56,7 @@
                     <div>{{{question.question}}}</div>
                     {{/if}}
                 {{/if}}
-                {{#if (and ../editable (not ../item.isOwned))}}
+                {{#if user.isGM }}
                 <a class="action" data-action="delete-question"><span class="fas fa-trash"></span> {{localizeHeart "calling" "questions" "delete"}}</a>
                 {{/if}}
             </div>    
@@ -71,13 +71,13 @@
         {{else}}
             {{localizeHeart "calling" "core-ability" "label-multiple"}}
         {{/if}}
-        {{#if (and editable (not item.isOwned))}}
-        <a class="right" data-action="add-child" data-type="ability"><span class="fas fa-plus"></span> {{localizeHeart "calling" "core-ability" "add"}}</a>
+        {{#if user.isGM }}
+        <a class="right" data-action="add-child" data-type="ability" data-data='{"active": true}'><span class="fas fa-plus"></span> {{localizeHeart "calling" "core-ability" "add"}}</a>
         {{/if}}
     </h2>
     <div class="item-list">
         {{#each childrenTypes.ability as |ability|}}
-            {{> "heart:items/ability/preview.html" item=ability showActivate=true}}
+            {{> "heart:items/ability/preview.html" item=ability showActivate=true showDelete=../user.isGM}}
         {{/each}}
     </div>
 

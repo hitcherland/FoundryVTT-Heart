@@ -7,7 +7,7 @@
 </h2>
 <div class="item-list">
     {{#each abilities as |ability|}}
-        {{> "heart:items/ability/preview.html" document=../document item=ability showActivate=true}}
+        {{> "heart:items/ability/preview.html" document=../document item=ability showActivate=true showDelete=../user.isGM}}
     {{/each}}
 </div>
 {{/inline}}
@@ -53,10 +53,10 @@
         <div class="title-font">{{localizeHeart "resource" "label-single"}}</div>
         <div>
             {{#each (lookup childrenTypes "resource") as |resource|}}
-                {{> "heart:items/resource/preview.html" document=../document item=resource user=../user}}
+                {{> "heart:items/resource/preview.html" document=../document item=resource user=../user showDelete=../user.isGM}}
             {{/each}}
             
-            {{#if (and user.isGM (not item.isChild) (not item.isOwned)) }}
+            {{#if user.isGM }}
             <a class="right" data-action="add-child" data-type="resource" data-data='{"name": "New Resource", "domain": "cursed", "active": true}'><span class="fas fa-plus"></span> {{localizeHeart "class" "resource" "add"}}</a>
             {{/if}}
         </div>
@@ -70,6 +70,7 @@
             {{/if}}
             {{#each item.data.data.equipment_groups as |groupId|}}
                 <div class="equipment-group {{#if (eq groupId ../item.data.data.active_equipment_group)}}active{{/if}}" data-group-id="{{groupId}}">
+                    {{#if (or ../item.isEmbedded ../item.isChild) }}
                     <div class="actionbar">
                         {{#if (eq groupId ../item.data.data.active_equipment_group)}}
                         <a data-action="deactivate-group" title="{{localizeHeart 'base' 'deactivate'}}"><span class="fas fa-toggle-on"></span></a>
@@ -77,12 +78,13 @@
                         <a data-action="activate-group" title="{{localizeHeart 'base' 'activate'}}"><span class="fas fa-toggle-off"></span></a>
                         {{/if}}
                     </div>
+                    {{/if}}
                     {{#each (lookup ../childrenTypes "equipment") as |item|}}
                         {{#if (eq item.data.data.group groupId )}}
-                            {{> "heart:items/equipment/preview.html" document=../document item=item showActivate=false}}
+                            {{> "heart:items/equipment/preview.html" document=../document item=item showActivate=false showDelete=../user.isGM}}
                         {{/if}}
                     {{/each}}
-                    {{#if (and ../user.isGM (not ../item.isChild) (not ../item.isOwned)) }}
+                    {{#if ../user.isGM }}
                     <div class="flexcol">
                         <a class="right" data-action="add-child" data-type="equipment" data-data='{"name": "New Resource", "domain": "cursed", "group": "{{groupId}}"}'><span class="fas fa-plus"></span> {{localizeHeart "class" "equipment" "add"}}</a>
                         <a class="right" data-action="delete-equipment-group"><span class="fas fa-trash"></span> {{localizeHeart "class" "equipment" "delete-group"}}</a>
@@ -91,7 +93,7 @@
                 </div>
             {{/each}}
             
-            {{#if (and user.isGM (not item.isChild) (not item.isOwned)) }}
+            {{#if user.isGM }}
                 <a class="right" data-action="add-equipment-group"><span class="fas fa-plus"></span> {{localizeHeart "class" "equipment" "add-group"}}</a>
             {{/if}}          
         </div>
