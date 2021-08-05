@@ -47,11 +47,11 @@ class HeartItem extends Item {
     }
 
     get children() {
-        if(this._children !== undefined)
+        if (this._children !== undefined)
             return this._children;
-        
+
         if (this.data.data.children === undefined) {
-            if(game.system.model.Item[this.type].children !== undefined) {
+            if (game.system.model.Item[this.type].children !== undefined) {
                 return new Collection();
             } else {
                 return
@@ -74,7 +74,7 @@ class HeartItem extends Item {
 
     get childrenTypes() {
         return this.children.reduce((map, child) => {
-            if(map[child.type] === undefined)
+            if (map[child.type] === undefined)
                 map[child.type] = [];
 
             map[child.type].push(child);
@@ -92,53 +92,53 @@ class HeartItem extends Item {
 
     async update(data = {}, context = {}) {
         if (this.isChild) {
-            await this.parentItem.updateChildren({[`${this.id}`]: data}, context);
+            await this.parentItem.updateChildren({ [`${this.id}`]: data }, context);
         } else {
             return await super.update(data, context);
         }
     }
 
     async refreshChildren() {
-        if(this.children === undefined || this.children.size === 0) return;
+        if (this.children === undefined || this.children.size === 0) return;
 
         await Promise.all(this.children.map(async (child) => {
             mergeObject(child.data._source, this.data.data.children[child.id]);
             child.prepareData();
 
-            if(child.children?.size ?? 0 >= 0) {
+            if (child.children?.size ?? 0 >= 0) {
                 child.refreshChildren();
             }
-            
-            if(child.sheet.rendered)
+
+            if (child.sheet.rendered)
                 await child.sheet.render();
         }));
     }
 
-    async updateChildren(data={}, context={}) {
-        const ctx = {...context, render: false};
-        const updates = await this.update({'data.children': data}, ctx);
-        if(updates === undefined) return;
+    async updateChildren(data = {}, context = {}) {
+        const ctx = { ...context, render: false };
+        const updates = await this.update({ 'data.children': data }, ctx);
+        if (updates === undefined) return;
 
-        this.refreshChildren();     
-        
-        if(this.sheet.rendered) {
+        this.refreshChildren();
+
+        if (this.sheet.rendered) {
             await this.sheet.render(true);
         }
         return updates;
     }
-    
+
     async delete() {
         if (this.isChild) {
-            if(this.sheet.rendered)
+            if (this.sheet.rendered)
                 await this.sheet.close()
-            
+
             await this.parentItem.deleteChildren([this.id]);
         } else
             return super.delete();
     }
 
     async deleteChildren(ids) {
-        if(this.data.data.children === undefined) return;
+        if (this.data.data.children === undefined) return;
 
         const updates = {};
         ids.forEach(id => {
@@ -157,6 +157,16 @@ class HeartItem extends Item {
         } else {
             return super.getEmbeddedDocument(embeddedName, embeddedId);
         }
+    }
+
+    get permission() {
+        if (this.isChild) return this.parentItem.permission;
+        return super.permission;
+    }
+
+    testUserPermission(user, permission, { exact = false } = {}) {
+        if (this.isChild) return this.parentItem.testUserPermission(user, permission, { exact });
+        return super.testUserPermission(user, permission, { exact });
     }
 }
 
