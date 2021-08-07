@@ -114,5 +114,17 @@
             <h3>{{localizeHeart "character" "notes"}}</h3>
             {{editor content=actor.data.data.notes target="data.notes" button=true editable=editable owner=owner}}
         </div>
+        
+        <div class="section center wide inactive-items">
+            <h3>{{localizeHeart "character" "inactive-items"}}</h3>
+            <div>{{localizeHeart "character" "inactive-items-description"}}</div>
+            <div class="item-list">
+            {{#each actor.items as |item|}}
+                {{#if (and (not (undef item.data.data.active)) (not item.data.data.active)) }}
+                    {{> (join "/" "heart:items" item.type "preview.html") item=item dataPath="???" showActivate=../user.isOwner showDelete=../user.isOwner}}
+                {{/if}}
+            {{/each}}
+            </div>
+        </div>
 </form>
 </div>

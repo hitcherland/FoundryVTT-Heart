@@ -24,6 +24,8 @@ export default class CharacterSheet extends HeartActorSheet {
                     item.delete();
                 });
             }
+
+            itemData.data.active = true;
         }
 
         return super._onDropItemCreate(itemData);
@@ -43,6 +45,7 @@ export default class CharacterSheet extends HeartActorSheet {
         const data = super.getData();
         const callingItem = this.actor.proxy.calling;
         const classItem = this.actor.proxy.class;
+        data.user = game.user;
         data.callingItem = callingItem;
         data.classItem = classItem;
         data.showTextboxesBelowItems = game.settings.get('heart', 'showTextboxesBelowItems')
