@@ -81,7 +81,7 @@
                     {{/if}}
                     {{#each (lookup ../childrenTypes "equipment") as |item|}}
                         {{#if (eq item.data.data.group groupId )}}
-                            {{> "heart:items/equipment/preview.html" document=../document item=item showActivate=false showDelete=../user.isGM}}
+                            {{> "heart:items/equipment/preview.html" document=../document item=item showActivate=false showDelete=../../user.isGM}}
                         {{/if}}
                     {{/each}}
                     {{#if ../user.isGM }}

@@ -60,10 +60,11 @@ class HeartItem extends Item {
 
         const map = new Collection();
         Object.entries(this.data.data.children).forEach(([key, data]) => {
-            const documentName = data.documentName;
-            const child = new CONFIG[documentName].documentClass(data, {
+            let documentName = data.documentName;
+            const child = new CONFIG[documentName ?? 'Item'].documentClass(data, {
                 parentItem: this
             });
+
             map.set(key, child);
         });
 
@@ -96,6 +97,25 @@ class HeartItem extends Item {
         } else {
             return await super.update(data, context);
         }
+    }
+
+    async addChildren(datas=[]) {
+        const update = {};
+        datas.forEach(data => {
+            const id = randomID();
+            data._id = id;
+
+            const child = new CONFIG[data.documentName].documentClass(data, {
+                parentItem: this
+            });
+            
+            const childData = child.toObject();
+            childData.documentName = data.documentName;
+            update[id] = childData;
+            this.children.set(id, child);
+        });
+
+        return await this.update(flattenObject({'data.children': update}));
     }
 
     async refreshChildren() {

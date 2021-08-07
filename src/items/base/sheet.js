@@ -49,15 +49,8 @@ export default class HeartItemSheet extends HeartSheetMixin(ItemSheet) {
             const type = target.data('type');
             let itemData = target.data('data') || {};
 
-            const id = randomID();
-            const child = new CONFIG[documentName].documentClass({ _id: id, type: type, name: `New ${type}`, data: itemData }, {
-                parentItem: this.item
-            });
-            const data = child.toObject();
-            data.documentName = documentName;
-            this.item.children.set(id, child);
-
-            this.item.update({ [`data.children.${id}`]: data });
+            const data = {documentName, type: type, name: `New ${type}`, data: itemData };
+            this.item.addChildren([data]);
         });
 
         html.find('[data-item-id] [data-action=view]').click(async ev => {
@@ -162,6 +155,7 @@ export default class HeartItemSheet extends HeartSheetMixin(ItemSheet) {
         // Handle different data types
         switch (data.type) {
             case "Item":
+                data.documentName = 'Item';
                 return this._onDropItem(event, data);
         }
     }
@@ -169,16 +163,23 @@ export default class HeartItemSheet extends HeartSheetMixin(ItemSheet) {
     async _onDropItem(event, data) {
         if (!this.item.isOwner) return false;
         const item = await Item.implementation.fromDropData(data);
+        
+        if(!this._canDragDropItem(item)) {
+            return;
+        }
+
         const itemData = item.toObject();
+        itemData.documentName = 'Item';
 
         const parentItem = this.item;
         let sameActor = (data.parentItemId === parentItem.id);
         if (sameActor) return;
 
+        return parentItem.addChildren([itemData]);
+    }
 
-        const id = randomID();
-        itemData._id = id;
-        return parentItem.update({ [`data.children.${id}`]: itemData });
+    async _canDragDropItem(item) {
+        return false;
     }
 
     async _onDragStart(event) {

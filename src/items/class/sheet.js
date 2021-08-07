@@ -82,10 +82,18 @@ export default class extends HeartItemSheet {
                     childrenUpdates[`${child.id}.data.active`] = false;
                 }
             });
+
             await this.item.updateChildren(childrenUpdates);
-            
             await this.item.update({'data.active_equipment_group': ''});
         });
+    }
+
+    async _canDragDropItem(item) {
+        if(item.type === 'ability' && item.data.type === undefined) {
+            await item.update({'data.type': 'core'});
+        }
+
+        return ['ability', 'resource', 'equipment'].includes(item.type);
     }
 }
 

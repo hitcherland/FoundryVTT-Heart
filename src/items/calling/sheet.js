@@ -46,6 +46,22 @@ export default class extends HeartItemSheet {
             this.item.update({[`data.questions.-=${id}`]: null});
         });
     }
+
+    async _canDragDropItem(item) {
+        if(item.type === 'ability' && item.data.type === undefined) {
+            await item.update({'data.type': 'core'});
+        }
+        
+        if(item.type === 'beat' && item.data.type === undefined) {
+            await item.update({'data.type': 'minor'});
+        }
+        return ['ability', 'beat'].includes(item.type);
+    }
+
+    async _onDropItem(event, data) {
+
+        return super._onDropItem(event, data);
+    }
 }
 
 export {
