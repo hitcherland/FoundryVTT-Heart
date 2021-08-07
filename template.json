@@ -162,7 +162,8 @@
                 "is_activatable",
                 "has_children"
             ],
-            "mechanics": ""
+            "mechanics": "",
+            "type": "core"
         },
         "templates": {
             "is_rollable": {
