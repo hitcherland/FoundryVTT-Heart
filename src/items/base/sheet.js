@@ -133,6 +133,11 @@ export default class HeartItemSheet extends HeartSheetMixin(ItemSheet) {
             return map;
         }, {});
 
+        data.resistances = game.heart.resistances.reduce((map, resistance) => {
+            map[resistance] = game.i18n.localize(`heart.resistance.${resistance}`)
+            return map;
+        }, {});
+
         data.children = this.children;
         data.childrenTypes = this.childrenTypes;
 

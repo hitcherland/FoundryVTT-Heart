@@ -1,7 +1,9 @@
 {{#> "heart:items/base/preview.html" showActivate=true showComplete=true}}
     {{item.name}}
-    (<a data-action="item-roll"><span class="fas fa-dice"></span> {{item.data.data.die_size}}</a>, {{localizeHeart "domain" item.data.data.domain}}
-    {{#if item.data.data.tags.length}}
-    , {{join ", "  array=item.data.data.tags}}
-    {{/if}})
+    (<a data-action="item-roll"><span class="fas fa-dice"></span> {{item.data.data.die_size}}</a>
+    {{localizeHeart "domain" item.data.data.domain}}
+    {{#each item.childrenTypes.tag as |tag|}}
+        {{tag.name}}
+    {{/each}}
+    )
 {{/ "heart:items/base/preview.html"}}

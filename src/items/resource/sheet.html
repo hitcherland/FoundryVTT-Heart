@@ -1,13 +1,29 @@
 {{#> "heart:items/base/sheet.html" type="resource"}}
-<label>
-    {{localizeHeart "domain" "label-single"}}
-</label>
-{{#if editable}}
-    <select name="data.domain">
-        {{selectOptions domains selected=data.data.domain}}
-    </select>
-{{else}}
-    {{localizeHeart "domain" data.data.domain}}
-{{/if}}
+<div class="grid-2 auto-first-col">
 
+    <label>
+        {{localizeHeart "domain" "label-single"}}
+    </label>
+    {{#if editable}}
+        <select name="data.domain">
+            {{selectOptions domains selected=data.data.domain}}
+        </select>
+    {{else}}
+        {{localizeHeart "domain" data.data.domain}}
+    {{/if}}
+</div>
+
+<div>
+    <h2>
+        {{localizeHeart "tag" "label-multiple"}}
+        {{#if user.isGM }}
+        <a class="right" data-action="add-child" data-type="tag"><span class="fas fa-plus"></span> {{localizeHeart "tag" "add"}}</a>
+        {{/if}}
+    </h2>
+    <div class="item-list">
+        {{#each item.childrenTypes.tag as |tag|}}
+            {{> "heart:items/tag/preview.html" item=tag showActivate=false showDelete=../item.isOwner}}
+        {{/each}}
+    </div>
+</div>
 {{/ "heart:items/base/sheet.html"}}

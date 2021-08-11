@@ -1,8 +1,8 @@
 {
     "Item": {   
         "resource": {
-            "templates": ["is_rollable", "has_description", "is_activatable", "is_completable"],
-            "domain": ""
+            "templates": ["is_rollable", "has_description", "has_children", "is_activatable", "is_completable", "has_tags"],
+            "domain": "cursed"
         }
     }
 }

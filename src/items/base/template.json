@@ -15,6 +15,9 @@
             },
             "is_completable": {
                 "complete": false
+            },
+            "has_tags": {
+                "tags": []
             }
         }
     }
