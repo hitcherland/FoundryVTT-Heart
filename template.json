@@ -180,6 +180,9 @@
             },
             "is_completable": {
                 "complete": false
+            },
+            "has_tags": {
+                "tags": []
             }
         },
         "beat": {
@@ -215,7 +218,9 @@
             "templates": [
                 "is_rollable",
                 "has_description",
-                "is_activatable"
+                "is_activatable",
+                "has_tags",
+                "has_children"
             ],
             "type": "miscellaneous",
             "group": "core"
@@ -236,10 +241,18 @@
             "templates": [
                 "is_rollable",
                 "has_description",
+                "has_children",
                 "is_activatable",
-                "is_completable"
+                "is_completable",
+                "has_tags"
             ],
-            "domain": ""
+            "domain": "cursed"
+        },
+        "tag": {
+            "templates": [
+                "has_description"
+            ],
+            "limited_uses": -1
         },
         "types": [
             "ability",
@@ -249,7 +262,8 @@
             "equipment",
             "fallout",
             "haunt",
-            "resource"
+            "resource",
+            "tag"
         ]
     }
 }
