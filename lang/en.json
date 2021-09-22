@@ -248,7 +248,6 @@
         },
         "mastery": {
             "label": "Roll with Mastery",
-            "short": "Mastery",
             "label-single": "Mastery",
             "label-multiple": "Masteries"
         },
