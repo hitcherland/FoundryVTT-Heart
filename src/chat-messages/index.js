@@ -97,14 +97,14 @@ class HeartChatMessage extends ChatMessage {
         const html = await super.getHTML();
 
         if (this.isRoll && this.isContentVisible) {
-            html.find('.message-content').html(
+            html.find('.message-content').find('.dice-roll').html(
                 await this.roll.render({
                     isPrivate: false,
                     showStressRollButton: this.showStressRollButton,
                     showTakeStressButton: this.showTakeStressButton,
                     showFalloutRollButton: this.showFalloutRollButton,
                 })
-            )
+            );
 
             if (this.stressRoll && this.stressRoll !== this.roll) {
                 const stressContent = await this.stressRoll.render({ isPrivate: false, showTakeStressButton: this.showTakeStressButton, showFalloutRollButton: this.showFalloutRollButton });
