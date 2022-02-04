@@ -31,7 +31,7 @@
     "esmodules": [
         "heart.js"
     ],
-    "compatibleCoreVersion": "0.9.245",
+    "compatibleCoreVersion": "9.249",
     "url": "https://github.com/hitcherland/foundryvtt-heart",
     "manifest": "https://raw.githubusercontent.com/hitcherland/foundryvtt-heart/0.3.15/system.json",
     "readme": "https://raw.githubusercontent.com/hitcherland/foundryvtt-heart/0.3.15/README.md",
