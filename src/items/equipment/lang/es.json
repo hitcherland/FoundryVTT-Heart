@@ -1,0 +1,14 @@
+{
+    "equipment": {
+        "label-single": "Equipo",
+        "label-multiple": "Equipo",
+        "type": {
+            "label-single": "Tipo",
+            "label-multiple": "Tipos",
+            "miscellaneous": "Varios",
+            "delve": "Explorar",
+            "kill": "Matar",
+            "mend": "Reparar"
+        }
+    }
+}

@@ -1,0 +1,17 @@
+{
+    "calling": {
+        "label-single": "Llamada",
+        "label-multiple": "Llamadas",
+        "questions": {
+            "prompt": "Cuando crees a tu personaje, responde a estas preguntas:",
+            "add": "Añadir pregunta",
+            "delete": "Eliminar"
+        },
+        "core-ability": {
+            "label-single": "Habilidad principal",
+            "label-multiple": "Habilidades principales",
+            "add": "Añadir una habilidad principal",
+            "delete": "Eliminar"
+        }
+    }
+}

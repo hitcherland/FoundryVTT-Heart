@@ -1,0 +1,8 @@
+{
+    "applications": {
+        "prepare-roll-request": {
+            "title": "Petición de tirada",
+            "description": "Primero escoge una dificultad, que personajes pueden tirar y ayudar, y que competencias y dominios se pueden usar. Después manda un mensaje en el chat pidiendo a los jugadores tirar."
+        }
+    }
+}

@@ -1,0 +1,12 @@
+{
+    "stress": "Estrés",
+    "rolls": {
+        "stress-roll": {
+            "label": "Tirada de estrés",
+            "action": "Tirar estrés",
+            "take-stress": "Añadir estrés",
+            "prepare": "Preparar tirada de estrés",
+            "description(die_size)": "Tirada de estrés con un dado {die_size} "
+        }
+    }
+}

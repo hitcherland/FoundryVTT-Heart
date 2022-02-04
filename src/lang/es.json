@@ -1,0 +1,70 @@
+{
+    "roll": "Tirar",
+    "cancel": "Cancelar",
+    "help": "Ayuda",
+    "none": "N/A",
+    "character": {
+        "label-single": "Personaje",
+        "label-multiple": "Personajes",
+        "label-helpers": "Ayudantes",
+        "label-valid-helpers": "Personajes que pueden ayudar"
+    },
+    "die_size": {
+        "label-single": "Tamaño de dado",
+        "label-multiple": "Tamaño de dados",
+        "d(N)": "D{N}"
+    },
+    "skill": {
+        "label-single": "Competencia",
+        "label-multiple": "Competencias",
+        "knack": {
+            "label-single": "Don",
+            "label-multiple": "Dones"
+        },
+        "compel": "Convencer",
+        "delve": "Explorar",
+        "discern": "Discernir",
+        "endure": "Soportar",
+        "evade": "Evadir",
+        "hunt": "Cazar",
+        "kill": "Matar",
+        "mend": "Reparar",
+        "sneak": "Escabullir"
+    },
+    "domain": {
+        "label-single": "Dominio",
+        "label-multiple": "Dominios",
+        "knack": {
+            "label-single": "Don",
+            "label-multiple": "Dones"
+        },
+        "cursed": "Maldito",
+        "desolate": "Desolado",
+        "haven": "Refugio",
+        "occult": "Oculto",
+        "religion": "Religión",
+        "technology": "Tecnología",
+        "warren": "Laberinto",
+        "wild": "Salvaje"
+    },
+    "mastery": {
+        "label": "Tirar con maestría",
+        "short": "Maestría",
+        "label-single": "Maestría",
+        "label-multiple": "Maestrías"
+    },
+    "helper": {
+        "label-single": "Ayudante",
+        "label-multipler": "Ayudantes"
+    },
+    "rolls": {
+        "roll-request": {
+            "label": "Petición de tirada"
+        }
+    },
+    "dialog": {
+        "skip": "Cerrar",
+        "dont-show-again": "No volver a mostrar",
+        "title(VERSION)": "Heart - The City Beneath ({VERSION})"
+    }
+}
