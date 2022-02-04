@@ -84,6 +84,27 @@ An example chat message as a result:
 
 ![Fallout Chat Message](https://i.imgur.com/DsW0Xvz.png)
 
+## Translations
+
+If you're considering writing a translation, firstly: thank you! You can provide translation files in two ways:
+
+## Method 1: Send me a single lang/{lang}.json file
+
+Find [lang/en.json](https://github.com/hitcherland/FoundryVTT-Heart/blob/release/lang/en.json) and translate it, then send the file to me.
+
+This method is easier for you, but requires me to do some work to adjust it to the format I use for the [development branch](https://github.com/hitcherland/FoundryVTT-Heart/tree/development) that I use to actually build the system. This means it is subject to me getting around to it, which has previously taken a few months.
+
+## Method 2: Submit A Pull Request to the Development Branch
+
+You can find the development branch [here](https://github.com/hitcherland/FoundryVTT-Heart/tree/development). As mentioned above, this is the branch that actually builds the "release" branch. Fork the repo, and modify the duplicate the many instances of the `lang/en.json` file. You can find these by searching for `en.json`, (e.g. in Github, by going to [Find a File](https://github.com/hitcherland/FoundryVTT-Heart/find/development) and typing `en.json`).
+
+This is easier for me (and quicker for you), as I can just accept it directly.
+
+## Current Translations & Translators
+Thanks to them!
+
+* Español - jesberpen
+
 
 ## TODO
 
@@ -99,5 +120,5 @@ An example chat message as a result:
 - [ ] Add ChatMessage buttons to clear stress when receiving fallout
 - [x] Make "class" and "calling" items
 - [ ] Look into making class and calling packs
-- [ ] Add editable tags to taggables (resources, equipment etc)
+- [x] Add editable tags to taggables (resources, equipment etc)
 - [x] Add ability to include and control the minor abilities defined inside Major Abilities.

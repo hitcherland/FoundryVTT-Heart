@@ -1,0 +1,318 @@
+{
+    "heart": {
+        "adversary": {
+            "label-single": "Adersario",
+            "label-multiple": "Adversarios"
+        },
+        "character": {
+            "name": "Nombre",
+            "class": "Clase",
+            "calling": "Llamada",
+            "notes": "Notas",
+            "inactive-items": "Objetos no activos",
+            "inactive-items-description": "Aquí encontrarás objetos que han sido añadidos a tu ficha pero que fueron marcados como inactivos (los esconde de la vista normal en la ficha)",
+            "label-single": "Personaje",
+            "label-multiple": "Personajes",
+            "label-helpers": "Ayudantes",
+            "label-valid-helpers": "Personajes que pueden ayudar"
+        },
+        "resistance": {
+            "label-single": "Resistencia",
+            "label-multiple": "Resistencias",
+            "protection": {
+                "label-single": "Protección",
+                "label-multiple": "Protecciones"
+            },
+            "blood": "Sangre",
+            "mind": "Mente",
+            "echo": "Eco",
+            "fortune": "Fortuna",
+            "supplies": "Suministros"
+        },
+        "delve": {
+            "label-single": "Explorar",
+            "label-multiple": "Exploraciones"
+        },
+        "landmark": {
+            "label-single": "Lugar emblemático",
+            "label-multiple": "Lugares emblemáticos"
+        },
+        "applications": {
+            "prepare-roll-request": {
+                "title": "Petición de tirada",
+                "description": "Primero escoge una dificultad, que personajes pueden tirar y ayudar, y que competencias y dominios se pueden usar. Después manda un mensaje en el chat pidiendo a los jugadores tirar."
+            },
+            "requirement": {
+                "title": "Mas información"
+            },
+            "prepare-fallout-roll": {
+                "title": "Preparar tirada de consecuencia",
+                "description": "Escoge a un personaje para hacer la tirada de consecuencia."
+            },
+            "prepare-roll": {
+                "title": "Preparar tirada",
+                "description": "Primero escoge una dificultad, personaje y los modificadores del número de dados, después tira."
+            },
+            "prepare-stress-roll": {
+                "title": "Preparar tirada de estrés",
+                "description": "Escoge a un personaje, el tipo de resultado que genera estrés y un tamaño de dado a tirar."
+            },
+            "take-stress": {
+                "description": "Elige una resistencia para asignar el estrés."
+            }
+        },
+        "ability": {
+            "label-single": "Habilidad",
+            "label-multiple": "Habilidades",
+            "add-child-ability": "Añadir habilidad anidada",
+            "type": {
+                "minor": "Menor",
+                "major": "Importante",
+                "zenith": "Cenit"
+            }
+        },
+        "base": {
+            "label-single": "base",
+            "label-multiple": "bases",
+            "open-parent": "Abrir raíz",
+            "activate": "Activar",
+            "deactivate": "Desactivar",
+            "complete": "Completado",
+            "uncomplete": "Incompleto",
+            "delete": "Eliminar",
+            "view": "Abrir hoja",
+            "is-active": "¿Está activa?",
+            "is-complete": "¿Está completada?"
+        },
+        "beat": {
+            "label-single": "Latido",
+            "label-multiple": "Latidos",
+            "add": "Añadir latido",
+            "activate": "Activato",
+            "complete": "Completado",
+            "active": {
+                "label-single": "Latido activo",
+                "label-multiple": "Latidos activos"
+            },
+            "minor-beat": {
+                "label-single": "Latido menor",
+                "label-multiple": "Latidos menores",
+                "add": "Añadir latido menor"
+            },
+            "major-beat": {
+                "label-single": "Latido importante",
+                "label-multiple": "Latidos importantes",
+                "add": "Añadir latido importante"
+            },
+            "zenith-beat": {
+                "label-single": "Latido cenit",
+                "label-multiple": "Latidos cenit",
+                "add": "Añadir latido cenit"
+            }
+        },
+        "calling": {
+            "label-single": "Llamada",
+            "label-multiple": "Llamadas",
+            "questions": {
+                "prompt": "Cuando crees a tu personaje, responde a estas preguntas:",
+                "add": "Añadir pregunta",
+                "delete": "Eliminar"
+            },
+            "core-ability": {
+                "label-single": "Habilidad principal",
+                "label-multiple": "Habilidades principales",
+                "add": "Añadir una habilidad principal",
+                "delete": "Eliminar"
+            }
+        },
+        "class": {
+            "label-single": "Clase",
+            "label-multiple": "Clases",
+            "questions": {
+                "prompt": "Cuando crees a tu personaje, responde a estas preguntas:",
+                "add": "Añadir pregunta",
+                "delete": "Eliminar"
+            },
+            "core-traits": {
+                "label-single": "Rasgo principal",
+                "label-multiple": "Rasgos principales",
+                "add": "Añadir un rasgo principal",
+                "delete": "Eliminar"
+            },
+            "core-ability": {
+                "label-single": "Habilidad principal",
+                "label-multiple": "Habilidades principales",
+                "add": "Añadir una habilidad principal",
+                "delete": "Eliminar"
+            },
+            "minor-ability": {
+                "label-single": "Habilidad menor",
+                "label-multiple": "Habilidades menores",
+                "add": "Añadir uan habilidad menor",
+                "delete": "Eliminar"
+            },
+            "major-ability": {
+                "label-single": "Habilidad importante",
+                "label-multiple": "Habilidades importantes",
+                "add": "Añadir una habilidad importante",
+                "delete": "Eliminar"
+            },
+            "zenith-ability": {
+                "label-single": "Habilidad cenit",
+                "label-multiple": "Habilidades cenit",
+                "add": "Añadir una habilidad cenit",
+                "delete": "Eliminar"
+            },
+            "resource": {
+                "add": "Añadir un recurso de clase",
+                "delete": "Eliminar"
+            },
+            "equipment": {
+                "pick-one": "Elegir uno",
+                "add": "Añadir equipo de clase",
+                "delete": "Eliminar",
+                "add-group": "Añadir equipo de grupo",
+                "delete-group": "Eliminar grupo"
+            }
+        },
+        "equipment": {
+            "label-single": "Equipo",
+            "label-multiple": "Equipo",
+            "type": {
+                "label-single": "Tipo",
+                "label-multiple": "Tipos",
+                "miscellaneous": "Varios",
+                "delve": "Explorar",
+                "kill": "Matar",
+                "mend": "Reparar"
+            }
+        },
+        "fallout": {
+            "label-single": "Consecuencia",
+            "label-multiple": "Consecuencias"
+        },
+        "haunt": {
+            "label-single": "Tormento",
+            "label-multiple": "Tormentos"
+        },
+        "resource": {
+            "label-single": "Recurso",
+            "label-multiple": "Recursos"
+        },
+        "tag": {
+            "label-single": "Marca",
+            "label-multiple": "Marcas",
+            "add": "Añadir marca"
+        },
+        "roll": "Tirar",
+        "cancel": "Cancelar",
+        "help": "Ayuda",
+        "none": "N/A",
+        "die_size": {
+            "label-single": "Tamaño de dado",
+            "label-multiple": "Tamaño de dados",
+            "d(N)": "D{N}"
+        },
+        "skill": {
+            "label-single": "Competencia",
+            "label-multiple": "Competencias",
+            "knack": {
+                "label-single": "Don",
+                "label-multiple": "Dones"
+            },
+            "compel": "Convencer",
+            "delve": "Explorar",
+            "discern": "Discernir",
+            "endure": "Soportar",
+            "evade": "Evadir",
+            "hunt": "Cazar",
+            "kill": "Matar",
+            "mend": "Reparar",
+            "sneak": "Escabullir"
+        },
+        "domain": {
+            "label-single": "Dominio",
+            "label-multiple": "Dominios",
+            "knack": {
+                "label-single": "Don",
+                "label-multiple": "Dones"
+            },
+            "cursed": "Maldito",
+            "desolate": "Desolado",
+            "haven": "Refugio",
+            "occult": "Oculto",
+            "religion": "Religión",
+            "technology": "Tecnología",
+            "warren": "Laberinto",
+            "wild": "Salvaje"
+        },
+        "mastery": {
+            "label": "Tirar con maestría",
+            "short": "Maestría",
+            "label-single": "Maestría",
+            "label-multiple": "Maestrías"
+        },
+        "helper": {
+            "label-single": "Ayudante",
+            "label-multipler": "Ayudantes"
+        },
+        "rolls": {
+            "roll-request": {
+                "label": "Petición de tirada"
+            },
+            "fallout-roll": {
+                "label": "Tirada de consecuencia",
+                "action": "Tirar consecuancia",
+                "description(totalStress)": "Tirada de consecuencia con {totalStress} de estrés",
+                "results": {
+                    "no-fallout": "No hay consecuencia",
+                    "minor-fallout": "Consecuencia menor",
+                    "major-fallout": "Consecuencia importante"
+                }
+            },
+            "roll": {
+                "label": "Tirada",
+                "action": "Tirar",
+                "base": "Base",
+                "description(difficulty,count)": "Tirada {difficulty} con {count} dado(s)"
+            },
+            "stress-roll": {
+                "label": "Tirada de estrés",
+                "action": "Tirar estrés",
+                "take-stress": "Añadir estrés",
+                "prepare": "Preparar tirada de estrés",
+                "description(die_size)": "Tirada de estrés con un dado {die_size} "
+            }
+        },
+        "dialog": {
+            "skip": "Cerrar",
+            "dont-show-again": "No volver a mostrar",
+            "title(VERSION)": "Heart - The City Beneath ({VERSION})"
+        },
+        "difficulty": {
+            "label-single": "Dificultad",
+            "label-multiple": "Dificultades",
+            "standard": "Estándar",
+            "risky": "Arriesgada",
+            "dangerous": "Peligrosa",
+            "impossible": "Imposible"
+        },
+        "result": {
+            "label-single": "Resultado",
+            "label-multiple": "Resultados",
+            "label-stress": "Resultados de estrés",
+            "critical_success": "Éxito crítico",
+            "success": "Éxito",
+            "success_at_a_cost": "Éxito con un coste",
+            "failure": "Fallo",
+            "critical_failure": "Fallo crítico"
+        },
+        "perform": {
+            "request-roll": "Pedir tirada",
+            "roll": "Tirar",
+            "roll-stress": "Tirar Estrés",
+            "roll-fallout": "Tirar Consecuencia"
+        },
+        "stress": "Estrés"
+    }
+}

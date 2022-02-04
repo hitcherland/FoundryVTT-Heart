@@ -7,6 +7,13 @@
             "system": "heart",
             "path": "./packs/macros.db",
             "entity": "Macro"
+        },
+        {
+            "name": "callings",
+            "label": "Callings",
+            "system": "heart",
+            "path": "./packs/callings.db",
+            "entity": "Item"
         }
     ],
     "languages": [
@@ -14,6 +21,11 @@
             "lang": "en",
             "name": "English",
             "path": "lang/en.json"
+        },
+        {
+            "lang": "es",
+            "name": "Español",
+            "path": "lang/es.json"
         }
     ],
     "socket": false,
@@ -26,7 +38,7 @@
     "esmodules": [
         "heart.js"
     ],
-    "compatibleCoreVersion": "0.8.9",
+    "compatibleCoreVersion": "0.9.245",
     "url": "https://github.com/hitcherland/foundryvtt-heart",
     "manifest": "https://raw.githubusercontent.com/hitcherland/foundryvtt-heart/0.3.14/system.json",
     "readme": "https://raw.githubusercontent.com/hitcherland/foundryvtt-heart/0.3.14/README.md",
