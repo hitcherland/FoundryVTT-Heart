@@ -20,7 +20,8 @@
     </div>
     
     {{#if (and showTextboxesBelowItems description_path)}}
-    {{editor content=(lookup actor.data description_path) target="{{description_path}}" button=true editable=editable owner=owner}}
+    {{log "lookup" actor.data.data description_path (lookup actor.data.data description_path)}}
+    {{editor content=(lookup actor.data.data description_path) target=(join "." "data" description_path) button=true editable=editable owner=owner}}
     {{/if}}
 </div>
 {{/inline}}
@@ -80,11 +81,11 @@
             </div>
         </div>
 
-        {{> itemListSection type="beat" list=actor.proxy.beats description_path="data.active_beats" overrideTitle=(localizeHeart "beat" "active" "label-multiple")}}
-        {{> itemListSection type="equipment" list=actor.proxy.equipment description_path="data.equipment" showActivate=true}}
-        {{> itemListSection type="resource" list=actor.proxy.resources description_path="data.resources"}}
-        {{> itemListSection type="ability" list=actor.proxy.abilities description_path="data.abilities" hideInactive=true}}
-        {{> itemListSection type="fallout" list=(lookup actor.itemTypes "fallout") description_path="data.fallout"}}
+        {{> itemListSection type="beat" list=actor.proxy.beats description_path="active_beats" overrideTitle=(localizeHeart "beat" "active" "label-multiple")}}
+        {{> itemListSection type="equipment" list=actor.proxy.equipment description_path="equipment" showActivate=true}}
+        {{> itemListSection type="resource" list=actor.proxy.resources description_path="resources"}}
+        {{> itemListSection type="ability" list=actor.proxy.abilities description_path="abilities" hideInactive=true}}
+        {{> itemListSection type="fallout" list=(lookup actor.itemTypes "fallout") description_path="fallout"}}
 
         <div class="section skills grid-2 auto-first-col">
             <h3 class="center">{{localizeHeart "skill" "label-multiple"}}</h3>

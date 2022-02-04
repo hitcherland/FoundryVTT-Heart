@@ -34,9 +34,6 @@ function registerSettings() {
 }
 
 function initialise() {
-    Hooks._ids = {};
-    Hooks._hooks.renderChatLog = [];
-    Hooks._hooks.renderChatPopout = [];
 
     activateTemplates();
 
@@ -163,6 +160,9 @@ if (module.hot) {
     module.hot.accept();
 
     (async () => {
+        Hooks._ids = {};
+        Hooks._hooks.renderChatLog = [];
+        Hooks._hooks.renderChatPopout = [];
         initialise();
 
         if(game.i18n !== undefined) {
