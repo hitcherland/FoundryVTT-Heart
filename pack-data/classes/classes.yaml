@@ -191,7 +191,8 @@ junk_mage:
           name: class.junk_mage.traits.equipment.group_3.overstuffed_coat.name
           dice: d6
           type: mend
-          stress: resistance.supplies
+          resistances:
+            - supplies
         blunderbuss:
           name: class.junk_mage.traits.equipment.group_3.blunderbuss.name
           dice: d4
@@ -337,6 +338,7 @@ junk_mage:
       the_herald_of_the_stone_chorus:
         name: class.junk_mage.abilities.zenith.the_herald_of_the_stone_chorus.name
         description: class.junk_mage.abilities.zenith.the_herald_of_the_stone_chorus.description
+
 deep_apiarist:
   name: class.deep_apiarist.name
   description: class.deep_apiarist.description
@@ -504,3 +506,101 @@ deep_apiarist:
         name: class.deep_apiarist.abilities.zenith.surrender_to_chaos.name
         description: class.deep_apiarist.abilities.zenith.surrender_to_chaos.description
 
+heretic:
+  name: class.heretic.name
+  description: class.heretic.description
+  traits:
+    skill: mend
+    domain: religion
+    resource:
+      heartsbloom_rose_in_a_glass_jar:
+        name: class.heretic.traits.resource.a_single_devotional_candle_that_burns_with_a_silver_flame.name
+        dice: d6
+        domain: religion
+    equipment:
+      group_1:
+        spireblack_brazier_unlit:
+          name: class.heretic.traits.equipment.group_1.spireblack_brazier_unlit.name
+          dice: d6
+          type: kill
+        spireblack_brazier_lit:
+          name: class.heretic.traits.equipment.group_1.spireblack_brazier_lit.name
+          dice: d8
+          type: kill,
+          tags:
+            - obscuring
+            - dangerous
+      group_2:
+        breech_loading_pistol:
+          name: class.heretic.traits.equipment.group_2.breech_loading_pistol.name
+          dice: d6
+          type: kill
+          tags:
+            - ranged
+            - reload
+        seekers_blade:
+          name: class.heretic.traits.equipment.group_2.seekers_blade.name
+          dice: d6
+          type: kill
+          tags:
+            - brutal
+      group_3:
+        scripture_etched_bandages_and_blessed_oils:
+          name: class.heretic.traits.equipment.group_3.scripture_etched_bandages_and_blessed_oils.name
+          dice: d6
+          type: mend
+          resistances:
+            - blood
+            - mind
+        staff:
+          name: class.heretic.traits.equipment.group_3.scripture_etched_bandages_and_blessed_oils.name
+          dice: d6
+          type: kill
+  abilities:
+    core:
+      ministrations:
+        name: class.heretic.abilities.core.ministrations.name
+        description: class.heretic.abilities.core.ministrations.description
+    minor:
+      grave_duty:
+      the_goddess_gifts:
+      the_left_hand_of_the_goddess:
+      liars_burden:
+      incandescent_communion:
+      righteous_rhetoric:
+      rite_of_placidity:
+      sacred_tattoo:
+      shard_of_the_temple_door:
+      tomes_of_knowledge:
+      unwavering_faith:
+      words_of_grace:
+    major:
+      oath_of_community:
+        nested_abilities:
+          martyrs_blood:
+          miraculous_intervention:
+          cast_asunder:
+      oath_of_fury:
+        nested_abilities:
+          avatar_of_flame:
+          avatar_of_moonlight:
+          avatar_of_shadows:
+      oath_of_sagacity:
+        nested_abilities:
+          fragment_of_lekole:
+          fragment_of_lombre:
+          fragment_of_limye:
+      oath_of_tenacity:
+        nested_abilities:
+          implacable_faith:
+          glorious_resurgence:
+          abide_with_me:
+      rite_of_vigilance:
+        nested_abilities:
+          hunter:
+          hearts_sight:
+          blessing:
+    zenith:
+      ascension:
+      glory:
+      testament_of_faith:

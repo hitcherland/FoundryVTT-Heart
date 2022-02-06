@@ -47,17 +47,18 @@ function writeFiles(compiler) {
         return Object.assign({}, stored.tags[`tag.${name}.name`], { _id: randomID(), name });
     }
 
-    function parseAbilities(abilities, type = 'minor') {
-        return Object.values(abilities).map((data) => {
+    function parseAbilities(abilities, type = 'minor', keyable) {
+        return Object.entries(abilities).map(([key, data]) => {
+            data = data || {};
             return {
                 _id: randomID(),
-                name: data.name,
+                name: data.name || `${keyable}.${key}.name`,
                 type: "ability",
                 data: {
                     active: type === "core",
-                    description: data.description,
+                    description: data.description || `${keyable}.${key}.description`,
                     type: data.type || type,
-                    children: Object.assign({}, ...parseAbilities(data.nested_abilities || [], 'minor').map(x => ({ [x._id]: x }))),
+                    children: Object.assign({}, ...parseAbilities(data.nested_abilities || [], 'minor', `${keyable}.${key}.nested_abilities`).map(x => ({ [x._id]: x }))),
                 }
             }
         });
@@ -79,7 +80,8 @@ function writeFiles(compiler) {
     }
 
     function parseClasses(classes) {
-        return Object.values(classes).map((data) => {
+        return Object.entries(classes).map(([key, data]) => {
+            console.warn(key)
             const class_data = {
                 _id: randomID(),
                 name: data.name,
@@ -91,10 +93,10 @@ function writeFiles(compiler) {
                     equipment_groups: [],
                     children: Object.assign({},
                         ...[...parseResource(data.traits.resource),
-                        ...parseAbilities(data.abilities.core, "core"),
-                        ...parseAbilities(data.abilities.minor, "minor"),
-                        ...parseAbilities(data.abilities.major, "major"),
-                        ...parseAbilities(data.abilities.zenith, "zenith")
+                        ...parseAbilities(data.abilities.core, "core", `class.${key}.abilities.core`),
+                        ...parseAbilities(data.abilities.minor, "minor", `class.${key}.abilities.minor`),
+                        ...parseAbilities(data.abilities.major, "major", `class.${key}.abilities.major`),
+                        ...parseAbilities(data.abilities.zenith, "zenith", `class.${key}.abilities.zenith`)
                         ].map(x => ({ [x._id]: x }))
                     )
                 },
@@ -149,12 +151,13 @@ function writeFiles(compiler) {
         'classes': parseClasses,
         'tags': parseTags,
         'callings': parseCallings,
-    }
+    };
+
     const stored = {
         'tags': {},
         'classes': {},
         'callings': {},
-    }
+    };
 
     return function (compilation) {
         for (const type of ['callings', 'tags', 'classes']) {
