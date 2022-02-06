@@ -15,7 +15,13 @@ export default function HeartSheetMixin(baseClass) {
         }
 
         get title() {
-            return game.i18n.localize('heart.' + super.title);
+            const key = 'heart.' + super.title;
+            const resp = game.i18n.localize(key);
+            if (resp == key) {
+                return super.title;
+            } else {
+                return resp;
+            }
         }
 
         getData() {
