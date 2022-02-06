@@ -1,0 +1,24 @@
+<div class="compendium directory flexcol" data-pack="{{collection.collection}}">
+
+    <!-- Directory Header -->
+    <header class="directory-header flexrow">
+        <div class="header-search flexrow">
+            <i class="fas fa-search"></i>
+            <input type="text" name="search" value="" placeholder="{{ localize 'FILES.Search' }}" autocomplete="off"/>
+        </div>
+    </header>
+
+    <!-- Directory Contents -->
+    <ol class="directory-list">
+        {{#each index}}
+        <li class="directory-item document {{@root.documentCls}} flexrow" data-document-id="{{this._id}}">
+            {{#if this.thumb}}
+            <img class="thumbnail" title="{{this.name}}" alt="{{this.name}}" data-src="{{this.thumb}}"/>
+            {{else if this.img}}
+            <img class="thumbnail" title="{{this.name}}" alt="{{this.name}}" data-src="{{this.img}}"/>
+            {{/if}}
+            <h4 class="document-name"><a>{{localizeHeart this.name}}</a></h4>
+        </li>
+        {{/each}}
+    </ol>
+</div>

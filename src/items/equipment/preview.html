@@ -1,8 +1,8 @@
 {{#> "heart:items/base/preview.html" showActivate=showActivate}}
-    {{item.name}}
+    {{localizeHeart item.name}}
     ({{localizeHeart "equipment" "type" item.data.data.type}}, <a data-action="item-roll"><span class="fas fa-dice"></span> {{item.data.data.die_size}}</a>
     {{#each item.childrenTypes.tag as |tag|}}
-        {{tag.name}}
+        {{localizeHeart "tag" tag.name "name"}}
     {{/each}}
     )
 {{/ "heart:items/base/preview.html"}}

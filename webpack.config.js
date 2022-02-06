@@ -4,13 +4,17 @@ const CopyPlugin = require('copy-webpack-plugin');
 const FoundryVTTSymlinkPlugin = require('./dev-utils/foundryvtt-symlink');
 const FoundryVTTTemplateMerger = require('./dev-utils/foundryvtt-template-merger');
 const FoundryVTTTranslationMerger = require('./dev-utils/foundryvtt-translation-merger');
+const FoundryVTTPacker = require('./dev-utils/foundryvtt-packer');
 const config = require('./foundryvtt.config.js');
 const TerserPlugin = require('terser-webpack-plugin');
 
 // auto calculated values
 const { type, name } = config;
 const distPath = path.resolve(__dirname, 'dist');
+const packDataPath = path.resolve(__dirname, 'pack-data');
 const publicPath = `/${type}s/${name}/`;
+
+const packs = [];
 
 function transformManifest(content) {
     // Convert string to object
@@ -23,6 +27,8 @@ function transformManifest(content) {
     manifest.version = config.version;
     manifest.author = config.author;
     manifest.minimumCoreVersion = config.minimumCoreVersion;
+
+    manifest.packs.push(...packs)
 
     // Optional
     if (manifest.esmodules === undefined) manifest.esmodules = [`${name}.js`];
@@ -110,7 +116,6 @@ module.exports = {
         writeToDisk: true
     },
     plugins: [
-        new FoundryVTTTemplateMerger(distPath),
         new FoundryVTTTranslationMerger(name, distPath),
         new CopyPlugin({
             patterns: [
@@ -135,6 +140,8 @@ module.exports = {
                 },
             ],
         }),
-        new FoundryVTTSymlinkPlugin(name, type, distPath, config.foundryvttPath)
+        new FoundryVTTSymlinkPlugin(name, type, distPath, config.foundryvttPath),
+        new FoundryVTTPacker(distPath, packDataPath, packs),
+        new FoundryVTTTemplateMerger(distPath),
     ],
 };

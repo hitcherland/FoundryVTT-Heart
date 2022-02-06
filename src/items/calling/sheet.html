@@ -15,16 +15,16 @@
 <form class="heart sheet base Item calling {{cssClass}}" autocomplete="off">
     <h1>
         {{#if (and editable (not item.isOwned))}}
-        <input name="name" value="{{data.name}}"/>
+        <input name="name" value="{{localizeHeart data.name}}"/>
         {{else}}
-        {{item.name}}
+        {{localizeHeart item.name}}
         {{/if}}
     </h1>
     <div class="description">
         {{#if (and editable (not item.isOwned))}}
-        {{editor content=data.data.description target="data.description" button=true editable=editable owner=owner}}
+        {{editor content=(localizeHeart data.data.description) target="data.description" button=true editable=editable owner=owner}}
         {{else}}
-        {{{data.data.description}}}
+        {{{localizeHeart data.data.description}}}
         {{/if}}
     </div>
 
@@ -40,20 +40,20 @@
             <div class="flexrow">
                 {{#if ../item.isOwned}}
                 <div>
-                    <div class="question">{{{question.question}}}</div>
+                    <div class="question">{{{localizeHeart question.question}}}</div>
                     {{#if ../editable}}
                     {{editor content=question.answer target=(join "." "data.questions" id "answer") button=true editable=../editable owner=owner}}
                     {{else}}
-                    <div>{{{question.answer}}}</div>
+                    <div>{{{localizeHeart question.answer}}}</div>
                     {{/if}}
                 </div>
                 {{else}}
                     {{#if ../editable}}
                     <div class="question">
-                        {{editor content=question.question target=(join "." "data.questions" id "question") button=true editable=../editable owner=owner}}
+                        {{editor content=(localizeHeart question.question) target=(join "." "data.questions" id "question") button=true editable=../editable owner=owner}}
                     </div>
                     {{else}}
-                    <div>{{{question.question}}}</div>
+                    <div>{{{localizeHeart question.question}}}</div>
                     {{/if}}
                 {{/if}}
                 {{#if user.isGM }}

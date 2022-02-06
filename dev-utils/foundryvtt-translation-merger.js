@@ -22,15 +22,16 @@ module.exports = class FoundryVTTTranslationMerger {
     constructor(moduleName, distPath) {
         this.moduleName = moduleName;
         this.distPath = distPath;
+        console.warn(this.moduleName);
     }
 
     apply(compiler) {
-        compiler.hooks.thisCompilation.tap('FoundryVTT-Translation-Merger', this.mergeTranslations(compiler));
+        compiler.hooks.thisCompilation.tap('FoundryVTT-Translation-Merger', this.mergeTranslations(compiler).bind(this));
     }
 
     mergeTranslations(compiler) {
         return function(compilation) {
-            glob.glob('./src/**/lang/*.json', (err, filenames) => {
+            function handle(err, filenames) {
                 if(err) {
                     compilation.err(err);
                     return;
@@ -53,15 +54,16 @@ module.exports = class FoundryVTTTranslationMerger {
                     
                 }, {});
 
-
-                Object.entries(translations).forEach(([filename, translation]) => {
+                Object.entries(translations).forEach((([filename, translation]) => {
                     const content = JSON.stringify({[this.moduleName]: translation}, null, 4);
                     compilation.emitAsset(
                         `lang/${filename}`,
                         new (compiler.webpack.sources.RawSource)(content)
                     );
-                });
-            });
-        }.bind(this);
+                }).bind(this));
+            }
+
+            glob.glob('./@(src|pack-data)/**/lang/*.json', handle.bind(this));
+        }
     }
 }

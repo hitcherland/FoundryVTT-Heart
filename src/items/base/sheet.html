@@ -30,7 +30,7 @@
     {{/if}}
     </div>
 
-    {{editor content=data.data.description target="data.description" button=true editable=editable owner=owner}}
+    {{editor content=(localizeHeart data.data.description) target="data.description" button=true editable=editable owner=owner}}
         
     {{> @partial-block }}
 {{/ "heart:common/sheet.html" }}

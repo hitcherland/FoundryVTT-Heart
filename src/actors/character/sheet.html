@@ -53,7 +53,7 @@
                 <h2>{{localizeHeart "character" "class"}}</h2>
                 {{#if classItem}}
                 <div data-item-id="{{classItem.uuid}}" class="flexrow class item">
-                    <div class="name">{{classItem.name}}</div>
+                    <div class="name">{{localizeHeart classItem.name}}</div>
                     <div class="right">
                         <a data-action="view" title="{{localizeHeart 'base' 'view'}}"><span class="fas fa-eye"></span></a>
                         {{#if classItem.isOwner}}
@@ -67,7 +67,7 @@
                 <h2>{{localizeHeart "character" "calling"}}</h2>
                 {{#if callingItem}}
                 <div data-item-id="{{callingItem.uuid}}" class="flexrow calling item">
-                    <div class="name">{{callingItem.name}}</div>
+                    <div class="name">{{localizeHeart callingItem.name}}</div>
                     <div class="right">
                         <a data-action="view" title="{{localizeHeart 'base' 'view'}}"><span class="fas fa-eye"></span></a>
                         {{#if callingItem.isOwner}}

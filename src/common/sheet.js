@@ -14,6 +14,10 @@ export default function HeartSheetMixin(baseClass) {
             return systems/heart/assets/battle-gear.svg;
         }
 
+        get title() {
+            return game.i18n.localize('heart.' + super.title);
+        }
+
         getData() {
             const data = super.getData();
             if (data.data.img === this.default_img) {

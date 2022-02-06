@@ -1,0 +1,79 @@
+block:
+  name: tag.block.name
+  description: tag.block.description
+bloodbound:
+  name: tag.bloodbound.name
+  description: tag.bloodbound.description
+brutal:
+  name: tag.brutal.name
+  description: tag.brutal.description
+conduit:
+  name: tag.conduit.name
+  description: tag.conduit.description
+dangerous:
+  name: tag.dangerous.name
+  description: tag.dangerous.description
+debilitating:
+  name: tag.debilitating.name
+  description: tag.debilitating.description
+degenerating:
+  name: tag.degenerating.name
+  description: tag.degenerating.description
+distressing:
+  name: tag.distressing.name
+  description: tag.distressing.description
+double_barreled:
+  name: tag.double_barreled.name
+  description: tag.double_barreled.description
+expensive:
+  name: tag.expensive.name
+  description: tag.expensive.description
+extreme_range:
+  name: tag.extreme_range.name
+  description: tag.extreme_range.description
+limited(X):
+  name: tag.limited(X).name
+  description: tag.limited(X).description
+loud:
+  name: tag.loud.name
+  description: tag.loud.description
+obscuring:
+  name: tag.obscuring.name
+  description: tag.obscuring.description
+one_shot:
+  name: tag.one_shot.name
+  description: tag.one_shot.description
+piercing:
+  name: tag.piercing.name
+  description: tag.piercing.description
+point_blank:
+  name: tag.point_blank.name
+  description: tag.point_blank.description
+potent:
+  name: tag.potent.name
+  description: tag.potent.description
+ranged:
+  name: tag.ranged.name
+  description: tag.ranged.description
+reload:
+  name: tag.reload.name
+  description: tag.reload.description
+smoke:
+  name: tag.smoke.name
+  description: tag.smoke.description
+spread:
+  name: tag.spread.name
+  description: tag.spread.description
+tiring:
+  name: tag.tiring.name
+  description: tag.tiring.description
+trusty:
+  name: tag.trusty.name
+  description: tag.trusty.description
+unreliable:
+  name: tag.unreliable.name
+  description: tag.unreliable.description
+wyrd:
+  name: tag.wyrd.name
+  description: tag.wyrd.description
+

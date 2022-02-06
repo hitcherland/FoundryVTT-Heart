@@ -1,0 +1,506 @@
+vermissian_knight:
+  name: class.vermissian_knight.name
+  description: class.vermissian_knight.description
+  traits:
+    skill: delve
+    domain: technology
+    resource:
+      spare_capacitors_and_wires:
+        name: class.vermissian_knight.traits.resource.spare_capacitors_and_wires.name
+        dice: d6
+        domain: technology
+    equipment:
+      group_1:
+        pneumatic_hammer:
+          name: class.vermissian_knight.traits.equipment.group_1.pneumatic_hammer.name
+          dice: d8
+          type: kill
+          tags:
+            - brutal
+            - loud
+            - tiring
+      group_2:
+        scrapsword:
+          name: class.vermissian_knight.traits.equipment.group_2.scrapsword.name
+          dice: d6
+          type: kill
+        magelight_rig:
+          name: class.vermissian_knight.traits.equipment.group_2.magelight_rig.name
+          dice: d6
+          type: delve
+      group_3:
+        steel_door_shield:
+          name: class.vermissian_knight.traits.equipment.group_3.steel_door_shield.name
+          dice: d6
+          type: kill
+          tags:
+            - block
+  abilities:
+    core:
+      vermissian_plate:
+        name: class.vermissian_knight.abilities.core.vermissian_plate.name
+        description: class.vermissian_knight.abilities.core.vermissian_plate.description
+    minor:
+      arcane_rebreather:
+        name: class.vermissian_knight.abilities.minor.arcane_rebreather.name
+        description: class.vermissian_knight.abilities.minor.arcane_rebreather.description
+      armour_plating:
+        name: class.vermissian_knight.abilities.minor.armour_plating.name
+        description: class.vermissian_knight.abilities.minor.armour_plating.description
+      black_knight:
+        name: class.vermissian_knight.abilities.minor.black_knight.name
+        description: class.vermissian_knight.abilities.minor.black_knight.description
+      knight_protector:
+        name: class.vermissian_knight.abilities.minor.knight_protector.name
+        description: class.vermissian_knight.abilities.minor.knight_protector.description
+      hellwalker:
+        name: class.vermissian_knight.abilities.minor.hellwalker.name
+        description: class.vermissian_knight.abilities.minor.hellwalker.description
+      phantom_lens:
+        name: class.vermissian_knight.abilities.minor.phantom_lens.name
+        description: class.vermissian_knight.abilities.minor.phantom_lens.description
+      protector's_gauntlet:
+        name: class.vermissian_knight.abilities.minor.protector's_gauntlet.name
+        description: class.vermissian_knight.abilities.minor.protector's_gauntlet.description
+      sanguinary_array:
+        name: class.vermissian_knight.abilities.minor.sanguinary_array.name
+        description: class.vermissian_knight.abilities.minor.sanguinary_array.description
+      stalwart:
+        name: class.vermissian_knight.abilities.minor.stalwart.name
+        description: class.vermissian_knight.abilities.minor.stalwart.description
+      steelbones:
+        name: class.vermissian_knight.abilities.minor.steelbones.name
+        description: class.vermissian_knight.abilities.minor.steelbones.description
+      student_of_the_sages:
+        name: class.vermissian_knight.abilities.minor.student_of_the_sages.name
+        description: class.vermissian_knight.abilities.minor.student_of_the_sages.description
+      tunnel_rat:
+        name: class.vermissian_knight.abilities.minor.tunnel_rat.name
+        description: class.vermissian_knight.abilities.minor.tunnel_rat.description
+      well_travelled:
+        name: class.vermissian_knight.abilities.minor.well_travelled.name
+        description: class.vermissian_knight.abilities.minor.well_travelled.description
+    major:
+      aetheric_field:
+        name: class.vermissian_knight.abilities.major.aetheric_field.name
+        description: class.vermissian_knight.abilities.major.aetheric_field.description
+        nested_abilities:
+          helixican_burst:
+            name: class.vermissian_knight.abilities.major.aetheric_field.nested_abilities.helixican_burst.name
+            description: class.vermissian_knight.abilities.major.aetheric_field.nested_abilities.helixican_burst.description
+          recharge:
+            name: class.vermissian_knight.abilities.major.aetheric_field.nested_abilities.recharge.name
+            description: class.vermissian_knight.abilities.major.aetheric_field.nested_abilities.recharge.description
+          anathema:
+            name: class.vermissian_knight.abilities.major.aetheric_field.nested_abilities.anathema.name
+            description: class.vermissian_knight.abilities.major.aetheric_field.nested_abilities.anathema.description
+      dragon-killer:
+        name: class.vermissian_knight.abilities.major.dragon-killer.name
+        description: class.vermissian_knight.abilities.major.dragon-killer.description
+        nested_abilities:
+          hunted:
+            name: class.vermissian_knight.abilities.major.dragon-killer.nested_abilities.hunted.name
+            description: class.vermissian_knight.abilities.major.dragon-killer.nested_abilities.hunted.description
+          endurance_training:
+            name: class.vermissian_knight.abilities.major.dragon-killer.nested_abilities.endurance_training.name
+            description: class.vermissian_knight.abilities.major.dragon-killer.nested_abilities.endurance_training.description
+          applied_research:
+            name: class.vermissian_knight.abilities.major.dragon-killer.nested_abilities.applied_research.name
+            description: class.vermissian_knight.abilities.major.dragon-killer.nested_abilities.applied_research.description
+      get_behind_me:
+        name: class.vermissian_knight.abilities.major.get_behind_me.name
+        description: class.vermissian_knight.abilities.major.get_behind_me.description
+        nested_abilities:
+          last-minute_intervention:
+            name: class.vermissian_knight.abilities.major.get_behind_me.nested_abilities.last-minute_intervention.name
+            description: class.vermissian_knight.abilities.major.get_behind_me.nested_abilities.last-minute_intervention.description
+          steam_vent:
+            name: class.vermissian_knight.abilities.major.get_behind_me.nested_abilities.steam_vent.name
+            description: class.vermissian_knight.abilities.major.get_behind_me.nested_abilities.steam_vent.description
+          back-to-back:
+            name: class.vermissian_knight.abilities.major.get_behind_me.nested_abilities.back-to-back.name
+            description: class.vermissian_knight.abilities.major.get_behind_me.nested_abilities.back-to-back.description
+      overclock:
+        name: class.vermissian_knight.abilities.major.overclock.name
+        description: class.vermissian_knight.abilities.major.overclock.description
+        nested_abilities:
+          puncture:
+            name: class.vermissian_knight.abilities.major.overclock.nested_abilities.puncture.name
+            description: class.vermissian_knight.abilities.major.overclock.nested_abilities.puncture.description
+          momentum:
+            name: class.vermissian_knight.abilities.major.overclock.nested_abilities.momentum.name
+            description: class.vermissian_knight.abilities.major.overclock.nested_abilities.momentum.description
+          galvanic_crucible:
+            name: class.vermissian_knight.abilities.major.overclock.nested_abilities.galvanic_crucible.name
+            description: class.vermissian_knight.abilities.major.overclock.nested_abilities.galvanic_crucible.description
+      trailblazer:
+        name: class.vermissian_knight.abilities.major.trailblazer.name
+        description: class.vermissian_knight.abilities.major.trailblazer.description
+        nested_abilities:
+          first_to_the_front:
+            name: class.vermissian_knight.abilities.major.trailblazer.nested_abilities.first_to_the_front.name
+            description: class.vermissian_knight.abilities.major.trailblazer.nested_abilities.first_to_the_front.description
+          pathfinder:
+            name: class.vermissian_knight.abilities.major.trailblazer.nested_abilities.pathfinder.name
+            description: class.vermissian_knight.abilities.major.trailblazer.nested_abilities.pathfinder.description
+          keep_your_heads_down:
+            name: class.vermissian_knight.abilities.major.trailblazer.nested_abilities.keep_your_heads_down.name
+            description: class.vermissian_knight.abilities.major.trailblazer.nested_abilities.keep_your_heads_down.description
+    zenith:
+      end_of_the_line:
+        name: class.vermissian_knight.abilities.zenith.end_of_the_line.name
+        description: class.vermissian_knight.abilities.zenith.end_of_the_line.description
+      perpetual_motion_engine:
+        name: class.vermissian_knight.abilities.zenith.perpetual_motion_engine.name
+        description: class.vermissian_knight.abilities.zenith.perpetual_motion_engine.description
+      the_last_train:
+        name: class.vermissian_knight.abilities.zenith.the_last_train.name
+        description: class.vermissian_knight.abilities.zenith.the_last_train.description
+junk_mage:
+  name: class.junk_mage.name
+  description: class.junk_mage.description
+  traits:
+    skill: discern
+    domain: occult
+    resource:
+      vial_of_cursed_ink:
+        name: class.junk_mage.traits.resource.vial_of_cursed_ink.name
+        dice: d6
+        domain: occult
+    equipment:
+      group_1:
+        two_old-fashioned_pistols:
+          name: class.junk_mage.traits.equipment.group_1.two_old-fashioned_pistols.name
+          dice: d8
+          type: kill
+          tags:
+            - ranged
+            - loud
+            - one_shot
+      group_2:
+        hungry_knife:
+          name: class.junk_mage.traits.equipment.group_2.hungry_knife.name
+          dice: d6
+          type: kill
+          tags:
+            - brutal
+            - bloodbound
+            - dangerous
+      group_3:
+        overstuffed_coat:
+          name: class.junk_mage.traits.equipment.group_3.overstuffed_coat.name
+          dice: d6
+          type: mend
+          stress: resistance.supplies
+        blunderbuss:
+          name: class.junk_mage.traits.equipment.group_3.blunderbuss.name
+          dice: d4
+          type: kill
+          tags:
+            - spread
+            - point_blank
+            - one_shot
+  abilities:
+    core:
+      ravening_knowledge:
+        name: class.junk_mage.abilities.core.ravening_knowledge.name
+        description: class.junk_mage.abilities.core.ravening_knowledge.description
+      sacrifice:
+        name: class.junk_mage.abilities.core.sacrifice.name
+        description: class.junk_mage.abilities.core.sacrifice.description
+    minor:
+      back_pocket_arcana:
+        name: class.junk_mage.abilities.minor.back_pocket_arcana.name
+        description: class.junk_mage.abilities.minor.back_pocket_arcana.description
+      been_everywhere:
+        name: class.junk_mage.abilities.minor.been_everywhere.name
+        description: class.junk_mage.abilities.minor.been_everywhere.description
+      by_any_means:
+        name: class.junk_mage.abilities.minor.by_any_means.name
+        description: class.junk_mage.abilities.minor.by_any_means.description
+      frontier_etiquette:
+        name: class.junk_mage.abilities.minor.frontier_etiquette.name
+        description: class.junk_mage.abilities.minor.frontier_etiquette.description
+      litanies_of_false_power:
+        name: class.junk_mage.abilities.minor.litanies_of_false_power.name
+        description: class.junk_mage.abilities.minor.litanies_of_false_power.description
+      mark_of_hunger:
+        name: class.junk_mage.abilities.minor.mark_of_hunger.name
+        description: class.junk_mage.abilities.minor.mark_of_hunger.description
+      mark_of_the_phantom:
+        name: class.junk_mage.abilities.minor.mark_of_the_phantom.name
+        description: class.junk_mage.abilities.minor.mark_of_the_phantom.description
+      mark_of_shadow:
+        name: class.junk_mage.abilities.minor.mark_of_shadow.name
+        description: class.junk_mage.abilities.minor.mark_of_shadow.description
+      mark_of_the_weaver:
+        name: class.junk_mage.abilities.minor.mark_of_the_weaver.name
+        description: class.junk_mage.abilities.minor.mark_of_the_weaver.description
+      rust_and_iron:
+        name: class.junk_mage.abilities.minor.rust_and_iron.name
+        description: class.junk_mage.abilities.minor.rust_and_iron.description
+      siphon_of_fortune:
+        name: class.junk_mage.abilities.minor.siphon_of_fortune.name
+        description: class.junk_mage.abilities.minor.siphon_of_fortune.description
+      warding_spells:
+        name: class.junk_mage.abilities.minor.warding_spells.name
+        description: class.junk_mage.abilities.minor.warding_spells.description
+      wretched_and_glorious:
+        name: class.junk_mage.abilities.minor.wretched_and_glorious.name
+        description: class.junk_mage.abilities.minor.wretched_and_glorious.description
+    major:
+      curse_of_the_sky_court:
+        name: class.junk_mage.abilities.major.curse_of_the_sky_court.name
+        description: class.junk_mage.abilities.major.curse_of_the_sky_court.description
+        nested_abilities:
+          ecstasy:
+            name: class.junk_mage.abilities.major.curse_of_the_sky_court.nested_abilities.ecstasy.name
+            description: class.junk_mage.abilities.major.curse_of_the_sky_court.nested_abilities.ecstasy.description
+          a_moment_eternal:
+            name: class.junk_mage.abilities.major.curse_of_the_sky_court.nested_abilities.a_moment_eternal.name
+            description: class.junk_mage.abilities.major.curse_of_the_sky_court.nested_abilities.a_moment_eternal.description
+          steal_the_night_away:
+            name: class.junk_mage.abilities.major.curse_of_the_sky_court.nested_abilities.steal_the_night_away.name
+            description: class.junk_mage.abilities.major.curse_of_the_sky_court.nested_abilities.steal_the_night_away.description
+      fire_of_the_red_king:
+        name: class.junk_mage.abilities.major.fire_of_the_red_king.name
+        description: class.junk_mage.abilities.major.fire_of_the_red_king.description
+        nested_abilities:
+          words_of_flame:
+            name: class.junk_mage.abilities.major.fire_of_the_red_king.nested_abilities.words_of_flame.name
+            description: class.junk_mage.abilities.major.fire_of_the_red_king.nested_abilities.words_of_flame.description
+          superheat:
+            name: class.junk_mage.abilities.major.fire_of_the_red_king.nested_abilities.superheat.name
+            description: class.junk_mage.abilities.major.fire_of_the_red_king.nested_abilities.superheat.description
+          coin-gold_blood:
+            name: class.junk_mage.abilities.major.fire_of_the_red_king.nested_abilities.coin-gold_blood.name
+            description: class.junk_mage.abilities.major.fire_of_the_red_king.nested_abilities.coin-gold_blood.description
+      frenzy_of_the_sky_court:
+        name: class.junk_mage.abilities.major.frenzy_of_the_sky_court.name
+        description: class.junk_mage.abilities.major.frenzy_of_the_sky_court.description
+        nested_abilities:
+          temporary_perfection:
+            name: class.junk_mage.abilities.major.frenzy_of_the_sky_court.nested_abilities.temporary_perfection.name
+            description: class.junk_mage.abilities.major.frenzy_of_the_sky_court.nested_abilities.temporary_perfection.description
+          brisk_conjuration:
+            name: class.junk_mage.abilities.major.frenzy_of_the_sky_court.nested_abilities.brisk_conjuration.name
+            description: class.junk_mage.abilities.major.frenzy_of_the_sky_court.nested_abilities.brisk_conjuration.description
+          maddening_storm:
+            name: class.junk_mage.abilities.major.frenzy_of_the_sky_court.nested_abilities.maddening_storm.name
+            description: class.junk_mage.abilities.major.frenzy_of_the_sky_court.nested_abilities.maddening_storm.description
+      greed_of_the_red_king:
+        name: class.junk_mage.abilities.major.greed_of_the_red_king.name
+        description: class.junk_mage.abilities.major.greed_of_the_red_king.description
+        nested_abilities:
+          only_the_finest:
+            name: class.junk_mage.abilities.major.greed_of_the_red_king.nested_abilities.only_the_finest.name
+            description: class.junk_mage.abilities.major.greed_of_the_red_king.nested_abilities.only_the_finest.description
+          gorge:
+            name: class.junk_mage.abilities.major.greed_of_the_red_king.nested_abilities.gorge.name
+            description: class.junk_mage.abilities.major.greed_of_the_red_king.nested_abilities.gorge.description
+          a_king_demands:
+            name: class.junk_mage.abilities.major.greed_of_the_red_king.nested_abilities.a_king_demands.name
+            description: class.junk_mage.abilities.major.greed_of_the_red_king.nested_abilities.a_king_demands.description
+      kiss_of_the_drowned_queen:
+        name: class.junk_mage.abilities.major.kiss_of_the_drowned_queen.name
+        description: class.junk_mage.abilities.major.kiss_of_the_drowned_queen.description
+        nested_abilities:
+          slumbering_eternal:
+            name: class.junk_mage.abilities.major.kiss_of_the_drowned_queen.nested_abilities.slumbering_eternal.name
+            description: class.junk_mage.abilities.major.kiss_of_the_drowned_queen.nested_abilities.slumbering_eternal.description
+          body_of_water:
+            name: class.junk_mage.abilities.major.kiss_of_the_drowned_queen.nested_abilities.body_of_water.name
+            description: class.junk_mage.abilities.major.kiss_of_the_drowned_queen.nested_abilities.body_of_water.description
+          grace:
+            name: class.junk_mage.abilities.major.kiss_of_the_drowned_queen.nested_abilities.grace.name
+            description: class.junk_mage.abilities.major.kiss_of_the_drowned_queen.nested_abilities.grace.description
+      sanctum_of_the_stone_chorus:
+        name: class.junk_mage.abilities.major.sanctum_of_the_stone_chorus.name
+        description: class.junk_mage.abilities.major.sanctum_of_the_stone_chorus.description
+        nested_abilities:
+          benevolent:
+            name: class.junk_mage.abilities.major.sanctum_of_the_stone_chorus.nested_abilities.benevolent.name
+            description: class.junk_mage.abilities.major.sanctum_of_the_stone_chorus.nested_abilities.benevolent.description
+          omnipresent:
+            name: class.junk_mage.abilities.major.sanctum_of_the_stone_chorus.nested_abilities.omnipresent.name
+            description: class.junk_mage.abilities.major.sanctum_of_the_stone_chorus.nested_abilities.omnipresent.description
+          bountiful:
+            name: class.junk_mage.abilities.major.sanctum_of_the_stone_chorus.nested_abilities.bountiful.name
+            description: class.junk_mage.abilities.major.sanctum_of_the_stone_chorus.nested_abilities.bountiful.description
+    zenith:
+      the_herald_of_the_red_king:
+        name: class.junk_mage.abilities.zenith.the_herald_of_the_red_king.name
+        description: class.junk_mage.abilities.zenith.the_herald_of_the_red_king.description
+      the_herald_of_the_drowned_queen:
+        name: class.junk_mage.abilities.zenith.the_herald_of_the_drowned_queen.name
+        description: class.junk_mage.abilities.zenith.the_herald_of_the_drowned_queen.description
+      the_herald_of_the_stone_chorus:
+        name: class.junk_mage.abilities.zenith.the_herald_of_the_stone_chorus.name
+        description: class.junk_mage.abilities.zenith.the_herald_of_the_stone_chorus.description
+deep_apiarist:
+  name: class.deep_apiarist.name
+  description: class.deep_apiarist.description
+  traits:
+    skill: mend
+    domain: occult
+    resource:
+      heartsbloom_rose_in_a_glass_jar:
+        name: class.deep_apiarist.traits.resource.heartsbloom_rose_in_a_glass_jar.name
+        dice: d4
+        domain: occult
+        tags:
+          - fragile
+    equipment:
+      core:
+        hive_tool:
+          name: class.deep_apiarist.traits.equipment.core.hive_tool.name
+          dice: d6
+          type: kill
+          tags:
+            - brutal
+      group_1:
+        dimensional_barometer:
+          name: class.deep_apiarist.traits.equipment.group_1.dimensional_barometer.name
+          dice: d6
+          type: delve
+      group_2:
+        hunting_rifle:
+          name: class.deep_apiarist.traits.equipment.group_2.hunting_rifle.name
+          dice: d6
+          type: kill
+          tags:
+            - reload
+            - extreme_range
+      group_3:
+        smoker:
+          name: class.deep_apiarist.traits.equipment.group_3.smoker.name
+          dice: d4
+          type: kill
+          tags:
+            - debilitating
+            - smoke
+  abilities:
+    core:
+      the_hive:
+        name: class.deep_apiarist.abilities.core.the_hive.name
+        description: class.deep_apiarist.abilities.core.the_hive.description
+      release_the_swarm:
+        name: class.deep_apiarist.abilities.core.release_the_swarm.name
+        description: class.deep_apiarist.abilities.core.release_the_swarm.description
+    minor:
+      perfect_machine:
+        name: class.deep_apiarist.abilities.minor.perfect_machine.name
+        description: class.deep_apiarist.abilities.minor.perfect_machine.description
+      apisambulation:
+        name: class.deep_apiarist.abilities.minor.apisambulation.name
+        description: class.deep_apiarist.abilities.minor.apisambulation.description
+      hiveborn:
+        name: class.deep_apiarist.abilities.minor.hiveborn.name
+        description: class.deep_apiarist.abilities.minor.hiveborn.description
+      hunter_of_the_damned:
+        name: class.deep_apiarist.abilities.minor.hunter_of_the_damned.name
+        description: class.deep_apiarist.abilities.minor.hunter_of_the_damned.description
+      intoxicant:
+        name: class.deep_apiarist.abilities.minor.intoxicant.name
+        description: class.deep_apiarist.abilities.minor.intoxicant.description
+      intrusion:
+        name: class.deep_apiarist.abilities.minor.intrusion.name
+        description: class.deep_apiarist.abilities.minor.intrusion.description
+      many_eyes:
+        name: class.deep_apiarist.abilities.minor.many_eyes.name
+        description: class.deep_apiarist.abilities.minor.many_eyes.description
+      perfect_structure:
+        name: class.deep_apiarist.abilities.minor.perfect_structure.name
+        description: class.deep_apiarist.abilities.minor.perfect_structure.description
+      thrice-warded:
+        name: class.deep_apiarist.abilities.minor.thrice-warded.name
+        description: class.deep_apiarist.abilities.minor.thrice-warded.description
+      uncanny_biology:
+        name: class.deep_apiarist.abilities.minor.uncanny_biology.name
+        description: class.deep_apiarist.abilities.minor.uncanny_biology.description
+      waxen_sigils:
+        name: class.deep_apiarist.abilities.minor.waxen_sigils.name
+        description: class.deep_apiarist.abilities.minor.waxen_sigils.description
+      whispers_of_the_hive:
+        name: class.deep_apiarist.abilities.minor.whispers_of_the_hive.name
+        description: class.deep_apiarist.abilities.minor.whispers_of_the_hive.description
+      wisdom_flows_so_sweet:
+        name: class.deep_apiarist.abilities.minor.wisdom_flows_so_sweet.name
+        description: class.deep_apiarist.abilities.minor.wisdom_flows_so_sweet.description
+    major:
+      annihilation:
+        name: class.deep_apiarist.abilities.major.annihilation.name
+        description: class.deep_apiarist.abilities.major.annihilation.description
+        nested_abilities:
+          blossom_within_the_skull:
+            name: class.deep_apiarist.abilities.major.annihilation.nested_abilities.blossom_within_the_skull.name
+            description: class.deep_apiarist.abilities.major.annihilation.nested_abilities.blossom_within_the_skull.description
+          dark_flowers:
+            name: class.deep_apiarist.abilities.major.annihilation.nested_abilities.dark_flowers.name
+            description: class.deep_apiarist.abilities.major.annihilation.nested_abilities.dark_flowers.description
+          that_which_is_golden:
+            name: class.deep_apiarist.abilities.major.annihilation.nested_abilities.that_which_is_golden.name
+            description: class.deep_apiarist.abilities.major.annihilation.nested_abilities.that_which_is_golden.description
+      blessed_toxin:
+        name: class.deep_apiarist.abilities.major.blessed_toxin.name
+        description: class.deep_apiarist.abilities.major.blessed_toxin.description
+        nested_abilities:
+          fearless:
+            name: class.deep_apiarist.abilities.major.blessed_toxin.nested_abilities.fearless.name
+            description: class.deep_apiarist.abilities.major.blessed_toxin.nested_abilities.fearless.description
+          painless:
+            name: class.deep_apiarist.abilities.major.blessed_toxin.nested_abilities.painless.name
+            description: class.deep_apiarist.abilities.major.blessed_toxin.nested_abilities.painless.description
+          bloodless:
+            name: class.deep_apiarist.abilities.major.blessed_toxin.nested_abilities.bloodless.name
+            description: class.deep_apiarist.abilities.major.blessed_toxin.nested_abilities.bloodless.description
+      delirium_spike:
+        name: class.deep_apiarist.abilities.major.delirium_spike.name
+        description: class.deep_apiarist.abilities.major.delirium_spike.description
+        nested_abilities:
+          imperfect_balance:
+            name: class.deep_apiarist.abilities.major.delirium_spike.nested_abilities.imperfect_balance.name
+            description: class.deep_apiarist.abilities.major.delirium_spike.nested_abilities.imperfect_balance.description
+          venomous_hex:
+            name: class.deep_apiarist.abilities.major.delirium_spike.nested_abilities.venomous_hex.name
+            description: class.deep_apiarist.abilities.major.delirium_spike.nested_abilities.venomous_hex.description
+          inquisitive_burrowers:
+            name: class.deep_apiarist.abilities.major.delirium_spike.nested_abilities.inquisitive_burrowers.name
+            description: class.deep_apiarist.abilities.major.delirium_spike.nested_abilities.inquisitive_burrowers.description
+      sacred_geometry:
+        name: class.deep_apiarist.abilities.major.sacred_geometry.name
+        description: class.deep_apiarist.abilities.major.sacred_geometry.description
+        nested_abilities:
+          majestic:
+            name: class.deep_apiarist.abilities.major.sacred_geometry.nested_abilities.majestic.name
+            description: class.deep_apiarist.abilities.major.sacred_geometry.nested_abilities.majestic.description
+          pristine:
+            name: class.deep_apiarist.abilities.major.sacred_geometry.nested_abilities.pristine.name
+            description: class.deep_apiarist.abilities.major.sacred_geometry.nested_abilities.pristine.description
+          regal:
+            name: class.deep_apiarist.abilities.major.sacred_geometry.nested_abilities.regal.name
+            description: class.deep_apiarist.abilities.major.sacred_geometry.nested_abilities.regal.description
+      unchaos:
+        name: class.deep_apiarist.abilities.major.unchaos.name
+        description: class.deep_apiarist.abilities.major.unchaos.description
+        nested_abilities:
+          stabilisation:
+            name: class.deep_apiarist.abilities.major.unchaos.nested_abilities.stabilisation.name
+            description: class.deep_apiarist.abilities.major.unchaos.nested_abilities.stabilisation.description
+          perfection:
+            name: class.deep_apiarist.abilities.major.unchaos.nested_abilities.perfection.name
+            description: class.deep_apiarist.abilities.major.unchaos.nested_abilities.perfection.description
+          filed_away:
+            name: class.deep_apiarist.abilities.major.unchaos.nested_abilities.filed_away.name
+            description: class.deep_apiarist.abilities.major.unchaos.nested_abilities.filed_away.description
+    zenith:
+      absolute_stasis:
+        name: class.deep_apiarist.abilities.zenith.absolute_stasis.name
+        description: class.deep_apiarist.abilities.zenith.absolute_stasis.description
+      dimensional_bastion:
+        name: class.deep_apiarist.abilities.zenith.dimensional_bastion.name
+        description: class.deep_apiarist.abilities.zenith.dimensional_bastion.description
+      surrender_to_chaos:
+        name: class.deep_apiarist.abilities.zenith.surrender_to_chaos.name
+        description: class.deep_apiarist.abilities.zenith.surrender_to_chaos.description
+

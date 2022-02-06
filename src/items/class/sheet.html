@@ -15,16 +15,16 @@
 <form class="heart sheet base Item class {{cssClass}}" autocomplete="off">
     <h1>
         {{#if (and editable (not item.isOwned))}}
-        <input name="name" value="{{data.name}}"/>
+        <input name="name" value="{{localizeHeart data.name}}"/>
         {{else}}
-        {{item.name}}
+        {{localizeHeart item.name}}
         {{/if}}
     </h1>
     <div class="description">
         {{#if (and editable (not item.isOwned))}}
-        {{editor content=data.data.description target="data.description" button=true editable=editable owner=owner}}
+        {{editor content=(localizeHeart data.data.description) target="data.description" button=true editable=editable owner=owner}}
         {{else}}
-        {{{data.data.description}}}
+        {{{localizeHeart data.data.description}}}
         {{/if}}
     </div>
 

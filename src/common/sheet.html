@@ -1,8 +1,8 @@
 <form class="heart sheet base {{documentName}} {{type}} {{cssClass}} flexcol" autocomplete="off">
     <div class="info">
-        <img class="profile" src="{{data.img}}" title="{{data.name}}" data-edit="img" />
+        <img class="profile" src="{{data.img}}" title="{{localizeHeart data.name}}" data-edit="img" />
         <div class="text">
-            <input name="name" value="{{data.name}}" placeholder="{{localizeHeart type 'name'}}" />
+            <input name="name" value="{{localizeHeart data.name}}" placeholder="{{localizeHeart type 'name'}}" />
             <div class="subtitle">{{localizeHeart type "label-single"}}</div>        
         </div>
     </div>

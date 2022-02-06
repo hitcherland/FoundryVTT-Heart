@@ -8,7 +8,8 @@
     "build": "webpack --mode development",
     "build-prod": "webpack --mode production",
     "watch": "webpack serve --hot --progress",
-    "release": "npm run build-prod && node dev-utils/github-repo.js"
+    "release": "npm run build-prod && node dev-utils/github-repo.js",
+    "build-packs": "node pack-data/build.js"
   },
   "keywords": [
     "foundryvtt"
@@ -30,6 +31,7 @@
     "webpack-import-glob-loader": "^1.6.3"
   },
   "dependencies": {
-    "terser-webpack-plugin": "^5.1.4"
+    "terser-webpack-plugin": "^5.1.4",
+    "yaml": "^1.10.2"
   }
 }

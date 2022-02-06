@@ -2,10 +2,10 @@
 {{#> "heart:items/base/preview.html" showActive=showActive}}
     <h4>
         {{#if showTypeInTitle}}{{localizeHeart "ability" "type" item.data.data.type}}:{{/if}}
-        {{item.name}}
+        {{localizeHeart item.name}}
     </h4>
     <div>
-        {{{item.data.data.description}}}
+        {{{localizeHeart item.data.data.description}}}
     </div>
     <div>
         {{#each item.proxy.abilities as |ability|}}

@@ -1,9 +1,9 @@
-{{#> "heart:items/base/preview.html" showActivate=true showComplete=true}}
-    {{item.name}}
+{{#> "heart:items/base/preview.html" showActivate=true showComplete=false}}
+    {{localizeHeart item.name}}
     (<a data-action="item-roll"><span class="fas fa-dice"></span> {{item.data.data.die_size}}</a>
     {{localizeHeart "domain" item.data.data.domain}}
     {{#each item.childrenTypes.tag as |tag|}}
-        {{tag.name}}
+        {{localizeHeart "tag" tag.name "name"}}
     {{/each}}
     )
 {{/ "heart:items/base/preview.html"}}
