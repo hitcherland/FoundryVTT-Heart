@@ -20,7 +20,6 @@
     </div>
     
     {{#if (and showTextboxesBelowItems description_path)}}
-    {{log "lookup" actor.data.data description_path (lookup actor.data.data description_path)}}
     {{editor content=(lookup actor.data.data description_path) target=(join "." "data" description_path) button=true editable=editable owner=owner}}
     {{/if}}
 </div>

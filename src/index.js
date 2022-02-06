@@ -42,7 +42,6 @@ function initialise() {
             return _compendium_opts;
         }
     });
-    console.warn(Compendium.defaultOptions);
 
     activateTemplates();
 

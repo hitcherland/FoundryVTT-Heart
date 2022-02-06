@@ -22,7 +22,6 @@ module.exports = class FoundryVTTTranslationMerger {
     constructor(moduleName, distPath) {
         this.moduleName = moduleName;
         this.distPath = distPath;
-        console.warn(this.moduleName);
     }
 
     apply(compiler) {
