@@ -30,7 +30,7 @@ function writeFiles(compiler) {
     }
 
     function parseTags(data) {
-        return Object.values(data).map(({name, description}) => {
+        return Object.values(data).map(({ name, description }) => {
             return {
                 _id: randomID(),
                 name: name,
@@ -81,7 +81,6 @@ function writeFiles(compiler) {
 
     function parseClasses(classes) {
         return Object.entries(classes).map(([key, data]) => {
-            console.warn(key)
             const class_data = {
                 _id: randomID(),
                 name: data.name,
@@ -147,20 +146,44 @@ function writeFiles(compiler) {
         });
     }
 
+    function parseFallouts(fallouts) {
+        return Object.entries(fallouts).reduce((output, [type, type_fallouts]) => {
+            output.push(...Object.entries(type_fallouts).reduce((output, [resistance, resistance_fallouts]) => {
+                output.push(...Object.entries(resistance_fallouts).map(([key, data]) => {
+                    data = data || {};
+                    return {
+                        _id: randomID(),
+                        name: data.name || `fallout.${type}.${resistance}.${key}.name`,
+                        type: "fallout",
+                        data: {
+                            description: data.description || `fallout.${type}.${resistance}.${key}.description`,
+                            resistance,
+                            type,
+                        }
+                    }
+                }));
+                return output;
+            }), []);
+            return output;
+        }, []);
+    }
+
     const parsers = {
         'classes': parseClasses,
         'tags': parseTags,
         'callings': parseCallings,
+        'fallouts': parseFallouts,
     };
 
     const stored = {
         'tags': {},
         'classes': {},
         'callings': {},
+        'fallouts': {},
     };
 
     return function (compilation) {
-        for (const type of ['callings', 'tags', 'classes']) {
+        for (const type of ['callings', 'tags', 'classes', 'fallouts']) {
             const fullpath = path.join(this.packDataPath, type, type + ".yaml")
             const file = fs.readFileSync(fullpath, 'utf8');
             const data = yaml.parse(file);

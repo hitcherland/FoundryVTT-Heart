@@ -1,6 +1,6 @@
 {{#> "heart:items/base/preview.html" }}
-    <h4>{{item.name}}</h4>
+    <h4>{{localizeHeart item.name}} ({{localizeHeart item.data.data.type}} {{localizeHeart item.data.data.resistance}})</h4>
     <div>
-        {{{item.data.data.description}}}
+        {{{localizeHeart item.data.data.description}}}
     </div>
 {{/ "heart:items/base/preview.html"}}
