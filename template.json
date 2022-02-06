@@ -230,7 +230,9 @@
                 "has_description",
                 "is_activatable",
                 "is_completable"
-            ]
+            ],
+            "type": "minor",
+            "resistance": "blood"
         },
         "haunt": {
             "templates": [

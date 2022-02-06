@@ -7,6 +7,34 @@
             "system": "heart",
             "path": "./packs/macros.db",
             "entity": "Macro"
+        },
+        {
+            "name": "callings",
+            "label": "Callings",
+            "system": "heart",
+            "path": "./packs/callings.db",
+            "entity": "Item"
+        },
+        {
+            "name": "tags",
+            "label": "Tags",
+            "system": "heart",
+            "path": "./packs/tags.db",
+            "entity": "Item"
+        },
+        {
+            "name": "classes",
+            "label": "Classes",
+            "system": "heart",
+            "path": "./packs/classes.db",
+            "entity": "Item"
+        },
+        {
+            "name": "fallouts",
+            "label": "Fallouts",
+            "system": "heart",
+            "path": "./packs/fallouts.db",
+            "entity": "Item"
         }
     ],
     "languages": [
@@ -25,15 +53,15 @@
     "name": "heart",
     "title": "Heart - The City Beneath",
     "description": "A red wet heaven slumbers fitful under the city of Spire. Purchase at https://rowanrookanddecard.com/product/heart-the-city-beneath-rpg/",
-    "version": "0.3.16",
+    "version": "0.3.17",
     "author": "hitcherland",
     "minimumCoreVersion": "0.8.6",
     "esmodules": [
         "heart.js"
     ],
-    "compatibleCoreVersion": "9.245",
+    "compatibleCoreVersion": "9.249",
     "url": "https://github.com/hitcherland/foundryvtt-heart",
-    "manifest": "https://raw.githubusercontent.com/hitcherland/foundryvtt-heart/0.3.16/system.json",
-    "readme": "https://raw.githubusercontent.com/hitcherland/foundryvtt-heart/0.3.16/README.md",
-    "download": "https://github.com/hitcherland/foundryvtt-heart/archive/refs/tags/0.3.16.zip"
+    "manifest": "https://raw.githubusercontent.com/hitcherland/foundryvtt-heart/0.3.17/system.json",
+    "readme": "https://raw.githubusercontent.com/hitcherland/foundryvtt-heart/0.3.17/README.md",
+    "download": "https://github.com/hitcherland/foundryvtt-heart/archive/refs/tags/0.3.17.zip"
 }
