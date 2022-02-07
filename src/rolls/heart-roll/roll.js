@@ -137,8 +137,12 @@ export default class HeartRoll extends Roll {
     static _build({character, difficulty, skill, domain, mastery, helpers}={}, data={}, options={}) {
         const actor = game.actors.get(character);
 
-        skill = actor.data.data.skills[skill].value ? skill : undefined;
-        domain = actor.data.data.domains[domain].value ? domain : undefined;
+        if(skill !== null)
+            skill = actor.data.data.skills[skill].value ? skill : undefined;
+
+        if(domain !== null)
+            domain = actor.data.data.domains[domain].value ? domain : undefined;
+            
         helpers = helpers.filter(x => x !== character);
 
         let formula_terms = [];
@@ -147,7 +151,7 @@ export default class HeartRoll extends Roll {
             skill ? game.i18n.localize(`heart.skill.${skill}`) : undefined,
             domain ? game.i18n.localize(`heart.domain.${domain}`) : undefined, 
             mastery ? game.i18n.localize(`heart.mastery.label-short`) : false,
-            ...helpers].forEach(flavor => {
+            ...helpers.map(h => game.actors.get(h).name)].forEach(flavor => {
             if (!flavor) return;
             formula_terms.push(`1d10[${flavor}]`);
         });

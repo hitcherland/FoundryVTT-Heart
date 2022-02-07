@@ -526,7 +526,7 @@ heretic:
         spireblack_brazier_lit:
           name: class.heretic.traits.equipment.group_1.spireblack_brazier_lit.name
           dice: d8
-          type: kill,
+          type: kill
           tags:
             - obscuring
             - dangerous

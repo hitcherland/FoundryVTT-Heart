@@ -118,7 +118,7 @@ function initialise() {
         return game.actors.get(id);
     });
 
-    Handlebars.registerHelper('localizeHeart', function (...args) {
+    function localizeHeart(...args) {
         const options = args.splice(-1, 1)[0];
         const value = `heart.${args.join('.')}`;
         const response = HandlebarsHelpers.localize(value, options)
@@ -127,7 +127,11 @@ function initialise() {
         } else {
             return response;
         }
-    });
+    }
+
+    window.localizeheart = localizeHeart;
+
+    Handlebars.registerHelper('localizeHeart', localizeHeart);
 
     Handlebars.registerHelper('ownsAnyActors', function (ids) {
         for (let id of ids) {

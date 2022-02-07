@@ -123,7 +123,7 @@ export default class CharacterSheet extends HeartActorSheet {
             await roll.evaluate({async: true});
 
             roll.toMessage({
-                flavor: `${item.name} (<span class="item-type">${item.type}</span>)`,
+                flavor: `${localizeHeart(item.name)} (<span class="item-type">${item.type}</span>)`,
                 speaker: {actor: this.actor.id}
             });
         });
