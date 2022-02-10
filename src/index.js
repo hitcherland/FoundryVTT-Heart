@@ -120,14 +120,14 @@ function initialise() {
 
     function localizeHeart(...args) {
         let options = {};
-        if(typeof(args[args.length-1]) === "object") {
+        if (typeof (args[args.length - 1]) === "object") {
             options = args.splice(-1, 1)[0];
         }
 
         const key = args.join('.');
         const value = `heart.${key}`;
         const response = game.i18n.localize(value);
-        if(response == value) {
+        if (response == value) {
             return key;
         } else {
             return response;
@@ -154,28 +154,33 @@ Hooks.once('init', initialise);
 
 Hooks.once('ready', function () {
     registerSettings();
-    if (game.settings.get('heart', 'showStartupMessage')) {
-        let d = new Dialog({
-            title: game.i18n.format("heart.dialog.title(VERSION)", { VERSION: game.system.data.version }),
-            content: game.i18n.format("heart.dialog.content(VERSION)", { VERSION: game.system.data.version }),
-            buttons: {
-                close: {
-                    icon: '<i class="fas fa-times"></i>',
-                    label: game.i18n.localize("heart.dialog.skip"),
-                    callback: () => { }
+    new Promise(async function () {
+        if (game.settings.get('heart', 'showStartupMessage')) {
+            let d = new Dialog({
+                title: game.i18n.format("heart.dialog.title(VERSION)", { VERSION: game.system.data.version }),
+                content: await renderTemplate('heart:templates/startup.html', { versions: Object.values(game.i18n.translations.heart.versions).sort((a, b) => a.version > b.version ? -1 : 1), version: game.system.data.version }),
+                buttons: {
+                    close: {
+                        icon: '<i class="fas fa-times"></i>',
+                        label: game.i18n.localize("heart.dialog.skip"),
+                        callback: () => { }
+                    },
+                    prevent: {
+                        icon: '<i class="fas fa-check"></i>',
+                        label: game.i18n.localize("heart.dialog.dont-show-again"),
+                        callback: () => game.settings.set('heart', 'showStartupMessage', false)
+                    }
                 },
-                prevent: {
-                    icon: '<i class="fas fa-check"></i>',
-                    label: game.i18n.localize("heart.dialog.dont-show-again"),
-                    callback: () => game.settings.set('heart', 'showStartupMessage', false)
-                }
-            },
-            default: "skip",
-            render: html => { },
-            close: html => { }
-        });
-        d.render(true);
-    }
+                default: "skip",
+                render: html => {
+                    const tabs = new Tabs({ navSelector: ".tabs", contentSelector: ".content", initial: `v${game.system.data.version}` });
+                    tabs.bind(html[0]);
+                },
+                close: html => { }
+            });
+            d.render(true);
+        }
+    });
 });
 
 if (module.hot) {

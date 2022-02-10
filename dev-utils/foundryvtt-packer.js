@@ -124,10 +124,6 @@ function writeFiles(compiler) {
                 });
             }
 
-            if(key === 'cleaver') {
-                console.warn(class_data);
-            }
-
             return class_data;
         });
     }
