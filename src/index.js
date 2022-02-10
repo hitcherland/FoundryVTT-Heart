@@ -119,17 +119,22 @@ function initialise() {
     });
 
     function localizeHeart(...args) {
-        const options = args.splice(-1, 1)[0];
-        const value = `heart.${args.join('.')}`;
-        const response = HandlebarsHelpers.localize(value, options)
+        let options = {};
+        if(typeof(args[args.length-1]) === "object") {
+            options = args.splice(-1, 1)[0];
+        }
+
+        const key = args.join('.');
+        const value = `heart.${key}`;
+        const response = game.i18n.localize(value);
         if(response == value) {
-            return args.join('.')
+            return key;
         } else {
             return response;
         }
     }
 
-    window.localizeheart = localizeHeart;
+    window.localizeHeart = localizeHeart;
 
     Handlebars.registerHelper('localizeHeart', localizeHeart);
 
