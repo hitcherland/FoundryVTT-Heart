@@ -13,8 +13,12 @@ function randomID(length = 16) {
 
 function writeFiles(compiler) {
 
-    function parseEquipment(equipment, group_id = "core") {
-        return Object.values(equipment).map(data => {
+    function parseEquipment(equipment, group_id = "core", class_="") {
+        return Object.entries(equipment).map(([key, data]) => {
+            data = data || {};
+            if(data.name === undefined) {
+                data.name = `class.${class_}.traits.equipment.${group_id}.${key}.name`;
+            }
             return {
                 _id: randomID(),
                 name: data.name,
@@ -64,8 +68,12 @@ function writeFiles(compiler) {
         });
     }
 
-    function parseResource(resources) {
-        return Object.values(resources).map(data => {
+    function parseResource(resources, class_) {
+        return Object.entries(resources).map(([key, data]) => {
+            data = data || {};
+            if(data.name === undefined) {
+                data.name = `class.${class_}.traits.resource.${key}.name`
+            }
             return {
                 _id: randomID(),
                 type: "resource",
@@ -81,6 +89,13 @@ function writeFiles(compiler) {
 
     function parseClasses(classes) {
         return Object.entries(classes).map(([key, data]) => {
+            if(data.name === undefined) {
+                data.name = `class.${key}.name`;
+            }
+            if(data.description === undefined) {
+                data.description = `class.${key}.description`;
+            }
+
             const class_data = {
                 _id: randomID(),
                 name: data.name,
@@ -91,7 +106,7 @@ function writeFiles(compiler) {
                     core_skill: data.traits.skill,
                     equipment_groups: [],
                     children: Object.assign({},
-                        ...[...parseResource(data.traits.resource),
+                        ...[...parseResource(data.traits.resource, key),
                         ...parseAbilities(data.abilities.core, "core", `class.${key}.abilities.core`),
                         ...parseAbilities(data.abilities.minor, "minor", `class.${key}.abilities.minor`),
                         ...parseAbilities(data.abilities.major, "major", `class.${key}.abilities.major`),
@@ -103,10 +118,14 @@ function writeFiles(compiler) {
 
             for (const [group_id, equipment_group] of Object.entries(data.traits.equipment)) {
                 class_data.data.equipment_groups.push(group_id);
-                const equipment = parseEquipment(equipment_group, group_id);
+                const equipment = parseEquipment(equipment_group, group_id, key);
                 equipment.forEach(equip => {
                     class_data.data.children[equip._id] = equip;
                 });
+            }
+
+            if(key === 'cleaver') {
+                console.warn(class_data);
             }
 
             return class_data;

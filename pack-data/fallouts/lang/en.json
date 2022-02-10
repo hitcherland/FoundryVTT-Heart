@@ -219,6 +219,8 @@
         "critical.supplies.plummet.name": "Plummet",
         "critical.supplies.plummet.description": "Your line snaps; your hooks don't hold; your pick shears away and tumbles into a chasm. Whatever it is, you plunge into the darkness beneath and do not return.[Immediate]",
         "critical.supplies.starvation.name": "Starvation",
-        "critical.supplies.starvation.description": "You starve to death or are overcome by dehydration. [Immediate]"
+        "critical.supplies.starvation.description": "You starve to death or are overcome by dehydration. [Immediate]",
+        "major.supplies.incarnadine_severed.name": "Severed",
+        "major.supplies.incarnadine_severed.description": "Thanks to your neglect or pure misfortune, one of your shrines to Incarne has fallen into disrepair, and the haven it's inside is no longer part of your trade network."
     }
 }

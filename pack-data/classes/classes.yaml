@@ -59,7 +59,7 @@ vermissian_knight:
       phantom_lens:
         name: class.vermissian_knight.abilities.minor.phantom_lens.name
         description: class.vermissian_knight.abilities.minor.phantom_lens.description
-      protector's_gauntlet:
+      protector_s_gauntlet:
         name: class.vermissian_knight.abilities.minor.protector's_gauntlet.name
         description: class.vermissian_knight.abilities.minor.protector's_gauntlet.description
       sanguinary_array:
@@ -94,32 +94,32 @@ vermissian_knight:
           anathema:
             name: class.vermissian_knight.abilities.major.aetheric_field.nested_abilities.anathema.name
             description: class.vermissian_knight.abilities.major.aetheric_field.nested_abilities.anathema.description
-      dragon-killer:
-        name: class.vermissian_knight.abilities.major.dragon-killer.name
-        description: class.vermissian_knight.abilities.major.dragon-killer.description
+      dragon_killer:
+        name: class.vermissian_knight.abilities.major.dragon_killer.name
+        description: class.vermissian_knight.abilities.major.dragon_killer.description
         nested_abilities:
           hunted:
-            name: class.vermissian_knight.abilities.major.dragon-killer.nested_abilities.hunted.name
-            description: class.vermissian_knight.abilities.major.dragon-killer.nested_abilities.hunted.description
+            name: class.vermissian_knight.abilities.major.dragon_killer.nested_abilities.hunted.name
+            description: class.vermissian_knight.abilities.major.dragon_killer.nested_abilities.hunted.description
           endurance_training:
-            name: class.vermissian_knight.abilities.major.dragon-killer.nested_abilities.endurance_training.name
-            description: class.vermissian_knight.abilities.major.dragon-killer.nested_abilities.endurance_training.description
+            name: class.vermissian_knight.abilities.major.dragon_killer.nested_abilities.endurance_training.name
+            description: class.vermissian_knight.abilities.major.dragon_killer.nested_abilities.endurance_training.description
           applied_research:
-            name: class.vermissian_knight.abilities.major.dragon-killer.nested_abilities.applied_research.name
-            description: class.vermissian_knight.abilities.major.dragon-killer.nested_abilities.applied_research.description
+            name: class.vermissian_knight.abilities.major.dragon_killer.nested_abilities.applied_research.name
+            description: class.vermissian_knight.abilities.major.dragon_killer.nested_abilities.applied_research.description
       get_behind_me:
         name: class.vermissian_knight.abilities.major.get_behind_me.name
         description: class.vermissian_knight.abilities.major.get_behind_me.description
         nested_abilities:
-          last-minute_intervention:
-            name: class.vermissian_knight.abilities.major.get_behind_me.nested_abilities.last-minute_intervention.name
-            description: class.vermissian_knight.abilities.major.get_behind_me.nested_abilities.last-minute_intervention.description
+          last_minute_intervention:
+            name: class.vermissian_knight.abilities.major.get_behind_me.nested_abilities.last_minute_intervention.name
+            description: class.vermissian_knight.abilities.major.get_behind_me.nested_abilities.last_minute_intervention.description
           steam_vent:
             name: class.vermissian_knight.abilities.major.get_behind_me.nested_abilities.steam_vent.name
             description: class.vermissian_knight.abilities.major.get_behind_me.nested_abilities.steam_vent.description
-          back-to-back:
-            name: class.vermissian_knight.abilities.major.get_behind_me.nested_abilities.back-to-back.name
-            description: class.vermissian_knight.abilities.major.get_behind_me.nested_abilities.back-to-back.description
+          back_to_back:
+            name: class.vermissian_knight.abilities.major.get_behind_me.nested_abilities.back_to_back.name
+            description: class.vermissian_knight.abilities.major.get_behind_me.nested_abilities.back_to_back.description
       overclock:
         name: class.vermissian_knight.abilities.major.overclock.name
         description: class.vermissian_knight.abilities.major.overclock.description
@@ -169,8 +169,8 @@ junk_mage:
         domain: occult
     equipment:
       group_1:
-        two_old-fashioned_pistols:
-          name: class.junk_mage.traits.equipment.group_1.two_old-fashioned_pistols.name
+        two_old_fashioned_pistols:
+          name: class.junk_mage.traits.equipment.group_1.two_old_fashioned_pistols.name
           dice: d8
           type: kill
           tags:
@@ -273,9 +273,9 @@ junk_mage:
           superheat:
             name: class.junk_mage.abilities.major.fire_of_the_red_king.nested_abilities.superheat.name
             description: class.junk_mage.abilities.major.fire_of_the_red_king.nested_abilities.superheat.description
-          coin-gold_blood:
-            name: class.junk_mage.abilities.major.fire_of_the_red_king.nested_abilities.coin-gold_blood.name
-            description: class.junk_mage.abilities.major.fire_of_the_red_king.nested_abilities.coin-gold_blood.description
+          coin_gold_blood:
+            name: class.junk_mage.abilities.major.fire_of_the_red_king.nested_abilities.coin_gold_blood.name
+            description: class.junk_mage.abilities.major.fire_of_the_red_king.nested_abilities.coin_gold_blood.description
       frenzy_of_the_sky_court:
         name: class.junk_mage.abilities.major.frenzy_of_the_sky_court.name
         description: class.junk_mage.abilities.major.frenzy_of_the_sky_court.description
@@ -414,9 +414,9 @@ deep_apiarist:
       perfect_structure:
         name: class.deep_apiarist.abilities.minor.perfect_structure.name
         description: class.deep_apiarist.abilities.minor.perfect_structure.description
-      thrice-warded:
-        name: class.deep_apiarist.abilities.minor.thrice-warded.name
-        description: class.deep_apiarist.abilities.minor.thrice-warded.description
+      thrice_warded:
+        name: class.deep_apiarist.abilities.minor.thrice_warded.name
+        description: class.deep_apiarist.abilities.minor.thrice_warded.description
       uncanny_biology:
         name: class.deep_apiarist.abilities.minor.uncanny_biology.name
         description: class.deep_apiarist.abilities.minor.uncanny_biology.description
@@ -604,3 +604,414 @@ heretic:
       ascension:
       glory:
       testament_of_faith:
+cleaver:
+  traits:
+    skill: hunt
+    domain: cursed
+    resource:
+      a_freshly_harvested_heart_that_still_occasionally_twitches:
+        dice: d6
+        domain: wild
+    equipment:
+      core:
+        hunting_knife:
+          dice: d6
+          type: kill
+      group_1:
+        cleaver:
+          dice: d6
+          type: kill
+          tags:
+            - brutal
+            - tiring
+      group_2:
+        bone_charms_and_animal_gut_sutures:
+          dice: d6
+          type: mend
+          resistances:
+            - blood
+      group_3:
+        heavy_draw_bow:
+          dice: d8
+          type: kill
+          tags:
+            - ranged
+            - tiring
+  abilities:
+    core:
+      heartsblood:
+      the_red_feast:
+    minor:
+      call_of_the_wild:
+      darkling_eyes:
+      desperate_measures:
+      dominion:
+      fell_metabolism:
+      fractured_form:
+      gut_instinct:
+      inhuman:
+      pitchskin:
+      symbiotic:
+      twisting_territory:
+      unmaking_claws:
+      vessel:
+    major:
+      bloodbound_beast:
+        nested_abilities:
+          pack_hunter:
+          pounce:
+          faithful_until_the_end:
+      chimeric_strain:
+        nested_abilities:
+          blighted:
+          horned:
+          bezerk:
+      extinction_bow:
+        nested_abilities:
+          harpoon:
+          hunters_eye:
+          nightmare_arrow:
+      monstrous_appetite:
+        nested_abilities:
+          rejuvenation:
+          tainted_meat:
+          horrendous_bite:
+      the_wild_hunt:
+        nested_abilities:
+          echoes_of_the_city_beneath:
+          storyteller:
+          bounty_shared:
+    zenith:
+      angelic:
+      legendary_beast:
+      weald_and_woe:
+deadwalker:
+  traits:
+    skill: delve
+    domain: desolate
+    resource:
+      bag_of_interesting_teeth:
+    equipment:
+      group_1:
+        hunting_rifle:
+          type: kill
+          dice: d6
+          tags:
+            - extreme_range
+            - reload
+      group_2:
+        greatsword:
+          type: kill
+          dice: d10
+          tags:
+            - tiring
+      group_3:
+        bootleg_ambrosia:
+          type: mend
+          resistances:
+            - mind
+          dice: d6
+          tags:
+            - potent
+            - expensive
+        ritual_blade:
+          type: kill
+          dice: d6
+  abilities:
+    core:
+      death_follows_close:
+      enter_the_grey:
+    minor:
+      adept:
+      deathless:
+      dirt_under_the_fingernails:
+      explorer:
+      grim_reaper:
+      the_harvest:
+      last_rites:
+      marked_for_death:
+      shadow:
+      survivor:
+      tattered_soul:
+      walking_reliquary:
+    major:
+      descent:
+        nested_abilities:
+          esoteric_cartographer:
+          step_between:
+          all_doors_as_one:
+      echoes:
+        nested_abilities:
+          hidden_passageway:
+          fragmentary_recollection:
+          absorb_memories:
+      invidious_spectre:
+        nested_abilities:
+          soothe:
+          ghoulish_grasp:
+          ethereal_touch:
+      reapers_strike:
+        nested_abilities:
+          inexorable:
+          bloodied_but_unbroken:
+          scything_blow:
+      sudden_death:
+        nested_abilities:
+          liminal:
+          entropy:
+          blood_sacrifice:
+    zenith:
+      extinguish:
+      infernal_claws:
+      sunder_the_veil:
+hound:
+  traits:
+    skill: hunt
+    domain: haven
+    resource:
+      bottle_of_rotgut_liquor:
+    equipment:
+      group_1:
+        standard_issue_legrande_rifle:
+          type: kill
+          dice: d8
+          tags:
+            - ranged
+            - piercing
+            - expensive
+      group_2:
+        repeater_sidearm:
+          type: kill
+          dice: d6
+          tags:
+            - ranged
+            - brutal
+            - reload
+        knife:
+          type: kill
+          dice: d6
+      group_3:
+        well_stocked_haversack:
+          type: mend
+          resistances:
+            - supplies
+          dice: d6
+        cudgel:
+          type: kill
+          dice: d6
+  abilities:
+    core:
+      in_the_thick_of_it:
+    minor:
+      advanced_training:
+      the_better_part_of_valour:
+      close_quarters:
+      custodian:
+      echoes_of_the_33rd:
+      kill_count:
+      liquid_courage:
+      marshal:
+      our_glorious_lady:
+      quartermaster_training:
+      round_the_next_corner:
+      sergeant:
+    major:
+      condemn:
+        nested_abilities:
+          judge:
+          jury:
+          executioner:
+      forewarned_and_forearmed:
+        nested_abilities:
+          double_duty:
+          encampment:
+          emergency_supplies:
+      stare_down:
+        nested_abilities:
+          legendary:
+          nose_to_nose:
+          no_sympathy:
+      trench_fighter:
+        nested_abilities:
+          over_the_top:
+          keep_smiling:
+          homecoming:
+      unstoppable:
+        nested_abilities:
+          limping_onward:
+          scars_like_medals:
+          on_your_feet:
+    zenith:
+      everlasting_stand:
+      fulcrum:
+      incursion:
+
+incarnadine:
+  traits:
+    skill: compel
+    domain: haven
+    resource:
+      second_hand_wedding_ring:
+        dice: d6
+        domain: haven
+    equipment:
+      core:
+        hooked_blade:
+          type: kill
+          dice: d6
+      group_1:
+        filigreed_revolver:
+          type: kill
+          dice: d8
+          tags:
+            - ranged
+            - expensive
+      group_2:
+        bailiffs_iron_cudgel:
+          type: kill
+          dice: d8
+          tags:
+            - tiring
+      group_3:
+        homemade_spireblack_pipe_bombs:
+          type: kill
+          dice: d6
+          tags:
+            - ranged
+            - spread
+            - one_shot
+  abilities:
+    core:
+      the_cost_of_doing_business:
+      mutually_assured_destruction:
+    minor:
+      a_red_and_bloody_business:
+      an_eye_for_the_strange:
+      better_safe_than_sorry:
+      creative_acquisitions:
+      creative_book_keeping:
+      eyes_in_the_back_of_your_head:
+      jack_of_all_trades:
+      lost_it_all:
+      make_do:
+      on_the_run:
+      priest_of_incarne:
+      red_marketeer:
+      valuable_asset:
+      areas_of_opportunity:
+    major:
+      backstab:
+        nested_abilities:
+          deadeye:
+          never_saw_it_coming:
+          remuneration:
+      broker:
+        nested_abilities:
+          invest:
+          transferral:
+          inflict:
+      crave:
+        nested_abilities:
+          addict:
+          conditioning:
+      debtors_reds:
+        nested_abilities:
+          buy_off:
+          cycle_of_debt:
+          assume_debt:
+      karmic_ledger:
+        nested_abilities:
+          connection:
+          harvest:
+          candidate:
+      network:
+        nested_abilities:
+          proliferation:
+          pathways:
+          money_talks:
+    zenith:
+      ultimate_credit:
+      ultimate_debt:
+      ultimate_reward:
+
+witch:
+  traits:
+    skill: compel
+    domain: occult
+    resource:
+      tattered_finery:
+        dice: d6
+        domain: haven
+    equipment:
+      group_1:
+        sacred_blade:
+          type: kill
+          dice: d6
+          tags:
+            - bloodbound
+      group_2:
+        goats_leg_carbine:
+          type: kill
+          dice: d6
+          tags:
+            - ranged
+            - reload
+      group_3:
+        physikers_bag:
+          type: mend
+          resistances:
+            blood
+          dice: d6
+  abilities:
+    core:
+      crucible:
+      true_form:
+    minor:
+      a_mind_of_many_doorways:
+      blood_quiet:
+      books_of_lore:
+      charms_and_wards:
+      distinguished_lineage:
+      divinity:
+      heart_wise:
+      implacable:
+      the_old_blood:
+      ramblewyrd:
+      red_dominion:
+      wild_witch:
+      witch_spit:
+    major:
+      ascendancy:
+        nested_abilities:
+          bypass:
+          blood_calls_for_blood:
+          refuge:
+      crimson_mirror:
+        nested_abilities:
+          shared_visions:
+          scarlet_insight:
+          dire_portents:
+      exsanguinate:
+        nested_abilities:
+          retch:
+          maestro:
+          as_above_so_below:
+      familiar:
+        nested_abilities:
+          resilient:
+          hungry:
+          curious:
+      great_and_terrible:
+        nested_abilities:
+          enthrall:
+          sacred_object:
+          union:
+      lair:
+        nested_abilities:
+          calm:
+          rule:
+          feed:
+    zenith:
+      final_form:
+      perfect_resurrection:
+      the_red_queen:
