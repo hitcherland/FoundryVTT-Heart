@@ -1129,7 +1129,7 @@
             "minor.supplies.empty.description": "You're down to your last scraps of food, your last scraping of spireblack. You cannot use Supplies protection. [Ongoing]",
             "minor.supplies.half_rations.name": "Half Rations",
             "minor.supplies.half_rations.description": "You're running low on food.When you remove stress, roll two dice and pick the lowest of the two. Another party member can remove this fallout by marking D6 stress to Supplies.[Ongoing]",
-            "minor.supplies.out_of_ammo.name": "Out Of Ammo.",
+            "minor.supplies.out_of_ammo.name": "Out Of Ammo",
             "minor.supplies.out_of_ammo.description": "You run out of ammunition for a ranged or powered weapon and it can no longer be used. If another party member has a similar weapon, they can remove this fallout by marking D6 stress to their own Supplies. [Ongoing]",
             "minor.supplies.used_up.name": "Used Up",
             "minor.supplies.used_up.description": "Your stocks are depleted of crucial items, something has spoiled or someone's stolen something vital from your bag. You cannot use any healing items you own.[Ongoing]",
@@ -1347,6 +1347,13 @@
                     "Fixed a typo that prevented the description for Heretic's Rite Of Vigilance > Hunter sub-ability from displaying correctly",
                     "Fixed a typo that prevented the description for Cleaver's Chimeric Strain > Bezerk sub-ability from displaying correctly",
                     "Fixed a minor issue that referred used the old FoundryVTT \"entity\" instead of \"type\""
+                ]
+            },
+            "0_4_2": {
+                "version": "v0.4.2",
+                "bug_fixes": [
+                    "Fixed extra full stop in name of \"Out of Ammo\" fallout",
+                    "Fixed issue that prevented Blood fallouts from being added to the fallout compendium"
                 ]
             }
         },
