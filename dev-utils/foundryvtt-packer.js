@@ -37,7 +37,7 @@ function writeFiles(compiler) {
         return Object.values(data).map(({ name, description }) => {
             return {
                 _id: randomID(),
-                name: name,
+                name: `${name}`,
                 type: "tag",
                 data: {
                     description: description
@@ -47,8 +47,9 @@ function writeFiles(compiler) {
     }
 
     function cloneTag(name) {
-        if (stored.tags[`tag.${name}.name`] === undefined) throw `invalid tag ${name}`
-        return Object.assign({}, stored.tags[`tag.${name}.name`], { _id: randomID(), name });
+        const new_name = `tag.${name}.name`;
+        if (stored.tags[new_name] === undefined) throw `invalid tag ${name}`
+        return Object.assign({}, stored.tags[new_name], { _id: randomID(), name: new_name });
     }
 
     function parseAbilities(abilities, type = 'minor', keyable) {
@@ -183,11 +184,28 @@ function writeFiles(compiler) {
         }, []);
     }
 
+    function parseAncestries(ancestries) {
+        return Object.entries(ancestries).map(([key, data]) => {
+            data = data || {};
+            return {
+                _id: randomID(),
+                name: `ancestry.${key}.group_name`,
+                type: "ancestry",
+                data: {
+                    description: `ancestry.${key}.description`,
+                    singular: `ancestry.${key}.singular`,
+                    questions: Object.assign({}, Object.entries(data.questions || {}).map(([id, data]) => ({ [id]: `ancestry.${key}.questions.${id}` }))),
+                }
+            }
+        });
+    }
+
     const parsers = {
         'classes': parseClasses,
         'tags': parseTags,
         'callings': parseCallings,
         'fallouts': parseFallouts,
+        'ancestries': parseAncestries,
     };
 
     const stored = {
@@ -195,10 +213,11 @@ function writeFiles(compiler) {
         'classes': {},
         'callings': {},
         'fallouts': {},
+        'ancestries': {},
     };
 
     return function (compilation) {
-        for (const type of ['callings', 'tags', 'classes', 'fallouts']) {
+        for (const type of ['callings', 'tags', 'classes', 'fallouts', 'ancestries']) {
             const fullpath = path.join(this.packDataPath, type, type + ".yaml")
             const file = fs.readFileSync(fullpath, 'utf8');
             const data = yaml.parse(file);
@@ -212,7 +231,7 @@ function writeFiles(compiler) {
                     "label": type.replace(/\w\S*/g, function (txt) { return txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase(); }),
                     "system": "heart",
                     "path": `./packs/${type}.db`,
-                    "entity": "Item"
+                    "type": "Item"
                 }
             )
             compilation.emitAsset(
