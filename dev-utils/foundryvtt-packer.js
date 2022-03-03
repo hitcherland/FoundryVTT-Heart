@@ -164,8 +164,8 @@ function writeFiles(compiler) {
 
     function parseFallouts(fallouts) {
         return Object.entries(fallouts).reduce((output, [type, type_fallouts]) => {
-            output.push(...Object.entries(type_fallouts).reduce((output, [resistance, resistance_fallouts]) => {
-                output.push(...Object.entries(resistance_fallouts).map(([key, data]) => {
+            const fallouts = Object.entries(type_fallouts).reduce((output, [resistance, resistance_fallouts]) => {
+                const fallouts = Object.entries(resistance_fallouts).map(([key, data]) => {
                     data = data || {};
                     return {
                         _id: randomID(),
@@ -177,9 +177,11 @@ function writeFiles(compiler) {
                             type,
                         }
                     }
-                }));
+                });
+                output.push(...fallouts);
                 return output;
-            }), []);
+            }, []);
+            output.push(...fallouts);
             return output;
         }, []);
     }
@@ -217,7 +219,7 @@ function writeFiles(compiler) {
     };
 
     return function (compilation) {
-        for (const type of ['callings', 'tags', 'classes', 'fallouts', 'ancestries']) {
+        for (const type of ['callings', 'tags', 'classes', 'fallouts']) {
             const fullpath = path.join(this.packDataPath, type, type + ".yaml")
             const file = fs.readFileSync(fullpath, 'utf8');
             const data = yaml.parse(file);
