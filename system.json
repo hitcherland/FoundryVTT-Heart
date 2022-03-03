@@ -6,35 +6,35 @@
             "label": "Useful Heart Macros",
             "system": "heart",
             "path": "./packs/macros.db",
-            "entity": "Macro"
+            "type": "Macro"
         },
         {
             "name": "callings",
             "label": "Callings",
             "system": "heart",
             "path": "./packs/callings.db",
-            "entity": "Item"
+            "type": "Item"
         },
         {
             "name": "tags",
             "label": "Tags",
             "system": "heart",
             "path": "./packs/tags.db",
-            "entity": "Item"
+            "type": "Item"
         },
         {
             "name": "classes",
             "label": "Classes",
             "system": "heart",
             "path": "./packs/classes.db",
-            "entity": "Item"
+            "type": "Item"
         },
         {
             "name": "fallouts",
             "label": "Fallouts",
             "system": "heart",
             "path": "./packs/fallouts.db",
-            "entity": "Item"
+            "type": "Item"
         }
     ],
     "languages": [
@@ -53,15 +53,15 @@
     "name": "heart",
     "title": "Heart - The City Beneath",
     "description": "A red wet heaven slumbers fitful under the city of Spire. Purchase at https://rowanrookanddecard.com/product/heart-the-city-beneath-rpg/",
-    "version": "0.4.0",
+    "version": "0.4.1",
     "author": "hitcherland",
     "minimumCoreVersion": "0.8.6",
     "esmodules": [
         "heart.js"
     ],
-    "compatibleCoreVersion": "9.249",
+    "compatibleCoreVersion": "9.251",
     "url": "https://github.com/hitcherland/foundryvtt-heart",
-    "manifest": "https://raw.githubusercontent.com/hitcherland/foundryvtt-heart/0.4.0/system.json",
-    "readme": "https://raw.githubusercontent.com/hitcherland/foundryvtt-heart/0.4.0/README.md",
-    "download": "https://github.com/hitcherland/foundryvtt-heart/archive/refs/tags/0.4.0.zip"
+    "manifest": "https://raw.githubusercontent.com/hitcherland/foundryvtt-heart/0.4.1/system.json",
+    "readme": "https://raw.githubusercontent.com/hitcherland/foundryvtt-heart/0.4.1/README.md",
+    "download": "https://github.com/hitcherland/foundryvtt-heart/archive/refs/tags/0.4.1.zip"
 }
