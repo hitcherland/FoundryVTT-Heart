@@ -486,7 +486,7 @@
         "deadwalker.abilities.major.invidious_spectre.nested_abilities.ethereal_touch.name": "Ethereal Touch",
         "deadwalker.abilities.major.invidious_spectre.nested_abilities.ethereal_touch.description": "If you mark stress to activate the Conduit tag on your weapon, it gains the Piercing tag.",
         "deadwalker.abilities.major.reapers_strike.name": "Reaper's Strike",
-        "deadwalker.abilities.major.reapers_strike.nested_abilities..description": "You forsake defence for a single, decisive blow. When you attack an adversary, you can choose to lose your Blood protection for the attack before you roll. If you do so and succeed or partially succeed, add your Blood protection value to the stress inflicted.",
+        "deadwalker.abilities.major.reapers_strike.description": "You forsake defence for a single, decisive blow. When you attack an adversary, you can choose to lose your Blood protection for the attack before you roll. If you do so and succeed or partially succeed, add your Blood protection value to the stress inflicted.",
         "deadwalker.abilities.major.reapers_strike.nested_abilities.inexorable.name": "Inexorable",
         "deadwalker.abilities.major.reapers_strike.nested_abilities.inexorable.description": "If the first dice you roll to determine the stress inflicted on an adversary shows 1 or 2, roll an additional dice of the same size and add the result to the stress inflicted.",
         "deadwalker.abilities.major.reapers_strike.nested_abilities.bloodied_but_unbroken.name": "Bloodied But Unbroken",
