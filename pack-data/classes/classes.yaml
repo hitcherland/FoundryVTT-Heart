@@ -691,6 +691,8 @@ deadwalker:
     domain: desolate
     resource:
       bag_of_interesting_teeth:
+        dice: d6
+        domain: desolate
     equipment:
       group_1:
         hunting_rifle:
@@ -726,6 +728,7 @@ deadwalker:
       deathless:
       dirt_under_the_fingernails:
       explorer:
+      grail_armour:
       grim_reaper:
       the_harvest:
       last_rites:
