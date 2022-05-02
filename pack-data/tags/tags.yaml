@@ -1,3 +1,9 @@
+awkward:
+  name: tag.awkward.name
+  description: tag.awkward.description
+beacon:
+  name: tag.beacon.name
+  description: tag.beacon.description
 block:
   name: tag.block.name
   description: tag.block.description
@@ -19,6 +25,9 @@ debilitating:
 degenerating:
   name: tag.degenerating.name
   description: tag.degenerating.description
+deteriorating:
+  name: tag.deteriorating.name
+  description: tag.deteriorating.description
 distressing:
   name: tag.distressing.name
   description: tag.distressing.description
@@ -31,12 +40,24 @@ expensive:
 extreme_range:
   name: tag.extreme_range.name
   description: tag.extreme_range.description
+fragile:
+  name: tag.fragile.name
+  description: tag.fragile.description
+taboo:
+  name: tag.taboo.name
+  description: tag.taboo.description
 limited(X):
   name: tag.limited(X).name
   description: tag.limited(X).description
 loud:
   name: tag.loud.name
   description: tag.loud.description
+mobile:
+  name: tag.mobile.name
+  description: tag.mobile.description
+niche:
+  name: tag.niche.name
+  description: tag.niche.description
 obscuring:
   name: tag.obscuring.name
   description: tag.obscuring.description
@@ -64,6 +85,9 @@ smoke:
 spread:
   name: tag.spread.name
   description: tag.spread.description
+harmful:
+  name: tag.harmful.name
+  description: tag.harmful.description
 tiring:
   name: tag.tiring.name
   description: tag.tiring.description
@@ -73,7 +97,9 @@ trusty:
 unreliable:
   name: tag.unreliable.name
   description: tag.unreliable.description
+volatile:
+  name: tag.volatile.name
+  description: tag.volatile.description
 wyrd:
   name: tag.wyrd.name
   description: tag.wyrd.description
-
