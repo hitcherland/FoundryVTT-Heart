@@ -1373,6 +1373,25 @@
                     "Fixed extra full stop in name of \"Out of Ammo\" fallout",
                     "Fixed issue that prevented Blood fallouts from being added to the fallout compendium"
                 ]
+            },
+            "0_4_3": {
+                "version": "v0.4.3",
+                "changes": [
+                    "Added resource tags to Tag compendia"
+                ],
+                "bug_fixes": [
+                    "Fixed missing 'Grail Armour' ability for Deadwalker",
+                    "Fixed missing description for 'Reapers Strike' major ability for Deadwalker",
+                    "Fixed incorrect stats for Deadwalkers 'Bag Of Interesting Teeth' starting resource",
+                    "Tags should now be visible on resources",
+                    "Rollable tables work as intended again"
+                ]
+            },
+            "0_4_4": {
+                "version": "v0.4.4",
+                "bug_fixes": [
+                    "Fixed backward compatability problems with 0.8.x versions of FoundryVTT"
+                ]
             }
         },
         "adversary": {
