@@ -6,7 +6,8 @@
             "label": "Useful Heart Macros",
             "system": "heart",
             "path": "./packs/macros.db",
-            "type": "Macro"
+            "type": "Macro",
+            "entity": "Macro"
         }
     ],
     "languages": [
