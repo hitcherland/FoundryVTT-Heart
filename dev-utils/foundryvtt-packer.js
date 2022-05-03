@@ -234,7 +234,8 @@ function writeFiles(compiler) {
                     "label": type.replace(/\w\S*/g, function (txt) { return txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase(); }),
                     "system": "heart",
                     "path": `./packs/${type}.db`,
-                    "type": "Item"
+                    "type": "Item",
+                    "entity": "Item",
                 }
             )
             compilation.emitAsset(

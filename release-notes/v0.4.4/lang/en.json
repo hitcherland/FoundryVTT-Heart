@@ -1,0 +1,10 @@
+{
+    "versions": {
+        "0_4_4": {
+            "version": "v0.4.4",
+            "bug_fixes": [
+                "Fixed backward compatability problems with 0.8.x versions of FoundryVTT"
+            ]
+        }
+    }
+}

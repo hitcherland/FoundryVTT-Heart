@@ -3,7 +3,7 @@
         "0_4_3": {
             "version": "v0.4.3",
             "changes": [
-                "Added resource tags to Tag compendia",
+                "Added resource tags to Tag compendia"
             ],
             "bug_fixes": [
                 "Fixed missing 'Grail Armour' ability for Deadwalker",
