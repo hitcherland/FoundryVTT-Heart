@@ -83,6 +83,7 @@ function writeFiles(compiler) {
                     active: true,
                     die_size: data.dice,
                     domain: data.domain,
+                    children: Object.assign({}, ...(data.tags || []).map(x => cloneTag(x)).map(x => ({ [x._id]: x }))),
                 }
             };
         });

@@ -3,7 +3,7 @@
     (<a data-action="item-roll"><span class="fas fa-dice"></span> {{item.data.data.die_size}}</a>
     {{localizeHeart "domain" item.data.data.domain}}
     {{#each item.childrenTypes.tag as |tag|}}
-        {{localizeHeart "tag" tag.name "name"}}
+        {{localizeHeart tag.name}}
     {{/each}}
     )
 {{/ "heart:items/base/preview.html"}}
