@@ -104,7 +104,7 @@ class HeartChatMessage extends ChatMessage {
                 showFalloutRollButton: this.showFalloutRollButton,
             });
             html.find('.message-content').find('.dice-roll').html(
-                $(content).children()[0]
+                $(content).children()
             );
 
             if (this.stressRoll && this.stressRoll !== this.roll) {
