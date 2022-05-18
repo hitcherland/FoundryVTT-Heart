@@ -1392,6 +1392,12 @@
                 "bug_fixes": [
                     "Fixed backward compatability problems with 0.8.x versions of FoundryVTT"
                 ]
+            },
+            "0_4_5": {
+                "version": "v0.4.5",
+                "bug_fixes": [
+                    "Finally put the rollable tables/rollable buttons thing to bed."
+                ]
             }
         },
         "adversary": {
