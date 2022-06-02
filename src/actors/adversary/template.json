@@ -6,10 +6,12 @@
             "motivation": "",
             "difficulty": "",
             "resistance": "",
+            "resistanceMax": "5",
             "protection": "",
             "resources": [],
-            "equipment": "",
-            "special": ""
+            "equipment": [],
+            "special": "",
+            "notes": ""
         }
     }
 }
