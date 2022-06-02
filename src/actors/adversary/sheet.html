@@ -29,14 +29,11 @@
 <form class="heart sheet actor adversary {{cssClass}}" autocomplete="off">
         <img class="profile" src="{{data.img}}" title="{{actor.name}}" data-edit="img"/>
 
-
-        <div class="section grid-3 resistances place-top">
-            <div></div>
-            <div></div>
-            <h3 class="center">{{localizeHeart "resistance" "protection" "label-multiple"}}</h3> 
-            <h3 class="left">Resistance</h3>
+        <div class="section grid-2 resistances place-top">
+            <h3 class="center">{{localizeHeart "resistance" "label-single"}}</h3> 
+            <h3 class="center">{{localizeHeart "protection" "label-single"}}</h3> 
             <div class="red" data-target='data.resistance'>{{{ordered-checkable actor.data.data.resistance actor.data.data.resistanceMax}}}</div>
-            <div class="red" data-target='data.protection'>{{{ordered-checkable actor.data.data.protection 5}}}</div>
+            <div class="red" data-target='data.protection'>{{{ordered-checkable actor.data.data.protection 10}}}</div>
             
         </div>
         

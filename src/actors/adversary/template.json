@@ -6,7 +6,7 @@
             "motivation": "",
             "difficulty": "",
             "resistance": "",
-            "resistanceMax": "",
+            "resistanceMax": "5",
             "protection": "",
             "resources": [],
             "equipment": [],
