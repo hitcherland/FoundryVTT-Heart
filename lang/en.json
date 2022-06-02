@@ -1398,23 +1398,27 @@
                 "bug_fixes": [
                     "Finally put the rollable tables/rollable buttons thing to bed."
                 ]
+            },
+            "0_4_6": {
+                "version": "v0.4.6",
+                "changes": [
+                    "Thanks to stuttste, created more fleshed-out adversary sheet complete with drag-n-drop resources and equipment and variable max resistance",
+                    "Added spanish translation for adversary sheet as well"
+                ]
             }
         },
         "adversary": {
             "label-single": "Adversary",
-            "label-multiple": "Adversaries"
-        },
-        "character": {
+            "label-multiple": "Adversaries",
             "name": "Name",
-            "class": "Class",
-            "calling": "Calling",
+            "resistanceMax": "Maximum Resistance",
+            "difficulty": "Difficulty",
+            "descriptors": "Descriptors",
+            "motivation": "Motivation",
+            "special": "Special",
             "notes": "Notes",
             "inactive-items": "Inactive Items",
-            "inactive-items-description": "Here you'll find items that were directly added to the character sheet, but were marked inactive (which hides them from the normal layout).",
-            "label-single": "Character",
-            "label-multiple": "Characters",
-            "label-helpers": "Helping Characters",
-            "label-valid-helpers": "Characters Who Could Help"
+            "inactive-items-description": "Here you'll find items that were directly added to the adversary sheet, but were marked inactive (which hides them from the normal layout)."
         },
         "resistance": {
             "label-single": "Resistance",
@@ -1428,6 +1432,22 @@
             "echo": "Echo",
             "fortune": "Fortune",
             "supplies": "Supplies"
+        },
+        "protection": {
+            "label-single": "Protection",
+            "label-multiple": "Protections"
+        },
+        "character": {
+            "name": "Name",
+            "class": "Class",
+            "calling": "Calling",
+            "notes": "Notes",
+            "inactive-items": "Inactive Items",
+            "inactive-items-description": "Here you'll find items that were directly added to the character sheet, but were marked inactive (which hides them from the normal layout).",
+            "label-single": "Character",
+            "label-multiple": "Characters",
+            "label-helpers": "Helping Characters",
+            "label-valid-helpers": "Characters Who Could Help"
         },
         "delve": {
             "label-single": "Delve",

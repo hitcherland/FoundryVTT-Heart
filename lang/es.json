@@ -2,19 +2,16 @@
     "heart": {
         "adversary": {
             "label-single": "Adersario",
-            "label-multiple": "Adversarios"
-        },
-        "character": {
+            "label-multiple": "Adversarios",
             "name": "Nombre",
-            "class": "Clase",
-            "calling": "Llamada",
+            "resistanceMax": "Resistencia Máxima",
+            "difficulty": "Dificultad",
+            "descriptors": "Descriptores",
+            "motivation": "Motivación",
+            "special": "Especial",
             "notes": "Notas",
             "inactive-items": "Objetos no activos",
-            "inactive-items-description": "Aquí encontrarás objetos que han sido añadidos a tu ficha pero que fueron marcados como inactivos (los esconde de la vista normal en la ficha)",
-            "label-single": "Personaje",
-            "label-multiple": "Personajes",
-            "label-helpers": "Ayudantes",
-            "label-valid-helpers": "Personajes que pueden ayudar"
+            "inactive-items-description": "Aquí encontrarás objetos que han sido añadidos a tu ficha pero que fueron marcados como inactivos (los esconde de la vista normal en la ficha)"
         },
         "resistance": {
             "label-single": "Resistencia",
@@ -28,6 +25,22 @@
             "echo": "Eco",
             "fortune": "Fortuna",
             "supplies": "Suministros"
+        },
+        "protection": {
+            "label-single": "Protección",
+            "label-multiple": "Protecciones"
+        },
+        "character": {
+            "name": "Nombre",
+            "class": "Clase",
+            "calling": "Llamada",
+            "notes": "Notas",
+            "inactive-items": "Objetos no activos",
+            "inactive-items-description": "Aquí encontrarás objetos que han sido añadidos a tu ficha pero que fueron marcados como inactivos (los esconde de la vista normal en la ficha)",
+            "label-single": "Personaje",
+            "label-multiple": "Personajes",
+            "label-helpers": "Ayudantes",
+            "label-valid-helpers": "Personajes que pueden ayudar"
         },
         "delve": {
             "label-single": "Explorar",
