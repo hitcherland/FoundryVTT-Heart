@@ -1,0 +1,11 @@
+{
+    "versions": {
+        "0_4_7": {
+            "version": "v0.4.7",
+            "bug_fixes":[
+                "swapped dice on heartsbloom in a jar and hive tool",
+                "fixed bug with \"core\" equipment groups being treated like other equipment groups (they now toggle separately)"
+            ]
+        }
+    }
+}
