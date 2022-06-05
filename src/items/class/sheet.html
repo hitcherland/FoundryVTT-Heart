@@ -69,10 +69,10 @@
                 {{localizeHeart "class" "equipment" "pick-one"}}
             {{/if}}
             {{#each item.data.data.equipment_groups as |groupId|}}
-                <div class="equipment-group {{#if (eq groupId ../item.data.data.active_equipment_group)}}active{{/if}}" data-group-id="{{groupId}}">
+                <div class="equipment-group {{#if (or (eq groupId ../item.data.data.active_equipment_group) (includes ../item.data.data.active_equipment_groups groupId))}}active{{/if}}" data-group-id="{{groupId}}">
                     {{#if (or ../item.isEmbedded ../item.isChild) }}
                     <div class="actionbar">
-                        {{#if (eq groupId ../item.data.data.active_equipment_group)}}
+                        {{#if (or (eq groupId ../item.data.data.active_equipment_group) (includes ../item.data.data.active_equipment_groups groupId))}}
                         <a data-action="deactivate-group" title="{{localizeHeart 'base' 'deactivate'}}"><span class="fas fa-toggle-on"></span></a>
                         {{else}}
                         <a data-action="activate-group" title="{{localizeHeart 'base' 'activate'}}"><span class="fas fa-toggle-off"></span></a>
