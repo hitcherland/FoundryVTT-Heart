@@ -214,7 +214,10 @@
             "equipment_groups": [
                 "core"
             ],
-            "active_equipment_group": ""
+            "active_equipment_group": "",
+            "active_equipment_groups": [
+                "core"
+            ]
         },
         "equipment": {
             "templates": [
