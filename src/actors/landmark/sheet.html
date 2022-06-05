@@ -1,1 +1,83 @@
-{{> "heart:actors/base/sheet.html" type="landmark"}}
+{{#*inline "itemListSection"}}
+<div class="section {{localizeHeart type 'label-multiple'}}">
+    <h2>
+        {{#if overrideTitle}}
+        {{overrideTitle}}
+        {{else}}
+        {{localizeHeart type "label-multiple"}}
+        {{/if}}
+        {{#if actor.isOwner}}
+        <div class="right">
+            <a data-action="add" data-type="{{type}}" data-data='{"active": true}'><span class="fas fa-plus"></span></a>
+        </div>
+        {{/if}}
+    </h2>
+
+    <div class="item-list">
+    {{#each list as |item|}}
+        {{> (join "/" "heart:items" type "preview.html") item=item dataPath="???" hideInactive=../hideInactive showActivate=../showActivate showDelete=(or (not item.isChild) user.isGM )}}
+    {{/each}}
+    </div>
+    
+    {{#if (and showTextboxesBelowItems description_path)}}
+    {{editor content=(lookup actor.data.data description_path) target=(join "." "data" description_path) button=true editable=editable owner=owner}}
+    {{/if}}
+</div>
+{{/inline}}
+
+<div>
+<form class="heart sheet actor landmark {{cssClass}}" autocomplete="off">
+        <img class="profile" src="{{data.img}}" title="{{actor.name}}" data-edit="img"/>
+        
+        <div class="section info">
+            <div class="grid-2 auto-first-col place-center">
+                <h2>{{localizeHeart "landmark" "name"}}</h2>
+                <input name="name" value="{{actor.name}}"/>
+            </div>
+        </div>
+
+        <div class="section info">
+            <div class="grid-2 auto-first-col place-center">
+                <h2>{{localizeHeart "landmark" "domain" "label-multiple"}}</h2>
+                <input name="data.domains" value="{{actor.data.data.domains}}"/>
+            </div>
+        </div>
+
+        <div class="section info">
+            <div class="grid-2 auto-first-col place-center">
+                <h2>{{localizeHeart "landmark" "tier"}}</h2>
+                <input name="data.tier" value="{{actor.data.data.tier}}"/>
+            </div>
+        </div>
+
+        {{> itemListSection type="haunt" list=actor.proxy.haunts showActivate=true}}
+        {{> itemListSection type="resource" list=actor.proxy.resources}}
+
+        <div class="section center wide notes">
+            <h3>{{localizeHeart "landmark" "specialRule" "label-multiple"}}</h3>
+            {{editor content=actor.data.data.specialRules target="data.specialRules" button=true editable=editable owner=owner}}
+        </div>
+
+        <div class="section center wide notes">
+            <h3>{{localizeHeart "landmark" "potentialPlot" "label-multiple"}}</h3>
+            {{editor content=actor.data.data.potentialPlots target="data.potentialPlots" button=true editable=editable owner=owner}}
+        </div>
+
+        <div class="section center wide notes">
+            <h3>{{localizeHeart "landmark" "description"}}</h3>
+            {{editor content=actor.data.data.description target="data.description" button=true editable=editable owner=owner}}
+        </div>
+        
+        <div class="section center wide inactive-items">
+            <h3>{{localizeHeart "landmark" "inactive-items"}}</h3>
+            <div>{{localizeHeart "landmark" "inactive-items-description"}}</div>
+            <div class="item-list">
+            {{#each actor.items as |item|}}
+                {{#if (and (not (undef item.data.data.active)) (not item.data.data.active)) }}
+                    {{> (join "/" "heart:items" item.type "preview.html") item=item dataPath="???" showActivate=../user.isOwner showDelete=../user.isOwner}}
+                {{/if}}
+            {{/each}}
+            </div>
+        </div>
+</form>
+</div>

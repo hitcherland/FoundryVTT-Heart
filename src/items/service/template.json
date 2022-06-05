@@ -1,0 +1,8 @@
+{
+    "Item": {   
+        "service": {
+            "templates": ["is_rollable"],
+            "resistance": "blood"
+        }
+    }
+}

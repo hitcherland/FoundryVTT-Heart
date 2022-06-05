@@ -1,6 +1,15 @@
 {
     "haunt": {
         "label-single": "Tormento",
-        "label-multiple": "Tormentos"
+        "label-multiple": "Tormentos",
+        "upgrade": "Mejora",
+        "downgrade": "Degradar"
+    },
+    "service": {
+        "label-single": "Servicio",
+        "label-multiple": "Servicios"
+    },
+    "upgradeTrack":{
+        "label-single": "Pista de Actualización"
     }
 }

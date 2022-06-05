@@ -1,0 +1,20 @@
+{
+    "versions": {
+        "0_4_7": {
+            "version": "v0.4.7",
+            "changes":[
+                "Another update from stuttste",
+                "Created 'Service' item type to represent services rendered by haunts",
+                "Upgraded Haunt sheets to better contain the data related to them",
+                "Implemented an upgrade/downgrade function for haunts. Raises/lowers Service dice appropriately. Raising a service resets the upgrade track.",
+                "Upgraded Landmark sheets to better contain the data related to them. Also added Haunt listings with all the built-in functions needed.",
+                "Added spanish translation for the new objects as well"
+            ],
+            "notes":[
+                "My .sass files could probably be better-optimized. I'm not super great at css/sass, so it's mainly copy/paste to avoid breaking anything.",
+                "Some item-level listeners were added to the actor objects directly. There may be a better way around this, but I wasn't able to figure out one.",
+                "Haunts are using a self-contained array of die sizes. This potentially duplicates code, but I considered it low-risk that the die sizes will change. I wasn't confident on how to properly access the higher-level listing."
+            ]
+        }
+    }
+}

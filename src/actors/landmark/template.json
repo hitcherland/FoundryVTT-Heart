@@ -1,10 +1,14 @@
 {
     "Actor": {
         "landmark": {
-            "domains": [],
+            "domains": "",
             "description": "",
+            "haunts": [],
+            "potentialPlots":"",
+            "resources": [],
+            "specialRules": "",
             "stress": "d4",
-            "haunts": []
+            "tier":""
         }
     }
 }

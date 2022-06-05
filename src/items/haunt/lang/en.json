@@ -1,6 +1,15 @@
 {
     "haunt": {
         "label-single": "Haunt",
-        "label-multiple": "Haunts"
+        "label-multiple": "Haunts",
+        "upgrade": "Upgrade",
+        "downgrade": "Downgrade"
+    },
+    "service": {
+        "label-single": "Service",
+        "label-multiple": "Services"
+    },
+    "upgradeTrack":{
+        "label-single": "Upgrade Track"
     }
 }

@@ -1,2 +1,36 @@
-{{#> "heart:items/base/sheet.html" type="haunt"}}
-{{/ "heart:items/base/sheet.html" }}
+{{#> "heart:common/sheet.html" documentName="item" type="haunt"}}
+
+<div class="section {{localizeHeart upgradeTrack 'label-single'}}">
+    <h2>
+        {{localizeHeart "upgradeTrack" "label-single"}}
+        <div class="right">
+            <a data-action="upgrade" data-type="haunt"><span class="fas fa-level-up-alt"></span>{{localizeHeart "haunt" "upgrade"}}</a>
+            <a data-action="downgrade" data-type="haunt"><span class="fas fa-level-down-alt"></span>{{localizeHeart "haunt" "downgrade"}}</a>
+        </div>
+    </h2>
+    <div class="red" data-target='data.upgradeTrack'>{{{ordered-checkable item.data.data.upgradeTrack 6}}}</div>
+</div>
+
+<div class="section {{localizeHeart service 'label-multiple'}}">
+    <h2>
+        {{#if overrideTitle}}
+        {{overrideTitle}}
+        {{else}}
+        {{localizeHeart "service" "label-multiple"}}
+        {{/if}}
+        {{#if item.isOwner}}
+        <div class="right">
+            <a data-action="add-child" data-type="service"><span class="fas fa-plus"></span></a>
+        </div>
+        {{/if}}
+    </h2>
+
+    <div class="item-list">
+    {{#each item.childrenTypes.service as |item|}}
+        {{> "heart:items/service/preview.html" item=item dataPath="???" hideInactive=false showActivate=false showDelete=true}}
+    {{/each}}
+    </div>
+</div>
+
+
+{{/ "heart:common/sheet.html"}}

@@ -1,0 +1,15 @@
+{{#> "heart:items/base/sheet.html" type="service"}}
+<div class="grid-2 auto-first-col">
+
+    <label>
+        {{localizeHeart "resistance" "label-single"}}
+    </label>
+    {{#if editable}}
+        <select name="data.resistance">
+            {{selectOptions resistances selected=data.data.resistance}}
+        </select>
+    {{else}}
+        {{localizeHeart "resistance" data.data.resistance}}
+    {{/if}}
+</div>
+{{/ "heart:items/base/sheet.html"}}

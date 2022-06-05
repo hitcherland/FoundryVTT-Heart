@@ -1,7 +1,9 @@
 {
     "Item": {   
         "haunt": {
-            "templates": ["has_description"]
+            "die_sizes": ["d4", "d6", "d8", "d10", "d12"],
+            "templates": ["has_description", "has_children", "is_activatable"],
+            "upgradeTrack": ""
         }
     }
 }
