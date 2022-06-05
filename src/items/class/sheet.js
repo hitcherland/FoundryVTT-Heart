@@ -58,18 +58,31 @@ export default class extends HeartItemSheet {
             const activeGroupId = this.item.data.data.active_equipment_group;
             
             const childrenUpdates = {};
+
+            const previousEquipmentGroups = [...this.item.data.data.active_equipment_groups];
+            let activeEquipmentGroups = this.item.data.data.active_equipment_groups;
+            if (groupId === "core" && activeEquipmentGroups.find(g => g === "core") === undefined) {
+                activeEquipmentGroups.push('core');
+            }
+
+            if (groupId !== "core" && activeEquipmentGroups.find(g => g === groupId) === undefined) {
+                activeEquipmentGroups = activeEquipmentGroups.filter(g => g === "core");
+                activeEquipmentGroups.push(groupId);
+            }
+
+            await this.item.update({'data.active_equipment_groups': activeEquipmentGroups});
+
             this.item.children.filter(x => x.type === 'equipment').forEach(async child => {
-                if(child.data.data.group === activeGroupId) {
+                if(previousEquipmentGroups.includes(child.data.data.group) && !activeEquipmentGroups.includes(child.data.data.group)) {
                     childrenUpdates[`${child.id}.data.active`] = false;
                 }
 
-                if(child.data.data.group === groupId) {
+                if(activeEquipmentGroups.includes(child.data.data.group)) {
                     childrenUpdates[`${child.id}.data.active`] = true;
                 }
             });
-            await this.item.updateChildren(childrenUpdates);
 
-            await this.item.update({'data.active_equipment_group': groupId});
+            await this.item.updateChildren(childrenUpdates);
         });
 
         html.find('[data-group-id] [data-action=deactivate-group]').click(async ev => {
@@ -84,7 +97,8 @@ export default class extends HeartItemSheet {
             });
 
             await this.item.updateChildren(childrenUpdates);
-            await this.item.update({'data.active_equipment_group': ''});
+            const activeEquipmentGroups = this.item.data.data.active_equipment_groups.filter(g => g !== groupId);
+            await this.item.update({'data.active_equipment_groups': activeEquipmentGroups});
         });
     }
 
