@@ -348,7 +348,7 @@ deep_apiarist:
     resource:
       heartsbloom_rose_in_a_glass_jar:
         name: class.deep_apiarist.traits.resource.heartsbloom_rose_in_a_glass_jar.name
-        dice: d4
+        dice: d6
         domain: occult
         tags:
           - fragile
@@ -356,7 +356,7 @@ deep_apiarist:
       core:
         hive_tool:
           name: class.deep_apiarist.traits.equipment.core.hive_tool.name
-          dice: d6
+          dice: d4
           type: kill
           tags:
             - brutal
