@@ -3,13 +3,13 @@
         "label-single": "Haunt",
         "label-multiple": "Haunts",
         "upgrade": "Upgrade",
-        "downgrade": "Downgrade"
-    },
-    "service": {
-        "label-single": "Service",
-        "label-multiple": "Services"
-    },
-    "upgradeTrack":{
-        "label-single": "Upgrade Track"
+        "downgrade": "Downgrade",
+        "service": {
+            "label-single": "Service",
+            "label-multiple": "Services"
+        },
+        "upgradeTrack":{
+            "label-single": "Upgrade Track"
+        }
     }
 }

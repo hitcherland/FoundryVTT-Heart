@@ -1,34 +1,42 @@
 {{#> "heart:common/sheet.html" documentName="item" type="haunt"}}
 
-<div class="section {{localizeHeart upgradeTrack 'label-single'}}">
-    <h2>
-        {{localizeHeart "upgradeTrack" "label-single"}}
+<div class="section {{localizeHeart haunt upgradeTrack 'label-single'}}">
+    <h3>
+        {{localizeHeart "haunt" "upgradeTrack" "label-single"}}
         <div class="right">
             <a data-action="upgrade" data-type="haunt"><span class="fas fa-level-up-alt"></span>{{localizeHeart "haunt" "upgrade"}}</a>
             <a data-action="downgrade" data-type="haunt"><span class="fas fa-level-down-alt"></span>{{localizeHeart "haunt" "downgrade"}}</a>
         </div>
-    </h2>
+    </h3>
     <div class="red" data-target='data.upgradeTrack'>{{{ordered-checkable item.data.data.upgradeTrack 6}}}</div>
 </div>
 
-<div class="section {{localizeHeart service 'label-multiple'}}">
-    <h2>
+<div class="section {{localizeHeart haunt service 'label-multiple'}}" data-item-id="{{item.uuid}}">
+    <h3>
         {{#if overrideTitle}}
-        {{overrideTitle}}
-        {{else}}
-        {{localizeHeart "service" "label-multiple"}}
-        {{/if}}
-        {{#if item.isOwner}}
+            {{overrideTitle}}
+            {{else}}
+            {{localizeHeart "haunt" "service" "label-multiple"}}
+            {{/if}}
         <div class="right">
-            <a data-action="add-child" data-type="service"><span class="fas fa-plus"></span></a>
+            <a data-action="add-service" data-type="service"><span class="fas fa-plus"></span></a>
         </div>
-        {{/if}}
-    </h2>
-
+    </h3>
     <div class="item-list">
-    {{#each item.childrenTypes.service as |item|}}
-        {{> "heart:items/service/preview.html" item=item dataPath="???" hideInactive=false showActivate=false showDelete=true}}
-    {{/each}}
+        {{#each data.data.resistances as |service id|}}
+            <div data-id="{{id}}">
+                <a data-action="service-roll"><span class="fas fa-dice"></span></a>
+                <select name="data.resistances.{{id}}.die_size">
+                    {{selectOptions ../die_sizes selected=service.die_size}}
+                </select>
+                <select name="data.resistances.{{id}}.resistance">
+                    {{selectOptions ../resistances selected=service.resistance}}
+                </select>
+                {{#if ../user.isGM }}
+                <a class="action right" data-action="delete-service"><span class="fas fa-trash"></span></a>
+                {{/if}}
+            </div>
+        {{/each}}
     </div>
 </div>
 

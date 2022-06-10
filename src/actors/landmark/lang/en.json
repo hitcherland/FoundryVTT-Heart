@@ -3,6 +3,7 @@
         "label-single": "Landmark",
         "label-multiple": "Landmarks",
         "name": "Name",
+        "defaultStress": "Default Stress",
         "description":"Description",
         "domain":{
             "label-single":"Domain",

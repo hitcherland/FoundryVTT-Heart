@@ -22,7 +22,7 @@ export default class extends HeartItemSheet {
     }
 
     getData() {
-        const data = super.getData();
+        const data = super.getData();        
         return data;
     }
 
@@ -57,55 +57,71 @@ export default class extends HeartItemSheet {
             this.item.update(data);
         });
 
-        html.find('[data-action=item-roll]').click(async ev => {
-            const uuid = $(ev.currentTarget).closest('[data-item-id]').data('itemId');
-            const item = await fromUuid(uuid);
+        html.find('[data-action=service-roll]').click(async ev => {
+            const target = $(ev.currentTarget);
+            const id = target.closest ('[data-id]').data('id');
+            const service = this.item.data.data.resistances[id];
+            const item = {data:{data:{die_size:service.die_size}}};
 
             const roll = game.heart.rolls.ItemRoll.build({item});
             await roll.evaluate({async: true});
 
             roll.toMessage({
-                flavor: `${localizeHeart(this.item.name)} (<span class="item-type">${item.type}</span>)`,
+                flavor: `${localizeHeart(this.item.name)} (<span class="item-type">${this.item.type}</span>)`,
                 speaker: {alias: "GM"}
             });
         });
 
         html.find('[data-action=upgrade]').click(async ev => {
-            const target = $(ev.currentTarget);
-            const dieSizes = this.item.data.data.die_sizes;
+            const dieSizes = game.heart.die_sizes;
+            const services = this.item.data.data.resistances;
             
             const updates = {};
             updates['data.upgradeTrack'] = 0;
-
-            const childrenUpdates = {};
-            this.item.children.filter(x => x.type === 'service').forEach(async child => {
-                var indexOf = dieSizes.indexOf(child.data.data.die_size);
+            Object.keys(services).forEach(key => {
+                var service = services[key];
+                var indexOf = dieSizes.indexOf(service.die_size);
                 
                 if(indexOf < (dieSizes.length - 1)) {
                     var largerSize = dieSizes[indexOf+1];
-                    childrenUpdates[`${child.id}.data.die_size`] = largerSize;
+                    updates[`data.resistances.${key}.die_size`] = largerSize;
                 }
             });
 
-            await this.item.updateChildren(childrenUpdates);
             this.item.update(updates);
         });
 
         html.find('[data-action=downgrade]').click(async ev => {
-            const target = $(ev.currentTarget);
-            const dieSizes = this.item.data.data.die_sizes;
+            const dieSizes = game.heart.die_sizes;
+            const services = this.item.data.data.resistances;
 
-            const childrenUpdates = {};
-            this.item.children.filter(x => x.type === 'service').forEach(async child => {
-                var indexOf = dieSizes.indexOf(child.data.data.die_size);
+            const updates = {};
+
+            Object.keys(services).forEach(key => {
+                var service = services[key];
+                var indexOf = dieSizes.indexOf(service.die_size);
                 
                 if(indexOf > 0) {
                     var smallerSize = dieSizes[indexOf-1];
-                    childrenUpdates[`${child.id}.data.die_size`] = smallerSize;
+                    updates[`data.resistances.${key}.die_size`] = smallerSize;
                 }
             });
 
-            await this.item.updateChildren(childrenUpdates);
+            this.item.update(updates);
+        });
+
+        html.find('[data-action=add-service]').click(ev => {
+            const id = randomID();
+            this.item.update({[`data.resistances.${id}`]: {
+                die_size: 'd4',
+                resistance: 'blood'
+            }});
+        });
+
+        html.find('[data-action=delete-service]').click(ev => {
+            const target = $(ev.currentTarget);
+            const id = target.closest ('[data-id]').data('id');
+            this.item.update({[`data.resistances.-=${id}`]: null});
         });
     }
 

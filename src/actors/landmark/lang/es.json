@@ -3,6 +3,7 @@
         "label-single": "Lugar emblemático",
         "label-multiple": "Lugares emblemáticos",
         "name": "Nombre",
+        "defaultStress": "Estrés por defecto",
         "description":"Descripción",
         "domain":{
             "label-single":"Dominio",
