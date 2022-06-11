@@ -4,11 +4,11 @@
             "version": "v0.4.8",
             "changes":[
                 "Another update from stuttste",
-                "Created 'Service' item type to represent services rendered by haunts; EDIT: Service object removed in favor of internal array/object of Haunts.",
                 "Upgraded Haunt sheets to better contain the data related to them",
                 "Implemented an upgrade/downgrade function for haunts. Raises/lowers Service dice appropriately. Raising a service resets the upgrade track.",
                 "Upgraded Landmark sheets to better contain the data related to them. Also added Haunt listings with all the built-in functions needed.",
-                "Added spanish translation for the new objects as well"
+                "Added spanish translation for the new objects as well",
+                "Added .sass for whisper chat messages as the white on white was difficult to read"
             ],
             "notes":[
                 "My .sass files could probably be better-optimized. I'm not super great at css/sass, so it's mainly copy/paste to avoid breaking anything.",

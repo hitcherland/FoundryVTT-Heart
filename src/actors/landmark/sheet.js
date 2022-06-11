@@ -275,12 +275,14 @@ export default class LandmarkSheet extends HeartActorSheet {
             const id = target.closest ('[data-id]').data('id');
             const service = hauntitem.data.data.resistances[id];
             const item = {data:{data:{die_size:service.die_size}}};
+            const resistanceLocalized = localizeHeart(service.resistance);
+            const resistanceCapitalized = resistanceLocalized.charAt(0).toUpperCase() + resistanceLocalized.slice(1);
 
             const roll = game.heart.rolls.ItemRoll.build({item});
             await roll.evaluate({async: true});
 
             roll.toMessage({
-                flavor: `${localizeHeart(hauntitem.name)} (<span class="item-type">${hauntitem.type}</span>)`,
+                flavor: `${localizeHeart(hauntitem.name)} (<span class="item-type">${hauntitem.type}</span>)<div class="resistance-text">${resistanceCapitalized}</div>`,
                 speaker: {alias: "GM"}
             });
         });

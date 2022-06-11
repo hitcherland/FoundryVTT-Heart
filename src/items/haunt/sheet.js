@@ -62,12 +62,14 @@ export default class extends HeartItemSheet {
             const id = target.closest ('[data-id]').data('id');
             const service = this.item.data.data.resistances[id];
             const item = {data:{data:{die_size:service.die_size}}};
+            const resistanceLocalized = localizeHeart(service.resistance);
+            const resistanceCapitalized = resistanceLocalized.charAt(0).toUpperCase() + resistanceLocalized.slice(1);
 
             const roll = game.heart.rolls.ItemRoll.build({item});
             await roll.evaluate({async: true});
 
             roll.toMessage({
-                flavor: `${localizeHeart(this.item.name)} (<span class="item-type">${this.item.type}</span>)`,
+                flavor: `${localizeHeart(this.item.name)} (<span class="item-type">${localizeHeart(this.item.type)}</span>)<div class="resistance-text">${resistanceCapitalized}</div>`,
                 speaker: {alias: "GM"}
             });
         });
