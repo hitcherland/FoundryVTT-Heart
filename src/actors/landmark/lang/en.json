@@ -1,6 +1,24 @@
 {
     "landmark": {
         "label-single": "Landmark",
-        "label-multiple": "Landmarks"
+        "label-multiple": "Landmarks",
+        "name": "Name",
+        "defaultStress": "Default Stress",
+        "description":"Description",
+        "domain":{
+            "label-single":"Domain",
+            "label-multiple":"Domains"
+        },
+        "tier":"Tier",
+        "specialRule":{
+            "label-single":"Special Rule",
+            "label-multiple":"Special Rules"
+        },
+        "potentialPlot":{
+            "label-single":"Potential Plot",
+            "label-multiple":"Potential Plot"
+        },
+        "inactive-items": "Inactive Items",
+        "inactive-items-description": "Here you'll find items that were directly added to the adversary sheet, but were marked inactive (which hides them from the normal layout)."
     }
 }
