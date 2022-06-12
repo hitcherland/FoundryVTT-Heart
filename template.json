@@ -145,10 +145,14 @@
             "description": ""
         },
         "landmark": {
-            "domains": [],
+            "domains": "",
             "description": "",
+            "haunts": [],
+            "potentialPlots": "",
+            "resources": [],
+            "specialRules": "",
             "stress": "d4",
-            "haunts": []
+            "tier": ""
         },
         "types": [
             "adversary",
@@ -241,8 +245,11 @@
         },
         "haunt": {
             "templates": [
-                "has_description"
-            ]
+                "has_description",
+                "is_activatable"
+            ],
+            "resistances": [],
+            "upgradeTrack": ""
         },
         "resource": {
             "templates": [
