@@ -29,4 +29,34 @@ export default class HeartActorSheet extends HeartSheetMixin(ActorSheet) {
 
         return data;
     }
+
+    async _onDragStart(event) {
+        const li = event.currentTarget;
+        if (event.target.classList.contains("content-link")) return;
+
+        // Create drag data
+        const dragData = {
+            actorId: this.actor.id,
+            sceneId: this.actor.isToken ? canvas.scene?.id : null,
+            tokenId: this.actor.isToken ? this.actor.token.id : null,
+            pack: this.actor.pack
+        };
+
+        // Owned Items
+        if (li.dataset.itemId) {
+            const item = await fromUuid(li.dataset.itemId);
+                dragData.type = "Item";
+                dragData.data = item.data;
+            }
+
+        // Active Effect
+        if (li.dataset.effectId) {
+            const effect = this.actor.effects.get(li.dataset.effectId);
+            dragData.type = "ActiveEffect";
+            dragData.data = effect.data;
+        }
+
+        // Set data transfer
+        event.dataTransfer.setData("text/plain", JSON.stringify(dragData));
+    }
 }
