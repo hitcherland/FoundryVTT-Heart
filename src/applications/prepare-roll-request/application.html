@@ -12,7 +12,7 @@
 <div class="options">
     {{#each characters as |character char_id|}}
     {{#with (randomID) as |id|}}
-    <input class="hidden" type="checkbox" id="{{id}}" name="character" value="{{char_id}}" checked/>
+    <input class="hidden" type="checkbox" id="{{id}}" name="character" value="{{char_id}}"/>
     <label for="{{id}}" class="option">
         {{character}}
     </label>
@@ -55,7 +55,7 @@
 <div class="options">
     {{#each characters as |character char_id|}}
     {{#with (randomID) as |id|}}
-    <input class="hidden" type="checkbox" id="{{id}}" name="helper" value="{{char_id}}" checked/>
+    <input class="hidden" type="checkbox" id="{{id}}" name="helper" value="{{char_id}}"/>
     <label for="{{id}}" class="option">
         {{character}}
     </label>
