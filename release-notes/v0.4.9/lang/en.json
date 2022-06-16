@@ -6,6 +6,9 @@
                 "Another update from stuttste",
                 "Simple change to bring chat window to bottom when rolling stress and fallout"
             ],
+            "bug_fixes": [
+                "hitcherland - fixed bug with drag n drop out of actors"
+            ],
             "notes":[
                 "Added setFalloutRoll so the Message would behave more like the stress roll as I was finding it hard to guarantee message was updated before calling scrollToBottom"
             ]
