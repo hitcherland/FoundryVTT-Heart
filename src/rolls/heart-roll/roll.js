@@ -256,6 +256,9 @@ export default class HeartRoll extends Roll {
 
             await msg.setStressRoll(stressRoll);
             msg.showStressRollButton = false;
+
+            await ui.chat.updateMessage(msg, true);
+            ui.chat.scrollBottom();
         });
     }
 }

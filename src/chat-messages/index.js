@@ -77,6 +77,11 @@ class HeartChatMessage extends ChatMessage {
         return
     }
 
+    async setFalloutRoll(roll) {
+        const json = roll.toJSON()
+        await this.setFlag('heart', 'fallout-roll', json);
+    }
+
     get showFalloutRollButton() {
         const showFalloutRollButton = this.getFlag('heart', 'show-fallout-roll-button')
         if (this.falloutRoll !== undefined) {

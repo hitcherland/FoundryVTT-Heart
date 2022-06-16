@@ -165,6 +165,9 @@ export default class StressRoll extends Roll {
             await stressRoll.takeStress(actor_id)
             msg.showTakeStressButton = false;
             msg.showFalloutRollButton = true;
+            
+            await ui.chat.updateMessage(msg, true);
+            ui.chat.scrollBottom();
         });
 
         html.on('click', '.stress-roll [data-action=roll-fallout]', async function(ev) {
@@ -180,8 +183,11 @@ export default class StressRoll extends Roll {
 
             await falloutRoll.evaluate({async: true});
             
-            msg.falloutRoll = falloutRoll;
+            await msg.setFalloutRoll(falloutRoll);
             msg.showFalloutRollButton = false;
+
+            await ui.chat.updateMessage(msg, true);
+            ui.chat.scrollBottom();
         });
     }
 }
