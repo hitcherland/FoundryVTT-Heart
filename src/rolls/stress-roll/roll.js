@@ -180,8 +180,11 @@ export default class StressRoll extends Roll {
 
             await falloutRoll.evaluate({async: true});
             
-            msg.falloutRoll = falloutRoll;
+            await msg.setFalloutRoll(falloutRoll);
             msg.showFalloutRollButton = false;
+
+            await ui.chat.updateMessage(msg, true);
+            ui.chat.scrollBottom();
         });
     }
 }
