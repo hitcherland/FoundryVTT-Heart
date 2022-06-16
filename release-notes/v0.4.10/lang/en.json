@@ -1,0 +1,10 @@
+{
+    "versions": {
+        "0_4_10": {
+            "version": "v0.4.10",
+            "changes":[
+                "Roll requests now start with no characters selected by default, as opposed to all."
+            ]
+        }
+    }
+}
