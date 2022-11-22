@@ -11,7 +11,7 @@ class HeartActor extends Actor {
         return this._proxy;
     }
 
-    get effects() {
+    get heart_effects() {
         if(this.proxy !== undefined) {
             const effects = new Collection(super.effects.entries());
             this.proxy.effects.forEach(effect => {

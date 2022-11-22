@@ -26,7 +26,7 @@ class HeartItem extends Item {
         return this.parentItem !== null;
     }
 
-    get effects() {
+    get heart_effects() {
         if (this.proxy !== undefined && this.proxy.effects !== undefined) {
             const effects = new Collection(super.effects.entries());
             this.proxy.effects.forEach(effect => {
