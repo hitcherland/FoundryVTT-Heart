@@ -6,7 +6,7 @@ function log(msg) {
     console.log(`FoundryVTT-Symlink: ${msg}`);
 }
 
-function err(msg) {
+function error(msg) {
     console.error(`FoundryVTT-Symlink: ${msg}`);
     throw msg;
 }
