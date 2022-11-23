@@ -10,7 +10,7 @@
                 <a data-action="downgrade" data-type="haunt"><span class="fas fa-level-down-alt"></span>{{localizeHeart "haunt" "downgrade"}}</a>
             </div>
         </h4>
-        <div class="red" data-target='data.upgradeTrack'>{{{ordered-checkable item.data.data.upgradeTrack 6}}}</div>
+        <div class="red" data-target='system.upgradeTrack'>{{{ordered-checkable item.system.upgradeTrack 6}}}</div>
     </div>
     
     <div class="section {{localizeHeart haunt service 'label-multiple'}}">
@@ -26,7 +26,7 @@
         </h4>
         
         <div class="item-list">
-            {{#each item.data.data.resistances as |service id|}}
+            {{#each item.system.resistances as |service id|}}
                 <div data-id="{{id}}">
                     <a data-action="service-roll"><span class="fas fa-dice"></span></a>
                     <select name="service-selector-die">

@@ -14,7 +14,7 @@ export default class LandmarkSheet extends HeartActorSheet {
     async _onDropItemCreate(itemData) {
         if(this.actor.type === 'landmark') {
 
-            itemData.data.active = true;
+            itemData.system.active = true;
         }
 
         return super._onDropItemCreate(itemData);
@@ -89,7 +89,7 @@ export default class LandmarkSheet extends HeartActorSheet {
             const doc = new CONFIG.Item.documentClass({
                 type,
                 name: `New ${type}`,
-                data: itemData
+                system: itemData
             });
 
             
@@ -105,13 +105,14 @@ export default class LandmarkSheet extends HeartActorSheet {
             const item = await fromUuid(uuid);
             let itemData = target.data('data') || {};
 
-            const data = {documentName, type: type, name: `New ${type}`, data: itemData };
+            const data = {documentName, type: type, name: `New ${type}`, system: itemData };
             item.addChildren([data]);
         });
 
         html.find('[data-action=view]').click(async ev => {
             const uuid = $(ev.currentTarget).closest('[data-item-id]').data('itemId');
             const item = await fromUuid(uuid);
+            console.log("DEBUGC");
             item.sheet.render(true);
         });
 
@@ -158,28 +159,28 @@ export default class LandmarkSheet extends HeartActorSheet {
             const target = $(ev.currentTarget);
             const uuid = target.closest('[data-item-id]').data('itemId');
             const item = await fromUuid(uuid);
-            item.update({'data.active': true});
+            item.update({'system.active': true});
         });
 
         html.find('[data-item-id] [data-action=deactivate]').click(async ev => {
             const target = $(ev.currentTarget);
             const uuid = target.closest('[data-item-id]').data('itemId');
             const item = await fromUuid(uuid);
-            item.update({'data.active': false});
+            item.update({'system.active': false});
         });
         
         html.find('[data-item-id] [data-action=complete]').click(async ev => {
             const target = $(ev.currentTarget);
             const uuid = target.closest('[data-item-id]').data('itemId');
             const item = await fromUuid(uuid);
-            item.update({'data.complete': true});
+            item.update({'system.complete': true});
         });
 
         html.find('[data-item-id] [data-action=uncomplete]').click(async ev => {
             const target = $(ev.currentTarget);
             const uuid = target.closest('[data-item-id]').data('itemId');
             const item = await fromUuid(uuid);
-            item.update({'data.complete': false});
+            item.update({'system.complete': false});
         });
 
         html.find('[data-action=upgrade]').click(async ev => {
@@ -187,10 +188,10 @@ export default class LandmarkSheet extends HeartActorSheet {
             const uuid = target.closest('[data-item-id]').data('itemId');
             const item = await fromUuid(uuid);
             const dieSizes = game.heart.die_sizes;
-            const services = item.data.data.resistances;
+            const services = item.system.resistances;
             
             const updates = {};
-            updates['data.upgradeTrack'] = 0;
+            updates['system.upgradeTrack'] = 0;
             
             Object.keys(services).forEach(key => {
                 var service = services[key];
@@ -198,7 +199,7 @@ export default class LandmarkSheet extends HeartActorSheet {
                 
                 if(indexOf < (dieSizes.length - 1)) {
                     var largerSize = dieSizes[indexOf+1];
-                    updates[`data.resistances.${key}.die_size`] = largerSize;
+                    updates[`system.resistances.${key}.die_size`] = largerSize;
                 }
             });
 
@@ -210,7 +211,7 @@ export default class LandmarkSheet extends HeartActorSheet {
             const uuid = target.closest('[data-item-id]').data('itemId');
             const item = await fromUuid(uuid);
             const dieSizes = game.heart.die_sizes;
-            const services = item.data.data.resistances;
+            const services = item.system.resistances;
 
             const updates = {};
             
@@ -220,7 +221,7 @@ export default class LandmarkSheet extends HeartActorSheet {
                 
                 if(indexOf > 0) {
                     var smallerSize = dieSizes[indexOf-1];
-                    updates[`data.resistances.${key}.die_size`] = smallerSize;
+                    updates[`system.resistances.${key}.die_size`] = smallerSize;
                 }
             });
 
@@ -232,7 +233,7 @@ export default class LandmarkSheet extends HeartActorSheet {
             const id = randomID();
             const uuid = target.closest('[data-item-id]').data('itemId');
             const item = await fromUuid(uuid);
-            item.update({[`data.resistances.${id}`]: {
+            item.update({[`system.resistances.${id}`]: {
                 die_size: 'd4',
                 resistance: 'blood'
             }});
@@ -243,7 +244,7 @@ export default class LandmarkSheet extends HeartActorSheet {
             const uuid = target.closest('[data-item-id]').data('itemId');
             const item = await fromUuid(uuid);
             const id = target.closest ('[data-id]').data('id');
-            item.update({[`data.resistances.-=${id}`]: null});
+            item.update({[`system.resistances.-=${id}`]: null});
         });
 
         html.find('[name=service-selector-die]').change(async ev => {
@@ -252,7 +253,7 @@ export default class LandmarkSheet extends HeartActorSheet {
             const item = await fromUuid(uuid);
             const id = target.closest ('[data-id]').data('id');
             const val = ev.target.value;
-            item.update({[`data.resistances.${id}`]: {
+            item.update({[`system.resistances.${id}`]: {
                 die_size: val
             }});
         });
@@ -263,7 +264,7 @@ export default class LandmarkSheet extends HeartActorSheet {
             const item = await fromUuid(uuid);
             const id = target.closest ('[data-id]').data('id');
             const val = ev.target.value;
-            item.update({[`data.resistances.${id}`]: {
+            item.update({[`system.resistances.${id}`]: {
                 resistance: val
             }});
         });
@@ -273,8 +274,8 @@ export default class LandmarkSheet extends HeartActorSheet {
             const hauntitem = await fromUuid(uuid);
             const target = $(ev.currentTarget);
             const id = target.closest ('[data-id]').data('id');
-            const service = hauntitem.data.data.resistances[id];
-            const item = {data:{data:{die_size:service.die_size}}};
+            const service = hauntitem.system.resistances[id];
+            const item = {system: {die_size:service.die_size}};
 
             const roll = game.heart.rolls.ItemRoll.build({item});
             await roll.evaluate({async: true});

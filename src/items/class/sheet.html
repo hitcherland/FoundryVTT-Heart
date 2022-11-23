@@ -15,16 +15,16 @@
 <form class="heart sheet base Item class {{cssClass}}" autocomplete="off">
     <h1>
         {{#if (and editable (not item.isOwned))}}
-        <input name="name" value="{{localizeHeart data.name}}"/>
+        <input name="name" value="{{localizeHeart item.name}}"/>
         {{else}}
         {{localizeHeart item.name}}
         {{/if}}
     </h1>
     <div class="description">
         {{#if (and editable (not item.isOwned))}}
-        {{editor content=(localizeHeart data.data.description) target="data.description" button=true editable=editable owner=owner}}
+        {{editor (localizeHeart system.description) target="system.description" button=true editable=editable owner=owner}}
         {{else}}
-        {{{localizeHeart data.data.description}}}
+        {{{localizeHeart system.description}}}
         {{/if}}
     </div>
 
@@ -34,20 +34,20 @@
     <div class="grid-2 auto-first-col">
         <div class="title-font">{{localizeHeart "skill" "label-single"}}</div>
         {{#if (and editable (not item.isOwned))}}
-        <select name="data.core_skill">
-            {{selectOptions skills selected=data.data.core_skill}}
+        <select name="system.core_skill">
+            {{selectOptions skills selected=system.core_skill}}
         </select>
         {{else}}
-        <div>{{localizeHeart "skill" data.data.core_skill}}</div>
+        <div>{{localizeHeart "skill" system.core_skill}}</div>
         {{/if}}
 
         <div class="title-font">{{localizeHeart "domain" "label-single"}}</div>
         {{#if (and editable (not item.isOwned))}}
-        <select name="data.core_domain">
-            {{selectOptions domains selected=data.data.core_domain}}
+        <select name="system.core_domain">
+            {{selectOptions domains selected=system.core_domain}}
         </select>
         {{else}}
-        <div>{{localizeHeart "domain" data.data.core_domain}}</div>
+        <div>{{localizeHeart "domain" system.core_domain}}</div>
         {{/if}}
 
         <div class="title-font">{{localizeHeart "resource" "label-single"}}</div>
@@ -65,14 +65,14 @@
     
         <div class="title-font">{{localizeHeart "equipment" "label-single"}}</div>
         <div>
-            {{#if (gt item.data.data.equipment_groups.length 1)}}
+            {{#if (gt item.system.equipment_groups.length 1)}}
                 {{localizeHeart "class" "equipment" "pick-one"}}
             {{/if}}
-            {{#each item.data.data.equipment_groups as |groupId|}}
-                <div class="equipment-group {{#if (or (eq groupId ../item.data.data.active_equipment_group) (includes ../item.data.data.active_equipment_groups groupId))}}active{{/if}}" data-group-id="{{groupId}}">
+            {{#each item.system.equipment_groups as |groupId|}}
+                <div class="equipment-group {{#if (or (eq groupId ../item.system.active_equipment_group) (includes ../item.system.active_equipment_groups groupId))}}active{{/if}}" data-group-id="{{groupId}}">
                     {{#if (or ../item.isEmbedded ../item.isChild) }}
                     <div class="actionbar">
-                        {{#if (or (eq groupId ../item.data.data.active_equipment_group) (includes ../item.data.data.active_equipment_groups groupId))}}
+                        {{#if (or (eq groupId ../item.system.active_equipment_group) (includes ../item.system.active_equipment_groups groupId))}}
                         <a data-action="deactivate-group" title="{{localizeHeart 'base' 'deactivate'}}"><span class="fas fa-toggle-on"></span></a>
                         {{else}}
                         <a data-action="activate-group" title="{{localizeHeart 'base' 'activate'}}"><span class="fas fa-toggle-off"></span></a>
@@ -80,7 +80,7 @@
                     </div>
                     {{/if}}
                     {{#each (lookup ../childrenTypes "equipment") as |item|}}
-                        {{#if (eq item.data.data.group groupId )}}
+                        {{#if (eq item.system.group groupId )}}
                             {{> "heart:items/equipment/preview.html" document=../document item=item showActivate=false showDelete=../../user.isGM}}
                         {{/if}}
                     {{/each}}

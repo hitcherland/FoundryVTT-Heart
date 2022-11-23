@@ -49,7 +49,7 @@ export default class HeartItemSheet extends HeartSheetMixin(ItemSheet) {
             const type = target.data('type');
             let itemData = target.data('data') || {};
 
-            const data = {documentName, type: type, name: `New ${type}`, data: itemData };
+            const data = {documentName, type: type, name: `New ${type}`, system: itemData };
             this.item.addChildren([data]);
         });
 
@@ -57,6 +57,7 @@ export default class HeartItemSheet extends HeartSheetMixin(ItemSheet) {
             const target = $(ev.currentTarget);
             const uuid = target.closest('[data-item-id]').data('itemId');
             const item = await fromUuid(uuid);
+            console.log("DEBUGD");
             item.sheet.render(true);
         });
 
@@ -69,18 +70,11 @@ export default class HeartItemSheet extends HeartSheetMixin(ItemSheet) {
             //await this.render(true);
         });
 
-        html.find('[data-item-id] [data-action=view]').click(async ev => {
-            const target = $(ev.currentTarget);
-            const uuid = target.closest('[data-item-id]').data('itemId');
-            const item = await fromUuid(uuid);
-            item.render(true);
-        });
-
         html.find('[data-item-id] [data-action=activate]').click(async ev => {
             const target = $(ev.currentTarget);
             const uuid = target.closest('[data-item-id]').data('itemId');
             const item = await fromUuid(uuid);
-            await item.update({ 'data.active': true });
+            await item.update({ 'system.active': true });
             this.render(true);
         });
 
@@ -88,7 +82,7 @@ export default class HeartItemSheet extends HeartSheetMixin(ItemSheet) {
             const target = $(ev.currentTarget);
             const uuid = target.closest('[data-item-id]').data('itemId');
             const item = await fromUuid(uuid);
-            await item.update({ 'data.active': false });
+            await item.update({ 'system.active': false });
             this.render(true);
         });
 
@@ -96,7 +90,7 @@ export default class HeartItemSheet extends HeartSheetMixin(ItemSheet) {
             const target = $(ev.currentTarget);
             const uuid = target.closest('[data-item-id]').data('itemId');
             const item = await fromUuid(uuid);
-            await item.update({ 'data.complete': true });
+            await item.update({ 'system.complete': true });
             this.render(true);
         });
 
@@ -104,7 +98,7 @@ export default class HeartItemSheet extends HeartSheetMixin(ItemSheet) {
             const target = $(ev.currentTarget);
             const uuid = target.closest('[data-item-id]').data('itemId');
             const item = await fromUuid(uuid);
-            await item.update({ 'data.complete': false });
+            await item.update({ 'system.complete': false });
             this.render(true);
         });
     }
@@ -140,6 +134,7 @@ export default class HeartItemSheet extends HeartSheetMixin(ItemSheet) {
 
         data.children = this.children;
         data.childrenTypes = this.childrenTypes;
+        data.system = this.item.system;
 
         return data;
     }

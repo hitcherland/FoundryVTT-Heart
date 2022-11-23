@@ -26,6 +26,7 @@ export default class HeartActorSheet extends HeartSheetMixin(ActorSheet) {
         });
 
         data.heart = items;
+        data.system = this.actor.system;
 
         return data;
     }

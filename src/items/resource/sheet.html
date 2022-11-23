@@ -5,11 +5,11 @@
         {{localizeHeart "domain" "label-single"}}
     </label>
     {{#if editable}}
-        <select name="data.domain">
-            {{selectOptions domains selected=data.data.domain}}
+        <select name="system.domain">
+            {{selectOptions domains selected=system.domain}}
         </select>
     {{else}}
-        {{localizeHeart "domain" data.data.domain}}
+        {{localizeHeart "domain" system.domain}}
     {{/if}}
 </div>
 

@@ -23,10 +23,10 @@ export default class extends HeartItemSheet {
 
     getData() {
         const data = super.getData();        
-        data.coreAbilities = this.item.children.filter(x => x.type === 'ability' && x.data.data.type === 'core');
-        data.minorAbilities = this.item.children.filter(x => x.type === 'ability' && x.data.data.type === 'minor');
-        data.majorAbilities = this.item.children.filter(x => x.type === 'ability' && x.data.data.type === 'major');
-        data.zenithAbilities = this.item.children.filter(x => x.type === 'ability' && x.data.data.type === 'zenith');
+        data.coreAbilities = this.item.children.filter(x => x.type === 'ability' && x.system.type === 'core');
+        data.minorAbilities = this.item.children.filter(x => x.type === 'ability' && x.system.type === 'minor');
+        data.majorAbilities = this.item.children.filter(x => x.type === 'ability' && x.system.type === 'major');
+        data.zenithAbilities = this.item.children.filter(x => x.type === 'ability' && x.system.type === 'zenith');
         return data;
     }
 
@@ -35,32 +35,32 @@ export default class extends HeartItemSheet {
 
         html.find('[data-action=add-equipment-group]').click(ev => {
             const id = randomID();
-            const groups = this.item.data.data.equipment_groups || [];
+            const groups = this.item.system.equipment_groups || [];
             groups.push(id);
-            return this.item.update({'data.equipment_groups': groups});
+            return this.item.update({'system.equipment_groups': groups});
         });
 
         html.find('[data-group-id] [data-action=delete-equipment-group]').click(async ev => {
             const target = $(ev.currentTarget);
             const groupId = target.closest('[data-group-id]').data('groupId');
-            const groups = this.item.data.data.equipment_groups.filter(x => x !== groupId);
+            const groups = this.item.system.equipment_groups.filter(x => x !== groupId);
 
-            const ids = this.item.children.filter(x => x.type === 'resource' && x.data.data.group === groupId).map(item => item.id);
+            const ids = this.item.children.filter(x => x.type === 'resource' && x.system.group === groupId).map(item => item.id);
             this.deleteChildren(ids);
             this.render()
-            return this.item.update({'data.equipment_groups': groups});
+            return this.item.update({'system.equipment_groups': groups});
 
         });
 
         html.find('[data-group-id] [data-action=activate-group]').click(async ev => {
             const target = $(ev.currentTarget);
             const groupId = target.closest('[data-group-id]').data('groupId');
-            const activeGroupId = this.item.data.data.active_equipment_group;
+            const activeGroupId = this.item.system.active_equipment_group;
             
             const childrenUpdates = {};
 
-            const previousEquipmentGroups = [...this.item.data.data.active_equipment_groups];
-            let activeEquipmentGroups = this.item.data.data.active_equipment_groups;
+            const previousEquipmentGroups = [...this.item.system.active_equipment_groups];
+            let activeEquipmentGroups = this.item.system.active_equipment_groups;
             if (groupId === "core" && activeEquipmentGroups.find(g => g === "core") === undefined) {
                 activeEquipmentGroups.push('core');
             }
@@ -70,15 +70,15 @@ export default class extends HeartItemSheet {
                 activeEquipmentGroups.push(groupId);
             }
 
-            await this.item.update({'data.active_equipment_groups': activeEquipmentGroups});
+            await this.item.update({'system.active_equipment_groups': activeEquipmentGroups});
 
             this.item.children.filter(x => x.type === 'equipment').forEach(async child => {
-                if(previousEquipmentGroups.includes(child.data.data.group) && !activeEquipmentGroups.includes(child.data.data.group)) {
-                    childrenUpdates[`${child.id}.data.active`] = false;
+                if(previousEquipmentGroups.includes(child.system.group) && !activeEquipmentGroups.includes(child.system.group)) {
+                    childrenUpdates[`${child.id}.system.active`] = false;
                 }
 
-                if(activeEquipmentGroups.includes(child.data.data.group)) {
-                    childrenUpdates[`${child.id}.data.active`] = true;
+                if(activeEquipmentGroups.includes(child.system.group)) {
+                    childrenUpdates[`${child.id}.system.active`] = true;
                 }
             });
 
@@ -91,20 +91,20 @@ export default class extends HeartItemSheet {
 
             const childrenUpdates = {};
             this.item.children.filter(x => x.type === 'equipment').forEach(async child => {
-                if(child.data.data.group === groupId) {
-                    childrenUpdates[`${child.id}.data.active`] = false;
+                if(child.system.group === groupId) {
+                    childrenUpdates[`${child.id}.system.active`] = false;
                 }
             });
 
             await this.item.updateChildren(childrenUpdates);
-            const activeEquipmentGroups = this.item.data.data.active_equipment_groups.filter(g => g !== groupId);
-            await this.item.update({'data.active_equipment_groups': activeEquipmentGroups});
+            const activeEquipmentGroups = this.item.system.active_equipment_groups.filter(g => g !== groupId);
+            await this.item.update({'system.active_equipment_groups': activeEquipmentGroups});
         });
     }
 
     async _canDragDropItem(item) {
-        if(item.type === 'ability' && item.data.type === undefined) {
-            await item.update({'data.type': 'core'});
+        if(item.type === 'ability' && item.type === undefined) {
+            await item.update({'system.type': 'core'});
         }
 
         return ['ability', 'resource', 'equipment'].includes(item.type);

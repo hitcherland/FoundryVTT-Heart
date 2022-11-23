@@ -6,8 +6,8 @@ class HeartChatMessage extends ChatMessage {
     }
 
     get stressRoll() {
-        if(this.roll instanceof game.heart.rolls.StressRoll) {
-            return this.roll;
+        if(this.rolls[0] instanceof game.heart.rolls.StressRoll) {
+            return this.rolls[0];
         }
 
         const json = this.getFlag('heart', 'stress-roll');
@@ -58,8 +58,8 @@ class HeartChatMessage extends ChatMessage {
     }
 
     get falloutRoll() {
-        if(this.roll instanceof game.heart.rolls.FalloutRoll) {
-            return this.roll;
+        if(this.rolls[0] instanceof game.heart.rolls.FalloutRoll) {
+            return this.rolls[0];
         }
 
         const json = this.getFlag('heart', 'fallout-roll');
@@ -102,7 +102,7 @@ class HeartChatMessage extends ChatMessage {
         const html = await super.getHTML();
 
         if (this.isRoll && this.isContentVisible) {
-            const content = await this.roll.render({
+            const content = await this.rolls[0].render({
                 isPrivate: false,
                 showStressRollButton: this.showStressRollButton,
                 showTakeStressButton: this.showTakeStressButton,
@@ -112,14 +112,14 @@ class HeartChatMessage extends ChatMessage {
                 $(content).children()
             );
 
-            if (this.stressRoll && this.stressRoll !== this.roll) {
+            if (this.stressRoll && this.stressRoll !== this.rolls[0]) {
                 const stressContent = await this.stressRoll.render({ isPrivate: false, showTakeStressButton: this.showTakeStressButton, showFalloutRollButton: this.showFalloutRollButton });
                 html.append(
                     $('<div class="message-content"></div>').append(stressContent)
                 );
             }
 
-            if (this.falloutRoll && this.falloutRoll !== this.roll) {
+            if (this.falloutRoll && this.falloutRoll !== this.rolls[0]) {
                 const falloutContent = await this.falloutRoll.render({ isPrivate: false });
                 html.append(
                     $('<div class="message-content"></div>').append(falloutContent)

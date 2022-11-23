@@ -20,7 +20,7 @@
     </div>
     
     {{#if (and showTextboxesBelowItems description_path)}}
-    {{editor content=(lookup actor.data.data description_path) target=(join "." "data" description_path) button=true editable=editable owner=owner}}
+    {{editor (lookup actor.system description_path) target=(join "." "system" description_path) button=true editable=editable owner=owner}}
     {{/if}}
 </div>
 {{/inline}}
@@ -33,15 +33,15 @@
     <button data-action="fallout-roll"><span class="fas fa-dice"></span> {{localizeHeart "perform" "roll-fallout"}}</button>
 </div>
 <form class="heart sheet actor character {{cssClass}}" autocomplete="off">
-        <img class="profile" src="{{data.img}}" title="{{actor.name}}" data-edit="img"/>
+        <img class="profile" src="{{actor.img}}" title="{{actor.name}}" data-edit="img"/>
         <div class="section grid-3 resistances place-top">
             <div></div>
             <div></div>
             <h3 class="center">{{localizeHeart "resistance" "protection" "label-multiple"}}</h3>
-            {{#each actor.data.data.resistances as |resistance name|}}
+            {{#each actor.system.resistances as |resistance name|}}
                 <h3 class="left">{{localizeHeart "resistance" name}}</h3>
-                <div class="red" data-target='data.resistances.{{name}}.value'>{{{ordered-checkable resistance.value 10}}}</div>
-                <div class="red" data-target='data.resistances.{{name}}.protection'>{{{ordered-checkable resistance.protection 5}}}</div>
+                <div class="red" data-target='system.resistances.{{name}}.value'>{{{ordered-checkable resistance.value 10}}}</div>
+                <div class="red" data-target='system.resistances.{{name}}.protection'>{{{ordered-checkable resistance.protection 5}}}</div>
             {{/each}}
         </div>
         
@@ -61,7 +61,7 @@
                     </div>
                 </div>
                 {{else}}
-                <input name="data.class" value="{{actor.data.data.class}}"/>
+                <input name="system.class" value="{{actor.system.class}}"/>
                 {{/if}}
                 <h2>{{localizeHeart "character" "calling"}}</h2>
                 {{#if callingItem}}
@@ -75,7 +75,7 @@
                     </div>
                 </div>
                 {{else}}
-                <input name="data.calling" value="{{actor.data.data.calling}}"/>
+                <input name="system.calling" value="{{actor.system.calling}}"/>
                 {{/if}}
             </div>
         </div>
@@ -89,30 +89,30 @@
         <div class="section skills grid-2 auto-first-col">
             <h3 class="center">{{localizeHeart "skill" "label-multiple"}}</h3>
             <h3 class="faded">{{localizeHeart "skill" "knack" "label-multiple"}}</h3>
-            {{#each actor.data.data.skills as |skill name|}}
+            {{#each actor.system.skills as |skill name|}}
                 <div class="flexrow">
-                    <input type="checkbox" name="data.skills.{{name}}.value" {{checked skill.value}}/>
+                    <input type="checkbox" name="system.skills.{{name}}.value" {{checked skill.value}}/>
                     <span class="bold">{{localizeHeart "skill" name}}</span>
                 </div>
-                <input name="data.skills.{{name}}.knack" value="{{skill.knack}}"/>
+                <input name="system.skills.{{name}}.knack" value="{{skill.knack}}"/>
             {{/each}}
         </div>
 
         <div class="section domains grid-2 auto-first-col">
             <h3 class="center">{{localizeHeart "domain" "label-multiple"}}</h3>
             <h3 class="faded">{{localizeHeart "domain" "knack" "label-multiple"}}</h3>
-            {{#each actor.data.data.domains as |domain name|}}
+            {{#each actor.system.domains as |domain name|}}
                 <div class="flexrow">
-                    <input type="checkbox" name="data.domains.{{name}}.value" {{checked domain.value}}/>
+                    <input type="checkbox" name="system.domains.{{name}}.value" {{checked domain.value}}/>
                     <span class="bold">{{localizeHeart "domain" name}}</span>
                 </div>
-                <input name="data.domains.{{name}}.knack" value="{{domain.knack}}"/>
+                <input name="system.domains.{{name}}.knack" value="{{domain.knack}}"/>
             {{/each}}
         </div>
         
         <div class="section center wide notes">
             <h3>{{localizeHeart "character" "notes"}}</h3>
-            {{editor content=actor.data.data.notes target="data.notes" button=true editable=editable owner=owner}}
+            {{editor actor.system.notes target="system.notes" button=true editable=editable owner=owner}}
         </div>
         
         <div class="section center wide inactive-items">
@@ -120,7 +120,7 @@
             <div>{{localizeHeart "character" "inactive-items-description"}}</div>
             <div class="item-list">
             {{#each actor.items as |item|}}
-                {{#if (and (not (undef item.data.data.active)) (not item.data.data.active)) }}
+                {{#if (and (not (undef item.system.active)) (not item.system.active)) }}
                     {{> (join "/" "heart:items" item.type "preview.html") item=item dataPath="???" showActivate=../user.isOwner showDelete=../user.isOwner}}
                 {{/if}}
             {{/each}}

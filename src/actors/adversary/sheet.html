@@ -20,20 +20,20 @@
     </div>
     
     {{#if (and showTextboxesBelowItems description_path)}}
-    {{editor content=(lookup actor.data.data description_path) target=(join "." "data" description_path) button=true editable=editable owner=owner}}
+    {{editor (lookup actor.system description_path) target=(join "." "system" description_path) button=true editable=editable owner=owner}}
     {{/if}}
 </div>
 {{/inline}}
 
 <div>
 <form class="heart sheet actor adversary {{cssClass}}" autocomplete="off">
-        <img class="profile" src="{{data.img}}" title="{{actor.name}}" data-edit="img"/>
+        <img class="profile" src="{{actor.img}}" title="{{actor.name}}" data-edit="img"/>
 
         <div class="section grid-2 resistances place-top">
             <h3 class="center">{{localizeHeart "resistance" "label-single"}}</h3> 
             <h3 class="center">{{localizeHeart "protection" "label-single"}}</h3> 
-            <div class="red" data-target='data.resistance'>{{{ordered-checkable actor.data.data.resistance actor.data.data.resistanceMax}}}</div>
-            <div class="red" data-target='data.protection'>{{{ordered-checkable actor.data.data.protection 10}}}</div>
+            <div class="red" data-target='system.resistance'>{{{ordered-checkable actor.system.resistance actor.system.resistanceMax}}}</div>
+            <div class="red" data-target='system.protection'>{{{ordered-checkable actor.system.protection 10}}}</div>
             
         </div>
         
@@ -47,7 +47,7 @@
         <div class="section info">
             <div class="grid-2 auto-first-col place-center">
                 <h2>{{localizeHeart "adversary" "resistanceMax"}}</h2>
-                <input name="data.resistanceMax" value="{{actor.data.data.resistanceMax}}"/>
+                <input name="system.resistanceMax" value="{{actor.system.resistanceMax}}"/>
             </div>
         </div>
 
@@ -55,23 +55,23 @@
         <div class="section info">
             <div class="grid-2 auto-first-col place-center">
                 <h2>{{localizeHeart "adversary" "difficulty"}}</h2>
-                <input name="data.difficulty" value="{{actor.data.data.difficulty}}"/>
+                <input name="system.difficulty" value="{{actor.system.difficulty}}"/>
             </div>
         </div>
 
         <div class="section center wide notes">
             <h3>{{localizeHeart "adversary" "descriptors"}}</h3>
-            {{editor content=actor.data.data.descriptors target="data.descriptors" button=true editable=editable owner=owner}}
+            {{editor actor.system.descriptors target="system.descriptors" button=true editable=editable owner=owner}}
         </div>
 
         <div class="section center wide notes">
             <h3>{{localizeHeart "adversary" "motivation"}}</h3>
-            {{editor content=actor.data.data.motivation target="data.motivation" button=true editable=editable owner=owner}}
+            {{editor actor.system.motivation target="system.motivation" button=true editable=editable owner=owner}}
         </div>
 
         <div class="section center wide notes">
             <h3>{{localizeHeart "adversary" "special"}}</h3>
-            {{editor content=actor.data.data.special target="data.special" button=true editable=editable owner=owner}}
+            {{editor actor.system.special target="system.special" button=true editable=editable owner=owner}}
         </div>
 
         {{> itemListSection type="equipment" list=actor.proxy.equipment description_path="equipment" showActivate=true}}
@@ -79,7 +79,7 @@
         
         <div class="section center wide notes">
             <h3>{{localizeHeart "adversary" "notes"}}</h3>
-            {{editor content=actor.data.data.notes target="data.notes" button=true editable=editable owner=owner}}
+            {{editor actor.system.notes target="system.notes" button=true editable=editable owner=owner}}
         </div>
         
         <div class="section center wide inactive-items">
@@ -87,7 +87,7 @@
             <div>{{localizeHeart "adversary" "inactive-items-description"}}</div>
             <div class="item-list">
             {{#each actor.items as |item|}}
-                {{#if (and (not (undef item.data.data.active)) (not item.data.data.active)) }}
+                {{#if (and (not (undef item.system.active)) (not item.system.active)) }}
                     {{> (join "/" "heart:items" item.type "preview.html") item=item dataPath="???" showActivate=../user.isOwner showDelete=../user.isOwner}}
                 {{/if}}
             {{/each}}

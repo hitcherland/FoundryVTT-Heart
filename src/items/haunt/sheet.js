@@ -60,8 +60,8 @@ export default class extends HeartItemSheet {
         html.find('[data-action=service-roll]').click(async ev => {
             const target = $(ev.currentTarget);
             const id = target.closest ('[data-id]').data('id');
-            const service = this.item.data.data.resistances[id];
-            const item = {data:{data:{die_size:service.die_size}}};
+            const service = this.item.system.resistances[id];
+            const item = {system:{die_size:service.die_size}};
 
             const roll = game.heart.rolls.ItemRoll.build({item});
             await roll.evaluate({async: true});
@@ -74,17 +74,17 @@ export default class extends HeartItemSheet {
 
         html.find('[data-action=upgrade]').click(async ev => {
             const dieSizes = game.heart.die_sizes;
-            const services = this.item.data.data.resistances;
+            const services = this.item.system.resistances;
             
             const updates = {};
-            updates['data.upgradeTrack'] = 0;
+            updates['system.upgradeTrack'] = 0;
             Object.keys(services).forEach(key => {
                 var service = services[key];
                 var indexOf = dieSizes.indexOf(service.die_size);
                 
                 if(indexOf < (dieSizes.length - 1)) {
                     var largerSize = dieSizes[indexOf+1];
-                    updates[`data.resistances.${key}.die_size`] = largerSize;
+                    updates[`system.resistances.${key}.die_size`] = largerSize;
                 }
             });
 
@@ -93,7 +93,7 @@ export default class extends HeartItemSheet {
 
         html.find('[data-action=downgrade]').click(async ev => {
             const dieSizes = game.heart.die_sizes;
-            const services = this.item.data.data.resistances;
+            const services = this.item.system.resistances;
 
             const updates = {};
 
@@ -103,7 +103,7 @@ export default class extends HeartItemSheet {
                 
                 if(indexOf > 0) {
                     var smallerSize = dieSizes[indexOf-1];
-                    updates[`data.resistances.${key}.die_size`] = smallerSize;
+                    updates[`system.resistances.${key}.die_size`] = smallerSize;
                 }
             });
 
@@ -112,7 +112,7 @@ export default class extends HeartItemSheet {
 
         html.find('[data-action=add-service]').click(ev => {
             const id = randomID();
-            this.item.update({[`data.resistances.${id}`]: {
+            this.item.update({[`system.resistances.${id}`]: {
                 die_size: 'd4',
                 resistance: 'blood'
             }});
@@ -121,13 +121,13 @@ export default class extends HeartItemSheet {
         html.find('[data-action=delete-service]').click(ev => {
             const target = $(ev.currentTarget);
             const id = target.closest ('[data-id]').data('id');
-            this.item.update({[`data.resistances.-=${id}`]: null});
+            this.item.update({[`system.resistances.-=${id}`]: null});
         });
     }
 
     async _canDragDropItem(item) {
-        if(item.type === 'service' && item.data.type === undefined) {
-            await item.update({'data.type': 'core'});
+        if(item.type === 'service' && item.type === undefined) {
+            await item.update({'system.type': 'core'});
         }
         
         return ['service'].includes(item.type);

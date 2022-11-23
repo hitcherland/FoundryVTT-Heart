@@ -25,10 +25,10 @@ class HeartActor extends Actor {
 
     getEmbeddedDocument(embeddedName, embeddedId) {
         if(embeddedName.startsWith('@')) {
-            if(this.data.data.children === undefined) 
+            if(this.system.children === undefined) 
             return;
         
-            const child_data = this.data.data.children[embeddedId];
+            const child_data = this.system.children[embeddedId];
             if(child_data === undefined)
                 return undefined;
             const documentName = embeddedName.slice(1) || child_data.documentName;
