@@ -26,13 +26,12 @@ function transformManifest(content) {
     manifest.description = config.description;
     manifest.version = config.version;
     manifest.author = config.author;
-    manifest.minimumCoreVersion = config.minimumCoreVersion;
+    manifest.compatibility = config.compatibility;
 
     manifest.packs.push(...packs)
 
     // Optional
     if (manifest.esmodules === undefined) manifest.esmodules = [`${name}.js`];
-    if (manifest.compatibleCoreVersion === undefined) manifest.compatibleCoreVersion = config.compatibleCoreVersion;
 
     const githubRepo = config.githubRepo;
     const githubBranch = config.githubBranch;
