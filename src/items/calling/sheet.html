@@ -15,16 +15,16 @@
 <form class="heart sheet base Item calling {{cssClass}}" autocomplete="off">
     <h1>
         {{#if (and editable (not item.isOwned))}}
-        <input name="name" value="{{localizeHeart data.name}}"/>
+        <input name="name" value="{{localizeHeart item.name}}"/>
         {{else}}
         {{localizeHeart item.name}}
         {{/if}}
     </h1>
     <div class="description">
         {{#if (and editable (not item.isOwned))}}
-        {{editor content=(localizeHeart data.data.description) target="data.description" button=true editable=editable owner=owner}}
+        {{editor (localizeHeart system.description) target="system.description" button=true editable=editable owner=owner}}
         {{else}}
-        {{{localizeHeart data.data.description}}}
+        {{{localizeHeart system.description}}}
         {{/if}}
     </div>
 
@@ -35,14 +35,14 @@
         {{/if}}
     </h4>
     <ul>
-    {{#each data.data.questions as |question id|}}
+    {{#each system.questions as |question id|}}
         <li data-id="{{id}}">
             <div class="flexrow">
                 {{#if ../item.isOwned}}
                 <div>
                     <div class="question">{{{localizeHeart question.question}}}</div>
                     {{#if ../editable}}
-                    {{editor content=question.answer target=(join "." "data.questions" id "answer") button=true editable=../editable owner=owner}}
+                    {{editor question.answer target=(join "." "system.questions" id "answer") button=true editable=../editable owner=owner}}
                     {{else}}
                     <div>{{{localizeHeart question.answer}}}</div>
                     {{/if}}
@@ -50,7 +50,7 @@
                 {{else}}
                     {{#if ../editable}}
                     <div class="question">
-                        {{editor content=(localizeHeart question.question) target=(join "." "data.questions" id "question") button=true editable=../editable owner=owner}}
+                        {{editor (localizeHeart question.question) target=(join "." "system.questions" id "question") button=true editable=../editable owner=owner}}
                     </div>
                     {{else}}
                     <div>{{{localizeHeart question.question}}}</div>
@@ -66,7 +66,7 @@
 
 
     <h2>
-        {{#if (eq data.data.abilities.length 1)}}
+        {{#if (eq system.abilities.length 1)}}
             {{localizeHeart "calling" "core-ability" "label-single"}}
         {{else}}
             {{localizeHeart "calling" "core-ability" "label-multiple"}}

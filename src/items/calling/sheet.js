@@ -23,9 +23,9 @@ export default class extends HeartItemSheet {
 
     getData() {
         const data = super.getData();
-        data.minorBeats = this.item.children.filter(x => x.type === 'beat' && x.data.data.type === 'minor');
-        data.majorBeats = this.item.children.filter(x => x.type === 'beat' && x.data.data.type === 'major');
-        data.zenithBeats = this.item.children.filter(x => x.type === 'beat' && x.data.data.type === 'zenith');
+        data.minorBeats = this.item.children.filter(x => x.type === 'beat' && x.system.type === 'minor');
+        data.majorBeats = this.item.children.filter(x => x.type === 'beat' && x.system.type === 'major');
+        data.zenithBeats = this.item.children.filter(x => x.type === 'beat' && x.system.type === 'zenith');
         return data;
     }
 
@@ -34,7 +34,7 @@ export default class extends HeartItemSheet {
 
         html.find('[data-action=add-question]').click(ev => {
             const id = randomID();
-            this.item.update({[`data.questions.${id}`]: {
+            this.item.update({[`system.questions.${id}`]: {
                 question: '',
                 answer: ''
             }});
@@ -43,17 +43,17 @@ export default class extends HeartItemSheet {
         html.find('[data-action=delete-question]').click(ev => {
             const target = $(ev.currentTarget);
             const id = target.closest ('[data-id]').data('id');
-            this.item.update({[`data.questions.-=${id}`]: null});
+            this.item.update({[`system.questions.-=${id}`]: null});
         });
     }
 
     async _canDragDropItem(item) {
-        if(item.type === 'ability' && item.data.type === undefined) {
-            await item.update({'data.type': 'core'});
+        if(item.type === 'ability' && item.type === undefined) {
+            await item.update({'system.type': 'core'});
         }
         
-        if(item.type === 'beat' && item.data.type === undefined) {
-            await item.update({'data.type': 'minor'});
+        if(item.type === 'beat' && item.type === undefined) {
+            await item.update({'system.type': 'minor'});
         }
         return ['ability', 'beat'].includes(item.type);
     }

@@ -26,7 +26,7 @@ class HeartItem extends Item {
         return this.parentItem !== null;
     }
 
-    get effects() {
+    get heart_effects() {
         if (this.proxy !== undefined && this.proxy.effects !== undefined) {
             const effects = new Collection(super.effects.entries());
             this.proxy.effects.forEach(effect => {
@@ -50,7 +50,7 @@ class HeartItem extends Item {
         if (this._children !== undefined)
             return this._children;
 
-        if (this.data.data.children === undefined) {
+        if (this.system.children === undefined) {
             if (game.system.model.Item[this.type].children !== undefined) {
                 return new Collection();
             } else {
@@ -59,7 +59,7 @@ class HeartItem extends Item {
         }
 
         const map = new Collection();
-        Object.entries(this.data.data.children).forEach(([key, data]) => {
+        Object.entries(this.system.children).forEach(([key, data]) => {
             let documentName = data.documentName;
             const child = new CONFIG[documentName ?? 'Item'].documentClass(data, {
                 parentItem: this
@@ -115,14 +115,15 @@ class HeartItem extends Item {
             this.children.set(id, child);
         });
 
-        return await this.update(flattenObject({'data.children': update}));
+        return await this.update(flattenObject({'system.children': update}));
     }
 
     async refreshChildren() {
         if (this.children === undefined || this.children.size === 0) return;
 
         await Promise.all(this.children.map(async (child) => {
-            mergeObject(child.data._source, this.data.data.children[child.id]);
+            console.log(this.system.children);
+            child.updateSource(this.system.children[child.id]);
             child.prepareData();
 
             if (child.children?.size ?? 0 >= 0) {
@@ -136,7 +137,7 @@ class HeartItem extends Item {
 
     async updateChildren(data = {}, context = {}) {
         const ctx = { ...context, render: false };
-        const updates = await this.update({ 'data.children': data }, ctx);
+        const updates = await this.update({ 'system.children': data }, ctx);
         if (updates === undefined) return;
 
         this.refreshChildren();
@@ -161,19 +162,19 @@ class HeartItem extends Item {
     }
 
     async deleteChildren(ids) {
-        if (this.data.data.children === undefined) return;
+        if (this.system.children === undefined) return;
 
         const updates = {};
         ids.forEach(id => {
             this.children.delete(id);
-            updates[`data.children.-=${id}`] = null
+            updates[`system.children.-=${id}`] = null
         });
         return await this.update(updates);
     }
 
     getEmbeddedDocument(embeddedName, embeddedId) {
         if (embeddedName.startsWith('@')) {
-            if (this.data.data.children === undefined)
+            if (this.system.children === undefined)
                 return;
 
             return this.children.get(embeddedId);
@@ -198,7 +199,7 @@ HeartItem.proxies = {};
 
 function ItemSheetFactory(data) {
     const safe_data = Object.freeze({ ...data });
-    return class extends HeartItemSheet {
+    const CustomHeartItemSheet = class extends HeartItemSheet {
         static get type() { return data.type; }
 
         get template() {
@@ -208,7 +209,13 @@ function ItemSheetFactory(data) {
         get img() {
             return safe_data.img;
         }
-    }
+
+        /** @inheritdoc */
+        get id() {
+            return `${this.constructor.name}-${this.document.uuid.replace(/[\.@]/g, "-")}`;
+        }
+    };
+    return CustomHeartItemSheet;
 }
 
 export function initialise() {

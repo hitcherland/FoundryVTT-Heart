@@ -3,7 +3,7 @@ export default {
         return new Proxy(actor, {
             get(actor, name, proxy) {
                 if (name === 'totalStress') {
-                    return Object.values(actor.data.data.resistances).reduce((sum, resistance) => {
+                    return Object.values(actor.system.resistances).reduce((sum, resistance) => {
                         return sum + resistance.value;
                     }, 0);
                 }
@@ -20,7 +20,7 @@ export default {
 
                 if (name === 'beats') {
                     function isActiveBeat(beat) {
-                        return beat.type === "beat" && beat.data.data.active && !beat.data.data.complete
+                        return beat.type === "beat" && beat.system.active && !beat.system.complete
                     }
                     const beats = [];
                     const calling = actor.proxy.calling;
@@ -33,7 +33,7 @@ export default {
 
                 if (name === 'abilities') {
                     function isAbility(item) {
-                        return item.type === "ability" && item.data.data.active;
+                        return item.type === "ability" && item.system.active;
                     }
                     const abilities = [];
                     const calling = actor.proxy.calling;
@@ -59,8 +59,8 @@ export default {
 
                 if (name === 'resources') {
                     function isActiveResource(resource) {
-                        const isActive = resource.data.data.active ?? true;
-                        const isComplete = resource.data.data.complete ?? false;
+                        const isActive = resource.system.active ?? true;
+                        const isComplete = resource.system.complete ?? false;
                         return resource.type === "resource" && isActive && !isComplete;
                     }
                     const class_ = actor.proxy.class;
@@ -74,8 +74,8 @@ export default {
 
                 if (name === 'equipment') {
                     function isActiveEquipment(equipment) {
-                        const isActive = equipment.data.data.active ?? true;
-                        const isComplete = equipment.data.data.complete ?? false;
+                        const isActive = equipment.system.active ?? true;
+                        const isComplete = equipment.system.complete ?? false;
                         return equipment.type === "equipment" && isActive && !isComplete;
                     }
                     const equipment = [];

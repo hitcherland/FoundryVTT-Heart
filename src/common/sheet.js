@@ -26,8 +26,8 @@ export default function HeartSheetMixin(baseClass) {
 
         getData() {
             const data = super.getData();
-            if (data.data.img === this.default_img) {
-                data.data.img = this.img;
+            if (data.img === this.default_img) {
+                data.img = this.img;
             }
             return data;
         }

@@ -23,7 +23,7 @@ function writeFiles(compiler) {
                 _id: randomID(),
                 name: data.name,
                 type: "equipment",
-                data: {
+                system: {
                     type: data.type,
                     die_size: data.dice,
                     group: data.group_id || group_id,
@@ -39,7 +39,7 @@ function writeFiles(compiler) {
                 _id: randomID(),
                 name: `${name}`,
                 type: "tag",
-                data: {
+                system: {
                     description: description
                 }
             }
@@ -59,7 +59,7 @@ function writeFiles(compiler) {
                 _id: randomID(),
                 name: data.name || `${keyable}.${key}.name`,
                 type: "ability",
-                data: {
+                system: {
                     active: type === "core",
                     description: data.description || `${keyable}.${key}.description`,
                     type: data.type || type,
@@ -79,7 +79,7 @@ function writeFiles(compiler) {
                 _id: randomID(),
                 type: "resource",
                 name: data.name,
-                data: {
+                system: {
                     active: true,
                     die_size: data.dice,
                     domain: data.domain,
@@ -102,7 +102,7 @@ function writeFiles(compiler) {
                 _id: randomID(),
                 name: data.name,
                 type: "class",
-                data: {
+                system: {
                     description: data.description,
                     core_domain: data.traits.domain,
                     core_skill: data.traits.skill,
@@ -119,10 +119,10 @@ function writeFiles(compiler) {
             }
 
             for (const [group_id, equipment_group] of Object.entries(data.traits.equipment)) {
-                class_data.data.equipment_groups.push(group_id);
+                class_data.system.equipment_groups.push(group_id);
                 const equipment = parseEquipment(equipment_group, group_id, key);
                 equipment.forEach(equip => {
-                    class_data.data.children[equip._id] = equip;
+                    class_data.system.children[equip._id] = equip;
                 });
             }
 
@@ -136,7 +136,7 @@ function writeFiles(compiler) {
                 _id: randomID(),
                 name: data.name,
                 type: "calling",
-                data: {
+                system: {
                     description: data.description,
                     questions: Object.assign({}, ...data.questions.map(x => ({ [randomID()]: { question: x } }))),
                     children: Object.assign({}, ...parseAbilities(data["core_ability"] || {}, 'core').map(x => ({ [x._id]: x })),
@@ -155,7 +155,7 @@ function writeFiles(compiler) {
                 _id: randomID(),
                 name: name,
                 type: "beat",
-                data: {
+                system: {
                     description: name,
                     type: type
                 }
@@ -172,7 +172,7 @@ function writeFiles(compiler) {
                         _id: randomID(),
                         name: data.name || `fallout.${type}.${resistance}.${key}.name`,
                         type: "fallout",
-                        data: {
+                        system: {
                             description: data.description || `fallout.${type}.${resistance}.${key}.description`,
                             resistance,
                             type,
@@ -194,7 +194,7 @@ function writeFiles(compiler) {
                 _id: randomID(),
                 name: `ancestry.${key}.group_name`,
                 type: "ancestry",
-                data: {
+                system: {
                     description: `ancestry.${key}.description`,
                     singular: `ancestry.${key}.singular`,
                     questions: Object.assign({}, Object.entries(data.questions || {}).map(([id, data]) => ({ [id]: `ancestry.${key}.questions.${id}` }))),

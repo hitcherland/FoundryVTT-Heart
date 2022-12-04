@@ -1,7 +1,7 @@
 {{#> "heart:items/base/preview.html" showActivate=true showComplete=false}}
     {{localizeHeart item.name}}
-    (<a data-action="item-roll"><span class="fas fa-dice"></span> {{item.data.data.die_size}}</a>
-    {{localizeHeart "domain" item.data.data.domain}}
+    (<a data-action="item-roll"><span class="fas fa-dice"></span> {{item.system.die_size}}</a>
+    {{localizeHeart "domain" item.system.domain}}
     {{#each item.childrenTypes.tag as |tag|}}
         {{localizeHeart tag.name}}
     {{/each}}

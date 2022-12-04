@@ -14,7 +14,7 @@ export default class AdversarySheet extends HeartActorSheet {
     async _onDropItemCreate(itemData) {
         if(this.actor.type === 'adversary') {
 
-            itemData.data.active = true;
+            itemData.system.active = true;
         }
 
         return super._onDropItemCreate(itemData);
@@ -76,7 +76,7 @@ export default class AdversarySheet extends HeartActorSheet {
             const doc = new CONFIG.Item.documentClass({
                 type,
                 name: `New ${type}`,
-                data: itemData
+                system: itemData
             });
 
             
@@ -86,6 +86,7 @@ export default class AdversarySheet extends HeartActorSheet {
         html.find('[data-action=view]').click(async ev => {
             const uuid = $(ev.currentTarget).closest('[data-item-id]').data('itemId');
             const item = await fromUuid(uuid);
+            console.log("DEBUGA");
             item.sheet.render(true);
         });
 
@@ -132,28 +133,28 @@ export default class AdversarySheet extends HeartActorSheet {
             const target = $(ev.currentTarget);
             const uuid = target.closest('[data-item-id]').data('itemId');
             const item = await fromUuid(uuid);
-            item.update({'data.active': true});
+            item.update({'system.active': true});
         });
 
         html.find('[data-item-id] [data-action=deactivate]').click(async ev => {
             const target = $(ev.currentTarget);
             const uuid = target.closest('[data-item-id]').data('itemId');
             const item = await fromUuid(uuid);
-            item.update({'data.active': false});
+            item.update({'system.active': false});
         });
         
         html.find('[data-item-id] [data-action=complete]').click(async ev => {
             const target = $(ev.currentTarget);
             const uuid = target.closest('[data-item-id]').data('itemId');
             const item = await fromUuid(uuid);
-            item.update({'data.complete': true});
+            item.update({'system.complete': true});
         });
 
         html.find('[data-item-id] [data-action=uncomplete]').click(async ev => {
             const target = $(ev.currentTarget);
             const uuid = target.closest('[data-item-id]').data('itemId');
             const item = await fromUuid(uuid);
-            item.update({'data.complete': false});
+            item.update({'system.complete': false});
         });
     }
 }

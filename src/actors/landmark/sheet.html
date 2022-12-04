@@ -20,14 +20,14 @@
     </div>
     
     {{#if (and showTextboxesBelowItems description_path)}}
-    {{editor content=(lookup actor.data.data description_path) target=(join "." "data" description_path) button=true editable=editable owner=owner}}
+    {{editor (lookup actor.system description_path) target=(join "." "system" description_path) button=true editable=editable owner=owner}}
     {{/if}}
 </div>
 {{/inline}}
 
 <div>
 <form class="heart sheet actor landmark {{cssClass}}" autocomplete="off">
-        <img class="profile" src="{{data.img}}" title="{{actor.name}}" data-edit="img"/>
+        <img class="profile" src="{{actor.img}}" title="{{actor.name}}" data-edit="img"/>
         
         <div class="section info">
             <div class="grid-2 auto-first-col place-center">
@@ -39,8 +39,8 @@
         <div class="section info">
             <div class="grid-2 auto-first-col place-center">
                 <h2>{{localizeHeart "landmark" "defaultStress"}}</h2>
-                <select name="data.stress">
-                    {{selectOptions die_sizes selected=actor.data.data.stress}}
+                <select name="system.stress">
+                    {{selectOptions die_sizes selected=actor.system.stress}}
                 </select>
             </div>
         </div>
@@ -48,14 +48,14 @@
         <div class="section info">
             <div class="grid-2 auto-first-col place-center">
                 <h2>{{localizeHeart "landmark" "domain" "label-multiple"}}</h2>
-                <input name="data.domains" value="{{actor.data.data.domains}}"/>
+                <input name="system.domains" value="{{actor.system.domains}}"/>
             </div>
         </div>
 
         <div class="section info">
             <div class="grid-2 auto-first-col place-center">
                 <h2>{{localizeHeart "landmark" "tier"}}</h2>
-                <input name="data.tier" value="{{actor.data.data.tier}}"/>
+                <input name="system.tier" value="{{actor.system.tier}}"/>
             </div>
         </div>
 
@@ -64,17 +64,17 @@
 
         <div class="section center wide notes">
             <h3>{{localizeHeart "landmark" "specialRule" "label-multiple"}}</h3>
-            {{editor content=actor.data.data.specialRules target="data.specialRules" button=true editable=editable owner=owner}}
+            {{editor actor.system.specialRules target="system.specialRules" button=true editable=editable owner=owner}}
         </div>
 
         <div class="section center wide notes">
             <h3>{{localizeHeart "landmark" "potentialPlot" "label-multiple"}}</h3>
-            {{editor content=actor.data.data.potentialPlots target="data.potentialPlots" button=true editable=editable owner=owner}}
+            {{editor actor.system.potentialPlots target="system.potentialPlots" button=true editable=editable owner=owner}}
         </div>
 
         <div class="section center wide notes">
             <h3>{{localizeHeart "landmark" "description"}}</h3>
-            {{editor content=actor.data.data.description target="data.description" button=true editable=editable owner=owner}}
+            {{editor actor.system.description target="system.description" button=true editable=editable owner=owner}}
         </div>
         
         <div class="section center wide inactive-items">
@@ -82,7 +82,7 @@
             <div>{{localizeHeart "landmark" "inactive-items-description"}}</div>
             <div class="item-list">
             {{#each actor.items as |item|}}
-                {{#if (and (not (undef item.data.data.active)) (not item.data.data.active)) }}
+                {{#if (and (not (undef item.system.active)) (not item.system.active)) }}
                     {{> (join "/" "heart:items" item.type "preview.html") item=item dataPath="???" showActivate=../user.isOwner showDelete=../user.isOwner die_sizes=../die_sizes resistances=../resistances}}
                 {{/if}}
             {{/each}}

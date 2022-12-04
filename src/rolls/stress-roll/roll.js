@@ -130,14 +130,14 @@ export default class StressRoll extends Roll {
                     
                     const actor = game.actors.get(character);
                     const updateData = {};
-                    const resistanceBlock = actor.data.data.resistances[resistance];
+                    const resistanceBlock = actor.system.resistances[resistance];
                     const total = this.total;
                     if(total === undefined) {
                         ui.notifications.error(`Somehow this roll isn't evaluated`, this);
                         reject();
                     }
                     const newValue = (resistanceBlock.value || 0) + Math.max(0, parseInt(total) - resistanceBlock.protection);
-                    updateData[`data.resistances.${resistance}.value`] = newValue;
+                    updateData[`system.resistances.${resistance}.value`] = newValue;
                     actor.update(updateData)
                     resolve();
                 },
