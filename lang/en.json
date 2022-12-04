@@ -1367,6 +1367,12 @@
                     "Fixed a minor issue that referred used the old FoundryVTT \"entity\" instead of \"type\""
                 ]
             },
+            "0_4_10": {
+                "version": "v0.4.10",
+                "changes": [
+                    "Roll requests now start with no characters selected by default, as opposed to all."
+                ]
+            },
             "0_4_2": {
                 "version": "v0.4.2",
                 "bug_fixes": [
