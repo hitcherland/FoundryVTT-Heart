@@ -12,7 +12,7 @@ This is a simplistic implementation of [Heart - The City Beneath](https://rowanr
 
 ## Usage
 
-New buttons are available in the character sheet for players, or from the hotbar via macros for the GM.
+New buttons are available in the character sheet for players, or from the hotbar via macros for the GM. 
 
 
 ![An example character sheet](https://i.imgur.com/8paJrcO.png)
