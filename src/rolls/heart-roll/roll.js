@@ -253,7 +253,7 @@ export default class HeartRoll extends Roll {
             }, msg);
 
             await stressRoll.evaluate({async: true});
-            if (game.dice3d) {
+            if (game.dice3d && game.settings.get('heart', 'displayStressRoll3dDice')) {
               await game.dice3d.showForRoll(stressRoll, game.user, true);
             }
 
