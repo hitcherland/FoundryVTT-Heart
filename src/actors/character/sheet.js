@@ -64,7 +64,7 @@ export default class CharacterSheet extends HeartActorSheet {
 
             const data = {};
             data[target] = index + 1;
-            this.object.update(data);
+            this.actor.update(data);
         });
 
         html.find('.ordered-checkable-box.checked').click(ev => {
@@ -75,12 +75,12 @@ export default class CharacterSheet extends HeartActorSheet {
             const target = parent.dataset.target;
 
             const data = {};
-            if (index + 1 === getProperty(this.object, target)) {
+            if (index + 1 === getProperty(this.actor, target)) {
                 data[target] = index;
             } else {
                 data[target] = index + 1;
             }
-            this.object.update(data);
+            this.actor.update(data);
         });
 
         
