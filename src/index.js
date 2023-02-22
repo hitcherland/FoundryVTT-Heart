@@ -31,6 +31,24 @@ function registerSettings() {
         default: true,
         type: Boolean,
     });
+
+    game.settings.register('heart', 'displayStressRoll3dDice', {
+      name: 'Display 3D Dice for Stress Rolls',
+      hint: 'Displays 3D Dice rolls for Stress Rolls using modules like Dice So Nice!',
+      scope: 'client',
+      config: true,
+      default: true,
+      type: Boolean,
+    });
+
+    game.settings.register('heart', 'displayFalloutRoll3dDice', {
+      name: 'Display 3D Dice for Fallout Rolls',
+      hint: 'Displays 3D Dice rolls for Fallout Rolls using modules like Dice So Nice!',
+      scope: 'client',
+      config: true,
+      default: true,
+      type: Boolean,
+    });
 }
 
 function initialise() {

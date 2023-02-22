@@ -14,14 +14,14 @@ export default class StressRoll extends Roll {
                     map[char.id] = char.name
                     return map;
                 }, {})
-            }, 
+            },
             result: {
                 label: game.i18n.localize(`heart.result.label-single`),
                 options: results.reduce((map, difficulty) => {
                     map[difficulty] = game.i18n.localize(`heart.result.${difficulty}`)
                     return map;
                 }, {})
-            }, 
+            },
             die_size: {
                 label: game.i18n.localize(`heart.die_size.label-single`),
                 options: die_sizes.reduce((map, die_size) => {
@@ -35,7 +35,7 @@ export default class StressRoll extends Roll {
     static build({result, die_size, character}={}, data={}, options={}) {
         return new Promise((resolve, reject) => {
             const requirements = this.requirements;
-        
+
             if(result !== undefined) delete requirements.result;
             if(die_size !== undefined) delete requirements.die_size;
             if(character !== undefined) delete requirements.character;
@@ -83,7 +83,7 @@ export default class StressRoll extends Roll {
         }, chatOptions);
         const isPrivate = chatOptions.isPrivate;
 
-        
+
         const showTakeStressButton = chatOptions.showTakeStressButton !== undefined ? chatOptions.showTakeStressButton : false;
         const showFalloutRollButton = chatOptions.showFalloutRollButton !== undefined ? chatOptions.showFalloutRollButton : false;
 
@@ -125,9 +125,9 @@ export default class StressRoll extends Roll {
                             return map;
                         }, {})
                     }
-                }, 
+                },
                 callback: ({resistance}) => {
-                    
+
                     const actor = game.actors.get(character);
                     const updateData = {};
                     const resistanceBlock = actor.system.resistances[resistance];
@@ -165,7 +165,7 @@ export default class StressRoll extends Roll {
             await stressRoll.takeStress(actor_id)
             msg.showTakeStressButton = false;
             msg.showFalloutRollButton = true;
-            
+
             await ui.chat.updateMessage(msg, true);
             ui.chat.scrollBottom();
         });
@@ -182,7 +182,10 @@ export default class StressRoll extends Roll {
             });
 
             await falloutRoll.evaluate({async: true});
-            
+            if (game.dice3d && game.settings.get('heart', 'displayFalloutRoll3dDice')) {
+              await game.dice3d.showForRoll(falloutRoll, game.user, true);
+            }
+
             await msg.setFalloutRoll(falloutRoll);
             msg.showFalloutRollButton = false;
 
