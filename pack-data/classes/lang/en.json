@@ -267,7 +267,7 @@
         "heretic.traits.equipment.group_2.seekers_blade.name": "Seeker's blade",
         "heretic.traits.equipment.group_3.scripture_etched_bandages_and_blessed_oils.name": "Scripture-etched bandages and blessed oils",
         "heretic.traits.equipment.group_3.staff.name": "Staff",
-        "heretic.abilities.core.ministrations.name": "The Hive",
+        "heretic.abilities.core.ministrations.name": "Ministrations",
         "heretic.abilities.core.ministrations.description": "You offer solace and calm in a world of chaos. Once per session, lead your allies in a service of praise to the Moon Beneath (how you practice your faith is up to you). All player characters who took part can remove one Minor Blood or Mind fallout, or downgrade one Major Blood or Mind fallout to Minor, at the end of the service. If you perform this service whilst on a delve, add +D4 to the delve's resistance.",
         "heretic.abilities.minor.blessed_deprivation.name": "Blessed Deprivation",
         "heretic.abilities.minor.blessed_deprivation.description": "In your darkest hour, She will bless you with her immaculate grace. Gain the Desolate domain. When you are suffering from ongoing Supplies fallout, gain the Trusty tag when you roll to inflict stress on delves.",
