@@ -553,7 +553,7 @@ heretic:
             - blood
             - mind
         staff:
-          name: class.heretic.traits.equipment.group_3.scripture_etched_bandages_and_blessed_oils.name
+          name: class.heretic.traits.equipment.group_3.staff.name
           dice: d6
           type: kill
   abilities:
