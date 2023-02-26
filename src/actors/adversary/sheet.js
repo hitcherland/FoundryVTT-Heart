@@ -86,7 +86,6 @@ export default class AdversarySheet extends HeartActorSheet {
         html.find('[data-action=view]').click(async ev => {
             const uuid = $(ev.currentTarget).closest('[data-item-id]').data('itemId');
             const item = await fromUuid(uuid);
-            console.log("DEBUGA");
             item.sheet.render(true);
         });
 

@@ -106,7 +106,6 @@ export default class CharacterSheet extends HeartActorSheet {
         html.find('[data-action=view]').click(async ev => {
             const uuid = $(ev.currentTarget).closest('[data-item-id]').data('itemId');
             const item = await fromUuid(uuid);
-            console.log("DEBUGB");
             item.sheet.render(true);
         });
 
@@ -119,8 +118,13 @@ export default class CharacterSheet extends HeartActorSheet {
         html.find('[data-action=item-roll]').click(async ev => {
             const uuid = $(ev.currentTarget).closest('[data-item-id]').data('itemId');
             const item = await fromUuid(uuid);
+            let rollOptions = {'stepIncrease': false};
 
-            const roll = game.heart.rolls.ItemRoll.build({item});
+            console.log(item);
+            if (ev.shiftKey) {
+              rollOptions.stepIncrease = true
+            }
+            const roll = game.heart.rolls.ItemRoll.build({item}, {}, rollOptions);
             await roll.evaluate({async: true});
 
             roll.toMessage({
