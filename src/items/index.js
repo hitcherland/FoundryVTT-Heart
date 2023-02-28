@@ -196,7 +196,6 @@ HeartItem.proxies = {};
 
 
 function ItemSheetFactory(data) {
-    console.log("I am itemsheetfactory", data);
     const safe_data = Object.freeze({ ...data });
     const CustomHeartItemSheet = class extends HeartItemSheet {
         static get type() { return data.type; }
