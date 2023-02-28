@@ -136,6 +136,14 @@ function initialise() {
         return game.actors.get(id);
     });
 
+    Handlebars.registerHelper('itemIsKillOrMend', function (itemType) {
+      return ["kill", "mend"].includes(itemType);
+    });
+
+    Handlebars.registerHelper('getResistances', function () {
+      return game.heart.resistances;
+    });
+
     function localizeHeart(...args) {
         let options = {};
         if (typeof (args[args.length - 1]) === "object") {

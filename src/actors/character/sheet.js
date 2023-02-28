@@ -83,6 +83,18 @@ export default class CharacterSheet extends HeartActorSheet {
             this.actor.update(data);
         });
 
+        html.find('.resistance-input').change(ev =>{
+            ev.preventDefault();
+            const element = ev.currentTarget;
+            const parent = element.parentElement;
+            const target = parent.dataset.target;
+
+            const data = {};
+            data[target] = parseInt(element.value);
+            this.actor.update(data);
+
+        })
+
         
         html.find('[data-action=prepare-request-roll]').click(ev => {
             new game.heart.applications.PrepareRollRequestApplication({}).render(true);
@@ -106,6 +118,7 @@ export default class CharacterSheet extends HeartActorSheet {
         html.find('[data-action=view]').click(async ev => {
             const uuid = $(ev.currentTarget).closest('[data-item-id]').data('itemId');
             const item = await fromUuid(uuid);
+            console.log(uuid, item)
             item.sheet.render(true);
         });
 
@@ -120,7 +133,6 @@ export default class CharacterSheet extends HeartActorSheet {
             const item = await fromUuid(uuid);
             let rollOptions = {'stepIncrease': false};
 
-            console.log(item);
             if (ev.shiftKey) {
               rollOptions.stepIncrease = true
             }

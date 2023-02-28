@@ -4,6 +4,16 @@
     <select name="system.type">
         {{selectOptions equipment_types selected=system.type}}
     </select>
+    {{#if (itemIsKillOrMend system.type) }}
+        {{#with (getResistances) as |resistances|}}
+        {{#each resistances}}
+            <h3>{{localizeHeart this}}</h3>
+            <div data-target='system.resistances' data-value="{{this}}">
+                {{{ordered-checkable (includes ../../system.resistances this) 1}}}
+            </div>
+        {{/each}}
+        {{/with}}
+    {{/if}}
 </div>
 
 <div>

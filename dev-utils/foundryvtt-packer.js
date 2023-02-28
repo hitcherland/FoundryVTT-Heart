@@ -27,6 +27,7 @@ function writeFiles(compiler) {
                     type: data.type,
                     die_size: data.dice,
                     group: data.group_id || group_id,
+                    resistances: data.resistances,
                     children: Object.assign({}, ...(data.tags || []).map(x => cloneTag(x)).map(x => ({ [x._id]: x }))),
                 }
             }

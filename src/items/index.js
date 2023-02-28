@@ -173,10 +173,12 @@ class HeartItem extends Item {
     }
 
     getEmbeddedDocument(embeddedName, embeddedId) {
+        console.log("I just tried to get an embeded doc!", this, embeddedName, embeddedId);
         if (embeddedName.startsWith('@')) {
             if (this.system.children === undefined)
                 return;
 
+            console.log("this.children", this.children.get(embeddedId))
             return this.children.get(embeddedId);
         } else {
             return super.getEmbeddedDocument(embeddedName, embeddedId);
