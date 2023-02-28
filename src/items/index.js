@@ -122,7 +122,6 @@ class HeartItem extends Item {
         if (this.children === undefined || this.children.size === 0) return;
 
         await Promise.all(this.children.map(async (child) => {
-            console.log(this.system.children);
             child.updateSource(this.system.children[child.id]);
             child.prepareData();
 
@@ -173,12 +172,9 @@ class HeartItem extends Item {
     }
 
     getEmbeddedDocument(embeddedName, embeddedId) {
-        console.log("I just tried to get an embeded doc!", this, embeddedName, embeddedId);
         if (embeddedName.startsWith('@')) {
             if (this.system.children === undefined)
                 return;
-
-            console.log("this.children", this.children.get(embeddedId))
             return this.children.get(embeddedId);
         } else {
             return super.getEmbeddedDocument(embeddedName, embeddedId);
@@ -200,6 +196,7 @@ HeartItem.proxies = {};
 
 
 function ItemSheetFactory(data) {
+    console.log("I am itemsheetfactory", data);
     const safe_data = Object.freeze({ ...data });
     const CustomHeartItemSheet = class extends HeartItemSheet {
         static get type() { return data.type; }

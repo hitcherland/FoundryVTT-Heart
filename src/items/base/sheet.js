@@ -57,7 +57,6 @@ export default class HeartItemSheet extends HeartSheetMixin(ItemSheet) {
             const target = $(ev.currentTarget);
             const uuid = target.closest('[data-item-id]').data('itemId');
             const item = await fromUuid(uuid);
-            // console.log(target, uuid, item)
             item.sheet.render(true);
         });
 
