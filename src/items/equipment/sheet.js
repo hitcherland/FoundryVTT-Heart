@@ -2,6 +2,8 @@ import sheetHTML from './sheet.html';
 import templateJSON from './template.json';
 import HeartItemSheet from '../base/sheet';
 
+import './sheet.sass';
+
 const types = ['miscellaneous', 'delve', 'kill', 'mend'];
 
 function initialise() {
@@ -25,9 +27,17 @@ export default class extends HeartItemSheet {
         return data.img;
     }
 
+    get id() {
+      return `${this.constructor.name}-${this.document.uuid.replace(/[\.@]/g, "-")}`;
+    }
+
+    get resistanceTypes() {
+      return this.system.resistances;
+    }
+
     getData() {
-        const data = super.getData();        
-        return data;
+      const data = super.getData();
+      return data;
     }
 
     activateListeners(html) {

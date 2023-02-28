@@ -140,7 +140,7 @@ function initialise() {
       return ["kill", "mend"].includes(itemType);
     });
 
-    Handlebars.registerHelper('getResistances', function () {
+    Handlebars.registerHelper('getHeartResistances', function () {
       return game.heart.resistances;
     });
 
