@@ -27,6 +27,8 @@ export default class extends HeartItemSheet {
         return data.img;
     }
 
+    //FIXME:? This is required to open equipment that is a child of a class/calling from the player sheet.
+    // It maybe should be using get id() from the ItemSheetFactory instead?
     get id() {
       return `${this.constructor.name}-${this.document.uuid.replace(/[\.@]/g, "-")}`;
     }
