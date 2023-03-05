@@ -57,7 +57,6 @@ export default class HeartItemSheet extends HeartSheetMixin(ItemSheet) {
             const target = $(ev.currentTarget);
             const uuid = target.closest('[data-item-id]').data('itemId');
             const item = await fromUuid(uuid);
-            console.log("DEBUGD");
             item.sheet.render(true);
         });
 
@@ -67,7 +66,6 @@ export default class HeartItemSheet extends HeartSheetMixin(ItemSheet) {
             const item = await fromUuid(uuid);
             if(item === null) return;
             await item.deleteDialog();
-            //await this.render(true);
         });
 
         html.find('[data-item-id] [data-action=activate]').click(async ev => {
