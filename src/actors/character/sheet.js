@@ -48,7 +48,9 @@ export default class CharacterSheet extends HeartActorSheet {
         data.user = game.user;
         data.callingItem = callingItem;
         data.classItem = classItem;
-        data.showTextboxesBelowItems = game.settings.get('heart', 'showTextboxesBelowItems')
+        data.showTextboxesBelowItems = game.settings.get('heart', 'showTextboxesBelowItems');
+        data.showTotalStress = game.settings.get('heart', 'showTotalStress');
+        data.showStressInputBox = game.settings.get('heart', 'showStressInputBox');
         return data;
     }
 
