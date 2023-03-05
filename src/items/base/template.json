@@ -18,6 +18,9 @@
             },
             "has_tags": {
                 "tags": []
+            },
+            "has_resistances": {
+                "resistances": []
             }
         }
     }

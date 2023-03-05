@@ -7,10 +7,13 @@ export default class ItemRoll extends Roll {
 }
 
 function stepIncrease(die_size) {
-    if (die_size == "d12") {
-        return "d12";
+    const gameDieSizes = game.heart.die_sizes;
+
+    var currentDieSizeIndex = gameDieSizes.indexOf(die_size);
+
+    if(currentDieSizeIndex < (gameDieSizes.length - 1)) {
+        var largerSize = gameDieSizes[currentDieSizeIndex+1];
+        return largerSize;
     }
-    else {
-        return "d".concat("", (parseInt(die_size.slice(1)) + 2));
-    }
+    return die_size;
 }

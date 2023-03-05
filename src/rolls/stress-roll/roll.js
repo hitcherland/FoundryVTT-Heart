@@ -182,7 +182,7 @@ export default class StressRoll extends Roll {
             });
 
             await falloutRoll.evaluate({async: true});
-            if (game.dice3d && game.settings.get('heart', 'displayFalloutRoll3dDice')) {
+            if (game.dice3d && game.settings.get('heart', 'showFalloutRoll3dDice')) {
               await game.dice3d.showForRoll(falloutRoll, game.user, true);
             }
 

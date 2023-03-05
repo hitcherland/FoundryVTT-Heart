@@ -122,7 +122,6 @@ class HeartItem extends Item {
         if (this.children === undefined || this.children.size === 0) return;
 
         await Promise.all(this.children.map(async (child) => {
-            console.log(this.system.children);
             child.updateSource(this.system.children[child.id]);
             child.prepareData();
 
@@ -176,7 +175,6 @@ class HeartItem extends Item {
         if (embeddedName.startsWith('@')) {
             if (this.system.children === undefined)
                 return;
-
             return this.children.get(embeddedId);
         } else {
             return super.getEmbeddedDocument(embeddedName, embeddedId);

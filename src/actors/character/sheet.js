@@ -48,7 +48,9 @@ export default class CharacterSheet extends HeartActorSheet {
         data.user = game.user;
         data.callingItem = callingItem;
         data.classItem = classItem;
-        data.showTextboxesBelowItems = game.settings.get('heart', 'showTextboxesBelowItems')
+        data.showTextboxesBelowItems = game.settings.get('heart', 'showTextboxesBelowItems');
+        data.showTotalStress = game.settings.get('heart', 'showTotalStress');
+        data.showStressInputBox = game.settings.get('heart', 'showStressInputBox');
         return data;
     }
 
@@ -82,6 +84,18 @@ export default class CharacterSheet extends HeartActorSheet {
             }
             this.actor.update(data);
         });
+
+        html.find('.resistance-input').change(ev =>{
+            ev.preventDefault();
+            const element = ev.currentTarget;
+            const parent = element.parentElement;
+            const target = parent.dataset.target;
+
+            const data = {};
+            data[target] = parseInt(element.value);
+            this.actor.update(data);
+
+        })
 
         
         html.find('[data-action=prepare-request-roll]').click(ev => {
@@ -120,7 +134,6 @@ export default class CharacterSheet extends HeartActorSheet {
             const item = await fromUuid(uuid);
             let rollOptions = {'stepIncrease': false};
 
-            console.log(item);
             if (ev.shiftKey) {
               rollOptions.stepIncrease = true
             }

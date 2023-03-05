@@ -32,21 +32,39 @@ function registerSettings() {
         type: Boolean,
     });
 
-    game.settings.register('heart', 'displayStressRoll3dDice', {
-      name: 'Display 3D Dice for Stress Rolls',
-      hint: 'Displays 3D Dice rolls for Stress Rolls using modules like Dice So Nice!',
+    game.settings.register('heart', 'showStressRoll3dDice', {
+      name: 'Show 3D Dice for Stress Rolls',
+      hint: 'Shows 3D Dice rolls for Stress Rolls using modules like Dice So Nice!',
       scope: 'client',
       config: true,
       default: true,
       type: Boolean,
     });
 
-    game.settings.register('heart', 'displayFalloutRoll3dDice', {
-      name: 'Display 3D Dice for Fallout Rolls',
-      hint: 'Displays 3D Dice rolls for Fallout Rolls using modules like Dice So Nice!',
+    game.settings.register('heart', 'showFalloutRoll3dDice', {
+      name: 'Show 3D Dice for Fallout Rolls',
+      hint: 'Shows 3D Dice rolls for Fallout Rolls using modules like Dice So Nice!',
       scope: 'client',
       config: true,
       default: true,
+      type: Boolean,
+    });
+
+    game.settings.register('heart', 'showTotalStress', {
+      name: 'Show Total Stress on Character Sheet',
+      hint: 'Show Total Stress on Character Sheet',
+      scope: 'client',
+      config: true,
+      default: true,
+      type: Boolean,
+    });
+
+    game.settings.register('heart', 'showStressInputBox', {
+      name: 'Show Input Box Beside Character Resistances',
+      hint: 'Show Input Box Beside Character Resistances for editing',
+      scope: 'client',
+      config: true,
+      default: false,
       type: Boolean,
     });
 }
@@ -134,6 +152,14 @@ function initialise() {
 
     Handlebars.registerHelper('getActor', function (id) {
         return game.actors.get(id);
+    });
+
+    Handlebars.registerHelper('itemIsKillOrMend', function (itemType) {
+      return ["kill", "mend"].includes(itemType);
+    });
+
+    Handlebars.registerHelper('getHeartResistances', function () {
+      return game.heart.resistances;
     });
 
     function localizeHeart(...args) {
