@@ -27,7 +27,7 @@ export default class LandmarkSheet extends HeartActorSheet {
     }
 
     get img() {
-        return 'systems/heart/assets/occupy.svg';
+        return 'systems/heart/assets/monument.svg';
     }
 
     

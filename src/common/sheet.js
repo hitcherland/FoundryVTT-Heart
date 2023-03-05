@@ -11,7 +11,7 @@ export default function HeartSheetMixin(baseClass) {
         }
 
         get img() {
-            return systems/heart/assets/battle-gear.svg;
+            return 'systems/heart/assets/battle-gear.svg';
         }
 
         get title() {
@@ -26,7 +26,14 @@ export default function HeartSheetMixin(baseClass) {
 
         getData() {
             const data = super.getData();
-            if (data.img === this.default_img) {
+            // Check for data type and assign default img where appropriate
+            if (data.actor && (data.actor.img === this.default_img)) {
+                data.actor.img = this.img;
+            }
+            else if (data.item) {
+                data.item.img = this.img;
+            }
+            else {
                 data.img = this.img;
             }
             return data;
