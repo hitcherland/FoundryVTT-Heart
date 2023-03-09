@@ -36,7 +36,7 @@ export default class HeartActorSheet extends HeartSheetMixin(ActorSheet) {
         if (event.target.classList.contains("content-link")) return;
 
         // Create drag data
-        const dragData = {
+        let dragData = {
             actorId: this.actor.id,
             sceneId: this.actor.isToken ? canvas.scene?.id : null,
             tokenId: this.actor.isToken ? this.actor.token.id : null,
@@ -46,9 +46,11 @@ export default class HeartActorSheet extends HeartSheetMixin(ActorSheet) {
         // Owned Items
         if (li.dataset.itemId) {
             const item = await fromUuid(li.dataset.itemId);
-                dragData.type = "Item";
-                dragData.data = item.data;
-            }
+            dragData.type = "Item";
+            dragData.data = item.toObject();
+            // Delete _id so that when dropped in Item panel Foundry knows to create a new Item
+            delete dragData.data._id;
+        }
 
         // Active Effect
         if (li.dataset.effectId) {
