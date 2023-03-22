@@ -48,7 +48,9 @@ export default class CharacterSheet extends HeartActorSheet {
         data.user = game.user;
         data.callingItem = callingItem;
         data.classItem = classItem;
-        data.showTextboxesBelowItems = game.settings.get('heart', 'showTextboxesBelowItems')
+        data.showTextboxesBelowItems = game.settings.get('heart', 'showTextboxesBelowItems');
+        data.showTotalStress = game.settings.get('heart', 'showTotalStress');
+        data.showStressInputBox = game.settings.get('heart', 'showStressInputBox');
         return data;
     }
 
@@ -83,6 +85,18 @@ export default class CharacterSheet extends HeartActorSheet {
             this.actor.update(data);
         });
 
+        html.find('.resistance-input').change(ev =>{
+            ev.preventDefault();
+            const element = ev.currentTarget;
+            const parent = element.parentElement;
+            const target = parent.dataset.target;
+
+            const data = {};
+            data[target] = parseInt(element.value);
+            this.actor.update(data);
+
+        })
+
         
         html.find('[data-action=prepare-request-roll]').click(ev => {
             new game.heart.applications.PrepareRollRequestApplication({}).render(true);
@@ -106,7 +120,6 @@ export default class CharacterSheet extends HeartActorSheet {
         html.find('[data-action=view]').click(async ev => {
             const uuid = $(ev.currentTarget).closest('[data-item-id]').data('itemId');
             const item = await fromUuid(uuid);
-            console.log("DEBUGB");
             item.sheet.render(true);
         });
 
@@ -119,8 +132,12 @@ export default class CharacterSheet extends HeartActorSheet {
         html.find('[data-action=item-roll]').click(async ev => {
             const uuid = $(ev.currentTarget).closest('[data-item-id]').data('itemId');
             const item = await fromUuid(uuid);
+            let rollOptions = {'stepIncrease': false};
 
-            const roll = game.heart.rolls.ItemRoll.build({item});
+            if (ev.shiftKey) {
+              rollOptions.stepIncrease = true
+            }
+            const roll = game.heart.rolls.ItemRoll.build({item}, {}, rollOptions);
             await roll.evaluate({async: true});
 
             roll.toMessage({

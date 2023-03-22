@@ -1,7 +1,7 @@
 {{{localize "heart.dialog.content(VERSION)" VERSION=version}}}
 <h2>{{localizeHeart "changelog"}}</h2>
 
-<nav class="tabs" data-group="version-tabs">
+<nav class="tabs version-tabs" data-group="version-tabs">
     {{#each versions as |version|}}
         <a class="item" data-tab="{{version.version}}" data-group="version-tabs">{{version.version}}</a>
     {{/each}}

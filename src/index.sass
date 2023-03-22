@@ -53,7 +53,7 @@ input.toggle-display
         .dice-formula
             background: util.$black
             color: white
-    
+
         .dice
             .part-header
                 border-bottom-color: util.$white
@@ -63,7 +63,7 @@ input.toggle-display
 
             .dice-rolls .roll.discarded
                 filter: sepia(0.5) contrast(0.75) opacity(0.5)
-    
+
     .message-content + .message-content
         margin-top: 0.5em
 
@@ -74,13 +74,13 @@ input.toggle-display
 
         .fas
             padding: 0 0.5em
-    
+
     button + button
         margin-top: 0.2em
 
 .heart
     font-family: 'Alegreya', serif
-    
+
     input
         font-family: inherit
 
@@ -89,7 +89,7 @@ input.toggle-display
         background: util.$red
         color: util.$white
         border-color: util.$red-black
-        
+
         font-size: 1rem
         text-transform: uppercase
         font-weight: bold
@@ -142,7 +142,7 @@ input.toggle-display
             background-position: center
             background-repeat: no-repeat
 
-            
+
         &:disabled
             background-image: linear-gradient(90deg, util.$bg-for-red 0%, util.$bg-for-red 100%)
             background-size: $size - 2px $size - 2px
@@ -163,7 +163,7 @@ input.toggle-display
             &.checked::after
                 background-image: linear-gradient(90deg, util.$red 0%, util.$red 100%)
 
-    
+
 
 
 .window-app .window-content
@@ -192,3 +192,8 @@ input.toggle-display
 
     &.place-top
         align-items: start
+
+.version-tabs
+    flex-wrap: wrap
+    gap: 5px 10px
+    justify-content: flex-start

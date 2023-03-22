@@ -5,9 +5,24 @@
         {{selectOptions equipment_types selected=system.type}}
     </select>
 </div>
+{{#if (itemIsKillOrMend system.type) }}
+<div class="equipment resistances red">
+    {{#with (getHeartResistances) as |resistances|}}
+    {{#each resistances}}
+        <div>
+            <h3>{{localizeHeart this}}</h3>
+            <div data-target='system.resistances' data-value="{{this}}">
+                {{{ordered-checkable (includes ../../system.resistances this) 1}}}
+            </div>
+        </div>
+    {{/each}}
+    {{/with}}
+</div>
+{{/if}}
 
 <div>
     <h2>
+        <span class="fas fa-tag"></span>
         {{localizeHeart "tag" "label-multiple"}}
         {{#if user.isGM }}
         <a class="right" data-action="add-child" data-type="tag"><span class="fas fa-plus"></span> {{localizeHeart "tag" "add"}}</a>

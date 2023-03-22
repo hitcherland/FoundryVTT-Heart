@@ -36,11 +36,19 @@
         <img class="profile" src="{{actor.img}}" title="{{actor.name}}" data-edit="img"/>
         <div class="section grid-3 resistances place-top">
             <div></div>
-            <div></div>
+            <div>
+                {{#if showTotalStress}}
+                <h3 class="left">Total Stress: {{actor.proxy.totalStress}}</h3>
+                {{/if}}
+            </div>
             <h3 class="center">{{localizeHeart "resistance" "protection" "label-multiple"}}</h3>
             {{#each actor.system.resistances as |resistance name|}}
                 <h3 class="left">{{localizeHeart "resistance" name}}</h3>
-                <div class="red" data-target='system.resistances.{{name}}.value'>{{{ordered-checkable resistance.value 10}}}</div>
+                <div class="red" data-target='system.resistances.{{name}}.value'>{{{ordered-checkable resistance.value 12}}}
+                    {{#if ../showStressInputBox}}
+                    <input class="resistance-input red" size="2" name='{{localizeHeart "resistance" name}} Input' value='{{resistance.value}}'/>
+                    {{/if}}
+                </div>
                 <div class="red" data-target='system.resistances.{{name}}.protection'>{{{ordered-checkable resistance.protection 5}}}</div>
             {{/each}}
         </div>

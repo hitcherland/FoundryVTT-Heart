@@ -112,7 +112,6 @@ export default class LandmarkSheet extends HeartActorSheet {
         html.find('[data-action=view]').click(async ev => {
             const uuid = $(ev.currentTarget).closest('[data-item-id]').data('itemId');
             const item = await fromUuid(uuid);
-            console.log("DEBUGC");
             item.sheet.render(true);
         });
 
