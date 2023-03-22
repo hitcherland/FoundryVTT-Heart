@@ -189,6 +189,9 @@
             },
             "has_tags": {
                 "tags": []
+            },
+            "has_resistances": {
+                "resistances": []
             }
         },
         "beat": {
@@ -229,7 +232,8 @@
                 "has_description",
                 "is_activatable",
                 "has_tags",
-                "has_children"
+                "has_children",
+                "has_resistances"
             ],
             "type": "miscellaneous",
             "group": "core"
