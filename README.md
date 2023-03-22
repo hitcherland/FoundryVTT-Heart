@@ -106,23 +106,6 @@ Thanks to them!
 * Español - jesberpen
 
 
-## Contributing
-It is not recommended to develop on the instance on Foundry you run games from. If you need help installing another version of Foundry or a dev environment this isn't the guide for that.
-
-To test your changes:
-
-Add your Foundry installation's Data location to `foundryvtt.config.js` it should look something like:
-`foundryvttPath: "/home/yourusername/foundryuserdata/Data"` 
-
-Inside this directory run:
-```shell
-npm ci
-npm run build .
-```
-
-If everything is setup correctly this will create a symlink from this directory's `dist` folder to your Foundry systems folder. It will then build this project and the built version will appear in `dist`. With the symlink in place you can then open Foundry and interact with the system as normal. 
-
-
 ## TODO
 
 - [x] Make a basic fillable character sheet.

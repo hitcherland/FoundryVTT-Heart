@@ -55,10 +55,13 @@
         }
     ],
     "socket": false,
-    "name": "heart",
+    "id": "heart",
     "title": "Heart - The City Beneath",
     "description": "A red wet heaven slumbers fitful under the city of Spire. Purchase at https://rowanrookanddecard.com/product/heart-the-city-beneath-rpg/",
-    "version": "0.5.1",
+    "version": "0.4.11",
+    "authors": [
+        "hitcherland"
+    ],
     "compatibility": {
         "minimum": "10",
         "verified": "10"
@@ -67,7 +70,7 @@
         "heart.js"
     ],
     "url": "https://github.com/hitcherland/foundryvtt-heart",
-    "manifest": "https://raw.githubusercontent.com/hitcherland/foundryvtt-heart/0.5.1/system.json",
-    "readme": "https://raw.githubusercontent.com/hitcherland/foundryvtt-heart/0.5.1/README.md",
-    "download": "https://github.com/hitcherland/foundryvtt-heart/archive/refs/tags/0.5.1.zip"
+    "manifest": "https://raw.githubusercontent.com/hitcherland/foundryvtt-heart/0.4.11/system.json",
+    "readme": "https://raw.githubusercontent.com/hitcherland/foundryvtt-heart/0.4.11/README.md",
+    "download": "https://github.com/hitcherland/foundryvtt-heart/archive/refs/tags/0.4.11.zip"
 }
