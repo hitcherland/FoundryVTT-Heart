@@ -1,6 +1,19 @@
 {
     "delve": {
         "label-single": "Explorar",
-        "label-multiple": "Exploraciones"
+        "label-multiple": "Exploraciones",
+        "name":"Nombre",
+        "resistance":"Resistencia",
+        "defaultStress":"Estrés por defecto",
+        "description":"Descripción",
+        "domain":{
+            "label-single":"Dominio",
+            "label-multiple":"Dominios"
+        },
+        "connection":"conexión",
+        "tier":"Nivel",
+        "notes":"Notas",
+        "inactive-items": "Objetos no activos",
+        "inactive-items-description": "Aquí encontrarás objetos que han sido añadidos a tu ficha pero que fueron marcados como inactivos (los esconde de la vista normal en la ficha)"
     }
 }

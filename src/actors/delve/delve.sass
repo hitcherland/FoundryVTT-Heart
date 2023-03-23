@@ -1,0 +1,74 @@
+@use '../../util'
+
+.sticky
+    position: sticky
+    top: 0
+    z-index: 1
+
+.section
+    padding: 0.5em
+
+.item-list
+    &> *
+        padding: 0.5em
+        margin: 0.5em 0
+        border: 1px solid rgba(99, 0, 0, 0.2)
+        border-radius: 5px
+
+a[disabled]
+    opacity: 0.5
+    pointer-events: none
+
+.heart.sheet.actor.delve
+    position: relative
+    background: white
+
+    h3
+        font-size: 1.5em
+
+    .info .grid-2
+        grid-gap: 1em
+        align-items: center
+    
+    img.profile
+        object-fit: contain
+        width: 100%
+        min-height: 100px
+        max-height: 256px
+        border: 0
+        background: util.$red-transparent
+
+    .faded
+        opacity: 66%
+
+    .right
+        float: right
+        flex: auto 0 0
+
+    .col
+        margin: 0 0.5em
+
+    .grid-2        
+        input:not([type])
+            border: 0
+            border-bottom: 1px dotted util.$red
+            font-size: 1.5em
+
+    .grid-3
+        display: grid
+        grid-template-columns: 1fr 1fr 1fr
+        place-items: stretch
+        column-gap: 0.5em
+
+        &.resistances
+            grid-template-columns: auto auto auto
+            align-items: start
+            justify-content: space-evenly
+
+            &.left
+                justify-self: left
+
+    .bold
+        font-weight: bold
+        font-size: 16px
+    
