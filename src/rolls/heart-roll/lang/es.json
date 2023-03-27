@@ -11,6 +11,7 @@
         "label-single": "Resultado",
         "label-multiple": "Resultados",
         "label-stress": "Resultados de estrés",
+        "n_a": "N/A",
         "critical_success": "Éxito crítico",
         "success": "Éxito",
         "success_at_a_cost": "Éxito con un coste",

@@ -7,7 +7,9 @@ export default class StressRoll extends Roll {
         const characters = game.actors.filter(x => x.type === 'character');
         const results = game.heart.stress_results;
         const die_sizes = game.heart.stress_dice;
-        return {
+        //Prepend resistances array with a blank string so that users don't have to select one
+        const resistances = [''].concat(game.heart.resistances);
+        let requirements = {
             character: {
                 label: game.i18n.localize(`heart.character.label-single`),
                 options: characters.reduce((map, char) => {
@@ -30,20 +32,34 @@ export default class StressRoll extends Roll {
                 }, {})
             }
         };
+        if (game.settings.get('heart', 'preSelectStressType')){
+          const resistance = {
+            label: game.i18n.localize(`heart.resistance.label-single`),
+            options: resistances.reduce((map, resistance) => {
+                map[resistance] = game.i18n.format(`heart.resistance.${resistance}`)
+                if(resistance === "") map[resistance] = resistance
+                return map;
+            }, {})
+          };
+          requirements["resistance"] = resistance;
+        }
+        return requirements;
     }
 
-    static build({result, die_size, character}={}, data={}, options={}) {
+    static build({result, die_size, character, resistance}={}, data={}, options={}) {
         return new Promise((resolve, reject) => {
             const requirements = this.requirements;
 
             if(result !== undefined) delete requirements.result;
             if(die_size !== undefined) delete requirements.die_size;
             if(character !== undefined) delete requirements.character;
+            if(resistance !== undefined) delete requirements.resistance;
 
             const buildData = {
                 result,
                 die_size,
-                character
+                character,
+                resistance
             };
 
             if(Object.keys(requirements).length > 0) {
@@ -61,10 +77,11 @@ export default class StressRoll extends Roll {
         })
     }
 
-    static _build({result, die_size, character}, data={}, options={}) {
+    static _build({result, die_size, character, resistance}, data={}, options={}) {
         options.result = result;
         options.die_size = die_size;
         options.character = character;
+        options.resistance = resistance;
 
         let formula = die_size;
         if(result === 'critical_failure') {
@@ -105,6 +122,7 @@ export default class StressRoll extends Roll {
             tooltip: isPrivate ? "" : await this.getTooltip(),
             showTakeStressButton: isPrivate ? false : showTakeStressButton,
             showFalloutRollButton: isPrivate ? false : !showTakeStressButton && showFalloutRollButton,
+            resistance: isPrivate ? "" : this.options.resistance,
             total: isPrivate ? "?" : this.total,
             result: isPrivate ? "?" : this.result
         };
@@ -113,9 +131,15 @@ export default class StressRoll extends Roll {
         return renderTemplate(chatOptions.template, chatData);
     }
 
-    async takeStress(character, resistance='blood') {
+    async takeStress(character, resistance='') {
         return new Promise((resolve, reject) => {
             character = character || this.options.character;
+            resistance = resistance || this.options.resistance;
+            if(resistance) {
+              this.applyStress(character, resistance);
+              resolve();
+              return;
+            }
 
             game.heart.applications.RequirementApplication.build({
                 requirements: {
@@ -128,17 +152,7 @@ export default class StressRoll extends Roll {
                 },
                 callback: ({resistance}) => {
 
-                    const actor = game.actors.get(character);
-                    const updateData = {};
-                    const resistanceBlock = actor.system.resistances[resistance];
-                    const total = this.total;
-                    if(total === undefined) {
-                        ui.notifications.error(`Somehow this roll isn't evaluated`, this);
-                        reject();
-                    }
-                    const newValue = (resistanceBlock.value || 0) + Math.max(0, parseInt(total) - resistanceBlock.protection);
-                    updateData[`system.resistances.${resistance}.value`] = newValue;
-                    actor.update(updateData)
+                    this.applyStress(character, resistance, reject);
                     resolve();
                 },
                 type: "take-stress"
@@ -146,11 +160,19 @@ export default class StressRoll extends Roll {
         });
     }
 
-    asybuildFalloutRoll(character) {
-        character = character || this.options.character;
-        return game.heart.rolls.FalloutRoll.build({
-            character
-        });
+    applyStress(character, resistance, reject) {
+      const actor = game.actors.get(character);
+      const updateData = {};
+      const resistanceBlock = actor.system.resistances[resistance];
+      const total = this.total;
+      if (total === undefined) {
+        ui.notifications.error(`Somehow this roll isn't evaluated`, this);
+        reject();
+      }
+      const newValue = (resistanceBlock.value || 0) + Math.max(0, parseInt(total) - resistanceBlock.protection);
+      updateData[`system.resistances.${resistance}.value`] = newValue;
+      console.log(actor, updateData, resistanceBlock, total);
+      actor.update(updateData);
     }
 
     static activateListeners(html) {

@@ -11,12 +11,12 @@
         "label-single": "Result",
         "label-multiple": "Results",
         "label-stress": "Stress Results",
-
-        "critical_success": "Critical Success",
-        "success": "Success",
+        "n_a": "N/A",
         "success_at_a_cost": "Success At A Cost",
         "failure": "Failure",
-        "critical_failure": "Critical Failure"
+        "critical_failure": "Critical Failure",
+        "critical_success": "Critical Success",
+        "success": "Success"
     },
     "rolls": {
         "roll": {

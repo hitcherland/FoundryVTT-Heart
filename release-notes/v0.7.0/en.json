@@ -1,0 +1,18 @@
+{
+    "versions": {
+        "0_7_0": {
+            "version": "v0.7.0",
+            "changes":[
+                "Added option to select stress type at the same time as selecting stress size for all stress rolls.",
+                "Added propeties to delves including Resistance, maxResistance, Domains, Tier, Resources, Equipment, Connections, and notes.",
+                "Added N/A as default choice for rolling stress from character sheet for the instances where you roll stress from fallout or other non-roll result reasons. This is functionally the same as 'failure'",
+                "You can now alt-click an equipment roll to decrease the die by one step when rolling with a critical success or other modifier."
+            ],
+            "bug_fixes": [
+            ],
+            "notes":[
+                "Updated the listeners on actors to be located on the base actor for less repetition of code"
+            ]
+        }
+    }
+}

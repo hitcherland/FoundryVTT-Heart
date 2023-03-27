@@ -7,7 +7,7 @@
         <div class="dice-formula">{{description}}</div>
         {{{tooltip}}}
         <div class="flexrow">
-            <h4 class="dice-total">{{total}} {{localizeHeart 'stress'}}</h4>
+            <h4 class="dice-total">{{total}} {{#if resistance}}{{titlecase (localizeHeart resistance)}}{{/if}} {{localizeHeart 'stress'}}</h4>
             {{#if showTakeStressButton}}
             <button class="icon-button" data-action="take-stress" title="{{localizeHeart 'rolls' 'stress-roll' 'take-stress' }}">
                 <span class="fas fa-heart-broken"></span>

@@ -63,7 +63,6 @@ export default class HeartActorSheet extends HeartSheetMixin(ActorSheet) {
           const item = await fromUuid(uuid);
           let rollOptions = {'stepIncrease': false, 'stepDecrease': false};
 
-          // TODO: Make step increase/decrease less of a mess?
           if (ev.shiftKey) {
             rollOptions.stepIncrease = true;
           }
