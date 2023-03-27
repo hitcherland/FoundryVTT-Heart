@@ -13,7 +13,7 @@
         },
         "prepare-stress-roll": {
             "title": "Preparar tirada de estrés",
-            "description": "Escoge a un personaje, el tipo de resultado que genera estrés y un tamaño de dado a tirar."
+            "description": "Escoge a un personaje, el tipo de resultado que genera estrés, un tamaño de dado y una resistencia a tirar."
         },
         "take-stress": {
             "description": "Elige una resistencia para asignar el estrés."
