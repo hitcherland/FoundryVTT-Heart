@@ -32,6 +32,8 @@ export default class HeartActorSheet extends HeartSheetMixin(ActorSheet) {
     }
 
     activateListeners(html) {
+        super.activateListeners(html);
+
         html.find('[data-action=add][data-type]').click(ev => {
           const target = $(ev.currentTarget);
           const type = target.data('type');
