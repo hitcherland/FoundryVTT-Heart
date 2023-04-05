@@ -47,6 +47,19 @@
         "warren": "Laberinto",
         "wild": "Salvaje"
     },
+    "resistance": {
+        "label-single": "Resistencia",
+        "label-multiple": "Resistencias",
+        "protection": {
+            "label-single": "Protección",
+            "label-multiple": "Protecciones"
+        },
+        "blood": "Sangre",
+        "mind": "Mente",
+        "echo": "Eco",
+        "fortune": "Fortuna",
+        "supplies": "Suministros"
+    },
     "mastery": {
         "label": "Tirar con maestría",
         "short": "Maestría",

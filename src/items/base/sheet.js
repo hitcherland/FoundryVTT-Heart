@@ -185,7 +185,7 @@ export default class HeartItemSheet extends HeartSheetMixin(ItemSheet) {
         if (event.target.classList.contains("entity-link")) return;
 
         // Create drag data
-        const dragData = {
+        let dragData = {
             parentItemId: this.item.id
         };
 
@@ -193,7 +193,9 @@ export default class HeartItemSheet extends HeartSheetMixin(ItemSheet) {
         if (li.dataset.itemId) {
             const item = await fromUuid(li.dataset.itemId);
             dragData.type = "Item";
-            dragData.data = item.data;
+            dragData.data = item.toObject();
+            // Delete _id so that when dropped in Item panel Foundry knows to create a new item.
+            delete dragData.data._id;
         }
 
         // Set data transfer

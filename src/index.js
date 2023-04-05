@@ -67,6 +67,15 @@ function registerSettings() {
       default: false,
       type: Boolean,
     });
+
+    game.settings.register('heart', 'preSelectStressType', {
+      name: 'Select Stress Type When Beginning a Stress Roll',
+      hint: 'Select Stress Type When Beginning a Stress Roll',
+      scope: 'client',
+      config: true,
+      default: true,
+      type: Boolean,
+    });
 }
 
 function initialise() {

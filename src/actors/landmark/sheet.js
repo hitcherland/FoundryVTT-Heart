@@ -81,22 +81,6 @@ export default class LandmarkSheet extends HeartActorSheet {
             item.update(data);
         });
 
-        html.find('[data-action=add][data-type]').click(ev => {
-            const target = $(ev.currentTarget);
-            const type = target.data('type');
-            const itemData = target.data('data') || {};
-
-            const doc = new CONFIG.Item.documentClass({
-                type,
-                name: `New ${type}`,
-                system: itemData
-            });
-
-            
-            this.actor.createEmbeddedDocuments('Item', [doc.toObject()]);
-        });
-
-
         html.find('[data-action=add-child][data-type]').click(async ev => {
             const target = $(ev.currentTarget);
             const documentName = target.data('document-name') || 'Item';
@@ -107,79 +91,6 @@ export default class LandmarkSheet extends HeartActorSheet {
 
             const data = {documentName, type: type, name: `New ${type}`, system: itemData };
             item.addChildren([data]);
-        });
-
-        html.find('[data-action=view]').click(async ev => {
-            const uuid = $(ev.currentTarget).closest('[data-item-id]').data('itemId');
-            const item = await fromUuid(uuid);
-            item.sheet.render(true);
-        });
-
-        html.find('[data-action=delete]').click(async ev => {
-            const uuid = $(ev.currentTarget).closest('[data-item-id]').data('itemId');
-            const item = await fromUuid(uuid);
-            item.deleteDialog();
-        });
-
-        html.find('[data-action=item-roll]').click(async ev => {
-            const uuid = $(ev.currentTarget).closest('[data-item-id]').data('itemId');
-            const item = await fromUuid(uuid);
-
-            const roll = game.heart.rolls.ItemRoll.build({item});
-            await roll.evaluate({async: true});
-
-            roll.toMessage({
-                flavor: `${localizeHeart(item.name)} (<span class="item-type">${item.type}</span>)`,
-                speaker: {actor: this.actor.id}
-            });
-        });
-        
-        html.find('[data-action=roll]').click(async ev => {
-            const roll = await  game.heart.rolls.HeartRoll.build({
-                character: this.actor.id
-            });
-
-            roll.toMessage({
-                speaker: {actor: this.actor.id}
-            });
-        });
-
-        html.find('[data-action=stress-roll]').click(async ev => {
-            const roll = await game.heart.rolls.StressRoll.build({
-                character: this.actor.id
-            });
-
-            roll.toMessage({
-                speaker: {actor: this.actor.id}
-            });
-        });
-
-        html.find('[data-item-id] [data-action=activate]').click(async ev => {
-            const target = $(ev.currentTarget);
-            const uuid = target.closest('[data-item-id]').data('itemId');
-            const item = await fromUuid(uuid);
-            item.update({'system.active': true});
-        });
-
-        html.find('[data-item-id] [data-action=deactivate]').click(async ev => {
-            const target = $(ev.currentTarget);
-            const uuid = target.closest('[data-item-id]').data('itemId');
-            const item = await fromUuid(uuid);
-            item.update({'system.active': false});
-        });
-        
-        html.find('[data-item-id] [data-action=complete]').click(async ev => {
-            const target = $(ev.currentTarget);
-            const uuid = target.closest('[data-item-id]').data('itemId');
-            const item = await fromUuid(uuid);
-            item.update({'system.complete': true});
-        });
-
-        html.find('[data-item-id] [data-action=uncomplete]').click(async ev => {
-            const target = $(ev.currentTarget);
-            const uuid = target.closest('[data-item-id]').data('itemId');
-            const item = await fromUuid(uuid);
-            item.update({'system.complete': false});
         });
 
         html.find('[data-action=upgrade]').click(async ev => {

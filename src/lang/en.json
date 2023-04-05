@@ -47,6 +47,19 @@
         "warren": "Warren",
         "wild": "Wild"
     },
+    "resistance": {
+        "label-single": "Resistance",
+        "label-multiple": "Resistances",
+        "protection": {
+            "label-single": "Protection",
+            "label-multiple": "Protections"
+        },
+        "blood": "Blood",
+        "mind": "Mind",
+        "echo": "Echo",
+        "fortune": "Fortune",
+        "supplies": "Supplies"
+    },
     "mastery": {
         "label": "Roll with Mastery",
         "short": "Mastery",

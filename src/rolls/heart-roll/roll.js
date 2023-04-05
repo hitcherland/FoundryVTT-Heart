@@ -25,9 +25,10 @@ const difficult_results = {
 }
 
 const stress_results = [
-    'critical_failure',
+    'n_a',
+    'success_at_a_cost',
     'failure',
-    'success_at_a_cost'
+    'critical_failure'
 ];
 
 export function initialise() {
