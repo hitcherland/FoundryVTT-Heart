@@ -1464,6 +1464,19 @@
                 "notes": [
                     "Existing equipment will not have any Resistances associated with them."
                 ]
+            },
+            "0_7_0": {
+                "version": "v0.7.0",
+                "changes": [
+                    "Added option to select stress type at the same time as selecting stress size for all stress rolls.",
+                    "Added propeties to delves including Resistance, maxResistance, Domains, Tier, Resources, Equipment, Connections, and notes.",
+                    "Added N/A as default choice for rolling stress from character sheet for the instances where you roll stress from fallout or other non-roll result reasons. This is functionally the same as 'failure'",
+                    "You can now alt-click an equipment roll to decrease the die by one step when rolling with a critical success or other modifier."
+                ],
+                "bug_fixes": [],
+                "notes": [
+                    "Updated the listeners on actors to be located on the base actor for less repetition of code"
+                ]
             }
         },
         "adversary": {
@@ -1510,7 +1523,20 @@
         },
         "delve": {
             "label-single": "Delve",
-            "label-multiple": "Delves"
+            "label-multiple": "Delves",
+            "name": "Name",
+            "resistance": "Resistance",
+            "defaultStress": "Default Stress",
+            "description": "Description",
+            "domain": {
+                "label-single": "Domain",
+                "label-multiple": "Domains"
+            },
+            "connection": "Connection",
+            "tier": "Tier",
+            "notes": "Notes",
+            "inactive-items": "Inactive Items",
+            "inactive-items-description": "Here you'll find items that were directly added to the delve sheet, but were marked inactive (which hides them from the normal layout)."
         },
         "landmark": {
             "label-single": "Landmark",
@@ -1552,7 +1578,7 @@
             },
             "prepare-stress-roll": {
                 "title": "Prepare Stress Roll",
-                "description": "Pick a character, a stress-inducing result type, and a die size to roll stress with."
+                "description": "Pick a character, a stress-inducing result type, a die size and the resistance to roll stress with."
             },
             "take-stress": {
                 "description": "Pick a resistance to take stress in."
@@ -1739,11 +1765,12 @@
             "label-single": "Result",
             "label-multiple": "Results",
             "label-stress": "Stress Results",
-            "critical_success": "Critical Success",
-            "success": "Success",
+            "n_a": "N/A",
             "success_at_a_cost": "Success At A Cost",
             "failure": "Failure",
-            "critical_failure": "Critical Failure"
+            "critical_failure": "Critical Failure",
+            "critical_success": "Critical Success",
+            "success": "Success"
         },
         "perform": {
             "request-roll": "Request Roll",

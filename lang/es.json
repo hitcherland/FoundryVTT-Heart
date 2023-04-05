@@ -44,7 +44,20 @@
         },
         "delve": {
             "label-single": "Explorar",
-            "label-multiple": "Exploraciones"
+            "label-multiple": "Exploraciones",
+            "name": "Nombre",
+            "resistance": "Resistencia",
+            "defaultStress": "Estrés por defecto",
+            "description": "Descripción",
+            "domain": {
+                "label-single": "Dominio",
+                "label-multiple": "Dominios"
+            },
+            "connection": "conexión",
+            "tier": "Nivel",
+            "notes": "Notas",
+            "inactive-items": "Objetos no activos",
+            "inactive-items-description": "Aquí encontrarás objetos que han sido añadidos a tu ficha pero que fueron marcados como inactivos (los esconde de la vista normal en la ficha)"
         },
         "landmark": {
             "label-single": "Lugar emblemático",
@@ -86,7 +99,7 @@
             },
             "prepare-stress-roll": {
                 "title": "Preparar tirada de estrés",
-                "description": "Escoge a un personaje, el tipo de resultado que genera estrés y un tamaño de dado a tirar."
+                "description": "Escoge a un personaje, el tipo de resultado que genera estrés, un tamaño de dado y una resistencia a tirar."
             },
             "take-stress": {
                 "description": "Elige una resistencia para asignar el estrés."
@@ -341,6 +354,7 @@
             "label-single": "Resultado",
             "label-multiple": "Resultados",
             "label-stress": "Resultados de estrés",
+            "n_a": "N/A",
             "critical_success": "Éxito crítico",
             "success": "Éxito",
             "success_at_a_cost": "Éxito con un coste",
