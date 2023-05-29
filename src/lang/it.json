@@ -260,7 +260,7 @@
                 "label": "Tiro di stress",
                 "action": "Tira stress",
                 "take-stress": "Prendi stress",
-                "prepare": "Prapara un tiro di stress",
+                "prepare": "Prepara un tiro di stress",
                 "description(die_size)": "{die_size} tiro di stress"
             }
         },
