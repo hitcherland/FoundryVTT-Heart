@@ -12,7 +12,7 @@
             "special": "Speciale",
             "notes": "Note",
             "inactive-items": "Oggetti inattivi",
-            "inactive-items-description": "Qui troverai gli oggetti aggiunti alla schda dell'avversario, ma marcati come inattivi"
+            "inactive-items-description": "Qui troverai gli oggetti aggiunti alla scheda dell'avversario, ma marcati come inattivi"
         },
         "resistance": {
             "label-single": "Resistenza",
@@ -37,10 +37,10 @@
             "calling": "Richiamo",
             "notes": "Note",
             "inactive-items": "Oggetti inattivi",
-            "inactive-items-description": "Qui troverai gli oggetti aggiunti alla schda dell'avversario, ma marcati come inattivi",
+            "inactive-items-description": "Qui troverai gli oggetti aggiunti alla scheda del personaggio, ma marcati come inattivi",
             "label-single": "Personaggio",
             "label-multiple": "Personaggi",
-            "label-helpers": "Personaggi amichevoli",
+            "label-helpers": "Aiuti",
             "label-valid-helpers": "Personaggi che potrebbero aiutare"
         },
         "delve": {
@@ -58,14 +58,14 @@
             "tier": "Livello",
             "notes": "Note",
          "inactive-items": "Oggetti inattivi",
-            "inactive-items-description": "Qui troverai gli oggetti aggiunti alla schda dell'avversario, ma marcati come inattivi"
+            "inactive-items-description": "Qui troverai gli oggetti aggiunti alla scheda dellam spedizione, ma marcati come inattivi"
         },
         "landmark": {
             "label-single": "Luoghi noti",
             "label-multiple": "Luogo noto",
             "name": "Nome",
             "defaultStress": "Stress",
-            "description": "Description",
+            "description": "Descrizione",
            "domain": {
                 "label-single": "Dominio",
                 "label-multiple": "Domini"
@@ -73,14 +73,14 @@
             "tier": "Livello",
             "specialRule": {
                 "label-single": "Regola speciale",
-                "label-multiple": "REgole speciali"
+                "label-multiple": "Regole speciali"
             },
             "potentialPlot": {
                 "label-single": "Spunto narrativo",
                 "label-multiple": "Spunti narrativi"
             },
             "inactive-items": "Oggetti inattivi",
-            "inactive-items-description": "Qui troverai gli oggetti aggiunti alla schda dell'avversario, ma marcati come inattivi"
+            "inactive-items-description": "Qui troverai gli oggetti aggiunti alla scheda del luogo, ma marcati come inattivi"
         },
         "applications": {
             "prepare-roll-request": {
@@ -88,7 +88,7 @@
                 "description": "Scegli la difficoltà, quali personaggi possono tirare e aiutare, e quali abilità e domini possono usare. Poi manda un messaggio in chat con la richiesta."
             },
             "requirement": {
-                "title": "Più informazoni"
+                "title": "Più informazioni"
             },
             "prepare-fallout-roll": {
                 "title": "Richiedi un tiro di complicazione",
@@ -126,7 +126,7 @@
             "uncomplete": "Non completa",
             "delete": "Cancella",
             "view": "Apri scheda",
-            "is-active": "É attiva??",
+            "is-active": "É attiva?",
             "is-complete": "É Completa?"
         },
         "beat": {
