@@ -5,9 +5,11 @@ import HeartItemSheet from '../base/sheet';
 import './sheet.sass';
 
 const types = ['miscellaneous', 'delve', 'kill', 'mend'];
+const beat_levels = ['minor', 'major', 'zenith']
 
 function initialise() {
     game.heart.equipment_types = types;
+    game.heart.beat_levels = beat_levels
 }
 
 const data = Object.freeze({

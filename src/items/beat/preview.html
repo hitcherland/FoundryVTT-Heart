@@ -1,3 +1,7 @@
 {{#> "heart:items/base/preview.html" showComplete=true showActivate=true}}
-    <div>{{{localizeHeart item.system.description}}}</div>
+    <!-- This should probably be a class toggle but I couldn't figure it out. Something like the below-->
+    <!-- <div class="{{#if item.system.complete}}completed-beat{{/if}};"></div> -->
+    <div style="background-color: {{#if item.system.complete}}#c5ffc5{{/if}};">
+        {{{localizeHeart item.system.description}}} <b>({{{localizeHeart item.system.type}}})</b>
+    </div>
 {{/ "heart:items/base/preview.html"}}

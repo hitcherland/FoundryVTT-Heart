@@ -17,6 +17,9 @@
         },
         "take-stress": {
             "description": "Elige una resistencia para asignar el estrés."
+        },
+        "clear-stress": {
+            "description": "Elija una resistencia para establecer en 0 estrés"
         }
     }
 }

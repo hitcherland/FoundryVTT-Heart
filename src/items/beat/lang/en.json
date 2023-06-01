@@ -23,6 +23,11 @@
             "label-single": "Zenith Beat",
             "label-multiple": "Zenith Beats",
             "add": "Add Zenith Beat"
+        },
+        "level": {
+            "minor": "Minor",
+            "major": "Major",
+            "zenith": "Zenith"
         }
     }
 }

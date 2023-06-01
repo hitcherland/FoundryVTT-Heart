@@ -17,6 +17,9 @@
         },
         "take-stress": {
             "description": "Pick a resistance to take stress in."
+        },
+        "clear-stress": {
+            "description": "Pick a resistance to set to 0 stress"
         }
     }
 }

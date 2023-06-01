@@ -23,6 +23,11 @@
             "label-single": "Latido cenit",
             "label-multiple": "Latidos cenit",
             "add": "Añadir latido cenit"
+        },
+        "level": {
+            "minor": "Menor",
+            "major": "Importante",
+            "zenith": "Cenit"
         }
     }
 }
