@@ -101,7 +101,6 @@ export default class FalloutRoll extends Roll {
   
           let actor = game.actors.get(character);
           let resistances = actor.system.resistances;
-          let target_prop = "system.resistances"
 
           if (this.result == 'major-fallout') {
             Dialog.confirm({
@@ -111,14 +110,14 @@ export default class FalloutRoll extends Roll {
                 Object.keys(resistances).forEach(key =>{Object.assign(resistances[key], { value: 0 });});
             
                 let data = {};
-                data[target_prop] = resistances;
+                data["system.resistances"] = resistances;
                 actor.update(data);
                 msg.showClearStressButton = false
               }
             });
           }
           if (this.result == 'minor-fallout' && stressType) {
-            removeMinorStress(stressType, actor, resistances, target_prop);
+            removeMinorStress(stressType, actor, resistances);
           }
           if (this.result == 'minor-fallout' && stressType == '') {
             game.heart.applications.RequirementApplication.build({
@@ -132,14 +131,14 @@ export default class FalloutRoll extends Roll {
               },
               callback: ({resistance}) => {
 
-                removeMinorStress(resistance, actor, resistances, target_prop);
+                removeMinorStress(resistance, actor, resistances);
               },
               type: "clear-stress"
             });
           }
       });
 
-      function removeMinorStress(stressType, actor, resistances, target_prop) {
+      function removeMinorStress(stressType, actor, resistances) {
         Dialog.confirm({
           title: `Confirm Set ${stressType} to 0`,
           content: `Are you sure you want to reset ${actor.name}'s ${stressType} stress to 0? This cannot be reversed.`,
@@ -147,7 +146,7 @@ export default class FalloutRoll extends Roll {
             resistances[stressType].value = 0;
 
             let data = {};
-            data[target_prop] = resistances;
+            data["system.resistances"] = resistances;
             actor.update(data);
             msg.showClearStressButton = false;
           }
