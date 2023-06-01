@@ -4,7 +4,7 @@
             "version": "v0.8.0",
             "changes":[
                 "Strikethrough completed beats on calling sheet.",
-                "Show beat level in parens on character sheet",
+                "Show beat level on character sheet",
                 "Allow editing beat level on beat sheet",
                 "Add button to clear stress after suffering fallout",
                 "Ability to edit Fallout Level and Resistance from Fallout item"
