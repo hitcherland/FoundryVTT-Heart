@@ -133,7 +133,12 @@ export default class HeartItemSheet extends HeartSheetMixin(ItemSheet) {
         data.beat_levels = game.heart.beat_levels.reduce((map, beat_level) => {
           map[beat_level] = game.i18n.localize(`heart.beat.level.${beat_level}`)
           return map;
-      }, {});
+        }, {});
+
+        data.fallout_levels = game.heart.fallout_levels.reduce((map, fallout_level) => {
+          map[fallout_level] = game.i18n.localize(`heart.fallout.level.${fallout_level}`)
+          return map;
+        }, {});
 
         data.children = this.children;
         data.childrenTypes = this.childrenTypes;

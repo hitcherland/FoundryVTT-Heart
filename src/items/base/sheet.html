@@ -36,6 +36,22 @@
                 {{selectOptions beat_levels selected=system.type}}
             </select>
         {{/if}}
+
+        {{#if (eq type "fallout")}}
+            <label>
+                Level
+            </label>
+            <select name="system.type">
+                {{selectOptions fallout_levels selected=system.type}}
+            </select>
+
+            <label>
+                Resistance
+            </label>
+            <select name="system.resistance">
+                {{selectOptions resistances selected=system.resistance}}
+            </select>
+        {{/if}}
     {{/if}}
     </div>
 

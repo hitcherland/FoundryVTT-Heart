@@ -1,6 +1,11 @@
 {
     "fallout": {
         "label-single": "Fallout",
-        "label-multiple": "Fallout"
+        "label-multiple": "Fallout",
+        "level": {
+            "minor": "Minor",
+            "major": "Major",
+            "critical": "Critical"
+        }
     }
 }

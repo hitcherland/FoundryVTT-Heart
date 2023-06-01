@@ -1,0 +1,19 @@
+{
+    "versions": {
+        "0_8_0": {
+            "version": "v0.8.0",
+            "changes":[
+                "Highlight completed beats in green on calling sheet.",
+                "Show beat level in parens on character sheet",
+                "Allow editing beat level on beat sheet",
+                "Add button to clear stress after suffering fallout",
+                "Ability to edit Fallout Level and Resistance from Fallout item"
+            ],
+            "bug_fixes": [
+                "Use await for delete, confirm item group deletions"
+            ],
+            "notes":[
+            ]
+        }
+    }
+}

@@ -9,7 +9,7 @@ const beat_levels = ['minor', 'major', 'zenith']
 
 function initialise() {
     game.heart.equipment_types = types;
-    game.heart.beat_levels = beat_levels
+    game.heart.beat_levels = beat_levels;
 }
 
 const data = Object.freeze({
