@@ -103,6 +103,9 @@
             },
             "take-stress": {
                 "description": "Elige una resistencia para asignar el estrés."
+            },
+            "clear-stress": {
+                "description": "Elija una resistencia para establecer en 0 estrés"
             }
         },
         "ability": {
@@ -152,6 +155,11 @@
                 "label-single": "Latido cenit",
                 "label-multiple": "Latidos cenit",
                 "add": "Añadir latido cenit"
+            },
+            "level": {
+                "minor": "Menor",
+                "major": "Importante",
+                "zenith": "Cenit"
             }
         },
         "calling": {
@@ -233,7 +241,12 @@
         },
         "fallout": {
             "label-single": "Consecuencia",
-            "label-multiple": "Consecuencias"
+            "label-multiple": "Consecuencias",
+            "level": {
+                "minor": "Menor",
+                "major": "Importante",
+                "critical": "Crítico"
+            }
         },
         "haunt": {
             "label-single": "Tormento",
@@ -321,7 +334,8 @@
                     "no-fallout": "No hay consecuencia",
                     "minor-fallout": "Consecuencia menor",
                     "major-fallout": "Consecuencia importante"
-                }
+                },
+                "clear-stress": "Elimine el estrés como resultado de sufrir un Fallout"
             },
             "roll": {
                 "label": "Tirada",

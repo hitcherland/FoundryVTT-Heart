@@ -1262,7 +1262,12 @@
             "major.supplies.incarnadine_severed.name": "Severed",
             "major.supplies.incarnadine_severed.description": "Thanks to your neglect or pure misfortune, one of your shrines to Incarne has fallen into disrepair, and the haven it's inside is no longer part of your trade network.",
             "label-single": "Fallout",
-            "label-multiple": "Fallout"
+            "label-multiple": "Fallout",
+            "level": {
+                "minor": "Minor",
+                "major": "Major",
+                "critical": "Critical"
+            }
         },
         "tag": {
             "awkward.name": "Awkward",
@@ -1477,6 +1482,20 @@
                 "notes": [
                     "Updated the listeners on actors to be located on the base actor for less repetition of code"
                 ]
+            },
+            "0_8_0": {
+                "version": "v0.8.0",
+                "changes": [
+                    "Strikethrough completed beats on calling sheet.",
+                    "Show beat level on character sheet",
+                    "Allow editing beat level on beat sheet",
+                    "Add button to clear stress after suffering fallout",
+                    "Ability to edit Fallout Level and Resistance from Fallout item"
+                ],
+                "bug_fixes": [
+                    "Use await for delete, confirm item group deletions"
+                ],
+                "notes": []
             }
         },
         "adversary": {
@@ -1582,6 +1601,9 @@
             },
             "take-stress": {
                 "description": "Pick a resistance to take stress in."
+            },
+            "clear-stress": {
+                "description": "Pick a resistance to set to 0 stress"
             }
         },
         "ability": {
@@ -1631,6 +1653,11 @@
                 "label-single": "Zenith Beat",
                 "label-multiple": "Zenith Beats",
                 "add": "Add Zenith Beat"
+            },
+            "level": {
+                "minor": "Minor",
+                "major": "Major",
+                "zenith": "Zenith"
             }
         },
         "equipment": {
@@ -1726,7 +1753,8 @@
                     "no-fallout": "No Fallout",
                     "minor-fallout": "Minor Fallout",
                     "major-fallout": "Major Fallout"
-                }
+                },
+                "clear-stress": "Remove stress as a result a suffering Fallout"
             },
             "roll": {
                 "label": "Roll",

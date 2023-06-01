@@ -1,9 +1,13 @@
 # Heart - The City Beneath
 
-This is a simplistic implementation of [Heart - The City Beneath](https://rowanrookanddecard.com/product/heart-the-city-beneath-rpg/) for [FoundryVTT](https://foundryvtt.com/) . It provides a character sheet based on the one provided inside Heart. It doesn't currently do anything fancier than storing numbers and textfields.
+This is a simplistic implementation of [Heart - The City Beneath](https://rowanrookanddecard.com/product/heart-the-city-beneath-rpg/) for [FoundryVTT](https://foundryvtt.com/) . It provides a character sheet based on the one provided inside Heart. Includes a number of useful dynamic tools for rolling and assessing results.
 ## Features
 
-* Saves your character information as text - wow
+* Character sheets to track all the stuff you want to track
+    * Resistances, Protections
+    * Name, Class, Calling
+    * Beats, Equipment, Resources, Abilities, Fallout, Skills, Domains
+    * Notes
 * Multiline inputs use FoundryVTT's inbuilt rich text editor
 * Skills can be checked, as expected
 * Resistances and Protections can be increased and decreased by clicking on the boxes.
@@ -12,10 +16,10 @@ This is a simplistic implementation of [Heart - The City Beneath](https://rowanr
 
 ## Usage
 
-New buttons are available in the character sheet for players, or from the hotbar via macros for the GM.
+Buttons are available in the character sheet for players, or from the hotbar via macros for the GM.
 
 
-![An example character sheet](https://i.imgur.com/8paJrcO.png)
+![An example character sheet](readme-imgs/heartcharactersheet.png)
 
 ![Macros](https://i.imgur.com/wlnKvE4.png)
 
@@ -27,15 +31,15 @@ A roll request is a clickable chat message that allows the players to roll with 
 
 Clicking on either of these will open a window like below:
 
-![Blank Roll Request window](https://i.imgur.com/PkjB1Le.png)
+![Blank Roll Request window](readme-imgs/heartblankrollrequest.png)
  
 For example, preparing a roll request like this:
 
-![Preparing a Roll Request](https://i.imgur.com/BwGaaIb.png)
+![Preparing a Roll Request](readme-imgs/heartrollrequest.png)
 
 will create a chat message like this:
 
-![Roll Request in Chat](https://i.imgur.com/nC3Sur9.png)
+![Roll Request in Chat](readme-imgs/heartrollrequestchatmsg.png)
 
 ### Rolls
 
@@ -44,18 +48,14 @@ This is a typical "Heart" `1d10` roll. Rolls can be made with the following:
 * "Roll" button in chat message
 * "Prepare Roll" Macro
 
-As before, this will open a new window. Depending on the source, we might not need to fill in the difficulty setting. From the macro, we see:
+As before, this will open a new window. 
 
-![Without a predefined difficulty value](https://i.imgur.com/g7YBPQd.png)
-
-But from the chat message, we have:
-
-![With a predefined difficulty value](https://i.imgur.com/lFaXD5M.png)
+![Prepare roll](readme-imgs/heartblankroll.png)
 
 Again, this might result in chat messages like:
 
-![Success roll](https://i.imgur.com/cGZjSqZ.png)
-![Failure roll](https://i.imgur.com/dwtGFPA.png)
+![Success roll](readme-imgs/heartrollsuccess.png)
+![Failure roll](readme-imgs/heartrollfailure.png)
 
 ### Stress
 
@@ -68,11 +68,18 @@ Stress rolls can be made with the following:
 
 From the macro:
 
-![Prepare stress roll](https://i.imgur.com/0NzCkBf.png)
+![Prepare stress roll](readme-imgs/heartstressroll.png)
+
+From chat:
+![Stress Roll button](readme-imgs/heartfailurestressrollbutton.png)
 
 which might result in:
 
-![Stress chat message](https://i.imgur.com/ZZ1rZhJ.png)
+![Stress chat message](readme-imgs/heartstressresult.png)
+
+You can then "Take Stress" by clicking the new button. This applies the stress to the character's appropriate resistance.
+
+![Take Stress button](readme-imgs/hearttakestressbutton.png)
 
 ### Fallout
 
@@ -82,7 +89,11 @@ We also can manage fallout rolls. Stress rolls can be made with the following:
 
 An example chat message as a result:
 
-![Fallout Chat Message](https://i.imgur.com/DsW0Xvz.png)
+![Fallout Chat Message](readme-imgs/heartrollfallout.png)
+
+You will get a result and an accompanying button to clear the appropriate stress:
+
+![Fallout Result Message](readme-imgs/heartfalloutresult.png)
 
 ## Translations
 
@@ -134,8 +145,8 @@ If everything is setup correctly this will create a symlink from this directory'
 - [x] Add a fallout roller
 - [x] Cleanup translation file
 - [x] Cleanup CSS file
-- [ ] Add ChatMessage buttons to clear stress when receiving fallout
+- [x] Add ChatMessage buttons to clear stress when receiving fallout
 - [x] Make "class" and "calling" items
-- [ ] Look into making class and calling packs
+- [x] Look into making class and calling packs
 - [x] Add editable tags to taggables (resources, equipment etc)
 - [x] Add ability to include and control the minor abilities defined inside Major Abilities.
