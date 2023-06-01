@@ -27,6 +27,15 @@
             </label>
             <input type="checkbox" value="system.complete" {{checked system.complete}}/>
         {{/if}}
+
+        {{#if (eq type "beat")}}
+            <label>
+                Level
+            </label>
+            <select name="system.type">
+                {{selectOptions beat_levels selected=system.type}}
+            </select>
+        {{/if}}
     {{/if}}
     </div>
 

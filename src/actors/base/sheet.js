@@ -57,7 +57,7 @@ export default class HeartActorSheet extends HeartSheetMixin(ActorSheet) {
         html.find('[data-action=delete]').click(async ev => {
             const uuid = $(ev.currentTarget).closest('[data-item-id]').data('itemId');
             const item = await fromUuid(uuid);
-            item.deleteDialog();
+            await item.deleteDialog();
         });
 
         html.find('[data-action=item-roll]').click(async ev => {
