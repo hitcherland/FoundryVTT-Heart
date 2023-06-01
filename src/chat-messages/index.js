@@ -88,7 +88,7 @@ class HeartChatMessage extends ChatMessage {
             return false;
         }
         if (showFalloutRollButton === undefined) {
-            return true
+            return true;
         } else {
             return Boolean(showFalloutRollButton);
         }
@@ -96,6 +96,23 @@ class HeartChatMessage extends ChatMessage {
 
     set showFalloutRollButton(value) {
         return this.setFlag('heart', 'show-fallout-roll-button', value);
+    }
+
+    get showClearStressButton() {
+      const showClearStressButton = this.getFlag('heart', 'show-clear-stress-button')
+      if (this.falloutRoll !== undefined) {
+        if (showClearStressButton === undefined) {
+          return this.falloutRoll.result == 'no-fallout' ? false : true;
+        } else {
+            return Boolean(showClearStressButton);
+        }
+      }
+      return false;
+      
+    }
+
+    set showClearStressButton(value) {
+      return this.setFlag('heart', 'show-clear-stress-button', value);
     }
 
     async getHTML() {
@@ -107,20 +124,29 @@ class HeartChatMessage extends ChatMessage {
                 showStressRollButton: this.showStressRollButton,
                 showTakeStressButton: this.showTakeStressButton,
                 showFalloutRollButton: this.showFalloutRollButton,
+                showClearStressButton: this.showClearStressButton,
             });
             html.find('.message-content').find('.dice-roll').html(
                 $(content).children()
             );
 
             if (this.stressRoll && this.stressRoll !== this.rolls[0]) {
-                const stressContent = await this.stressRoll.render({ isPrivate: false, showTakeStressButton: this.showTakeStressButton, showFalloutRollButton: this.showFalloutRollButton });
+                const stressContent = await this.stressRoll.render({
+                  isPrivate: false,
+                  showTakeStressButton: this.showTakeStressButton,
+                  showFalloutRollButton: this.showFalloutRollButton,
+                  showClearStressButton: this.showClearStressButton,
+                });
                 html.append(
                     $('<div class="message-content"></div>').append(stressContent)
                 );
             }
 
             if (this.falloutRoll && this.falloutRoll !== this.rolls[0]) {
-                const falloutContent = await this.falloutRoll.render({ isPrivate: false });
+                const falloutContent = await this.falloutRoll.render({
+                  isPrivate: false,
+                  showClearStressButton: this.showClearStressButton,
+                });
                 html.append(
                     $('<div class="message-content"></div>').append(falloutContent)
                 );

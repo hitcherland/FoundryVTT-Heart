@@ -1,6 +1,11 @@
 {
     "fallout": {
         "label-single": "Consecuencia",
-        "label-multiple": "Consecuencias"
+        "label-multiple": "Consecuencias",
+        "level": {
+            "minor": "Menor",
+            "major": "Importante",
+            "critical": "Crítico"
+        }
     }
 }
