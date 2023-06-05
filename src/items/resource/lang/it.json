@@ -1,6 +1,6 @@
 {
-  "resource": {
-            "label-single": "Risorsa",
-            "label-multiple": "Risorse"
-        },
+    "resource": {
+        "label-single": "Risorsa",
+        "label-multiple": "Risorse"
+    }
 }
