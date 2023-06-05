@@ -9,10 +9,10 @@ const config = require('./foundryvtt.config.js');
 const TerserPlugin = require('terser-webpack-plugin');
 
 // auto calculated values
-const { type, name } = config;
+const { type, id } = config;
 const distPath = path.resolve(__dirname, 'dist');
 const packDataPath = path.resolve(__dirname, 'pack-data');
-const publicPath = `/${type}s/${name}/`;
+const publicPath = `/${type}s/${id}/`;
 
 const packs = [];
 
@@ -21,7 +21,7 @@ function transformManifest(content) {
     const manifest = JSON.parse(content);
 
     // Required 
-    manifest.name = config.name;
+    manifest.id = config.id;
     manifest.title = config.title;
     manifest.description = config.description;
     manifest.version = config.version;
@@ -31,7 +31,7 @@ function transformManifest(content) {
     manifest.packs.push(...packs)
 
     // Optional
-    if (manifest.esmodules === undefined) manifest.esmodules = [`${name}.js`];
+    if (manifest.esmodules === undefined) manifest.esmodules = [`${id}.js`];
 
     const githubRepo = config.githubRepo;
     const githubBranch = config.githubBranch;
@@ -51,7 +51,7 @@ module.exports = {
     entry: './src/index.js',
     output: {
         path: distPath,
-        filename: `${name}.js`,
+        filename: `${id}.js`,
         clean: true,
         publicPath: publicPath,
     },
@@ -70,7 +70,7 @@ module.exports = {
                 use: {
                     loader: path.resolve('dev-utils', 'templates-loader.js'),
                     options: {
-                        name
+                        name: id
                     }
                 }
             },
@@ -115,7 +115,7 @@ module.exports = {
         writeToDisk: true
     },
     plugins: [
-        new FoundryVTTTranslationMerger(name, distPath),
+        new FoundryVTTTranslationMerger(id, distPath),
         new CopyPlugin({
             patterns: [
                 {
@@ -139,7 +139,7 @@ module.exports = {
                 },
             ],
         }),
-        new FoundryVTTSymlinkPlugin(name, type, distPath, config.foundryvttPath),
+        new FoundryVTTSymlinkPlugin(id, type, distPath, config.foundryvttPath),
         new FoundryVTTPacker(distPath, packDataPath, packs),
         new FoundryVTTTemplateMerger(distPath),
     ],

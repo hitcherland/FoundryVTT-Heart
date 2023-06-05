@@ -1,6 +1,6 @@
 module.exports = {
     type: 'system',
-    name: 'heart',
+    id: 'heart',
     version: '0.8.2',
     authors: ['hitcherland'],
     title: 'Heart - The City Beneath',
