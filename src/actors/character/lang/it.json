@@ -1,0 +1,24 @@
+{
+    "character": {
+        "name": "Nome",
+        "class": "Classe",
+        "calling": "Richiamo",
+        "notes": "Note",
+        "inactive-items": "Oggetti inattivi",
+        "inactive-items-description": "Qui troverai gli oggetti aggiunti alla scheda del personaggio, ma marcati come inattivi"
+    },
+    "resistance": {
+        "label-single": "Resistenza",
+        "label-multiple": "Resistenze",
+        "protection": {
+            "label-single": "Protezione",
+            "label-multiple": "Protezioni"
+        },
+           "blood": "Sangue",
+    "mind": "Mente",
+    "echo": "Eco",
+    "fortune": "Fortuna",
+    "supplies": "Risorse"
+    }
+}
+

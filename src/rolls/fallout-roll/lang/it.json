@@ -1,0 +1,14 @@
+{
+    "rolls": {
+        "fallout-roll": {
+                "label": "Tiro complicazione",
+                "action": "Tira complicazione",
+                "description(totalStress)": "Tira complicazione con {totalStress} Stress",
+                "results": {
+                    "no-fallout": "Nessuna complicazione",
+                    "minor-fallout": "Complicazione minore",
+                    "major-fallout": "Complicazione moderata"
+                }
+            }
+    }
+}

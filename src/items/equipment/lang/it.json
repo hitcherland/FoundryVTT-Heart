@@ -1,0 +1,14 @@
+{
+    "equipment": {
+   "label-single": "Equipaggiamento",
+            "label-multiple": "Equipaggiamenti",
+        "type": {
+             "label-single": "Tipo",
+                "label-multiple": "Tipi",
+                "miscellaneous": "Vario",
+                "delve": "Esplorare",
+                "kill": "Uccidere",
+                "mend": "Riparare"
+        }
+    }
+}
