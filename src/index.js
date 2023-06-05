@@ -210,8 +210,8 @@ Hooks.once('ready', function () {
     new Promise(async function () {
         if (game.settings.get('heart', 'showStartupMessage')) {
             let d = new Dialog({
-                title: game.i18n.format("heart.dialog.title(VERSION)", { VERSION: game.system.data.version }),
-                content: await renderTemplate('heart:templates/startup.html', { versions: Object.values(game.i18n.translations.heart.versions).sort((a, b) => a.version > b.version ? -1 : 1), version: game.system.data.version }),
+                title: game.i18n.format("heart.dialog.title(VERSION)", { VERSION: game.system.version }),
+                content: await renderTemplate('heart:templates/startup.html', { versions: Object.values(game.i18n.translations.heart.versions).sort((a, b) => a.version > b.version ? -1 : 1), version: game.system.version }),
                 buttons: {
                     close: {
                         icon: '<i class="fas fa-times"></i>',
@@ -226,7 +226,7 @@ Hooks.once('ready', function () {
                 },
                 default: "skip",
                 render: html => {
-                    const tabs = new Tabs({ navSelector: ".tabs", contentSelector: ".content", initial: `v${game.system.data.version}` });
+                    const tabs = new Tabs({ navSelector: ".tabs", contentSelector: ".content", initial: `v${game.system.version}` });
                     tabs.bind(html[0]);
                 },
                 close: html => { }
