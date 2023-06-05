@@ -1,310 +1,448 @@
 {
     "heart": {
-        "heart": {
-            "adversary": {
-                "label-single": "Avversario",
-                "label-multiple": "Avversari",
-                "name": "Nome",
-                "resistanceMax": "Resistenza massima",
-                "difficulty": "Difficoltà",
-                "descriptors": "Descrittori",
-                "motivation": "Motivazione",
-                "special": "Speciale",
-                "notes": "Note",
-                "inactive-items": "Oggetti inattivi",
-                "inactive-items-description": "Qui troverai gli oggetti aggiunti alla scheda dell'avversario, ma marcati come inattivi"
-            },
-            "resistance": {
-                "label-single": "Resistenza",
-                "label-multiple": "Resistenze",
-                "protection": {
-                    "label-single": "Protezione",
-                    "label-multiple": "Protezioni"
-                },
-                "blood": "Sangue",
-                "mind": "Mente",
-                "echo": "Eco",
-                "fortune": "Fortuna",
-                "supplies": "Risorse"
-            },
+        "tag": {
+            "awkward.name": "Scomodo",
+            "awkward.description": "La risorsa è pesante o difficile da trasportare.",
+            "beacon.name": "Faro",
+            "beacon.description": "La risorsa attrae qualcosa di pericoloso verso la sua posizione.",
+            "block.name": "Blocco",
+            "block.description": "Ottieni Protezione +1 su Sangue.",
+            "bloodbound.name": "Legame di sangue",
+            "bloodbound.description": "Subisci D4 Stress su Sangue per lanciare con Maestria quando usi questo oggetto per il resto della scena.",
+            "brutal.name": "Brutale",
+            "brutal.description": "Quando lanci per infliggere Stress contro un avversario con questo oggetto, lancia due dadi e scegli il risultato più alto. Gli Attributi Brutale sono cumulabili: se hai tre Attributi Brutale, ad esempio, lancerai quattro dadi e sceglierai il più alto per determinare quanto Stress infliggi",
+            "conduit.name": "Tramite",
+            "conduit.description": "Subisci D4 Stress su Mente per lanciare con Maestria quando usi questo oggetto per il resto della scena.",
+            "dangerous.name": "Pericoloso",
+            "dangerous.description": "Quando infliggi Stresscon questo oggetto e ottieni il risultato massimo, subisci D6 Stress su Sangue.",
+            "debilitating.name": "Debilitante",
+            "debilitating.description": "Una volta per scena, quando infliggi Stress con questo oggetto a uno o più bersagli, nel tuo prossimo attacco effettuato contro di loro lancia con Maestria.",
+            "degenerating.name": "Degenerante",
+            "degenerating.description": "Se subisci danni daun’arma con questo Attributo, alla fine della scena fai una prova di Resistere +[Dominio]. Se fallisci, subisci D6 Stress; se ottieni un successo condizionato, subisci D4 Stress; se hai successo, non subisci Stress",
+            "deteriorating.name": "Deteriorato",
+            "deteriorating.description": "La risorsa sta marcendo, arrugginendo o sta per rompersi. Devi trovare quanto prima un nuovo proprietario a cui piazzarla.",
+            "distressing.name": "Angoscia",
+            "distressing.description": "Quando infliggi Stress conquesto oggetto e ottieni il risultato massimo,subisci D6 Stress su Mente.",
+            "double_barreled.name": "Doppia canna",
+            "double_barreled.description": "Funziona come Ricarica, ma puoi usare l’oggetto due volte prima di ricaricare.",
+            "expensive.name": "Costoso",
+            "expensive.description": "Quando infliggi Stress con questo oggetto e ottieni il risultato massimo, subisci D6 Stress su Risorse.",
+            "extreme_range.name": "A lunga distanza",
+            "extreme_range.description": "Questo oggetto può essere usato da una lunga distanza.",
+            "fragile.name": "Fragile",
+            "fragile.description": "La risorsa viene distrutta se cade o subisce un colpo.",
+            "harmful.name": "Nocivo",
+            "harmful.description": "La risorsa ha la capacità di danneggiare coloroche la trasportano tramite magia nera, malattie o strane energie.",
+            "limited(X).name": "Limite ${X}",
+            "limited(X).description": "Puoi usare questo oggetto ${X} volte prima che si esaurisca o diventi inutilizzabile.",
+            "loud.name": "Rumoroso",
+            "loud.description": "Quando infliggi Stress con questo oggetto e ottieni il risultato massimo, subisci D6 Stress su Fortuna.",
+            "mobile.name": "Mobile",
+            "mobile.description": "La risorsa si allontanerà di sua volontà, se lasciata incustodita.",
+            "niche.name": "Nicchia",
+            "niche.description": "La risorsa è preziosa solo per un gruppo di persone molto selezionato.",
+            "obscuring.name": "Oscurante",
+            "obscuring.description": "Il portatore dell’oggetto e tutti i suoi compagni vicini riducono di un livello il dado dello Stress del danno inflitto o ricevuto da armi a distanza.",
+            "one_shot.name": "Colpo singolo",
+            "one_shot.description": "Questo oggetto richiede molto tempo per la sua preparazione o ricarica, quindi puoi usarlo solo una volta per scena",
+            "piercing.name": "Perforante",
+            "piercing.description": "Lo Stress inflitto da questo equipaggiamento non può essere ridotto usando Protezioni su Sangue e neanche i nemici possono utilizzare il loro valore di Protezione.",
+            "point_blank.name": "Bruciapelo",
+            "point_blank.description": "Funziona come A Distanza, ma se usato a distanza molto ravvicinata aumenta di un livello il dado dello Stress. Se il colpo sparato da questo oggetto va troppo lontano e inizia a indebolirsi, riduci invece di un livello il dado dello Stress.",
+            "potent.name": "Potente",
+            "potent.description": "Quando lanci per rimuovere Stress da te stesso o da un compagno utilizzando questo oggetto, lancia due dadi e scegli il risultato più alto. Gli Attributi Potente sono cumulabili, come avviene con gli Attributi Brutale",
+            "ranged.name": "A distanza",
+            "ranged.description": "Questo oggetto può essereutilizzato a distanza.",
+            "reload.name": "Ricarica",
+            "reload.description": "Questo equipaggiamento deve essere ricaricato tra un uso e l’altro, dando ai nemici la possibilità di avvicinarsi fuggire.",
+            "smoke.name": "Fumante",
+            "smoke.description": "Funziona come l’Attributo Oscurante, ma solo quando l’oggetto viene utilizzato e solo nell’area in cui è stato utilizzato.",
+            "spread.name": "Danno diffuso",
+            "spread.description": "Chiunque si trovi vicino al bersaglio dell’oggetto con questoAttributo, deve superare una prova di Sfuggire + [Dominio] (o usare un’altra Abilità adeguata invece di Sfuggire) per evitare di subire Stress. In caso di successo condizionato, il dado dello Stress ricevuto si riduce di un livello. I PNG coinvolti subiscono sempre lo Stress.",
+            "taboo.name": "Tabù",
+            "taboo.description": "La risorsa non è accettata per il baratto nella maggiorparte dei covi (ad esempio organi di persone Sanguedi Cuore, denti d’oro o determinati narcotici).",
+            "tiring.name": "Stancante",
+            "tiring.description": "Quando fallisci un’azione usando questo quipaggiamento, il dado dello Stress inflitto o curato da questo oggetto si riduce di un livello per il resto della scena.",
+            "trusty.name": "Affidabile",
+            "trusty.description": "Quando lanci per infliggere Stress su una Spedizione, lancia due dadi e scegli il risultato più alto. Gli Attributi Affidabile sono cumulabili, come avviene con gli Attributi Brutale.",
+            "unreliable.name": "Inaffidabile",
+            "unreliable.description": "Quando fallisci un’azioneutilizzando questo oggetto, essonon può essere più utilizzato per il restodella scena se ti trovi in un Luogo Noto o per il resto del viaggio se ti trovi in una Spedizione.",
+            "volatile.name": "Volatile",
+            "volatile.description": "La risorsa può esplodere, distruggersi o diventareinutilizzabile se tenuta senza cura.",
+            "wyrd.name": "Fato",
+            "wyrd.description": "Quando infliggi Stress con questooggetto e ottieni il risultato massimo,subisci D6 Stress su Eco.",
+            "label-single": "Attributo",
+            "label-multiple": "Attributi",
+            "add": "Aggiungi attributo"
+        },
+        "adversary": {
+            "label-single": "Avversario",
+            "label-multiple": "Avversari",
+            "name": "Nome",
+            "resistanceMax": "Resistenza massima",
+            "difficulty": "Difficoltà",
+            "descriptors": "Descrittori",
+            "motivation": "Motivazione",
+            "special": "Speciale",
+            "notes": "Note",
+            "inactive-items": "Oggetti inattivi",
+            "inactive-items-description": "Qui troverai gli oggetti aggiunti alla scheda dell'avversario, ma marcati come inattivi"
+        },
+        "resistance": {
+            "label-single": "Resistenza",
+            "label-multiple": "Resistenze",
             "protection": {
                 "label-single": "Protezione",
                 "label-multiple": "Protezioni"
             },
-            "character": {
-                "name": "Nome",
-                "class": "Classe",
-                "calling": "Richiamo",
-                "notes": "Note",
-                "inactive-items": "Oggetti inattivi",
-                "inactive-items-description": "Qui troverai gli oggetti aggiunti alla scheda del personaggio, ma marcati come inattivi",
-                "label-single": "Personaggio",
-                "label-multiple": "Personaggi",
-                "label-helpers": "Aiuti",
-                "label-valid-helpers": "Personaggi che potrebbero aiutare"
-            },
-            "delve": {
-                "label-single": "Spedizione",
-                "label-multiple": "Spedizioni",
-                "name": "Nome",
-                "resistance": "Resistenza",
-                "defaultStress": "Stress",
-                "description": "Descrizione",
-                "domain": {
-                    "label-single": "Dominio",
-                    "label-multiple": "Domini"
-                },
-                "connection": "Connessioni",
-                "tier": "Livello",
-                "notes": "Note",
-                "inactive-items": "Oggetti inattivi",
-                "inactive-items-description": "Qui troverai gli oggetti aggiunti alla scheda dellam spedizione, ma marcati come inattivi"
-            },
-            "landmark": {
-                "label-single": "Luoghi noti",
-                "label-multiple": "Luogo noto",
-                "name": "Nome",
-                "defaultStress": "Stress",
-                "description": "Descrizione",
-                "domain": {
-                    "label-single": "Dominio",
-                    "label-multiple": "Domini"
-                },
-                "tier": "Livello",
-                "specialRule": {
-                    "label-single": "Regola speciale",
-                    "label-multiple": "Regole speciali"
-                },
-                "potentialPlot": {
-                    "label-single": "Spunto narrativo",
-                    "label-multiple": "Spunti narrativi"
-                },
-                "inactive-items": "Oggetti inattivi",
-                "inactive-items-description": "Qui troverai gli oggetti aggiunti alla scheda del luogo, ma marcati come inattivi"
-            },
-            "applications": {
-                "prepare-roll-request": {
-                    "title": "Richiedi un tiro",
-                    "description": "Scegli la difficoltà, quali personaggi possono tirare e aiutare, e quali abilità e domini possono usare. Poi manda un messaggio in chat con la richiesta."
-                },
-                "requirement": {
-                    "title": "Più informazioni"
-                },
-                "prepare-fallout-roll": {
-                    "title": "Richiedi un tiro di complicazione",
-                    "description": "Scegli un personaggio con cui tirare complicazione"
-                },
-                "prepare-roll": {
-                    "title": "Prepara un tiro",
-                    "description": "Scegli la difficoltà, il personaggio con cui tirare e i vari modficatori, poi tira."
-                },
-                "prepare-stress-roll": {
-                    "title": "Prepara un tiro di stress",
-                    "description": "Scegli un personaggio, il tipo di risultato, la taglia del dado e la resistenza cn cui tirare."
-                },
-                "take-stress": {
-                    "description": "Scegli la resistenza su cui prendre stress."
-                }
-            },
-            "ability": {
-                "label-single": "Competenza",
-                "label-multiple": "Competenze",
-                "add-child-ability": "Aggiungi competenza ereditaria",
-                "type": {
-                    "minor": "Minore",
-                    "major": "Maggiore",
-                    "zenith": "Zenith"
-                }
-            },
-            "base": {
-                "label-single": "Base",
-                "label-multiple": "Basi",
-                "open-parent": "Apri superiore",
-                "activate": "Attiva",
-                "deactivate": "Disattiva",
-                "complete": "Completa",
-                "uncomplete": "Non completa",
-                "delete": "Cancella",
-                "view": "Apri scheda",
-                "is-active": "É attiva?",
-                "is-complete": "É Completa?"
-            },
-            "beat": {
-                "label-single": "Battito",
-                "label-multiple": "Battiti",
-                "add": "Aggiungi battito",
-                "activate": "Attivo",
-                "complete": "Completo",
-                "active": {
-                    "label-single": "Battito attivo",
-                    "label-multiple": "Battiti attivi"
-                },
-                "minor-beat": {
-                    "label-single": "Battito minore",
-                    "label-multiple": "Battiti minori",
-                    "add": "Aggiungi battito minore"
-                },
-                "major-beat": {
-                    "label-single": "Battito maggiore",
-                    "label-multiple": "Battiti maggiore",
-                    "add": "Aggiungi battito maggiore"
-                },
-                "zenith-beat": {
-                    "label-single": "Battito zenith",
-                    "label-multiple": "Battiti zenith",
-                    "add": "Aggiungi battito zenith"
-                }
-            },
-            "equipment": {
-                "label-single": "Equipaggiamento",
-                "label-multiple": "Equipaggiamenti",
-                "type": {
-                    "label-single": "Tipo",
-                    "label-multiple": "Tipi",
-                    "miscellaneous": "Vario",
-                    "delve": "Per esplorare",
-                    "kill": "Per uccidere",
-                    "mend": "Per riparare"
-                }
-            },
-            "haunt": {
-                "label-single": "Covo",
-                "label-multiple": "Covi",
-                "upgrade": "Potenzia",
-                "downgrade": "Danneggia",
-                "service": {
-                    "label-single": "Servizio",
-                    "label-multiple": "Servizi"
-                },
-                "upgradeTrack": {
-                    "label-single": "Percorso di potenziamento"
-                }
-            },
-            "resource": {
-                "label-single": "Risorsa",
-                "label-multiple": "Risorse"
-            },
-            "roll": "Tira",
-            "cancel": "Annulla",
-            "help": "Aiuto",
-            "none": "N/A",
-            "die_size": {
-                "label-single": "Taglia del dado",
-                "label-multiple": "Taglai dei dadi",
-                "d(N)": "D{N}"
-            },
-            "skill": {
-                "label-single": "Abilità",
-                "label-multiple": "Abilità",
-                "knack": {
-                    "label-single": "Talento",
-                    "label-multiple": "Talenti"
-                },
-                "compel": "Indurre",
-                "delve": "Esporare",
-                "discern": "Percepire",
-                "endure": "Resistere",
-                "evade": "Sfuggire",
-                "hunt": "Cacciare",
-                "kill": "Uccidere",
-                "mend": "Riparare",
-                "sneak": "Nascondere"
-            },
+            "blood": "Sangue",
+            "mind": "Mente",
+            "echo": "Eco",
+            "fortune": "Fortuna",
+            "supplies": "Risorse"
+        },
+        "protection": {
+            "label-single": "Protezione",
+            "label-multiple": "Protezioni"
+        },
+        "character": {
+            "name": "Nome",
+            "class": "Classe",
+            "calling": "Richiamo",
+            "notes": "Note",
+            "inactive-items": "Oggetti inattivi",
+            "inactive-items-description": "Qui troverai gli oggetti aggiunti alla scheda del personaggio, ma marcati come inattivi",
+            "label-single": "Personaggio",
+            "label-multiple": "Personaggi",
+            "label-helpers": "Aiuti",
+            "label-valid-helpers": "Personaggi che possono aiutare"
+        },
+        "delve": {
+            "label-single": "Spedizione",
+            "label-multiple": "Spedizioni",
+            "name": "Nome",
+            "resistance": "Resistenza",
+            "defaultStress": "Stress",
+            "description": "Descrizione",
             "domain": {
                 "label-single": "Dominio",
-                "label-multiple": "Domini",
-                "knack": {
-                    "label-single": "Talento",
-                    "label-multiple": "Talenti"
-                },
-                "cursed": "Maledizione",
-                "desolate": "Desolazione",
-                "haven": "Rifugio",
-                "occult": "Occulto",
-                "religion": "Religione",
-                "technology": "Tecnologia",
-                "warren": "Labirinto",
-                "wild": "Selvaggio"
+                "label-multiple": "Domini"
             },
-            "mastery": {
-                "label": "Tira con maetria",
-                "short": "Maestria",
-                "label-single": "Maestria",
-                "label-multiple": "Maestrie"
+            "connection": "Connessioni",
+            "tier": "Livello",
+            "notes": "Note",
+            "inactive-items": "Oggetti inattivi",
+            "inactive-items-description": "Qui troverai gli oggetti aggiunti alla scheda dellam spedizione, ma marcati come inattivi"
+        },
+        "landmark": {
+            "label-single": "Luoghi noti",
+            "label-multiple": "Luogo noto",
+            "name": "Nome",
+            "defaultStress": "Stress",
+            "description": "Descrizione",
+            "domain": {
+                "label-single": "Dominio",
+                "label-multiple": "Domini"
             },
-            "helper": {
-                "label-single": "Aiuto",
-                "label-multipler": "Aiuti"
+            "tier": "Livello",
+            "specialRule": {
+                "label-single": "Regola speciale",
+                "label-multiple": "Regole speciali"
             },
-            "rolls": {
-                "roll-request": {
-                    "label": "Richiesta di tiro"
-                },
-                "fallout-roll": {
-                    "label": "Tiro complicazione",
-                    "action": "Tira complicazione",
-                    "description(totalStress)": "Tira complicazione con {totalStress} Stress",
-                    "results": {
-                        "no-fallout": "Nessuna complicazione",
-                        "minor-fallout": "Complicazione minore",
-                        "major-fallout": "Complicazione maggiore"
-                    }
-                },
-                "roll": {
-                    "label": "Tiro",
-                    "action": "tira",
-                    "base": "Base",
-                    "description(difficulty,count)": "Tiro {difficulty} con {count} dadi"
-                },
-                "stress-roll": {
-                    "label": "Tiro di stress",
-                    "action": "Tira stress",
-                    "take-stress": "Prendi stress",
-                    "prepare": "Prepara un tiro di stress",
-                    "description(die_size)": "{die_size} tiro di stress"
+            "potentialPlot": {
+                "label-single": "Spunto di trama",
+                "label-multiple": "Spunti di trama"
+            },
+            "inactive-items": "Oggetti inattivi",
+            "inactive-items-description": "Qui troverai gli oggetti aggiunti alla scheda del luogo, ma marcati come inattivi"
+        },
+        "applications": {
+            "prepare-roll-request": {
+                "title": "Richiedi un tiro",
+                "description": "Scegli la difficoltà, quali personaggi possono tirare e aiutare, e quali abilità e domini possono usare. Poi manda un messaggio in chat con la richiesta."
+            },
+            "requirement": {
+                "title": "Più informazioni"
+            },
+            "prepare-fallout-roll": {
+                "title": "Richiedi un tiro di complicazione",
+                "description": "Scegli un personaggio con cui tirare complicazione"
+            },
+            "prepare-roll": {
+                "title": "Prepara un tiro",
+                "description": "Scegli la difficoltà, il personaggio con cui tirare e i vari modificatori, poi tira."
+            },
+            "prepare-stress-roll": {
+                "title": "Prepara un tiro di stress",
+                "description": "Scegli un personaggio, il tipo di risultato, la taglia del dado e la resistenza con cui tirare."
+            },
+            "take-stress": {
+                "description": "Scegli la resistenza su cui prendere stress."
+            }
+        },
+        "ability": {
+            "label-single": "Competenza",
+            "label-multiple": "Competenze",
+            "add-child-ability": "Aggiungi avanzamento",
+            "type": {
+                "minor": "Minore",
+                "major": "Moderata",
+                "zenith": "Zenit"
+            }
+        },
+        "base": {
+            "label-single": "Base",
+            "label-multiple": "Basi",
+            "open-parent": "Apri superiore",
+            "activate": "Attiva",
+            "deactivate": "Disattiva",
+            "complete": "Completa",
+            "uncomplete": "Non completa",
+            "delete": "Cancella",
+            "view": "Apri scheda",
+            "is-active": "É attiva?",
+            "is-complete": "É Completa?"
+        },
+        "beat": {
+            "label-single": "Battito",
+            "label-multiple": "Battiti",
+            "add": "Aggiungi battito",
+            "activate": "Attivo",
+            "complete": "Completo",
+            "active": {
+                "label-single": "Battito attivo",
+                "label-multiple": "Battiti attivi"
+            },
+            "minor-beat": {
+                "label-single": "Battito minore",
+                "label-multiple": "Battiti minori",
+                "add": "Aggiungi battito minore"
+            },
+            "major-beat": {
+                "label-single": "Battito moderato",
+                "label-multiple": "Battiti moderati",
+                "add": "Aggiungi battito moderato"
+            },
+            "zenith-beat": {
+                "label-single": "Battito zenit",
+                "label-multiple": "Battiti zenit",
+                "add": "Aggiungi battito zenit"
+            }
+        },
+        "calling": {
+            "label-single": "Richiamo",
+            "label-multiple": "Richiami",
+            "questions": {
+                "prompt": "Quando crei il personaggio, rispondi a queste domande:",
+                "add": "Aggiungi domanda",
+                "delete": "Cancella"
+            },
+            "core-ability": {
+                "label-single": "Competenza di base",
+                "label-multiple": "Competenze di base",
+                "add": "Aggiungi competenza di base",
+                "delete": "Cancella"
+            }
+        },
+        "class": {
+            "label-single": "Classe",
+            "label-multiple": "Classi",
+            "questions": {
+                "prompt": "Quando crei il personaggio, rispondi a queste domande:",
+                "add": "Aggiungi domanda",
+                "delete": "Cancella"
+            },
+            "core-traits": {
+                "label-single": "Tratto principale",
+                "label-multiple": "Tratti principali",
+                "add": "Aggiungi tratto principale",
+                "delete": "Cancella"
+            },
+            "core-ability": {
+                "label-single": "Competenza di base",
+                "label-multiple": "Competenze di base",
+                "add": "Aggiungi competenza di base",
+                "delete": "Cancella"
+            },
+            "minor-ability": {
+                "label-single": "Competenza minore",
+                "label-multiple": "Competenze minori",
+                "add": "Aggiungi competenze minori",
+                "delete": "Cancella"
+            },
+            "major-ability": {
+                "label-single": "Competenza moderata",
+                "label-multiple": "Competenze moderate",
+                "add": "Aggiungi competenze moderata",
+                "delete": "Cancella"
+            },
+            "zenith-ability": {
+                "label-single": "Competenza zenit",
+                "label-multiple": "Competenze zenit",
+                "add": "Aggiungi competenze zenit",
+                "delete": "Cancella"
+            },
+            "resource": {
+                "add": "Aggiungi una risorsa di classe",
+                "delete": "Cancella"
+            },
+            "equipment": {
+                "pick-one": "Scegli uno",
+                "add": "Aggiungi un equipaggiamento d classe",
+                "delete": "Cancella",
+                "add-group": "Aggiungi un gruppo di equipaggiamenti",
+                "delete-group": "Cancella gruppo"
+            }
+        },
+        "equipment": {
+            "label-single": "Equipaggiamento",
+            "label-multiple": "Equipaggiamenti",
+            "type": {
+                "label-single": "Tipo",
+                "label-multiple": "Tipi",
+                "miscellaneous": "Vario",
+                "delve": "Esplorare",
+                "kill": "Uccidere",
+                "mend": "Riparare"
+            }
+        },
+        "fallout": {
+            "label-single": "Complicazione",
+            "label-multiple": "Complicazioni"
+        },
+        "haunt": {
+            "label-single": "Covo",
+            "label-multiple": "Covi",
+            "upgrade": "Potenzia",
+            "downgrade": "Danneggia",
+            "service": {
+                "label-single": "Servizio",
+                "label-multiple": "Servizi"
+            },
+            "upgradeTrack": {
+                "label-single": "Percorso di potenziamento"
+            }
+        },
+        "resource": {
+            "label-single": "Risorsa",
+            "label-multiple": "Risorse"
+        },
+        "roll": "Tira",
+        "cancel": "Annulla",
+        "help": "Aiuto",
+        "none": "N/A",
+        "die_size": {
+            "label-single": "Taglia del dado",
+            "label-multiple": "Taglia dei dadi",
+            "d(N)": "D{N}"
+        },
+        "skill": {
+            "label-single": "Abilità",
+            "label-multiple": "Abilità",
+            "knack": {
+                "label-single": "Talento",
+                "label-multiple": "Talenti"
+            },
+            "compel": "Indurre",
+            "delve": "Esporare",
+            "discern": "Percepire",
+            "endure": "Resistere",
+            "evade": "Sfuggire",
+            "hunt": "Cacciare",
+            "kill": "Uccidere",
+            "mend": "Riparare",
+            "sneak": "Nascondere"
+        },
+        "domain": {
+            "label-single": "Dominio",
+            "label-multiple": "Domini",
+            "knack": {
+                "label-single": "Talento",
+                "label-multiple": "Talenti"
+            },
+            "cursed": "Maledizione",
+            "desolate": "Desolazione",
+            "haven": "Rifugio",
+            "occult": "Occulto",
+            "religion": "Religione",
+            "technology": "Tecnologia",
+            "warren": "Labirinto",
+            "wild": "Selvaggio"
+        },
+        "mastery": {
+            "label": "Tira con maestria",
+            "short": "Maestria",
+            "label-single": "Maestria",
+            "label-multiple": "Maestrie"
+        },
+        "helper": {
+            "label-single": "Aiuto",
+            "label-multipler": "Aiuti"
+        },
+        "rolls": {
+            "roll-request": {
+                "label": "Richiesta di tiro"
+            },
+            "fallout-roll": {
+                "label": "Tiro complicazione",
+                "action": "Tira complicazione",
+                "description(totalStress)": "Tira complicazione con {totalStress} Stress",
+                "results": {
+                    "no-fallout": "Nessuna complicazione",
+                    "minor-fallout": "Complicazione minore",
+                    "major-fallout": "Complicazione moderata"
                 }
             },
-            "dialog": {
-                "skip": "Chiudi",
-                "dont-show-again": "Non mostrarla più",
-                "title(VERSION)": "Heart - The City Beneath (v{VERSION})",
-                "content(VERSION)": "<h1>Welcome to Heart v{VERSION}</h1><h2>A Quick Intro</h2><p><b>Players</b>: you can make rolls from Chat when requested, or directly from your character sheet. Your GM will provide you with class/callings which you can drag & drop onto your sheet.</p><p><b>GMs:</b> the 'Prepare Rollout Request' macro will help your players make rolls more easily. You'll need to create classes and callings for your players by hand, but it should be more or less intuitive how to do this.</p>"
+            "roll": {
+                "label": "Tiro",
+                "action": "tira",
+                "base": "Base",
+                "description(difficulty,count)": "Tiro {difficulty} con {count} dadi"
             },
-            "fallout": {
-                "label-single": "Complicazione",
-                "label-multiple": "Complicazioni"
-            },
-            "version": {
-                "changes": "Changes",
-                "bug_fixes": "Bug fixes"
-            },
-            "changelog": "Changelog",
-            "difficulty": {
-                "label-single": "Difficoltà",
-                "label-multiple": "Difficoltà",
-                "standard": "Standard",
-                "risky": "Rischioso",
-                "dangerous": "Folle",
-                "impossible": "Impossibile"
-            },
-            "result": {
-                "label-single": "Risultato",
-                "label-multiple": "Risultati",
-                "label-stress": "Risultato di stress",
-                "n_a": "N/A",
-                "success_at_a_cost": "Successo condizionato",
-                "failure": "Fallimento",
-                "critical_failure": "Fallimento critico",
-                "critical_success": "Successo critico",
-                "success": "Successo"
-            },
-            "perform": {
-                "request-roll": "Richiedi un tiro",
-                "roll": "Tira",
-                "roll-stress": "Tira stress",
-                "roll-fallout": "Tira complicazione"
-            },
-            "stress": "Stress"
-        }
+            "stress-roll": {
+                "label": "Tiro di stress",
+                "action": "Tira stress",
+                "take-stress": "Prendi stress",
+                "prepare": "Prepara un tiro di stress",
+                "description(die_size)": "{die_size} tiro di stress"
+            }
+        },
+        "dialog": {
+            "skip": "Close",
+            "dont-show-again": "Don't Show This Again",
+            "title(VERSION)": "Heart - The City Beneath (v{VERSION})",
+            "content(VERSION)": "<h1>Welcome to Heart v{VERSION}</h1><h2>A Quick Intro</h2><p><b>Players</b>: you can make rolls from Chat when requested, or directly from your character sheet. Your GM will provide you with class/callings which you can drag & drop onto your sheet.</p><p><b>GMs:</b> the 'Prepare Rollout Request' macro will help your players make rolls more easily. You'll need to create classes and callings for your players by hand, but it should be more or less intuitive how to do this.</p>"
+        },
+        "version": {
+            "changes": "Changes",
+            "bug_fixes": "Bug fixes"
+        },
+        "changelog": "Changelog",
+        "difficulty": {
+            "label-single": "Difficoltà",
+            "label-multiple": "Difficoltà",
+            "standard": "Standard",
+            "risky": "Rischioso",
+            "dangerous": "Folle",
+            "impossible": "Impossibile"
+        },
+        "result": {
+            "label-single": "Risultato",
+            "label-multiple": "Risultati",
+            "label-stress": "Risultato di stress",
+            "n_a": "N/A",
+            "success_at_a_cost": "Successo condizionato",
+            "failure": "Fallimento",
+            "critical_failure": "Fallimento critico",
+            "critical_success": "Successo critico",
+            "success": "Successo"
+        },
+        "perform": {
+            "request-roll": "Richiedi un tiro",
+            "roll": "Tira",
+            "roll-stress": "Tira stress",
+            "roll-fallout": "Tira complicazione"
+        },
+        "stress": "Stress"
     }
 }
