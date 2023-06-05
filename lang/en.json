@@ -1500,10 +1500,14 @@
             "0_8_1": {
                 "version": "v0.8.1",
                 "changes": [
-                    "Added italian translations"
+                    "Added italian translations",
+                    "Dragging compendium items will now result in an immediately translated name"
                 ],
                 "bug_fixes": [
-                    "Italian transaction fixes, typo correction, translation for objects attributes"
+                    "Italian transaction fixes, typo correction, translation for objects attributes",
+                    "Fix warnings about using deprecated \"name\" instead of \"id\"",
+                    "Fix problem with loading compendium entries that have been translated",
+                    "Fix dragged compendium items not being having their names translated"
                 ],
                 "notes": [
                     "Thanks to Arcadio21 for providing the italian translations.",
