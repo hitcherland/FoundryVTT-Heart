@@ -1496,6 +1496,16 @@
                     "Use await for delete, confirm item group deletions"
                 ],
                 "notes": []
+            },
+            "0_8_1": {
+                "version": "v0.8.1",
+                "changes": [
+                    "Added italian translations"
+                ],
+                "bug_fixes": [],
+                "notes": [
+                    "Thanks to Arcadio21 for providing the italian translations."
+                ]
             }
         },
         "adversary": {
