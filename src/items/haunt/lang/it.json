@@ -1,0 +1,15 @@
+{
+    "haunt": {
+            "label-single": "Covo",
+            "label-multiple": "Covi",
+            "upgrade": "Potenzia",
+            "downgrade": "Danneggia",
+            "service": {
+                "label-single": "Servizio",
+                "label-multiple": "Servizi"
+            },
+            "upgradeTrack": {
+                "label-single": "Percorso di potenziamento"
+            }
+        }
+}

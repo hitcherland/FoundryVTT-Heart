@@ -1,0 +1,24 @@
+{
+    "landmark": {
+            "label-single": "Luoghi noti",
+            "label-multiple": "Luogo noto",
+            "name": "Nome",
+            "defaultStress": "Stress",
+            "description": "Descrizione",
+           "domain": {
+                "label-single": "Dominio",
+                "label-multiple": "Domini"
+            },
+            "tier": "Livello",
+            "specialRule": {
+                "label-single": "Regola speciale",
+                "label-multiple": "Regole speciali"
+            },
+            "potentialPlot": {
+                "label-single": "Spunto di trama",
+                "label-multiple": "Spunti di trama"
+            },
+            "inactive-items": "Oggetti inattivi",
+            "inactive-items-description": "Qui troverai gli oggetti aggiunti alla scheda del luogo, ma marcati come inattivi"
+        }
+}

@@ -1,0 +1,15 @@
+{
+    "base": {
+          "label-single": "Base",
+            "label-multiple": "Basi",
+            "open-parent": "Apri superiore",
+            "activate": "Attiva",
+            "deactivate": "Disattiva",
+            "complete": "Completa",
+            "uncomplete": "Non completa",
+            "delete": "Cancella",
+            "view": "Apri scheda",
+            "is-active": "É attiva?",
+            "is-complete": "É Completa?"
+    }
+}
