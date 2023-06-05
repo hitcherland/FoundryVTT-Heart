@@ -11,4 +11,5 @@ module.exports = {
     },
     githubRepo: "hitcherland/foundryvtt-heart",
     githubBranch: "release",
+	foundryvttPath: "C:/Users/arcad/AppData/Local/FoundryVTT/Data"
 };

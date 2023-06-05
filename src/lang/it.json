@@ -1,27 +1,27 @@
 {
-  "roll": "Tira",
-        "cancel": "Annulla",
-        "help": "Aiuto",
-        "none": "N/A",
+    "roll": "Tira",
+    "cancel": "Annulla",
+    "help": "Aiuto",
+    "none": "N/A",
     "character": {
-     "label-single": "Personaggio",
-            "label-multiple": "Personaggi",
-      "label-helpers": "Aiuti",
-            "label-valid-helpers": "Personaggi che possono aiutare"
+        "label-single": "Personaggio",
+        "label-multiple": "Personaggi",
+        "label-helpers": "Aiuti",
+        "label-valid-helpers": "Personaggi che possono aiutare"
     },
-     "die_size": {
-            "label-single": "Taglia del dado",
-            "label-multiple": "Taglia dei dadi",
-            "d(N)": "D{N}"
-        },
+    "die_size": {
+        "label-single": "Taglia del dado",
+        "label-multiple": "Taglia dei dadi",
+        "d(N)": "D{N}"
+    },
     "skill": {
-            "label-single": "Abilità",
-            "label-multiple": "Abilità",
-            "knack": {
-                "label-single": "Talento",
-                "label-multiple": "Talenti"
-            },
-            "compel": "Indurre",
+        "label-single": "Abilità",
+        "label-multiple": "Abilità",
+        "knack": {
+            "label-single": "Talento",
+            "label-multiple": "Talenti"
+        },
+        "compel": "Indurre",
             "delve": "Esporare",
             "discern": "Percepire",
             "endure": "Resistere",
@@ -30,15 +30,15 @@
             "kill": "Uccidere",
             "mend": "Riparare",
             "sneak": "Nascondere"
-        },
+    },
     "domain": {
-            "label-single": "Dominio",
-            "label-multiple": "Domini",
-            "knack": {
-                "label-single": "Talento",
-                "label-multiple": "Talenti"
-            },
-            "cursed": "Maledizione",
+        "label-single": "Dominio",
+        "label-multiple": "Domini",
+        "knack": {
+            "label-single": "Talento",
+            "label-multiple": "Talenti"
+        },
+          "cursed": "Maledizione",
             "desolate": "Desolazione",
             "haven": "Rifugio",
             "occult": "Occulto",
@@ -46,34 +46,34 @@
             "technology": "Tecnologia",
             "warren": "Labirinto",
             "wild": "Selvaggio"
-        },
+    },
     "resistance": {
-            "label-single": "Resistenza",
-            "label-multiple": "Resistenze",
-            "protection": {
-                "label-single": "Protezione",
-                "label-multiple": "Protezioni"
-            },
-            "blood": "Sangue",
+        "label-single": "Resistenza",
+        "label-multiple": "Resistenze",
+        "protection": {
+            "label-single": "Protezione",
+            "label-multiple": "Protezioni"
+        },
+   			"blood": "Sangue",
             "mind": "Mente",
             "echo": "Eco",
             "fortune": "Fortuna",
             "supplies": "Risorse"
-        },
+    },
     "mastery": {
-            "label": "Tira con maetria",
-            "short": "Maestria",
-            "label-single": "Maestria",
-            "label-multiple": "Maestrie"
-        },
+        "label": "Tira con maestria",
+        "short": "Maestria",
+        "label-single": "Maestria",
+        "label-multiple": "Maestrie"
+    },
     "helper": {
-            "label-single": "Aiuto",
-            "label-multipler": "Aiuti"
-        },
+        "label-single": "Aiuto",
+        "label-multipler": "Aiuti"
+    },
     "rolls": {
-       "roll-request": {
-                "label": "Richiesta di tiro"
-            },
+        "roll-request": {
+            "label": "Richiesta di tiro"
+        }
     },
     "dialog": {
         "skip": "Close",
