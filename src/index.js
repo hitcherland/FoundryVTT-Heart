@@ -236,6 +236,21 @@ Hooks.once('ready', function () {
     });
 });
 
+
+
+Hooks.on('preCreateItem', function(document, data, options, userId) {
+    console.warn(document);
+    document.updateSource({
+        name: localizeHeart(document.name)
+    });
+});
+
+Hooks.on('preCreateActor', function(document, data, options, userId) {
+    document.updateSource({
+        name: localizeHeart(document.name)
+    });
+});
+
 if (module.hot) {
     module.hot.accept();
 

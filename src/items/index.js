@@ -171,15 +171,6 @@ class HeartItem extends Item {
         return await this.update(updates);
     }
 
-    static async fromDropData(data, options={}) {
-        let document = await super.fromDropData(data, options);
-        let output = (await Item.implementation.createDocuments([document]))[0];
-        await output.update({
-            "name": localizeHeart(document.name),
-        })
-        return output;
-    }
-
     getEmbeddedDocument(embeddedName, embeddedId) {
         if (embeddedName.startsWith('@')) {
             if (this.system.children === undefined)
