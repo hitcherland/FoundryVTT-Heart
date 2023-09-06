@@ -1345,114 +1345,6 @@
             "add": "Add Tag"
         },
         "versions": {
-            "0_3_17": {
-                "version": "v0.3.17",
-                "changes": [
-                    "Added compendiums for Fallouts, Tags, Callings and some Classes"
-                ],
-                "bug_fixes": []
-            },
-            "0_4_0": {
-                "version": "v0.4.0",
-                "changes": [
-                    "Added remaining classes"
-                ],
-                "bug_fixes": [
-                    "Fixed bugs in text of previously added classes",
-                    "Fixed bug preventing localized text from working in windows correctly",
-                    "Fixed bug preventing Fallout rolls from being expanded"
-                ]
-            },
-            "0_4_1": {
-                "version": "v0.4.1",
-                "bug_fixes": [
-                    "Fixed tags being translated incorrectly",
-                    "Fixed a typo that prevented the description for Heretic's Rite Of Vigilance > Hunter sub-ability from displaying correctly",
-                    "Fixed a typo that prevented the description for Cleaver's Chimeric Strain > Bezerk sub-ability from displaying correctly",
-                    "Fixed a minor issue that referred used the old FoundryVTT \"entity\" instead of \"type\""
-                ]
-            },
-            "0_4_10": {
-                "version": "v0.4.10",
-                "changes": [
-                    "Roll requests now start with no characters selected by default, as opposed to all."
-                ]
-            },
-            "0_4_2": {
-                "version": "v0.4.2",
-                "bug_fixes": [
-                    "Fixed extra full stop in name of \"Out of Ammo\" fallout",
-                    "Fixed issue that prevented Blood fallouts from being added to the fallout compendium"
-                ]
-            },
-            "0_4_3": {
-                "version": "v0.4.3",
-                "changes": [
-                    "Added resource tags to Tag compendia"
-                ],
-                "bug_fixes": [
-                    "Fixed missing 'Grail Armour' ability for Deadwalker",
-                    "Fixed missing description for 'Reapers Strike' major ability for Deadwalker",
-                    "Fixed incorrect stats for Deadwalkers 'Bag Of Interesting Teeth' starting resource",
-                    "Tags should now be visible on resources",
-                    "Rollable tables work as intended again"
-                ]
-            },
-            "0_4_4": {
-                "version": "v0.4.4",
-                "bug_fixes": [
-                    "Fixed backward compatability problems with 0.8.x versions of FoundryVTT"
-                ]
-            },
-            "0_4_5": {
-                "version": "v0.4.5",
-                "bug_fixes": [
-                    "Finally put the rollable tables/rollable buttons thing to bed."
-                ]
-            },
-            "0_4_6": {
-                "version": "v0.4.6",
-                "changes": [
-                    "Thanks to stuttste, created more fleshed-out adversary sheet complete with drag-n-drop resources and equipment and variable max resistance",
-                    "Added spanish translation for adversary sheet as well"
-                ]
-            },
-            "0_4_7": {
-                "version": "v0.4.7",
-                "bug_fixes": [
-                    "swapped dice on heartsbloom in a jar and hive tool",
-                    "fixed bug with \"core\" equipment groups being treated like other equipment groups (they now toggle separately)"
-                ]
-            },
-            "0_4_8": {
-                "version": "v0.4.8",
-                "changes": [
-                    "Another update from stuttste",
-                    "Upgraded Haunt sheets to better contain the data related to them",
-                    "Implemented an upgrade/downgrade function for haunts. Raises/lowers Service dice appropriately. Raising a service resets the upgrade track.",
-                    "Upgraded Landmark sheets to better contain the data related to them. Also added Haunt listings with all the built-in functions needed.",
-                    "Added spanish translation for the new objects as well",
-                    "Added .sass for whisper chat messages as the white on white was difficult to read"
-                ],
-                "notes": [
-                    "My .sass files could probably be better-optimized. I'm not super great at css/sass, so it's mainly copy/paste to avoid breaking anything.",
-                    "Some item-level listeners were added to the actor objects directly. There may be a better way around this, but I wasn't able to figure out one.",
-                    "die_sizes and resistances were added to the landmark.js.getData method to provide the data to the Haunt preview"
-                ]
-            },
-            "0_4_9": {
-                "version": "v0.4.9",
-                "changes": [
-                    "Another update from stuttste",
-                    "Simple change to bring chat window to bottom when rolling stress and fallout"
-                ],
-                "bug_fixes": [
-                    "hitcherland - fixed bug with drag n drop out of actors"
-                ],
-                "notes": [
-                    "Added setFalloutRoll so the Message would behave more like the stress roll as I was finding it hard to guarantee message was updated before calling scrollToBottom"
-                ]
-            },
             "0_6_0": {
                 "version": "v0.6.0",
                 "changes": [
@@ -1500,19 +1392,42 @@
             "0_8_1": {
                 "version": "v0.8.1",
                 "changes": [
-                    "Added italian translations",
+                    "Added italian translations"
+                ],
+                "bug_fixes": [],
+                "notes": [
+                    "Thanks to Arcadio21 for providing the italian translations."
+                ]
+            },
+            "0_8_2": {
+                "version": "v0.8.2",
+                "changes": [],
+                "bug_fixes": [
+                    "Italian transaction fixes, typo correction, translation for objects attributes"
+                ],
+                "notes": [
+                    "Thanks to Arcadio21 again."
+                ]
+            },
+            "0_8_3": {
+                "version": "v0.8.3",
+                "changes": [
                     "Dragging compendium items will now result in an immediately translated name"
                 ],
                 "bug_fixes": [
-                    "Italian transaction fixes, typo correction, translation for objects attributes",
                     "Fix warnings about using deprecated \"name\" instead of \"id\"",
                     "Fix problem with loading compendium entries that have been translated",
                     "Fix dragged compendium items not being having their names translated"
                 ],
-                "notes": [
-                    "Thanks to Arcadio21 for providing the italian translations.",
-                    "Thanks to Arcadio21 again."
-                ]
+                "notes": []
+            },
+            "0_8_4": {
+                "version": "v0.8.4",
+                "changes": [],
+                "bug_fixes": [
+                    "Dragging compendium items will no longer accidentally create a duplicate"
+                ],
+                "notes": []
             }
         },
         "adversary": {
