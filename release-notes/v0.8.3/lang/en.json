@@ -1,7 +1,7 @@
 {
     "versions": {
-        "0_8_1": {
-            "version": "v0.8.1",
+        "0_8_3": {
+            "version": "v0.8.3",
             "changes":[
                 "Dragging compendium items will now result in an immediately translated name"
             ],

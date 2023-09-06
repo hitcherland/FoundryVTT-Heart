@@ -1,7 +1,7 @@
 {
     "versions": {
-        "0_8_1": {
-            "version": "v0.8.1",
+        "0_8_2": {
+            "version": "v0.8.2",
             "changes":[
             ],
             "bug_fixes": [
