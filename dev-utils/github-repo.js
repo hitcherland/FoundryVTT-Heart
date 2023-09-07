@@ -11,6 +11,6 @@ if(repo !== undefined && branch !== undefined) {
         repo: repository,
         tag: config.version,
     }
-    
-    ghpages.publish('dist', options)
+    console.warn(options);
+    ghpages.publish('dist', options);
 }

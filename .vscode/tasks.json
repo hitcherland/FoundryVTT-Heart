@@ -1,13 +1,20 @@
 {
 	"version": "2.0.0",
 	"tasks": [
-		{
-			"type": "npm",
-			"script": "build-prod",
-			"group": "build",
-			"problemMatcher": [],
-			"label": "npm: build-prod",
-			"detail": "webpack --mode production"
-		}
-	]
+        {
+            "type": "npm",
+            "script": "build-prod",
+            "group": "build",
+            "problemMatcher": [],
+            "label": "npm: build-prod",
+            "detail": "webpack --mode production"
+        },
+        {
+            "type": "npm",
+            "script": "release",
+            "problemMatcher": [],
+            "label": "npm: release",
+            "detail": "npm run build-prod && node dev-utils/github-repo.js"
+        }
+    ]
 }
