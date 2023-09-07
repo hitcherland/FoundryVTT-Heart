@@ -1428,6 +1428,14 @@
                     "Dragging compendium items will no longer accidentally create a duplicate"
                 ],
                 "notes": []
+            },
+            "0_8_5": {
+                "version": "v0.8.5",
+                "changes": [],
+                "bug_fixes": [
+                    "It is once again possible to open items directly from the compendium"
+                ],
+                "notes": []
             }
         },
         "adversary": {
