@@ -46,7 +46,8 @@ function transformManifest(content) {
     return JSON.stringify(manifest, null, 4);
 }
 
-module.exports = {
+module.exports = (env, argv) => {
+    return {
     mode: 'development',
     entry: './src/index.js',
     output: {
@@ -139,8 +140,11 @@ module.exports = {
                 },
             ],
         }),
+    ].concat(argv.mode == "development" ? [
         new FoundryVTTSymlinkPlugin(id, type, distPath, config.foundryvttPath),
+    ] : [] ).concat([
         new FoundryVTTPacker(distPath, packDataPath, packs),
         new FoundryVTTTemplateMerger(distPath),
-    ],
+    ]),
+}
 };
