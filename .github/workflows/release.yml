@@ -16,9 +16,10 @@ jobs:
       - name: Zip files
         working-directory: ./dist
         run: zip -r ./heart.zip ./*
-      - uses: ncipollo/release-action@v1
-          with: 
-            artifacts: "./dist/system.json,./dist/heart.zip"
-            tag: ${{ env.systemVersion }}-test
+      - name: Create Release
+        uses: ncipollo/release-action@v1
+        with: 
+          artifacts: "./dist/system.json,./dist/heart.zip"
+          tag: ${{ env.systemVersion }}-test
   release:
     runs-on: ubuntu-latest
