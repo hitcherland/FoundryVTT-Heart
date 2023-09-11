@@ -1,14 +1,13 @@
 name: Release
 run-name: ${{ github.actor }} building a new release
 on:
-  push:
   workflow_dispatch:
     inputs:
       version:
         description: 'The version to release this build as'
         required: true
         type: string
-        default: X.X.X
+        default: 0.X.Y
 jobs:
   build:
     runs-on: ubuntu-latest
