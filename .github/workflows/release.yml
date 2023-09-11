@@ -21,5 +21,3 @@ jobs:
         with: 
           artifacts: "./dist/system.json,./dist/heart.zip"
           tag: ${{ env.systemVersion }}-test
-  release:
-    runs-on: ubuntu-latest
