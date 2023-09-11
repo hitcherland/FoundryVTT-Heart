@@ -10,3 +10,15 @@ jobs:
         uses: actions/setup-node@v3
       - run: npm ci
       - run: npm run build-prod --if-present
+      - name: "Get version"
+        run: |
+          sed -n 's/.*"version": "\([^"]\+\).*/\1/p' ./dist/system.json
+      - name: Zip files
+        working-directory: ./dist
+        run: zip -r ./heart.zip ./*
+      - uses: ncipollo/release-action@v1
+          with: 
+            artifacts: "./dist/system.json,./dist/heart.zip"
+            tag: ${{ env.systemVersion }}-test
+  release:
+    runs-on: ubuntu-latest
