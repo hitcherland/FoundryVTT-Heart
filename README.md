@@ -97,25 +97,9 @@ You will get a result and an accompanying button to clear the appropriate stress
 
 ## Translations
 
-If you're considering writing a translation, firstly: thank you! You can provide translation files in two ways:
+If you're considering writing a translation, firstly: thank you! You can provide translation by submitting a pull request.
 
-## Method 1: Send me a single lang/{lang}.json file
-
-Find [lang/en.json](https://github.com/hitcherland/FoundryVTT-Heart/blob/release/lang/en.json) and translate it, then send the file to me.
-
-This method is easier for you, but requires me to do some work to adjust it to the format I use for the [development branch](https://github.com/hitcherland/FoundryVTT-Heart/tree/development) that I use to actually build the system. This means it is subject to me getting around to it, which has previously taken a few months.
-
-## Method 2: Submit A Pull Request to the Development Branch
-
-You can find the development branch [here](https://github.com/hitcherland/FoundryVTT-Heart/tree/development). As mentioned above, this is the branch that actually builds the "release" branch. Fork the repo, and modify the duplicate the many instances of the `lang/en.json` file. You can find these by searching for `en.json`, (e.g. in Github, by going to [Find a File](https://github.com/hitcherland/FoundryVTT-Heart/find/development) and typing `en.json`).
-
-This is easier for me (and quicker for you), as I can just accept it directly.
-
-## Current Translations & Translators
-Thanks to them!
-
-* Español - jesberpen
-
+You can find the main branch [here](https://github.com/hitcherland/FoundryVTT-Heart/tree/main). This is the branch from which we build repos. Fork the repo, and modify the duplicate the many instances of the `lang/en.json` file. You can find these by searching for `en.json`, (e.g. in Github, by going to [Find a File](https://github.com/hitcherland/FoundryVTT-Heart/find/development) and typing `en.json`).
 
 ## Contributing
 It is not recommended to develop on the instance on Foundry you run games from. If you need help installing another version of Foundry or a dev environment this isn't the guide for that.
@@ -128,7 +112,7 @@ Add your Foundry installation's Data location to `foundryvtt.config.js` it shoul
 Inside this directory run:
 ```shell
 npm ci
-npm run build .
+npm run build-local .
 ```
 
 If everything is setup correctly this will create a symlink from this directory's `dist` folder to your Foundry systems folder. It will then build this project and the built version will appear in `dist`. With the symlink in place you can then open Foundry and interact with the system as normal. 
