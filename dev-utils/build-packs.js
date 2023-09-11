@@ -2,6 +2,7 @@ const fs = require('fs');
 const path = require('path');
 const yaml = require('yaml');
 const glob = require('glob');
+const fvtt = import("@foundryvtt/foundryvtt-cli");
 
 function randomID(length = 16) {
     const rnd = () => Math.random().toString(36).slice(2);
@@ -227,19 +228,36 @@ if (fs.existsSync(target)) {
 };
 fs.mkdirSync(target);
 
+const tmp = './tmp-packs';
+if (fs.existsSync(tmp)) {
+    console.log(`Cleaning up old ${tmp}`)
+    fs.rmSync(tmp, {recursive: true});
+};
+fs.mkdirSync(tmp);
+
 const paths = glob.globSync('./pack-data/**/*.yaml');
 
 const manifest = fs.readFileSync('./dist/system.json');
 const json = JSON.parse(manifest);
 
-paths.forEach((filename) => {
+Promise.all(paths.map((filename) => {
     const type = path.basename(filename).replace(/\.yaml$/, '');
     const content = fs.readFileSync(filename, 'utf8');
     const data = yaml.parse(content);
     const type_items = parsers[type](data);
 
+    fs.mkdirSync(`./${tmp}/${type}`);
+    fs.mkdirSync(`./${target}/${type}`);
+
     Object.assign(stored[type], ...type_items.map(x => ({ [x.name]: x })));
-    const output = type_items.map(x => JSON.stringify(x)).join('\n');
+    type_items.forEach(data => {
+        data._key = `!items!${data._id}`;
+        const string = JSON.stringify(data, null, 4);
+        fs.writeFileSync(`./${tmp}/${type}/${data.name}_${data._id}.json`, string);
+    });
+    const promise = fvtt.then(f => {
+        return f.compilePack(`${tmp}/${type}/`, `./${target}/${type}`)
+    });
 
     if(json.packs.find((e) => e.name === type) === undefined) {
         console.warn(`Adding ${type}.db to system.json`);
@@ -254,8 +272,9 @@ paths.forEach((filename) => {
             });
     }
 
-    console.log(`Writing ${type}.db to ./dist/packs`)
-    fs.writeFileSync(`./dist/packs/${type}.db`, output);
+    return promise;
+})).then(() => {
+    fs.rmSync(tmp, {recursive: true});
 });
 
 fs.writeFileSync('./dist/system.json', JSON.stringify(json, null, 4));
