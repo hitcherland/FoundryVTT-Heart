@@ -8,8 +8,7 @@
     "build": "webpack --mode development",
     "build-prod": "webpack --mode production",
     "watch": "webpack serve --hot --progress",
-    "release": "npm run build-prod && node dev-utils/github-repo.js",
-    "build-packs": "node pack-data/build.js"
+    "release": "npm run build-prod && node dev-utils/github-repo.js"
   },
   "keywords": [
     "foundryvtt"
