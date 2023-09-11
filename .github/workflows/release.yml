@@ -9,7 +9,7 @@ jobs:
       - name: Use Node.js ${{ matrix.node-version }}
         uses: actions/setup-node@v3
       - run: npm ci
-      - run: npm run build-packs --if-present
+      - run: npm run build-prod --if-present
   Explore-GitHub-Actions:
     runs-on: ubuntu-latest
     steps:
