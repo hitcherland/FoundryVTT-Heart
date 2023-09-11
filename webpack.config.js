@@ -37,7 +37,6 @@ function transformManifest(content) {
     if (manifest.esmodules === undefined) manifest.esmodules = [`${id}.js`];
 
     const githubRepo = config.githubRepo;
-    const githubBranch = config.githubBranch;
     if (githubRepo) {
         if (manifest.url === undefined) manifest.url = `https://github.com/${githubRepo}`;
         if (manifest.manifest === undefined) manifest.manifest = `https://raw.githubusercontent.com/${githubRepo}/${config.version}/${type}.json`;
