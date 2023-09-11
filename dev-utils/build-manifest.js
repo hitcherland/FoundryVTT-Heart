@@ -3,7 +3,8 @@ const config = require('../foundryvtt.config.js');
 const content = fs.readFileSync('./src/manifest.json');
 const manifest = JSON.parse(content);
 
-version = process.argv[1];
+console.log(process.argv);
+version = process.argv[2] || "???";
 manifest.version = version;
 
 // Required 
@@ -21,7 +22,7 @@ if (githubRepo) {
     if (manifest.url === undefined) manifest.url = `https://github.com/${githubRepo}`;
     if (manifest.manifest === undefined) manifest.manifest = `https://raw.githubusercontent.com/${githubRepo}/${version}/${config.type}.json`;
     if (manifest.readme === undefined) manifest.readme = `https://raw.githubusercontent.com/${githubRepo}/${version}/README.md`;
-    if (manifest.download === undefined) manifest.download = `https://github.com/${githubRepo}/releases/download/${config.version}/heart.zip`;
+    if (manifest.download === undefined) manifest.download = `https://github.com/${githubRepo}/releases/download/${version}/heart.zip`;
 }
 
 // Return as nicely parsed string

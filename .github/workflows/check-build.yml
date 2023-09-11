@@ -9,4 +9,8 @@ jobs:
       - name: Use Node.js ${{ matrix.node-version }}
         uses: actions/setup-node@v3
       - run: npm ci
-      - run: npm run build-prod --if-present
+      - run: npm run build-prod
+      - run: npm run build-manifest -- ${inputs.version}
+      - run: npm run build-translations
+      - run: npm run build-packs
+      - run: npm run build-template
