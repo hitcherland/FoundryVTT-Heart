@@ -1,7 +1,7 @@
 name: Release
 run-name: ${{ github.actor }} building a new release
 on:
-  run:
+  push:
   workflow_dispatch:
     inputs:
       version:
