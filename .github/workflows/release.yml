@@ -11,8 +11,10 @@ jobs:
       - run: npm ci
       - run: npm run build-prod --if-present
       - name: "Get version"
+        working-directory: ./dist
         run: |
-          sed -n 's/.*"version": "\([^"]\+\).*/\1/p' ./dist/system.json
+          SYSTEM_VERSION=$(sed -n 's/.*"version": "\([^"]\+\).*/\1/p' ./system.json)
+          echo "systemVersion=$SYSTEM_VERSION" >> $GITHUB_ENV
       - name: Zip files
         working-directory: ./dist
         run: zip -r ./heart.zip ./*
