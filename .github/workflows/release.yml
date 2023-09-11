@@ -7,6 +7,7 @@ on:
         description: 'The version to release this build as'
         required: true
         type: string
+        default: X.X.X
 jobs:
   build:
     runs-on: ubuntu-latest
