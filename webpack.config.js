@@ -41,7 +41,7 @@ function transformManifest(content) {
         if (manifest.url === undefined) manifest.url = `https://github.com/${githubRepo}`;
         if (manifest.manifest === undefined) manifest.manifest = `https://raw.githubusercontent.com/${githubRepo}/${config.version}/${type}.json`;
         if (manifest.readme === undefined) manifest.readme = `https://raw.githubusercontent.com/${githubRepo}/${config.version}/README.md`;
-        if (manifest.download === undefined) manifest.download = `https://github.com/${githubRepo}/archive/refs/tags/${config.version}.zip`;
+        if (manifest.download === undefined) manifest.download = `https://github.com/${githubRepo}/releases/download/${config.version}/heart.zip`;
     }
 
     // Return as nicely parsed string
