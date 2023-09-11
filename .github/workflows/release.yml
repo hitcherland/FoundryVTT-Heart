@@ -18,6 +18,9 @@ jobs:
       - run: npm ci
       - run: npm run build-prod --if-present
       - run: npm run build-manifest -- ${inputs.version}
+      - run: npm run build-translations
+      - name: Copy static files
+        run: cp -r LICENSE ./static/* ./dist
       - name: Zip files
         working-directory: ./dist
         run: zip -r ./heart.zip ./*
