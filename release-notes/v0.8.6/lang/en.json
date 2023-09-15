@@ -1,0 +1,14 @@
+{
+    "versions": {
+        "0_8_6": {
+            "version": "v0.8.6",
+            "changes":[
+            ],
+            "bug_fixes": [
+                "Fixed updates to children of items not triggering a remote re-render"
+            ],
+            "notes":[
+            ]
+        }
+    }
+}
