@@ -91,6 +91,15 @@ class HeartItem extends Item {
         return this.parentItem.testUserPermission(game.user, "OWNER");
     }
 
+    _onUpdate(data, options, userId) {
+        // Refresh the "item.children" compendium and re-render any
+        // documents when we update them
+        if(data.system?.children !== undefined) {
+            this.refreshChildren();
+        }
+        super._onUpdate(data, options, userId);
+    }
+
     async update(data = {}, context = {}) {
         if (this.isChild) {
             await this.parentItem.updateChildren({ [`${this.id}`]: data }, context);
@@ -115,7 +124,7 @@ class HeartItem extends Item {
             this.children.set(id, child);
         });
 
-        return await this.update(flattenObject({'system.children': update}));
+        return await this.update(flattenObject({'system.children': update}), {render: true});
     }
 
     async refreshChildren() {
@@ -135,7 +144,8 @@ class HeartItem extends Item {
     }
 
     async updateChildren(data = {}, context = {}) {
-        const ctx = { ...context, render: false };
+        // why
+        const ctx = { ...context} ; //, render: false };
         const updates = await this.update({ 'system.children': data }, ctx);
         if (updates === undefined) return;
 
