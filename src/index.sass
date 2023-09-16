@@ -76,7 +76,7 @@ input.toggle-display
             padding: 0 0.5em
 
     button + button
-        margin-top: 0.2em
+            margin-top: 0.2em
 
 .heart
     font-family: 'Alegreya', serif
@@ -136,19 +136,24 @@ input.toggle-display
         margin: 0 2px
         box-sizing: content-box
 
+        &:disabled:checked
+            background-image: linear-gradient(90deg, util.$disabled-and-checked 0%, util.$disabled-and-checked 100%)
+            background-size: $size - 2px $size - 2px
+            background-position: center
+            background-repeat: no-repeat
+
         &:checked
             background-image: linear-gradient(90deg, util.$black 0%, util.$black 100%)
             background-size: $size - 2px $size - 2px
             background-position: center
             background-repeat: no-repeat
 
-
         &:disabled
-            background-image: linear-gradient(90deg, util.$bg-for-red 0%, util.$bg-for-red 100%)
+            background-image: linear-gradient(90deg, util.$disabled 0%, util.$disabled 100%)
             background-size: $size - 2px $size - 2px
             background-position: center
             background-repeat: no-repeat
-
+            cursor: not-allowed
 
         &.invert
             border-color: util.$white
@@ -163,15 +168,11 @@ input.toggle-display
             &.checked::after
                 background-image: linear-gradient(90deg, util.$red 0%, util.$red 100%)
 
-
-
-
 .window-app .window-content
     padding: 0
 
     & > *
         padding: 8px
-
 
 .grid-2
     display: grid
