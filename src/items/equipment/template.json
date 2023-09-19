@@ -1,7 +1,7 @@
 {
     "Item": {   
         "equipment": {
-            "templates": ["is_rollable", "has_description", "is_activatable", "has_tags", "has_children", "has_resistances"],
+            "templates": ["is_rollable", "has_description", "is_activatable", "has_children", "has_resistances"],
             "type": "miscellaneous",
             "group": "core"
         }

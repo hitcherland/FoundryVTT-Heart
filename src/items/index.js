@@ -94,10 +94,11 @@ class HeartItem extends Item {
     _onUpdate(data, options, userId) {
         // Refresh the "item.children" compendium and re-render any
         // documents when we update them
+        super._onUpdate(data, options, userId);
         if(data.system?.children !== undefined) {
+            
             this.refreshChildren();
         }
-        super._onUpdate(data, options, userId);
     }
 
     async update(data = {}, context = {}) {
@@ -108,39 +109,65 @@ class HeartItem extends Item {
         }
     }
 
+    _addChild(data) {
+        let class_;
+        if (Item.TYPES.includes(data.type)) {
+            class_ = CONFIG.Item.documentClass;
+        } else {
+            class_ = CONFIG.Actor.documentClass;
+        }
+
+        const child = new class_(data, {
+            parentItem: this
+        });
+
+        const id = child.id;
+        this.children.set(id, child);
+        return child;
+    }
+
     async addChildren(datas=[]) {
         const update = {};
         datas.forEach(data => {
             const id = randomID();
             data._id = id;
-
-            const child = new CONFIG[data.documentName].documentClass(data, {
-                parentItem: this
-            });
-            
+            const child = this._addChild(data);
             const childData = child.toObject();
             childData.documentName = data.documentName;
-            update[id] = childData;
-            this.children.set(id, child);
+            update[child.id] = childData;
         });
 
-        return await this.update(flattenObject({'system.children': update}), {render: true});
+        return this.update(flattenObject({'system.children': update}), {render: true});
     }
 
     async refreshChildren() {
-        if (this.children === undefined || this.children.size === 0) return;
+        if(this.system.children === undefined) return;
+        Object.entries(this.system.children).forEach(([id, data]) => {
+            if(this.children.has(id)) {
+                const child = this.children.get(id);
+                child.updateSource(this.system.children[child.id]);
+                child.prepareData();
 
-        await Promise.all(this.children.map(async (child) => {
-            child.updateSource(this.system.children[child.id]);
-            child.prepareData();
+                if (child.children?.size ?? 0 >= 0) {
+                    child.refreshChildren();
+                }
 
-            if (child.children?.size ?? 0 >= 0) {
-                child.refreshChildren();
+                if (child.sheet.rendered)
+                    child.sheet.render();
+            } else {
+                this._addChild(data);
             }
+        });
 
-            if (child.sheet.rendered)
-                await child.sheet.render();
-        }));
+        this.children.forEach(child => {
+            if(this.system.children[child.id] === undefined) {
+                this._deleteChild(child.id);
+            }
+        })
+
+        if(this.sheet.rendered) {
+            this.sheet.render();
+        }
     }
 
     async updateChildren(data = {}, context = {}) {
@@ -148,11 +175,6 @@ class HeartItem extends Item {
         const ctx = { ...context} ; //, render: false };
         const updates = await this.update({ 'system.children': data }, ctx);
         if (updates === undefined) return;
-
-        this.refreshChildren();
-
-        if (this.sheet.rendered)
-            await this.sheet.render(true);
         
         if(this.isEmbedded && this.parent.sheet.rendered)
             await this.parent.sheet.render(true);
@@ -170,15 +192,21 @@ class HeartItem extends Item {
             return super.delete();
     }
 
+    _deleteChild(id) {
+        const child = this.children.get(id)
+        child.sheet.close();
+        this.children.delete(id); 
+    }
     async deleteChildren(ids) {
         if (this.system.children === undefined) return;
 
         const updates = {};
         ids.forEach(id => {
-            this.children.delete(id);
+            this._deleteChild(id);
             updates[`system.children.-=${id}`] = null
         });
-        return await this.update(updates);
+
+        return this.update(updates);
     }
 
     getEmbeddedDocument(embeddedName, embeddedId) {
