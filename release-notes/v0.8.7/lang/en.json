@@ -4,7 +4,7 @@
             "version": "v0.8.7",
             "changes":[
                 "Added an option to ignore protection on stress rolls.",
-                "Added ability to click tags and view tag description from preview on character sheet.",
+                "Users can now click tags and view tag description from preview on character sheet.",
                 "Buttons on top of sheet size more consistently so you don't end up with one long button."
             ],
             "bug_fixes": [
