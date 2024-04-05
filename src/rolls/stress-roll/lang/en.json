@@ -6,7 +6,8 @@
             "action": "Roll Stress",
             "take-stress": "Take Stress",
             "prepare": "Prepare Stress Roll",
-            "description(die_size)": "{die_size} Stress Roll"
+            "description(die_size)": "{die_size} Stress Roll",
+            "ignore-protection": "Ignore Protection"
         }
     }
 }

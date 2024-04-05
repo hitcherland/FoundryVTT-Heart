@@ -1,0 +1,14 @@
+{
+    "versions": {
+        "0_8_7": {
+            "version": "v0.8.7",
+            "changes":[
+                "Added an option to ignore protection on stress rolls"
+            ],
+            "bug_fixes": [
+            ],
+            "notes":[
+            ]
+        }
+    }
+}

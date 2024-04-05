@@ -30,6 +30,10 @@ export default class StressRoll extends Roll {
                     map[die_size] = game.i18n.format(`heart.die_size.d(N)`, {N: die_size.replace(/^d/, '')})
                     return map;
                 }, {})
+            },
+            ignoreProtection: {
+              label: game.i18n.localize(`heart.rolls.stress-roll.ignore-protection`),
+              isCheckbox: true,
             }
         };
         if (game.settings.get('heart', 'preSelectStressType')){
@@ -46,13 +50,14 @@ export default class StressRoll extends Roll {
         return requirements;
     }
 
-    static build({result, die_size, character, resistance}={}, data={}, options={}) {
+    static build({result, die_size, character, ignoreProtection, resistance}={}, data={}, options={}) {
         return new Promise((resolve, reject) => {
             const requirements = this.requirements;
 
             if(result !== undefined) delete requirements.result;
             if(die_size !== undefined) delete requirements.die_size;
             if(character !== undefined) delete requirements.character;
+            if(ignoreProtection !== undefined) delete requirements.ignoreProtection;
             if(resistance !== undefined) delete requirements.resistance;
 
             const buildData = {
@@ -77,10 +82,11 @@ export default class StressRoll extends Roll {
         })
     }
 
-    static _build({result, die_size, character, resistance}, data={}, options={}) {
+    static _build({result, die_size, character, ignoreProtection, resistance}, data={}, options={}) {
         options.result = result;
         options.die_size = die_size;
         options.character = character;
+        options.ignoreProtection = ignoreProtection;
         options.resistance = resistance;
 
         let formula = die_size;
@@ -123,6 +129,7 @@ export default class StressRoll extends Roll {
             showTakeStressButton: isPrivate ? false : showTakeStressButton,
             showFalloutRollButton: isPrivate ? false : !showTakeStressButton && showFalloutRollButton,
             resistance: isPrivate ? "" : this.options.resistance,
+            ignoreProtection: isPrivate ? "" : this.options.ignoreProtection,
             total: isPrivate ? "?" : this.total,
             result: isPrivate ? "?" : this.result
         };
@@ -131,12 +138,13 @@ export default class StressRoll extends Roll {
         return renderTemplate(chatOptions.template, chatData);
     }
 
-    async takeStress(character, resistance='') {
+    async takeStress(character, resistance='', ignoreProtection=false) {
         return new Promise((resolve, reject) => {
             character = character || this.options.character;
             resistance = resistance || this.options.resistance;
+            ignoreProtection = ignoreProtection || this.options.ignoreProtection;
             if(resistance) {
-              this.applyStress(character, resistance);
+              this.applyStress(character, resistance, ignoreProtection);
               resolve();
               return;
             }
@@ -152,7 +160,7 @@ export default class StressRoll extends Roll {
                 },
                 callback: ({resistance}) => {
 
-                    this.applyStress(character, resistance, reject);
+                    this.applyStress(character, resistance, ignoreProtection, reject);
                     resolve();
                 },
                 type: "take-stress"
@@ -160,18 +168,18 @@ export default class StressRoll extends Roll {
         });
     }
 
-    applyStress(character, resistance, reject) {
+    applyStress(character, resistance, ignoreProtection, reject) {
       const actor = game.actors.get(character);
       const updateData = {};
-      const resistanceBlock = actor.system.resistances[resistance];
+      const actorResistance = actor.system.resistances[resistance];
+      const resistanceProtection = ignoreProtection ? 0 : actorResistance.protection
       const total = this.total;
       if (total === undefined) {
         ui.notifications.error(`Somehow this roll isn't evaluated`, this);
         reject();
       }
-      const newValue = (resistanceBlock.value || 0) + Math.max(0, parseInt(total) - resistanceBlock.protection);
-      updateData[`system.resistances.${resistance}.value`] = newValue;
-      console.log(actor, updateData, resistanceBlock, total);
+      const newResistanceValue = (actorResistance.value || 0) + Math.max(0, parseInt(total) - resistanceProtection);
+      updateData[`system.resistances.${resistance}.value`] = newResistanceValue;
       actor.update(updateData);
     }
 
