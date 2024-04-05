@@ -9,6 +9,9 @@
     <span class="fas fa-tag"></span>
     {{/if}}
     {{#each item.childrenTypes.tag as |tag|}}
-        {{localizeHeart tag.name}}
+        <a data-action="view-child" data-item-id="{{tag.uuid}}" title="{{localizeHeart 'base' 'view'}}">
+            {{localizeHeart tag.name}}{{#unless @last}}, {{/unless}}
+        </a>
+        
     {{/each}}
 {{/ "heart:items/base/preview.html"}}
