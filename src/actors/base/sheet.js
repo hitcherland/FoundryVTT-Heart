@@ -54,13 +54,6 @@ export default class HeartActorSheet extends HeartSheetMixin(ActorSheet) {
           item.sheet.render(true);
         });
 
-        html.find('[data-item-id] [data-action=view-child]').click(async ev => {
-          const target = $(ev.currentTarget);
-          const uuid = target.closest('[data-item-id]').data('itemId');
-          const item = await fromUuid(uuid);
-          item.sheet.render(true);
-        });
-
         html.find('[data-action=delete]').click(async ev => {
             const uuid = $(ev.currentTarget).closest('[data-item-id]').data('itemId');
             const item = await fromUuid(uuid);
