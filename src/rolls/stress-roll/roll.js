@@ -31,6 +31,7 @@ export default class StressRoll extends Roll {
                     return map;
                 }, {})
             },
+            resistance: undefined,
             ignoreProtection: {
               label: game.i18n.localize(`heart.rolls.stress-roll.ignore-protection`),
               isCheckbox: true,
@@ -47,24 +48,26 @@ export default class StressRoll extends Roll {
           };
           requirements["resistance"] = resistance;
         }
+        if (requirements.resistance === undefined) delete requirements.resistance
         return requirements;
     }
 
-    static build({result, die_size, character, ignoreProtection, resistance}={}, data={}, options={}) {
+    static build({result, die_size, character, resistance, ignoreProtection}={}, data={}, options={}) {
         return new Promise((resolve, reject) => {
             const requirements = this.requirements;
 
             if(result !== undefined) delete requirements.result;
             if(die_size !== undefined) delete requirements.die_size;
             if(character !== undefined) delete requirements.character;
-            if(ignoreProtection !== undefined) delete requirements.ignoreProtection;
             if(resistance !== undefined) delete requirements.resistance;
+            if(ignoreProtection !== undefined) delete requirements.ignoreProtection;
 
             const buildData = {
                 result,
                 die_size,
                 character,
-                resistance
+                resistance,
+                ignoreProtection
             };
 
             if(Object.keys(requirements).length > 0) {
@@ -82,12 +85,12 @@ export default class StressRoll extends Roll {
         })
     }
 
-    static _build({result, die_size, character, ignoreProtection, resistance}, data={}, options={}) {
+    static _build({result, die_size, character, resistance, ignoreProtection}, data={}, options={}) {
         options.result = result;
         options.die_size = die_size;
         options.character = character;
-        options.ignoreProtection = ignoreProtection;
         options.resistance = resistance;
+        options.ignoreProtection = ignoreProtection;
 
         let formula = die_size;
         if(result === 'critical_failure') {
