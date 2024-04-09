@@ -2,8 +2,14 @@
     {{localizeHeart item.name}}
     (<a data-action="item-roll"><span class="fas fa-dice"></span> {{item.system.die_size}}</a>
     {{localizeHeart "domain" item.system.domain}}
-    {{#each item.childrenTypes.tag as |tag|}}
-        {{localizeHeart tag.name}}
-    {{/each}}
     )
+    {{#if item.childrenTypes.tag}}
+    <span class="fas fa-tag"></span>
+    {{/if}}
+    {{#each item.childrenTypes.tag as |tag|}}
+        <a data-action="view" data-item-id="{{tag.uuid}}" title="{{localizeHeart 'base' 'view'}}">
+            {{localizeHeart tag.name}}
+        </a>
+        {{#unless @last}}, {{/unless}}
+    {{/each}}
 {{/ "heart:items/base/preview.html"}}
