@@ -1,12 +1,12 @@
 {
   "ability": {
-    "add-child-ability": "Add Nested Ability",
-    "label-multiple": "Abilities",
-    "label-single": "Ability",
+    "add-child-ability": "Dodaj zagnieżdżoną zdolność",
+    "label-multiple": "Zdolności",
+    "label-single": "Zdolność",
     "type": {
-      "major": "Major",
-      "minor": "Minor",
-      "zenith": "Zenith"
+      "major": "Poważna",
+      "minor": "Pomniejsza",
+      "zenith": "Zenit"
     }
   },
   "adversary": {
@@ -111,16 +111,16 @@
   "cancel": "Cancel",
   "changelog": "Changelog",
   "character": {
-    "calling": "Calling",
-    "class": "Class",
-    "inactive-items": "Inactive Items",
+    "calling": "Powołanie",
+    "class": "Klasa",
+    "inactive-items": "Nieaktywne Przedmioty",
     "inactive-items-description": "Here you'll find items that were directly added to the character sheet, but were marked inactive (which hides them from the normal layout).",
     "label-helpers": "Helping Characters",
     "label-multiple": "Characters",
     "label-single": "Character",
     "label-valid-helpers": "Characters Who Could Help",
-    "name": "Name",
-    "notes": "Notes"
+    "name": "Nazwa",
+    "notes": "Notatki"
   },
   "class": {
     "core-ability": {
@@ -201,11 +201,11 @@
     "label-single": "Die Size"
   },
   "difficulty": {
-    "dangerous": "Dangerous",
-    "impossible": "Impossible",
-    "label-multiple": "Difficulties",
-    "label-single": "Difficulty",
-    "risky": "Risky",
+    "dangerous": "Niebezpieczny",
+    "impossible": "Niemożliwy",
+    "label-multiple": "Trudności",
+    "label-single": "Trudność",
+    "risky": "Ryzykowny",
     "standard": "Standard"
   },
   "domain": {
@@ -293,95 +293,84 @@
   },
   "none": "N/A",
   "perform": {
-    "request-roll": "Request Roll",
-    "roll": "Roll",
-    "roll-fallout": "Roll Fallout",
-    "roll-stress": "Roll Stress"
+    "request-roll": "Prośba o Rzut",
+    "roll": "Rzut",
+    "roll-fallout": "Test Konsekwencji",
+    "roll-stress": "Test Stresu"
   },
   "protection": {
     "label-multiple": "Protections",
     "label-single": "Protection"
   },
   "resistance": {
-    "blood": "Blood",
-    "fortune": "Fortune",
+    "blood": "Krew",
     "echo": "Echo",
-    "label-multiple": "Resistances",
-    "label-single": "Resistance",
-    "mind": "Mind",
+    "fortune": "Szczęście",
+    "label-multiple": "Ochrona",
+    "label-single": "Ochrona",
+    "mind": "Umysł",
     "protection": {
-      "label-multiple": "Protections",
-      "label-single": "Protection"
+      "label-multiple": "Ochrona",
+      "label-single": "Ochrona"
     },
-    "supplies": "Supplies"
+    "supplies": "Zasoby"
   },
   "resource": {
     "label-multiple": "Resources",
     "label-single": "Resource"
   },
   "result": {
-    "critical_failure": "Critical Failure",
-    "critical_success": "Critical Success",
-    "failure": "Failure",
-    "label-multiple": "Results",
-    "label-single": "Result",
-    "label-stress": "Stress Results",
-    "n_a": "N/A",
-    "success": "Success",
-    "success_at_a_cost": "Success At A Cost"
+    "critical_failure": "Krytyczna Porażka",
+    "critical_success": "Krytyczny Sukces",
+    "failure": "Porażka",
+    "label-multiple": "Wyniki",
+    "label-single": "Wynik",
+    "label-stress": "Wyniki Stresu",
+    "n_a": "Brak",
+    "success": "Sukces",
+    "success_at_a_cost": "Sukces z kosztem"
   },
   "roll": "Roll",
   "rolls": {
-    "fallout-roll": {
-      "action": "Roll Fallout",
-      "clear-stress": "Remove stress as a result a suffering Fallout",
-      "description(totalStress)": "Fallout Roll with {totalStress} Stress",
-      "label": "Fallout Roll",
-      "results": {
-        "major-fallout": "Major Fallout",
-        "minor-fallout": "Minor Fallout",
-        "no-fallout": "No Fallout"
-      }
-    },
     "roll": {
-      "action": "Roll",
-      "base": "Base",
+      "action": "Rzut",
+      "base": "Bazowy",
       "description(difficulty,count)": "{difficulty} Roll with {count} dice",
-      "label": "Roll"
+      "label": "Rzut"
     },
     "roll-request": {
       "label": "Roll Request"
     },
     "stress-roll": {
-      "action": "Roll Stress",
-      "description(die_size)": "{die_size} Stress Roll",
-      "ignore-protection": "Ignore Protection",
-      "label": "Stress Roll",
-      "prepare": "Prepare Stress Roll",
-      "take-stress": "Take Stress"
+      "action": "Test Stresu",
+      "description(die_size)": "Rzut {die_size}",
+      "ignore-protection": "Ignoruj Ochronę",
+      "label": "Rzut: Stres",
+      "prepare": "Przygotuj Test Stresu",
+      "take-stress": "Weź Stres"
     }
   },
   "skill": {
-    "compel": "Compel",
-    "delve": "Delve",
-    "discern": "Discern",
-    "endure": "Endure",
-    "evade": "Evade",
-    "hunt": "Hunt",
-    "kill": "Kill",
+    "compel": "Manipulowanie",
+    "delve": "Podróżowanie",
+    "discern": "Obserwowanie",
+    "endure": "Wytrzymywanie",
+    "evade": "Unikanie",
+    "hunt": "Polowanie",
+    "kill": "Zabijanie",
     "knack": {
-      "label-multiple": "Knacks",
-      "label-single": "Knack"
+      "label-multiple": "Talenty",
+      "label-single": "Talent"
     },
-    "label-multiple": "Skills",
-    "label-single": "Skill",
-    "mend": "Mend",
-    "sneak": "Sneak"
+    "label-multiple": "Umiejętności",
+    "label-single": "Umiejętność",
+    "mend": "Składnie",
+    "sneak": "Skradanie"
   },
-  "stress": "Stress",
+  "stress": "Stres",
   "tag": {
-    "add": "Add Tag",
-    "label-multiple": "Tags",
+    "add": "Dodaj Tag",
+    "label-multiple": "Tagi",
     "label-single": "Tag"
   },
   "version": {
