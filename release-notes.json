@@ -1,0 +1,120 @@
+{
+  "versions": {
+    "0_5_0": {
+      "changes": [
+        "Update to work with foundry v10 (thanks to whitespine)"
+      ],
+      "version": "v0.5.0"
+    },
+    "0_6_0": {
+      "bug_fixes": [
+        "Wigginns - Heretic staff now named staff as intended."
+      ],
+      "changes": [
+        "Added Resistance types to Mend and Kill Equipment. Now you can mark which stress type a weapon deals or can mend.",
+        "You can now shift-click an equipment to increase the die by one step when rolling with a critical success or other modifier.",
+        "Option to display Total Stress on character sheet.",
+        "Option to display an editable field beside each Resistance that can be edited if you don't like ticking boxes.",
+        "Added a Tag icon to help distinguish Equipment and Resource tags.",
+        "Updated the default icon for Landmarks."
+      ],
+      "notes": [
+        "Existing equipment will not have any Resistances associated with them."
+      ],
+      "version": "v0.6.0"
+    },
+    "0_7_0": {
+      "bug_fixes": [],
+      "changes": [
+        "Added option to select stress type at the same time as selecting stress size for all stress rolls.",
+        "Added propeties to delves including Resistance, maxResistance, Domains, Tier, Resources, Equipment, Connections, and notes.",
+        "Added N/A as default choice for rolling stress from character sheet for the instances where you roll stress from fallout or other non-roll result reasons. This is functionally the same as 'failure'",
+        "You can now alt-click an equipment roll to decrease the die by one step when rolling with a critical success or other modifier."
+      ],
+      "notes": [
+        "Updated the listeners on actors to be located on the base actor for less repetition of code"
+      ],
+      "version": "v0.7.0"
+    },
+    "0_8_0": {
+      "bug_fixes": [
+        "Use await for delete, confirm item group deletions"
+      ],
+      "changes": [
+        "Strikethrough completed beats on calling sheet.",
+        "Show beat level on character sheet",
+        "Allow editing beat level on beat sheet",
+        "Add button to clear stress after suffering fallout",
+        "Ability to edit Fallout Level and Resistance from Fallout item"
+      ],
+      "notes": [],
+      "version": "v0.8.0"
+    },
+    "0_8_1": {
+      "bug_fixes": [],
+      "changes": [
+        "Added italian translations"
+      ],
+      "notes": [
+        "Thanks to Arcadio21 for providing the italian translations."
+      ],
+      "version": "v0.8.1"
+    },
+    "0_8_2": {
+      "bug_fixes": [
+        "Italian transaction fixes, typo correction, translation for objects attributes"
+      ],
+      "changes": [],
+      "notes": [
+        "Thanks to Arcadio21 again."
+      ],
+      "version": "v0.8.2"
+    },
+    "0_8_3": {
+      "bug_fixes": [
+        "Fix warnings about using deprecated \"name\" instead of \"id\"",
+        "Fix problem with loading compendium entries that have been translated",
+        "Fix dragged compendium items not being having their names translated"
+      ],
+      "changes": [
+        "Dragging compendium items will now result in an immediately translated name"
+      ],
+      "notes": [],
+      "version": "v0.8.3"
+    },
+    "0_8_4": {
+      "bug_fixes": [
+        "Dragging compendium items will no longer accidentally create a duplicate"
+      ],
+      "changes": [],
+      "notes": [],
+      "version": "v0.8.4"
+    },
+    "0_8_5": {
+      "bug_fixes": [
+        "It is once again possible to open items directly from the compendium"
+      ],
+      "changes": [],
+      "notes": [],
+      "version": "v0.8.5"
+    },
+    "0_8_6": {
+      "bug_fixes": [
+        "Fixed updates to children of items not triggering a remote re-render"
+      ],
+      "changes": [],
+      "notes": [],
+      "version": "v0.8.6"
+    },
+    "0_8_7": {
+      "bug_fixes": [],
+      "changes": [
+        "Added an option to ignore protection on stress rolls.",
+        "Users can now click tags and view tag description from preview on character sheet.",
+        "Buttons on top of sheet size more consistently so you don't end up with one long button."
+      ],
+      "notes": [],
+      "version": "v0.8.7"
+    }
+  }
+}

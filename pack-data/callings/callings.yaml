@@ -53,8 +53,7 @@ enlightenment:
   core_ability:
     unorthodox_methods:
       name: "calling.enlightenment.core_ability.unorthodox_methods.name"
-      description: "calling.enlightenment.core_ability.unorthodox_methods.desc\
-        ription"
+      description: "calling.enlightenment.core_ability.unorthodox_methods.description"
   questions:
     - "calling.enlightenment.questions.0"
     - "calling.enlightenment.questions.1"
