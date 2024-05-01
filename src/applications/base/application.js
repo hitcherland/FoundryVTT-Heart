@@ -31,7 +31,7 @@ export default class HeartApplication extends FormApplication {
     
     get title() {
         if(this.constructor.formType !== 'base') {
-            return game.i18n.localize(`heart.applications.${this.constructor.formType}.title`);
+            return game.i18n.localize(`heart.${this.constructor.formType}.title`);
         } else {
             return super.title
         }

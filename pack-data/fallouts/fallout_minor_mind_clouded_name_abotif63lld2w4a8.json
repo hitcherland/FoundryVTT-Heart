@@ -1,0 +1,12 @@
+{
+  "_id": "abotif63lld2w4a8",
+  "name": "fallout.minor.mind.clouded.name",
+  "type": "fallout",
+  "system": {
+    "description": "fallout.minor.mind.clouded.description",
+    "resistance": "mind",
+    "type": "minor"
+  },
+  "effects": [],
+  "_key": "!items!abotif63lld2w4a8"
+}

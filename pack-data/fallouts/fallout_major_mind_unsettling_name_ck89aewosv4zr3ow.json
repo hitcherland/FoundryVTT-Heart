@@ -1,0 +1,12 @@
+{
+  "_id": "ck89aewosv4zr3ow",
+  "name": "fallout.major.mind.unsettling.name",
+  "type": "fallout",
+  "system": {
+    "description": "fallout.major.mind.unsettling.description",
+    "resistance": "mind",
+    "type": "major"
+  },
+  "effects": [],
+  "_key": "!items!ck89aewosv4zr3ow"
+}

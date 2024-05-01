@@ -1,0 +1,12 @@
+{
+  "_id": "9s112xlo8tj2p0yd",
+  "name": "fallout.minor.mind.creepy.name",
+  "type": "fallout",
+  "system": {
+    "description": "fallout.minor.mind.creepy.description",
+    "resistance": "mind",
+    "type": "minor"
+  },
+  "effects": [],
+  "_key": "!items!9s112xlo8tj2p0yd"
+}

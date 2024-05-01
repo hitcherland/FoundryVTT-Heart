@@ -1,0 +1,12 @@
+{
+  "_id": "04tf9wvhhcjstxt6",
+  "name": "fallout.major.fortune.grievance.name",
+  "type": "fallout",
+  "system": {
+    "description": "fallout.major.fortune.grievance.description",
+    "resistance": "fortune",
+    "type": "major"
+  },
+  "effects": [],
+  "_key": "!items!04tf9wvhhcjstxt6"
+}

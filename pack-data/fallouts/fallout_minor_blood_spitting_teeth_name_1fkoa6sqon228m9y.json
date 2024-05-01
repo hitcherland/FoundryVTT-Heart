@@ -1,0 +1,12 @@
+{
+  "_id": "1fkoa6sqon228m9y",
+  "name": "fallout.minor.blood.spitting_teeth.name",
+  "type": "fallout",
+  "system": {
+    "description": "fallout.minor.blood.spitting_teeth.description",
+    "resistance": "blood",
+    "type": "minor"
+  },
+  "effects": [],
+  "_key": "!items!1fkoa6sqon228m9y"
+}

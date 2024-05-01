@@ -1,7 +1,7 @@
 
 {{#> "heart:items/base/preview.html" showActive=showActive}}
     <h4>
-        {{#if showTypeInTitle}}{{localizeHeart "ability" "type" item.system.type}}:{{/if}}
+        {{#if showTypeInTitle}}{{localizeHeart item.system.type}}:{{/if}}
         {{localizeHeart item.name}}
     </h4>
     <div>

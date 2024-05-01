@@ -1,0 +1,12 @@
+{
+  "_id": "jjl8go2hn286hic9",
+  "name": "fallout.major.echo.cult.name",
+  "type": "fallout",
+  "system": {
+    "description": "fallout.major.echo.cult.description",
+    "resistance": "echo",
+    "type": "major"
+  },
+  "effects": [],
+  "_key": "!items!jjl8go2hn286hic9"
+}

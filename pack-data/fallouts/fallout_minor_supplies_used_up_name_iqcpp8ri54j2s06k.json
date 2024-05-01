@@ -1,0 +1,12 @@
+{
+  "_id": "iqcpp8ri54j2s06k",
+  "name": "fallout.minor.supplies.used_up.name",
+  "type": "fallout",
+  "system": {
+    "description": "fallout.minor.supplies.used_up.description",
+    "resistance": "supplies",
+    "type": "minor"
+  },
+  "effects": [],
+  "_key": "!items!iqcpp8ri54j2s06k"
+}

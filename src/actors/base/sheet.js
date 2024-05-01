@@ -125,7 +125,7 @@ export default class HeartActorSheet extends HeartSheetMixin(ActorSheet) {
           item.update({'system.complete': true});
         });
 
-        html.find('[data-item-id] [data-action=uncomplete]').click(async ev => {
+        html.find('[data-item-id] [data-action=incomplete]').click(async ev => {
             const target = $(ev.currentTarget);
             const uuid = target.closest('[data-item-id]').data('itemId');
             const item = await fromUuid(uuid);

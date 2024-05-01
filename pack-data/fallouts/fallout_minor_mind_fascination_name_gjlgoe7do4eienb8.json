@@ -1,0 +1,12 @@
+{
+  "_id": "gjlgoe7do4eienb8",
+  "name": "fallout.minor.mind.fascination.name",
+  "type": "fallout",
+  "system": {
+    "description": "fallout.minor.mind.fascination.description",
+    "resistance": "mind",
+    "type": "minor"
+  },
+  "effects": [],
+  "_key": "!items!gjlgoe7do4eienb8"
+}

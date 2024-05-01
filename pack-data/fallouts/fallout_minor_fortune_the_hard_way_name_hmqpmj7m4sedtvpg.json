@@ -1,0 +1,12 @@
+{
+  "_id": "hmqpmj7m4sedtvpg",
+  "name": "fallout.minor.fortune.the_hard_way.name",
+  "type": "fallout",
+  "system": {
+    "description": "fallout.minor.fortune.the_hard_way.description",
+    "resistance": "fortune",
+    "type": "minor"
+  },
+  "effects": [],
+  "_key": "!items!hmqpmj7m4sedtvpg"
+}

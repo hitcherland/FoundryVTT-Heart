@@ -1,0 +1,12 @@
+{
+  "_id": "k0q8cfg2scaye8vs",
+  "name": "fallout.critical.echo.burst.name",
+  "type": "fallout",
+  "system": {
+    "description": "fallout.critical.echo.burst.description",
+    "resistance": "echo",
+    "type": "critical"
+  },
+  "effects": [],
+  "_key": "!items!k0q8cfg2scaye8vs"
+}

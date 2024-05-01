@@ -1,0 +1,12 @@
+{
+  "_id": "hzxw4rqlkkgcuawz",
+  "name": "fallout.minor.echo.siren_song.name",
+  "type": "fallout",
+  "system": {
+    "description": "fallout.minor.echo.siren_song.description",
+    "resistance": "echo",
+    "type": "minor"
+  },
+  "effects": [],
+  "_key": "!items!hzxw4rqlkkgcuawz"
+}

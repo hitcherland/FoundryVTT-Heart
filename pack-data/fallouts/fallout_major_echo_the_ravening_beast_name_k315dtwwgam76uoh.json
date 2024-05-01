@@ -1,0 +1,12 @@
+{
+  "_id": "k315dtwwgam76uoh",
+  "name": "fallout.major.echo.the_ravening_beast.name",
+  "type": "fallout",
+  "system": {
+    "description": "fallout.major.echo.the_ravening_beast.description",
+    "resistance": "echo",
+    "type": "major"
+  },
+  "effects": [],
+  "_key": "!items!k315dtwwgam76uoh"
+}

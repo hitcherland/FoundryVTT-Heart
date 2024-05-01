@@ -1,12 +1,12 @@
 <form class="heart roll-request grid-2 auto-first-col place-center">
-    <h1 class="wide title-font ">{{localizeHeart "rolls" "roll-request" "label"}}</h1>
-    <label class="title-font">{{localizeHeart "difficulty" "label-single"}}</label>
+    <h1 class="wide title-font ">{{localizeHeart "roll-request"}}</h1>
+    <label class="title-font">{{localizeHeart "difficulty.single"}}</label>
     <div>
         {{localizeHeart "difficulty" difficulty}}
         <input type="hidden" name="difficulty" value="{{difficulty}}"/>
     </div>
 
-    <label class="title-font">{{localizeHeart "skill" "label-single"}}</label>
+    <label class="title-font">{{localizeHeart "skill.single"}}</label>
     {{#if (lt skills.length 2)}}
         {{#if (eq skills.length 1)}}
             <div>
@@ -19,12 +19,12 @@
     {{else}}
     <select name="skill">
         {{#each skills as |skill|}}
-        <option value="{{skill}}">{{localizeHeart "skill" skill}}</option>
+        <option value="{{skill}}">{{localizeHeart skill}}</option>
         {{/each}}
     </select>
     {{/if}}
 
-    <label class="title-font">{{localizeHeart "domain" "label-single"}}</label>
+    <label class="title-font">{{localizeHeart "domain.single"}}</label>
     {{#if (lt domains.length 2)}}
         {{#if (eq domains.length 1)}}
         <div>
@@ -42,10 +42,10 @@
     </select>
     {{/if}}
 
-    <label class="title-font">{{localizeHeart "mastery" "short"}}</label>
+    <label class="title-font">{{localizeHeart "mastery.single"}}</label>
     <input class="invert" type="checkbox" name="mastery"/>
 
-    <label class="title-font">{{localizeHeart "help"}}</label>
+    <label class="title-font">{{localizeHeart "helper.single"}}</label>
     {{#if validHelpers}}
     <select name="helper" multiple>
         {{#each validHelpers as |helper_id|}}

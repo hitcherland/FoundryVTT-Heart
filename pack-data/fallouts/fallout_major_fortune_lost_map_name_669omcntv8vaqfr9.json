@@ -1,0 +1,12 @@
+{
+  "_id": "669omcntv8vaqfr9",
+  "name": "fallout.major.fortune.lost_map.name",
+  "type": "fallout",
+  "system": {
+    "description": "fallout.major.fortune.lost_map.description",
+    "resistance": "fortune",
+    "type": "major"
+  },
+  "effects": [],
+  "_key": "!items!669omcntv8vaqfr9"
+}

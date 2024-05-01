@@ -1,0 +1,12 @@
+{
+  "_id": "9xcx2c2fbx4zko0b",
+  "name": "fallout.major.fortune.crisis.name",
+  "type": "fallout",
+  "system": {
+    "description": "fallout.major.fortune.crisis.description",
+    "resistance": "fortune",
+    "type": "major"
+  },
+  "effects": [],
+  "_key": "!items!9xcx2c2fbx4zko0b"
+}

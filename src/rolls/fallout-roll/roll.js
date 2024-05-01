@@ -18,7 +18,7 @@ export default class FalloutRoll extends Roll {
         const characters = game.actors.filter(x => x.type === 'character');
         return {
             character: {
-                label: game.i18n.localize(`heart.character.label-single`),
+                label: game.i18n.localize(`heart.character.single`),
                 options: characters.reduce((map, char) => {
                     map[char.id] = char.name
                     return map;
@@ -73,7 +73,7 @@ export default class FalloutRoll extends Roll {
         // Execute the roll, if needed
         if (!this._evaluated) await this.evaluate({ async: true });
 
-        const description = game.i18n.format('heart.rolls.fallout-roll.description(totalStress)', {
+        const description = game.i18n.format('heart.fallout-roll-description', {
             totalStress: this.options.totalStress
         });
 

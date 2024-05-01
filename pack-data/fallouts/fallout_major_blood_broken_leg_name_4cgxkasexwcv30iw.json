@@ -1,0 +1,12 @@
+{
+  "_id": "4cgxkasexwcv30iw",
+  "name": "fallout.major.blood.broken_leg.name",
+  "type": "fallout",
+  "system": {
+    "description": "fallout.major.blood.broken_leg.description",
+    "resistance": "blood",
+    "type": "major"
+  },
+  "effects": [],
+  "_key": "!items!4cgxkasexwcv30iw"
+}

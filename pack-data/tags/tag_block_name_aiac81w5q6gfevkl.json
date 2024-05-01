@@ -1,0 +1,10 @@
+{
+  "_id": "aiac81w5q6gfevkl",
+  "name": "tag.block.name",
+  "type": "tag",
+  "system": {
+    "description": "tag.block.description"
+  },
+  "effects": [],
+  "_key": "!items!aiac81w5q6gfevkl"
+}

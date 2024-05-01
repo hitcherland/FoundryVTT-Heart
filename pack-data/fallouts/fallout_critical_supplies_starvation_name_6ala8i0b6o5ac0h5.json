@@ -1,0 +1,12 @@
+{
+  "_id": "6ala8i0b6o5ac0h5",
+  "name": "fallout.critical.supplies.starvation.name",
+  "type": "fallout",
+  "system": {
+    "description": "fallout.critical.supplies.starvation.description",
+    "resistance": "supplies",
+    "type": "critical"
+  },
+  "effects": [],
+  "_key": "!items!6ala8i0b6o5ac0h5"
+}

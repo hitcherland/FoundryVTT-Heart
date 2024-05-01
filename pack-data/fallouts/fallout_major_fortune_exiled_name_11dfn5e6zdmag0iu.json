@@ -1,0 +1,12 @@
+{
+  "_id": "11dfn5e6zdmag0iu",
+  "name": "fallout.major.fortune.exiled.name",
+  "type": "fallout",
+  "system": {
+    "description": "fallout.major.fortune.exiled.description",
+    "resistance": "fortune",
+    "type": "major"
+  },
+  "effects": [],
+  "_key": "!items!11dfn5e6zdmag0iu"
+}

@@ -1,0 +1,12 @@
+{
+  "_id": "adpm109rk2e7yprm",
+  "name": "fallout.minor.supplies.damaged.name",
+  "type": "fallout",
+  "system": {
+    "description": "fallout.minor.supplies.damaged.description",
+    "resistance": "supplies",
+    "type": "minor"
+  },
+  "effects": [],
+  "_key": "!items!adpm109rk2e7yprm"
+}

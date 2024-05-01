@@ -1,0 +1,12 @@
+{
+  "_id": "ilkfpgqpc5978l5x",
+  "name": "fallout.critical.fortune.a_slow_and_insidious_killer.name",
+  "type": "fallout",
+  "system": {
+    "description": "fallout.critical.fortune.a_slow_and_insidious_killer.description",
+    "resistance": "fortune",
+    "type": "critical"
+  },
+  "effects": [],
+  "_key": "!items!ilkfpgqpc5978l5x"
+}

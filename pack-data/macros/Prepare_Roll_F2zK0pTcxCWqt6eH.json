@@ -1,0 +1,21 @@
+{
+  "name": "Prepare Roll",
+  "type": "script",
+  "author": "yVBR839ynJiV8vzd",
+  "img": "systems/heart/assets/d10.svg",
+  "scope": "global",
+  "command": "const msg = (await game.heart.rolls.HeartRoll.build()); msg.toMessage({speaker:{actor:msg.options.character}});",
+  "folder": null,
+  "sort": 0,
+  "permission": {
+    "default": 0,
+    "yVBR839ynJiV8vzd": 3
+  },
+  "flags": {
+    "core": {
+      "sourceId": "Macro.ZBWCHsUOklm4TZVJ"
+    }
+  },
+  "_id": "F2zK0pTcxCWqt6eH",
+  "_key": "!macros!F2zK0pTcxCWqt6eH"
+}

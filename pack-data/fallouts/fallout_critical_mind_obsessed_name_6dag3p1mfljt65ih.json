@@ -1,0 +1,12 @@
+{
+  "_id": "6dag3p1mfljt65ih",
+  "name": "fallout.critical.mind.obsessed.name",
+  "type": "fallout",
+  "system": {
+    "description": "fallout.critical.mind.obsessed.description",
+    "resistance": "mind",
+    "type": "critical"
+  },
+  "effects": [],
+  "_key": "!items!6dag3p1mfljt65ih"
+}

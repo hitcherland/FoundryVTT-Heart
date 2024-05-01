@@ -1,0 +1,12 @@
+{
+  "_id": "7wiclxslvky719qt",
+  "name": "fallout.critical.echo.the_ravening.name",
+  "type": "fallout",
+  "system": {
+    "description": "fallout.critical.echo.the_ravening.description",
+    "resistance": "echo",
+    "type": "critical"
+  },
+  "effects": [],
+  "_key": "!items!7wiclxslvky719qt"
+}

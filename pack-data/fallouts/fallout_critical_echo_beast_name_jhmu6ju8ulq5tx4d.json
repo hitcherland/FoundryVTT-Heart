@@ -1,0 +1,12 @@
+{
+  "_id": "jhmu6ju8ulq5tx4d",
+  "name": "fallout.critical.echo.beast.name",
+  "type": "fallout",
+  "system": {
+    "description": "fallout.critical.echo.beast.description",
+    "resistance": "echo",
+    "type": "critical"
+  },
+  "effects": [],
+  "_key": "!items!jhmu6ju8ulq5tx4d"
+}

@@ -1,0 +1,12 @@
+{
+  "_id": "42aaswdpz1oi05jh",
+  "name": "fallout.minor.fortune.separated.name",
+  "type": "fallout",
+  "system": {
+    "description": "fallout.minor.fortune.separated.description",
+    "resistance": "fortune",
+    "type": "minor"
+  },
+  "effects": [],
+  "_key": "!items!42aaswdpz1oi05jh"
+}

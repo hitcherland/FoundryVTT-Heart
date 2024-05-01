@@ -1,0 +1,12 @@
+{
+  "_id": "jq58fw99cjf06gm6",
+  "name": "fallout.critical.blood.chosen.name",
+  "type": "fallout",
+  "system": {
+    "description": "fallout.critical.blood.chosen.description",
+    "resistance": "blood",
+    "type": "critical"
+  },
+  "effects": [],
+  "_key": "!items!jq58fw99cjf06gm6"
+}

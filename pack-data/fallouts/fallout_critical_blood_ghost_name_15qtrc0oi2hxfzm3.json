@@ -1,0 +1,12 @@
+{
+  "_id": "15qtrc0oi2hxfzm3",
+  "name": "fallout.critical.blood.ghost.name",
+  "type": "fallout",
+  "system": {
+    "description": "fallout.critical.blood.ghost.description",
+    "resistance": "blood",
+    "type": "critical"
+  },
+  "effects": [],
+  "_key": "!items!15qtrc0oi2hxfzm3"
+}

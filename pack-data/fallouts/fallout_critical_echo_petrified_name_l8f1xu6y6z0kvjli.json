@@ -1,0 +1,12 @@
+{
+  "_id": "l8f1xu6y6z0kvjli",
+  "name": "fallout.critical.echo.petrified.name",
+  "type": "fallout",
+  "system": {
+    "description": "fallout.critical.echo.petrified.description",
+    "resistance": "echo",
+    "type": "critical"
+  },
+  "effects": [],
+  "_key": "!items!l8f1xu6y6z0kvjli"
+}

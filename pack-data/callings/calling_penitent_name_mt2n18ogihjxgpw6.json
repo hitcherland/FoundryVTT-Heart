@@ -1,0 +1,334 @@
+{
+  "_id": "mt2n18ogihjxgpw6",
+  "name": "calling.penitent.name",
+  "type": "calling",
+  "system": {
+    "description": "calling.penitent.description",
+    "questions": {
+      "7z0x4stfisd0wg8o": {
+        "question": "calling.penitent.what-marks-your-order-out"
+      },
+      "qhl06jvyub7qozvv": {
+        "question": "calling.penitent.what-evidence-of-your-failings-is-visible"
+      },
+      "l8v2n6z8y0c57yju": {
+        "question": "calling.penitent.how-others-were-involved-at-betrayal"
+      },
+      "y9hww11kj73g75az": {
+        "question": "calling.penitent.what-inspired-this"
+      }
+    },
+    "children": {
+      "rn2nyqwgzmq8px6g": {
+        "_id": "rn2nyqwgzmq8px6g",
+        "name": "ability.core.not_yet.name",
+        "type": "ability",
+        "system": {
+          "active": true,
+          "description": "ability.core.not_yet.description",
+          "type": "core",
+          "children": {}
+        }
+      },
+      "1fw18j0zouetlweu": {
+        "_id": "1fw18j0zouetlweu",
+        "name": "beat.minor.take-minor-blood-fallout",
+        "type": "beat",
+        "system": {
+          "description": "beat.minor.take-minor-blood-fallout",
+          "type": "minor"
+        }
+      },
+      "t5546g9umxsnu0mm": {
+        "_id": "t5546g9umxsnu0mm",
+        "name": "beat.minor.help-someone-vulnerable",
+        "type": "beat",
+        "system": {
+          "description": "beat.minor.help-someone-vulnerable",
+          "type": "minor"
+        }
+      },
+      "sbhakaxxgrisr1kb": {
+        "_id": "sbhakaxxgrisr1kb",
+        "name": "beat.minor.repair-something-physical",
+        "type": "beat",
+        "system": {
+          "description": "beat.minor.repair-something-physical",
+          "type": "minor"
+        }
+      },
+      "1rdonh11vt3u39j1": {
+        "_id": "1rdonh11vt3u39j1",
+        "name": "beat.minor.deescalate-situation",
+        "type": "beat",
+        "system": {
+          "description": "beat.minor.deescalate-situation",
+          "type": "minor"
+        }
+      },
+      "idfzbmrej102z6f4": {
+        "_id": "idfzbmrej102z6f4",
+        "name": "beat.minor.spare-someone-life",
+        "type": "beat",
+        "system": {
+          "description": "beat.minor.spare-someone-life",
+          "type": "minor"
+        }
+      },
+      "0qt6p1szpe39llfe": {
+        "_id": "0qt6p1szpe39llfe",
+        "name": "beat.minor.make-penance-at-important-site",
+        "type": "beat",
+        "system": {
+          "description": "beat.minor.make-penance-at-important-site",
+          "type": "minor"
+        }
+      },
+      "3ntosp70bvde8ukt": {
+        "_id": "3ntosp70bvde8ukt",
+        "name": "beat.minor.punish-an-NPC",
+        "type": "beat",
+        "system": {
+          "description": "beat.minor.punish-an-NPC",
+          "type": "minor"
+        }
+      },
+      "wq6ep7ukvxba40du": {
+        "_id": "wq6ep7ukvxba40du",
+        "name": "beat.minor.meet-NPC-who-hates-you",
+        "type": "beat",
+        "system": {
+          "description": "beat.minor.meet-NPC-who-hates-you",
+          "type": "minor"
+        }
+      },
+      "po29y6rc2n8d2m9g": {
+        "_id": "po29y6rc2n8d2m9g",
+        "name": "beat.minor.Perform-act-in-service-to-order",
+        "type": "beat",
+        "system": {
+          "description": "beat.minor.Perform-act-in-service-to-order",
+          "type": "minor"
+        }
+      },
+      "fzftghebuds5n9u4": {
+        "_id": "fzftghebuds5n9u4",
+        "name": "beat.minor.bring-bodily-harm",
+        "type": "beat",
+        "system": {
+          "description": "beat.minor.bring-bodily-harm",
+          "type": "minor"
+        }
+      },
+      "wbt4pxbxiz65to85": {
+        "_id": "wbt4pxbxiz65to85",
+        "name": "beat.minor.sabotage-the-assets",
+        "type": "beat",
+        "system": {
+          "description": "beat.minor.sabotage-the-assets",
+          "type": "minor"
+        }
+      },
+      "gjqey3zs9tb2h4uy": {
+        "_id": "gjqey3zs9tb2h4uy",
+        "name": "beat.minor.establish-connection-important-to-order",
+        "type": "beat",
+        "system": {
+          "description": "beat.minor.establish-connection-important-to-order",
+          "type": "minor"
+        }
+      },
+      "qnnlkou92mgvf1k7": {
+        "_id": "qnnlkou92mgvf1k7",
+        "name": "beat.minor.witness-extent-of-your-failings",
+        "type": "beat",
+        "system": {
+          "description": "beat.minor.witness-extent-of-your-failings",
+          "type": "minor"
+        }
+      },
+      "mwu0fky0vypanw3r": {
+        "_id": "mwu0fky0vypanw3r",
+        "name": "beat.minor.donate-needed-supplies",
+        "type": "beat",
+        "system": {
+          "description": "beat.minor.donate-needed-supplies",
+          "type": "minor"
+        }
+      },
+      "2nzzbtg0zhcxcmzv": {
+        "_id": "2nzzbtg0zhcxcmzv",
+        "name": "beat.minor.teach-someone",
+        "type": "beat",
+        "system": {
+          "description": "beat.minor.teach-someone",
+          "type": "minor"
+        }
+      },
+      "5w7udefnclxnc1ol": {
+        "_id": "5w7udefnclxnc1ol",
+        "name": "beat.minor.put-yourself-in-great-danger",
+        "type": "beat",
+        "system": {
+          "description": "beat.minor.put-yourself-in-great-danger",
+          "type": "minor"
+        }
+      },
+      "bk5nokam9bbz4a5g": {
+        "_id": "bk5nokam9bbz4a5g",
+        "name": "beat.minor.make-reparations-to-an-NPC",
+        "type": "beat",
+        "system": {
+          "description": "beat.minor.make-reparations-to-an-NPC",
+          "type": "minor"
+        }
+      },
+      "jbedpn7xyvl3n2jo": {
+        "_id": "jbedpn7xyvl3n2jo",
+        "name": "beat.minor.do-something-order-would-frown-upon",
+        "type": "beat",
+        "system": {
+          "description": "beat.minor.do-something-order-would-frown-upon",
+          "type": "minor"
+        }
+      },
+      "u3wj87jqtdagoqx3": {
+        "_id": "u3wj87jqtdagoqx3",
+        "name": "beat.minor.rescue-NPC-belonging-to-order",
+        "type": "beat",
+        "system": {
+          "description": "beat.minor.rescue-NPC-belonging-to-order",
+          "type": "minor"
+        }
+      },
+      "4lyzr4i5yhy5xhti": {
+        "_id": "4lyzr4i5yhy5xhti",
+        "name": "beat.minor.openly-attack-enemies-of-order",
+        "type": "beat",
+        "system": {
+          "description": "beat.minor.openly-attack-enemies-of-order",
+          "type": "minor"
+        }
+      },
+      "g9jsly1kdpjhih90": {
+        "_id": "g9jsly1kdpjhih90",
+        "name": "beat.minor.refuse-desirable-offer",
+        "type": "beat",
+        "system": {
+          "description": "beat.minor.refuse-desirable-offer",
+          "type": "minor"
+        }
+      },
+      "22e7qv82br88s2w2": {
+        "_id": "22e7qv82br88s2w2",
+        "name": "beat.major.take-major-blood-fallout",
+        "type": "beat",
+        "system": {
+          "description": "beat.major.take-major-blood-fallout",
+          "type": "major"
+        }
+      },
+      "44gdu4awl49epv7k": {
+        "_id": "44gdu4awl49epv7k",
+        "name": "beat.major.convert-important-NPC",
+        "type": "beat",
+        "system": {
+          "description": "beat.major.convert-important-NPC",
+          "type": "major"
+        }
+      },
+      "nxt4i76rl0ff3ap3": {
+        "_id": "nxt4i76rl0ff3ap3",
+        "name": "beat.major.establish-continual-connections",
+        "type": "beat",
+        "system": {
+          "description": "beat.major.establish-continual-connections",
+          "type": "major"
+        }
+      },
+      "iklu6bik2vllyymg": {
+        "_id": "iklu6bik2vllyymg",
+        "name": "beat.major.perform-an-act-undo-penance",
+        "type": "beat",
+        "system": {
+          "description": "beat.major.perform-an-act-undo-penance",
+          "type": "major"
+        }
+      },
+      "ys7sdxwng4gdxkzd": {
+        "_id": "ys7sdxwng4gdxkzd",
+        "name": "beat.major.betray-someone",
+        "type": "beat",
+        "system": {
+          "description": "beat.major.betray-someone",
+          "type": "major"
+        }
+      },
+      "dvqa28yhvmkus6k2": {
+        "_id": "dvqa28yhvmkus6k2",
+        "name": "beat.major.save-landmark",
+        "type": "beat",
+        "system": {
+          "description": "beat.major.save-landmark",
+          "type": "major"
+        }
+      },
+      "u4ivi77vb3jyl6jv": {
+        "_id": "u4ivi77vb3jyl6jv",
+        "name": "beat.major.attack-the-enemies-of-order",
+        "type": "beat",
+        "system": {
+          "description": "beat.major.attack-the-enemies-of-order",
+          "type": "major"
+        }
+      },
+      "ckopeenc90ktzp3i": {
+        "_id": "ckopeenc90ktzp3i",
+        "name": "beat.major.eliminate-enemy-faction",
+        "type": "beat",
+        "system": {
+          "description": "beat.major.eliminate-enemy-faction",
+          "type": "major"
+        }
+      },
+      "xh1c43atsaha41im": {
+        "_id": "xh1c43atsaha41im",
+        "name": "beat.major.your-order-suffers-devastating-setback",
+        "type": "beat",
+        "system": {
+          "description": "beat.major.your-order-suffers-devastating-setback",
+          "type": "major"
+        }
+      },
+      "0tojx6fwlw4etq7s": {
+        "_id": "0tojx6fwlw4etq7s",
+        "name": "beat.major.perform-an-undesirable-task",
+        "type": "beat",
+        "system": {
+          "description": "beat.major.perform-an-undesirable-task",
+          "type": "major"
+        }
+      },
+      "qok38ku6lth0vqw6": {
+        "_id": "qok38ku6lth0vqw6",
+        "name": "beat.zenith.be-truly-absolved-of-your-sins",
+        "type": "beat",
+        "system": {
+          "description": "beat.zenith.be-truly-absolved-of-your-sins",
+          "type": "zenith"
+        }
+      },
+      "fxk6jqg93d4xcm8w": {
+        "_id": "fxk6jqg93d4xcm8w",
+        "name": "beat.zenith.betray-your-order",
+        "type": "beat",
+        "system": {
+          "description": "beat.zenith.betray-your-order",
+          "type": "zenith"
+        }
+      }
+    }
+  },
+  "effects": [],
+  "_key": "!items!mt2n18ogihjxgpw6"
+}

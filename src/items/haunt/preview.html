@@ -2,23 +2,23 @@
     <h4>
         {{localizeHeart item.name}}
     </h4>
-    <div class="section {{localizeHeart haunt upgradeTrack 'label-single'}}">
+    <div class="section {{localizeHeart haunt upgradeTrack 'single'}}">
         <h4>
-            {{localizeHeart "haunt" "upgradeTrack" "label-single"}}
+            {{localizeHeart "upgradeTrack.single"}}
             <div class="right">
-                <a data-action="upgrade" data-type="haunt"><span class="fas fa-level-up-alt"></span>{{localizeHeart "haunt" "upgrade"}}</a>
-                <a data-action="downgrade" data-type="haunt"><span class="fas fa-level-down-alt"></span>{{localizeHeart "haunt" "downgrade"}}</a>
+                <a data-action="upgrade" data-type="haunt"><span class="fas fa-level-up-alt"></span>{{localizeHeart "upgrade"}}</a>
+                <a data-action="downgrade" data-type="haunt"><span class="fas fa-level-down-alt"></span>{{localizeHeart "downgrade"}}</a>
             </div>
         </h4>
         <div class="red" data-target='system.upgradeTrack'>{{{ordered-checkable item.system.upgradeTrack 6}}}</div>
     </div>
     
-    <div class="section {{localizeHeart haunt service 'label-multiple'}}">
+    <div class="section {{localizeHeart haunt service 'multiple'}}">
         <h4>
             {{#if overrideTitle}}
             {{overrideTitle}}
             {{else}}
-            {{localizeHeart "haunt" "service" "label-multiple"}}
+            {{localizeHeart "service.multiple"}}
             {{/if}}
             <div class="right">
                 <a data-action="add-service" data-type="service"><span class="fas fa-plus"></span></a>

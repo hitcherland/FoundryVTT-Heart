@@ -1,0 +1,561 @@
+{
+  "_id": "8zdo29fqu87kjd7c",
+  "name": "class.witch.name",
+  "type": "class",
+  "system": {
+    "description": "class.witch.description",
+    "core_domain": "occult",
+    "core_skill": "compel",
+    "equipment_groups": [
+      "group_1",
+      "group_2",
+      "group_3"
+    ],
+    "children": {
+      "tti8gxdoztby82ra": {
+        "_id": "tti8gxdoztby82ra",
+        "type": "resource",
+        "name": "resource.tattered_finery",
+        "system": {
+          "active": true,
+          "die_size": "d6",
+          "domain": "haven",
+          "children": {}
+        }
+      },
+      "amb4472cylm66sqs": {
+        "_id": "amb4472cylm66sqs",
+        "name": "ability.core.crucible.name",
+        "type": "ability",
+        "system": {
+          "active": true,
+          "description": "ability.core.crucible.description",
+          "type": "core",
+          "children": {}
+        }
+      },
+      "da1nm9sdn2pugy2d": {
+        "_id": "da1nm9sdn2pugy2d",
+        "name": "ability.core.true_form.name",
+        "type": "ability",
+        "system": {
+          "active": true,
+          "description": "ability.core.true_form.description",
+          "type": "core",
+          "children": {}
+        }
+      },
+      "ez1yjasbj662pu5j": {
+        "_id": "ez1yjasbj662pu5j",
+        "name": "ability.minor.a_mind_of_many_doorways.name",
+        "type": "ability",
+        "system": {
+          "active": false,
+          "description": "ability.minor.a_mind_of_many_doorways.description",
+          "type": "minor",
+          "children": {}
+        }
+      },
+      "opern6bnx7rmq3xo": {
+        "_id": "opern6bnx7rmq3xo",
+        "name": "ability.minor.blood_quiet.name",
+        "type": "ability",
+        "system": {
+          "active": false,
+          "description": "ability.minor.blood_quiet.description",
+          "type": "minor",
+          "children": {}
+        }
+      },
+      "90z9w5moadb4tbo3": {
+        "_id": "90z9w5moadb4tbo3",
+        "name": "ability.minor.books_of_lore.name",
+        "type": "ability",
+        "system": {
+          "active": false,
+          "description": "ability.minor.books_of_lore.description",
+          "type": "minor",
+          "children": {}
+        }
+      },
+      "3qalzvmdkqgjc8qg": {
+        "_id": "3qalzvmdkqgjc8qg",
+        "name": "ability.minor.charms_and_wards.name",
+        "type": "ability",
+        "system": {
+          "active": false,
+          "description": "ability.minor.charms_and_wards.description",
+          "type": "minor",
+          "children": {}
+        }
+      },
+      "iqncyy7n72byztv9": {
+        "_id": "iqncyy7n72byztv9",
+        "name": "ability.minor.distinguished_lineage.name",
+        "type": "ability",
+        "system": {
+          "active": false,
+          "description": "ability.minor.distinguished_lineage.description",
+          "type": "minor",
+          "children": {}
+        }
+      },
+      "di9nbv4rp5ex9hnk": {
+        "_id": "di9nbv4rp5ex9hnk",
+        "name": "ability.minor.divinity.name",
+        "type": "ability",
+        "system": {
+          "active": false,
+          "description": "ability.minor.divinity.description",
+          "type": "minor",
+          "children": {}
+        }
+      },
+      "3uqbb02s03a7s997": {
+        "_id": "3uqbb02s03a7s997",
+        "name": "ability.minor.heart_wise.name",
+        "type": "ability",
+        "system": {
+          "active": false,
+          "description": "ability.minor.heart_wise.description",
+          "type": "minor",
+          "children": {}
+        }
+      },
+      "5938069q10sqjbsk": {
+        "_id": "5938069q10sqjbsk",
+        "name": "ability.minor.implacable.name",
+        "type": "ability",
+        "system": {
+          "active": false,
+          "description": "ability.minor.implacable.description",
+          "type": "minor",
+          "children": {}
+        }
+      },
+      "phmv623ciuhjue9c": {
+        "_id": "phmv623ciuhjue9c",
+        "name": "ability.minor.the_old_blood.name",
+        "type": "ability",
+        "system": {
+          "active": false,
+          "description": "ability.minor.the_old_blood.description",
+          "type": "minor",
+          "children": {}
+        }
+      },
+      "mvjcb4aybbir5igu": {
+        "_id": "mvjcb4aybbir5igu",
+        "name": "ability.minor.ramblewyrd.name",
+        "type": "ability",
+        "system": {
+          "active": false,
+          "description": "ability.minor.ramblewyrd.description",
+          "type": "minor",
+          "children": {}
+        }
+      },
+      "3sajpup68xo1rxfe": {
+        "_id": "3sajpup68xo1rxfe",
+        "name": "ability.minor.red_dominion.name",
+        "type": "ability",
+        "system": {
+          "active": false,
+          "description": "ability.minor.red_dominion.description",
+          "type": "minor",
+          "children": {}
+        }
+      },
+      "zbidse48objdwiuy": {
+        "_id": "zbidse48objdwiuy",
+        "name": "ability.minor.wild_witch.name",
+        "type": "ability",
+        "system": {
+          "active": false,
+          "description": "ability.minor.wild_witch.description",
+          "type": "minor",
+          "children": {}
+        }
+      },
+      "dn63cmahahjpyz0m": {
+        "_id": "dn63cmahahjpyz0m",
+        "name": "ability.minor.witch_spit.name",
+        "type": "ability",
+        "system": {
+          "active": false,
+          "description": "ability.minor.witch_spit.description",
+          "type": "minor",
+          "children": {}
+        }
+      },
+      "02hblhp1ryw9v80q": {
+        "_id": "02hblhp1ryw9v80q",
+        "name": "ability.major.ascendancy.name",
+        "type": "ability",
+        "system": {
+          "active": false,
+          "description": "ability.major.ascendancy.description",
+          "type": "major",
+          "children": {
+            "ak6pn99yu08bm1it": {
+              "_id": "ak6pn99yu08bm1it",
+              "name": "ability.minor.bypass.name",
+              "type": "ability",
+              "system": {
+                "active": false,
+                "description": "ability.minor.bypass.description",
+                "type": "minor",
+                "children": {}
+              }
+            },
+            "5za3iruwmyoblb1f": {
+              "_id": "5za3iruwmyoblb1f",
+              "name": "ability.minor.blood_calls_for_blood.name",
+              "type": "ability",
+              "system": {
+                "active": false,
+                "description": "ability.minor.blood_calls_for_blood.description",
+                "type": "minor",
+                "children": {}
+              }
+            },
+            "xp31bgcnv3j8qv3q": {
+              "_id": "xp31bgcnv3j8qv3q",
+              "name": "ability.minor.refuge.name",
+              "type": "ability",
+              "system": {
+                "active": false,
+                "description": "ability.minor.refuge.description",
+                "type": "minor",
+                "children": {}
+              }
+            }
+          }
+        }
+      },
+      "fvtfrnoiim8lukwq": {
+        "_id": "fvtfrnoiim8lukwq",
+        "name": "ability.major.crimson_mirror.name",
+        "type": "ability",
+        "system": {
+          "active": false,
+          "description": "ability.major.crimson_mirror.description",
+          "type": "major",
+          "children": {
+            "0aj8s4i2ac1t66dh": {
+              "_id": "0aj8s4i2ac1t66dh",
+              "name": "ability.minor.shared_visions.name",
+              "type": "ability",
+              "system": {
+                "active": false,
+                "description": "ability.minor.shared_visions.description",
+                "type": "minor",
+                "children": {}
+              }
+            },
+            "n4lijip5lx2tul74": {
+              "_id": "n4lijip5lx2tul74",
+              "name": "ability.minor.scarlet_insight.name",
+              "type": "ability",
+              "system": {
+                "active": false,
+                "description": "ability.minor.scarlet_insight.description",
+                "type": "minor",
+                "children": {}
+              }
+            },
+            "vfcm7p75r3j3qyf8": {
+              "_id": "vfcm7p75r3j3qyf8",
+              "name": "ability.minor.dire_portents.name",
+              "type": "ability",
+              "system": {
+                "active": false,
+                "description": "ability.minor.dire_portents.description",
+                "type": "minor",
+                "children": {}
+              }
+            }
+          }
+        }
+      },
+      "y7pxvt6upw9bfn17": {
+        "_id": "y7pxvt6upw9bfn17",
+        "name": "ability.major.exsanguinate.name",
+        "type": "ability",
+        "system": {
+          "active": false,
+          "description": "ability.major.exsanguinate.description",
+          "type": "major",
+          "children": {
+            "um0443mtvlme4uyc": {
+              "_id": "um0443mtvlme4uyc",
+              "name": "ability.minor.retch.name",
+              "type": "ability",
+              "system": {
+                "active": false,
+                "description": "ability.minor.retch.description",
+                "type": "minor",
+                "children": {}
+              }
+            },
+            "n7eopto4a1b5wmmm": {
+              "_id": "n7eopto4a1b5wmmm",
+              "name": "ability.minor.maestro.name",
+              "type": "ability",
+              "system": {
+                "active": false,
+                "description": "ability.minor.maestro.description",
+                "type": "minor",
+                "children": {}
+              }
+            },
+            "zcn95j5g8ganyswo": {
+              "_id": "zcn95j5g8ganyswo",
+              "name": "ability.minor.as_above_so_below.name",
+              "type": "ability",
+              "system": {
+                "active": false,
+                "description": "ability.minor.as_above_so_below.description",
+                "type": "minor",
+                "children": {}
+              }
+            }
+          }
+        }
+      },
+      "earzb03k2ahvaga6": {
+        "_id": "earzb03k2ahvaga6",
+        "name": "ability.major.familiar.name",
+        "type": "ability",
+        "system": {
+          "active": false,
+          "description": "ability.major.familiar.description",
+          "type": "major",
+          "children": {
+            "lyrxbvj1gn7agr53": {
+              "_id": "lyrxbvj1gn7agr53",
+              "name": "ability.minor.resilient.name",
+              "type": "ability",
+              "system": {
+                "active": false,
+                "description": "ability.minor.resilient.description",
+                "type": "minor",
+                "children": {}
+              }
+            },
+            "qvzkcjswouc5bkgc": {
+              "_id": "qvzkcjswouc5bkgc",
+              "name": "ability.minor.hungry.name",
+              "type": "ability",
+              "system": {
+                "active": false,
+                "description": "ability.minor.hungry.description",
+                "type": "minor",
+                "children": {}
+              }
+            },
+            "is085u502c4rsof6": {
+              "_id": "is085u502c4rsof6",
+              "name": "ability.minor.curious.name",
+              "type": "ability",
+              "system": {
+                "active": false,
+                "description": "ability.minor.curious.description",
+                "type": "minor",
+                "children": {}
+              }
+            }
+          }
+        }
+      },
+      "kuran4bs5ka90rt1": {
+        "_id": "kuran4bs5ka90rt1",
+        "name": "ability.major.great_and_terrible.name",
+        "type": "ability",
+        "system": {
+          "active": false,
+          "description": "ability.major.great_and_terrible.description",
+          "type": "major",
+          "children": {
+            "3z8din8du3oobxqk": {
+              "_id": "3z8din8du3oobxqk",
+              "name": "ability.minor.enthrall.name",
+              "type": "ability",
+              "system": {
+                "active": false,
+                "description": "ability.minor.enthrall.description",
+                "type": "minor",
+                "children": {}
+              }
+            },
+            "5jmawn8sbotb9it4": {
+              "_id": "5jmawn8sbotb9it4",
+              "name": "ability.minor.sacred_object.name",
+              "type": "ability",
+              "system": {
+                "active": false,
+                "description": "ability.minor.sacred_object.description",
+                "type": "minor",
+                "children": {}
+              }
+            },
+            "95ks70rnmdrqjh7d": {
+              "_id": "95ks70rnmdrqjh7d",
+              "name": "ability.minor.union.name",
+              "type": "ability",
+              "system": {
+                "active": false,
+                "description": "ability.minor.union.description",
+                "type": "minor",
+                "children": {}
+              }
+            }
+          }
+        }
+      },
+      "yryvnagyutltqtb3": {
+        "_id": "yryvnagyutltqtb3",
+        "name": "ability.major.lair.name",
+        "type": "ability",
+        "system": {
+          "active": false,
+          "description": "ability.major.lair.description",
+          "type": "major",
+          "children": {
+            "exwzw52tuxlxa8sw": {
+              "_id": "exwzw52tuxlxa8sw",
+              "name": "ability.minor.calm.name",
+              "type": "ability",
+              "system": {
+                "active": false,
+                "description": "ability.minor.calm.description",
+                "type": "minor",
+                "children": {}
+              }
+            },
+            "ucbowu62eten4irp": {
+              "_id": "ucbowu62eten4irp",
+              "name": "ability.minor.rule.name",
+              "type": "ability",
+              "system": {
+                "active": false,
+                "description": "ability.minor.rule.description",
+                "type": "minor",
+                "children": {}
+              }
+            },
+            "pswhk1mk41ijvh3r": {
+              "_id": "pswhk1mk41ijvh3r",
+              "name": "ability.minor.feed.name",
+              "type": "ability",
+              "system": {
+                "active": false,
+                "description": "ability.minor.feed.description",
+                "type": "minor",
+                "children": {}
+              }
+            }
+          }
+        }
+      },
+      "3gculpr83k3w8r7s": {
+        "_id": "3gculpr83k3w8r7s",
+        "name": "ability.zenith.final_form.name",
+        "type": "ability",
+        "system": {
+          "active": false,
+          "description": "ability.zenith.final_form.description",
+          "type": "zenith",
+          "children": {}
+        }
+      },
+      "da7axi20o738tsi6": {
+        "_id": "da7axi20o738tsi6",
+        "name": "ability.zenith.perfect_resurrection.name",
+        "type": "ability",
+        "system": {
+          "active": false,
+          "description": "ability.zenith.perfect_resurrection.description",
+          "type": "zenith",
+          "children": {}
+        }
+      },
+      "kknwtk74vvetjj2u": {
+        "_id": "kknwtk74vvetjj2u",
+        "name": "ability.zenith.the_red_queen.name",
+        "type": "ability",
+        "system": {
+          "active": false,
+          "description": "ability.zenith.the_red_queen.description",
+          "type": "zenith",
+          "children": {}
+        }
+      },
+      "pawjr1o4cbjjfmai": {
+        "_id": "pawjr1o4cbjjfmai",
+        "name": "equipment.sacred_blade",
+        "type": "equipment",
+        "system": {
+          "type": "kill",
+          "die_size": "d6",
+          "group": "group_1",
+          "children": {
+            "wdrxtlzkz588utyw": {
+              "_id": "wdrxtlzkz588utyw",
+              "name": "tag.bloodbound.name",
+              "type": "tag",
+              "system": {
+                "description": "tag.bloodbound.description"
+              },
+              "_key": "!items!ibr49xbr88q1kds2"
+            }
+          }
+        }
+      },
+      "gz6nwtie1mo1tukb": {
+        "_id": "gz6nwtie1mo1tukb",
+        "name": "equipment.goats_leg_carbine",
+        "type": "equipment",
+        "system": {
+          "type": "kill",
+          "die_size": "d6",
+          "group": "group_2",
+          "children": {
+            "ck9oq9n0fgw8g13h": {
+              "_id": "ck9oq9n0fgw8g13h",
+              "name": "tag.ranged.name",
+              "type": "tag",
+              "system": {
+                "description": "tag.ranged.description"
+              },
+              "_key": "!items!a5gv5zgvp4uo6yps"
+            },
+            "fasqq3sdzbbqrqrx": {
+              "_id": "fasqq3sdzbbqrqrx",
+              "name": "tag.reload.name",
+              "type": "tag",
+              "system": {
+                "description": "tag.reload.description"
+              },
+              "_key": "!items!e0aw9cbtedch5kuz"
+            }
+          }
+        }
+      },
+      "t8jd5baa7drwfw5w": {
+        "_id": "t8jd5baa7drwfw5w",
+        "name": "equipment.physikers_bag",
+        "type": "equipment",
+        "system": {
+          "type": "mend",
+          "die_size": "d6",
+          "group": "group_3",
+          "resistances": "blood",
+          "children": {}
+        }
+      }
+    }
+  },
+  "effects": [],
+  "_key": "!items!8zdo29fqu87kjd7c"
+}

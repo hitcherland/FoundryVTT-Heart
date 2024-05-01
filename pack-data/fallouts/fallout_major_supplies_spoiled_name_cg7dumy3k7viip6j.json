@@ -1,0 +1,12 @@
+{
+  "_id": "cg7dumy3k7viip6j",
+  "name": "fallout.major.supplies.spoiled.name",
+  "type": "fallout",
+  "system": {
+    "description": "fallout.major.supplies.spoiled.description",
+    "resistance": "supplies",
+    "type": "major"
+  },
+  "effects": [],
+  "_key": "!items!cg7dumy3k7viip6j"
+}

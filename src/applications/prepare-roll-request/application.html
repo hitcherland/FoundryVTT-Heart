@@ -1,13 +1,13 @@
 {{#> "heart:applications/base/application.html" type="prepare-roll-request"}}
 <label>
-    {{localizeHeart "difficulty" "label-single"}}
+    {{localizeHeart "difficulty.single"}}
 </label>
 <select name="difficulty">
     {{selectOptions difficulties}}
 </select>
 
 <label>
-    {{localizeHeart "character" "label-multiple"}}
+    {{localizeHeart "character.multiple"}}
 </label>
 <div class="options">
     {{#each characters as |character char_id|}}
@@ -21,7 +21,7 @@
 </div>
 
 <label>
-    {{localizeHeart "skill" "label-multiple"}}
+    {{localizeHeart "skill.multiple"}}
 </label>
 <div class="options">
     {{#each skills as |skill name|}}
@@ -36,7 +36,7 @@
 
 
 <label>
-    {{localizeHeart "domain" "label-multiple"}}
+    {{localizeHeart "domain.multiple"}}
 </label>
 <div class="options">
     {{#each domains as |domain name|}}
@@ -50,7 +50,7 @@
 </div>
 
 <label>
-    {{localizeHeart "character" "label-valid-helpers"}}
+    {{localizeHeart "valid-helpers"}}
 </label>
 <div class="options">
     {{#each characters as |character char_id|}}

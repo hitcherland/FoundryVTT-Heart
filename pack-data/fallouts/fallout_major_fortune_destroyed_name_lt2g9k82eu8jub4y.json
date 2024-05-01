@@ -1,0 +1,12 @@
+{
+  "_id": "lt2g9k82eu8jub4y",
+  "name": "fallout.major.fortune.destroyed.name",
+  "type": "fallout",
+  "system": {
+    "description": "fallout.major.fortune.destroyed.description",
+    "resistance": "fortune",
+    "type": "major"
+  },
+  "effects": [],
+  "_key": "!items!lt2g9k82eu8jub4y"
+}

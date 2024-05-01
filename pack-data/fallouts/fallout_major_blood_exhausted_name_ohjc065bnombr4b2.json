@@ -1,0 +1,12 @@
+{
+  "_id": "ohjc065bnombr4b2",
+  "name": "fallout.major.blood.exhausted.name",
+  "type": "fallout",
+  "system": {
+    "description": "fallout.major.blood.exhausted.description",
+    "resistance": "blood",
+    "type": "major"
+  },
+  "effects": [],
+  "_key": "!items!ohjc065bnombr4b2"
+}

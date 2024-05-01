@@ -1,0 +1,12 @@
+{
+  "_id": "0lzxarw7jdf0jm9u",
+  "name": "fallout.major.supplies.no_rations.name",
+  "type": "fallout",
+  "system": {
+    "description": "fallout.major.supplies.no_rations.description",
+    "resistance": "supplies",
+    "type": "major"
+  },
+  "effects": [],
+  "_key": "!items!0lzxarw7jdf0jm9u"
+}

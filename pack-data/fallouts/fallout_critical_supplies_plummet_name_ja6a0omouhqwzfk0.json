@@ -1,0 +1,12 @@
+{
+  "_id": "ja6a0omouhqwzfk0",
+  "name": "fallout.critical.supplies.plummet.name",
+  "type": "fallout",
+  "system": {
+    "description": "fallout.critical.supplies.plummet.description",
+    "resistance": "supplies",
+    "type": "critical"
+  },
+  "effects": [],
+  "_key": "!items!ja6a0omouhqwzfk0"
+}

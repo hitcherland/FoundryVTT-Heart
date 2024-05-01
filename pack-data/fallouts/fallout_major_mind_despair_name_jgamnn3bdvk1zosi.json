@@ -1,0 +1,12 @@
+{
+  "_id": "jgamnn3bdvk1zosi",
+  "name": "fallout.major.mind.despair.name",
+  "type": "fallout",
+  "system": {
+    "description": "fallout.major.mind.despair.description",
+    "resistance": "mind",
+    "type": "major"
+  },
+  "effects": [],
+  "_key": "!items!jgamnn3bdvk1zosi"
+}

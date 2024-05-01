@@ -1,4 +1,4 @@
-{{{localize "heart.dialog.content(VERSION)" VERSION=version}}}
+{{{localize "heart.startup.description" VERSION=version}}}
 <h2>{{localizeHeart "changelog"}}</h2>
 
 <nav class="tabs version-tabs" data-group="version-tabs">
@@ -10,7 +10,7 @@
     {{#each versions as |version|}}
     <div class="tab" data-tab="{{version.version}}" data-group="version-tabs">
         {{#if version.changes}}
-        <h3>{{localizeHeart "version" "changes"}}</h3>
+        <h3>{{localizeHeart "changes"}}</h3>
         <ul>
             {{#each version.changes as |change|}}
             <li>{{change}}</li>
@@ -18,7 +18,7 @@
         </ul>
         {{/if}}
         {{#if version.bug_fixes}}
-        <h3>{{localizeHeart "version" "bug_fixes"}}</h3>
+        <h3>{{localizeHeart "bug_fixes"}}</h3>
         <ul>
             {{#each version.bug_fixes as |bug_fix|}}
             <li>{{bug_fix}}</li>

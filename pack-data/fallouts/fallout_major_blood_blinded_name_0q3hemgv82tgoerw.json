@@ -1,0 +1,12 @@
+{
+  "_id": "0q3hemgv82tgoerw",
+  "name": "fallout.major.blood.blinded.name",
+  "type": "fallout",
+  "system": {
+    "description": "fallout.major.blood.blinded.description",
+    "resistance": "blood",
+    "type": "major"
+  },
+  "effects": [],
+  "_key": "!items!0q3hemgv82tgoerw"
+}

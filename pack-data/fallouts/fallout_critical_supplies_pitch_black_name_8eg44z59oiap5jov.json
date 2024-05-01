@@ -1,0 +1,12 @@
+{
+  "_id": "8eg44z59oiap5jov",
+  "name": "fallout.critical.supplies.pitch_black.name",
+  "type": "fallout",
+  "system": {
+    "description": "fallout.critical.supplies.pitch_black.description",
+    "resistance": "supplies",
+    "type": "critical"
+  },
+  "effects": [],
+  "_key": "!items!8eg44z59oiap5jov"
+}

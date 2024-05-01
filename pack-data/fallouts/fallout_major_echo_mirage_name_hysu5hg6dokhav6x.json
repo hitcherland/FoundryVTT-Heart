@@ -1,0 +1,12 @@
+{
+  "_id": "hysu5hg6dokhav6x",
+  "name": "fallout.major.echo.mirage.name",
+  "type": "fallout",
+  "system": {
+    "description": "fallout.major.echo.mirage.description",
+    "resistance": "echo",
+    "type": "major"
+  },
+  "effects": [],
+  "_key": "!items!hysu5hg6dokhav6x"
+}

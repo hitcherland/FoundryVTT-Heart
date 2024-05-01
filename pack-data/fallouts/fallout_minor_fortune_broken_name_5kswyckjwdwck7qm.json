@@ -1,0 +1,12 @@
+{
+  "_id": "5kswyckjwdwck7qm",
+  "name": "fallout.minor.fortune.broken.name",
+  "type": "fallout",
+  "system": {
+    "description": "fallout.minor.fortune.broken.description",
+    "resistance": "fortune",
+    "type": "minor"
+  },
+  "effects": [],
+  "_key": "!items!5kswyckjwdwck7qm"
+}

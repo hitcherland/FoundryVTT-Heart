@@ -1,0 +1,12 @@
+{
+  "_id": "itq6ru9zd5ipt0bd",
+  "name": "fallout.major.mind.memory_holes.name",
+  "type": "fallout",
+  "system": {
+    "description": "fallout.major.mind.memory_holes.description",
+    "resistance": "mind",
+    "type": "major"
+  },
+  "effects": [],
+  "_key": "!items!itq6ru9zd5ipt0bd"
+}

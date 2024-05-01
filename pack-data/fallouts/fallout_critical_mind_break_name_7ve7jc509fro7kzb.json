@@ -1,0 +1,12 @@
+{
+  "_id": "7ve7jc509fro7kzb",
+  "name": "fallout.critical.mind.break.name",
+  "type": "fallout",
+  "system": {
+    "description": "fallout.critical.mind.break.description",
+    "resistance": "mind",
+    "type": "critical"
+  },
+  "effects": [],
+  "_key": "!items!7ve7jc509fro7kzb"
+}

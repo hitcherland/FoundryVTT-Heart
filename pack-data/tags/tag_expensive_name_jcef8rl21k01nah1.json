@@ -1,0 +1,10 @@
+{
+  "_id": "jcef8rl21k01nah1",
+  "name": "tag.expensive.name",
+  "type": "tag",
+  "system": {
+    "description": "tag.expensive.description"
+  },
+  "effects": [],
+  "_key": "!items!jcef8rl21k01nah1"
+}

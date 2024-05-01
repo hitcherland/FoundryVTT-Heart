@@ -1,0 +1,12 @@
+{
+  "_id": "9betu038sg6h3al6",
+  "name": "fallout.critical.fortune.heavy_hangs_the_head.name",
+  "type": "fallout",
+  "system": {
+    "description": "fallout.critical.fortune.heavy_hangs_the_head.description",
+    "resistance": "fortune",
+    "type": "critical"
+  },
+  "effects": [],
+  "_key": "!items!9betu038sg6h3al6"
+}

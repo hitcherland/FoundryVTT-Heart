@@ -1,0 +1,12 @@
+{
+  "_id": "64xexq2rpdrmcpgq",
+  "name": "fallout.major.fortune.hell_for_weather.name",
+  "type": "fallout",
+  "system": {
+    "description": "fallout.major.fortune.hell_for_weather.description",
+    "resistance": "fortune",
+    "type": "major"
+  },
+  "effects": [],
+  "_key": "!items!64xexq2rpdrmcpgq"
+}

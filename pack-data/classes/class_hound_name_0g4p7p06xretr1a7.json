@@ -1,0 +1,543 @@
+{
+  "_id": "0g4p7p06xretr1a7",
+  "name": "class.hound.name",
+  "type": "class",
+  "system": {
+    "description": "class.hound.description",
+    "core_domain": "haven",
+    "core_skill": "hunt",
+    "equipment_groups": [
+      "group_1",
+      "group_2",
+      "group_3"
+    ],
+    "children": {
+      "smh7hetbec2nbvkd": {
+        "_id": "smh7hetbec2nbvkd",
+        "type": "resource",
+        "name": "resource.bottle_of_rotgut_liquor",
+        "system": {
+          "active": true,
+          "children": {}
+        }
+      },
+      "2jqs9hpi2ms8e5hi": {
+        "_id": "2jqs9hpi2ms8e5hi",
+        "name": "ability.core.in_the_thick_of_it.name",
+        "type": "ability",
+        "system": {
+          "active": true,
+          "description": "ability.core.in_the_thick_of_it.description",
+          "type": "core",
+          "children": {}
+        }
+      },
+      "dfee3b711wfn84c4": {
+        "_id": "dfee3b711wfn84c4",
+        "name": "ability.minor.advanced_training.name",
+        "type": "ability",
+        "system": {
+          "active": false,
+          "description": "ability.minor.advanced_training.description",
+          "type": "minor",
+          "children": {}
+        }
+      },
+      "jskgh26u3aceqb10": {
+        "_id": "jskgh26u3aceqb10",
+        "name": "ability.minor.the_better_part_of_valour.name",
+        "type": "ability",
+        "system": {
+          "active": false,
+          "description": "ability.minor.the_better_part_of_valour.description",
+          "type": "minor",
+          "children": {}
+        }
+      },
+      "2qqhx2kjmshjzc3v": {
+        "_id": "2qqhx2kjmshjzc3v",
+        "name": "ability.minor.close_quarters.name",
+        "type": "ability",
+        "system": {
+          "active": false,
+          "description": "ability.minor.close_quarters.description",
+          "type": "minor",
+          "children": {}
+        }
+      },
+      "6r3gh4w74wk3986v": {
+        "_id": "6r3gh4w74wk3986v",
+        "name": "ability.minor.custodian.name",
+        "type": "ability",
+        "system": {
+          "active": false,
+          "description": "ability.minor.custodian.description",
+          "type": "minor",
+          "children": {}
+        }
+      },
+      "ubzg686tffjxh0er": {
+        "_id": "ubzg686tffjxh0er",
+        "name": "ability.minor.echoes_of_the_33rd.name",
+        "type": "ability",
+        "system": {
+          "active": false,
+          "description": "ability.minor.echoes_of_the_33rd.description",
+          "type": "minor",
+          "children": {}
+        }
+      },
+      "js7ptxucqy0jaeli": {
+        "_id": "js7ptxucqy0jaeli",
+        "name": "ability.minor.kill_count.name",
+        "type": "ability",
+        "system": {
+          "active": false,
+          "description": "ability.minor.kill_count.description",
+          "type": "minor",
+          "children": {}
+        }
+      },
+      "7ro0xwkyz0tu7897": {
+        "_id": "7ro0xwkyz0tu7897",
+        "name": "ability.minor.liquid_courage.name",
+        "type": "ability",
+        "system": {
+          "active": false,
+          "description": "ability.minor.liquid_courage.description",
+          "type": "minor",
+          "children": {}
+        }
+      },
+      "kqb26ro0s7omomjv": {
+        "_id": "kqb26ro0s7omomjv",
+        "name": "ability.minor.marshal.name",
+        "type": "ability",
+        "system": {
+          "active": false,
+          "description": "ability.minor.marshal.description",
+          "type": "minor",
+          "children": {}
+        }
+      },
+      "xxor4m3az3csvhqz": {
+        "_id": "xxor4m3az3csvhqz",
+        "name": "ability.minor.our_glorious_lady.name",
+        "type": "ability",
+        "system": {
+          "active": false,
+          "description": "ability.minor.our_glorious_lady.description",
+          "type": "minor",
+          "children": {}
+        }
+      },
+      "65sotpsjk7gkzc3z": {
+        "_id": "65sotpsjk7gkzc3z",
+        "name": "ability.minor.quartermaster_training.name",
+        "type": "ability",
+        "system": {
+          "active": false,
+          "description": "ability.minor.quartermaster_training.description",
+          "type": "minor",
+          "children": {}
+        }
+      },
+      "efxbrbxrjy7x5psb": {
+        "_id": "efxbrbxrjy7x5psb",
+        "name": "ability.minor.round_the_next_corner.name",
+        "type": "ability",
+        "system": {
+          "active": false,
+          "description": "ability.minor.round_the_next_corner.description",
+          "type": "minor",
+          "children": {}
+        }
+      },
+      "8dwhubxkwhwp5x8a": {
+        "_id": "8dwhubxkwhwp5x8a",
+        "name": "ability.minor.sergeant.name",
+        "type": "ability",
+        "system": {
+          "active": false,
+          "description": "ability.minor.sergeant.description",
+          "type": "minor",
+          "children": {}
+        }
+      },
+      "gs3bm81dmxqtof0j": {
+        "_id": "gs3bm81dmxqtof0j",
+        "name": "ability.major.condemn.name",
+        "type": "ability",
+        "system": {
+          "active": false,
+          "description": "ability.major.condemn.description",
+          "type": "major",
+          "children": {
+            "75zb7rj9ci3545hc": {
+              "_id": "75zb7rj9ci3545hc",
+              "name": "ability.minor.judge.name",
+              "type": "ability",
+              "system": {
+                "active": false,
+                "description": "ability.minor.judge.description",
+                "type": "minor",
+                "children": {}
+              }
+            },
+            "0vru999fwwbsg242": {
+              "_id": "0vru999fwwbsg242",
+              "name": "ability.minor.jury.name",
+              "type": "ability",
+              "system": {
+                "active": false,
+                "description": "ability.minor.jury.description",
+                "type": "minor",
+                "children": {}
+              }
+            },
+            "2nd6rutmimz0rao9": {
+              "_id": "2nd6rutmimz0rao9",
+              "name": "ability.minor.executioner.name",
+              "type": "ability",
+              "system": {
+                "active": false,
+                "description": "ability.minor.executioner.description",
+                "type": "minor",
+                "children": {}
+              }
+            }
+          }
+        }
+      },
+      "xtmalxp65sjdrj6u": {
+        "_id": "xtmalxp65sjdrj6u",
+        "name": "ability.major.forewarned_and_forearmed.name",
+        "type": "ability",
+        "system": {
+          "active": false,
+          "description": "ability.major.forewarned_and_forearmed.description",
+          "type": "major",
+          "children": {
+            "rq8mmczc556ic7nc": {
+              "_id": "rq8mmczc556ic7nc",
+              "name": "ability.minor.double_duty.name",
+              "type": "ability",
+              "system": {
+                "active": false,
+                "description": "ability.minor.double_duty.description",
+                "type": "minor",
+                "children": {}
+              }
+            },
+            "ri6llzzjrllvgupr": {
+              "_id": "ri6llzzjrllvgupr",
+              "name": "ability.minor.encampment.name",
+              "type": "ability",
+              "system": {
+                "active": false,
+                "description": "ability.minor.encampment.description",
+                "type": "minor",
+                "children": {}
+              }
+            },
+            "nwj70a01fe8ys5zt": {
+              "_id": "nwj70a01fe8ys5zt",
+              "name": "ability.minor.emergency_supplies.name",
+              "type": "ability",
+              "system": {
+                "active": false,
+                "description": "ability.minor.emergency_supplies.description",
+                "type": "minor",
+                "children": {}
+              }
+            }
+          }
+        }
+      },
+      "cicnany430ov6mg2": {
+        "_id": "cicnany430ov6mg2",
+        "name": "ability.major.stare_down.name",
+        "type": "ability",
+        "system": {
+          "active": false,
+          "description": "ability.major.stare_down.description",
+          "type": "major",
+          "children": {
+            "vvra6vp5e29wn442": {
+              "_id": "vvra6vp5e29wn442",
+              "name": "ability.minor.legendary.name",
+              "type": "ability",
+              "system": {
+                "active": false,
+                "description": "ability.minor.legendary.description",
+                "type": "minor",
+                "children": {}
+              }
+            },
+            "923jixawc4elp47f": {
+              "_id": "923jixawc4elp47f",
+              "name": "ability.minor.nose_to_nose.name",
+              "type": "ability",
+              "system": {
+                "active": false,
+                "description": "ability.minor.nose_to_nose.description",
+                "type": "minor",
+                "children": {}
+              }
+            },
+            "7hipjunbces4nn7r": {
+              "_id": "7hipjunbces4nn7r",
+              "name": "ability.minor.no_sympathy.name",
+              "type": "ability",
+              "system": {
+                "active": false,
+                "description": "ability.minor.no_sympathy.description",
+                "type": "minor",
+                "children": {}
+              }
+            }
+          }
+        }
+      },
+      "m91575ndrcoek8r9": {
+        "_id": "m91575ndrcoek8r9",
+        "name": "ability.major.trench_fighter.name",
+        "type": "ability",
+        "system": {
+          "active": false,
+          "description": "ability.major.trench_fighter.description",
+          "type": "major",
+          "children": {
+            "vcggq8m3mx7zqwb5": {
+              "_id": "vcggq8m3mx7zqwb5",
+              "name": "ability.minor.over_the_top.name",
+              "type": "ability",
+              "system": {
+                "active": false,
+                "description": "ability.minor.over_the_top.description",
+                "type": "minor",
+                "children": {}
+              }
+            },
+            "v3uccoh9vrvfutif": {
+              "_id": "v3uccoh9vrvfutif",
+              "name": "ability.minor.keep_smiling.name",
+              "type": "ability",
+              "system": {
+                "active": false,
+                "description": "ability.minor.keep_smiling.description",
+                "type": "minor",
+                "children": {}
+              }
+            },
+            "z99p4cqucr7gv862": {
+              "_id": "z99p4cqucr7gv862",
+              "name": "ability.minor.homecoming.name",
+              "type": "ability",
+              "system": {
+                "active": false,
+                "description": "ability.minor.homecoming.description",
+                "type": "minor",
+                "children": {}
+              }
+            }
+          }
+        }
+      },
+      "bk1ewslmzdfqnyvx": {
+        "_id": "bk1ewslmzdfqnyvx",
+        "name": "ability.major.unstoppable.name",
+        "type": "ability",
+        "system": {
+          "active": false,
+          "description": "ability.major.unstoppable.description",
+          "type": "major",
+          "children": {
+            "uj4ph1hgj5qbxhna": {
+              "_id": "uj4ph1hgj5qbxhna",
+              "name": "ability.minor.limping_onward.name",
+              "type": "ability",
+              "system": {
+                "active": false,
+                "description": "ability.minor.limping_onward.description",
+                "type": "minor",
+                "children": {}
+              }
+            },
+            "rzc0qpzp55u1uc0k": {
+              "_id": "rzc0qpzp55u1uc0k",
+              "name": "ability.minor.scars_like_medals.name",
+              "type": "ability",
+              "system": {
+                "active": false,
+                "description": "ability.minor.scars_like_medals.description",
+                "type": "minor",
+                "children": {}
+              }
+            },
+            "numhf6pnxlqwt81j": {
+              "_id": "numhf6pnxlqwt81j",
+              "name": "ability.minor.on_your_feet.name",
+              "type": "ability",
+              "system": {
+                "active": false,
+                "description": "ability.minor.on_your_feet.description",
+                "type": "minor",
+                "children": {}
+              }
+            }
+          }
+        }
+      },
+      "lcswck2wqkf59tmc": {
+        "_id": "lcswck2wqkf59tmc",
+        "name": "ability.zenith.everlasting_stand.name",
+        "type": "ability",
+        "system": {
+          "active": false,
+          "description": "ability.zenith.everlasting_stand.description",
+          "type": "zenith",
+          "children": {}
+        }
+      },
+      "u24kgfgwfic65dl2": {
+        "_id": "u24kgfgwfic65dl2",
+        "name": "ability.zenith.fulcrum.name",
+        "type": "ability",
+        "system": {
+          "active": false,
+          "description": "ability.zenith.fulcrum.description",
+          "type": "zenith",
+          "children": {}
+        }
+      },
+      "wvkkqrf6rxrv5amf": {
+        "_id": "wvkkqrf6rxrv5amf",
+        "name": "ability.zenith.incursion.name",
+        "type": "ability",
+        "system": {
+          "active": false,
+          "description": "ability.zenith.incursion.description",
+          "type": "zenith",
+          "children": {}
+        }
+      },
+      "et1b7jqs65ei4nkf": {
+        "_id": "et1b7jqs65ei4nkf",
+        "name": "equipment.standard_issue_legrande_rifle",
+        "type": "equipment",
+        "system": {
+          "type": "kill",
+          "die_size": "d8",
+          "group": "group_1",
+          "children": {
+            "8gb1gb94n6liuavo": {
+              "_id": "8gb1gb94n6liuavo",
+              "name": "tag.ranged.name",
+              "type": "tag",
+              "system": {
+                "description": "tag.ranged.description"
+              },
+              "_key": "!items!a5gv5zgvp4uo6yps"
+            },
+            "vkc8afw473tqul8e": {
+              "_id": "vkc8afw473tqul8e",
+              "name": "tag.piercing.name",
+              "type": "tag",
+              "system": {
+                "description": "tag.piercing.description"
+              },
+              "_key": "!items!e9r2h4p80qbv6r12"
+            },
+            "5suricazeydrh2qe": {
+              "_id": "5suricazeydrh2qe",
+              "name": "tag.expensive.name",
+              "type": "tag",
+              "system": {
+                "description": "tag.expensive.description"
+              },
+              "_key": "!items!jcef8rl21k01nah1"
+            }
+          }
+        }
+      },
+      "pljnpzqkswsbwo1f": {
+        "_id": "pljnpzqkswsbwo1f",
+        "name": "equipment.repeater_sidearm",
+        "type": "equipment",
+        "system": {
+          "type": "kill",
+          "die_size": "d6",
+          "group": "group_2",
+          "children": {
+            "06dkwe6re3iu27sn": {
+              "_id": "06dkwe6re3iu27sn",
+              "name": "tag.ranged.name",
+              "type": "tag",
+              "system": {
+                "description": "tag.ranged.description"
+              },
+              "_key": "!items!a5gv5zgvp4uo6yps"
+            },
+            "cjfixs6evoijdadt": {
+              "_id": "cjfixs6evoijdadt",
+              "name": "tag.brutal.name",
+              "type": "tag",
+              "system": {
+                "description": "tag.brutal.description"
+              },
+              "_key": "!items!lpcjn87r3of5wuwc"
+            },
+            "ucnxdugjmgqv7ua1": {
+              "_id": "ucnxdugjmgqv7ua1",
+              "name": "tag.reload.name",
+              "type": "tag",
+              "system": {
+                "description": "tag.reload.description"
+              },
+              "_key": "!items!e0aw9cbtedch5kuz"
+            }
+          }
+        }
+      },
+      "jxz8e9bn5uafkf38": {
+        "_id": "jxz8e9bn5uafkf38",
+        "name": "equipment.knife",
+        "type": "equipment",
+        "system": {
+          "type": "kill",
+          "die_size": "d6",
+          "group": "group_2",
+          "children": {}
+        }
+      },
+      "j4vg12pnkmh4quwa": {
+        "_id": "j4vg12pnkmh4quwa",
+        "name": "equipment.well_stocked_haversack",
+        "type": "equipment",
+        "system": {
+          "type": "mend",
+          "die_size": "d6",
+          "group": "group_3",
+          "resistances": [
+            "supplies"
+          ],
+          "children": {}
+        }
+      },
+      "m1c8ae5572ne0fqb": {
+        "_id": "m1c8ae5572ne0fqb",
+        "name": "equipment.cudgel",
+        "type": "equipment",
+        "system": {
+          "type": "kill",
+          "die_size": "d6",
+          "group": "group_3",
+          "children": {}
+        }
+      }
+    }
+  },
+  "effects": [],
+  "_key": "!items!0g4p7p06xretr1a7"
+}

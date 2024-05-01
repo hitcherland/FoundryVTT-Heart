@@ -1,42 +1,46 @@
 // modules we need
-const path = require('path');
-const config = require('./foundryvtt.config.js');
-const TerserPlugin = require('terser-webpack-plugin');
+const fs = require("fs");const path = require("path");
+const TerserPlugin = require("terser-webpack-plugin");
+const FoundryVTTSymlinkPlugin = require("./dev-utils/foundryvtt-symlink");
+const CopyWebpackPlugin = require("copy-webpack-plugin");
+const MergeJsonWebpackPlugin = require("merge-jsons-webpack-plugin");
 
-// auto calculated values
-const {
-    type,
-    id
-} = config;
+const config = JSON.parse(fs.readFileSync('./foundryvtt.config.json'));
+const system = JSON.parse(fs.readFileSync("./system.json"));
 
-const distPath = path.resolve(__dirname, 'dist');
-const publicPath = `/${type}s/${id}/`;
+const distPath = path.resolve(__dirname, "dist");
+const publicPath = `/${(system.type)}s/${(system.id)}/`;
 
 module.exports = (env, argv) => {
     return {
-        mode: 'development',
-        entry: './src/index.js',
+        mode: "development",
+        entry: "./src/index.js",
         output: {
             path: distPath,
-            filename: `${id}.js`,
-            clean: true,
+            filename: `${(system.id)}.js`,
+            clean: {
+                keep: /packs/
+            },
             publicPath: publicPath,
         },
+        devtool: 'inline-source-map',
         optimization: {
-            minimize: true,
-            minimizer: [new TerserPlugin({
-                terserOptions: {
-                    keep_classnames: true
-                }
-            })],
+            minimize: argv.mode !== "development",
+            minimizer: [
+                new TerserPlugin({
+                    terserOptions: {
+                        keep_classnames: true,
+                    },
+                })],
         },
         module: {
-            rules: [{
+            rules: [
+                {
                     test: /\.html$|\.handlebars$|\.hbs$/,
                     use: {
-                        loader: path.resolve('dev-utils', 'templates-loader.js'),
+                        loader: path.resolve("dev-utils", "templates-loader.js"),
                         options: {
-                            name: id
+                            name: system.id
                         }
                     }
                 },
@@ -48,31 +52,38 @@ module.exports = (env, argv) => {
                     test: /\.s[ac]ss$/i,
                     use: [
                         // Creates `style` nodes from JS strings
-                        "style-loader",
-                        // Translates CSS into CommonJS
-                        "css-loader",
-                        // Compiles Sass to CSS
-                        "sass-loader",
-                    ],
-                },
-                {
+                        "style-loader", // Translates CSS into CommonJS
+                        "css-loader", // Compiles Sass to CSS
+                        "sass-loader"],
+                }, {
                     test: /\.(woff|woff2|eot|ttf|otf)$/i,
-                    type: 'asset/resource',
-                },
-            ],
+                    type: "asset/resource",
+                }],
         },
-        devServer: {
-            contentBase: distPath,
-            hot: true,
-            proxy: {
-                target: 'http://localhost:30000',
-                context: function (path) {
-                    return !path.match(/^\/sockjs/);
-                },
-                ws: true
-            },
-            publicPath: publicPath,
-            writeToDisk: true
-        },
-    }
-};
+        plugins: [
+            new MergeJsonWebpackPlugin({
+                space: 4,
+                output: {
+                    groupBy: [
+                        {
+                            pattern: "src/**/template.json",
+                            fileName: "template.json",
+                        }
+                    ],
+                }
+            }),
+            new CopyWebpackPlugin({
+                patterns: [
+                    {
+                        from: 'static',
+                        to: ''
+                    },
+                    {
+                        from: 'system.json',
+                        to: ''
+                    },
+                ],
+            }),
+            argv.mode === "development" ? new FoundryVTTSymlinkPlugin(system.id, system.type, distPath, config.foundryvttPath) : ''
+        ],
+    }}

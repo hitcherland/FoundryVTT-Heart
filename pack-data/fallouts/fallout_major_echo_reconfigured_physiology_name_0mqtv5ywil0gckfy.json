@@ -1,0 +1,12 @@
+{
+  "_id": "0mqtv5ywil0gckfy",
+  "name": "fallout.major.echo.reconfigured_physiology.name",
+  "type": "fallout",
+  "system": {
+    "description": "fallout.major.echo.reconfigured_physiology.description",
+    "resistance": "echo",
+    "type": "major"
+  },
+  "effects": [],
+  "_key": "!items!0mqtv5ywil0gckfy"
+}

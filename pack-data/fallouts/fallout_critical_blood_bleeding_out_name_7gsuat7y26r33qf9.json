@@ -1,0 +1,12 @@
+{
+  "_id": "7gsuat7y26r33qf9",
+  "name": "fallout.critical.blood.bleeding_out.name",
+  "type": "fallout",
+  "system": {
+    "description": "fallout.critical.blood.bleeding_out.description",
+    "resistance": "blood",
+    "type": "critical"
+  },
+  "effects": [],
+  "_key": "!items!7gsuat7y26r33qf9"
+}

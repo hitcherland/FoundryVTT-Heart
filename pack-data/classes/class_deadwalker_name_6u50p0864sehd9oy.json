@@ -1,0 +1,548 @@
+{
+  "_id": "6u50p0864sehd9oy",
+  "name": "class.deadwalker.name",
+  "type": "class",
+  "system": {
+    "description": "class.deadwalker.description",
+    "core_domain": "desolate",
+    "core_skill": "delve",
+    "equipment_groups": [
+      "group_1",
+      "group_2",
+      "group_3"
+    ],
+    "children": {
+      "vaq3vsgyk2iaezgi": {
+        "_id": "vaq3vsgyk2iaezgi",
+        "type": "resource",
+        "name": "resource.bag_of_interesting_teeth",
+        "system": {
+          "active": true,
+          "die_size": "d6",
+          "domain": "desolate",
+          "children": {}
+        }
+      },
+      "tp6ubkn4fz4d2dox": {
+        "_id": "tp6ubkn4fz4d2dox",
+        "name": "ability.core.death_follows_close.name",
+        "type": "ability",
+        "system": {
+          "active": true,
+          "description": "ability.core.death_follows_close.description",
+          "type": "core",
+          "children": {}
+        }
+      },
+      "mzneab2hujq622dv": {
+        "_id": "mzneab2hujq622dv",
+        "name": "ability.core.enter_the_grey.name",
+        "type": "ability",
+        "system": {
+          "active": true,
+          "description": "ability.core.enter_the_grey.description",
+          "type": "core",
+          "children": {}
+        }
+      },
+      "eec291dsxsaolj3s": {
+        "_id": "eec291dsxsaolj3s",
+        "name": "ability.minor.adept.name",
+        "type": "ability",
+        "system": {
+          "active": false,
+          "description": "ability.minor.adept.description",
+          "type": "minor",
+          "children": {}
+        }
+      },
+      "hywz5pnd5ulj7s0f": {
+        "_id": "hywz5pnd5ulj7s0f",
+        "name": "ability.minor.deathless.name",
+        "type": "ability",
+        "system": {
+          "active": false,
+          "description": "ability.minor.deathless.description",
+          "type": "minor",
+          "children": {}
+        }
+      },
+      "79wflep6ezqbz80x": {
+        "_id": "79wflep6ezqbz80x",
+        "name": "ability.minor.dirt_under_the_fingernails.name",
+        "type": "ability",
+        "system": {
+          "active": false,
+          "description": "ability.minor.dirt_under_the_fingernails.description",
+          "type": "minor",
+          "children": {}
+        }
+      },
+      "g1zgo8r492sptsa0": {
+        "_id": "g1zgo8r492sptsa0",
+        "name": "ability.minor.explorer.name",
+        "type": "ability",
+        "system": {
+          "active": false,
+          "description": "ability.minor.explorer.description",
+          "type": "minor",
+          "children": {}
+        }
+      },
+      "cygkk3k3mxmepwnv": {
+        "_id": "cygkk3k3mxmepwnv",
+        "name": "ability.minor.grail_armour.name",
+        "type": "ability",
+        "system": {
+          "active": false,
+          "description": "ability.minor.grail_armour.description",
+          "type": "minor",
+          "children": {}
+        }
+      },
+      "s0fwuwy874s75i5p": {
+        "_id": "s0fwuwy874s75i5p",
+        "name": "ability.minor.grim_reaper.name",
+        "type": "ability",
+        "system": {
+          "active": false,
+          "description": "ability.minor.grim_reaper.description",
+          "type": "minor",
+          "children": {}
+        }
+      },
+      "24zdxfg09jzkqsdv": {
+        "_id": "24zdxfg09jzkqsdv",
+        "name": "ability.minor.the_harvest.name",
+        "type": "ability",
+        "system": {
+          "active": false,
+          "description": "ability.minor.the_harvest.description",
+          "type": "minor",
+          "children": {}
+        }
+      },
+      "vwq6mjf02f9qo2mf": {
+        "_id": "vwq6mjf02f9qo2mf",
+        "name": "ability.minor.last_rites.name",
+        "type": "ability",
+        "system": {
+          "active": false,
+          "description": "ability.minor.last_rites.description",
+          "type": "minor",
+          "children": {}
+        }
+      },
+      "ge85wzhvimepkdd8": {
+        "_id": "ge85wzhvimepkdd8",
+        "name": "ability.minor.marked_for_death.name",
+        "type": "ability",
+        "system": {
+          "active": false,
+          "description": "ability.minor.marked_for_death.description",
+          "type": "minor",
+          "children": {}
+        }
+      },
+      "mh07mcic0jsvfbxs": {
+        "_id": "mh07mcic0jsvfbxs",
+        "name": "ability.minor.shadow.name",
+        "type": "ability",
+        "system": {
+          "active": false,
+          "description": "ability.minor.shadow.description",
+          "type": "minor",
+          "children": {}
+        }
+      },
+      "7kk02zjqj679ezr2": {
+        "_id": "7kk02zjqj679ezr2",
+        "name": "ability.minor.survivor.name",
+        "type": "ability",
+        "system": {
+          "active": false,
+          "description": "ability.minor.survivor.description",
+          "type": "minor",
+          "children": {}
+        }
+      },
+      "xxc15wfbxkjwj8xi": {
+        "_id": "xxc15wfbxkjwj8xi",
+        "name": "ability.minor.tattered_soul.name",
+        "type": "ability",
+        "system": {
+          "active": false,
+          "description": "ability.minor.tattered_soul.description",
+          "type": "minor",
+          "children": {}
+        }
+      },
+      "kfg6j6ypkrlx5xeb": {
+        "_id": "kfg6j6ypkrlx5xeb",
+        "name": "ability.minor.walking_reliquary.name",
+        "type": "ability",
+        "system": {
+          "active": false,
+          "description": "ability.minor.walking_reliquary.description",
+          "type": "minor",
+          "children": {}
+        }
+      },
+      "ibhslgbjrqrtenm4": {
+        "_id": "ibhslgbjrqrtenm4",
+        "name": "ability.major.descent.name",
+        "type": "ability",
+        "system": {
+          "active": false,
+          "description": "ability.major.descent.description",
+          "type": "major",
+          "children": {
+            "wie13xqhrcki0epm": {
+              "_id": "wie13xqhrcki0epm",
+              "name": "ability.minor.esoteric_cartographer.name",
+              "type": "ability",
+              "system": {
+                "active": false,
+                "description": "ability.minor.esoteric_cartographer.description",
+                "type": "minor",
+                "children": {}
+              }
+            },
+            "ilsgub035yiiqxqa": {
+              "_id": "ilsgub035yiiqxqa",
+              "name": "ability.minor.step_between.name",
+              "type": "ability",
+              "system": {
+                "active": false,
+                "description": "ability.minor.step_between.description",
+                "type": "minor",
+                "children": {}
+              }
+            },
+            "y9da8n8kvqpwlxwp": {
+              "_id": "y9da8n8kvqpwlxwp",
+              "name": "ability.minor.all_doors_as_one.name",
+              "type": "ability",
+              "system": {
+                "active": false,
+                "description": "ability.minor.all_doors_as_one.description",
+                "type": "minor",
+                "children": {}
+              }
+            }
+          }
+        }
+      },
+      "h3jwgg2efd9h0g70": {
+        "_id": "h3jwgg2efd9h0g70",
+        "name": "ability.major.echoes.name",
+        "type": "ability",
+        "system": {
+          "active": false,
+          "description": "ability.major.echoes.description",
+          "type": "major",
+          "children": {
+            "b137aq4qxqo5o5jf": {
+              "_id": "b137aq4qxqo5o5jf",
+              "name": "ability.minor.hidden_passageway.name",
+              "type": "ability",
+              "system": {
+                "active": false,
+                "description": "ability.minor.hidden_passageway.description",
+                "type": "minor",
+                "children": {}
+              }
+            },
+            "vin3n50sffj5ywaa": {
+              "_id": "vin3n50sffj5ywaa",
+              "name": "ability.minor.fragmentary_recollection.name",
+              "type": "ability",
+              "system": {
+                "active": false,
+                "description": "ability.minor.fragmentary_recollection.description",
+                "type": "minor",
+                "children": {}
+              }
+            },
+            "hynzzr4ms3vkg0bs": {
+              "_id": "hynzzr4ms3vkg0bs",
+              "name": "ability.minor.absorb_memories.name",
+              "type": "ability",
+              "system": {
+                "active": false,
+                "description": "ability.minor.absorb_memories.description",
+                "type": "minor",
+                "children": {}
+              }
+            }
+          }
+        }
+      },
+      "dawf5rr00mbo28qm": {
+        "_id": "dawf5rr00mbo28qm",
+        "name": "ability.major.invidious_spectre.name",
+        "type": "ability",
+        "system": {
+          "active": false,
+          "description": "ability.major.invidious_spectre.description",
+          "type": "major",
+          "children": {
+            "62d6f7mnr8mrpmsm": {
+              "_id": "62d6f7mnr8mrpmsm",
+              "name": "ability.minor.soothe.name",
+              "type": "ability",
+              "system": {
+                "active": false,
+                "description": "ability.minor.soothe.description",
+                "type": "minor",
+                "children": {}
+              }
+            },
+            "2cdnqld9ewxz9y0y": {
+              "_id": "2cdnqld9ewxz9y0y",
+              "name": "ability.minor.ghoulish_grasp.name",
+              "type": "ability",
+              "system": {
+                "active": false,
+                "description": "ability.minor.ghoulish_grasp.description",
+                "type": "minor",
+                "children": {}
+              }
+            },
+            "jlwapep2sbo5dv3g": {
+              "_id": "jlwapep2sbo5dv3g",
+              "name": "ability.minor.ethereal_touch.name",
+              "type": "ability",
+              "system": {
+                "active": false,
+                "description": "ability.minor.ethereal_touch.description",
+                "type": "minor",
+                "children": {}
+              }
+            }
+          }
+        }
+      },
+      "sihq4tzb698a9dj9": {
+        "_id": "sihq4tzb698a9dj9",
+        "name": "ability.major.reapers_strike.name",
+        "type": "ability",
+        "system": {
+          "active": false,
+          "description": "ability.major.reapers_strike.description",
+          "type": "major",
+          "children": {
+            "lacz0zgp3l62l5pg": {
+              "_id": "lacz0zgp3l62l5pg",
+              "name": "ability.minor.inexorable.name",
+              "type": "ability",
+              "system": {
+                "active": false,
+                "description": "ability.minor.inexorable.description",
+                "type": "minor",
+                "children": {}
+              }
+            },
+            "3nits3baqclq32pz": {
+              "_id": "3nits3baqclq32pz",
+              "name": "ability.minor.bloodied_but_unbroken.name",
+              "type": "ability",
+              "system": {
+                "active": false,
+                "description": "ability.minor.bloodied_but_unbroken.description",
+                "type": "minor",
+                "children": {}
+              }
+            },
+            "rdgbxx7ueuc9v63l": {
+              "_id": "rdgbxx7ueuc9v63l",
+              "name": "ability.minor.scything_blow.name",
+              "type": "ability",
+              "system": {
+                "active": false,
+                "description": "ability.minor.scything_blow.description",
+                "type": "minor",
+                "children": {}
+              }
+            }
+          }
+        }
+      },
+      "oyota47s569ubmgo": {
+        "_id": "oyota47s569ubmgo",
+        "name": "ability.major.sudden_death.name",
+        "type": "ability",
+        "system": {
+          "active": false,
+          "description": "ability.major.sudden_death.description",
+          "type": "major",
+          "children": {
+            "tr5zzhqvw2d9s4jj": {
+              "_id": "tr5zzhqvw2d9s4jj",
+              "name": "ability.minor.liminal.name",
+              "type": "ability",
+              "system": {
+                "active": false,
+                "description": "ability.minor.liminal.description",
+                "type": "minor",
+                "children": {}
+              }
+            },
+            "9m2v8cojwsesqcyp": {
+              "_id": "9m2v8cojwsesqcyp",
+              "name": "ability.minor.entropy.name",
+              "type": "ability",
+              "system": {
+                "active": false,
+                "description": "ability.minor.entropy.description",
+                "type": "minor",
+                "children": {}
+              }
+            },
+            "hs4o36h9ba4at0mu": {
+              "_id": "hs4o36h9ba4at0mu",
+              "name": "ability.minor.blood_sacrifice.name",
+              "type": "ability",
+              "system": {
+                "active": false,
+                "description": "ability.minor.blood_sacrifice.description",
+                "type": "minor",
+                "children": {}
+              }
+            }
+          }
+        }
+      },
+      "yp4d11ojeeaererc": {
+        "_id": "yp4d11ojeeaererc",
+        "name": "ability.zenith.extinguish.name",
+        "type": "ability",
+        "system": {
+          "active": false,
+          "description": "ability.zenith.extinguish.description",
+          "type": "zenith",
+          "children": {}
+        }
+      },
+      "8mrhs2dtawam9str": {
+        "_id": "8mrhs2dtawam9str",
+        "name": "ability.zenith.infernal_claws.name",
+        "type": "ability",
+        "system": {
+          "active": false,
+          "description": "ability.zenith.infernal_claws.description",
+          "type": "zenith",
+          "children": {}
+        }
+      },
+      "21tefoi8cpsn0f9y": {
+        "_id": "21tefoi8cpsn0f9y",
+        "name": "ability.zenith.sunder_the_veil.name",
+        "type": "ability",
+        "system": {
+          "active": false,
+          "description": "ability.zenith.sunder_the_veil.description",
+          "type": "zenith",
+          "children": {}
+        }
+      },
+      "6ca4dv5sfphhb4w8": {
+        "_id": "6ca4dv5sfphhb4w8",
+        "name": "equipment.hunting_rifle",
+        "type": "equipment",
+        "system": {
+          "type": "kill",
+          "die_size": "d6",
+          "group": "group_1",
+          "children": {
+            "fspbbi4cwsa232xi": {
+              "_id": "fspbbi4cwsa232xi",
+              "name": "tag.extreme_range.name",
+              "type": "tag",
+              "system": {
+                "description": "tag.extreme_range.description"
+              },
+              "_key": "!items!tci353z3xqgo9l7s"
+            },
+            "2cs0r4uaruerxgdt": {
+              "_id": "2cs0r4uaruerxgdt",
+              "name": "tag.reload.name",
+              "type": "tag",
+              "system": {
+                "description": "tag.reload.description"
+              },
+              "_key": "!items!lwghr282rmaynug0"
+            }
+          }
+        }
+      },
+      "np0ldksb4zlqbb29": {
+        "_id": "np0ldksb4zlqbb29",
+        "name": "equipment.greatsword",
+        "type": "equipment",
+        "system": {
+          "type": "kill",
+          "die_size": "d10",
+          "group": "group_2",
+          "children": {
+            "y7ipit1o03ky1sse": {
+              "_id": "y7ipit1o03ky1sse",
+              "name": "tag.tiring.name",
+              "type": "tag",
+              "system": {
+                "description": "tag.tiring.description"
+              },
+              "_key": "!items!i6sngsub3gge67r0"
+            }
+          }
+        }
+      },
+      "rfzdho5mo8aoff32": {
+        "_id": "rfzdho5mo8aoff32",
+        "name": "equipment.bootleg_ambrosia",
+        "type": "equipment",
+        "system": {
+          "type": "mend",
+          "die_size": "d6",
+          "group": "group_3",
+          "resistances": [
+            "mind"
+          ],
+          "children": {
+            "9bio9svu6ibhqzlj": {
+              "_id": "9bio9svu6ibhqzlj",
+              "name": "tag.potent.name",
+              "type": "tag",
+              "system": {
+                "description": "tag.potent.description"
+              },
+              "_key": "!items!xbxcp9pjlw8abua2"
+            },
+            "ix7ios5i8ss2fq7t": {
+              "_id": "ix7ios5i8ss2fq7t",
+              "name": "tag.expensive.name",
+              "type": "tag",
+              "system": {
+                "description": "tag.expensive.description"
+              },
+              "_key": "!items!l3fk6li875rcoi4p"
+            }
+          }
+        }
+      },
+      "lgggj8tn78ejerrt": {
+        "_id": "lgggj8tn78ejerrt",
+        "name": "equipment.ritual_blade",
+        "type": "equipment",
+        "system": {
+          "type": "kill",
+          "die_size": "d6",
+          "group": "group_3",
+          "children": {}
+        }
+      }
+    }
+  },
+  "effects": [],
+  "_key": "!items!6u50p0864sehd9oy"
+}

@@ -1,0 +1,12 @@
+{
+  "_id": "36fcxx59cy6m396e",
+  "name": "fallout.minor.fortune.collateral.name",
+  "type": "fallout",
+  "system": {
+    "description": "fallout.minor.fortune.collateral.description",
+    "resistance": "fortune",
+    "type": "minor"
+  },
+  "effects": [],
+  "_key": "!items!36fcxx59cy6m396e"
+}

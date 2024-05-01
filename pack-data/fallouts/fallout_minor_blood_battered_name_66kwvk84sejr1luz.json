@@ -1,0 +1,12 @@
+{
+  "_id": "66kwvk84sejr1luz",
+  "name": "fallout.minor.blood.battered.name",
+  "type": "fallout",
+  "system": {
+    "description": "fallout.minor.blood.battered.description",
+    "resistance": "blood",
+    "type": "minor"
+  },
+  "effects": [],
+  "_key": "!items!66kwvk84sejr1luz"
+}

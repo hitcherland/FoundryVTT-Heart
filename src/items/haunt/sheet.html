@@ -1,22 +1,22 @@
 {{#> "heart:common/sheet.html" documentName="item" type="haunt"}}
 
-<div class="section {{localizeHeart haunt upgradeTrack 'label-single'}}">
+<div class="section {{localizeHeart haunt upgradeTrack 'single'}}">
     <h3>
-        {{localizeHeart "haunt" "upgradeTrack" "label-single"}}
+        {{localizeHeart "upgradeTrack.single"}}
         <div class="right">
-            <a data-action="upgrade" data-type="haunt"><span class="fas fa-level-up-alt"></span>{{localizeHeart "haunt" "upgrade"}}</a>
-            <a data-action="downgrade" data-type="haunt"><span class="fas fa-level-down-alt"></span>{{localizeHeart "haunt" "downgrade"}}</a>
+            <a data-action="upgrade" data-type="haunt"><span class="fas fa-level-up-alt"></span>{{localizeHeart "upgrade"}}</a>
+            <a data-action="downgrade" data-type="haunt"><span class="fas fa-level-down-alt"></span>{{localizeHeart "downgrade"}}</a>
         </div>
     </h3>
     <div class="red" data-target='system.upgradeTrack'>{{{ordered-checkable item.system.upgradeTrack 6}}}</div>
 </div>
 
-<div class="section {{localizeHeart haunt service 'label-multiple'}}" data-item-id="{{item.uuid}}">
+<div class="section {{localizeHeart haunt service 'multiple'}}" data-item-id="{{item.uuid}}">
     <h3>
         {{#if overrideTitle}}
             {{overrideTitle}}
             {{else}}
-            {{localizeHeart "haunt" "service" "label-multiple"}}
+            {{localizeHeart "service.multiple"}}
             {{/if}}
         <div class="right">
             <a data-action="add-service" data-type="service"><span class="fas fa-plus"></span></a>

@@ -1,0 +1,12 @@
+{
+  "_id": "9sntc0kztq89w9a5",
+  "name": "fallout.minor.mind.figment.name",
+  "type": "fallout",
+  "system": {
+    "description": "fallout.minor.mind.figment.description",
+    "resistance": "mind",
+    "type": "minor"
+  },
+  "effects": [],
+  "_key": "!items!9sntc0kztq89w9a5"
+}

@@ -210,17 +210,17 @@ Hooks.once('ready', function () {
     new Promise(async function () {
         if (game.settings.get('heart', 'showStartupMessage')) {
             let d = new Dialog({
-                title: game.i18n.format("heart.dialog.title(VERSION)", { VERSION: game.system.version }),
+                title: game.i18n.format("heart.startup.title", { VERSION: game.system.version }),
                 content: await renderTemplate('heart:templates/startup.html', { versions: Object.values(game.i18n.translations.heart.versions).sort((a, b) => a.version > b.version ? -1 : 1), version: game.system.version }),
                 buttons: {
                     close: {
                         icon: '<i class="fas fa-times"></i>',
-                        label: game.i18n.localize("heart.dialog.skip"),
+                        label: game.i18n.localize("heart.skip"),
                         callback: () => { }
                     },
                     prevent: {
                         icon: '<i class="fas fa-check"></i>',
-                        label: game.i18n.localize("heart.dialog.dont-show-again"),
+                        label: game.i18n.localize("heart.dont-show-again"),
                         callback: () => game.settings.set('heart', 'showStartupMessage', false)
                     }
                 },

@@ -1,0 +1,12 @@
+{
+  "_id": "63evyf4k8ealcvli",
+  "name": "fallout.major.blood.broken_arm.name",
+  "type": "fallout",
+  "system": {
+    "description": "fallout.major.blood.broken_arm.description",
+    "resistance": "blood",
+    "type": "major"
+  },
+  "effects": [],
+  "_key": "!items!63evyf4k8ealcvli"
+}

@@ -7,9 +7,9 @@
         <div class="dice-formula">{{description}}</div>
         {{{tooltip}}}
         <div class="flexrow">
-            <h4 class="dice-total text">{{localizeHeart "result" result}}</h4>
+            <h4 class="dice-total text">{{localizeHeart "roll-result" result}}</h4>
             {{#if (and showStressRollButton (lookup (getActor character) "isOwner"))}}
-            <button class="icon-button" data-action='roll-stress' title="{{localizeHeart 'rolls' 'stress-roll' 'action'}}">
+            <button class="icon-button" data-action='roll-stress' title="{{localizeHeart 'roll-stress'}}">
                 <span class="fas fa-dice"></span>
             </button>
             {{/if}}

@@ -36,7 +36,7 @@ export default class LandmarkSheet extends HeartActorSheet {
         data.user = game.user;
         data.showTextboxesBelowItems = game.settings.get('heart', 'showTextboxesBelowItems')
         data.die_sizes = game.heart.die_sizes.reduce((map, die) => {
-            map[die] = game.i18n.format('heart.die_size.d(N)', { N: die.replace(/^d/, '') })
+            map[die] = game.i18n.format('heart.die-size', { N: die.replace(/^d/, '') })
             return map;
         }, {});
         data.resistances = game.heart.resistances.reduce((map, resistance) => {

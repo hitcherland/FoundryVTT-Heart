@@ -1,0 +1,334 @@
+{
+  "_id": "rissfrqbph68v9q9",
+  "name": "calling.adventure.name",
+  "type": "calling",
+  "system": {
+    "description": "calling.adventure.description",
+    "questions": {
+      "n2pm4tg4ykl1txke": {
+        "question": "calling.adventure.what-drove-you-out"
+      },
+      "c3tibx0xpnjz38ny": {
+        "question": "calling.adventure.what-are-you-escaped-from"
+      },
+      "qdkbf5e0vph6katd": {
+        "question": "calling.adventure.what-item-you-kept"
+      },
+      "59b1ozfont8b2mv3": {
+        "question": "calling.adventure.what-beast-you-heard-of"
+      }
+    },
+    "children": {
+      "0clqi7l3sjgdrgkj": {
+        "_id": "0clqi7l3sjgdrgkj",
+        "name": "ability.core.legendary.name",
+        "type": "ability",
+        "system": {
+          "active": true,
+          "description": "ability.core.legendary.description",
+          "type": "core",
+          "children": {}
+        }
+      },
+      "3testtabponxi85f": {
+        "_id": "3testtabponxi85f",
+        "name": "beat.minor.charm-someone",
+        "type": "beat",
+        "system": {
+          "description": "beat.minor.charm-someone",
+          "type": "minor"
+        }
+      },
+      "dekewxrsrr4yaai3": {
+        "_id": "dekewxrsrr4yaai3",
+        "name": "beat.minor.engage-in-reckless-abandon",
+        "type": "beat",
+        "system": {
+          "description": "beat.minor.engage-in-reckless-abandon",
+          "type": "minor"
+        }
+      },
+      "grrpn436da56089e": {
+        "_id": "grrpn436da56089e",
+        "name": "beat.minor.slay-a-beast-d10",
+        "type": "beat",
+        "system": {
+          "description": "beat.minor.slay-a-beast-d10",
+          "type": "minor"
+        }
+      },
+      "gk43zl117bfn09wi": {
+        "_id": "gk43zl117bfn09wi",
+        "name": "beat.minor.access-haven-tier-2",
+        "type": "beat",
+        "system": {
+          "description": "beat.minor.access-haven-tier-2",
+          "type": "minor"
+        }
+      },
+      "d1utpksz97j7cxc0": {
+        "_id": "d1utpksz97j7cxc0",
+        "name": "beat.minor.take-major-blood-fallout",
+        "type": "beat",
+        "system": {
+          "description": "beat.minor.take-major-blood-fallout",
+          "type": "minor"
+        }
+      },
+      "880pyrh2r1xshk68": {
+        "_id": "880pyrh2r1xshk68",
+        "name": "beat.minor.take-major-fortune-fallout",
+        "type": "beat",
+        "system": {
+          "description": "beat.minor.take-major-fortune-fallout",
+          "type": "minor"
+        }
+      },
+      "2tz88l31k9xwvqox": {
+        "_id": "2tz88l31k9xwvqox",
+        "name": "beat.minor.defeat-foe-one-on-one",
+        "type": "beat",
+        "system": {
+          "description": "beat.minor.defeat-foe-one-on-one",
+          "type": "minor"
+        }
+      },
+      "diy7wuvhyq6anvwh": {
+        "_id": "diy7wuvhyq6anvwh",
+        "name": "beat.minor.help-important-figure",
+        "type": "beat",
+        "system": {
+          "description": "beat.minor.help-important-figure",
+          "type": "minor"
+        }
+      },
+      "ga4kfdl5r9u48wsc": {
+        "_id": "ga4kfdl5r9u48wsc",
+        "name": "beat.minor.refuse-to-back-down",
+        "type": "beat",
+        "system": {
+          "description": "beat.minor.refuse-to-back-down",
+          "type": "minor"
+        }
+      },
+      "foywu1716rlclfy1": {
+        "_id": "foywu1716rlclfy1",
+        "name": "beat.minor.establish-connection",
+        "type": "beat",
+        "system": {
+          "description": "beat.minor.establish-connection",
+          "type": "minor"
+        }
+      },
+      "ok07p1qttrkc35fe": {
+        "_id": "ok07p1qttrkc35fe",
+        "name": "beat.minor.get-in-trouble-with-hounds",
+        "type": "beat",
+        "system": {
+          "description": "beat.minor.get-in-trouble-with-hounds",
+          "type": "minor"
+        }
+      },
+      "wdzhz7984otqjcid": {
+        "_id": "wdzhz7984otqjcid",
+        "name": "beat.minor.rescue-someone",
+        "type": "beat",
+        "system": {
+          "description": "beat.minor.rescue-someone",
+          "type": "minor"
+        }
+      },
+      "2avp6etylciljj4a": {
+        "_id": "2avp6etylciljj4a",
+        "name": "beat.minor.make-dramatic-entrance",
+        "type": "beat",
+        "system": {
+          "description": "beat.minor.make-dramatic-entrance",
+          "type": "minor"
+        }
+      },
+      "4whqbghtz7sxrfow": {
+        "_id": "4whqbghtz7sxrfow",
+        "name": "beat.minor.claim-a-d10-resource",
+        "type": "beat",
+        "system": {
+          "description": "beat.minor.claim-a-d10-resource",
+          "type": "minor"
+        }
+      },
+      "u94jm0c4xpqifmrs": {
+        "_id": "u94jm0c4xpqifmrs",
+        "name": "beat.minor.defend-a-haven",
+        "type": "beat",
+        "system": {
+          "description": "beat.minor.defend-a-haven",
+          "type": "minor"
+        }
+      },
+      "n82j3gfwwb8xbbhm": {
+        "_id": "n82j3gfwwb8xbbhm",
+        "name": "beat.minor.have-3-havens-know-your-name",
+        "type": "beat",
+        "system": {
+          "description": "beat.minor.have-3-havens-know-your-name",
+          "type": "minor"
+        }
+      },
+      "1wcs645jo32qn14i": {
+        "_id": "1wcs645jo32qn14i",
+        "name": "beat.minor.rush-into-danger",
+        "type": "beat",
+        "system": {
+          "description": "beat.minor.rush-into-danger",
+          "type": "minor"
+        }
+      },
+      "r8ljuv60c4esgfll": {
+        "_id": "r8ljuv60c4esgfll",
+        "name": "beat.minor.have-cocktail-move-or-beast-named",
+        "type": "beat",
+        "system": {
+          "description": "beat.minor.have-cocktail-move-or-beast-named",
+          "type": "minor"
+        }
+      },
+      "yno5yd81y88bk0x7": {
+        "_id": "yno5yd81y88bk0x7",
+        "name": "beat.minor.go-somewhere-no-one-stepped",
+        "type": "beat",
+        "system": {
+          "description": "beat.minor.go-somewhere-no-one-stepped",
+          "type": "minor"
+        }
+      },
+      "iss5hxg3hc9639ao": {
+        "_id": "iss5hxg3hc9639ao",
+        "name": "beat.minor.win-unarmed-brawl",
+        "type": "beat",
+        "system": {
+          "description": "beat.minor.win-unarmed-brawl",
+          "type": "minor"
+        }
+      },
+      "x8ud4179uhlvl742": {
+        "_id": "x8ud4179uhlvl742",
+        "name": "beat.minor.kick-someone-off",
+        "type": "beat",
+        "system": {
+          "description": "beat.minor.kick-someone-off",
+          "type": "minor"
+        }
+      },
+      "42u6irpokup2zmon": {
+        "_id": "42u6irpokup2zmon",
+        "name": "beat.major.acquire-rare-item",
+        "type": "beat",
+        "system": {
+          "description": "beat.major.acquire-rare-item",
+          "type": "major"
+        }
+      },
+      "pe9yrsfxz2pl1282": {
+        "_id": "pe9yrsfxz2pl1282",
+        "name": "beat.major.slay-large-beast",
+        "type": "beat",
+        "system": {
+          "description": "beat.major.slay-large-beast",
+          "type": "major"
+        }
+      },
+      "3sgy4ohujofqfofx": {
+        "_id": "3sgy4ohujofqfofx",
+        "name": "beat.major.have-named-landmark",
+        "type": "beat",
+        "system": {
+          "description": "beat.major.have-named-landmark",
+          "type": "major"
+        }
+      },
+      "x18ala38a6jfa80x": {
+        "_id": "x18ala38a6jfa80x",
+        "name": "beat.major.upgrade-a-haunt",
+        "type": "beat",
+        "system": {
+          "description": "beat.major.upgrade-a-haunt",
+          "type": "major"
+        }
+      },
+      "044hqfvx7osnt9jp": {
+        "_id": "044hqfvx7osnt9jp",
+        "name": "beat.major.save-haven",
+        "type": "beat",
+        "system": {
+          "description": "beat.major.save-haven",
+          "type": "major"
+        }
+      },
+      "j4z5d5yfmmr06kzh": {
+        "_id": "j4z5d5yfmmr06kzh",
+        "name": "beat.major.connect-three-havens",
+        "type": "beat",
+        "system": {
+          "description": "beat.major.connect-three-havens",
+          "type": "major"
+        }
+      },
+      "eggmlz9k84sepueg": {
+        "_id": "eggmlz9k84sepueg",
+        "name": "beat.major.save-the-day",
+        "type": "beat",
+        "system": {
+          "description": "beat.major.save-the-day",
+          "type": "major"
+        }
+      },
+      "ncmmwhovi7np351f": {
+        "_id": "ncmmwhovi7np351f",
+        "name": "beat.major.catalogue-your-exploits",
+        "type": "beat",
+        "system": {
+          "description": "beat.major.catalogue-your-exploits",
+          "type": "major"
+        }
+      },
+      "tkm34p9y8nwvfbr6": {
+        "_id": "tkm34p9y8nwvfbr6",
+        "name": "beat.major.lead-a-group-organisation",
+        "type": "beat",
+        "system": {
+          "description": "beat.major.lead-a-group-organisation",
+          "type": "major"
+        }
+      },
+      "8fbpdnj54ff4y1at": {
+        "_id": "8fbpdnj54ff4y1at",
+        "name": "beat.major.lead-delve-to-tier-3",
+        "type": "beat",
+        "system": {
+          "description": "beat.major.lead-delve-to-tier-3",
+          "type": "major"
+        }
+      },
+      "993odh97t2545g7j": {
+        "_id": "993odh97t2545g7j",
+        "name": "beat.zenith.reach-tier-4",
+        "type": "beat",
+        "system": {
+          "description": "beat.zenith.reach-tier-4",
+          "type": "zenith"
+        }
+      },
+      "clria8pl2hf6cp2z": {
+        "_id": "clria8pl2hf6cp2z",
+        "name": "beat.zenith.lead-haven-to-prosperity",
+        "type": "beat",
+        "system": {
+          "description": "beat.zenith.lead-haven-to-prosperity",
+          "type": "zenith"
+        }
+      }
+    }
+  },
+  "effects": [],
+  "_key": "!items!rissfrqbph68v9q9"
+}

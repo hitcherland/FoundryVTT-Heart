@@ -1,0 +1,12 @@
+{
+  "_id": "khftnbcoucz2tncv",
+  "name": "fallout.minor.echo.strange_appetite.name",
+  "type": "fallout",
+  "system": {
+    "description": "fallout.minor.echo.strange_appetite.description",
+    "resistance": "echo",
+    "type": "minor"
+  },
+  "effects": [],
+  "_key": "!items!khftnbcoucz2tncv"
+}

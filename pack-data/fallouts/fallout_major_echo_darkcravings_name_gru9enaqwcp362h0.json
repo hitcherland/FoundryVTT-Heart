@@ -1,0 +1,12 @@
+{
+  "_id": "gru9enaqwcp362h0",
+  "name": "fallout.major.echo.darkcravings.name",
+  "type": "fallout",
+  "system": {
+    "description": "fallout.major.echo.darkcravings.description",
+    "resistance": "echo",
+    "type": "major"
+  },
+  "effects": [],
+  "_key": "!items!gru9enaqwcp362h0"
+}

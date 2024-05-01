@@ -1,0 +1,12 @@
+{
+  "_id": "js60ky7v7dmj9g2v",
+  "name": "fallout.minor.fortune.word_of_mouth.name",
+  "type": "fallout",
+  "system": {
+    "description": "fallout.minor.fortune.word_of_mouth.description",
+    "resistance": "fortune",
+    "type": "minor"
+  },
+  "effects": [],
+  "_key": "!items!js60ky7v7dmj9g2v"
+}

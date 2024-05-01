@@ -1,0 +1,12 @@
+{
+  "_id": "d9u5z5qnf7pxjzqo",
+  "name": "fallout.minor.echo.aetheric_scourge.name",
+  "type": "fallout",
+  "system": {
+    "description": "fallout.minor.echo.aetheric_scourge.description",
+    "resistance": "echo",
+    "type": "minor"
+  },
+  "effects": [],
+  "_key": "!items!d9u5z5qnf7pxjzqo"
+}

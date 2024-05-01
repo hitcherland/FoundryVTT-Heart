@@ -1,0 +1,12 @@
+{
+  "_id": "z76e9j10qdspeog0",
+  "name": "fallout.minor.mind.shaken.name",
+  "type": "fallout",
+  "system": {
+    "description": "fallout.minor.mind.shaken.description",
+    "resistance": "mind",
+    "type": "minor"
+  },
+  "effects": [],
+  "_key": "!items!z76e9j10qdspeog0"
+}

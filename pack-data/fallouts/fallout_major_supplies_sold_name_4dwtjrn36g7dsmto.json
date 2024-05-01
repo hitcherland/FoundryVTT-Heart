@@ -1,0 +1,12 @@
+{
+  "_id": "4dwtjrn36g7dsmto",
+  "name": "fallout.major.supplies.sold.name",
+  "type": "fallout",
+  "system": {
+    "description": "fallout.major.supplies.sold.description",
+    "resistance": "supplies",
+    "type": "major"
+  },
+  "effects": [],
+  "_key": "!items!4dwtjrn36g7dsmto"
+}

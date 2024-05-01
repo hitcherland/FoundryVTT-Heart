@@ -1,0 +1,12 @@
+{
+  "_id": "9e6d6gvr564z3xyg",
+  "name": "fallout.critical.echo.stranded.name",
+  "type": "fallout",
+  "system": {
+    "description": "fallout.critical.echo.stranded.description",
+    "resistance": "echo",
+    "type": "critical"
+  },
+  "effects": [],
+  "_key": "!items!9e6d6gvr564z3xyg"
+}

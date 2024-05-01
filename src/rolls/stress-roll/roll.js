@@ -11,35 +11,35 @@ export default class StressRoll extends Roll {
         const resistances = [''].concat(game.heart.resistances);
         let requirements = {
             character: {
-                label: game.i18n.localize(`heart.character.label-single`),
+                label: game.i18n.localize(`heart.character.single`),
                 options: characters.reduce((map, char) => {
                     map[char.id] = char.name
                     return map;
                 }, {})
             },
             result: {
-                label: game.i18n.localize(`heart.result.label-single`),
+                label: game.i18n.localize(`heart.result.single`),
                 options: results.reduce((map, difficulty) => {
-                    map[difficulty] = game.i18n.localize(`heart.result.${difficulty}`)
+                    map[difficulty] = game.i18n.localize(`heart.roll-result.${difficulty}`)
                     return map;
                 }, {})
             },
             die_size: {
-                label: game.i18n.localize(`heart.die_size.label-single`),
+                label: game.i18n.localize("heart.dice-size.single"),
                 options: die_sizes.reduce((map, die_size) => {
-                    map[die_size] = game.i18n.format(`heart.die_size.d(N)`, {N: die_size.replace(/^d/, '')})
+                    map[die_size] = game.i18n.format(`heart.die-size`, {N: die_size.replace(/^d/, '')})
                     return map;
                 }, {})
             },
             resistance: undefined,
             ignoreProtection: {
-              label: game.i18n.localize(`heart.rolls.stress-roll.ignore-protection`),
+              label: game.i18n.localize(`heart.ignore-protection`),
               isCheckbox: true,
             }
         };
         if (game.settings.get('heart', 'preSelectStressType')){
           const resistance = {
-            label: game.i18n.localize(`heart.resistance.label-single`),
+            label: game.i18n.localize(`heart.resistance.single`),
             options: resistances.reduce((map, resistance) => {
                 map[resistance] = game.i18n.format(`heart.resistance.${resistance}`)
                 if(resistance === "") map[resistance] = resistance
@@ -116,9 +116,9 @@ export default class StressRoll extends Roll {
         // Execute the roll, if needed
         if (!this._evaluated) await this.evaluate({ async: true });
 
-        const description = game.i18n.format('heart.rolls.stress-roll.description(die_size)', {
+        const description = game.i18n.format('heart.stress-roll-description', {
             die_size: this.options.die_size,
-            result: game.i18n.localize(`heart.result:${this.options.result}`)
+            result: game.i18n.localize(`heart.roll-result:${this.options.result}`)
         });
 
         // Define chat data

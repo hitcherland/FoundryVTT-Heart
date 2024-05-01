@@ -2,7 +2,7 @@
     <div class="grid-2 auto-first-col place-center" style="flex: auto 0 0">
     {{#if system.die_size}}
         <label>
-            {{localizeHeart "die_size" "label-single"}}
+            {{localizeHeart "dice-size.single"}}
         </label>
         {{#if editable}}
         <select name="system.die_size">
@@ -16,14 +16,14 @@
     {{#if item.isOwner }}
         {{#if (not (undef system.active))}}
             <label>
-                {{localizeHeart "base" "is-active"}}
+                {{localizeHeart "is-active"}}
             </label>
             <input type="checkbox" value="system.active" {{checked system.active}}/>
         {{/if}}
 
         {{#if (not (undef system.complete))}}
             <label>
-                {{localizeHeart "base" "is-complete"}}
+                {{localizeHeart "is-complete"}}
             </label>
             <input type="checkbox" value="system.complete" {{checked system.complete}}/>
         {{/if}}

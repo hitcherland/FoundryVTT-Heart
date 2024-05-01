@@ -1,0 +1,12 @@
+{
+  "_id": "ay5q299eu6l80d0b",
+  "name": "fallout.minor.blood.disarmed.name",
+  "type": "fallout",
+  "system": {
+    "description": "fallout.minor.blood.disarmed.description",
+    "resistance": "blood",
+    "type": "minor"
+  },
+  "effects": [],
+  "_key": "!items!ay5q299eu6l80d0b"
+}

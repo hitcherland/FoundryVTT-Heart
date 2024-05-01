@@ -12,6 +12,10 @@ export default class RequirementApplication extends HeartApplication {
         return 'requirement'
     }
 
+    get title() {
+        return game.i18n.localize(`heart.${this.options.type}.title`);
+    }
+
     static build({requirements, callback, type}) {
         new this({}, {
             type,

@@ -1,0 +1,12 @@
+{
+  "_id": "5ybar2jhzwtxxl5p",
+  "name": "fallout.minor.blood.furious.name",
+  "type": "fallout",
+  "system": {
+    "description": "fallout.minor.blood.furious.description",
+    "resistance": "blood",
+    "type": "minor"
+  },
+  "effects": [],
+  "_key": "!items!5ybar2jhzwtxxl5p"
+}

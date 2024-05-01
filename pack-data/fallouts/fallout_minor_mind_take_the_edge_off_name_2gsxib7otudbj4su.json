@@ -1,0 +1,12 @@
+{
+  "_id": "2gsxib7otudbj4su",
+  "name": "fallout.minor.mind.take_the_edge_off.name",
+  "type": "fallout",
+  "system": {
+    "description": "fallout.minor.mind.take_the_edge_off.description",
+    "resistance": "mind",
+    "type": "minor"
+  },
+  "effects": [],
+  "_key": "!items!2gsxib7otudbj4su"
+}

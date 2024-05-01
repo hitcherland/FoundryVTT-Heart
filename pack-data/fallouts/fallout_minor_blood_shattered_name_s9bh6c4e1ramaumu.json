@@ -1,0 +1,12 @@
+{
+  "_id": "s9bh6c4e1ramaumu",
+  "name": "fallout.minor.blood.shattered.name",
+  "type": "fallout",
+  "system": {
+    "description": "fallout.minor.blood.shattered.description",
+    "resistance": "blood",
+    "type": "minor"
+  },
+  "effects": [],
+  "_key": "!items!s9bh6c4e1ramaumu"
+}

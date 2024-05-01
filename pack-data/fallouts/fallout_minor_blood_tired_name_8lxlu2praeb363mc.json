@@ -1,0 +1,12 @@
+{
+  "_id": "8lxlu2praeb363mc",
+  "name": "fallout.minor.blood.tired.name",
+  "type": "fallout",
+  "system": {
+    "description": "fallout.minor.blood.tired.description",
+    "resistance": "blood",
+    "type": "minor"
+  },
+  "effects": [],
+  "_key": "!items!8lxlu2praeb363mc"
+}

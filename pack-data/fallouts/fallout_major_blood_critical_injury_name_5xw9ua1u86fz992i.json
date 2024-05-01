@@ -1,0 +1,12 @@
+{
+  "_id": "5xw9ua1u86fz992i",
+  "name": "fallout.major.blood.critical_injury.name",
+  "type": "fallout",
+  "system": {
+    "description": "fallout.major.blood.critical_injury.description",
+    "resistance": "blood",
+    "type": "major"
+  },
+  "effects": [],
+  "_key": "!items!5xw9ua1u86fz992i"
+}

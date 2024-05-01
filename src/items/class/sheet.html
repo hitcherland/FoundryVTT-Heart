@@ -1,8 +1,8 @@
 {{#*inline "abilitySection"}}
 <h2>
-    {{localizeHeart "class" (join "" type "-ability") "label-multiple"}}
+    {{localizeHeart (join "" type "-ability") "multiple"}}
     {{#if (and editable (not item.isOwned))}}
-    <a class="right" data-action="add-child" data-type="ability" data-data='{"type": "{{type}}"{{#if (eq type "core")}}, "active": true{{/if}} }'><span class="fas fa-plus"></span> {{localizeHeart "class" (join "" type "-ability") "add"}}</a>
+    <a class="right" data-action="add-child" data-type="ability" data-data='{"type": "{{type}}"{{#if (eq type "core")}}, "active": true{{/if}} }'><span class="fas fa-plus"></span> {{localizeHeart "add"}}</a>
     {{/if}}
 </h2>
 <div class="item-list">
@@ -29,10 +29,10 @@
     </div>
 
     <h2>
-        {{localizeHeart "class" "core-traits" "label-multiple"}}
+        {{localizeHeart "core-traits.multiple"}}
     </h2>
     <div class="grid-2 auto-first-col">
-        <div class="title-font">{{localizeHeart "skill" "label-single"}}</div>
+        <div class="title-font">{{localizeHeart "skill.single"}}</div>
         {{#if (and editable (not item.isOwned))}}
         <select name="system.core_skill">
             {{selectOptions skills selected=system.core_skill}}
@@ -41,7 +41,7 @@
         <div>{{localizeHeart "skill" system.core_skill}}</div>
         {{/if}}
 
-        <div class="title-font">{{localizeHeart "domain" "label-single"}}</div>
+        <div class="title-font">{{localizeHeart "domain.single"}}</div>
         {{#if (and editable (not item.isOwned))}}
         <select name="system.core_domain">
             {{selectOptions domains selected=system.core_domain}}
@@ -50,32 +50,32 @@
         <div>{{localizeHeart "domain" system.core_domain}}</div>
         {{/if}}
 
-        <div class="title-font">{{localizeHeart "resource" "label-single"}}</div>
+        <div class="title-font">{{localizeHeart "resource.single"}}</div>
         <div>
             {{#each (lookup childrenTypes "resource") as |resource|}}
                 {{> "heart:items/resource/preview.html" document=../document item=resource user=../user showDelete=../user.isGM}}
             {{/each}}
             
             {{#if user.isGM }}
-            <a class="right" data-action="add-child" data-type="resource" data-data='{"name": "New Resource", "domain": "cursed", "active": true}'><span class="fas fa-plus"></span> {{localizeHeart "class" "resource" "add"}}</a>
             {{/if}}
+          <a class="right" data-action="add-child" data-type="resource" data-data='{"name": "New Resource", "domain": "cursed", "active": true}'><span class="fas fa-plus"></span> {{localizeHeart "add"}}</a>
         </div>
         <div class="wide">
         </div>
     
-        <div class="title-font">{{localizeHeart "equipment" "label-single"}}</div>
+        <div class="title-font">{{localizeHeart "equipment.single"}}</div>
         <div>
             {{#if (gt item.system.equipment_groups.length 1)}}
-                {{localizeHeart "class" "equipment" "pick-one"}}
+                {{localizeHeart "pick-one-group"}}
             {{/if}}
             {{#each item.system.equipment_groups as |groupId|}}
                 <div class="equipment-group {{#if (or (eq groupId ../item.system.active_equipment_group) (includes ../item.system.active_equipment_groups groupId))}}active{{/if}}" data-group-id="{{groupId}}">
                     {{#if (or ../item.isEmbedded ../item.isChild) }}
                     <div class="actionbar">
                         {{#if (or (eq groupId ../item.system.active_equipment_group) (includes ../item.system.active_equipment_groups groupId))}}
-                        <a data-action="deactivate-group" title="{{localizeHeart 'base' 'deactivate'}}"><span class="fas fa-toggle-on"></span></a>
+                        <a data-action="deactivate-group" title="{{localizeHeart 'deactivate'}}"><span class="fas fa-toggle-on"></span></a>
                         {{else}}
-                        <a data-action="activate-group" title="{{localizeHeart 'base' 'activate'}}"><span class="fas fa-toggle-off"></span></a>
+                        <a data-action="activate-group" title="{{localizeHeart 'activate'}}"><span class="fas fa-toggle-off"></span></a>
                         {{/if}}
                     </div>
                     {{/if}}
@@ -86,15 +86,15 @@
                     {{/each}}
                     {{#if ../user.isGM }}
                     <div class="flexcol">
-                        <a class="right" data-action="add-child" data-type="equipment" data-data='{"name": "New Resource", "domain": "cursed", "group": "{{groupId}}"}'><span class="fas fa-plus"></span> {{localizeHeart "class" "equipment" "add"}}</a>
-                        <a class="right" data-action="delete-equipment-group"><span class="fas fa-trash"></span> {{localizeHeart "class" "equipment" "delete-group"}}</a>
+                        <a class="right" data-action="add-child" data-type="equipment" data-data='{"name": "New Resource", "domain": "cursed", "group": "{{groupId}}"}'><span class="fas fa-plus"></span> {{localizeHeart "add"}}</a>
+                        <a class="right" data-action="delete-equipment-group"><span class="fas fa-trash"></span> {{localizeHeart "delete-equipment-group"}}</a>
                     </div>
                     {{/if}}
                 </div>
             {{/each}}
             
             {{#if user.isGM }}
-                <a class="right" data-action="add-equipment-group"><span class="fas fa-plus"></span> {{localizeHeart "class" "equipment" "add-group"}}</a>
+                <a class="right" data-action="add-equipment-group"><span class="fas fa-plus"></span> {{localizeHeart "add-equipment-group"}}</a>
             {{/if}}          
         </div>
     </div>

@@ -25,7 +25,7 @@ const difficult_results = {
 }
 
 const stress_results = [
-    'n_a',
+    'none',
     'success_at_a_cost',
     'failure',
     'critical_failure'
@@ -49,39 +49,39 @@ export default class HeartRoll extends Roll {
         const difficulties = game.heart.difficulties;
         return {
             character: {
-                label: game.i18n.localize(`heart.character.label-single`),
+                label: game.i18n.localize(`heart.character.single`),
                 options: characters.reduce((map, char) => {
                     map[char.id] = char.name
                     return map;
                 }, {})
             }, 
             difficulty: {
-                label: game.i18n.localize(`heart.difficulty.label-single`),
+                label: game.i18n.localize(`heart.difficulty.single`),
                 options: difficulties.reduce((map, difficulty) => {
                     map[difficulty] = game.i18n.localize(`heart.difficulty.${difficulty}`)
                     return map;
                 }, {})
             }, 
             skill: {
-                label: game.i18n.localize(`heart.skill.label-single`),
+                label: game.i18n.localize(`heart.skill.single`),
                 options: skills.reduce((map, skill) => {
                     map[skill] = game.i18n.localize(`heart.skill.${skill}`)
                     return map;
                 }, {})
             }, 
             domain: {
-                label: game.i18n.localize(`heart.domain.label-single`),
+                label: game.i18n.localize(`heart.domain.single`),
                 options: domains.reduce((map, domain) => {
                     map[domain] = game.i18n.localize(`heart.domain.${domain}`)
                     return map;
                 }, {})
             }, 
             mastery: {
-                label: game.i18n.localize(`heart.mastery.label-single`),
+                label: game.i18n.localize(`heart.mastery.single`),
                 isCheckbox: true,
             }, 
             helpers: {
-                label: game.i18n.localize(`heart.helper.label-single`),
+                label: game.i18n.localize(`heart.valid-helpers`),
                 isMany: true,
                 options: characters.reduce((map, char) => {
                     map[char.id] = char.name
@@ -148,10 +148,10 @@ export default class HeartRoll extends Roll {
 
         let formula_terms = [];
         [
-            game.i18n.localize('heart.rolls.roll.base'),
+            game.i18n.localize('heart.base'),
             skill ? game.i18n.localize(`heart.skill.${skill}`) : undefined,
             domain ? game.i18n.localize(`heart.domain.${domain}`) : undefined, 
-            mastery ? game.i18n.localize(`heart.mastery.short`) : false,
+            mastery ? game.i18n.localize(`heart.mastery.single`) : false,
             ...helpers.map(h => game.actors.get(h).name)].forEach(flavor => {
             if (!flavor) return;
             formula_terms.push(`1d10[${flavor}]`);
@@ -207,7 +207,7 @@ export default class HeartRoll extends Roll {
         // Execute the roll, if needed
         if (!this._evaluated) await this.evaluate({ async: true });
 
-        const description = game.i18n.format('heart.rolls.roll.description(difficulty,count)', {
+        const description = game.i18n.format('heart.roll-description', {
             difficulty: game.i18n.localize(`heart.difficulty.${this.options.difficulty}`),
             count: this.dice.length
         });

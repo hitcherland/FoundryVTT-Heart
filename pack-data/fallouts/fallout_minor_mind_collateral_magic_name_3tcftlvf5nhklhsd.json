@@ -1,0 +1,12 @@
+{
+  "_id": "3tcftlvf5nhklhsd",
+  "name": "fallout.minor.mind.collateral_magic.name",
+  "type": "fallout",
+  "system": {
+    "description": "fallout.minor.mind.collateral_magic.description",
+    "resistance": "mind",
+    "type": "minor"
+  },
+  "effects": [],
+  "_key": "!items!3tcftlvf5nhklhsd"
+}

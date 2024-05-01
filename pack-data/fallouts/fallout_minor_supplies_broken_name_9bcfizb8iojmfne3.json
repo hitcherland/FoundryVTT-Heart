@@ -1,0 +1,12 @@
+{
+  "_id": "9bcfizb8iojmfne3",
+  "name": "fallout.minor.supplies.broken.name",
+  "type": "fallout",
+  "system": {
+    "description": "fallout.minor.supplies.broken.description",
+    "resistance": "supplies",
+    "type": "minor"
+  },
+  "effects": [],
+  "_key": "!items!9bcfizb8iojmfne3"
+}

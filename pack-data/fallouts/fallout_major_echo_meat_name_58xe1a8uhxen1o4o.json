@@ -1,0 +1,12 @@
+{
+  "_id": "58xe1a8uhxen1o4o",
+  "name": "fallout.major.echo.meat.name",
+  "type": "fallout",
+  "system": {
+    "description": "fallout.major.echo.meat.description",
+    "resistance": "echo",
+    "type": "major"
+  },
+  "effects": [],
+  "_key": "!items!58xe1a8uhxen1o4o"
+}

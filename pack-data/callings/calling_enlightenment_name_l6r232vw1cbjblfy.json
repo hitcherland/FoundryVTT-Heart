@@ -1,0 +1,316 @@
+{
+  "_id": "l6r232vw1cbjblfy",
+  "name": "calling.enlightenment.name",
+  "type": "calling",
+  "system": {
+    "description": "calling.enlightenment.description",
+    "questions": {
+      "98gaqi3dl1xyc4i2": {
+        "question": "calling.enlightenment.what-are-you-attempting-to-achieve"
+      },
+      "vj7ofpzdp6g0pw2y": {
+        "question": "calling.enlightenment.what-is-the-first-step"
+      },
+      "fq4yqkulm4sga5th": {
+        "question": "calling.enlightenment.what-have-you-learned-from-other"
+      },
+      "iqttja1p3bhy6any": {
+        "question": "calling.enlightenment.why-do-you-suspect-other"
+      }
+    },
+    "children": {
+      "3ihdkihuknzrmmrb": {
+        "_id": "3ihdkihuknzrmmrb",
+        "name": "ability.core.unorthodox_methods.name",
+        "type": "ability",
+        "system": {
+          "active": true,
+          "description": "ability.core.unorthodox_methods.description",
+          "type": "core",
+          "children": {}
+        }
+      },
+      "c52qe7lidcosb4n5": {
+        "_id": "c52qe7lidcosb4n5",
+        "name": "beat.minor.allude-to-the-events",
+        "type": "beat",
+        "system": {
+          "description": "beat.minor.allude-to-the-events",
+          "type": "minor"
+        }
+      },
+      "rxz24pabzd4ubk1n": {
+        "_id": "rxz24pabzd4ubk1n",
+        "name": "beat.minor.put-knowledge-above-preserving-allies",
+        "type": "beat",
+        "system": {
+          "description": "beat.minor.put-knowledge-above-preserving-allies",
+          "type": "minor"
+        }
+      },
+      "athp9g7r612cucps": {
+        "_id": "athp9g7r612cucps",
+        "name": "beat.minor.gain-access-to-comcealed-knowledge",
+        "type": "beat",
+        "system": {
+          "description": "beat.minor.gain-access-to-comcealed-knowledge",
+          "type": "minor"
+        }
+      },
+      "kapq9kzi5eecwxp6": {
+        "_id": "kapq9kzi5eecwxp6",
+        "name": "beat.minor.gain-favour-with-faction",
+        "type": "beat",
+        "system": {
+          "description": "beat.minor.gain-favour-with-faction",
+          "type": "minor"
+        }
+      },
+      "2enouadf10t5vicn": {
+        "_id": "2enouadf10t5vicn",
+        "name": "beat.minor.take-minor-mind-fallout",
+        "type": "beat",
+        "system": {
+          "description": "beat.minor.take-minor-mind-fallout",
+          "type": "minor"
+        }
+      },
+      "cm5tqjmsbf78xgw5": {
+        "_id": "cm5tqjmsbf78xgw5",
+        "name": "beat.minor.destroy-evidence-or-rhetoric",
+        "type": "beat",
+        "system": {
+          "description": "beat.minor.destroy-evidence-or-rhetoric",
+          "type": "minor"
+        }
+      },
+      "4vx2zz42huph0yo9": {
+        "_id": "4vx2zz42huph0yo9",
+        "name": "beat.minor.sell-d8-resource-to-secure-secret",
+        "type": "beat",
+        "system": {
+          "description": "beat.minor.sell-d8-resource-to-secure-secret",
+          "type": "minor"
+        }
+      },
+      "6fj6qatu4ppmlvs1": {
+        "_id": "6fj6qatu4ppmlvs1",
+        "name": "beat.minor.reach-landmark-on-tier-3",
+        "type": "beat",
+        "system": {
+          "description": "beat.minor.reach-landmark-on-tier-3",
+          "type": "minor"
+        }
+      },
+      "cuxr8mwygw7t3lgx": {
+        "_id": "cuxr8mwygw7t3lgx",
+        "name": "beat.minor.find-helpful-text",
+        "type": "beat",
+        "system": {
+          "description": "beat.minor.find-helpful-text",
+          "type": "minor"
+        }
+      },
+      "mivcwy50bdj95z0d": {
+        "_id": "mivcwy50bdj95z0d",
+        "name": "beat.minor.succeed-at-task-that-someone-failed",
+        "type": "beat",
+        "system": {
+          "description": "beat.minor.succeed-at-task-that-someone-failed",
+          "type": "minor"
+        }
+      },
+      "h8vpa3fthh4abqo2": {
+        "_id": "h8vpa3fthh4abqo2",
+        "name": "beat.minor.mark-d8-stress-to-NPC-bond",
+        "type": "beat",
+        "system": {
+          "description": "beat.minor.mark-d8-stress-to-NPC-bond",
+          "type": "minor"
+        }
+      },
+      "4eehkqnsortxvogy": {
+        "_id": "4eehkqnsortxvogy",
+        "name": "beat.minor.acquire-bond-who-has-information",
+        "type": "beat",
+        "system": {
+          "description": "beat.minor.acquire-bond-who-has-information",
+          "type": "minor"
+        }
+      },
+      "y96ut7prgmcxvp2c": {
+        "_id": "y96ut7prgmcxvp2c",
+        "name": "beat.minor.establish-a-connection",
+        "type": "beat",
+        "system": {
+          "description": "beat.minor.establish-a-connection",
+          "type": "minor"
+        }
+      },
+      "xijf319i66puwzju": {
+        "_id": "xijf319i66puwzju",
+        "name": "beat.minor.take-minor-supplies-fallout",
+        "type": "beat",
+        "system": {
+          "description": "beat.minor.take-minor-supplies-fallout",
+          "type": "minor"
+        }
+      },
+      "42rarwb5svkr34fn": {
+        "_id": "42rarwb5svkr34fn",
+        "name": "beat.minor.flee-from-combat",
+        "type": "beat",
+        "system": {
+          "description": "beat.minor.flee-from-combat",
+          "type": "minor"
+        }
+      },
+      "6s9g12r9o7qhc2kx": {
+        "_id": "6s9g12r9o7qhc2kx",
+        "name": "beat.minor.release-your-findings-in-journal",
+        "type": "beat",
+        "system": {
+          "description": "beat.minor.release-your-findings-in-journal",
+          "type": "minor"
+        }
+      },
+      "gz9fxu43dxem5gk6": {
+        "_id": "gz9fxu43dxem5gk6",
+        "name": "beat.minor.meet-someone-from-your-old-life",
+        "type": "beat",
+        "system": {
+          "description": "beat.minor.meet-someone-from-your-old-life",
+          "type": "minor"
+        }
+      },
+      "f53xigtpbpfc8v1q": {
+        "_id": "f53xigtpbpfc8v1q",
+        "name": "beat.minor.dissect-something-interrogate-someone",
+        "type": "beat",
+        "system": {
+          "description": "beat.minor.dissect-something-interrogate-someone",
+          "type": "minor"
+        }
+      },
+      "hv3fhep0gfmee3d6": {
+        "_id": "hv3fhep0gfmee3d6",
+        "name": "beat.minor.buy-experimental-equipment",
+        "type": "beat",
+        "system": {
+          "description": "beat.minor.buy-experimental-equipment",
+          "type": "minor"
+        }
+      },
+      "lcda235zwlec7fgw": {
+        "_id": "lcda235zwlec7fgw",
+        "name": "beat.major.take-major-mind-fallout",
+        "type": "beat",
+        "system": {
+          "description": "beat.major.take-major-mind-fallout",
+          "type": "major"
+        }
+      },
+      "jqy9ptpilrc159w0": {
+        "_id": "jqy9ptpilrc159w0",
+        "name": "beat.major.kill-someone-trying-to-stop-you",
+        "type": "beat",
+        "system": {
+          "description": "beat.major.kill-someone-trying-to-stop-you",
+          "type": "major"
+        }
+      },
+      "dx5ip2aoxgbcnagl": {
+        "_id": "dx5ip2aoxgbcnagl",
+        "name": "beat.major.sell-a-d12-resource",
+        "type": "beat",
+        "system": {
+          "description": "beat.major.sell-a-d12-resource",
+          "type": "major"
+        }
+      },
+      "9tdfu22wmwd9o1tt": {
+        "_id": "9tdfu22wmwd9o1tt",
+        "name": "beat.major.destroy-haunt-to-learn-about-task",
+        "type": "beat",
+        "system": {
+          "description": "beat.major.destroy-haunt-to-learn-about-task",
+          "type": "major"
+        }
+      },
+      "2v7tw4y576n2qrdt": {
+        "_id": "2v7tw4y576n2qrdt",
+        "name": "beat.major.gain-authority-within-a-faction",
+        "type": "beat",
+        "system": {
+          "description": "beat.major.gain-authority-within-a-faction",
+          "type": "major"
+        }
+      },
+      "0wq3u4755bfxxev5": {
+        "_id": "0wq3u4755bfxxev5",
+        "name": "beat.major.find-knowledge-on-tier-3",
+        "type": "beat",
+        "system": {
+          "description": "beat.major.find-knowledge-on-tier-3",
+          "type": "major"
+        }
+      },
+      "s11fkvla00am97ja": {
+        "_id": "s11fkvla00am97ja",
+        "name": "beat.major.take-major-supplies-fallout",
+        "type": "beat",
+        "system": {
+          "description": "beat.major.take-major-supplies-fallout",
+          "type": "major"
+        }
+      },
+      "8z16v7lyof5wzgh7": {
+        "_id": "8z16v7lyof5wzgh7",
+        "name": "beat.major.acquire-renowned-equipment",
+        "type": "beat",
+        "system": {
+          "description": "beat.major.acquire-renowned-equipment",
+          "type": "major"
+        }
+      },
+      "1h9oybtoufdvnmlf": {
+        "_id": "1h9oybtoufdvnmlf",
+        "name": "beat.major.attract-a-protege",
+        "type": "beat",
+        "system": {
+          "description": "beat.major.attract-a-protege",
+          "type": "major"
+        }
+      },
+      "nq4ey4cxzjqzjc6d": {
+        "_id": "nq4ey4cxzjqzjc6d",
+        "name": "beat.major.explore-a-mysterious-tower",
+        "type": "beat",
+        "system": {
+          "description": "beat.major.explore-a-mysterious-tower",
+          "type": "major"
+        }
+      },
+      "iqbb87282kcz8mka": {
+        "_id": "iqbb87282kcz8mka",
+        "name": "beat.zenith.find-final-secret-solve-impossible-task",
+        "type": "beat",
+        "system": {
+          "description": "beat.zenith.find-final-secret-solve-impossible-task",
+          "type": "zenith"
+        }
+      },
+      "spzqcu5mxgqow7xj": {
+        "_id": "spzqcu5mxgqow7xj",
+        "name": "beat.zenith.find-final-secret-destroy-it",
+        "type": "beat",
+        "system": {
+          "description": "beat.zenith.find-final-secret-destroy-it",
+          "type": "zenith"
+        }
+      }
+    }
+  },
+  "effects": [],
+  "_key": "!items!l6r232vw1cbjblfy"
+}

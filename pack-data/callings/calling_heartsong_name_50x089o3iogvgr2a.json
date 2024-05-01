@@ -1,0 +1,352 @@
+{
+  "_id": "50x089o3iogvgr2a",
+  "name": "calling.heartsong.name",
+  "type": "calling",
+  "system": {
+    "description": "calling.heartsong.description",
+    "questions": {
+      "62moy2kli7kh6ho6": {
+        "question": "calling.heartsong.which-images-do-you-see"
+      },
+      "gthba1d2dgwbgog5": {
+        "question": "calling.heartsong.what-signs-do-you-look-for"
+      },
+      "jd3tegdj2qcetqye": {
+        "question": "calling.heartsong.what-unearthly-sight-you-witnessed"
+      },
+      "nxq9h12q00caskw3": {
+        "question": "calling.heartsong.how-heart-touched-you"
+      }
+    },
+    "children": {
+      "otdg4xppfq1br0l8": {
+        "_id": "otdg4xppfq1br0l8",
+        "name": "ability.core.in_the_blood.name",
+        "type": "ability",
+        "system": {
+          "active": true,
+          "description": "ability.core.in_the_blood.description",
+          "type": "core",
+          "children": {}
+        }
+      },
+      "mpu19r1bj9bo7n8e": {
+        "_id": "mpu19r1bj9bo7n8e",
+        "name": "beat.minor.name-the-heart",
+        "type": "beat",
+        "system": {
+          "description": "beat.minor.name-the-heart",
+          "type": "minor"
+        }
+      },
+      "yjkkywqyvnclale4": {
+        "_id": "yjkkywqyvnclale4",
+        "name": "beat.minor.take-minor-echo-fallout",
+        "type": "beat",
+        "system": {
+          "description": "beat.minor.take-minor-echo-fallout",
+          "type": "minor"
+        }
+      },
+      "piyti0nn0cgdtr0a": {
+        "_id": "piyti0nn0cgdtr0a",
+        "name": "beat.minor.see-something-from-your-dreams",
+        "type": "beat",
+        "system": {
+          "description": "beat.minor.see-something-from-your-dreams",
+          "type": "minor"
+        }
+      },
+      "hi142gd8abzefxv9": {
+        "_id": "hi142gd8abzefxv9",
+        "name": "beat.minor.consume-something-of-heart",
+        "type": "beat",
+        "system": {
+          "description": "beat.minor.consume-something-of-heart",
+          "type": "minor"
+        }
+      },
+      "a0aa6utimxwqdm43": {
+        "_id": "a0aa6utimxwqdm43",
+        "name": "beat.minor.be-rendered-helpless-in-heart",
+        "type": "beat",
+        "system": {
+          "description": "beat.minor.be-rendered-helpless-in-heart",
+          "type": "minor"
+        }
+      },
+      "mv8x1ddvxsdxx8r3": {
+        "_id": "mv8x1ddvxsdxx8r3",
+        "name": "beat.minor.perform-rite-at-place-of-power-tier-2",
+        "type": "beat",
+        "system": {
+          "description": "beat.minor.perform-rite-at-place-of-power-tier-2",
+          "type": "minor"
+        }
+      },
+      "0ibs92yrsa6k6ztv": {
+        "_id": "0ibs92yrsa6k6ztv",
+        "name": "beat.minor.damage-or-sabotage-haven",
+        "type": "beat",
+        "system": {
+          "description": "beat.minor.damage-or-sabotage-haven",
+          "type": "minor"
+        }
+      },
+      "cwqz7xb9n5syslev": {
+        "_id": "cwqz7xb9n5syslev",
+        "name": "beat.minor.sacrifice-something-you-love",
+        "type": "beat",
+        "system": {
+          "description": "beat.minor.sacrifice-something-you-love",
+          "type": "minor"
+        }
+      },
+      "1q4d4i20uyyhaiui": {
+        "_id": "1q4d4i20uyyhaiui",
+        "name": "beat.minor.allow-something-dangerous-of-heart-to-live",
+        "type": "beat",
+        "system": {
+          "description": "beat.minor.allow-something-dangerous-of-heart-to-live",
+          "type": "minor"
+        }
+      },
+      "f98enw9y1nhjbiql": {
+        "_id": "f98enw9y1nhjbiql",
+        "name": "beat.minor.let-curiosity-lead-into-danger",
+        "type": "beat",
+        "system": {
+          "description": "beat.minor.let-curiosity-lead-into-danger",
+          "type": "minor"
+        }
+      },
+      "te1e098ut1iinc6o": {
+        "_id": "te1e098ut1iinc6o",
+        "name": "beat.minor.undergo-trance-like-vision",
+        "type": "beat",
+        "system": {
+          "description": "beat.minor.undergo-trance-like-vision",
+          "type": "minor"
+        }
+      },
+      "igxnq0btfzrwra5z": {
+        "_id": "igxnq0btfzrwra5z",
+        "name": "beat.minor.communicate-with-something-of-heart",
+        "type": "beat",
+        "system": {
+          "description": "beat.minor.communicate-with-something-of-heart",
+          "type": "minor"
+        }
+      },
+      "2z4i347kr3cjvuuh": {
+        "_id": "2z4i347kr3cjvuuh",
+        "name": "beat.minor.witness-emissary-of-Heart",
+        "type": "beat",
+        "system": {
+          "description": "beat.minor.witness-emissary-of-Heart",
+          "type": "minor"
+        }
+      },
+      "q31p9acxhkofcpht": {
+        "_id": "q31p9acxhkofcpht",
+        "name": "beat.minor.experience-a-pulse",
+        "type": "beat",
+        "system": {
+          "description": "beat.minor.experience-a-pulse",
+          "type": "minor"
+        }
+      },
+      "asbiabyhu6v71m7a": {
+        "_id": "asbiabyhu6v71m7a",
+        "name": "beat.minor.receive-insight-from-witch",
+        "type": "beat",
+        "system": {
+          "description": "beat.minor.receive-insight-from-witch",
+          "type": "minor"
+        }
+      },
+      "keuucj4yx0pgcszz": {
+        "_id": "keuucj4yx0pgcszz",
+        "name": "beat.minor.gain-information-why-you have-been-chosen",
+        "type": "beat",
+        "system": {
+          "description": "beat.minor.gain-information-why-you have-been-chosen",
+          "type": "minor"
+        }
+      },
+      "cnuabsz1qevvyi8v": {
+        "_id": "cnuabsz1qevvyi8v",
+        "name": "beat.minor.receive-strange-surgical-implant",
+        "type": "beat",
+        "system": {
+          "description": "beat.minor.receive-strange-surgical-implant",
+          "type": "minor"
+        }
+      },
+      "4fxdwferj6q43q9x": {
+        "_id": "4fxdwferj6q43q9x",
+        "name": "beat.minor.build-shrine",
+        "type": "beat",
+        "system": {
+          "description": "beat.minor.build-shrine",
+          "type": "minor"
+        }
+      },
+      "yrc7wrohlhcwjas4": {
+        "_id": "yrc7wrohlhcwjas4",
+        "name": "beat.minor.terrify-NPC-with-your-obsession",
+        "type": "beat",
+        "system": {
+          "description": "beat.minor.terrify-NPC-with-your-obsession",
+          "type": "minor"
+        }
+      },
+      "rcf7q0h5q3lv2gtu": {
+        "_id": "rcf7q0h5q3lv2gtu",
+        "name": "beat.minor.perform-service-to-NPC-witch",
+        "type": "beat",
+        "system": {
+          "description": "beat.minor.perform-service-to-NPC-witch",
+          "type": "minor"
+        }
+      },
+      "0fijjrtci4kdpx2a": {
+        "_id": "0fijjrtci4kdpx2a",
+        "name": "beat.minor.shelter-someone-touched-by-the-Heart",
+        "type": "beat",
+        "system": {
+          "description": "beat.minor.shelter-someone-touched-by-the-Heart",
+          "type": "minor"
+        }
+      },
+      "1tqkmuobx1oq70sn": {
+        "_id": "1tqkmuobx1oq70sn",
+        "name": "beat.minor.find-heart-touched-sapling",
+        "type": "beat",
+        "system": {
+          "description": "beat.minor.find-heart-touched-sapling",
+          "type": "minor"
+        }
+      },
+      "9q2eoy6gx3ips7pu": {
+        "_id": "9q2eoy6gx3ips7pu",
+        "name": "beat.minor.convince-party-to-collect-cursed-resources",
+        "type": "beat",
+        "system": {
+          "description": "beat.minor.convince-party-to-collect-cursed-resources",
+          "type": "minor"
+        }
+      },
+      "by4f1wb8ldvm8543": {
+        "_id": "by4f1wb8ldvm8543",
+        "name": "beat.major.take-major-echo-fallout",
+        "type": "beat",
+        "system": {
+          "description": "beat.major.take-major-echo-fallout",
+          "type": "major"
+        }
+      },
+      "uc0pgivyijm1c49z": {
+        "_id": "uc0pgivyijm1c49z",
+        "name": "beat.major.perform-rite-at-place-of-power-tier-3",
+        "type": "beat",
+        "system": {
+          "description": "beat.major.perform-rite-at-place-of-power-tier-3",
+          "type": "major"
+        }
+      },
+      "5s1ti8f034a1g8is": {
+        "_id": "5s1ti8f034a1g8is",
+        "name": "beat.major.sacrifice-someone-important",
+        "type": "beat",
+        "system": {
+          "description": "beat.major.sacrifice-someone-important",
+          "type": "major"
+        }
+      },
+      "16g62zcuzgv3rkqz": {
+        "_id": "16g62zcuzgv3rkqz",
+        "name": "beat.major.establish-bond-with-hearts-blood-beast",
+        "type": "beat",
+        "system": {
+          "description": "beat.major.establish-bond-with-hearts-blood-beast",
+          "type": "major"
+        }
+      },
+      "ap0nv6q8ngbiafct": {
+        "_id": "ap0nv6q8ngbiafct",
+        "name": "beat.major.show-the-heart-majesty-to-outsider",
+        "type": "beat",
+        "system": {
+          "description": "beat.major.show-the-heart-majesty-to-outsider",
+          "type": "major"
+        }
+      },
+      "eire9ltjc0v1buk4": {
+        "_id": "eire9ltjc0v1buk4",
+        "name": "beat.major.meet-emissary-of-heart",
+        "type": "beat",
+        "system": {
+          "description": "beat.major.meet-emissary-of-heart",
+          "type": "major"
+        }
+      },
+      "0vcrpoh91p3j0o8b": {
+        "_id": "0vcrpoh91p3j0o8b",
+        "name": "beat.major.destroy-haven",
+        "type": "beat",
+        "system": {
+          "description": "beat.major.destroy-haven",
+          "type": "major"
+        }
+      },
+      "4vtgbqv3x9glqfg5": {
+        "_id": "4vtgbqv3x9glqfg5",
+        "name": "beat.major.one-bond-takes-critical-fallout",
+        "type": "beat",
+        "system": {
+          "description": "beat.major.one-bond-takes-critical-fallout",
+          "type": "major"
+        }
+      },
+      "2nsi5kyh9mx246b1": {
+        "_id": "2nsi5kyh9mx246b1",
+        "name": "beat.major.deliver-crucial-message",
+        "type": "beat",
+        "system": {
+          "description": "beat.major.deliver-crucial-message",
+          "type": "major"
+        }
+      },
+      "bquuyovvqhosgoj4": {
+        "_id": "bquuyovvqhosgoj4",
+        "name": "beat.major.visit-3-vermissian-stations",
+        "type": "beat",
+        "system": {
+          "description": "beat.major.visit-3-vermissian-stations",
+          "type": "major"
+        }
+      },
+      "w9cpvozdmcm7wpds": {
+        "_id": "w9cpvozdmcm7wpds",
+        "name": "beat.zenith.become-one-with-the-heart",
+        "type": "beat",
+        "system": {
+          "description": "beat.zenith.become-one-with-the-heart",
+          "type": "zenith"
+        }
+      },
+      "kvxh6atl1inhcv5r": {
+        "_id": "kvxh6atl1inhcv5r",
+        "name": "beat.zenith.break-the-hearts-hold",
+        "type": "beat",
+        "system": {
+          "description": "beat.zenith.break-the-hearts-hold",
+          "type": "zenith"
+        }
+      }
+    }
+  },
+  "effects": [],
+  "_key": "!items!50x089o3iogvgr2a"
+}

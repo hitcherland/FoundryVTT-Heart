@@ -11,6 +11,4 @@ jobs:
       - run: npm ci
       - run: npm run build-prod
       - run: npm run build-manifest -- 0.X.Y
-      - run: npm run build-translations
       - run: npm run build-packs
-      - run: npm run build-template

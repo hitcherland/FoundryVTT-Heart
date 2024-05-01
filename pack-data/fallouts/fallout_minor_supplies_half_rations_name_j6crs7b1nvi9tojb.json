@@ -1,0 +1,12 @@
+{
+  "_id": "j6crs7b1nvi9tojb",
+  "name": "fallout.minor.supplies.half_rations.name",
+  "type": "fallout",
+  "system": {
+    "description": "fallout.minor.supplies.half_rations.description",
+    "resistance": "supplies",
+    "type": "minor"
+  },
+  "effects": [],
+  "_key": "!items!j6crs7b1nvi9tojb"
+}

@@ -1,0 +1,12 @@
+{
+  "_id": "b78pyakv4upj1v68",
+  "name": "fallout.minor.mind.weird.name",
+  "type": "fallout",
+  "system": {
+    "description": "fallout.minor.mind.weird.description",
+    "resistance": "mind",
+    "type": "minor"
+  },
+  "effects": [],
+  "_key": "!items!b78pyakv4upj1v68"
+}

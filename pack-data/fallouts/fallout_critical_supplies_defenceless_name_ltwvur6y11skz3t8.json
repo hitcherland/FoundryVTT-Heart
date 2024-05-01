@@ -1,0 +1,12 @@
+{
+  "_id": "ltwvur6y11skz3t8",
+  "name": "fallout.critical.supplies.defenceless.name",
+  "type": "fallout",
+  "system": {
+    "description": "fallout.critical.supplies.defenceless.description",
+    "resistance": "supplies",
+    "type": "critical"
+  },
+  "effects": [],
+  "_key": "!items!ltwvur6y11skz3t8"
+}

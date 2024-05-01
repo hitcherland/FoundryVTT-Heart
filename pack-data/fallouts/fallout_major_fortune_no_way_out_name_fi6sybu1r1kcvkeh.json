@@ -1,0 +1,12 @@
+{
+  "_id": "fi6sybu1r1kcvkeh",
+  "name": "fallout.major.fortune.no_way_out.name",
+  "type": "fallout",
+  "system": {
+    "description": "fallout.major.fortune.no_way_out.description",
+    "resistance": "fortune",
+    "type": "major"
+  },
+  "effects": [],
+  "_key": "!items!fi6sybu1r1kcvkeh"
+}

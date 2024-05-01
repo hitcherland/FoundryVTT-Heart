@@ -1,0 +1,12 @@
+{
+  "_id": "gdm6jwtsauuhx1ro",
+  "name": "fallout.minor.blood.limping.name",
+  "type": "fallout",
+  "system": {
+    "description": "fallout.minor.blood.limping.description",
+    "resistance": "blood",
+    "type": "minor"
+  },
+  "effects": [],
+  "_key": "!items!gdm6jwtsauuhx1ro"
+}

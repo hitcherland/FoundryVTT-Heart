@@ -1,0 +1,12 @@
+{
+  "_id": "786vxmt5nhhodmde",
+  "name": "fallout.major.fortune.reputation.name",
+  "type": "fallout",
+  "system": {
+    "description": "fallout.major.fortune.reputation.description",
+    "resistance": "fortune",
+    "type": "major"
+  },
+  "effects": [],
+  "_key": "!items!786vxmt5nhhodmde"
+}

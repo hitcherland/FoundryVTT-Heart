@@ -1,0 +1,12 @@
+{
+  "_id": "cqdhm8hrn76u97q8",
+  "name": "fallout.major.echo.blooded.name",
+  "type": "fallout",
+  "system": {
+    "description": "fallout.major.echo.blooded.description",
+    "resistance": "echo",
+    "type": "major"
+  },
+  "effects": [],
+  "_key": "!items!cqdhm8hrn76u97q8"
+}

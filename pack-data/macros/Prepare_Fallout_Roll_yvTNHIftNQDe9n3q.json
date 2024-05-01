@@ -1,0 +1,21 @@
+{
+  "name": "Prepare Fallout Roll",
+  "type": "script",
+  "author": "yVBR839ynJiV8vzd",
+  "img": "systems/heart/assets/fallout-shelter.svg",
+  "scope": "global",
+  "command": "const msg = await game.heart.rolls.FalloutRoll.build(); msg.toMessage({speaker: { actor: msg.options.character }});",
+  "folder": null,
+  "sort": 0,
+  "permission": {
+    "default": 0,
+    "yVBR839ynJiV8vzd": 3
+  },
+  "flags": {
+    "core": {
+      "sourceId": "Macro.TW1JxrxE3873zg25"
+    }
+  },
+  "_id": "yvTNHIftNQDe9n3q",
+  "_key": "!macros!yvTNHIftNQDe9n3q"
+}

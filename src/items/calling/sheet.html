@@ -1,8 +1,8 @@
 {{#*inline "beatSection"}}
 <h2>
-    {{localizeHeart "beat" (join "" type "-beat") "label-multiple"}}
+    {{localizeHeart (join "" type "-beat") "multiple"}}
     {{#if user.isGM }}
-    <a class="right" data-action="add-child" data-type="beat" data-data='{"type": "{{type}}"}'><span class="fas fa-plus"></span> {{localizeHeart "beat" (join "" type "-beat") "add"}}</a>
+    <a class="right" data-action="add-child" data-type="beat" data-data='{"type": "{{type}}"}'><span class="fas fa-plus"></span> {{localizeHeart "add"}}</a>
     {{/if}}
 </h2>
 <div class="item-list">
@@ -29,9 +29,9 @@
     </div>
 
     <h4>
-        {{localizeHeart "calling" "questions" "prompt"}}
+        {{localizeHeart "questions-prompt"}}
         {{#if user.isGM }}
-        <a class="right" data-action="add-question"><span class="fas fa-plus"></span> {{localizeHeart "calling" "questions" "add"}}</a>
+        <a class="right" data-action="add-question"><span class="fas fa-plus"></span> {{localizeHeart "add"}}</a>
         {{/if}}
     </h4>
     <ul>
@@ -57,7 +57,7 @@
                     {{/if}}
                 {{/if}}
                 {{#if user.isGM }}
-                <a class="action" data-action="delete-question"><span class="fas fa-trash"></span> {{localizeHeart "calling" "questions" "delete"}}</a>
+                <a class="action" data-action="delete-question"><span class="fas fa-trash"></span> {{localizeHeart "delete"}}</a>
                 {{/if}}
             </div>    
         </li>
@@ -67,12 +67,12 @@
 
     <h2>
         {{#if (eq system.abilities.length 1)}}
-            {{localizeHeart "calling" "core-ability" "label-single"}}
+            {{localizeHeart "core-ability.single"}}
         {{else}}
-            {{localizeHeart "calling" "core-ability" "label-multiple"}}
+            {{localizeHeart "core-ability.multiple"}}
         {{/if}}
         {{#if user.isGM }}
-        <a class="right" data-action="add-child" data-type="ability" data-data='{"active": true}'><span class="fas fa-plus"></span> {{localizeHeart "calling" "core-ability" "add"}}</a>
+        <a class="right" data-action="add-child" data-type="ability" data-data='{"active": true}'><span class="fas fa-plus"></span> {{localizeHeart "add"}}</a>
         {{/if}}
     </h2>
     <div class="item-list">

@@ -1,0 +1,10 @@
+{
+  "_id": "0628ihgroy79w672",
+  "name": "tag.trusty.name",
+  "type": "tag",
+  "system": {
+    "description": "tag.trusty.description"
+  },
+  "effects": [],
+  "_key": "!items!0628ihgroy79w672"
+}

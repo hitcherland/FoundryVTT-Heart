@@ -1,0 +1,10 @@
+{
+  "_id": "qbb1rx7fc7o648qd",
+  "name": "tag.beacon.name",
+  "type": "tag",
+  "system": {
+    "description": "tag.beacon.description"
+  },
+  "effects": [],
+  "_key": "!items!qbb1rx7fc7o648qd"
+}

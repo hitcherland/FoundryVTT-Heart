@@ -1,0 +1,12 @@
+{
+  "_id": "khy6cw2go4ocdcp3",
+  "name": "fallout.minor.blood.bleeding.name",
+  "type": "fallout",
+  "system": {
+    "description": "fallout.minor.blood.bleeding.description",
+    "resistance": "blood",
+    "type": "minor"
+  },
+  "effects": [],
+  "_key": "!items!khy6cw2go4ocdcp3"
+}

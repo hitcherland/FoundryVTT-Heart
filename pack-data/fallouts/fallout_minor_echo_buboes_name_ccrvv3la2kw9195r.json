@@ -1,0 +1,12 @@
+{
+  "_id": "ccrvv3la2kw9195r",
+  "name": "fallout.minor.echo.buboes.name",
+  "type": "fallout",
+  "system": {
+    "description": "fallout.minor.echo.buboes.description",
+    "resistance": "echo",
+    "type": "minor"
+  },
+  "effects": [],
+  "_key": "!items!ccrvv3la2kw9195r"
+}

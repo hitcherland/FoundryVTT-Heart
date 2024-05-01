@@ -1,0 +1,12 @@
+{
+  "_id": "4cmi3wn7nkhhof1a",
+  "name": "fallout.minor.supplies.out_of_ammo.name",
+  "type": "fallout",
+  "system": {
+    "description": "fallout.minor.supplies.out_of_ammo.description",
+    "resistance": "supplies",
+    "type": "minor"
+  },
+  "effects": [],
+  "_key": "!items!4cmi3wn7nkhhof1a"
+}

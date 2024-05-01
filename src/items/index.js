@@ -289,11 +289,11 @@ export function initialise() {
 
         if (type === 'base') return;
 
-        CONFIG.Item.typeLabels[type] = `heart.${type}.label-single`;
+        CONFIG.Item.typeLabels[type] = `heart.${type}.single`;
         Items.registerSheet('heart', Sheet, {
             types: [type],
             makeDefault: true,
-            label: `heart.${type}.label-single`
+            label: `heart.${type}.single`
         });
     });
 

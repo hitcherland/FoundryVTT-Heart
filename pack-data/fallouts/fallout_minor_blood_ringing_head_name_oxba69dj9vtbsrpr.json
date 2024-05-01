@@ -1,0 +1,12 @@
+{
+  "_id": "oxba69dj9vtbsrpr",
+  "name": "fallout.minor.blood.ringing_head.name",
+  "type": "fallout",
+  "system": {
+    "description": "fallout.minor.blood.ringing_head.description",
+    "resistance": "blood",
+    "type": "minor"
+  },
+  "effects": [],
+  "_key": "!items!oxba69dj9vtbsrpr"
+}

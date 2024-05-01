@@ -1,0 +1,12 @@
+{
+  "_id": "fex512ofcsl52y3k",
+  "name": "fallout.major.blood.arterial_wound.name",
+  "type": "fallout",
+  "system": {
+    "description": "fallout.major.blood.arterial_wound.description",
+    "resistance": "blood",
+    "type": "major"
+  },
+  "effects": [],
+  "_key": "!items!fex512ofcsl52y3k"
+}

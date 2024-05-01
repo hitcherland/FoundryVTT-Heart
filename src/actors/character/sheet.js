@@ -98,7 +98,7 @@ export default class CharacterSheet extends HeartActorSheet {
         })
 
         html.find('[data-action=prepare-request-roll]').click(ev => {
-            new game.heart.applications.PrepareRollRequestApplication({}).render(true);
+            new game.heart.applications.PrepareRollRequestApplication().render(true);
         });
 
         html.find('[data-action=fallout-roll]').click(async ev => {

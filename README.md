@@ -106,7 +106,7 @@ It is not recommended to develop on the instance on Foundry you run games from. 
 
 To test your changes:
 
-Add your Foundry installation's Data location to `foundryvtt.config.js` it should look something like:
+Add your Foundry installation's Data location to `foundryvtt.config.json` it should look something like:
 `foundryvttPath: "/home/yourusername/foundryuserdata/Data"` 
 
 Inside this directory run:

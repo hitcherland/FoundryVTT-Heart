@@ -1,0 +1,12 @@
+{
+  "_id": "e3l8kxofugauu9sg",
+  "name": "fallout.major.supplies.services_rendered.name",
+  "type": "fallout",
+  "system": {
+    "description": "fallout.major.supplies.services_rendered.description",
+    "resistance": "supplies",
+    "type": "major"
+  },
+  "effects": [],
+  "_key": "!items!e3l8kxofugauu9sg"
+}

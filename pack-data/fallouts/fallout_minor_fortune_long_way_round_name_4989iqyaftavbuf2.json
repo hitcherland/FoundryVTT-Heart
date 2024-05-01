@@ -1,0 +1,12 @@
+{
+  "_id": "4989iqyaftavbuf2",
+  "name": "fallout.minor.fortune.long_way_round.name",
+  "type": "fallout",
+  "system": {
+    "description": "fallout.minor.fortune.long_way_round.description",
+    "resistance": "fortune",
+    "type": "minor"
+  },
+  "effects": [],
+  "_key": "!items!4989iqyaftavbuf2"
+}

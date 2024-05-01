@@ -59,7 +59,7 @@ export function initialise() {
             game.heart.actors[type] = {}
         }
         
-        CONFIG.Actor.typeLabels[type] = `heart.${type}.label-single`;
+        CONFIG.Actor.typeLabels[type] = `heart.${type}.single`;
 
         game.heart.actors[type].sheet = Sheet
 

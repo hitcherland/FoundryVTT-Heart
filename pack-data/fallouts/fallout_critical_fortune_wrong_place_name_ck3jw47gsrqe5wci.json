@@ -1,0 +1,12 @@
+{
+  "_id": "ck3jw47gsrqe5wci",
+  "name": "fallout.critical.fortune.wrong_place.name",
+  "type": "fallout",
+  "system": {
+    "description": "fallout.critical.fortune.wrong_place.description",
+    "resistance": "fortune",
+    "type": "critical"
+  },
+  "effects": [],
+  "_key": "!items!ck3jw47gsrqe5wci"
+}

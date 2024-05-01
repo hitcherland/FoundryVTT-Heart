@@ -1,0 +1,12 @@
+{
+  "_id": "ittsambqzsss5esw",
+  "name": "fallout.critical.echo.descent.name",
+  "type": "fallout",
+  "system": {
+    "description": "fallout.critical.echo.descent.description",
+    "resistance": "echo",
+    "type": "critical"
+  },
+  "effects": [],
+  "_key": "!items!ittsambqzsss5esw"
+}

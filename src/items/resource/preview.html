@@ -7,7 +7,7 @@
     <span class="fas fa-tag"></span>
     {{/if}}
     {{#each item.childrenTypes.tag as |tag|}}
-        <a data-action="view" data-item-id="{{tag.uuid}}" title="{{localizeHeart 'base' 'view'}}">
+        <a data-action="view" data-item-id="{{tag.uuid}}" title="{{localizeHeart 'view'}}">
             {{localizeHeart tag.name}}
         </a>
         {{#unless @last}}, {{/unless}}

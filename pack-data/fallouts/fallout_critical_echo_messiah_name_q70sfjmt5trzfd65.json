@@ -1,0 +1,12 @@
+{
+  "_id": "q70sfjmt5trzfd65",
+  "name": "fallout.critical.echo.messiah.name",
+  "type": "fallout",
+  "system": {
+    "description": "fallout.critical.echo.messiah.description",
+    "resistance": "echo",
+    "type": "critical"
+  },
+  "effects": [],
+  "_key": "!items!q70sfjmt5trzfd65"
+}

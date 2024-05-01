@@ -1,0 +1,12 @@
+{
+  "_id": "81d6c3w59dn5288j",
+  "name": "fallout.major.mind.scarred.name",
+  "type": "fallout",
+  "system": {
+    "description": "fallout.major.mind.scarred.description",
+    "resistance": "mind",
+    "type": "major"
+  },
+  "effects": [],
+  "_key": "!items!81d6c3w59dn5288j"
+}

@@ -92,7 +92,7 @@ export default class HeartItemSheet extends HeartSheetMixin(ItemSheet) {
             this.render(true);
         });
 
-        html.find('[data-item-id] [data-action=uncomplete]').click(async ev => {
+        html.find('[data-item-id] [data-action=incomplete]').click(async ev => {
             const target = $(ev.currentTarget);
             const uuid = target.closest('[data-item-id]').data('itemId');
             const item = await fromUuid(uuid);
@@ -106,7 +106,7 @@ export default class HeartItemSheet extends HeartSheetMixin(ItemSheet) {
         data.user = game.user;
 
         data.die_sizes = game.heart.die_sizes.reduce((map, die) => {
-            map[die] = game.i18n.format('heart.die_size.d(N)', { N: die.replace(/^d/, '') })
+            map[die] = game.i18n.format('heart.die-size', { N: die.replace(/^d/, '') })
             return map;
         }, {});
 
@@ -121,7 +121,7 @@ export default class HeartItemSheet extends HeartSheetMixin(ItemSheet) {
         }, {});
 
         data.equipment_types = game.heart.equipment_types.reduce((map, equipment_type) => {
-            map[equipment_type] = game.i18n.localize(`heart.equipment.type.${equipment_type}`)
+            map[equipment_type] = game.i18n.localize(`heart.equipment-type.${equipment_type}`)
             return map;
         }, {});
 
@@ -131,12 +131,12 @@ export default class HeartItemSheet extends HeartSheetMixin(ItemSheet) {
         }, {});
 
         data.beat_levels = game.heart.beat_levels.reduce((map, beat_level) => {
-          map[beat_level] = game.i18n.localize(`heart.beat.level.${beat_level}`)
+          map[beat_level] = game.i18n.localize(`heart.beat-level.${beat_level}`)
           return map;
         }, {});
 
         data.fallout_levels = game.heart.fallout_levels.reduce((map, fallout_level) => {
-          map[fallout_level] = game.i18n.localize(`heart.fallout.level.${fallout_level}`)
+          map[fallout_level] = game.i18n.localize(`heart.fallout-level.${fallout_level}`)
           return map;
         }, {});
 

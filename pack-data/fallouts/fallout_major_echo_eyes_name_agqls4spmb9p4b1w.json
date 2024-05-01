@@ -1,0 +1,12 @@
+{
+  "_id": "agqls4spmb9p4b1w",
+  "name": "fallout.major.echo.eyes.name",
+  "type": "fallout",
+  "system": {
+    "description": "fallout.major.echo.eyes.description",
+    "resistance": "echo",
+    "type": "major"
+  },
+  "effects": [],
+  "_key": "!items!agqls4spmb9p4b1w"
+}

@@ -1,0 +1,12 @@
+{
+  "_id": "50cd7bm9tzy6fn0s",
+  "name": "fallout.major.blood.downed.name",
+  "type": "fallout",
+  "system": {
+    "description": "fallout.major.blood.downed.description",
+    "resistance": "blood",
+    "type": "major"
+  },
+  "effects": [],
+  "_key": "!items!50cd7bm9tzy6fn0s"
+}

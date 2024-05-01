@@ -1,0 +1,10 @@
+{
+  "_id": "b9wiz6muczkqjnd2",
+  "name": "tag.harmful.name",
+  "type": "tag",
+  "system": {
+    "description": "tag.harmful.description"
+  },
+  "effects": [],
+  "_key": "!items!b9wiz6muczkqjnd2"
+}

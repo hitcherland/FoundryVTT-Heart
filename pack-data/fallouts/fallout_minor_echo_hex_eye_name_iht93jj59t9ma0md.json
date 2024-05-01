@@ -1,0 +1,12 @@
+{
+  "_id": "iht93jj59t9ma0md",
+  "name": "fallout.minor.echo.hex-eye.name",
+  "type": "fallout",
+  "system": {
+    "description": "fallout.minor.echo.hex-eye.description",
+    "resistance": "echo",
+    "type": "minor"
+  },
+  "effects": [],
+  "_key": "!items!iht93jj59t9ma0md"
+}

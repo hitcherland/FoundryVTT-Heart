@@ -1,0 +1,12 @@
+{
+  "_id": "lopuk1ms6yq4bl33",
+  "name": "fallout.major.fortune.unwilling_leader.name",
+  "type": "fallout",
+  "system": {
+    "description": "fallout.major.fortune.unwilling_leader.description",
+    "resistance": "fortune",
+    "type": "major"
+  },
+  "effects": [],
+  "_key": "!items!lopuk1ms6yq4bl33"
+}

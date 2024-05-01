@@ -1,0 +1,12 @@
+{
+  "_id": "615d0hvv40pdmyox",
+  "name": "fallout.minor.blood.winded.name",
+  "type": "fallout",
+  "system": {
+    "description": "fallout.minor.blood.winded.description",
+    "resistance": "blood",
+    "type": "minor"
+  },
+  "effects": [],
+  "_key": "!items!615d0hvv40pdmyox"
+}

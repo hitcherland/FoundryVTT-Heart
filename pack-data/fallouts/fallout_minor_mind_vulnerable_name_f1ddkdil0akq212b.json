@@ -1,0 +1,12 @@
+{
+  "_id": "f1ddkdil0akq212b",
+  "name": "fallout.minor.mind.vulnerable.name",
+  "type": "fallout",
+  "system": {
+    "description": "fallout.minor.mind.vulnerable.description",
+    "resistance": "mind",
+    "type": "minor"
+  },
+  "effects": [],
+  "_key": "!items!f1ddkdil0akq212b"
+}

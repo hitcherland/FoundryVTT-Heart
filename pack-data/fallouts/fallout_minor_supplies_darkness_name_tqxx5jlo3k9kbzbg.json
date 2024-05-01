@@ -1,0 +1,12 @@
+{
+  "_id": "tqxx5jlo3k9kbzbg",
+  "name": "fallout.minor.supplies.darkness.name",
+  "type": "fallout",
+  "system": {
+    "description": "fallout.minor.supplies.darkness.description",
+    "resistance": "supplies",
+    "type": "minor"
+  },
+  "effects": [],
+  "_key": "!items!tqxx5jlo3k9kbzbg"
+}

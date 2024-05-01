@@ -1,23 +1,23 @@
 <div data-item-id="{{item.uuid}}" class="item preview {{item.type}}">
     <div class="actionbar">
-        <a data-action="view" title="{{localizeHeart 'base' 'view'}}"><span class="fas fa-eye"></span></a>
+        <a data-action="view" title="{{localizeHeart 'view'}}"><span class="fas fa-eye"></span></a>
         {{#if item.isOwner}}
             {{#if showComplete}}
                 {{#if item.system.complete}}
-                <a data-action="uncomplete" title="{{localizeHeart 'base' 'uncomplete'}}"><span class="fas fa-times"></span></a>
+                <a data-action="incomplete" title="{{localizeHeart 'incomplete'}}"><span class="fas fa-times"></span></a>
                 {{else}}
-                <a data-action="complete" title="{{localizeHeart 'base' 'complete'}}"><span class="fas fa-check"></span></a>
+                <a data-action="complete" title="{{localizeHeart 'complete'}}"><span class="fas fa-check"></span></a>
                 {{/if}}
             {{/if}}
             {{#if showActivate}}
                 {{#if item.system.active}}
-                <a data-action="deactivate" title="{{localizeHeart 'base' 'deactivate'}}"><span class="fas fa-toggle-on"></span></a>
+                <a data-action="deactivate" title="{{localizeHeart 'deactivate'}}"><span class="fas fa-toggle-on"></span></a>
                 {{else}}
-                <a data-action="activate" title="{{localizeHeart 'base' 'activate'}}"><span class="fas fa-toggle-off"></span></a>
+                <a data-action="activate" title="{{localizeHeart 'activate'}}"><span class="fas fa-toggle-off"></span></a>
                 {{/if}}
             {{/if}}
             {{#if showDelete }}
-                <a data-action="delete" title="{{localizeHeart 'base' 'delete'}}"><span class="fas fa-trash"></span></a>
+                <a data-action="delete" title="{{localizeHeart 'delete'}}"><span class="fas fa-trash"></span></a>
             {{/if}}
         {{/if}}
     </div>

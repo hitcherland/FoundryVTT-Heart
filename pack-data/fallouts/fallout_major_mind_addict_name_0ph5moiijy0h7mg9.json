@@ -1,0 +1,12 @@
+{
+  "_id": "0ph5moiijy0h7mg9",
+  "name": "fallout.major.mind.addict.name",
+  "type": "fallout",
+  "system": {
+    "description": "fallout.major.mind.addict.description",
+    "resistance": "mind",
+    "type": "major"
+  },
+  "effects": [],
+  "_key": "!items!0ph5moiijy0h7mg9"
+}

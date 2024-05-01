@@ -1,10 +1,10 @@
 {{#*inline "itemListSection"}}
-<div class="section {{localizeHeart type 'label-multiple'}}">
+<div class="section {{localizeHeart type 'multiple'}}">
     <h2>
         {{#if overrideTitle}}
         {{overrideTitle}}
         {{else}}
-        {{localizeHeart type "label-multiple"}}
+        {{localizeHeart type "multiple"}}
         {{/if}}
         {{#if actor.isOwner}}
         <div class="right">
@@ -31,14 +31,14 @@
         
         <div class="section info">
             <div class="grid-2 auto-first-col place-center">
-                <h2>{{localizeHeart "landmark" "name"}}</h2>
+                <h2>{{localizeHeart "name"}}</h2>
                 <input name="name" value="{{actor.name}}"/>
             </div>
         </div>
 
         <div class="section info">
             <div class="grid-2 auto-first-col place-center">
-                <h2>{{localizeHeart "landmark" "defaultStress"}}</h2>
+                <h2>{{localizeHeart "defaultStress"}}</h2>
                 <select name="system.stress">
                     {{selectOptions die_sizes selected=actor.system.stress}}
                 </select>
@@ -47,14 +47,14 @@
 
         <div class="section info">
             <div class="grid-2 auto-first-col place-center">
-                <h2>{{localizeHeart "landmark" "domain" "label-multiple"}}</h2>
+                <h2>{{localizeHeart "domain.multiple"}}</h2>
                 <input name="system.domains" value="{{actor.system.domains}}"/>
             </div>
         </div>
 
         <div class="section info">
             <div class="grid-2 auto-first-col place-center">
-                <h2>{{localizeHeart "landmark" "tier"}}</h2>
+                <h2>{{localizeHeart "tier"}}</h2>
                 <input name="system.tier" value="{{actor.system.tier}}"/>
             </div>
         </div>
@@ -63,23 +63,23 @@
         {{> itemListSection type="resource" list=actor.proxy.resources}}
 
         <div class="section center wide notes">
-            <h3>{{localizeHeart "landmark" "specialRule" "label-multiple"}}</h3>
+            <h3>{{localizeHeart "special-rule.multiple"}}</h3>
             {{editor actor.system.specialRules target="system.specialRules" button=true editable=editable owner=owner}}
         </div>
 
         <div class="section center wide notes">
-            <h3>{{localizeHeart "landmark" "potentialPlot" "label-multiple"}}</h3>
+            <h3>{{localizeHeart "potential-plot.multiple"}}</h3>
             {{editor actor.system.potentialPlots target="system.potentialPlots" button=true editable=editable owner=owner}}
         </div>
 
         <div class="section center wide notes">
-            <h3>{{localizeHeart "landmark" "description"}}</h3>
+            <h3>{{localizeHeart "description"}}</h3>
             {{editor actor.system.description target="system.description" button=true editable=editable owner=owner}}
         </div>
         
         <div class="section center wide inactive-items">
-            <h3>{{localizeHeart "landmark" "inactive-items"}}</h3>
-            <div>{{localizeHeart "landmark" "inactive-items-description"}}</div>
+            <h3>{{localizeHeart "inactive-items"}}</h3>
+            <div>{{localizeHeart "inactive-items-description"}}</div>
             <div class="item-list">
             {{#each actor.items as |item|}}
                 {{#if (and (not (undef item.system.active)) (not item.system.active)) }}

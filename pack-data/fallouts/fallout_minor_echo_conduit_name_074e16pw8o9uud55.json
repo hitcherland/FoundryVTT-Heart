@@ -1,0 +1,12 @@
+{
+  "_id": "074e16pw8o9uud55",
+  "name": "fallout.minor.echo.conduit.name",
+  "type": "fallout",
+  "system": {
+    "description": "fallout.minor.echo.conduit.description",
+    "resistance": "echo",
+    "type": "minor"
+  },
+  "effects": [],
+  "_key": "!items!074e16pw8o9uud55"
+}

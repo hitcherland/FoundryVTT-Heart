@@ -1,0 +1,12 @@
+{
+  "_id": "2bljihwi81rtj2r3",
+  "name": "fallout.major.supplies.in_the_dark.name",
+  "type": "fallout",
+  "system": {
+    "description": "fallout.major.supplies.in_the_dark.description",
+    "resistance": "supplies",
+    "type": "major"
+  },
+  "effects": [],
+  "_key": "!items!2bljihwi81rtj2r3"
+}

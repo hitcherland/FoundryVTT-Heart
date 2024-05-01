@@ -1,0 +1,12 @@
+{
+  "_id": "cs5hrtl7mgs81ovf",
+  "name": "fallout.minor.fortune.unlucky.name",
+  "type": "fallout",
+  "system": {
+    "description": "fallout.minor.fortune.unlucky.description",
+    "resistance": "fortune",
+    "type": "minor"
+  },
+  "effects": [],
+  "_key": "!items!cs5hrtl7mgs81ovf"
+}

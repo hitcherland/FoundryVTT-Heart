@@ -1,0 +1,12 @@
+{
+  "_id": "qzr23x85jj2u1l9d",
+  "name": "fallout.minor.echo.follower.name",
+  "type": "fallout",
+  "system": {
+    "description": "fallout.minor.echo.follower.description",
+    "resistance": "echo",
+    "type": "minor"
+  },
+  "effects": [],
+  "_key": "!items!qzr23x85jj2u1l9d"
+}

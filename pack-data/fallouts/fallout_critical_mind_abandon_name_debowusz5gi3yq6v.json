@@ -1,0 +1,12 @@
+{
+  "_id": "debowusz5gi3yq6v",
+  "name": "fallout.critical.mind.abandon.name",
+  "type": "fallout",
+  "system": {
+    "description": "fallout.critical.mind.abandon.description",
+    "resistance": "mind",
+    "type": "critical"
+  },
+  "effects": [],
+  "_key": "!items!debowusz5gi3yq6v"
+}

@@ -1,6 +1,6 @@
 {{#> "heart:items/base/sheet.html" type="equipment"}}
 <div class="grid-2 auto-first-col place-center" style="flex: auto 0 0">
-    <label>{{localizeHeart "equipment" "type" "label-single"}}</label>
+    <label>{{localizeHeart "equipment-type.single"}}</label>
     <select name="system.type">
         {{selectOptions equipment_types selected=system.type}}
     </select>
@@ -23,9 +23,9 @@
 <div>
     <h2>
         <span class="fas fa-tag"></span>
-        {{localizeHeart "tag" "label-multiple"}}
+        {{localizeHeart "tag.multiple"}}
         {{#if user.isGM }}
-        <a class="right" data-action="add-child" data-type="tag"><span class="fas fa-plus"></span> {{localizeHeart "tag" "add"}}</a>
+        <a class="right" data-action="add-child" data-type="tag"><span class="fas fa-plus"></span> {{localizeHeart "add"}}</a>
         {{/if}}
     </h2>
     <div class="item-list">

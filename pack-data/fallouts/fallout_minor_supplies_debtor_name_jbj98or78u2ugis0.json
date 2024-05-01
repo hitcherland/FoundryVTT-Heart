@@ -1,0 +1,12 @@
+{
+  "_id": "jbj98or78u2ugis0",
+  "name": "fallout.minor.supplies.debtor.name",
+  "type": "fallout",
+  "system": {
+    "description": "fallout.minor.supplies.debtor.description",
+    "resistance": "supplies",
+    "type": "minor"
+  },
+  "effects": [],
+  "_key": "!items!jbj98or78u2ugis0"
+}

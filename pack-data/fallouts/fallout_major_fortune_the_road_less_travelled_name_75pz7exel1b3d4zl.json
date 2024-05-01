@@ -1,0 +1,12 @@
+{
+  "_id": "75pz7exel1b3d4zl",
+  "name": "fallout.major.fortune.the_road_less_travelled.name",
+  "type": "fallout",
+  "system": {
+    "description": "fallout.major.fortune.the_road_less_travelled.description",
+    "resistance": "fortune",
+    "type": "major"
+  },
+  "effects": [],
+  "_key": "!items!75pz7exel1b3d4zl"
+}

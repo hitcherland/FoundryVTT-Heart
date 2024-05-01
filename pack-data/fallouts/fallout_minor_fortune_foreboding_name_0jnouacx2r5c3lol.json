@@ -1,0 +1,12 @@
+{
+  "_id": "0jnouacx2r5c3lol",
+  "name": "fallout.minor.fortune.foreboding.name",
+  "type": "fallout",
+  "system": {
+    "description": "fallout.minor.fortune.foreboding.description",
+    "resistance": "fortune",
+    "type": "minor"
+  },
+  "effects": [],
+  "_key": "!items!0jnouacx2r5c3lol"
+}

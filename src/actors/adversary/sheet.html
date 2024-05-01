@@ -1,10 +1,10 @@
 {{#*inline "itemListSection"}}
-<div class="section {{localizeHeart type 'label-multiple'}}">
+<div class="section {{localizeHeart type 'multiple'}}">
     <h2>
         {{#if overrideTitle}}
         {{overrideTitle}}
         {{else}}
-        {{localizeHeart type "label-multiple"}}
+        {{localizeHeart type "multiple"}}
         {{/if}}
         {{#if actor.isOwner}}
         <div class="right">
@@ -30,8 +30,8 @@
         <img class="profile" src="{{actor.img}}" title="{{actor.name}}" data-edit="img"/>
 
         <div class="section grid-2 resistances place-top">
-            <h3 class="center">{{localizeHeart "resistance" "label-single"}}</h3> 
-            <h3 class="center">{{localizeHeart "protection" "label-single"}}</h3> 
+            <h3 class="center">{{localizeHeart "resistance.single"}}</h3>
+            <h3 class="center">{{localizeHeart "protection.single"}}</h3>
             <div class="red" data-target='system.resistance'>{{{ordered-checkable actor.system.resistance actor.system.resistanceMax}}}</div>
             <div class="red" data-target='system.protection'>{{{ordered-checkable actor.system.protection 10}}}</div>
             
@@ -39,14 +39,14 @@
         
         <div class="section info">
             <div class="grid-2 auto-first-col place-center">
-                <h2>{{localizeHeart "adversary" "name"}}</h2>
+                <h2>{{localizeHeart "name"}}</h2>
                 <input name="name" value="{{actor.name}}"/>
             </div>
         </div>
 
         <div class="section info">
             <div class="grid-2 auto-first-col place-center">
-                <h2>{{localizeHeart "adversary" "resistanceMax"}}</h2>
+                <h2>{{localizeHeart "resistance-max"}}</h2>
                 <input name="system.resistanceMax" value="{{actor.system.resistanceMax}}"/>
             </div>
         </div>
@@ -54,23 +54,23 @@
         <!--The dropdown for difficulty should be slapped in here, but I couldn't quite get it working-->
         <div class="section info">
             <div class="grid-2 auto-first-col place-center">
-                <h2>{{localizeHeart "adversary" "difficulty"}}</h2>
+                <h2>{{localizeHeart "difficulty.single"}}</h2>
                 <input name="system.difficulty" value="{{actor.system.difficulty}}"/>
             </div>
         </div>
 
         <div class="section center wide notes">
-            <h3>{{localizeHeart "adversary" "descriptors"}}</h3>
+            <h3>{{localizeHeart "descriptors"}}</h3>
             {{editor actor.system.descriptors target="system.descriptors" button=true editable=editable owner=owner}}
         </div>
 
         <div class="section center wide notes">
-            <h3>{{localizeHeart "adversary" "motivation"}}</h3>
+            <h3>{{localizeHeart "motivation"}}</h3>
             {{editor actor.system.motivation target="system.motivation" button=true editable=editable owner=owner}}
         </div>
 
         <div class="section center wide notes">
-            <h3>{{localizeHeart "adversary" "special"}}</h3>
+            <h3>{{localizeHeart "special"}}</h3>
             {{editor actor.system.special target="system.special" button=true editable=editable owner=owner}}
         </div>
 
@@ -78,13 +78,13 @@
         {{> itemListSection type="resource" list=actor.proxy.resources description_path="resources"}}
         
         <div class="section center wide notes">
-            <h3>{{localizeHeart "adversary" "notes"}}</h3>
+            <h3>{{localizeHeart "notes"}}</h3>
             {{editor actor.system.notes target="system.notes" button=true editable=editable owner=owner}}
         </div>
         
         <div class="section center wide inactive-items">
-            <h3>{{localizeHeart "adversary" "inactive-items"}}</h3>
-            <div>{{localizeHeart "adversary" "inactive-items-description"}}</div>
+            <h3>{{localizeHeart "inactive-items"}}</h3>
+            <div>{{localizeHeart "inactive-items-description"}}</div>
             <div class="item-list">
             {{#each actor.items as |item|}}
                 {{#if (and (not (undef item.system.active)) (not item.system.active)) }}

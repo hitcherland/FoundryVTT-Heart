@@ -1,0 +1,12 @@
+{
+  "_id": "cmnehsht6ww87g6x",
+  "name": "fallout.major.supplies.lost_property.name",
+  "type": "fallout",
+  "system": {
+    "description": "fallout.major.supplies.lost_property.description",
+    "resistance": "supplies",
+    "type": "major"
+  },
+  "effects": [],
+  "_key": "!items!cmnehsht6ww87g6x"
+}
