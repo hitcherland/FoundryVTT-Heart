@@ -2,7 +2,7 @@
     {{localizeHeart item.name}}
     ({{localizeHeart "equipment-type" item.system.type}}, <a data-action="item-roll"><span class="fas fa-dice"></span> {{item.system.die_size}}</a>
     {{#each item.system.resistances}}
-        {{titlecase (localizeHeart this)}}
+        {{localizeHeart "resistance" this}}
     {{/each}}
     )
     {{#if item.childrenTypes.tag}}

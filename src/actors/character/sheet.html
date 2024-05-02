@@ -38,7 +38,7 @@
             <div></div>
             <div>
                 {{#if showTotalStress}}
-                <h3 class="left">Total Stress: {{actor.proxy.totalStress}}</h3>
+                <h3 class="left">{{localizeHeart "total-stress"}}: {{actor.proxy.totalStress}}</h3>
                 {{/if}}
             </div>
             <h3 class="center">{{localizeHeart "protection.multiple"}}</h3>
@@ -71,7 +71,7 @@
                 {{else}}
                 <input name="system.class" value="{{actor.system.class}}"/>
                 {{/if}}
-                <h2>{{localizeHeart "calling"}}</h2>
+                <h2>{{localizeHeart "calling.single"}}</h2>
                 {{#if callingItem}}
                 <div data-item-id="{{callingItem.uuid}}" class="flexrow calling item">
                     <div class="name">{{localizeHeart callingItem.name}}</div>

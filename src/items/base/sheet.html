@@ -30,7 +30,7 @@
 
         {{#if (eq type "beat")}}
             <label>
-                Level
+                {{localizeHeart "level"}}
             </label>
             <select name="system.type">
                 {{selectOptions beat_levels selected=system.type}}
@@ -39,14 +39,14 @@
 
         {{#if (eq type "fallout")}}
             <label>
-                Level
+                {{localizeHeart "level"}}
             </label>
             <select name="system.type">
                 {{selectOptions fallout_levels selected=system.type}}
             </select>
 
             <label>
-                Resistance
+                {{localizeHeart "resistance.single"}}
             </label>
             <select name="system.resistance">
                 {{selectOptions resistances selected=system.resistance}}
