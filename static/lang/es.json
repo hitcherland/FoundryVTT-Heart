@@ -602,8 +602,8 @@
           "minor": {
             "adept.description": "Gain access to one of the following skills: Compel, Delve, Discern, Endure, Evade, Hunt, Kill, Sneak. You can take this advance more than once.",
             "adept.name": "Adept",
-            "heart.ability.minor.deathless.description": "You've already died once; you can suffer through this. Gain the Endure skill. Roll Endure+Religion to ignore the effects of ongoing Minor Blood or Echo fallout until the end of the situation.",
-            "heart.ability.minor.deathless.name": "Deathless",
+            "deathless.description": "You've already died once; you can suffer through this. Gain the Endure skill. Roll Endure+Religion to ignore the effects of ongoing Minor Blood or Echo fallout until the end of the situation.",
+            "deathless.name": "Deathless",
             "dirt_under_the_fingernails.description": "You dug your way out of your own grave. Gain the Warren domain. You can dig through earth and mud with your bare hands as though you had a shovel; your fingernails are always stained with a little soil, and you cannot clean it off.",
             "dirt_under_the_fingernails.name": "Dirt Under The Fingernails",
             "explorer.description": "Gain access to one of the following domains: Cursed, Desolate, Occult, Religion, Technology, Warren, Wild. You can take this advance more than once. ",
