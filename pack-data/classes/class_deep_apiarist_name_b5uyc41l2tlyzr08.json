@@ -13,230 +13,230 @@
       "group_3"
     ],
     "children": {
-      "r2dyl0qxsrnagi78": {
-        "_id": "r2dyl0qxsrnagi78",
+      "0jo09ttosmjt6fzn": {
+        "_id": "0jo09ttosmjt6fzn",
         "type": "resource",
-        "name": "resource.heartsbloom_rose_in_glass_jar",
+        "name": "class.deep_apiarist.resource.heartsbloom_rose_in_glass_jar",
         "system": {
           "active": true,
           "die_size": "d6",
           "domain": "occult",
           "children": {
-            "xuy52fdhtbkdji0d": {
-              "_id": "xuy52fdhtbkdji0d",
+            "10xy8e6lw8bgcyxb": {
+              "_id": "10xy8e6lw8bgcyxb",
               "name": "tag.fragile.name",
               "type": "tag",
               "system": {
                 "description": "tag.fragile.description"
               },
-              "_key": "!items!9jaemmb8dbalyuct"
+              "_key": "!items!o22liweggysricla"
             }
           }
         }
       },
-      "lyzh7rspzza55cot": {
-        "_id": "lyzh7rspzza55cot",
-        "name": "ability.core.the_hive.name",
+      "0kph55zeg3wmwjmg": {
+        "_id": "0kph55zeg3wmwjmg",
+        "name": "class.deep_apiarist.ability.core.the_hive.name",
         "type": "ability",
         "system": {
           "active": true,
-          "description": "ability.core.the_hive.description",
+          "description": "class.deep_apiarist.ability.core.the_hive.description",
           "type": "core",
           "children": {}
         }
       },
-      "t1jgptl1v7fcapty": {
-        "_id": "t1jgptl1v7fcapty",
-        "name": "ability.core.release_the_swarm.name",
+      "72kfvenhva90iflg": {
+        "_id": "72kfvenhva90iflg",
+        "name": "class.deep_apiarist.ability.core.release_the_swarm.name",
         "type": "ability",
         "system": {
           "active": true,
-          "description": "ability.core.release_the_swarm.description",
+          "description": "class.deep_apiarist.ability.core.release_the_swarm.description",
           "type": "core",
           "children": {}
         }
       },
-      "4m1tg23u93ju67h2": {
-        "_id": "4m1tg23u93ju67h2",
-        "name": "ability.minor.perfect_machine.name",
+      "bblh9qnxtcf5w0wt": {
+        "_id": "bblh9qnxtcf5w0wt",
+        "name": "class.deep_apiarist.ability.minor.perfect_machine.name",
         "type": "ability",
         "system": {
           "active": false,
-          "description": "ability.minor.perfect_machine.description",
+          "description": "class.deep_apiarist.ability.minor.perfect_machine.description",
           "type": "minor",
           "children": {}
         }
       },
-      "a85chd4m85av4xi1": {
-        "_id": "a85chd4m85av4xi1",
-        "name": "ability.minor.apisambulation.name",
+      "8lz35h6m87hvtpui": {
+        "_id": "8lz35h6m87hvtpui",
+        "name": "class.deep_apiarist.ability.minor.apisambulation.name",
         "type": "ability",
         "system": {
           "active": false,
-          "description": "ability.minor.apisambulation.description",
+          "description": "class.deep_apiarist.ability.minor.apisambulation.description",
           "type": "minor",
           "children": {}
         }
       },
-      "cjpx5x54r9kkk52l": {
-        "_id": "cjpx5x54r9kkk52l",
-        "name": "ability.minor.hiveborn.name",
+      "pccba326zzicklqq": {
+        "_id": "pccba326zzicklqq",
+        "name": "class.deep_apiarist.ability.minor.hiveborn.name",
         "type": "ability",
         "system": {
           "active": false,
-          "description": "ability.minor.hiveborn.description",
+          "description": "class.deep_apiarist.ability.minor.hiveborn.description",
           "type": "minor",
           "children": {}
         }
       },
-      "ri1rl820en9e358j": {
-        "_id": "ri1rl820en9e358j",
-        "name": "ability.minor.hunter_of_the_damned.name",
+      "rnuxv66ng6ubfmoz": {
+        "_id": "rnuxv66ng6ubfmoz",
+        "name": "class.deep_apiarist.ability.minor.hunter_of_the_damned.name",
         "type": "ability",
         "system": {
           "active": false,
-          "description": "ability.minor.hunter_of_the_damned.description",
+          "description": "class.deep_apiarist.ability.minor.hunter_of_the_damned.description",
           "type": "minor",
           "children": {}
         }
       },
-      "j6fov7qoe8akf6rq": {
-        "_id": "j6fov7qoe8akf6rq",
-        "name": "ability.minor.intoxicant.name",
+      "nek3bzaj3buqdy66": {
+        "_id": "nek3bzaj3buqdy66",
+        "name": "class.deep_apiarist.ability.minor.intoxicant.name",
         "type": "ability",
         "system": {
           "active": false,
-          "description": "ability.minor.intoxicant.description",
+          "description": "class.deep_apiarist.ability.minor.intoxicant.description",
           "type": "minor",
           "children": {}
         }
       },
-      "j4ee6e23bxdmn64a": {
-        "_id": "j4ee6e23bxdmn64a",
-        "name": "ability.minor.intrusion.name",
+      "ozbwxrlxf6nb9g0h": {
+        "_id": "ozbwxrlxf6nb9g0h",
+        "name": "class.deep_apiarist.ability.minor.intrusion.name",
         "type": "ability",
         "system": {
           "active": false,
-          "description": "ability.minor.intrusion.description",
+          "description": "class.deep_apiarist.ability.minor.intrusion.description",
           "type": "minor",
           "children": {}
         }
       },
-      "ixjdck462mbezcu4": {
-        "_id": "ixjdck462mbezcu4",
-        "name": "ability.minor.many_eyes.name",
+      "swdcko0lwryr9daa": {
+        "_id": "swdcko0lwryr9daa",
+        "name": "class.deep_apiarist.ability.minor.many_eyes.name",
         "type": "ability",
         "system": {
           "active": false,
-          "description": "ability.minor.many_eyes.description",
+          "description": "class.deep_apiarist.ability.minor.many_eyes.description",
           "type": "minor",
           "children": {}
         }
       },
-      "fz48lg3lvhqrjwbn": {
-        "_id": "fz48lg3lvhqrjwbn",
-        "name": "ability.minor.perfect_structure.name",
+      "b48x58jviqeyoq1k": {
+        "_id": "b48x58jviqeyoq1k",
+        "name": "class.deep_apiarist.ability.minor.perfect_structure.name",
         "type": "ability",
         "system": {
           "active": false,
-          "description": "ability.minor.perfect_structure.description",
+          "description": "class.deep_apiarist.ability.minor.perfect_structure.description",
           "type": "minor",
           "children": {}
         }
       },
-      "wx9u7ssyalik4mye": {
-        "_id": "wx9u7ssyalik4mye",
-        "name": "ability.minor.thrice_warded.name",
+      "4akbgmf0zq7jijnk": {
+        "_id": "4akbgmf0zq7jijnk",
+        "name": "class.deep_apiarist.ability.minor.thrice_warded.name",
         "type": "ability",
         "system": {
           "active": false,
-          "description": "ability.minor.thrice_warded.description",
+          "description": "class.deep_apiarist.ability.minor.thrice_warded.description",
           "type": "minor",
           "children": {}
         }
       },
-      "z7d59bktshcw0vn4": {
-        "_id": "z7d59bktshcw0vn4",
-        "name": "ability.minor.uncanny_biology.name",
+      "2zi7e4vv3sbmnrux": {
+        "_id": "2zi7e4vv3sbmnrux",
+        "name": "class.deep_apiarist.ability.minor.uncanny_biology.name",
         "type": "ability",
         "system": {
           "active": false,
-          "description": "ability.minor.uncanny_biology.description",
+          "description": "class.deep_apiarist.ability.minor.uncanny_biology.description",
           "type": "minor",
           "children": {}
         }
       },
-      "q7ryvfq3nlhvhqtx": {
-        "_id": "q7ryvfq3nlhvhqtx",
-        "name": "ability.minor.waxen_sigils.name",
+      "cv29nqk8sea52guo": {
+        "_id": "cv29nqk8sea52guo",
+        "name": "class.deep_apiarist.ability.minor.waxen_sigils.name",
         "type": "ability",
         "system": {
           "active": false,
-          "description": "ability.minor.waxen_sigils.description",
+          "description": "class.deep_apiarist.ability.minor.waxen_sigils.description",
           "type": "minor",
           "children": {}
         }
       },
-      "pkfaknpf267kv0bo": {
-        "_id": "pkfaknpf267kv0bo",
-        "name": "ability.minor.whispers_of_the_hive.name",
+      "uygtkqkjstygnpbd": {
+        "_id": "uygtkqkjstygnpbd",
+        "name": "class.deep_apiarist.ability.minor.whispers_of_the_hive.name",
         "type": "ability",
         "system": {
           "active": false,
-          "description": "ability.minor.whispers_of_the_hive.description",
+          "description": "class.deep_apiarist.ability.minor.whispers_of_the_hive.description",
           "type": "minor",
           "children": {}
         }
       },
-      "nk4uknb1cqu0t03l": {
-        "_id": "nk4uknb1cqu0t03l",
-        "name": "ability.minor.wisdom_flows_so_sweet.name",
+      "hx8y1mvmwu78jnd1": {
+        "_id": "hx8y1mvmwu78jnd1",
+        "name": "class.deep_apiarist.ability.minor.wisdom_flows_so_sweet.name",
         "type": "ability",
         "system": {
           "active": false,
-          "description": "ability.minor.wisdom_flows_so_sweet.description",
+          "description": "class.deep_apiarist.ability.minor.wisdom_flows_so_sweet.description",
           "type": "minor",
           "children": {}
         }
       },
-      "ewnl2adoxadf2b19": {
-        "_id": "ewnl2adoxadf2b19",
-        "name": "ability.major.annihilation.name",
+      "sxqy2btds8ei654g": {
+        "_id": "sxqy2btds8ei654g",
+        "name": "class.deep_apiarist.ability.major.annihilation.name",
         "type": "ability",
         "system": {
           "active": false,
-          "description": "ability.major.annihilation.description",
+          "description": "class.deep_apiarist.ability.major.annihilation.description",
           "type": "major",
           "children": {
-            "aeo8bucx23otfchv": {
-              "_id": "aeo8bucx23otfchv",
-              "name": "ability.minor.blossom_within_the_skull.name",
+            "5d1e94szxpn57bip": {
+              "_id": "5d1e94szxpn57bip",
+              "name": "class.deep_apiarist.ability.minor.blossom_within_the_skull.name",
               "type": "ability",
               "system": {
                 "active": false,
-                "description": "ability.minor.blossom_within_the_skull.description",
+                "description": "class.deep_apiarist.ability.minor.blossom_within_the_skull.description",
                 "type": "minor",
                 "children": {}
               }
             },
-            "6q471sf39wsq46pr": {
-              "_id": "6q471sf39wsq46pr",
-              "name": "ability.minor.dark_flowers.name",
+            "tbjsw54oje9od2ci": {
+              "_id": "tbjsw54oje9od2ci",
+              "name": "class.deep_apiarist.ability.minor.dark_flowers.name",
               "type": "ability",
               "system": {
                 "active": false,
-                "description": "ability.minor.dark_flowers.description",
+                "description": "class.deep_apiarist.ability.minor.dark_flowers.description",
                 "type": "minor",
                 "children": {}
               }
             },
-            "r9rqjt1khcgogvj7": {
-              "_id": "r9rqjt1khcgogvj7",
-              "name": "ability.minor.that_which_is_golden.name",
+            "tv9l2vl7rxiwvgl7": {
+              "_id": "tv9l2vl7rxiwvgl7",
+              "name": "class.deep_apiarist.ability.minor.that_which_is_golden.name",
               "type": "ability",
               "system": {
                 "active": false,
-                "description": "ability.minor.that_which_is_golden.description",
+                "description": "class.deep_apiarist.ability.minor.that_which_is_golden.description",
                 "type": "minor",
                 "children": {}
               }
@@ -244,44 +244,44 @@
           }
         }
       },
-      "vy3fe4zulonpzgvu": {
-        "_id": "vy3fe4zulonpzgvu",
-        "name": "ability.major.blessed_toxin.name",
+      "0r564cyfl1n2mmuj": {
+        "_id": "0r564cyfl1n2mmuj",
+        "name": "class.deep_apiarist.ability.major.blessed_toxin.name",
         "type": "ability",
         "system": {
           "active": false,
-          "description": "ability.major.blessed_toxin.description",
+          "description": "class.deep_apiarist.ability.major.blessed_toxin.description",
           "type": "major",
           "children": {
-            "jccifo997nciv9xg": {
-              "_id": "jccifo997nciv9xg",
-              "name": "ability.minor.fearless.name",
+            "aycgaoujersyx1r6": {
+              "_id": "aycgaoujersyx1r6",
+              "name": "class.deep_apiarist.ability.minor.fearless.name",
               "type": "ability",
               "system": {
                 "active": false,
-                "description": "ability.minor.fearless.description",
+                "description": "class.deep_apiarist.ability.minor.fearless.description",
                 "type": "minor",
                 "children": {}
               }
             },
-            "dw1nvctcfevh73w0": {
-              "_id": "dw1nvctcfevh73w0",
-              "name": "ability.minor.painless.name",
+            "nehdp2lnp9i3rnvk": {
+              "_id": "nehdp2lnp9i3rnvk",
+              "name": "class.deep_apiarist.ability.minor.painless.name",
               "type": "ability",
               "system": {
                 "active": false,
-                "description": "ability.minor.painless.description",
+                "description": "class.deep_apiarist.ability.minor.painless.description",
                 "type": "minor",
                 "children": {}
               }
             },
-            "i6mwmc97gnbsdnom": {
-              "_id": "i6mwmc97gnbsdnom",
-              "name": "ability.minor.bloodless.name",
+            "1szij3idfqrkom5b": {
+              "_id": "1szij3idfqrkom5b",
+              "name": "class.deep_apiarist.ability.minor.bloodless.name",
               "type": "ability",
               "system": {
                 "active": false,
-                "description": "ability.minor.bloodless.description",
+                "description": "class.deep_apiarist.ability.minor.bloodless.description",
                 "type": "minor",
                 "children": {}
               }
@@ -289,44 +289,44 @@
           }
         }
       },
-      "nlz8favok6lnze2l": {
-        "_id": "nlz8favok6lnze2l",
-        "name": "ability.major.delirium_spike.name",
+      "llji5r6hg4epqvns": {
+        "_id": "llji5r6hg4epqvns",
+        "name": "class.deep_apiarist.ability.major.delirium_spike.name",
         "type": "ability",
         "system": {
           "active": false,
-          "description": "ability.major.delirium_spike.description",
+          "description": "class.deep_apiarist.ability.major.delirium_spike.description",
           "type": "major",
           "children": {
-            "151p053l6uxpn91r": {
-              "_id": "151p053l6uxpn91r",
-              "name": "ability.minor.imperfect_balance.name",
+            "oj5wuhop85p61xks": {
+              "_id": "oj5wuhop85p61xks",
+              "name": "class.deep_apiarist.ability.minor.imperfect_balance.name",
               "type": "ability",
               "system": {
                 "active": false,
-                "description": "ability.minor.imperfect_balance.description",
+                "description": "class.deep_apiarist.ability.minor.imperfect_balance.description",
                 "type": "minor",
                 "children": {}
               }
             },
-            "lce0lx8b9ljqng3z": {
-              "_id": "lce0lx8b9ljqng3z",
-              "name": "ability.minor.venomous_hex.name",
+            "rtkc9lfy0yad90gl": {
+              "_id": "rtkc9lfy0yad90gl",
+              "name": "class.deep_apiarist.ability.minor.venomous_hex.name",
               "type": "ability",
               "system": {
                 "active": false,
-                "description": "ability.minor.venomous_hex.description",
+                "description": "class.deep_apiarist.ability.minor.venomous_hex.description",
                 "type": "minor",
                 "children": {}
               }
             },
-            "596y5s67ppd3zh81": {
-              "_id": "596y5s67ppd3zh81",
-              "name": "ability.minor.inquisitive_burrowers.name",
+            "rx3qv1ajp22jrs94": {
+              "_id": "rx3qv1ajp22jrs94",
+              "name": "class.deep_apiarist.ability.minor.inquisitive_burrowers.name",
               "type": "ability",
               "system": {
                 "active": false,
-                "description": "ability.minor.inquisitive_burrowers.description",
+                "description": "class.deep_apiarist.ability.minor.inquisitive_burrowers.description",
                 "type": "minor",
                 "children": {}
               }
@@ -334,44 +334,44 @@
           }
         }
       },
-      "3t1kjp6p2doowwad": {
-        "_id": "3t1kjp6p2doowwad",
-        "name": "ability.major.sacred_geometry.name",
+      "piyo5euh98ivd9uz": {
+        "_id": "piyo5euh98ivd9uz",
+        "name": "class.deep_apiarist.ability.major.sacred_geometry.name",
         "type": "ability",
         "system": {
           "active": false,
-          "description": "ability.major.sacred_geometry.description",
+          "description": "class.deep_apiarist.ability.major.sacred_geometry.description",
           "type": "major",
           "children": {
-            "j50wslp75fd94a2j": {
-              "_id": "j50wslp75fd94a2j",
-              "name": "ability.minor.majestic.name",
+            "zo9mrnzvdknkmiyp": {
+              "_id": "zo9mrnzvdknkmiyp",
+              "name": "class.deep_apiarist.ability.minor.majestic.name",
               "type": "ability",
               "system": {
                 "active": false,
-                "description": "ability.minor.majestic.description",
+                "description": "class.deep_apiarist.ability.minor.majestic.description",
                 "type": "minor",
                 "children": {}
               }
             },
-            "a3gzlx91zqpkao5c": {
-              "_id": "a3gzlx91zqpkao5c",
-              "name": "ability.minor.pristine.name",
+            "x2htbgsvczhbwpkv": {
+              "_id": "x2htbgsvczhbwpkv",
+              "name": "class.deep_apiarist.ability.minor.pristine.name",
               "type": "ability",
               "system": {
                 "active": false,
-                "description": "ability.minor.pristine.description",
+                "description": "class.deep_apiarist.ability.minor.pristine.description",
                 "type": "minor",
                 "children": {}
               }
             },
-            "q25ufayckf5bnlrb": {
-              "_id": "q25ufayckf5bnlrb",
-              "name": "ability.minor.regal.name",
+            "qeteft564iinpsvh": {
+              "_id": "qeteft564iinpsvh",
+              "name": "class.deep_apiarist.ability.minor.regal.name",
               "type": "ability",
               "system": {
                 "active": false,
-                "description": "ability.minor.regal.description",
+                "description": "class.deep_apiarist.ability.minor.regal.description",
                 "type": "minor",
                 "children": {}
               }
@@ -379,44 +379,44 @@
           }
         }
       },
-      "vxermi6pnvffc906": {
-        "_id": "vxermi6pnvffc906",
-        "name": "ability.major.unchaos.name",
+      "4mhpltu1kffwssi9": {
+        "_id": "4mhpltu1kffwssi9",
+        "name": "class.deep_apiarist.ability.major.unchaos.name",
         "type": "ability",
         "system": {
           "active": false,
-          "description": "ability.major.unchaos.description",
+          "description": "class.deep_apiarist.ability.major.unchaos.description",
           "type": "major",
           "children": {
-            "5b2z1m969815xsr5": {
-              "_id": "5b2z1m969815xsr5",
-              "name": "ability.minor.stabilisation.name",
+            "r7b4agashuhv49j6": {
+              "_id": "r7b4agashuhv49j6",
+              "name": "class.deep_apiarist.ability.minor.stabilisation.name",
               "type": "ability",
               "system": {
                 "active": false,
-                "description": "ability.minor.stabilisation.description",
+                "description": "class.deep_apiarist.ability.minor.stabilisation.description",
                 "type": "minor",
                 "children": {}
               }
             },
-            "zidiefuor8nsyv4i": {
-              "_id": "zidiefuor8nsyv4i",
-              "name": "ability.minor.perfection.name",
+            "kob2lzxbpj2i26kp": {
+              "_id": "kob2lzxbpj2i26kp",
+              "name": "class.deep_apiarist.ability.minor.perfection.name",
               "type": "ability",
               "system": {
                 "active": false,
-                "description": "ability.minor.perfection.description",
+                "description": "class.deep_apiarist.ability.minor.perfection.description",
                 "type": "minor",
                 "children": {}
               }
             },
-            "c4uo1th282tt1147": {
-              "_id": "c4uo1th282tt1147",
-              "name": "ability.minor.filed_away.name",
+            "sp0mhu8nsqh3nunr": {
+              "_id": "sp0mhu8nsqh3nunr",
+              "name": "class.deep_apiarist.ability.minor.filed_away.name",
               "type": "ability",
               "system": {
                 "active": false,
-                "description": "ability.minor.filed_away.description",
+                "description": "class.deep_apiarist.ability.minor.filed_away.description",
                 "type": "minor",
                 "children": {}
               }
@@ -424,63 +424,63 @@
           }
         }
       },
-      "hruo2i6zl3e109hr": {
-        "_id": "hruo2i6zl3e109hr",
-        "name": "ability.zenith.absolute_stasis.name",
+      "1gnlinbxxnh9um8e": {
+        "_id": "1gnlinbxxnh9um8e",
+        "name": "class.deep_apiarist.ability.zenith.absolute_stasis.name",
         "type": "ability",
         "system": {
           "active": false,
-          "description": "ability.zenith.absolute_stasis.description",
+          "description": "class.deep_apiarist.ability.zenith.absolute_stasis.description",
           "type": "zenith",
           "children": {}
         }
       },
-      "2svhxnw2cujn7jya": {
-        "_id": "2svhxnw2cujn7jya",
-        "name": "ability.zenith.dimensional_bastion.name",
+      "nrwagurauaohdfuj": {
+        "_id": "nrwagurauaohdfuj",
+        "name": "class.deep_apiarist.ability.zenith.dimensional_bastion.name",
         "type": "ability",
         "system": {
           "active": false,
-          "description": "ability.zenith.dimensional_bastion.description",
+          "description": "class.deep_apiarist.ability.zenith.dimensional_bastion.description",
           "type": "zenith",
           "children": {}
         }
       },
-      "iole6tgqu0glloja": {
-        "_id": "iole6tgqu0glloja",
-        "name": "ability.zenith.surrender_to_chaos.name",
+      "t64qtwu9uvcc8rh9": {
+        "_id": "t64qtwu9uvcc8rh9",
+        "name": "class.deep_apiarist.ability.zenith.surrender_to_chaos.name",
         "type": "ability",
         "system": {
           "active": false,
-          "description": "ability.zenith.surrender_to_chaos.description",
+          "description": "class.deep_apiarist.ability.zenith.surrender_to_chaos.description",
           "type": "zenith",
           "children": {}
         }
       },
-      "epwxvtmpmlo0xhrj": {
-        "_id": "epwxvtmpmlo0xhrj",
-        "name": "equipment.hive_tool",
+      "pd2khvw5ffrcd9ee": {
+        "_id": "pd2khvw5ffrcd9ee",
+        "name": "class.deep_apiarist.equipment.hive_tool",
         "type": "equipment",
         "system": {
           "type": "kill",
           "die_size": "d4",
           "group": "core",
           "children": {
-            "w7e7y92i4lkmfkm0": {
-              "_id": "w7e7y92i4lkmfkm0",
+            "7l51toey7jmw94sy": {
+              "_id": "7l51toey7jmw94sy",
               "name": "tag.brutal.name",
               "type": "tag",
               "system": {
                 "description": "tag.brutal.description"
               },
-              "_key": "!items!lpcjn87r3of5wuwc"
+              "_key": "!items!cpu88j1zvh93j65x"
             }
           }
         }
       },
-      "5gl20ximdfa8h812": {
-        "_id": "5gl20ximdfa8h812",
-        "name": "equipment.dimensional_barometer",
+      "rtvz3s6fuognx1ap": {
+        "_id": "rtvz3s6fuognx1ap",
+        "name": "class.deep_apiarist.equipment.dimensional_barometer",
         "type": "equipment",
         "system": {
           "type": "delve",
@@ -489,62 +489,62 @@
           "children": {}
         }
       },
-      "o0j5g5jokwkfoiyd": {
-        "_id": "o0j5g5jokwkfoiyd",
-        "name": "equipment.hunting_rifle",
+      "9rw3sx8vaj79h749": {
+        "_id": "9rw3sx8vaj79h749",
+        "name": "class.deep_apiarist.equipment.hunting_rifle",
         "type": "equipment",
         "system": {
           "type": "kill",
           "die_size": "d6",
           "group": "group_2",
           "children": {
-            "io4w4q6t3rtbo1cg": {
-              "_id": "io4w4q6t3rtbo1cg",
+            "8rhytghpszftlaup": {
+              "_id": "8rhytghpszftlaup",
               "name": "tag.reload.name",
               "type": "tag",
               "system": {
                 "description": "tag.reload.description"
               },
-              "_key": "!items!e0aw9cbtedch5kuz"
+              "_key": "!items!453oy3lu2tyz55bc"
             },
-            "e9e7a54yfic4y5px": {
-              "_id": "e9e7a54yfic4y5px",
+            "a4m3w8266wi4pw4h": {
+              "_id": "a4m3w8266wi4pw4h",
               "name": "tag.extreme_range.name",
               "type": "tag",
               "system": {
                 "description": "tag.extreme_range.description"
               },
-              "_key": "!items!ofpvc5wu5hirkz7y"
+              "_key": "!items!gqnzyyt0et81qe11"
             }
           }
         }
       },
-      "a5kps755cjrtp2u1": {
-        "_id": "a5kps755cjrtp2u1",
-        "name": "equipment.smoker.name",
+      "udfh8vdxnj682rwr": {
+        "_id": "udfh8vdxnj682rwr",
+        "name": "class.deep_apiarist.equipment.smoker",
         "type": "equipment",
         "system": {
           "type": "kill",
           "die_size": "d4",
           "group": "group_3",
           "children": {
-            "k2ucf0ilah8josu0": {
-              "_id": "k2ucf0ilah8josu0",
+            "tn1qrmji48i828a6": {
+              "_id": "tn1qrmji48i828a6",
               "name": "tag.debilitating.name",
               "type": "tag",
               "system": {
                 "description": "tag.debilitating.description"
               },
-              "_key": "!items!8ggr2fgyekbh402l"
+              "_key": "!items!69pb20j01hjf2by5"
             },
-            "blq1dfxwkfb9p6cm": {
-              "_id": "blq1dfxwkfb9p6cm",
+            "p1u2b3978rfyxr7d": {
+              "_id": "p1u2b3978rfyxr7d",
               "name": "tag.smoke.name",
               "type": "tag",
               "system": {
                 "description": "tag.smoke.description"
               },
-              "_key": "!items!svu25cqx0naol2l6"
+              "_key": "!items!z16ebls6q6g4zycn"
             }
           }
         }
@@ -552,5 +552,5 @@
     }
   },
   "effects": [],
-  "_key": "!items!b5uyc41l2tlyzr08"
+  "_key": "!items!vyg66uboud936wnn"
 }

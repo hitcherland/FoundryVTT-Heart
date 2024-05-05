@@ -12,10 +12,10 @@
       "group_3"
     ],
     "children": {
-      "07uxtu9d9saaw79s": {
-        "_id": "07uxtu9d9saaw79s",
+      "n0z9iquca6nc0aqq": {
+        "_id": "n0z9iquca6nc0aqq",
         "type": "resource",
-        "name": "resource.vial_of_cursed_ink",
+        "name": "class.junk_mage.resource.vial_of_cursed_ink",
         "system": {
           "active": true,
           "die_size": "d6",
@@ -23,209 +23,209 @@
           "children": {}
         }
       },
-      "wv011ajem1lrqr42": {
-        "_id": "wv011ajem1lrqr42",
-        "name": "ability.core.ravening_knowledge.name",
+      "c82cpvzseibofykc": {
+        "_id": "c82cpvzseibofykc",
+        "name": "class.junk_mage.ability.core.ravening_knowledge.name",
         "type": "ability",
         "system": {
           "active": true,
-          "description": "ability.core.ravening_knowledge.description",
+          "description": "class.junk_mage.ability.core.ravening_knowledge.description",
           "type": "core",
           "children": {}
         }
       },
-      "ep32fka5kbogumv3": {
-        "_id": "ep32fka5kbogumv3",
-        "name": "ability.core.sacrifice.name",
+      "5olsfxf6os0sx4z2": {
+        "_id": "5olsfxf6os0sx4z2",
+        "name": "class.junk_mage.ability.core.sacrifice.name",
         "type": "ability",
         "system": {
           "active": true,
-          "description": "ability.core.sacrifice.description",
+          "description": "class.junk_mage.ability.core.sacrifice.description",
           "type": "core",
           "children": {}
         }
       },
-      "nd3uexan7khvjzrj": {
-        "_id": "nd3uexan7khvjzrj",
-        "name": "ability.minor.back_pocket_arcana.name",
+      "dut3dtqotuvbpes8": {
+        "_id": "dut3dtqotuvbpes8",
+        "name": "class.junk_mage.ability.minor.back_pocket_arcana.name",
         "type": "ability",
         "system": {
           "active": false,
-          "description": "ability.minor.back_pocket_arcana.description",
+          "description": "class.junk_mage.ability.minor.back_pocket_arcana.description",
           "type": "minor",
           "children": {}
         }
       },
-      "9y330w2sz5tsjxr9": {
-        "_id": "9y330w2sz5tsjxr9",
-        "name": "ability.minor.been_everywhere.name",
+      "747sbk5441ch9jc5": {
+        "_id": "747sbk5441ch9jc5",
+        "name": "class.junk_mage.ability.minor.been_everywhere.name",
         "type": "ability",
         "system": {
           "active": false,
-          "description": "ability.minor.been_everywhere.description",
+          "description": "class.junk_mage.ability.minor.been_everywhere.description",
           "type": "minor",
           "children": {}
         }
       },
-      "gvom9dvx44tuxmcb": {
-        "_id": "gvom9dvx44tuxmcb",
-        "name": "ability.minor.by_any_means.name",
+      "157avljej1xius28": {
+        "_id": "157avljej1xius28",
+        "name": "class.junk_mage.ability.minor.by_any_means.name",
         "type": "ability",
         "system": {
           "active": false,
-          "description": "ability.minor.by_any_means.description",
+          "description": "class.junk_mage.ability.minor.by_any_means.description",
           "type": "minor",
           "children": {}
         }
       },
-      "cdyeuv0qcamlo6lo": {
-        "_id": "cdyeuv0qcamlo6lo",
-        "name": "ability.minor.frontier_etiquette.name",
+      "daoy88md3hg5tr85": {
+        "_id": "daoy88md3hg5tr85",
+        "name": "class.junk_mage.ability.minor.frontier_etiquette.name",
         "type": "ability",
         "system": {
           "active": false,
-          "description": "ability.minor.frontier_etiquette.description",
+          "description": "class.junk_mage.ability.minor.frontier_etiquette.description",
           "type": "minor",
           "children": {}
         }
       },
-      "tfr2avh0ycnqx4ay": {
-        "_id": "tfr2avh0ycnqx4ay",
-        "name": "ability.minor.litanies_of_false_power.name",
+      "335ykjcp7duopcip": {
+        "_id": "335ykjcp7duopcip",
+        "name": "class.junk_mage.ability.minor.litanies_of_false_power.name",
         "type": "ability",
         "system": {
           "active": false,
-          "description": "ability.minor.litanies_of_false_power.description",
+          "description": "class.junk_mage.ability.minor.litanies_of_false_power.description",
           "type": "minor",
           "children": {}
         }
       },
-      "leo43oel7ak757bk": {
-        "_id": "leo43oel7ak757bk",
-        "name": "ability.minor.mark_of_hunger.name",
+      "m3d41c52vyzirdym": {
+        "_id": "m3d41c52vyzirdym",
+        "name": "class.junk_mage.ability.minor.mark_of_hunger.name",
         "type": "ability",
         "system": {
           "active": false,
-          "description": "ability.minor.mark_of_hunger.description",
+          "description": "class.junk_mage.ability.minor.mark_of_hunger.description",
           "type": "minor",
           "children": {}
         }
       },
-      "gsztb78sug5u6nt4": {
-        "_id": "gsztb78sug5u6nt4",
-        "name": "ability.minor.mark_of_the_phantom.name",
+      "4amsbwisset3hi2u": {
+        "_id": "4amsbwisset3hi2u",
+        "name": "class.junk_mage.ability.minor.mark_of_the_phantom.name",
         "type": "ability",
         "system": {
           "active": false,
-          "description": "ability.minor.mark_of_the_phantom.description",
+          "description": "class.junk_mage.ability.minor.mark_of_the_phantom.description",
           "type": "minor",
           "children": {}
         }
       },
-      "oerxjhvwuee1vvnp": {
-        "_id": "oerxjhvwuee1vvnp",
-        "name": "ability.minor.mark_of_shadow.name",
+      "ja2tgrv2jxrohmuy": {
+        "_id": "ja2tgrv2jxrohmuy",
+        "name": "class.junk_mage.ability.minor.mark_of_shadow.name",
         "type": "ability",
         "system": {
           "active": false,
-          "description": "ability.minor.mark_of_shadow.description",
+          "description": "class.junk_mage.ability.minor.mark_of_shadow.description",
           "type": "minor",
           "children": {}
         }
       },
-      "jh7y870ez2t0vwsp": {
-        "_id": "jh7y870ez2t0vwsp",
-        "name": "ability.minor.mark_of_the_weaver.name",
+      "i47nae0a5qgz9vpz": {
+        "_id": "i47nae0a5qgz9vpz",
+        "name": "class.junk_mage.ability.minor.mark_of_the_weaver.name",
         "type": "ability",
         "system": {
           "active": false,
-          "description": "ability.minor.mark_of_the_weaver.description",
+          "description": "class.junk_mage.ability.minor.mark_of_the_weaver.description",
           "type": "minor",
           "children": {}
         }
       },
-      "3xw52tbsgo6n1q0x": {
-        "_id": "3xw52tbsgo6n1q0x",
-        "name": "ability.minor.rust_and_iron.name",
+      "54ox1khmf727ces2": {
+        "_id": "54ox1khmf727ces2",
+        "name": "class.junk_mage.ability.minor.rust_and_iron.name",
         "type": "ability",
         "system": {
           "active": false,
-          "description": "ability.minor.rust_and_iron.description",
+          "description": "class.junk_mage.ability.minor.rust_and_iron.description",
           "type": "minor",
           "children": {}
         }
       },
-      "fzpc30jszrpo4kau": {
-        "_id": "fzpc30jszrpo4kau",
-        "name": "ability.minor.siphon_of_fortune.name",
+      "pj7tkpvus6ip801a": {
+        "_id": "pj7tkpvus6ip801a",
+        "name": "class.junk_mage.ability.minor.siphon_of_fortune.name",
         "type": "ability",
         "system": {
           "active": false,
-          "description": "ability.minor.siphon_of_fortune.description",
+          "description": "class.junk_mage.ability.minor.siphon_of_fortune.description",
           "type": "minor",
           "children": {}
         }
       },
-      "p8v303fv40rakmk8": {
-        "_id": "p8v303fv40rakmk8",
-        "name": "ability.minor.warding_spells.name",
+      "p617pry2jvaypnju": {
+        "_id": "p617pry2jvaypnju",
+        "name": "class.junk_mage.ability.minor.warding_spells.name",
         "type": "ability",
         "system": {
           "active": false,
-          "description": "ability.minor.warding_spells.description",
+          "description": "class.junk_mage.ability.minor.warding_spells.description",
           "type": "minor",
           "children": {}
         }
       },
-      "hpwly7jk2gfvoyzc": {
-        "_id": "hpwly7jk2gfvoyzc",
-        "name": "ability.minor.wretched_and_glorious.name",
+      "rmucagh7uhbnaugv": {
+        "_id": "rmucagh7uhbnaugv",
+        "name": "class.junk_mage.ability.minor.wretched_and_glorious.name",
         "type": "ability",
         "system": {
           "active": false,
-          "description": "ability.minor.wretched_and_glorious.description",
+          "description": "class.junk_mage.ability.minor.wretched_and_glorious.description",
           "type": "minor",
           "children": {}
         }
       },
-      "tnfn5rh9zber9ctu": {
-        "_id": "tnfn5rh9zber9ctu",
-        "name": "ability.major.curse_of_the_sky_court.name",
+      "9992y77g7quhdbvz": {
+        "_id": "9992y77g7quhdbvz",
+        "name": "class.junk_mage.ability.major.curse_of_the_sky_court.name",
         "type": "ability",
         "system": {
           "active": false,
-          "description": "ability.major.curse_of_the_sky_court.description",
+          "description": "class.junk_mage.ability.major.curse_of_the_sky_court.description",
           "type": "major",
           "children": {
-            "ixe7v0ut18p3uv2e": {
-              "_id": "ixe7v0ut18p3uv2e",
-              "name": "ability.minor.ecstasy.name",
+            "0153iim5qphi2a5o": {
+              "_id": "0153iim5qphi2a5o",
+              "name": "class.junk_mage.ability.minor.ecstasy.name",
               "type": "ability",
               "system": {
                 "active": false,
-                "description": "ability.minor.ecstasy.description",
+                "description": "class.junk_mage.ability.minor.ecstasy.description",
                 "type": "minor",
                 "children": {}
               }
             },
-            "cj8io5823ebr7zqb": {
-              "_id": "cj8io5823ebr7zqb",
-              "name": "ability.minor.a_moment_eternal.name",
+            "q2tqn2y3r4ghnwxi": {
+              "_id": "q2tqn2y3r4ghnwxi",
+              "name": "class.junk_mage.ability.minor.a_moment_eternal.name",
               "type": "ability",
               "system": {
                 "active": false,
-                "description": "ability.minor.a_moment_eternal.description",
+                "description": "class.junk_mage.ability.minor.a_moment_eternal.description",
                 "type": "minor",
                 "children": {}
               }
             },
-            "0cvt5i2hb8mwp55x": {
-              "_id": "0cvt5i2hb8mwp55x",
-              "name": "ability.minor.steal_the_night_away.name",
+            "ptqobh960sp74nvd": {
+              "_id": "ptqobh960sp74nvd",
+              "name": "class.junk_mage.ability.minor.steal_the_night_away.name",
               "type": "ability",
               "system": {
                 "active": false,
-                "description": "ability.minor.steal_the_night_away.description",
+                "description": "class.junk_mage.ability.minor.steal_the_night_away.description",
                 "type": "minor",
                 "children": {}
               }
@@ -233,44 +233,44 @@
           }
         }
       },
-      "ek13yj9ufjgdx4du": {
-        "_id": "ek13yj9ufjgdx4du",
-        "name": "ability.major.fire_of_the_red_king.name",
+      "xc0lvq0j9livkkbf": {
+        "_id": "xc0lvq0j9livkkbf",
+        "name": "class.junk_mage.ability.major.fire_of_the_red_king.name",
         "type": "ability",
         "system": {
           "active": false,
-          "description": "ability.major.fire_of_the_red_king.description",
+          "description": "class.junk_mage.ability.major.fire_of_the_red_king.description",
           "type": "major",
           "children": {
-            "ekphgh5xlqtdwmdg": {
-              "_id": "ekphgh5xlqtdwmdg",
-              "name": "ability.minor.words_of_flame.name",
+            "dr5263sef6qx6ki5": {
+              "_id": "dr5263sef6qx6ki5",
+              "name": "class.junk_mage.ability.minor.words_of_flame.name",
               "type": "ability",
               "system": {
                 "active": false,
-                "description": "ability.minor.words_of_flame.description",
+                "description": "class.junk_mage.ability.minor.words_of_flame.description",
                 "type": "minor",
                 "children": {}
               }
             },
-            "s1hsk3buczzpiabz": {
-              "_id": "s1hsk3buczzpiabz",
-              "name": "ability.minor.superheat.name",
+            "qw0pf8hafpzr6789": {
+              "_id": "qw0pf8hafpzr6789",
+              "name": "class.junk_mage.ability.minor.superheat.name",
               "type": "ability",
               "system": {
                 "active": false,
-                "description": "ability.minor.superheat.description",
+                "description": "class.junk_mage.ability.minor.superheat.description",
                 "type": "minor",
                 "children": {}
               }
             },
-            "51htbdibqijpa2ld": {
-              "_id": "51htbdibqijpa2ld",
-              "name": "ability.minor.coin_gold_blood.name",
+            "hivpmhtwqio3e34s": {
+              "_id": "hivpmhtwqio3e34s",
+              "name": "class.junk_mage.ability.minor.coin_gold_blood.name",
               "type": "ability",
               "system": {
                 "active": false,
-                "description": "ability.minor.coin_gold_blood.description",
+                "description": "class.junk_mage.ability.minor.coin_gold_blood.description",
                 "type": "minor",
                 "children": {}
               }
@@ -278,44 +278,44 @@
           }
         }
       },
-      "wxmicvfnw7g2bvkn": {
-        "_id": "wxmicvfnw7g2bvkn",
-        "name": "ability.major.frenzy_of_the_sky_court.name",
+      "ftbv7zazbrcqu7s4": {
+        "_id": "ftbv7zazbrcqu7s4",
+        "name": "class.junk_mage.ability.major.frenzy_of_the_sky_court.name",
         "type": "ability",
         "system": {
           "active": false,
-          "description": "ability.major.frenzy_of_the_sky_court.description",
+          "description": "class.junk_mage.ability.major.frenzy_of_the_sky_court.description",
           "type": "major",
           "children": {
-            "w2q2x14prqhw5up7": {
-              "_id": "w2q2x14prqhw5up7",
-              "name": "ability.minor.temporary_perfection.name",
+            "p9w746k5sumyag9m": {
+              "_id": "p9w746k5sumyag9m",
+              "name": "class.junk_mage.ability.minor.temporary_perfection.name",
               "type": "ability",
               "system": {
                 "active": false,
-                "description": "ability.minor.temporary_perfection.description",
+                "description": "class.junk_mage.ability.minor.temporary_perfection.description",
                 "type": "minor",
                 "children": {}
               }
             },
-            "ibjjw51pjanxi4fn": {
-              "_id": "ibjjw51pjanxi4fn",
-              "name": "ability.minor.brisk_conjuration.name",
+            "cec3uagm41830ria": {
+              "_id": "cec3uagm41830ria",
+              "name": "class.junk_mage.ability.minor.brisk_conjuration.name",
               "type": "ability",
               "system": {
                 "active": false,
-                "description": "ability.minor.brisk_conjuration.description",
+                "description": "class.junk_mage.ability.minor.brisk_conjuration.description",
                 "type": "minor",
                 "children": {}
               }
             },
-            "g9rwgvnuwtgluls0": {
-              "_id": "g9rwgvnuwtgluls0",
-              "name": "ability.minor.maddening_storm.name",
+            "xc4w6kcxu1pnxv87": {
+              "_id": "xc4w6kcxu1pnxv87",
+              "name": "class.junk_mage.ability.minor.maddening_storm.name",
               "type": "ability",
               "system": {
                 "active": false,
-                "description": "ability.minor.maddening_storm.description",
+                "description": "class.junk_mage.ability.minor.maddening_storm.description",
                 "type": "minor",
                 "children": {}
               }
@@ -323,44 +323,44 @@
           }
         }
       },
-      "1oabi0b9rmlh8h4l": {
-        "_id": "1oabi0b9rmlh8h4l",
-        "name": "ability.major.greed_of_the_red_king.name",
+      "izu2r566eiml4d45": {
+        "_id": "izu2r566eiml4d45",
+        "name": "class.junk_mage.ability.major.greed_of_the_red_king.name",
         "type": "ability",
         "system": {
           "active": false,
-          "description": "ability.major.greed_of_the_red_king.description",
+          "description": "class.junk_mage.ability.major.greed_of_the_red_king.description",
           "type": "major",
           "children": {
-            "j8xuqw3y5vjoxi3w": {
-              "_id": "j8xuqw3y5vjoxi3w",
-              "name": "ability.minor.only_the_finest.name",
+            "orgu0wg484ckdp5m": {
+              "_id": "orgu0wg484ckdp5m",
+              "name": "class.junk_mage.ability.minor.only_the_finest.name",
               "type": "ability",
               "system": {
                 "active": false,
-                "description": "ability.minor.only_the_finest.description",
+                "description": "class.junk_mage.ability.minor.only_the_finest.description",
                 "type": "minor",
                 "children": {}
               }
             },
-            "a16qlz663xsp3k0n": {
-              "_id": "a16qlz663xsp3k0n",
-              "name": "ability.minor.gorge.name",
+            "8lndna1ng4ytgvn7": {
+              "_id": "8lndna1ng4ytgvn7",
+              "name": "class.junk_mage.ability.minor.gorge.name",
               "type": "ability",
               "system": {
                 "active": false,
-                "description": "ability.minor.gorge.description",
+                "description": "class.junk_mage.ability.minor.gorge.description",
                 "type": "minor",
                 "children": {}
               }
             },
-            "n06sgd48l2qt0cio": {
-              "_id": "n06sgd48l2qt0cio",
-              "name": "ability.minor.a_king_demands.name",
+            "asaj3pu6vzprauz5": {
+              "_id": "asaj3pu6vzprauz5",
+              "name": "class.junk_mage.ability.minor.a_king_demands.name",
               "type": "ability",
               "system": {
                 "active": false,
-                "description": "ability.minor.a_king_demands.description",
+                "description": "class.junk_mage.ability.minor.a_king_demands.description",
                 "type": "minor",
                 "children": {}
               }
@@ -368,44 +368,44 @@
           }
         }
       },
-      "a4t1ij5bv8c8ghr8": {
-        "_id": "a4t1ij5bv8c8ghr8",
-        "name": "ability.major.kiss_of_the_drowned_queen.name",
+      "a03g4b9kygd2lag3": {
+        "_id": "a03g4b9kygd2lag3",
+        "name": "class.junk_mage.ability.major.kiss_of_the_drowned_queen.name",
         "type": "ability",
         "system": {
           "active": false,
-          "description": "ability.major.kiss_of_the_drowned_queen.description",
+          "description": "class.junk_mage.ability.major.kiss_of_the_drowned_queen.description",
           "type": "major",
           "children": {
-            "xavzfu0j67km60h8": {
-              "_id": "xavzfu0j67km60h8",
-              "name": "ability.minor.slumbering_eternal.name",
+            "srjygtua96j1280z": {
+              "_id": "srjygtua96j1280z",
+              "name": "class.junk_mage.ability.minor.slumbering_eternal.name",
               "type": "ability",
               "system": {
                 "active": false,
-                "description": "ability.minor.slumbering_eternal.description",
+                "description": "class.junk_mage.ability.minor.slumbering_eternal.description",
                 "type": "minor",
                 "children": {}
               }
             },
-            "iy35mdcf59b4iuq7": {
-              "_id": "iy35mdcf59b4iuq7",
-              "name": "ability.minor.body_of_water.name",
+            "dafv2ex08iiytr2d": {
+              "_id": "dafv2ex08iiytr2d",
+              "name": "class.junk_mage.ability.minor.body_of_water.name",
               "type": "ability",
               "system": {
                 "active": false,
-                "description": "ability.minor.body_of_water.description",
+                "description": "class.junk_mage.ability.minor.body_of_water.description",
                 "type": "minor",
                 "children": {}
               }
             },
-            "m644oxllu0e8urax": {
-              "_id": "m644oxllu0e8urax",
-              "name": "ability.minor.grace.name",
+            "p0dx51tx2fii4wlx": {
+              "_id": "p0dx51tx2fii4wlx",
+              "name": "class.junk_mage.ability.minor.grace.name",
               "type": "ability",
               "system": {
                 "active": false,
-                "description": "ability.minor.grace.description",
+                "description": "class.junk_mage.ability.minor.grace.description",
                 "type": "minor",
                 "children": {}
               }
@@ -413,44 +413,44 @@
           }
         }
       },
-      "zovit9s9jm9lygef": {
-        "_id": "zovit9s9jm9lygef",
-        "name": "ability.major.sanctum_of_the_stone_chorus.name",
+      "oyrrgk0gcqpcovnx": {
+        "_id": "oyrrgk0gcqpcovnx",
+        "name": "class.junk_mage.ability.major.sanctum_of_the_stone_chorus.name",
         "type": "ability",
         "system": {
           "active": false,
-          "description": "ability.major.sanctum_of_the_stone_chorus.description",
+          "description": "class.junk_mage.ability.major.sanctum_of_the_stone_chorus.description",
           "type": "major",
           "children": {
-            "0vfqpafzfm2o9nry": {
-              "_id": "0vfqpafzfm2o9nry",
-              "name": "ability.minor.benevolent.name",
+            "v6q8yu0f3bcpubbw": {
+              "_id": "v6q8yu0f3bcpubbw",
+              "name": "class.junk_mage.ability.minor.benevolent.name",
               "type": "ability",
               "system": {
                 "active": false,
-                "description": "ability.minor.benevolent.description",
+                "description": "class.junk_mage.ability.minor.benevolent.description",
                 "type": "minor",
                 "children": {}
               }
             },
-            "h9o65pqernle3a2d": {
-              "_id": "h9o65pqernle3a2d",
-              "name": "ability.minor.omnipresent.name",
+            "91e6o599a5fojmbv": {
+              "_id": "91e6o599a5fojmbv",
+              "name": "class.junk_mage.ability.minor.omnipresent.name",
               "type": "ability",
               "system": {
                 "active": false,
-                "description": "ability.minor.omnipresent.description",
+                "description": "class.junk_mage.ability.minor.omnipresent.description",
                 "type": "minor",
                 "children": {}
               }
             },
-            "6u92l8btaounuwga": {
-              "_id": "6u92l8btaounuwga",
-              "name": "ability.minor.bountiful.name",
+            "pf3sk1dhywei6iwl": {
+              "_id": "pf3sk1dhywei6iwl",
+              "name": "class.junk_mage.ability.minor.bountiful.name",
               "type": "ability",
               "system": {
                 "active": false,
-                "description": "ability.minor.bountiful.description",
+                "description": "class.junk_mage.ability.minor.bountiful.description",
                 "type": "minor",
                 "children": {}
               }
@@ -458,120 +458,120 @@
           }
         }
       },
-      "fb5b0ppqmgonyn1f": {
-        "_id": "fb5b0ppqmgonyn1f",
-        "name": "ability.zenith.the_herald_of_the_red_king.name",
+      "ddec5n82so5scsoc": {
+        "_id": "ddec5n82so5scsoc",
+        "name": "class.junk_mage.ability.zenith.the_herald_of_the_red_king.name",
         "type": "ability",
         "system": {
           "active": false,
-          "description": "ability.zenith.the_herald_of_the_red_king.description",
+          "description": "class.junk_mage.ability.zenith.the_herald_of_the_red_king.description",
           "type": "zenith",
           "children": {}
         }
       },
-      "p9h5arawcsqssd4n": {
-        "_id": "p9h5arawcsqssd4n",
-        "name": "ability.zenith.the_herald_of_the_drowned_queen.name",
+      "rf13u4dt0ss89c1q": {
+        "_id": "rf13u4dt0ss89c1q",
+        "name": "class.junk_mage.ability.zenith.the_herald_of_the_drowned_queen.name",
         "type": "ability",
         "system": {
           "active": false,
-          "description": "ability.zenith.the_herald_of_the_drowned_queen.description",
+          "description": "class.junk_mage.ability.zenith.the_herald_of_the_drowned_queen.description",
           "type": "zenith",
           "children": {}
         }
       },
-      "2iol1gg5y5scf4io": {
-        "_id": "2iol1gg5y5scf4io",
-        "name": "ability.zenith.the_herald_of_the_stone_chorus.name",
+      "kgoncrktsyp65qtm": {
+        "_id": "kgoncrktsyp65qtm",
+        "name": "class.junk_mage.ability.zenith.the_herald_of_the_stone_chorus.name",
         "type": "ability",
         "system": {
           "active": false,
-          "description": "ability.zenith.the_herald_of_the_stone_chorus.description",
+          "description": "class.junk_mage.ability.zenith.the_herald_of_the_stone_chorus.description",
           "type": "zenith",
           "children": {}
         }
       },
-      "1ok568qmr16hyw5o": {
-        "_id": "1ok568qmr16hyw5o",
-        "name": "equipment.two_old_fashioned_pistols",
+      "byr0mkvspleku9yv": {
+        "_id": "byr0mkvspleku9yv",
+        "name": "class.junk_mage.equipment.two_old_fashioned_pistols",
         "type": "equipment",
         "system": {
           "type": "kill",
           "die_size": "d8",
           "group": "group_1",
           "children": {
-            "5o8ei6ts8kdpg33q": {
-              "_id": "5o8ei6ts8kdpg33q",
+            "k2fy2sica6hb8vyw": {
+              "_id": "k2fy2sica6hb8vyw",
               "name": "tag.ranged.name",
               "type": "tag",
               "system": {
                 "description": "tag.ranged.description"
               },
-              "_key": "!items!a5gv5zgvp4uo6yps"
+              "_key": "!items!8t6wdqu6ch9v05j9"
             },
-            "geltoqlquyf4g1u4": {
-              "_id": "geltoqlquyf4g1u4",
+            "lx6b13ny0siulslc": {
+              "_id": "lx6b13ny0siulslc",
               "name": "tag.loud.name",
               "type": "tag",
               "system": {
                 "description": "tag.loud.description"
               },
-              "_key": "!items!issgq33m51mn3jgk"
+              "_key": "!items!bc4qfq5qxdkx6r4m"
             },
-            "x3q5a3fez6p7jttw": {
-              "_id": "x3q5a3fez6p7jttw",
+            "91o3fwh430r39cj8": {
+              "_id": "91o3fwh430r39cj8",
               "name": "tag.one_shot.name",
               "type": "tag",
               "system": {
                 "description": "tag.one_shot.description"
               },
-              "_key": "!items!5beai5kc4jxsqm17"
+              "_key": "!items!o6e76xgp4bgau5e5"
             }
           }
         }
       },
-      "ou8z1af4pbmvo6td": {
-        "_id": "ou8z1af4pbmvo6td",
-        "name": "equipment.hungry_knife",
+      "tleug3x2njknwcoa": {
+        "_id": "tleug3x2njknwcoa",
+        "name": "class.junk_mage.equipment.hungry_knife",
         "type": "equipment",
         "system": {
           "type": "kill",
           "die_size": "d6",
           "group": "group_2",
           "children": {
-            "cdxga9o8x4ryjhu9": {
-              "_id": "cdxga9o8x4ryjhu9",
+            "jauio25755e8c9k2": {
+              "_id": "jauio25755e8c9k2",
               "name": "tag.brutal.name",
               "type": "tag",
               "system": {
                 "description": "tag.brutal.description"
               },
-              "_key": "!items!lpcjn87r3of5wuwc"
+              "_key": "!items!cpu88j1zvh93j65x"
             },
-            "316wyb59irrpjwwj": {
-              "_id": "316wyb59irrpjwwj",
+            "e9h49og64ax65ewo": {
+              "_id": "e9h49og64ax65ewo",
               "name": "tag.bloodbound.name",
               "type": "tag",
               "system": {
                 "description": "tag.bloodbound.description"
               },
-              "_key": "!items!ibr49xbr88q1kds2"
+              "_key": "!items!uggb2borseghn61r"
             },
-            "dv74n6pr0x416jsk": {
-              "_id": "dv74n6pr0x416jsk",
+            "mwyw45xcrkos1skj": {
+              "_id": "mwyw45xcrkos1skj",
               "name": "tag.dangerous.name",
               "type": "tag",
               "system": {
                 "description": "tag.dangerous.description"
               },
-              "_key": "!items!p125aisef6kiceq1"
+              "_key": "!items!sicu6eda7qrbx077"
             }
           }
         }
       },
-      "zged9lnd8vt6cvs8": {
-        "_id": "zged9lnd8vt6cvs8",
-        "name": "equipment.overstuffed_coat",
+      "iqsv5hr3b595rtmv": {
+        "_id": "iqsv5hr3b595rtmv",
+        "name": "class.junk_mage.equipment.overstuffed_coat",
         "type": "equipment",
         "system": {
           "type": "mend",
@@ -583,41 +583,41 @@
           "children": {}
         }
       },
-      "ylfpue4lp9n8c2xu": {
-        "_id": "ylfpue4lp9n8c2xu",
-        "name": "equipment.blunderbuss",
+      "o6mm104tr1t2snkf": {
+        "_id": "o6mm104tr1t2snkf",
+        "name": "class.junk_mage.equipment.blunderbuss",
         "type": "equipment",
         "system": {
           "type": "kill",
           "die_size": "d4",
           "group": "group_3",
           "children": {
-            "3ul2ca2ejji31zwt": {
-              "_id": "3ul2ca2ejji31zwt",
+            "0x0h06ni8mgjyarr": {
+              "_id": "0x0h06ni8mgjyarr",
               "name": "tag.spread.name",
               "type": "tag",
               "system": {
                 "description": "tag.spread.description"
               },
-              "_key": "!items!vil5rfmf02ywyvw1"
+              "_key": "!items!2uneyze6l3bv9s64"
             },
-            "f10pwhqxnbuqdnop": {
-              "_id": "f10pwhqxnbuqdnop",
+            "d7xr84962kpr5kjm": {
+              "_id": "d7xr84962kpr5kjm",
               "name": "tag.point_blank.name",
               "type": "tag",
               "system": {
                 "description": "tag.point_blank.description"
               },
-              "_key": "!items!m7ydgbq9v0chae4p"
+              "_key": "!items!r1cfs8nsvwix0w9b"
             },
-            "h5lqp8inppqlaj74": {
-              "_id": "h5lqp8inppqlaj74",
+            "25qrr3lqo1nc85ux": {
+              "_id": "25qrr3lqo1nc85ux",
               "name": "tag.one_shot.name",
               "type": "tag",
               "system": {
                 "description": "tag.one_shot.description"
               },
-              "_key": "!items!5beai5kc4jxsqm17"
+              "_key": "!items!o6e76xgp4bgau5e5"
             }
           }
         }
@@ -625,5 +625,5 @@
     }
   },
   "effects": [],
-  "_key": "!items!0be6zx2ea9dqorss"
+  "_key": "!items!4yrcow1r9jgdzfed"
 }

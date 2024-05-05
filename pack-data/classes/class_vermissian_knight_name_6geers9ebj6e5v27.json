@@ -1,5 +1,5 @@
 {
-  "_id": "6geers9ebj6e5v27",
+  "_id": "8zdo29fqu87kjd7c",
   "name": "class.vermissian_knight.name",
   "type": "class",
   "system": {
@@ -12,10 +12,10 @@
       "group_3"
     ],
     "children": {
-      "jdeiyqm5kh63z2ao": {
-        "_id": "jdeiyqm5kh63z2ao",
+      "qf16p4xzdle1ul1u": {
+        "_id": "qf16p4xzdle1ul1u",
         "type": "resource",
-        "name": "resource.spare_capacitors_and_wires",
+        "name": "class.vermissian_knight.resource.spare_capacitors_and_wires",
         "system": {
           "active": true,
           "die_size": "d6",
@@ -23,198 +23,198 @@
           "children": {}
         }
       },
-      "knng1xwwr2g3x7zc": {
-        "_id": "knng1xwwr2g3x7zc",
-        "name": "ability.core.vermissian_plate.name",
+      "bddt6qyjl0gd6jm2": {
+        "_id": "bddt6qyjl0gd6jm2",
+        "name": "class.vermissian_knight.ability.core.vermissian_plate.name",
         "type": "ability",
         "system": {
           "active": true,
-          "description": "ability.core.vermissian_plate.description",
+          "description": "class.vermissian_knight.ability.core.vermissian_plate.description",
           "type": "core",
           "children": {}
         }
       },
-      "7vmuqh21naoqw307": {
-        "_id": "7vmuqh21naoqw307",
-        "name": "ability.minor.arcane_rebreather.name",
+      "fawfqs8j6sqnbizv": {
+        "_id": "fawfqs8j6sqnbizv",
+        "name": "class.vermissian_knight.ability.minor.arcane_rebreather.name",
         "type": "ability",
         "system": {
           "active": false,
-          "description": "ability.minor.arcane_rebreather.description",
+          "description": "class.vermissian_knight.ability.minor.arcane_rebreather.description",
           "type": "minor",
           "children": {}
         }
       },
-      "5uz5br4ffstpfjaw": {
-        "_id": "5uz5br4ffstpfjaw",
-        "name": "ability.minor.armour_plating.name",
+      "ahhrhueca5lo1hvd": {
+        "_id": "ahhrhueca5lo1hvd",
+        "name": "class.vermissian_knight.ability.minor.armour_plating.name",
         "type": "ability",
         "system": {
           "active": false,
-          "description": "ability.minor.armour_plating.description",
+          "description": "class.vermissian_knight.ability.minor.armour_plating.description",
           "type": "minor",
           "children": {}
         }
       },
-      "i5z05h3v43s6zifk": {
-        "_id": "i5z05h3v43s6zifk",
-        "name": "ability.minor.black_knight.name",
+      "a14qen6bp2uqslcu": {
+        "_id": "a14qen6bp2uqslcu",
+        "name": "class.vermissian_knight.ability.minor.black_knight.name",
         "type": "ability",
         "system": {
           "active": false,
-          "description": "ability.minor.black_knight.description",
+          "description": "class.vermissian_knight.ability.minor.black_knight.description",
           "type": "minor",
           "children": {}
         }
       },
-      "4qgb1d6a9piftqap": {
-        "_id": "4qgb1d6a9piftqap",
-        "name": "ability.minor.knight_protector.name",
+      "myep1zr0qe8ztx0v": {
+        "_id": "myep1zr0qe8ztx0v",
+        "name": "class.vermissian_knight.ability.minor.knight_protector.name",
         "type": "ability",
         "system": {
           "active": false,
-          "description": "ability.minor.knight_protector.description",
+          "description": "class.vermissian_knight.ability.minor.knight_protector.description",
           "type": "minor",
           "children": {}
         }
       },
-      "kzvw94itzngdkrpq": {
-        "_id": "kzvw94itzngdkrpq",
-        "name": "ability.minor.hellwalker.name",
+      "scg54u39bjay2qd3": {
+        "_id": "scg54u39bjay2qd3",
+        "name": "class.vermissian_knight.ability.minor.hellwalker.name",
         "type": "ability",
         "system": {
           "active": false,
-          "description": "ability.minor.hellwalker.description",
+          "description": "class.vermissian_knight.ability.minor.hellwalker.description",
           "type": "minor",
           "children": {}
         }
       },
-      "x0ezcmg99i0z36lw": {
-        "_id": "x0ezcmg99i0z36lw",
-        "name": "ability.minor.phantom_lens.name",
+      "1rtdiw9iu0eqwk0f": {
+        "_id": "1rtdiw9iu0eqwk0f",
+        "name": "class.vermissian_knight.ability.minor.phantom_lens.name",
         "type": "ability",
         "system": {
           "active": false,
-          "description": "ability.minor.phantom_lens.description",
+          "description": "class.vermissian_knight.ability.minor.phantom_lens.description",
           "type": "minor",
           "children": {}
         }
       },
-      "jv6h9w2u8v8dzxry": {
-        "_id": "jv6h9w2u8v8dzxry",
-        "name": "ability.minor.protector's_gauntlet.name",
+      "4tazfszo0vaf3mjt": {
+        "_id": "4tazfszo0vaf3mjt",
+        "name": "class.vermissian_knight.ability.minor.protector's_gauntlet.name",
         "type": "ability",
         "system": {
           "active": false,
-          "description": "ability.minor.protector's_gauntlet.description",
+          "description": "class.vermissian_knight.ability.minor.protector's_gauntlet.description",
           "type": "minor",
           "children": {}
         }
       },
-      "i10eir4lzwgy8nbu": {
-        "_id": "i10eir4lzwgy8nbu",
-        "name": "ability.minor.sanguinary_array.name",
+      "jstiawuij6ffe6kk": {
+        "_id": "jstiawuij6ffe6kk",
+        "name": "class.vermissian_knight.ability.minor.sanguinary_array.name",
         "type": "ability",
         "system": {
           "active": false,
-          "description": "ability.minor.sanguinary_array.description",
+          "description": "class.vermissian_knight.ability.minor.sanguinary_array.description",
           "type": "minor",
           "children": {}
         }
       },
-      "j4ulb2q3zkzk9wx5": {
-        "_id": "j4ulb2q3zkzk9wx5",
-        "name": "ability.minor.stalwart.name",
+      "yx8y6cc9hjh2xhup": {
+        "_id": "yx8y6cc9hjh2xhup",
+        "name": "class.vermissian_knight.ability.minor.stalwart.name",
         "type": "ability",
         "system": {
           "active": false,
-          "description": "ability.minor.stalwart.description",
+          "description": "class.vermissian_knight.ability.minor.stalwart.description",
           "type": "minor",
           "children": {}
         }
       },
-      "ez0u4nrpqejcg80c": {
-        "_id": "ez0u4nrpqejcg80c",
-        "name": "ability.minor.steelbones.name",
+      "8j2im5m9mx89e1ie": {
+        "_id": "8j2im5m9mx89e1ie",
+        "name": "class.vermissian_knight.ability.minor.steelbones.name",
         "type": "ability",
         "system": {
           "active": false,
-          "description": "ability.minor.steelbones.description",
+          "description": "class.vermissian_knight.ability.minor.steelbones.description",
           "type": "minor",
           "children": {}
         }
       },
-      "us8u9ev521zv7twn": {
-        "_id": "us8u9ev521zv7twn",
-        "name": "ability.minor.student_of_the_sages.name",
+      "it6l3vggw7e52xvs": {
+        "_id": "it6l3vggw7e52xvs",
+        "name": "class.vermissian_knight.ability.minor.student_of_the_sages.name",
         "type": "ability",
         "system": {
           "active": false,
-          "description": "ability.minor.student_of_the_sages.description",
+          "description": "class.vermissian_knight.ability.minor.student_of_the_sages.description",
           "type": "minor",
           "children": {}
         }
       },
-      "b3qgdy53xubs54ym": {
-        "_id": "b3qgdy53xubs54ym",
-        "name": "ability.minor.tunnel_rat.name",
+      "6fve1k53upnfbjfo": {
+        "_id": "6fve1k53upnfbjfo",
+        "name": "class.vermissian_knight.ability.minor.tunnel_rat.name",
         "type": "ability",
         "system": {
           "active": false,
-          "description": "ability.minor.tunnel_rat.description",
+          "description": "class.vermissian_knight.ability.minor.tunnel_rat.description",
           "type": "minor",
           "children": {}
         }
       },
-      "h2nvgxnq71wd0z1p": {
-        "_id": "h2nvgxnq71wd0z1p",
-        "name": "ability.minor.well_travelled.name",
+      "hxqwr8c240f6326g": {
+        "_id": "hxqwr8c240f6326g",
+        "name": "class.vermissian_knight.ability.minor.well_travelled.name",
         "type": "ability",
         "system": {
           "active": false,
-          "description": "ability.minor.well_travelled.description",
+          "description": "class.vermissian_knight.ability.minor.well_travelled.description",
           "type": "minor",
           "children": {}
         }
       },
-      "rylf595lecl3psrh": {
-        "_id": "rylf595lecl3psrh",
-        "name": "ability.major.aetheric_field.name",
+      "wv2qa7iggfb3e675": {
+        "_id": "wv2qa7iggfb3e675",
+        "name": "class.vermissian_knight.ability.major.aetheric_field.name",
         "type": "ability",
         "system": {
           "active": false,
-          "description": "ability.major.aetheric_field.description",
+          "description": "class.vermissian_knight.ability.major.aetheric_field.description",
           "type": "major",
           "children": {
-            "hlkmu69mgm581p84": {
-              "_id": "hlkmu69mgm581p84",
-              "name": "ability.minor.helixican_burst.name",
+            "fysuax0rs6fhhmej": {
+              "_id": "fysuax0rs6fhhmej",
+              "name": "class.vermissian_knight.ability.minor.helixican_burst.name",
               "type": "ability",
               "system": {
                 "active": false,
-                "description": "ability.minor.helixican_burst.description",
+                "description": "class.vermissian_knight.ability.minor.helixican_burst.description",
                 "type": "minor",
                 "children": {}
               }
             },
-            "tnoc64sbmqhhvjp0": {
-              "_id": "tnoc64sbmqhhvjp0",
-              "name": "ability.minor.recharge.name",
+            "hviqqppn16sdca2y": {
+              "_id": "hviqqppn16sdca2y",
+              "name": "class.vermissian_knight.ability.minor.recharge.name",
               "type": "ability",
               "system": {
                 "active": false,
-                "description": "ability.minor.recharge.description",
+                "description": "class.vermissian_knight.ability.minor.recharge.description",
                 "type": "minor",
                 "children": {}
               }
             },
-            "s4vbmc9h65mc63b5": {
-              "_id": "s4vbmc9h65mc63b5",
-              "name": "ability.minor.anathema.name",
+            "1j12dvr2kilylp34": {
+              "_id": "1j12dvr2kilylp34",
+              "name": "class.vermissian_knight.ability.minor.anathema.name",
               "type": "ability",
               "system": {
                 "active": false,
-                "description": "ability.minor.anathema.description",
+                "description": "class.vermissian_knight.ability.minor.anathema.description",
                 "type": "minor",
                 "children": {}
               }
@@ -222,44 +222,44 @@
           }
         }
       },
-      "j7s9rxpxw3e4avol": {
-        "_id": "j7s9rxpxw3e4avol",
-        "name": "ability.major.dragon_killer.name",
+      "1isfha1ai38zz9kb": {
+        "_id": "1isfha1ai38zz9kb",
+        "name": "class.vermissian_knight.ability.major.dragon_killer.name",
         "type": "ability",
         "system": {
           "active": false,
-          "description": "ability.major.dragon_killer.description",
+          "description": "class.vermissian_knight.ability.major.dragon_killer.description",
           "type": "major",
           "children": {
-            "mm4dv8q87lb0scsl": {
-              "_id": "mm4dv8q87lb0scsl",
-              "name": "ability.minor.hunted.name",
+            "4uge6agl1ukfgyxv": {
+              "_id": "4uge6agl1ukfgyxv",
+              "name": "class.vermissian_knight.ability.minor.hunted.name",
               "type": "ability",
               "system": {
                 "active": false,
-                "description": "ability.minor.hunted.description",
+                "description": "class.vermissian_knight.ability.minor.hunted.description",
                 "type": "minor",
                 "children": {}
               }
             },
-            "4dngl84ccjiaqldk": {
-              "_id": "4dngl84ccjiaqldk",
-              "name": "ability.minor.endurance_training.name",
+            "b66ga1rnttgadpe6": {
+              "_id": "b66ga1rnttgadpe6",
+              "name": "class.vermissian_knight.ability.minor.endurance_training.name",
               "type": "ability",
               "system": {
                 "active": false,
-                "description": "ability.minor.endurance_training.description",
+                "description": "class.vermissian_knight.ability.minor.endurance_training.description",
                 "type": "minor",
                 "children": {}
               }
             },
-            "xep6rp5ahh1bbwps": {
-              "_id": "xep6rp5ahh1bbwps",
-              "name": "ability.minor.applied_research.name",
+            "iewoc875bwov307p": {
+              "_id": "iewoc875bwov307p",
+              "name": "class.vermissian_knight.ability.minor.applied_research.name",
               "type": "ability",
               "system": {
                 "active": false,
-                "description": "ability.minor.applied_research.description",
+                "description": "class.vermissian_knight.ability.minor.applied_research.description",
                 "type": "minor",
                 "children": {}
               }
@@ -267,44 +267,44 @@
           }
         }
       },
-      "ipa8u1cmvx8b6i3p": {
-        "_id": "ipa8u1cmvx8b6i3p",
-        "name": "ability.major.get_behind_me.name",
+      "19pmoplprevvk3lp": {
+        "_id": "19pmoplprevvk3lp",
+        "name": "class.vermissian_knight.ability.major.get_behind_me.name",
         "type": "ability",
         "system": {
           "active": false,
-          "description": "ability.major.get_behind_me.description",
+          "description": "class.vermissian_knight.ability.major.get_behind_me.description",
           "type": "major",
           "children": {
-            "43d5kq41tke7oqvl": {
-              "_id": "43d5kq41tke7oqvl",
-              "name": "ability.minor.last_minute_intervention.name",
+            "zq651t71bilr18hj": {
+              "_id": "zq651t71bilr18hj",
+              "name": "class.vermissian_knight.ability.minor.last_minute_intervention.name",
               "type": "ability",
               "system": {
                 "active": false,
-                "description": "ability.minor.last_minute_intervention.description",
+                "description": "class.vermissian_knight.ability.minor.last_minute_intervention.description",
                 "type": "minor",
                 "children": {}
               }
             },
-            "tfxrxrfx4un0vspn": {
-              "_id": "tfxrxrfx4un0vspn",
-              "name": "ability.minor.steam_vent.name",
+            "q6cm186gunr1s37i": {
+              "_id": "q6cm186gunr1s37i",
+              "name": "class.vermissian_knight.ability.minor.steam_vent.name",
               "type": "ability",
               "system": {
                 "active": false,
-                "description": "ability.minor.steam_vent.description",
+                "description": "class.vermissian_knight.ability.minor.steam_vent.description",
                 "type": "minor",
                 "children": {}
               }
             },
-            "qhwdtqiwbr9at0su": {
-              "_id": "qhwdtqiwbr9at0su",
-              "name": "ability.minor.back_to_back.name",
+            "h0b1zkffcwuw4nwn": {
+              "_id": "h0b1zkffcwuw4nwn",
+              "name": "class.vermissian_knight.ability.minor.back_to_back.name",
               "type": "ability",
               "system": {
                 "active": false,
-                "description": "ability.minor.back_to_back.description",
+                "description": "class.vermissian_knight.ability.minor.back_to_back.description",
                 "type": "minor",
                 "children": {}
               }
@@ -312,44 +312,44 @@
           }
         }
       },
-      "snmkszhvlkhq286h": {
-        "_id": "snmkszhvlkhq286h",
-        "name": "ability.major.overclock.name",
+      "3txvql4ua28jfqrb": {
+        "_id": "3txvql4ua28jfqrb",
+        "name": "class.vermissian_knight.ability.major.overclock.name",
         "type": "ability",
         "system": {
           "active": false,
-          "description": "ability.major.overclock.description",
+          "description": "class.vermissian_knight.ability.major.overclock.description",
           "type": "major",
           "children": {
-            "89obrzttxc6gp9lv": {
-              "_id": "89obrzttxc6gp9lv",
-              "name": "ability.minor.puncture.name",
+            "76foaei87li07rq3": {
+              "_id": "76foaei87li07rq3",
+              "name": "class.vermissian_knight.ability.minor.puncture.name",
               "type": "ability",
               "system": {
                 "active": false,
-                "description": "ability.minor.puncture.description",
+                "description": "class.vermissian_knight.ability.minor.puncture.description",
                 "type": "minor",
                 "children": {}
               }
             },
-            "sj0i4clweipus8rh": {
-              "_id": "sj0i4clweipus8rh",
-              "name": "ability.minor.momentum.name",
+            "zjugjqxg8m8of48p": {
+              "_id": "zjugjqxg8m8of48p",
+              "name": "class.vermissian_knight.ability.minor.momentum.name",
               "type": "ability",
               "system": {
                 "active": false,
-                "description": "ability.minor.momentum.description",
+                "description": "class.vermissian_knight.ability.minor.momentum.description",
                 "type": "minor",
                 "children": {}
               }
             },
-            "areq4imbd4rv017y": {
-              "_id": "areq4imbd4rv017y",
-              "name": "ability.minor.galvanic_crucible.name",
+            "kmy756i6hbilgzby": {
+              "_id": "kmy756i6hbilgzby",
+              "name": "class.vermissian_knight.ability.minor.galvanic_crucible.name",
               "type": "ability",
               "system": {
                 "active": false,
-                "description": "ability.minor.galvanic_crucible.description",
+                "description": "class.vermissian_knight.ability.minor.galvanic_crucible.description",
                 "type": "minor",
                 "children": {}
               }
@@ -357,44 +357,44 @@
           }
         }
       },
-      "frxmjh59kxdmktuo": {
-        "_id": "frxmjh59kxdmktuo",
-        "name": "ability.major.trailblazer.name",
+      "kbpa1z6qarrffstb": {
+        "_id": "kbpa1z6qarrffstb",
+        "name": "class.vermissian_knight.ability.major.trailblazer.name",
         "type": "ability",
         "system": {
           "active": false,
-          "description": "ability.major.trailblazer.description",
+          "description": "class.vermissian_knight.ability.major.trailblazer.description",
           "type": "major",
           "children": {
-            "6gjbcpj4p0xhp06y": {
-              "_id": "6gjbcpj4p0xhp06y",
-              "name": "ability.minor.first_to_the_front.name",
+            "9a0n6ve3y8kqo3dk": {
+              "_id": "9a0n6ve3y8kqo3dk",
+              "name": "class.vermissian_knight.ability.minor.first_to_the_front.name",
               "type": "ability",
               "system": {
                 "active": false,
-                "description": "ability.minor.first_to_the_front.description",
+                "description": "class.vermissian_knight.ability.minor.first_to_the_front.description",
                 "type": "minor",
                 "children": {}
               }
             },
-            "opd5t6ki1h9905nc": {
-              "_id": "opd5t6ki1h9905nc",
-              "name": "ability.minor.pathfinder.name",
+            "x4j3stitkdo168m1": {
+              "_id": "x4j3stitkdo168m1",
+              "name": "class.vermissian_knight.ability.minor.pathfinder.name",
               "type": "ability",
               "system": {
                 "active": false,
-                "description": "ability.minor.pathfinder.description",
+                "description": "class.vermissian_knight.ability.minor.pathfinder.description",
                 "type": "minor",
                 "children": {}
               }
             },
-            "dnv22x0tidj2kelw": {
-              "_id": "dnv22x0tidj2kelw",
-              "name": "ability.minor.keep_your_heads_down.name",
+            "tl8j02e6pnu3doxz": {
+              "_id": "tl8j02e6pnu3doxz",
+              "name": "class.vermissian_knight.ability.minor.keep_your_heads_down.name",
               "type": "ability",
               "system": {
                 "active": false,
-                "description": "ability.minor.keep_your_heads_down.description",
+                "description": "class.vermissian_knight.ability.minor.keep_your_heads_down.description",
                 "type": "minor",
                 "children": {}
               }
@@ -402,81 +402,81 @@
           }
         }
       },
-      "chsqim0umrq38dod": {
-        "_id": "chsqim0umrq38dod",
-        "name": "ability.zenith.end_of_the_line.name",
+      "yooem8jdpjmuy0z0": {
+        "_id": "yooem8jdpjmuy0z0",
+        "name": "class.vermissian_knight.ability.zenith.end_of_the_line.name",
         "type": "ability",
         "system": {
           "active": false,
-          "description": "ability.zenith.end_of_the_line.description",
+          "description": "class.vermissian_knight.ability.zenith.end_of_the_line.description",
           "type": "zenith",
           "children": {}
         }
       },
-      "h73169gsbcr8wms5": {
-        "_id": "h73169gsbcr8wms5",
-        "name": "ability.zenith.perpetual_motion_engine.name",
+      "85rd7l079h4k0c30": {
+        "_id": "85rd7l079h4k0c30",
+        "name": "class.vermissian_knight.ability.zenith.perpetual_motion_engine.name",
         "type": "ability",
         "system": {
           "active": false,
-          "description": "ability.zenith.perpetual_motion_engine.description",
+          "description": "class.vermissian_knight.ability.zenith.perpetual_motion_engine.description",
           "type": "zenith",
           "children": {}
         }
       },
-      "rqlwe76tsezdfr7y": {
-        "_id": "rqlwe76tsezdfr7y",
-        "name": "ability.zenith.the_last_train.name",
+      "2gh7uyxw1md8ect3": {
+        "_id": "2gh7uyxw1md8ect3",
+        "name": "class.vermissian_knight.ability.zenith.the_last_train.name",
         "type": "ability",
         "system": {
           "active": false,
-          "description": "ability.zenith.the_last_train.description",
+          "description": "class.vermissian_knight.ability.zenith.the_last_train.description",
           "type": "zenith",
           "children": {}
         }
       },
-      "v7vns5nj38rpd7pl": {
-        "_id": "v7vns5nj38rpd7pl",
-        "name": "equipment.pneumatic_hammer",
+      "l6ki7t0h3izudfu9": {
+        "_id": "l6ki7t0h3izudfu9",
+        "name": "class.vermissian_knight.equipment.pneumatic_hammer",
         "type": "equipment",
         "system": {
           "type": "kill",
           "die_size": "d8",
           "group": "group_1",
           "children": {
-            "qgazkulvoqo9wxcr": {
-              "_id": "qgazkulvoqo9wxcr",
+            "5z5aql2plq83lcqn": {
+              "_id": "5z5aql2plq83lcqn",
               "name": "tag.brutal.name",
               "type": "tag",
               "system": {
                 "description": "tag.brutal.description"
               },
-              "_key": "!items!lpcjn87r3of5wuwc"
+              "_key": "!items!cpu88j1zvh93j65x"
             },
-            "vvzatpj0q0h4izfx": {
-              "_id": "vvzatpj0q0h4izfx",
+            "ahef5h2nols6asd7": {
+              "_id": "ahef5h2nols6asd7",
               "name": "tag.loud.name",
               "type": "tag",
               "system": {
                 "description": "tag.loud.description"
               },
-              "_key": "!items!issgq33m51mn3jgk"
+              "_key": "!items!bc4qfq5qxdkx6r4m"
             },
-            "blnt0q6p657rlgci": {
-              "_id": "blnt0q6p657rlgci",
+            "8uviktw39balkehe": {
+              "_id": "8uviktw39balkehe",
               "name": "tag.tiring.name",
               "type": "tag",
               "system": {
                 "description": "tag.tiring.description"
               },
-              "_key": "!items!70bv8smmz7dg1k1t"
+              "_key": "!items!hd1bex1x3ql9t1ad"
             }
           }
         }
       },
-      "b9hhjvc7e3wxnaah": {
-        "_id": "b9hhjvc7e3wxnaah",
-        "name": "equipment.scrapsword",
+      "ty78brq7n2scd702": {
+        "_id": "ty78brq7n2scd702",
+        "name": "class.vermissian_knight.equipment.scrapsword",
         "type": "equipment",
         "system": {
           "type": "kill",
@@ -485,9 +485,9 @@
           "children": {}
         }
       },
-      "b2h11qn77tg7w8e0": {
-        "_id": "b2h11qn77tg7w8e0",
-        "name": "equipment.magelight_rig",
+      "mxeu9zfq2yioja97": {
+        "_id": "mxeu9zfq2yioja97",
+        "name": "class.vermissian_knight.equipment.magelight_rig",
         "type": "equipment",
         "system": {
           "type": "delve",
@@ -496,23 +496,23 @@
           "children": {}
         }
       },
-      "3x3c83e7at3f6bi0": {
-        "_id": "3x3c83e7at3f6bi0",
-        "name": "equipment.steel_door_shield",
+      "pugdi8mj5qk69lxf": {
+        "_id": "pugdi8mj5qk69lxf",
+        "name": "class.vermissian_knight.equipment.steel_door_shield",
         "type": "equipment",
         "system": {
           "type": "kill",
           "die_size": "d6",
           "group": "group_3",
           "children": {
-            "7eb6xeic81gi4j47": {
-              "_id": "7eb6xeic81gi4j47",
+            "zanz1m037dn6jhje": {
+              "_id": "zanz1m037dn6jhje",
               "name": "tag.block.name",
               "type": "tag",
               "system": {
                 "description": "tag.block.description"
               },
-              "_key": "!items!bszlu7l0h4mo6lc9"
+              "_key": "!items!e9c70nwspm020gy5"
             }
           }
         }
@@ -520,5 +520,5 @@
     }
   },
   "effects": [],
-  "_key": "!items!6geers9ebj6e5v27"
+  "_key": "!items!2dv2cr42frp2aizn"
 }

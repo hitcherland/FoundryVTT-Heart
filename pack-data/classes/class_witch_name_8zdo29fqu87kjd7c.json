@@ -12,10 +12,10 @@
       "group_3"
     ],
     "children": {
-      "tti8gxdoztby82ra": {
-        "_id": "tti8gxdoztby82ra",
+      "nuqlvhmumrebpkl1": {
+        "_id": "nuqlvhmumrebpkl1",
         "type": "resource",
-        "name": "resource.tattered_finery",
+        "name": "class.witch.resource.tattered_finery",
         "system": {
           "active": true,
           "die_size": "d6",
@@ -23,209 +23,209 @@
           "children": {}
         }
       },
-      "amb4472cylm66sqs": {
-        "_id": "amb4472cylm66sqs",
-        "name": "ability.core.crucible.name",
+      "aeh34bp439p9x90v": {
+        "_id": "aeh34bp439p9x90v",
+        "name": "class.witch.ability.core.crucible.name",
         "type": "ability",
         "system": {
           "active": true,
-          "description": "ability.core.crucible.description",
+          "description": "class.witch.ability.core.crucible.description",
           "type": "core",
           "children": {}
         }
       },
-      "da1nm9sdn2pugy2d": {
-        "_id": "da1nm9sdn2pugy2d",
-        "name": "ability.core.true_form.name",
+      "kao5ytoq7lhuajzm": {
+        "_id": "kao5ytoq7lhuajzm",
+        "name": "class.witch.ability.core.true_form.name",
         "type": "ability",
         "system": {
           "active": true,
-          "description": "ability.core.true_form.description",
+          "description": "class.witch.ability.core.true_form.description",
           "type": "core",
           "children": {}
         }
       },
-      "ez1yjasbj662pu5j": {
-        "_id": "ez1yjasbj662pu5j",
-        "name": "ability.minor.a_mind_of_many_doorways.name",
+      "6fk285cpaj462ze6": {
+        "_id": "6fk285cpaj462ze6",
+        "name": "class.witch.ability.minor.a_mind_of_many_doorways.name",
         "type": "ability",
         "system": {
           "active": false,
-          "description": "ability.minor.a_mind_of_many_doorways.description",
+          "description": "class.witch.ability.minor.a_mind_of_many_doorways.description",
           "type": "minor",
           "children": {}
         }
       },
-      "opern6bnx7rmq3xo": {
-        "_id": "opern6bnx7rmq3xo",
-        "name": "ability.minor.blood_quiet.name",
+      "jvmcr3bw23ol6jfn": {
+        "_id": "jvmcr3bw23ol6jfn",
+        "name": "class.witch.ability.minor.blood_quiet.name",
         "type": "ability",
         "system": {
           "active": false,
-          "description": "ability.minor.blood_quiet.description",
+          "description": "class.witch.ability.minor.blood_quiet.description",
           "type": "minor",
           "children": {}
         }
       },
-      "90z9w5moadb4tbo3": {
-        "_id": "90z9w5moadb4tbo3",
-        "name": "ability.minor.books_of_lore.name",
+      "xwrrtig391a3dqr1": {
+        "_id": "xwrrtig391a3dqr1",
+        "name": "class.witch.ability.minor.books_of_lore.name",
         "type": "ability",
         "system": {
           "active": false,
-          "description": "ability.minor.books_of_lore.description",
+          "description": "class.witch.ability.minor.books_of_lore.description",
           "type": "minor",
           "children": {}
         }
       },
-      "3qalzvmdkqgjc8qg": {
-        "_id": "3qalzvmdkqgjc8qg",
-        "name": "ability.minor.charms_and_wards.name",
+      "351bmmp40zx3am37": {
+        "_id": "351bmmp40zx3am37",
+        "name": "class.witch.ability.minor.charms_and_wards.name",
         "type": "ability",
         "system": {
           "active": false,
-          "description": "ability.minor.charms_and_wards.description",
+          "description": "class.witch.ability.minor.charms_and_wards.description",
           "type": "minor",
           "children": {}
         }
       },
-      "iqncyy7n72byztv9": {
-        "_id": "iqncyy7n72byztv9",
-        "name": "ability.minor.distinguished_lineage.name",
+      "on4svtpk70e0txpb": {
+        "_id": "on4svtpk70e0txpb",
+        "name": "class.witch.ability.minor.distinguished_lineage.name",
         "type": "ability",
         "system": {
           "active": false,
-          "description": "ability.minor.distinguished_lineage.description",
+          "description": "class.witch.ability.minor.distinguished_lineage.description",
           "type": "minor",
           "children": {}
         }
       },
-      "di9nbv4rp5ex9hnk": {
-        "_id": "di9nbv4rp5ex9hnk",
-        "name": "ability.minor.divinity.name",
+      "f0klx4k4eeqelevl": {
+        "_id": "f0klx4k4eeqelevl",
+        "name": "class.witch.ability.minor.divinity.name",
         "type": "ability",
         "system": {
           "active": false,
-          "description": "ability.minor.divinity.description",
+          "description": "class.witch.ability.minor.divinity.description",
           "type": "minor",
           "children": {}
         }
       },
-      "3uqbb02s03a7s997": {
-        "_id": "3uqbb02s03a7s997",
-        "name": "ability.minor.heart_wise.name",
+      "108r57wfkk1fzddm": {
+        "_id": "108r57wfkk1fzddm",
+        "name": "class.witch.ability.minor.heart_wise.name",
         "type": "ability",
         "system": {
           "active": false,
-          "description": "ability.minor.heart_wise.description",
+          "description": "class.witch.ability.minor.heart_wise.description",
           "type": "minor",
           "children": {}
         }
       },
-      "5938069q10sqjbsk": {
-        "_id": "5938069q10sqjbsk",
-        "name": "ability.minor.implacable.name",
+      "8fi9efk4fjovi4vd": {
+        "_id": "8fi9efk4fjovi4vd",
+        "name": "class.witch.ability.minor.implacable.name",
         "type": "ability",
         "system": {
           "active": false,
-          "description": "ability.minor.implacable.description",
+          "description": "class.witch.ability.minor.implacable.description",
           "type": "minor",
           "children": {}
         }
       },
-      "phmv623ciuhjue9c": {
-        "_id": "phmv623ciuhjue9c",
-        "name": "ability.minor.the_old_blood.name",
+      "z20tto69tl8orlo2": {
+        "_id": "z20tto69tl8orlo2",
+        "name": "class.witch.ability.minor.the_old_blood.name",
         "type": "ability",
         "system": {
           "active": false,
-          "description": "ability.minor.the_old_blood.description",
+          "description": "class.witch.ability.minor.the_old_blood.description",
           "type": "minor",
           "children": {}
         }
       },
-      "mvjcb4aybbir5igu": {
-        "_id": "mvjcb4aybbir5igu",
-        "name": "ability.minor.ramblewyrd.name",
+      "wb2k11lfn232hejp": {
+        "_id": "wb2k11lfn232hejp",
+        "name": "class.witch.ability.minor.ramblewyrd.name",
         "type": "ability",
         "system": {
           "active": false,
-          "description": "ability.minor.ramblewyrd.description",
+          "description": "class.witch.ability.minor.ramblewyrd.description",
           "type": "minor",
           "children": {}
         }
       },
-      "3sajpup68xo1rxfe": {
-        "_id": "3sajpup68xo1rxfe",
-        "name": "ability.minor.red_dominion.name",
+      "wube8up42etxdjnv": {
+        "_id": "wube8up42etxdjnv",
+        "name": "class.witch.ability.minor.red_dominion.name",
         "type": "ability",
         "system": {
           "active": false,
-          "description": "ability.minor.red_dominion.description",
+          "description": "class.witch.ability.minor.red_dominion.description",
           "type": "minor",
           "children": {}
         }
       },
-      "zbidse48objdwiuy": {
-        "_id": "zbidse48objdwiuy",
-        "name": "ability.minor.wild_witch.name",
+      "2izhtxu5mcu4nsr1": {
+        "_id": "2izhtxu5mcu4nsr1",
+        "name": "class.witch.ability.minor.wild_witch.name",
         "type": "ability",
         "system": {
           "active": false,
-          "description": "ability.minor.wild_witch.description",
+          "description": "class.witch.ability.minor.wild_witch.description",
           "type": "minor",
           "children": {}
         }
       },
-      "dn63cmahahjpyz0m": {
-        "_id": "dn63cmahahjpyz0m",
-        "name": "ability.minor.witch_spit.name",
+      "bevsvjvl26lv7s80": {
+        "_id": "bevsvjvl26lv7s80",
+        "name": "class.witch.ability.minor.witch_spit.name",
         "type": "ability",
         "system": {
           "active": false,
-          "description": "ability.minor.witch_spit.description",
+          "description": "class.witch.ability.minor.witch_spit.description",
           "type": "minor",
           "children": {}
         }
       },
-      "02hblhp1ryw9v80q": {
-        "_id": "02hblhp1ryw9v80q",
-        "name": "ability.major.ascendancy.name",
+      "9lw3ctfgiqfsrecu": {
+        "_id": "9lw3ctfgiqfsrecu",
+        "name": "class.witch.ability.major.ascendancy.name",
         "type": "ability",
         "system": {
           "active": false,
-          "description": "ability.major.ascendancy.description",
+          "description": "class.witch.ability.major.ascendancy.description",
           "type": "major",
           "children": {
-            "ak6pn99yu08bm1it": {
-              "_id": "ak6pn99yu08bm1it",
-              "name": "ability.minor.bypass.name",
+            "hu2vszjgvjm5ggg7": {
+              "_id": "hu2vszjgvjm5ggg7",
+              "name": "class.witch.ability.minor.bypass.name",
               "type": "ability",
               "system": {
                 "active": false,
-                "description": "ability.minor.bypass.description",
+                "description": "class.witch.ability.minor.bypass.description",
                 "type": "minor",
                 "children": {}
               }
             },
-            "5za3iruwmyoblb1f": {
-              "_id": "5za3iruwmyoblb1f",
-              "name": "ability.minor.blood_calls_for_blood.name",
+            "vsh2nm12etifqo9u": {
+              "_id": "vsh2nm12etifqo9u",
+              "name": "class.witch.ability.minor.blood_calls_for_blood.name",
               "type": "ability",
               "system": {
                 "active": false,
-                "description": "ability.minor.blood_calls_for_blood.description",
+                "description": "class.witch.ability.minor.blood_calls_for_blood.description",
                 "type": "minor",
                 "children": {}
               }
             },
-            "xp31bgcnv3j8qv3q": {
-              "_id": "xp31bgcnv3j8qv3q",
-              "name": "ability.minor.refuge.name",
+            "io8zuqpe52c0ngkg": {
+              "_id": "io8zuqpe52c0ngkg",
+              "name": "class.witch.ability.minor.refuge.name",
               "type": "ability",
               "system": {
                 "active": false,
-                "description": "ability.minor.refuge.description",
+                "description": "class.witch.ability.minor.refuge.description",
                 "type": "minor",
                 "children": {}
               }
@@ -233,44 +233,44 @@
           }
         }
       },
-      "fvtfrnoiim8lukwq": {
-        "_id": "fvtfrnoiim8lukwq",
-        "name": "ability.major.crimson_mirror.name",
+      "k669ccksxwmnlqc6": {
+        "_id": "k669ccksxwmnlqc6",
+        "name": "class.witch.ability.major.crimson_mirror.name",
         "type": "ability",
         "system": {
           "active": false,
-          "description": "ability.major.crimson_mirror.description",
+          "description": "class.witch.ability.major.crimson_mirror.description",
           "type": "major",
           "children": {
-            "0aj8s4i2ac1t66dh": {
-              "_id": "0aj8s4i2ac1t66dh",
-              "name": "ability.minor.shared_visions.name",
+            "ik883op9y0shbnor": {
+              "_id": "ik883op9y0shbnor",
+              "name": "class.witch.ability.minor.shared_visions.name",
               "type": "ability",
               "system": {
                 "active": false,
-                "description": "ability.minor.shared_visions.description",
+                "description": "class.witch.ability.minor.shared_visions.description",
                 "type": "minor",
                 "children": {}
               }
             },
-            "n4lijip5lx2tul74": {
-              "_id": "n4lijip5lx2tul74",
-              "name": "ability.minor.scarlet_insight.name",
+            "gu2j3khvw4fs7hfw": {
+              "_id": "gu2j3khvw4fs7hfw",
+              "name": "class.witch.ability.minor.scarlet_insight.name",
               "type": "ability",
               "system": {
                 "active": false,
-                "description": "ability.minor.scarlet_insight.description",
+                "description": "class.witch.ability.minor.scarlet_insight.description",
                 "type": "minor",
                 "children": {}
               }
             },
-            "vfcm7p75r3j3qyf8": {
-              "_id": "vfcm7p75r3j3qyf8",
-              "name": "ability.minor.dire_portents.name",
+            "2fl760y2b5lkjtma": {
+              "_id": "2fl760y2b5lkjtma",
+              "name": "class.witch.ability.minor.dire_portents.name",
               "type": "ability",
               "system": {
                 "active": false,
-                "description": "ability.minor.dire_portents.description",
+                "description": "class.witch.ability.minor.dire_portents.description",
                 "type": "minor",
                 "children": {}
               }
@@ -278,44 +278,44 @@
           }
         }
       },
-      "y7pxvt6upw9bfn17": {
-        "_id": "y7pxvt6upw9bfn17",
-        "name": "ability.major.exsanguinate.name",
+      "6ok4kezy9jxdu3v8": {
+        "_id": "6ok4kezy9jxdu3v8",
+        "name": "class.witch.ability.major.exsanguinate.name",
         "type": "ability",
         "system": {
           "active": false,
-          "description": "ability.major.exsanguinate.description",
+          "description": "class.witch.ability.major.exsanguinate.description",
           "type": "major",
           "children": {
-            "um0443mtvlme4uyc": {
-              "_id": "um0443mtvlme4uyc",
-              "name": "ability.minor.retch.name",
+            "dz2p5hhwue9xl2p4": {
+              "_id": "dz2p5hhwue9xl2p4",
+              "name": "class.witch.ability.minor.retch.name",
               "type": "ability",
               "system": {
                 "active": false,
-                "description": "ability.minor.retch.description",
+                "description": "class.witch.ability.minor.retch.description",
                 "type": "minor",
                 "children": {}
               }
             },
-            "n7eopto4a1b5wmmm": {
-              "_id": "n7eopto4a1b5wmmm",
-              "name": "ability.minor.maestro.name",
+            "uv53gdtbsaqocsey": {
+              "_id": "uv53gdtbsaqocsey",
+              "name": "class.witch.ability.minor.maestro.name",
               "type": "ability",
               "system": {
                 "active": false,
-                "description": "ability.minor.maestro.description",
+                "description": "class.witch.ability.minor.maestro.description",
                 "type": "minor",
                 "children": {}
               }
             },
-            "zcn95j5g8ganyswo": {
-              "_id": "zcn95j5g8ganyswo",
-              "name": "ability.minor.as_above_so_below.name",
+            "60g3gj45wrcr32e4": {
+              "_id": "60g3gj45wrcr32e4",
+              "name": "class.witch.ability.minor.as_above_so_below.name",
               "type": "ability",
               "system": {
                 "active": false,
-                "description": "ability.minor.as_above_so_below.description",
+                "description": "class.witch.ability.minor.as_above_so_below.description",
                 "type": "minor",
                 "children": {}
               }
@@ -323,44 +323,44 @@
           }
         }
       },
-      "earzb03k2ahvaga6": {
-        "_id": "earzb03k2ahvaga6",
-        "name": "ability.major.familiar.name",
+      "9ym0izkavt3lexw7": {
+        "_id": "9ym0izkavt3lexw7",
+        "name": "class.witch.ability.major.familiar.name",
         "type": "ability",
         "system": {
           "active": false,
-          "description": "ability.major.familiar.description",
+          "description": "class.witch.ability.major.familiar.description",
           "type": "major",
           "children": {
-            "lyrxbvj1gn7agr53": {
-              "_id": "lyrxbvj1gn7agr53",
-              "name": "ability.minor.resilient.name",
+            "vpa1dz8obv22uy7t": {
+              "_id": "vpa1dz8obv22uy7t",
+              "name": "class.witch.ability.minor.resilient.name",
               "type": "ability",
               "system": {
                 "active": false,
-                "description": "ability.minor.resilient.description",
+                "description": "class.witch.ability.minor.resilient.description",
                 "type": "minor",
                 "children": {}
               }
             },
-            "qvzkcjswouc5bkgc": {
-              "_id": "qvzkcjswouc5bkgc",
-              "name": "ability.minor.hungry.name",
+            "za3cjptljrmrs883": {
+              "_id": "za3cjptljrmrs883",
+              "name": "class.witch.ability.minor.hungry.name",
               "type": "ability",
               "system": {
                 "active": false,
-                "description": "ability.minor.hungry.description",
+                "description": "class.witch.ability.minor.hungry.description",
                 "type": "minor",
                 "children": {}
               }
             },
-            "is085u502c4rsof6": {
-              "_id": "is085u502c4rsof6",
-              "name": "ability.minor.curious.name",
+            "tf93ixn1sfpb7t64": {
+              "_id": "tf93ixn1sfpb7t64",
+              "name": "class.witch.ability.minor.curious.name",
               "type": "ability",
               "system": {
                 "active": false,
-                "description": "ability.minor.curious.description",
+                "description": "class.witch.ability.minor.curious.description",
                 "type": "minor",
                 "children": {}
               }
@@ -368,44 +368,44 @@
           }
         }
       },
-      "kuran4bs5ka90rt1": {
-        "_id": "kuran4bs5ka90rt1",
-        "name": "ability.major.great_and_terrible.name",
+      "i2moguptkmn7i6sc": {
+        "_id": "i2moguptkmn7i6sc",
+        "name": "class.witch.ability.major.great_and_terrible.name",
         "type": "ability",
         "system": {
           "active": false,
-          "description": "ability.major.great_and_terrible.description",
+          "description": "class.witch.ability.major.great_and_terrible.description",
           "type": "major",
           "children": {
-            "3z8din8du3oobxqk": {
-              "_id": "3z8din8du3oobxqk",
-              "name": "ability.minor.enthrall.name",
+            "j7m3760b3fha1aqb": {
+              "_id": "j7m3760b3fha1aqb",
+              "name": "class.witch.ability.minor.enthrall.name",
               "type": "ability",
               "system": {
                 "active": false,
-                "description": "ability.minor.enthrall.description",
+                "description": "class.witch.ability.minor.enthrall.description",
                 "type": "minor",
                 "children": {}
               }
             },
-            "5jmawn8sbotb9it4": {
-              "_id": "5jmawn8sbotb9it4",
-              "name": "ability.minor.sacred_object.name",
+            "ncqa01xziij156ss": {
+              "_id": "ncqa01xziij156ss",
+              "name": "class.witch.ability.minor.sacred_object.name",
               "type": "ability",
               "system": {
                 "active": false,
-                "description": "ability.minor.sacred_object.description",
+                "description": "class.witch.ability.minor.sacred_object.description",
                 "type": "minor",
                 "children": {}
               }
             },
-            "95ks70rnmdrqjh7d": {
-              "_id": "95ks70rnmdrqjh7d",
-              "name": "ability.minor.union.name",
+            "ss00feujxg42p807": {
+              "_id": "ss00feujxg42p807",
+              "name": "class.witch.ability.minor.union.name",
               "type": "ability",
               "system": {
                 "active": false,
-                "description": "ability.minor.union.description",
+                "description": "class.witch.ability.minor.union.description",
                 "type": "minor",
                 "children": {}
               }
@@ -413,44 +413,44 @@
           }
         }
       },
-      "yryvnagyutltqtb3": {
-        "_id": "yryvnagyutltqtb3",
-        "name": "ability.major.lair.name",
+      "qa6wk46hqdbfjmcd": {
+        "_id": "qa6wk46hqdbfjmcd",
+        "name": "class.witch.ability.major.lair.name",
         "type": "ability",
         "system": {
           "active": false,
-          "description": "ability.major.lair.description",
+          "description": "class.witch.ability.major.lair.description",
           "type": "major",
           "children": {
-            "exwzw52tuxlxa8sw": {
-              "_id": "exwzw52tuxlxa8sw",
-              "name": "ability.minor.calm.name",
+            "1uy3tu01yue0dyia": {
+              "_id": "1uy3tu01yue0dyia",
+              "name": "class.witch.ability.minor.calm.name",
               "type": "ability",
               "system": {
                 "active": false,
-                "description": "ability.minor.calm.description",
+                "description": "class.witch.ability.minor.calm.description",
                 "type": "minor",
                 "children": {}
               }
             },
-            "ucbowu62eten4irp": {
-              "_id": "ucbowu62eten4irp",
-              "name": "ability.minor.rule.name",
+            "i9v3buddahkbd22h": {
+              "_id": "i9v3buddahkbd22h",
+              "name": "class.witch.ability.minor.rule.name",
               "type": "ability",
               "system": {
                 "active": false,
-                "description": "ability.minor.rule.description",
+                "description": "class.witch.ability.minor.rule.description",
                 "type": "minor",
                 "children": {}
               }
             },
-            "pswhk1mk41ijvh3r": {
-              "_id": "pswhk1mk41ijvh3r",
-              "name": "ability.minor.feed.name",
+            "8ua8vrydffwgsn8s": {
+              "_id": "8ua8vrydffwgsn8s",
+              "name": "class.witch.ability.minor.feed.name",
               "type": "ability",
               "system": {
                 "active": false,
-                "description": "ability.minor.feed.description",
+                "description": "class.witch.ability.minor.feed.description",
                 "type": "minor",
                 "children": {}
               }
@@ -458,93 +458,93 @@
           }
         }
       },
-      "3gculpr83k3w8r7s": {
-        "_id": "3gculpr83k3w8r7s",
-        "name": "ability.zenith.final_form.name",
+      "rmww04vhw4sbfbf3": {
+        "_id": "rmww04vhw4sbfbf3",
+        "name": "class.witch.ability.zenith.final_form.name",
         "type": "ability",
         "system": {
           "active": false,
-          "description": "ability.zenith.final_form.description",
+          "description": "class.witch.ability.zenith.final_form.description",
           "type": "zenith",
           "children": {}
         }
       },
-      "da7axi20o738tsi6": {
-        "_id": "da7axi20o738tsi6",
-        "name": "ability.zenith.perfect_resurrection.name",
+      "6e64veclwr5hcf7n": {
+        "_id": "6e64veclwr5hcf7n",
+        "name": "class.witch.ability.zenith.perfect_resurrection.name",
         "type": "ability",
         "system": {
           "active": false,
-          "description": "ability.zenith.perfect_resurrection.description",
+          "description": "class.witch.ability.zenith.perfect_resurrection.description",
           "type": "zenith",
           "children": {}
         }
       },
-      "kknwtk74vvetjj2u": {
-        "_id": "kknwtk74vvetjj2u",
-        "name": "ability.zenith.the_red_queen.name",
+      "x511mrpkd1jcgq8o": {
+        "_id": "x511mrpkd1jcgq8o",
+        "name": "class.witch.ability.zenith.the_red_queen.name",
         "type": "ability",
         "system": {
           "active": false,
-          "description": "ability.zenith.the_red_queen.description",
+          "description": "class.witch.ability.zenith.the_red_queen.description",
           "type": "zenith",
           "children": {}
         }
       },
-      "pawjr1o4cbjjfmai": {
-        "_id": "pawjr1o4cbjjfmai",
-        "name": "equipment.sacred_blade",
+      "7i1qubwc5rvcx6pf": {
+        "_id": "7i1qubwc5rvcx6pf",
+        "name": "class.witch.equipment.sacred_blade",
         "type": "equipment",
         "system": {
           "type": "kill",
           "die_size": "d6",
           "group": "group_1",
           "children": {
-            "wdrxtlzkz588utyw": {
-              "_id": "wdrxtlzkz588utyw",
+            "4uf47q06xo34kv2n": {
+              "_id": "4uf47q06xo34kv2n",
               "name": "tag.bloodbound.name",
               "type": "tag",
               "system": {
                 "description": "tag.bloodbound.description"
               },
-              "_key": "!items!ibr49xbr88q1kds2"
+              "_key": "!items!uggb2borseghn61r"
             }
           }
         }
       },
-      "gz6nwtie1mo1tukb": {
-        "_id": "gz6nwtie1mo1tukb",
-        "name": "equipment.goats_leg_carbine",
+      "03dx5had86ttslr8": {
+        "_id": "03dx5had86ttslr8",
+        "name": "class.witch.equipment.goats_leg_carbine",
         "type": "equipment",
         "system": {
           "type": "kill",
           "die_size": "d6",
           "group": "group_2",
           "children": {
-            "ck9oq9n0fgw8g13h": {
-              "_id": "ck9oq9n0fgw8g13h",
+            "rlgfzcw84xuly640": {
+              "_id": "rlgfzcw84xuly640",
               "name": "tag.ranged.name",
               "type": "tag",
               "system": {
                 "description": "tag.ranged.description"
               },
-              "_key": "!items!a5gv5zgvp4uo6yps"
+              "_key": "!items!8t6wdqu6ch9v05j9"
             },
-            "fasqq3sdzbbqrqrx": {
-              "_id": "fasqq3sdzbbqrqrx",
+            "mox1nqwx9v0qxf9d": {
+              "_id": "mox1nqwx9v0qxf9d",
               "name": "tag.reload.name",
               "type": "tag",
               "system": {
                 "description": "tag.reload.description"
               },
-              "_key": "!items!e0aw9cbtedch5kuz"
+              "_key": "!items!453oy3lu2tyz55bc"
             }
           }
         }
       },
-      "t8jd5baa7drwfw5w": {
-        "_id": "t8jd5baa7drwfw5w",
-        "name": "equipment.physikers_bag",
+      "iwkz1xpac4frz2ci": {
+        "_id": "iwkz1xpac4frz2ci",
+        "name": "class.witch.equipment.physikers_bag",
         "type": "equipment",
         "system": {
           "type": "mend",
@@ -557,5 +557,5 @@
     }
   },
   "effects": [],
-  "_key": "!items!8zdo29fqu87kjd7c"
+  "_key": "!items!gkevogi8xuiycjs1"
 }

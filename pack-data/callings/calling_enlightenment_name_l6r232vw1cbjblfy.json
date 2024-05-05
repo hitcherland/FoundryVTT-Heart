@@ -5,312 +5,312 @@
   "system": {
     "description": "calling.enlightenment.description",
     "questions": {
-      "98gaqi3dl1xyc4i2": {
+      "fbbhrz011qzsxi1n": {
         "question": "calling.enlightenment.what-are-you-attempting-to-achieve"
       },
-      "vj7ofpzdp6g0pw2y": {
+      "xy46oglcvm604l5c": {
         "question": "calling.enlightenment.what-is-the-first-step"
       },
-      "fq4yqkulm4sga5th": {
+      "88fzp39uqrk46uib": {
         "question": "calling.enlightenment.what-have-you-learned-from-other"
       },
-      "iqttja1p3bhy6any": {
+      "ra7calnbsqvcpa99": {
         "question": "calling.enlightenment.why-do-you-suspect-other"
       }
     },
     "children": {
-      "3ihdkihuknzrmmrb": {
-        "_id": "3ihdkihuknzrmmrb",
-        "name": "ability.core.unorthodox_methods.name",
+      "bhnk3zj5um86zdps": {
+        "_id": "bhnk3zj5um86zdps",
+        "name": "calling.enlightenment.ability.core.unorthodox_methods.name",
         "type": "ability",
         "system": {
           "active": true,
-          "description": "ability.core.unorthodox_methods.description",
+          "description": "calling.enlightenment.ability.core.unorthodox_methods.description",
           "type": "core",
           "children": {}
         }
       },
-      "c52qe7lidcosb4n5": {
-        "_id": "c52qe7lidcosb4n5",
-        "name": "beat.minor.allude-to-the-events",
+      "i5083d6e8hlrck4g": {
+        "_id": "i5083d6e8hlrck4g",
+        "name": "calling.enlightenment.beat.minor.allude-to-the-events",
         "type": "beat",
         "system": {
-          "description": "beat.minor.allude-to-the-events",
+          "description": "calling.enlightenment.beat.minor.allude-to-the-events",
           "type": "minor"
         }
       },
-      "rxz24pabzd4ubk1n": {
-        "_id": "rxz24pabzd4ubk1n",
-        "name": "beat.minor.put-knowledge-above-preserving-allies",
+      "v77td27pl3jrxdok": {
+        "_id": "v77td27pl3jrxdok",
+        "name": "calling.enlightenment.beat.minor.put-knowledge-above-preserving-allies",
         "type": "beat",
         "system": {
-          "description": "beat.minor.put-knowledge-above-preserving-allies",
+          "description": "calling.enlightenment.beat.minor.put-knowledge-above-preserving-allies",
           "type": "minor"
         }
       },
-      "athp9g7r612cucps": {
-        "_id": "athp9g7r612cucps",
-        "name": "beat.minor.gain-access-to-comcealed-knowledge",
+      "imjf9rd2xsgwyg7l": {
+        "_id": "imjf9rd2xsgwyg7l",
+        "name": "calling.enlightenment.beat.minor.gain-access-to-comcealed-knowledge",
         "type": "beat",
         "system": {
-          "description": "beat.minor.gain-access-to-comcealed-knowledge",
+          "description": "calling.enlightenment.beat.minor.gain-access-to-comcealed-knowledge",
           "type": "minor"
         }
       },
-      "kapq9kzi5eecwxp6": {
-        "_id": "kapq9kzi5eecwxp6",
-        "name": "beat.minor.gain-favour-with-faction",
+      "11rxi0fnnx6rwja1": {
+        "_id": "11rxi0fnnx6rwja1",
+        "name": "calling.enlightenment.beat.minor.gain-favour-with-faction",
         "type": "beat",
         "system": {
-          "description": "beat.minor.gain-favour-with-faction",
+          "description": "calling.enlightenment.beat.minor.gain-favour-with-faction",
           "type": "minor"
         }
       },
-      "2enouadf10t5vicn": {
-        "_id": "2enouadf10t5vicn",
-        "name": "beat.minor.take-minor-mind-fallout",
+      "85ckytvxxbp9skd9": {
+        "_id": "85ckytvxxbp9skd9",
+        "name": "calling.enlightenment.beat.minor.take-minor-mind-fallout",
         "type": "beat",
         "system": {
-          "description": "beat.minor.take-minor-mind-fallout",
+          "description": "calling.enlightenment.beat.minor.take-minor-mind-fallout",
           "type": "minor"
         }
       },
-      "cm5tqjmsbf78xgw5": {
-        "_id": "cm5tqjmsbf78xgw5",
-        "name": "beat.minor.destroy-evidence-or-rhetoric",
+      "o2rbxnijix81f7p8": {
+        "_id": "o2rbxnijix81f7p8",
+        "name": "calling.enlightenment.beat.minor.destroy-evidence-or-rhetoric",
         "type": "beat",
         "system": {
-          "description": "beat.minor.destroy-evidence-or-rhetoric",
+          "description": "calling.enlightenment.beat.minor.destroy-evidence-or-rhetoric",
           "type": "minor"
         }
       },
-      "4vx2zz42huph0yo9": {
-        "_id": "4vx2zz42huph0yo9",
-        "name": "beat.minor.sell-d8-resource-to-secure-secret",
+      "57gkx3ymnvo2lf40": {
+        "_id": "57gkx3ymnvo2lf40",
+        "name": "calling.enlightenment.beat.minor.sell-d8-resource-to-secure-secret",
         "type": "beat",
         "system": {
-          "description": "beat.minor.sell-d8-resource-to-secure-secret",
+          "description": "calling.enlightenment.beat.minor.sell-d8-resource-to-secure-secret",
           "type": "minor"
         }
       },
-      "6fj6qatu4ppmlvs1": {
-        "_id": "6fj6qatu4ppmlvs1",
-        "name": "beat.minor.reach-landmark-on-tier-3",
+      "dor1c2rzslfl0j68": {
+        "_id": "dor1c2rzslfl0j68",
+        "name": "calling.enlightenment.beat.minor.reach-landmark-on-tier-3",
         "type": "beat",
         "system": {
-          "description": "beat.minor.reach-landmark-on-tier-3",
+          "description": "calling.enlightenment.beat.minor.reach-landmark-on-tier-3",
           "type": "minor"
         }
       },
-      "cuxr8mwygw7t3lgx": {
-        "_id": "cuxr8mwygw7t3lgx",
-        "name": "beat.minor.find-helpful-text",
+      "yvmisjuinupduw6k": {
+        "_id": "yvmisjuinupduw6k",
+        "name": "calling.enlightenment.beat.minor.find-helpful-text",
         "type": "beat",
         "system": {
-          "description": "beat.minor.find-helpful-text",
+          "description": "calling.enlightenment.beat.minor.find-helpful-text",
           "type": "minor"
         }
       },
-      "mivcwy50bdj95z0d": {
-        "_id": "mivcwy50bdj95z0d",
-        "name": "beat.minor.succeed-at-task-that-someone-failed",
+      "slsh6ikl7adxz4dh": {
+        "_id": "slsh6ikl7adxz4dh",
+        "name": "calling.enlightenment.beat.minor.succeed-at-task-that-someone-failed",
         "type": "beat",
         "system": {
-          "description": "beat.minor.succeed-at-task-that-someone-failed",
+          "description": "calling.enlightenment.beat.minor.succeed-at-task-that-someone-failed",
           "type": "minor"
         }
       },
-      "h8vpa3fthh4abqo2": {
-        "_id": "h8vpa3fthh4abqo2",
-        "name": "beat.minor.mark-d8-stress-to-NPC-bond",
+      "a34hdkgf2t142s7j": {
+        "_id": "a34hdkgf2t142s7j",
+        "name": "calling.enlightenment.beat.minor.mark-d8-stress-to-NPC-bond",
         "type": "beat",
         "system": {
-          "description": "beat.minor.mark-d8-stress-to-NPC-bond",
+          "description": "calling.enlightenment.beat.minor.mark-d8-stress-to-NPC-bond",
           "type": "minor"
         }
       },
-      "4eehkqnsortxvogy": {
-        "_id": "4eehkqnsortxvogy",
-        "name": "beat.minor.acquire-bond-who-has-information",
+      "3dsghrsycf4mre7h": {
+        "_id": "3dsghrsycf4mre7h",
+        "name": "calling.enlightenment.beat.minor.acquire-bond-who-has-information",
         "type": "beat",
         "system": {
-          "description": "beat.minor.acquire-bond-who-has-information",
+          "description": "calling.enlightenment.beat.minor.acquire-bond-who-has-information",
           "type": "minor"
         }
       },
-      "y96ut7prgmcxvp2c": {
-        "_id": "y96ut7prgmcxvp2c",
-        "name": "beat.minor.establish-a-connection",
+      "dewgng8y1wv8bj7l": {
+        "_id": "dewgng8y1wv8bj7l",
+        "name": "calling.enlightenment.beat.minor.establish-a-connection",
         "type": "beat",
         "system": {
-          "description": "beat.minor.establish-a-connection",
+          "description": "calling.enlightenment.beat.minor.establish-a-connection",
           "type": "minor"
         }
       },
-      "xijf319i66puwzju": {
-        "_id": "xijf319i66puwzju",
-        "name": "beat.minor.take-minor-supplies-fallout",
+      "3l1jx9betufwpcv4": {
+        "_id": "3l1jx9betufwpcv4",
+        "name": "calling.enlightenment.beat.minor.take-minor-supplies-fallout",
         "type": "beat",
         "system": {
-          "description": "beat.minor.take-minor-supplies-fallout",
+          "description": "calling.enlightenment.beat.minor.take-minor-supplies-fallout",
           "type": "minor"
         }
       },
-      "42rarwb5svkr34fn": {
-        "_id": "42rarwb5svkr34fn",
-        "name": "beat.minor.flee-from-combat",
+      "83wh1d6w6vphxy64": {
+        "_id": "83wh1d6w6vphxy64",
+        "name": "calling.enlightenment.beat.minor.flee-from-combat",
         "type": "beat",
         "system": {
-          "description": "beat.minor.flee-from-combat",
+          "description": "calling.enlightenment.beat.minor.flee-from-combat",
           "type": "minor"
         }
       },
-      "6s9g12r9o7qhc2kx": {
-        "_id": "6s9g12r9o7qhc2kx",
-        "name": "beat.minor.release-your-findings-in-journal",
+      "n75hjjyu8qb0nzbm": {
+        "_id": "n75hjjyu8qb0nzbm",
+        "name": "calling.enlightenment.beat.minor.release-your-findings-in-journal",
         "type": "beat",
         "system": {
-          "description": "beat.minor.release-your-findings-in-journal",
+          "description": "calling.enlightenment.beat.minor.release-your-findings-in-journal",
           "type": "minor"
         }
       },
-      "gz9fxu43dxem5gk6": {
-        "_id": "gz9fxu43dxem5gk6",
-        "name": "beat.minor.meet-someone-from-your-old-life",
+      "vazjuk0iz40ttr68": {
+        "_id": "vazjuk0iz40ttr68",
+        "name": "calling.enlightenment.beat.minor.meet-someone-from-your-old-life",
         "type": "beat",
         "system": {
-          "description": "beat.minor.meet-someone-from-your-old-life",
+          "description": "calling.enlightenment.beat.minor.meet-someone-from-your-old-life",
           "type": "minor"
         }
       },
-      "f53xigtpbpfc8v1q": {
-        "_id": "f53xigtpbpfc8v1q",
-        "name": "beat.minor.dissect-something-interrogate-someone",
+      "v2sgkno7xiitkq2c": {
+        "_id": "v2sgkno7xiitkq2c",
+        "name": "calling.enlightenment.beat.minor.dissect-something-interrogate-someone",
         "type": "beat",
         "system": {
-          "description": "beat.minor.dissect-something-interrogate-someone",
+          "description": "calling.enlightenment.beat.minor.dissect-something-interrogate-someone",
           "type": "minor"
         }
       },
-      "hv3fhep0gfmee3d6": {
-        "_id": "hv3fhep0gfmee3d6",
-        "name": "beat.minor.buy-experimental-equipment",
+      "rx7hp421xr6e4t8k": {
+        "_id": "rx7hp421xr6e4t8k",
+        "name": "calling.enlightenment.beat.minor.buy-experimental-equipment",
         "type": "beat",
         "system": {
-          "description": "beat.minor.buy-experimental-equipment",
+          "description": "calling.enlightenment.beat.minor.buy-experimental-equipment",
           "type": "minor"
         }
       },
-      "lcda235zwlec7fgw": {
-        "_id": "lcda235zwlec7fgw",
-        "name": "beat.major.take-major-mind-fallout",
+      "wzdyn0zh91h5wmue": {
+        "_id": "wzdyn0zh91h5wmue",
+        "name": "calling.enlightenment.beat.major.take-major-mind-fallout",
         "type": "beat",
         "system": {
-          "description": "beat.major.take-major-mind-fallout",
+          "description": "calling.enlightenment.beat.major.take-major-mind-fallout",
           "type": "major"
         }
       },
-      "jqy9ptpilrc159w0": {
-        "_id": "jqy9ptpilrc159w0",
-        "name": "beat.major.kill-someone-trying-to-stop-you",
+      "9fp0n7b997eqfb0b": {
+        "_id": "9fp0n7b997eqfb0b",
+        "name": "calling.enlightenment.beat.major.kill-someone-trying-to-stop-you",
         "type": "beat",
         "system": {
-          "description": "beat.major.kill-someone-trying-to-stop-you",
+          "description": "calling.enlightenment.beat.major.kill-someone-trying-to-stop-you",
           "type": "major"
         }
       },
-      "dx5ip2aoxgbcnagl": {
-        "_id": "dx5ip2aoxgbcnagl",
-        "name": "beat.major.sell-a-d12-resource",
+      "4kubq27jt8oemfmp": {
+        "_id": "4kubq27jt8oemfmp",
+        "name": "calling.enlightenment.beat.major.sell-a-d12-resource",
         "type": "beat",
         "system": {
-          "description": "beat.major.sell-a-d12-resource",
+          "description": "calling.enlightenment.beat.major.sell-a-d12-resource",
           "type": "major"
         }
       },
-      "9tdfu22wmwd9o1tt": {
-        "_id": "9tdfu22wmwd9o1tt",
-        "name": "beat.major.destroy-haunt-to-learn-about-task",
+      "osjhg225dbjb5asg": {
+        "_id": "osjhg225dbjb5asg",
+        "name": "calling.enlightenment.beat.major.destroy-haunt-to-learn-about-task",
         "type": "beat",
         "system": {
-          "description": "beat.major.destroy-haunt-to-learn-about-task",
+          "description": "calling.enlightenment.beat.major.destroy-haunt-to-learn-about-task",
           "type": "major"
         }
       },
-      "2v7tw4y576n2qrdt": {
-        "_id": "2v7tw4y576n2qrdt",
-        "name": "beat.major.gain-authority-within-a-faction",
+      "mqyntjj6grhgbtmb": {
+        "_id": "mqyntjj6grhgbtmb",
+        "name": "calling.enlightenment.beat.major.gain-authority-within-a-faction",
         "type": "beat",
         "system": {
-          "description": "beat.major.gain-authority-within-a-faction",
+          "description": "calling.enlightenment.beat.major.gain-authority-within-a-faction",
           "type": "major"
         }
       },
-      "0wq3u4755bfxxev5": {
-        "_id": "0wq3u4755bfxxev5",
-        "name": "beat.major.find-knowledge-on-tier-3",
+      "vll0a2rmyftf5u0g": {
+        "_id": "vll0a2rmyftf5u0g",
+        "name": "calling.enlightenment.beat.major.find-knowledge-on-tier-3",
         "type": "beat",
         "system": {
-          "description": "beat.major.find-knowledge-on-tier-3",
+          "description": "calling.enlightenment.beat.major.find-knowledge-on-tier-3",
           "type": "major"
         }
       },
-      "s11fkvla00am97ja": {
-        "_id": "s11fkvla00am97ja",
-        "name": "beat.major.take-major-supplies-fallout",
+      "pl1mkeja3pq3x7xs": {
+        "_id": "pl1mkeja3pq3x7xs",
+        "name": "calling.enlightenment.beat.major.take-major-supplies-fallout",
         "type": "beat",
         "system": {
-          "description": "beat.major.take-major-supplies-fallout",
+          "description": "calling.enlightenment.beat.major.take-major-supplies-fallout",
           "type": "major"
         }
       },
-      "8z16v7lyof5wzgh7": {
-        "_id": "8z16v7lyof5wzgh7",
-        "name": "beat.major.acquire-renowned-equipment",
+      "cj5so1l1b5ba76wa": {
+        "_id": "cj5so1l1b5ba76wa",
+        "name": "calling.enlightenment.beat.major.acquire-renowned-equipment",
         "type": "beat",
         "system": {
-          "description": "beat.major.acquire-renowned-equipment",
+          "description": "calling.enlightenment.beat.major.acquire-renowned-equipment",
           "type": "major"
         }
       },
-      "1h9oybtoufdvnmlf": {
-        "_id": "1h9oybtoufdvnmlf",
-        "name": "beat.major.attract-a-protege",
+      "w062zey2fip0lrp5": {
+        "_id": "w062zey2fip0lrp5",
+        "name": "calling.enlightenment.beat.major.attract-a-protege",
         "type": "beat",
         "system": {
-          "description": "beat.major.attract-a-protege",
+          "description": "calling.enlightenment.beat.major.attract-a-protege",
           "type": "major"
         }
       },
-      "nq4ey4cxzjqzjc6d": {
-        "_id": "nq4ey4cxzjqzjc6d",
-        "name": "beat.major.explore-a-mysterious-tower",
+      "8u1rvd41kpk2ksn9": {
+        "_id": "8u1rvd41kpk2ksn9",
+        "name": "calling.enlightenment.beat.major.explore-a-mysterious-tower",
         "type": "beat",
         "system": {
-          "description": "beat.major.explore-a-mysterious-tower",
+          "description": "calling.enlightenment.beat.major.explore-a-mysterious-tower",
           "type": "major"
         }
       },
-      "iqbb87282kcz8mka": {
-        "_id": "iqbb87282kcz8mka",
-        "name": "beat.zenith.find-final-secret-solve-impossible-task",
+      "xr3s4j1ku92i78ft": {
+        "_id": "xr3s4j1ku92i78ft",
+        "name": "calling.enlightenment.beat.zenith.find-final-secret-solve-impossible-task",
         "type": "beat",
         "system": {
-          "description": "beat.zenith.find-final-secret-solve-impossible-task",
+          "description": "calling.enlightenment.beat.zenith.find-final-secret-solve-impossible-task",
           "type": "zenith"
         }
       },
-      "spzqcu5mxgqow7xj": {
-        "_id": "spzqcu5mxgqow7xj",
-        "name": "beat.zenith.find-final-secret-destroy-it",
+      "fdr1jkq7q8vheqmj": {
+        "_id": "fdr1jkq7q8vheqmj",
+        "name": "calling.enlightenment.beat.zenith.find-final-secret-destroy-it",
         "type": "beat",
         "system": {
-          "description": "beat.zenith.find-final-secret-destroy-it",
+          "description": "calling.enlightenment.beat.zenith.find-final-secret-destroy-it",
           "type": "zenith"
         }
       }
     }
   },
   "effects": [],
-  "_key": "!items!l6r232vw1cbjblfy"
+  "_key": "!items!yosdnzs0hijgqpf1"
 }

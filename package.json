@@ -8,7 +8,8 @@
     "build-prod": "webpack --mode production",
     "build-manifest": "node ./dev-utils/build-manifest.js",
     "build-packs": "node ./dev-utils/build-packs.js",
-    "unload-packs": "node ./dev-utils/unload-packs.js"
+    "unload-packs": "node ./dev-utils/unload-packs.js",
+    "convert-yml-to-packs": "node ./dev-utils/convert-yml-to-packs.js"
   },
   "keywords": [
     "foundryvtt"

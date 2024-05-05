@@ -13,10 +13,10 @@
       "group_3"
     ],
     "children": {
-      "smbm3jffgl9nt4fr": {
-        "_id": "smbm3jffgl9nt4fr",
+      "cwumft6lq882oek1": {
+        "_id": "cwumft6lq882oek1",
         "type": "resource",
-        "name": "resource.freshly_harvested_heart",
+        "name": "class.cleaver.resource.freshly_harvested_heart",
         "system": {
           "active": true,
           "die_size": "d6",
@@ -24,209 +24,209 @@
           "children": {}
         }
       },
-      "gobqnge8vvszeihc": {
-        "_id": "gobqnge8vvszeihc",
-        "name": "ability.core.heartsblood.name",
+      "zz32wz3l4af08jk2": {
+        "_id": "zz32wz3l4af08jk2",
+        "name": "class.cleaver.ability.core.heartsblood.name",
         "type": "ability",
         "system": {
           "active": true,
-          "description": "ability.core.heartsblood.description",
+          "description": "class.cleaver.ability.core.heartsblood.description",
           "type": "core",
           "children": {}
         }
       },
-      "8ck29wvxmsvs01uw": {
-        "_id": "8ck29wvxmsvs01uw",
-        "name": "ability.core.the_red_feast.name",
+      "4n0qb8nkprthy9mq": {
+        "_id": "4n0qb8nkprthy9mq",
+        "name": "class.cleaver.ability.core.the_red_feast.name",
         "type": "ability",
         "system": {
           "active": true,
-          "description": "ability.core.the_red_feast.description",
+          "description": "class.cleaver.ability.core.the_red_feast.description",
           "type": "core",
           "children": {}
         }
       },
-      "8lae1ox8mr4ji9al": {
-        "_id": "8lae1ox8mr4ji9al",
-        "name": "ability.minor.call_of_the_wild.name",
+      "5g5479hy1rcy03kn": {
+        "_id": "5g5479hy1rcy03kn",
+        "name": "class.cleaver.ability.minor.call_of_the_wild.name",
         "type": "ability",
         "system": {
           "active": false,
-          "description": "ability.minor.call_of_the_wild.description",
+          "description": "class.cleaver.ability.minor.call_of_the_wild.description",
           "type": "minor",
           "children": {}
         }
       },
-      "wyi0exblnnkdhlqz": {
-        "_id": "wyi0exblnnkdhlqz",
-        "name": "ability.minor.darkling_eyes.name",
+      "kyrx2az2kme0upq2": {
+        "_id": "kyrx2az2kme0upq2",
+        "name": "class.cleaver.ability.minor.darkling_eyes.name",
         "type": "ability",
         "system": {
           "active": false,
-          "description": "ability.minor.darkling_eyes.description",
+          "description": "class.cleaver.ability.minor.darkling_eyes.description",
           "type": "minor",
           "children": {}
         }
       },
-      "926i8eqqjshzr7ml": {
-        "_id": "926i8eqqjshzr7ml",
-        "name": "ability.minor.desperate_measures.name",
+      "yiibov6gf0pc3hia": {
+        "_id": "yiibov6gf0pc3hia",
+        "name": "class.cleaver.ability.minor.desperate_measures.name",
         "type": "ability",
         "system": {
           "active": false,
-          "description": "ability.minor.desperate_measures.description",
+          "description": "class.cleaver.ability.minor.desperate_measures.description",
           "type": "minor",
           "children": {}
         }
       },
-      "bp94xzaa89e5oxcn": {
-        "_id": "bp94xzaa89e5oxcn",
-        "name": "ability.minor.dominion.name",
+      "7eznsb35tfo9w9ne": {
+        "_id": "7eznsb35tfo9w9ne",
+        "name": "class.cleaver.ability.minor.dominion.name",
         "type": "ability",
         "system": {
           "active": false,
-          "description": "ability.minor.dominion.description",
+          "description": "class.cleaver.ability.minor.dominion.description",
           "type": "minor",
           "children": {}
         }
       },
-      "80q63be0q5cz20yw": {
-        "_id": "80q63be0q5cz20yw",
-        "name": "ability.minor.fell_metabolism.name",
+      "8ffbs6x6tt5idwqj": {
+        "_id": "8ffbs6x6tt5idwqj",
+        "name": "class.cleaver.ability.minor.fell_metabolism.name",
         "type": "ability",
         "system": {
           "active": false,
-          "description": "ability.minor.fell_metabolism.description",
+          "description": "class.cleaver.ability.minor.fell_metabolism.description",
           "type": "minor",
           "children": {}
         }
       },
-      "fkqdujaukhszjito": {
-        "_id": "fkqdujaukhszjito",
-        "name": "ability.minor.fractured_form.name",
+      "qezwwh8nl138rbb0": {
+        "_id": "qezwwh8nl138rbb0",
+        "name": "class.cleaver.ability.minor.fractured_form.name",
         "type": "ability",
         "system": {
           "active": false,
-          "description": "ability.minor.fractured_form.description",
+          "description": "class.cleaver.ability.minor.fractured_form.description",
           "type": "minor",
           "children": {}
         }
       },
-      "eiov81p7lhfv24rg": {
-        "_id": "eiov81p7lhfv24rg",
-        "name": "ability.minor.gut_instinct.name",
+      "5cw59k64hn8g0c1h": {
+        "_id": "5cw59k64hn8g0c1h",
+        "name": "class.cleaver.ability.minor.gut_instinct.name",
         "type": "ability",
         "system": {
           "active": false,
-          "description": "ability.minor.gut_instinct.description",
+          "description": "class.cleaver.ability.minor.gut_instinct.description",
           "type": "minor",
           "children": {}
         }
       },
-      "5ydj9u7jqsduvkqg": {
-        "_id": "5ydj9u7jqsduvkqg",
-        "name": "ability.minor.inhuman.name",
+      "2bxvr6dpa9mvzxq4": {
+        "_id": "2bxvr6dpa9mvzxq4",
+        "name": "class.cleaver.ability.minor.inhuman.name",
         "type": "ability",
         "system": {
           "active": false,
-          "description": "ability.minor.inhuman.description",
+          "description": "class.cleaver.ability.minor.inhuman.description",
           "type": "minor",
           "children": {}
         }
       },
-      "wk38p0cria17xp9i": {
-        "_id": "wk38p0cria17xp9i",
-        "name": "ability.minor.pitchskin.name",
+      "qt0w2bqnpzatvx4c": {
+        "_id": "qt0w2bqnpzatvx4c",
+        "name": "class.cleaver.ability.minor.pitchskin.name",
         "type": "ability",
         "system": {
           "active": false,
-          "description": "ability.minor.pitchskin.description",
+          "description": "class.cleaver.ability.minor.pitchskin.description",
           "type": "minor",
           "children": {}
         }
       },
-      "pffpshr32nmrav7x": {
-        "_id": "pffpshr32nmrav7x",
-        "name": "ability.minor.symbiotic.name",
+      "dbm0lhumtv7ni3wb": {
+        "_id": "dbm0lhumtv7ni3wb",
+        "name": "class.cleaver.ability.minor.symbiotic.name",
         "type": "ability",
         "system": {
           "active": false,
-          "description": "ability.minor.symbiotic.description",
+          "description": "class.cleaver.ability.minor.symbiotic.description",
           "type": "minor",
           "children": {}
         }
       },
-      "1o6b6mkjpcgkbccg": {
-        "_id": "1o6b6mkjpcgkbccg",
-        "name": "ability.minor.twisting_territory.name",
+      "c5aijfigiigxvxot": {
+        "_id": "c5aijfigiigxvxot",
+        "name": "class.cleaver.ability.minor.twisting_territory.name",
         "type": "ability",
         "system": {
           "active": false,
-          "description": "ability.minor.twisting_territory.description",
+          "description": "class.cleaver.ability.minor.twisting_territory.description",
           "type": "minor",
           "children": {}
         }
       },
-      "oxo1s38rpgz56pq8": {
-        "_id": "oxo1s38rpgz56pq8",
-        "name": "ability.minor.unmaking_claws.name",
+      "6s8fx76sdziavot1": {
+        "_id": "6s8fx76sdziavot1",
+        "name": "class.cleaver.ability.minor.unmaking_claws.name",
         "type": "ability",
         "system": {
           "active": false,
-          "description": "ability.minor.unmaking_claws.description",
+          "description": "class.cleaver.ability.minor.unmaking_claws.description",
           "type": "minor",
           "children": {}
         }
       },
-      "4g7ugoac8y246xl7": {
-        "_id": "4g7ugoac8y246xl7",
-        "name": "ability.minor.vessel.name",
+      "eapgdq7cc7cy84sb": {
+        "_id": "eapgdq7cc7cy84sb",
+        "name": "class.cleaver.ability.minor.vessel.name",
         "type": "ability",
         "system": {
           "active": false,
-          "description": "ability.minor.vessel.description",
+          "description": "class.cleaver.ability.minor.vessel.description",
           "type": "minor",
           "children": {}
         }
       },
-      "1im0fmd831zm7y2t": {
-        "_id": "1im0fmd831zm7y2t",
-        "name": "ability.major.bloodbound_beast.name",
+      "fdkr8tg35gjxx45h": {
+        "_id": "fdkr8tg35gjxx45h",
+        "name": "class.cleaver.ability.major.bloodbound_beast.name",
         "type": "ability",
         "system": {
           "active": false,
-          "description": "ability.major.bloodbound_beast.description",
+          "description": "class.cleaver.ability.major.bloodbound_beast.description",
           "type": "major",
           "children": {
-            "hwjhbtawv7d5gb7i": {
-              "_id": "hwjhbtawv7d5gb7i",
-              "name": "ability.minor.pack_hunter.name",
+            "d5gg7t751hh1m0as": {
+              "_id": "d5gg7t751hh1m0as",
+              "name": "class.cleaver.ability.minor.pack_hunter.name",
               "type": "ability",
               "system": {
                 "active": false,
-                "description": "ability.minor.pack_hunter.description",
+                "description": "class.cleaver.ability.minor.pack_hunter.description",
                 "type": "minor",
                 "children": {}
               }
             },
-            "6qlgav9ms5lxxzi7": {
-              "_id": "6qlgav9ms5lxxzi7",
-              "name": "ability.minor.pounce.name",
+            "y29s8s3pt10lcyxn": {
+              "_id": "y29s8s3pt10lcyxn",
+              "name": "class.cleaver.ability.minor.pounce.name",
               "type": "ability",
               "system": {
                 "active": false,
-                "description": "ability.minor.pounce.description",
+                "description": "class.cleaver.ability.minor.pounce.description",
                 "type": "minor",
                 "children": {}
               }
             },
-            "0k64209sxmwchs5n": {
-              "_id": "0k64209sxmwchs5n",
-              "name": "ability.minor.faithful_until_the_end.name",
+            "lq9py8luqaashop5": {
+              "_id": "lq9py8luqaashop5",
+              "name": "class.cleaver.ability.minor.faithful_until_the_end.name",
               "type": "ability",
               "system": {
                 "active": false,
-                "description": "ability.minor.faithful_until_the_end.description",
+                "description": "class.cleaver.ability.minor.faithful_until_the_end.description",
                 "type": "minor",
                 "children": {}
               }
@@ -234,44 +234,44 @@
           }
         }
       },
-      "t6xlbg1mmhd63lsg": {
-        "_id": "t6xlbg1mmhd63lsg",
-        "name": "ability.major.chimeric_strain.name",
+      "xbe2bx1fawd8lfhb": {
+        "_id": "xbe2bx1fawd8lfhb",
+        "name": "class.cleaver.ability.major.chimeric_strain.name",
         "type": "ability",
         "system": {
           "active": false,
-          "description": "ability.major.chimeric_strain.description",
+          "description": "class.cleaver.ability.major.chimeric_strain.description",
           "type": "major",
           "children": {
-            "vlaxio1a2el6jcjx": {
-              "_id": "vlaxio1a2el6jcjx",
-              "name": "ability.minor.blighted.name",
+            "38d7up3c05bwfq01": {
+              "_id": "38d7up3c05bwfq01",
+              "name": "class.cleaver.ability.minor.blighted.name",
               "type": "ability",
               "system": {
                 "active": false,
-                "description": "ability.minor.blighted.description",
+                "description": "class.cleaver.ability.minor.blighted.description",
                 "type": "minor",
                 "children": {}
               }
             },
-            "q725l6n75jnim79n": {
-              "_id": "q725l6n75jnim79n",
-              "name": "ability.minor.horned.name",
+            "sgguxtxtsm8jz0p4": {
+              "_id": "sgguxtxtsm8jz0p4",
+              "name": "class.cleaver.ability.minor.horned.name",
               "type": "ability",
               "system": {
                 "active": false,
-                "description": "ability.minor.horned.description",
+                "description": "class.cleaver.ability.minor.horned.description",
                 "type": "minor",
                 "children": {}
               }
             },
-            "z2izfed3n5oj5f7q": {
-              "_id": "z2izfed3n5oj5f7q",
-              "name": "ability.minor.bezerk.name",
+            "obpgmlsps2k7j1cs": {
+              "_id": "obpgmlsps2k7j1cs",
+              "name": "class.cleaver.ability.minor.bezerk.name",
               "type": "ability",
               "system": {
                 "active": false,
-                "description": "ability.minor.bezerk.description",
+                "description": "class.cleaver.ability.minor.bezerk.description",
                 "type": "minor",
                 "children": {}
               }
@@ -279,44 +279,44 @@
           }
         }
       },
-      "8y626muf5lqgme78": {
-        "_id": "8y626muf5lqgme78",
-        "name": "ability.major.extinction_bow.name",
+      "7ikmmzow3xn9zeqt": {
+        "_id": "7ikmmzow3xn9zeqt",
+        "name": "class.cleaver.ability.major.extinction_bow.name",
         "type": "ability",
         "system": {
           "active": false,
-          "description": "ability.major.extinction_bow.description",
+          "description": "class.cleaver.ability.major.extinction_bow.description",
           "type": "major",
           "children": {
-            "qm23m1gosq5hqc7p": {
-              "_id": "qm23m1gosq5hqc7p",
-              "name": "ability.minor.harpoon.name",
+            "ol4xlpbx6d3lafdi": {
+              "_id": "ol4xlpbx6d3lafdi",
+              "name": "class.cleaver.ability.minor.harpoon.name",
               "type": "ability",
               "system": {
                 "active": false,
-                "description": "ability.minor.harpoon.description",
+                "description": "class.cleaver.ability.minor.harpoon.description",
                 "type": "minor",
                 "children": {}
               }
             },
-            "zttcmzjnu29m4we3": {
-              "_id": "zttcmzjnu29m4we3",
-              "name": "ability.minor.hunters_eye.name",
+            "jdez2xsb8yb4c26t": {
+              "_id": "jdez2xsb8yb4c26t",
+              "name": "class.cleaver.ability.minor.hunters_eye.name",
               "type": "ability",
               "system": {
                 "active": false,
-                "description": "ability.minor.hunters_eye.description",
+                "description": "class.cleaver.ability.minor.hunters_eye.description",
                 "type": "minor",
                 "children": {}
               }
             },
-            "7slb7ra0j6bslprf": {
-              "_id": "7slb7ra0j6bslprf",
-              "name": "ability.minor.nightmare_arrow.name",
+            "6z2bpuzcz4qhflkg": {
+              "_id": "6z2bpuzcz4qhflkg",
+              "name": "class.cleaver.ability.minor.nightmare_arrow.name",
               "type": "ability",
               "system": {
                 "active": false,
-                "description": "ability.minor.nightmare_arrow.description",
+                "description": "class.cleaver.ability.minor.nightmare_arrow.description",
                 "type": "minor",
                 "children": {}
               }
@@ -324,44 +324,44 @@
           }
         }
       },
-      "u9erge7qmx3shpx3": {
-        "_id": "u9erge7qmx3shpx3",
-        "name": "ability.major.monstrous_appetite.name",
+      "386dahqfqryjk8wl": {
+        "_id": "386dahqfqryjk8wl",
+        "name": "class.cleaver.ability.major.monstrous_appetite.name",
         "type": "ability",
         "system": {
           "active": false,
-          "description": "ability.major.monstrous_appetite.description",
+          "description": "class.cleaver.ability.major.monstrous_appetite.description",
           "type": "major",
           "children": {
-            "2orhm6l6lnc9xbq6": {
-              "_id": "2orhm6l6lnc9xbq6",
-              "name": "ability.minor.rejuvenation.name",
+            "72d35bi2l6joxjdr": {
+              "_id": "72d35bi2l6joxjdr",
+              "name": "class.cleaver.ability.minor.rejuvenation.name",
               "type": "ability",
               "system": {
                 "active": false,
-                "description": "ability.minor.rejuvenation.description",
+                "description": "class.cleaver.ability.minor.rejuvenation.description",
                 "type": "minor",
                 "children": {}
               }
             },
-            "gqus1canm8v0jbjo": {
-              "_id": "gqus1canm8v0jbjo",
-              "name": "ability.minor.tainted_meat.name",
+            "m9hiz8mqidomkxil": {
+              "_id": "m9hiz8mqidomkxil",
+              "name": "class.cleaver.ability.minor.tainted_meat.name",
               "type": "ability",
               "system": {
                 "active": false,
-                "description": "ability.minor.tainted_meat.description",
+                "description": "class.cleaver.ability.minor.tainted_meat.description",
                 "type": "minor",
                 "children": {}
               }
             },
-            "ycjtlnmd17adz7oh": {
-              "_id": "ycjtlnmd17adz7oh",
-              "name": "ability.minor.horrendous_bite.name",
+            "p236inppgwi68ep9": {
+              "_id": "p236inppgwi68ep9",
+              "name": "class.cleaver.ability.minor.horrendous_bite.name",
               "type": "ability",
               "system": {
                 "active": false,
-                "description": "ability.minor.horrendous_bite.description",
+                "description": "class.cleaver.ability.minor.horrendous_bite.description",
                 "type": "minor",
                 "children": {}
               }
@@ -369,44 +369,44 @@
           }
         }
       },
-      "bikw5qatukoptffu": {
-        "_id": "bikw5qatukoptffu",
-        "name": "ability.major.the_wild_hunt.name",
+      "mfdbctsokg3rzpa1": {
+        "_id": "mfdbctsokg3rzpa1",
+        "name": "class.cleaver.ability.major.the_wild_hunt.name",
         "type": "ability",
         "system": {
           "active": false,
-          "description": "ability.major.the_wild_hunt.description",
+          "description": "class.cleaver.ability.major.the_wild_hunt.description",
           "type": "major",
           "children": {
-            "37osascak3h93wmh": {
-              "_id": "37osascak3h93wmh",
-              "name": "ability.minor.echoes_of_the_city_beneath.name",
+            "cbjpra998ys9u29r": {
+              "_id": "cbjpra998ys9u29r",
+              "name": "class.cleaver.ability.minor.echoes_of_the_city_beneath.name",
               "type": "ability",
               "system": {
                 "active": false,
-                "description": "ability.minor.echoes_of_the_city_beneath.description",
+                "description": "class.cleaver.ability.minor.echoes_of_the_city_beneath.description",
                 "type": "minor",
                 "children": {}
               }
             },
-            "gzp66ad24mrwij4d": {
-              "_id": "gzp66ad24mrwij4d",
-              "name": "ability.minor.storyteller.name",
+            "vq2dkwxae8qn12c9": {
+              "_id": "vq2dkwxae8qn12c9",
+              "name": "class.cleaver.ability.minor.storyteller.name",
               "type": "ability",
               "system": {
                 "active": false,
-                "description": "ability.minor.storyteller.description",
+                "description": "class.cleaver.ability.minor.storyteller.description",
                 "type": "minor",
                 "children": {}
               }
             },
-            "itdmkas4ct93yvpj": {
-              "_id": "itdmkas4ct93yvpj",
-              "name": "ability.minor.bounty_shared.name",
+            "uyp9wyf3ptakgqfh": {
+              "_id": "uyp9wyf3ptakgqfh",
+              "name": "class.cleaver.ability.minor.bounty_shared.name",
               "type": "ability",
               "system": {
                 "active": false,
-                "description": "ability.minor.bounty_shared.description",
+                "description": "class.cleaver.ability.minor.bounty_shared.description",
                 "type": "minor",
                 "children": {}
               }
@@ -414,42 +414,42 @@
           }
         }
       },
-      "vxzuh6q14sqwn7jn": {
-        "_id": "vxzuh6q14sqwn7jn",
-        "name": "ability.zenith.angelic.name",
+      "d6l44nc9tsvtlip4": {
+        "_id": "d6l44nc9tsvtlip4",
+        "name": "class.cleaver.ability.zenith.angelic.name",
         "type": "ability",
         "system": {
           "active": false,
-          "description": "ability.zenith.angelic.description",
+          "description": "class.cleaver.ability.zenith.angelic.description",
           "type": "zenith",
           "children": {}
         }
       },
-      "f90wk9uouf843vhw": {
-        "_id": "f90wk9uouf843vhw",
-        "name": "ability.zenith.legendary_beast.name",
+      "o0l6f76gmof1cjpv": {
+        "_id": "o0l6f76gmof1cjpv",
+        "name": "class.cleaver.ability.zenith.legendary_beast.name",
         "type": "ability",
         "system": {
           "active": false,
-          "description": "ability.zenith.legendary_beast.description",
+          "description": "class.cleaver.ability.zenith.legendary_beast.description",
           "type": "zenith",
           "children": {}
         }
       },
-      "8a2w66gza1xvib5p": {
-        "_id": "8a2w66gza1xvib5p",
-        "name": "ability.zenith.weald_and_woe.name",
+      "24qixhhso48uhdj0": {
+        "_id": "24qixhhso48uhdj0",
+        "name": "class.cleaver.ability.zenith.weald_and_woe.name",
         "type": "ability",
         "system": {
           "active": false,
-          "description": "ability.zenith.weald_and_woe.description",
+          "description": "class.cleaver.ability.zenith.weald_and_woe.description",
           "type": "zenith",
           "children": {}
         }
       },
-      "uxehwmmtd6i7fnv2": {
-        "_id": "uxehwmmtd6i7fnv2",
-        "name": "equipment.hunting_knife",
+      "ilh01vje2kotr7pq": {
+        "_id": "ilh01vje2kotr7pq",
+        "name": "class.cleaver.equipment.hunting_knife",
         "type": "equipment",
         "system": {
           "type": "kill",
@@ -458,39 +458,39 @@
           "children": {}
         }
       },
-      "dppte3tfojrd9h3t": {
-        "_id": "dppte3tfojrd9h3t",
-        "name": "equipment.cleaver",
+      "z13n4glna8s72orp": {
+        "_id": "z13n4glna8s72orp",
+        "name": "class.cleaver.equipment.cleaver",
         "type": "equipment",
         "system": {
           "type": "kill",
           "die_size": "d6",
           "group": "group_1",
           "children": {
-            "n9qfceo7u1mskz5m": {
-              "_id": "n9qfceo7u1mskz5m",
+            "97a5cobbnleqxscx": {
+              "_id": "97a5cobbnleqxscx",
               "name": "tag.brutal.name",
               "type": "tag",
               "system": {
                 "description": "tag.brutal.description"
               },
-              "_key": "!items!1kyvyo9s6h24vyo9"
+              "_key": "!items!cpu88j1zvh93j65x"
             },
-            "wxj6fhcz2hwgyugw": {
-              "_id": "wxj6fhcz2hwgyugw",
+            "4ln1w7t08nkja8um": {
+              "_id": "4ln1w7t08nkja8um",
               "name": "tag.tiring.name",
               "type": "tag",
               "system": {
                 "description": "tag.tiring.description"
               },
-              "_key": "!items!i6sngsub3gge67r0"
+              "_key": "!items!hd1bex1x3ql9t1ad"
             }
           }
         }
       },
-      "w28uzbokj5rsabgv": {
-        "_id": "w28uzbokj5rsabgv",
-        "name": "equipment.bone_charms",
+      "yvtkxmekfv0ldz5l": {
+        "_id": "yvtkxmekfv0ldz5l",
+        "name": "class.cleaver.equipment.bone_charms",
         "type": "equipment",
         "system": {
           "type": "mend",
@@ -502,32 +502,32 @@
           "children": {}
         }
       },
-      "7q4irku2k5rikqt7": {
-        "_id": "7q4irku2k5rikqt7",
-        "name": "equipment.heavy_draw_bow",
+      "5tq4q8mhqp1j62o7": {
+        "_id": "5tq4q8mhqp1j62o7",
+        "name": "class.cleaver.equipment.heavy_draw_bow",
         "type": "equipment",
         "system": {
           "type": "kill",
           "die_size": "d8",
           "group": "group_3",
           "children": {
-            "ps9yoy35mudg6bf1": {
-              "_id": "ps9yoy35mudg6bf1",
+            "8cvj0nhxrcfk44a7": {
+              "_id": "8cvj0nhxrcfk44a7",
               "name": "tag.ranged.name",
               "type": "tag",
               "system": {
                 "description": "tag.ranged.description"
               },
-              "_key": "!items!s8nvyy8qxppdiv98"
+              "_key": "!items!8t6wdqu6ch9v05j9"
             },
-            "4lyfxudeznflaegu": {
-              "_id": "4lyfxudeznflaegu",
+            "qhy57wx5jygwprrj": {
+              "_id": "qhy57wx5jygwprrj",
               "name": "tag.tiring.name",
               "type": "tag",
               "system": {
                 "description": "tag.tiring.description"
               },
-              "_key": "!items!i6sngsub3gge67r0"
+              "_key": "!items!hd1bex1x3ql9t1ad"
             }
           }
         }
@@ -535,5 +535,5 @@
     }
   },
   "effects": [],
-  "_key": "!items!erbpg69bzuwlijjl"
+  "_key": "!items!g63kdgskstcxgltv"
 }

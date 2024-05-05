@@ -10,7 +10,7 @@
     {{#with (getHeartResistances) as |resistances|}}
     {{#each resistances}}
         <div>
-            <h3>{{localizeHeart this}}</h3>
+            <h3>{{localizeHeart "resistance" this}}</h3>
             <div data-target='system.resistances' data-value="{{this}}">
                 {{{ordered-checkable (includes ../../system.resistances this) 1}}}
             </div>
@@ -19,7 +19,6 @@
     {{/with}}
 </div>
 {{/if}}
-
 <div>
     <h2>
         <span class="fas fa-tag"></span>

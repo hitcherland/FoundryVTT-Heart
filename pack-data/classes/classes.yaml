@@ -1,18 +1,18 @@
 vermissian_knight:
-  name: class.vermissian_knight.name
-  description: class.vermissian_knight.description
+  name: "class.vermissian_knight.name"
+  description: "class.vermissian_knight.description"
   traits:
     skill: delve
     domain: technology
     resource:
       spare_capacitors_and_wires:
-        name: resource.spare_capacitors_and_wires
+        name: "class.vermissian_knight.resource.spare_capacitors_and_wires"
         dice: d6
         domain: technology
     equipment:
       group_1:
         pneumatic_hammer:
-          name: equipment.pneumatic_hammer
+          name: "class.vermissian_knight.equipment.pneumatic_hammer"
           dice: d8
           type: kill
           tags:
@@ -21,16 +21,16 @@ vermissian_knight:
             - tiring
       group_2:
         scrapsword:
-          name: equipment.scrapsword
+          name: "class.vermissian_knight.equipment.scrapsword"
           dice: d6
           type: kill
         magelight_rig:
-          name: equipment.magelight_rig
+          name: "class.vermissian_knight.equipment.magelight_rig"
           dice: d6
           type: delve
       group_3:
         steel_door_shield:
-          name: equipment.steel_door_shield
+          name: "class.vermissian_knight.equipment.steel_door_shield"
           dice: d6
           type: kill
           tags:
@@ -38,139 +38,139 @@ vermissian_knight:
   abilities:
     core:
       vermissian_plate:
-        name: ability.core.vermissian_plate.name
-        description: ability.core.vermissian_plate.description
+        name: "class.vermissian_knight.ability.core.vermissian_plate.name"
+        description: "class.vermissian_knight.ability.core.vermissian_plate.description"
     minor:
       arcane_rebreather:
-        name: ability.minor.arcane_rebreather.name
-        description: ability.minor.arcane_rebreather.description
+        name: "class.vermissian_knight.ability.minor.arcane_rebreather.name"
+        description: "class.vermissian_knight.ability.minor.arcane_rebreather.description"
       armour_plating:
-        name: ability.minor.armour_plating.name
-        description: ability.minor.armour_plating.description
+        name: "class.vermissian_knight.ability.minor.armour_plating.name"
+        description: "class.vermissian_knight.ability.minor.armour_plating.description"
       black_knight:
-        name: ability.minor.black_knight.name
-        description: ability.minor.black_knight.description
+        name: "class.vermissian_knight.ability.minor.black_knight.name"
+        description: "class.vermissian_knight.ability.minor.black_knight.description"
       knight_protector:
-        name: ability.minor.knight_protector.name
-        description: ability.minor.knight_protector.description
+        name: "class.vermissian_knight.ability.minor.knight_protector.name"
+        description: "class.vermissian_knight.ability.minor.knight_protector.description"
       hellwalker:
-        name: ability.minor.hellwalker.name
-        description: ability.minor.hellwalker.description
+        name: "class.vermissian_knight.ability.minor.hellwalker.name"
+        description: "class.vermissian_knight.ability.minor.hellwalker.description"
       phantom_lens:
-        name: ability.minor.phantom_lens.name
-        description: ability.minor.phantom_lens.description
+        name: "class.vermissian_knight.ability.minor.phantom_lens.name"
+        description: "class.vermissian_knight.ability.minor.phantom_lens.description"
       protector_s_gauntlet:
-        name: ability.minor.protector's_gauntlet.name
-        description: ability.minor.protector's_gauntlet.description
+        name: "class.vermissian_knight.ability.minor.protector's_gauntlet.name"
+        description: "class.vermissian_knight.ability.minor.protector's_gauntlet.description"
       sanguinary_array:
-        name: ability.minor.sanguinary_array.name
-        description: ability.minor.sanguinary_array.description
+        name: "class.vermissian_knight.ability.minor.sanguinary_array.name"
+        description: "class.vermissian_knight.ability.minor.sanguinary_array.description"
       stalwart:
-        name: ability.minor.stalwart.name
-        description: ability.minor.stalwart.description
+        name: "class.vermissian_knight.ability.minor.stalwart.name"
+        description: "class.vermissian_knight.ability.minor.stalwart.description"
       steelbones:
-        name: ability.minor.steelbones.name
-        description: ability.minor.steelbones.description
+        name: "class.vermissian_knight.ability.minor.steelbones.name"
+        description: "class.vermissian_knight.ability.minor.steelbones.description"
       student_of_the_sages:
-        name: ability.minor.student_of_the_sages.name
-        description: ability.minor.student_of_the_sages.description
+        name: "class.vermissian_knight.ability.minor.student_of_the_sages.name"
+        description: "class.vermissian_knight.ability.minor.student_of_the_sages.description"
       tunnel_rat:
-        name: ability.minor.tunnel_rat.name
-        description: ability.minor.tunnel_rat.description
+        name: "class.vermissian_knight.ability.minor.tunnel_rat.name"
+        description: "class.vermissian_knight.ability.minor.tunnel_rat.description"
       well_travelled:
-        name: ability.minor.well_travelled.name
-        description: ability.minor.well_travelled.description
+        name: "class.vermissian_knight.ability.minor.well_travelled.name"
+        description: "class.vermissian_knight.ability.minor.well_travelled.description"
     major:
       aetheric_field:
-        name: ability.major.aetheric_field.name
-        description: ability.major.aetheric_field.description
+        name: "class.vermissian_knight.ability.major.aetheric_field.name"
+        description: "class.vermissian_knight.ability.major.aetheric_field.description"
         nested_abilities:
           helixican_burst:
-            name: ability.minor.helixican_burst.name
-            description: ability.minor.helixican_burst.description
+            name: "class.vermissian_knight.ability.minor.helixican_burst.name"
+            description: "class.vermissian_knight.ability.minor.helixican_burst.description"
           recharge:
-            name: ability.minor.recharge.name
-            description: ability.minor.recharge.description
+            name: "class.vermissian_knight.ability.minor.recharge.name"
+            description: "class.vermissian_knight.ability.minor.recharge.description"
           anathema:
-            name: ability.minor.anathema.name
-            description: ability.minor.anathema.description
+            name: "class.vermissian_knight.ability.minor.anathema.name"
+            description: "class.vermissian_knight.ability.minor.anathema.description"
       dragon_killer:
-        name: ability.major.dragon_killer.name
-        description: ability.major.dragon_killer.description
+        name: "class.vermissian_knight.ability.major.dragon_killer.name"
+        description: "class.vermissian_knight.ability.major.dragon_killer.description"
         nested_abilities:
           hunted:
-            name: ability.minor.hunted.name
-            description: ability.minor.hunted.description
+            name: "class.vermissian_knight.ability.minor.hunted.name"
+            description: "class.vermissian_knight.ability.minor.hunted.description"
           endurance_training:
-            name: ability.minor.endurance_training.name
-            description: ability.minor.endurance_training.description
+            name: "class.vermissian_knight.ability.minor.endurance_training.name"
+            description: "class.vermissian_knight.ability.minor.endurance_training.description"
           applied_research:
-            name: ability.minor.applied_research.name
-            description: ability.minor.applied_research.description
+            name: "class.vermissian_knight.ability.minor.applied_research.name"
+            description: "class.vermissian_knight.ability.minor.applied_research.description"
       get_behind_me:
-        name: ability.major.get_behind_me.name
-        description: ability.major.get_behind_me.description
+        name: "class.vermissian_knight.ability.major.get_behind_me.name"
+        description: "class.vermissian_knight.ability.major.get_behind_me.description"
         nested_abilities:
           last_minute_intervention:
-            name: ability.minor.last_minute_intervention.name
-            description: ability.minor.last_minute_intervention.description
+            name: "class.vermissian_knight.ability.minor.last_minute_intervention.name"
+            description: "class.vermissian_knight.ability.minor.last_minute_intervention.description"
           steam_vent:
-            name: ability.minor.steam_vent.name
-            description: ability.minor.steam_vent.description
+            name: "class.vermissian_knight.ability.minor.steam_vent.name"
+            description: "class.vermissian_knight.ability.minor.steam_vent.description"
           back_to_back:
-            name: ability.minor.back_to_back.name
-            description: ability.minor.back_to_back.description
+            name: "class.vermissian_knight.ability.minor.back_to_back.name"
+            description: "class.vermissian_knight.ability.minor.back_to_back.description"
       overclock:
-        name: ability.major.overclock.name
-        description: ability.major.overclock.description
+        name: "class.vermissian_knight.ability.major.overclock.name"
+        description: "class.vermissian_knight.ability.major.overclock.description"
         nested_abilities:
           puncture:
-            name: ability.minor.puncture.name
-            description: ability.minor.puncture.description
+            name: "class.vermissian_knight.ability.minor.puncture.name"
+            description: "class.vermissian_knight.ability.minor.puncture.description"
           momentum:
-            name: ability.minor.momentum.name
-            description: ability.minor.momentum.description
+            name: "class.vermissian_knight.ability.minor.momentum.name"
+            description: "class.vermissian_knight.ability.minor.momentum.description"
           galvanic_crucible:
-            name: ability.minor.galvanic_crucible.name
-            description: ability.minor.galvanic_crucible.description
+            name: "class.vermissian_knight.ability.minor.galvanic_crucible.name"
+            description: "class.vermissian_knight.ability.minor.galvanic_crucible.description"
       trailblazer:
-        name: ability.major.trailblazer.name
-        description: ability.major.trailblazer.description
+        name: "class.vermissian_knight.ability.major.trailblazer.name"
+        description: "class.vermissian_knight.ability.major.trailblazer.description"
         nested_abilities:
           first_to_the_front:
-            name: ability.minor.first_to_the_front.name
-            description: ability.minor.first_to_the_front.description
+            name: "class.vermissian_knight.ability.minor.first_to_the_front.name"
+            description: "class.vermissian_knight.ability.minor.first_to_the_front.description"
           pathfinder:
-            name: ability.minor.pathfinder.name
-            description: ability.minor.pathfinder.description
+            name: "class.vermissian_knight.ability.minor.pathfinder.name"
+            description: "class.vermissian_knight.ability.minor.pathfinder.description"
           keep_your_heads_down:
-            name: ability.minor.keep_your_heads_down.name
-            description: ability.minor.keep_your_heads_down.description
+            name: "class.vermissian_knight.ability.minor.keep_your_heads_down.name"
+            description: "class.vermissian_knight.ability.minor.keep_your_heads_down.description"
     zenith:
       end_of_the_line:
-        name: ability.zenith.end_of_the_line.name
-        description: ability.zenith.end_of_the_line.description
+        name: "class.vermissian_knight.ability.zenith.end_of_the_line.name"
+        description: "class.vermissian_knight.ability.zenith.end_of_the_line.description"
       perpetual_motion_engine:
-        name: ability.zenith.perpetual_motion_engine.name
-        description: ability.zenith.perpetual_motion_engine.description
+        name: "class.vermissian_knight.ability.zenith.perpetual_motion_engine.name"
+        description: "class.vermissian_knight.ability.zenith.perpetual_motion_engine.description"
       the_last_train:
-        name: ability.zenith.the_last_train.name
-        description: ability.zenith.the_last_train.description
+        name: "class.vermissian_knight.ability.zenith.the_last_train.name"
+        description: "class.vermissian_knight.ability.zenith.the_last_train.description"
 junk_mage:
-  name: class.junk_mage.name
-  description: class.junk_mage.description
+  name: "class.junk_mage.name"
+  description: "class.junk_mage.description"
   traits:
     skill: discern
     domain: occult
     resource:
       vial_of_cursed_ink:
-        name: resource.vial_of_cursed_ink
+        name: "class.junk_mage.resource.vial_of_cursed_ink"
         dice: d6
         domain: occult
     equipment:
       group_1:
         two_old_fashioned_pistols:
-          name: equipment.two_old_fashioned_pistols
+          name: "class.junk_mage.equipment.two_old_fashioned_pistols"
           dice: d8
           type: kill
           tags:
@@ -179,7 +179,7 @@ junk_mage:
             - one_shot
       group_2:
         hungry_knife:
-          name: equipment.hungry_knife
+          name: "class.junk_mage.equipment.hungry_knife"
           dice: d6
           type: kill
           tags:
@@ -188,13 +188,13 @@ junk_mage:
             - dangerous
       group_3:
         overstuffed_coat:
-          name: equipment.overstuffed_coat
+          name: "class.junk_mage.equipment.overstuffed_coat"
           dice: d6
           type: mend
           resistances:
             - supplies
         blunderbuss:
-          name: equipment.blunderbuss
+          name: "class.junk_mage.equipment.blunderbuss"
           dice: d4
           type: kill
           tags:
@@ -204,149 +204,149 @@ junk_mage:
   abilities:
     core:
       ravening_knowledge:
-        name: ability.core.ravening_knowledge.name
-        description: ability.core.ravening_knowledge.description
+        name: "class.junk_mage.ability.core.ravening_knowledge.name"
+        description: "class.junk_mage.ability.core.ravening_knowledge.description"
       sacrifice:
-        name: ability.core.sacrifice.name
-        description: ability.core.sacrifice.description
+        name: "class.junk_mage.ability.core.sacrifice.name"
+        description: "class.junk_mage.ability.core.sacrifice.description"
     minor:
       back_pocket_arcana:
-        name: ability.minor.back_pocket_arcana.name
-        description: ability.minor.back_pocket_arcana.description
+        name: "class.junk_mage.ability.minor.back_pocket_arcana.name"
+        description: "class.junk_mage.ability.minor.back_pocket_arcana.description"
       been_everywhere:
-        name: ability.minor.been_everywhere.name
-        description: ability.minor.been_everywhere.description
+        name: "class.junk_mage.ability.minor.been_everywhere.name"
+        description: "class.junk_mage.ability.minor.been_everywhere.description"
       by_any_means:
-        name: ability.minor.by_any_means.name
-        description: ability.minor.by_any_means.description
+        name: "class.junk_mage.ability.minor.by_any_means.name"
+        description: "class.junk_mage.ability.minor.by_any_means.description"
       frontier_etiquette:
-        name: ability.minor.frontier_etiquette.name
-        description: ability.minor.frontier_etiquette.description
+        name: "class.junk_mage.ability.minor.frontier_etiquette.name"
+        description: "class.junk_mage.ability.minor.frontier_etiquette.description"
       litanies_of_false_power:
-        name: ability.minor.litanies_of_false_power.name
-        description: ability.minor.litanies_of_false_power.description
+        name: "class.junk_mage.ability.minor.litanies_of_false_power.name"
+        description: "class.junk_mage.ability.minor.litanies_of_false_power.description"
       mark_of_hunger:
-        name: ability.minor.mark_of_hunger.name
-        description: ability.minor.mark_of_hunger.description
+        name: "class.junk_mage.ability.minor.mark_of_hunger.name"
+        description: "class.junk_mage.ability.minor.mark_of_hunger.description"
       mark_of_the_phantom:
-        name: ability.minor.mark_of_the_phantom.name
-        description: ability.minor.mark_of_the_phantom.description
+        name: "class.junk_mage.ability.minor.mark_of_the_phantom.name"
+        description: "class.junk_mage.ability.minor.mark_of_the_phantom.description"
       mark_of_shadow:
-        name: ability.minor.mark_of_shadow.name
-        description: ability.minor.mark_of_shadow.description
+        name: "class.junk_mage.ability.minor.mark_of_shadow.name"
+        description: "class.junk_mage.ability.minor.mark_of_shadow.description"
       mark_of_the_weaver:
-        name: ability.minor.mark_of_the_weaver.name
-        description: ability.minor.mark_of_the_weaver.description
+        name: "class.junk_mage.ability.minor.mark_of_the_weaver.name"
+        description: "class.junk_mage.ability.minor.mark_of_the_weaver.description"
       rust_and_iron:
-        name: ability.minor.rust_and_iron.name
-        description: ability.minor.rust_and_iron.description
+        name: "class.junk_mage.ability.minor.rust_and_iron.name"
+        description: "class.junk_mage.ability.minor.rust_and_iron.description"
       siphon_of_fortune:
-        name: ability.minor.siphon_of_fortune.name
-        description: ability.minor.siphon_of_fortune.description
+        name: "class.junk_mage.ability.minor.siphon_of_fortune.name"
+        description: "class.junk_mage.ability.minor.siphon_of_fortune.description"
       warding_spells:
-        name: ability.minor.warding_spells.name
-        description: ability.minor.warding_spells.description
+        name: "class.junk_mage.ability.minor.warding_spells.name"
+        description: "class.junk_mage.ability.minor.warding_spells.description"
       wretched_and_glorious:
-        name: ability.minor.wretched_and_glorious.name
-        description: ability.minor.wretched_and_glorious.description
+        name: "class.junk_mage.ability.minor.wretched_and_glorious.name"
+        description: "class.junk_mage.ability.minor.wretched_and_glorious.description"
     major:
       curse_of_the_sky_court:
-        name: ability.major.curse_of_the_sky_court.name
-        description: ability.major.curse_of_the_sky_court.description
+        name: "class.junk_mage.ability.major.curse_of_the_sky_court.name"
+        description: "class.junk_mage.ability.major.curse_of_the_sky_court.description"
         nested_abilities:
           ecstasy:
-            name: ability.minor.ecstasy.name
-            description: ability.minor.ecstasy.description
+            name: "class.junk_mage.ability.minor.ecstasy.name"
+            description: "class.junk_mage.ability.minor.ecstasy.description"
           a_moment_eternal:
-            name: ability.minor.a_moment_eternal.name
-            description: ability.minor.a_moment_eternal.description
+            name: "class.junk_mage.ability.minor.a_moment_eternal.name"
+            description: "class.junk_mage.ability.minor.a_moment_eternal.description"
           steal_the_night_away:
-            name: ability.minor.steal_the_night_away.name
-            description: ability.minor.steal_the_night_away.description
+            name: "class.junk_mage.ability.minor.steal_the_night_away.name"
+            description: "class.junk_mage.ability.minor.steal_the_night_away.description"
       fire_of_the_red_king:
-        name: ability.major.fire_of_the_red_king.name
-        description: ability.major.fire_of_the_red_king.description
+        name: "class.junk_mage.ability.major.fire_of_the_red_king.name"
+        description: "class.junk_mage.ability.major.fire_of_the_red_king.description"
         nested_abilities:
           words_of_flame:
-            name: ability.minor.words_of_flame.name
-            description: ability.minor.words_of_flame.description
+            name: "class.junk_mage.ability.minor.words_of_flame.name"
+            description: "class.junk_mage.ability.minor.words_of_flame.description"
           superheat:
-            name: ability.minor.superheat.name
-            description: ability.minor.superheat.description
+            name: "class.junk_mage.ability.minor.superheat.name"
+            description: "class.junk_mage.ability.minor.superheat.description"
           coin_gold_blood:
-            name: ability.minor.coin_gold_blood.name
-            description: ability.minor.coin_gold_blood.description
+            name: "class.junk_mage.ability.minor.coin_gold_blood.name"
+            description: "class.junk_mage.ability.minor.coin_gold_blood.description"
       frenzy_of_the_sky_court:
-        name: ability.major.frenzy_of_the_sky_court.name
-        description: ability.major.frenzy_of_the_sky_court.description
+        name: "class.junk_mage.ability.major.frenzy_of_the_sky_court.name"
+        description: "class.junk_mage.ability.major.frenzy_of_the_sky_court.description"
         nested_abilities:
           temporary_perfection:
-            name: ability.minor.temporary_perfection.name
-            description: ability.minor.temporary_perfection.description
+            name: "class.junk_mage.ability.minor.temporary_perfection.name"
+            description: "class.junk_mage.ability.minor.temporary_perfection.description"
           brisk_conjuration:
-            name: ability.minor.brisk_conjuration.name
-            description: ability.minor.brisk_conjuration.description
+            name: "class.junk_mage.ability.minor.brisk_conjuration.name"
+            description: "class.junk_mage.ability.minor.brisk_conjuration.description"
           maddening_storm:
-            name: ability.minor.maddening_storm.name
-            description: ability.minor.maddening_storm.description
+            name: "class.junk_mage.ability.minor.maddening_storm.name"
+            description: "class.junk_mage.ability.minor.maddening_storm.description"
       greed_of_the_red_king:
-        name: ability.major.greed_of_the_red_king.name
-        description: ability.major.greed_of_the_red_king.description
+        name: "class.junk_mage.ability.major.greed_of_the_red_king.name"
+        description: "class.junk_mage.ability.major.greed_of_the_red_king.description"
         nested_abilities:
           only_the_finest:
-            name: ability.minor.only_the_finest.name
-            description: ability.minor.only_the_finest.description
+            name: "class.junk_mage.ability.minor.only_the_finest.name"
+            description: "class.junk_mage.ability.minor.only_the_finest.description"
           gorge:
-            name: ability.minor.gorge.name
-            description: ability.minor.gorge.description
+            name: "class.junk_mage.ability.minor.gorge.name"
+            description: "class.junk_mage.ability.minor.gorge.description"
           a_king_demands:
-            name: ability.minor.a_king_demands.name
-            description: ability.minor.a_king_demands.description
+            name: "class.junk_mage.ability.minor.a_king_demands.name"
+            description: "class.junk_mage.ability.minor.a_king_demands.description"
       kiss_of_the_drowned_queen:
-        name: ability.major.kiss_of_the_drowned_queen.name
-        description: ability.major.kiss_of_the_drowned_queen.description
+        name: "class.junk_mage.ability.major.kiss_of_the_drowned_queen.name"
+        description: "class.junk_mage.ability.major.kiss_of_the_drowned_queen.description"
         nested_abilities:
           slumbering_eternal:
-            name: ability.minor.slumbering_eternal.name
-            description: ability.minor.slumbering_eternal.description
+            name: "class.junk_mage.ability.minor.slumbering_eternal.name"
+            description: "class.junk_mage.ability.minor.slumbering_eternal.description"
           body_of_water:
-            name: ability.minor.body_of_water.name
-            description: ability.minor.body_of_water.description
+            name: "class.junk_mage.ability.minor.body_of_water.name"
+            description: "class.junk_mage.ability.minor.body_of_water.description"
           grace:
-            name: ability.minor.grace.name
-            description: ability.minor.grace.description
+            name: "class.junk_mage.ability.minor.grace.name"
+            description: "class.junk_mage.ability.minor.grace.description"
       sanctum_of_the_stone_chorus:
-        name: ability.major.sanctum_of_the_stone_chorus.name
-        description: ability.major.sanctum_of_the_stone_chorus.description
+        name: "class.junk_mage.ability.major.sanctum_of_the_stone_chorus.name"
+        description: "class.junk_mage.ability.major.sanctum_of_the_stone_chorus.description"
         nested_abilities:
           benevolent:
-            name: ability.minor.benevolent.name
-            description: ability.minor.benevolent.description
+            name: "class.junk_mage.ability.minor.benevolent.name"
+            description: "class.junk_mage.ability.minor.benevolent.description"
           omnipresent:
-            name: ability.minor.omnipresent.name
-            description: ability.minor.omnipresent.description
+            name: "class.junk_mage.ability.minor.omnipresent.name"
+            description: "class.junk_mage.ability.minor.omnipresent.description"
           bountiful:
-            name: ability.minor.bountiful.name
-            description: ability.minor.bountiful.description
+            name: "class.junk_mage.ability.minor.bountiful.name"
+            description: "class.junk_mage.ability.minor.bountiful.description"
     zenith:
       the_herald_of_the_red_king:
-        name: ability.zenith.the_herald_of_the_red_king.name
-        description: ability.zenith.the_herald_of_the_red_king.description
+        name: "class.junk_mage.ability.zenith.the_herald_of_the_red_king.name"
+        description: "class.junk_mage.ability.zenith.the_herald_of_the_red_king.description"
       the_herald_of_the_drowned_queen:
-        name: ability.zenith.the_herald_of_the_drowned_queen.name
-        description: ability.zenith.the_herald_of_the_drowned_queen.description
+        name: "class.junk_mage.ability.zenith.the_herald_of_the_drowned_queen.name"
+        description: "class.junk_mage.ability.zenith.the_herald_of_the_drowned_queen.description"
       the_herald_of_the_stone_chorus:
-        name: ability.zenith.the_herald_of_the_stone_chorus.name
-        description: ability.zenith.the_herald_of_the_stone_chorus.description
+        name: "class.junk_mage.ability.zenith.the_herald_of_the_stone_chorus.name"
+        description: "class.junk_mage.ability.zenith.the_herald_of_the_stone_chorus.description"
 deep_apiarist:
-  name: class.deep_apiarist.name
-  description: class.deep_apiarist.description
+  name: "class.deep_apiarist.name"
+  description: "class.deep_apiarist.description"
   traits:
     skill: mend
     domain: occult
     resource:
       heartsbloom_rose_in_a_glass_jar:
-        name: resource.heartsbloom_rose_in_glass_jar
+        name: "class.deep_apiarist.resource.heartsbloom_rose_in_glass_jar"
         dice: d6
         domain: occult
         tags:
@@ -354,19 +354,19 @@ deep_apiarist:
     equipment:
       core:
         hive_tool:
-          name: equipment.hive_tool
+          name: "class.deep_apiarist.equipment.hive_tool"
           dice: d4
           type: kill
           tags:
             - brutal
       group_1:
         dimensional_barometer:
-          name: equipment.dimensional_barometer
+          name: "class.deep_apiarist.equipment.dimensional_barometer"
           dice: d6
           type: delve
       group_2:
         hunting_rifle:
-          name: equipment.hunting_rifle
+          name: "class.deep_apiarist.equipment.hunting_rifle"
           dice: d6
           type: kill
           tags:
@@ -374,7 +374,7 @@ deep_apiarist:
             - extreme_range
       group_3:
         smoker:
-          name: equipment.smoker.name
+          name: "class.deep_apiarist.equipment.smoker"
           dice: d4
           type: kill
           tags:
@@ -383,146 +383,146 @@ deep_apiarist:
   abilities:
     core:
       the_hive:
-        name: ability.core.the_hive.name
-        description: ability.core.the_hive.description
+        name: "class.deep_apiarist.ability.core.the_hive.name"
+        description: "class.deep_apiarist.ability.core.the_hive.description"
       release_the_swarm:
-        name: ability.core.release_the_swarm.name
-        description: ability.core.release_the_swarm.description
+        name: "class.deep_apiarist.ability.core.release_the_swarm.name"
+        description: "class.deep_apiarist.ability.core.release_the_swarm.description"
     minor:
       perfect_machine:
-        name: ability.minor.perfect_machine.name
-        description: ability.minor.perfect_machine.description
+        name: "class.deep_apiarist.ability.minor.perfect_machine.name"
+        description: "class.deep_apiarist.ability.minor.perfect_machine.description"
       apisambulation:
-        name: ability.minor.apisambulation.name
-        description: ability.minor.apisambulation.description
+        name: "class.deep_apiarist.ability.minor.apisambulation.name"
+        description: "class.deep_apiarist.ability.minor.apisambulation.description"
       hiveborn:
-        name: ability.minor.hiveborn.name
-        description: ability.minor.hiveborn.description
+        name: "class.deep_apiarist.ability.minor.hiveborn.name"
+        description: "class.deep_apiarist.ability.minor.hiveborn.description"
       hunter_of_the_damned:
-        name: ability.minor.hunter_of_the_damned.name
-        description: ability.minor.hunter_of_the_damned.description
+        name: "class.deep_apiarist.ability.minor.hunter_of_the_damned.name"
+        description: "class.deep_apiarist.ability.minor.hunter_of_the_damned.description"
       intoxicant:
-        name: ability.minor.intoxicant.name
-        description: ability.minor.intoxicant.description
+        name: "class.deep_apiarist.ability.minor.intoxicant.name"
+        description: "class.deep_apiarist.ability.minor.intoxicant.description"
       intrusion:
-        name: ability.minor.intrusion.name
-        description: ability.minor.intrusion.description
+        name: "class.deep_apiarist.ability.minor.intrusion.name"
+        description: "class.deep_apiarist.ability.minor.intrusion.description"
       many_eyes:
-        name: ability.minor.many_eyes.name
-        description: ability.minor.many_eyes.description
+        name: "class.deep_apiarist.ability.minor.many_eyes.name"
+        description: "class.deep_apiarist.ability.minor.many_eyes.description"
       perfect_structure:
-        name: ability.minor.perfect_structure.name
-        description: ability.minor.perfect_structure.description
+        name: "class.deep_apiarist.ability.minor.perfect_structure.name"
+        description: "class.deep_apiarist.ability.minor.perfect_structure.description"
       thrice_warded:
-        name: ability.minor.thrice_warded.name
-        description: ability.minor.thrice_warded.description
+        name: "class.deep_apiarist.ability.minor.thrice_warded.name"
+        description: "class.deep_apiarist.ability.minor.thrice_warded.description"
       uncanny_biology:
-        name: ability.minor.uncanny_biology.name
-        description: ability.minor.uncanny_biology.description
+        name: "class.deep_apiarist.ability.minor.uncanny_biology.name"
+        description: "class.deep_apiarist.ability.minor.uncanny_biology.description"
       waxen_sigils:
-        name: ability.minor.waxen_sigils.name
-        description: ability.minor.waxen_sigils.description
+        name: "class.deep_apiarist.ability.minor.waxen_sigils.name"
+        description: "class.deep_apiarist.ability.minor.waxen_sigils.description"
       whispers_of_the_hive:
-        name: ability.minor.whispers_of_the_hive.name
-        description: ability.minor.whispers_of_the_hive.description
+        name: "class.deep_apiarist.ability.minor.whispers_of_the_hive.name"
+        description: "class.deep_apiarist.ability.minor.whispers_of_the_hive.description"
       wisdom_flows_so_sweet:
-        name: ability.minor.wisdom_flows_so_sweet.name
-        description: ability.minor.wisdom_flows_so_sweet.description
+        name: "class.deep_apiarist.ability.minor.wisdom_flows_so_sweet.name"
+        description: "class.deep_apiarist.ability.minor.wisdom_flows_so_sweet.description"
     major:
       annihilation:
-        name: ability.major.annihilation.name
-        description: ability.major.annihilation.description
+        name: "class.deep_apiarist.ability.major.annihilation.name"
+        description: "class.deep_apiarist.ability.major.annihilation.description"
         nested_abilities:
           blossom_within_the_skull:
-            name: ability.minor.blossom_within_the_skull.name
-            description: ability.minor.blossom_within_the_skull.description
+            name: "class.deep_apiarist.ability.minor.blossom_within_the_skull.name"
+            description: "class.deep_apiarist.ability.minor.blossom_within_the_skull.description"
           dark_flowers:
-            name: ability.minor.dark_flowers.name
-            description: ability.minor.dark_flowers.description
+            name: "class.deep_apiarist.ability.minor.dark_flowers.name"
+            description: "class.deep_apiarist.ability.minor.dark_flowers.description"
           that_which_is_golden:
-            name: ability.minor.that_which_is_golden.name
-            description: ability.minor.that_which_is_golden.description
+            name: "class.deep_apiarist.ability.minor.that_which_is_golden.name"
+            description: "class.deep_apiarist.ability.minor.that_which_is_golden.description"
       blessed_toxin:
-        name: ability.major.blessed_toxin.name
-        description: ability.major.blessed_toxin.description
+        name: "class.deep_apiarist.ability.major.blessed_toxin.name"
+        description: "class.deep_apiarist.ability.major.blessed_toxin.description"
         nested_abilities:
           fearless:
-            name: ability.minor.fearless.name
-            description: ability.minor.fearless.description
+            name: "class.deep_apiarist.ability.minor.fearless.name"
+            description: "class.deep_apiarist.ability.minor.fearless.description"
           painless:
-            name: ability.minor.painless.name
-            description: ability.minor.painless.description
+            name: "class.deep_apiarist.ability.minor.painless.name"
+            description: "class.deep_apiarist.ability.minor.painless.description"
           bloodless:
-            name: ability.minor.bloodless.name
-            description: ability.minor.bloodless.description
+            name: "class.deep_apiarist.ability.minor.bloodless.name"
+            description: "class.deep_apiarist.ability.minor.bloodless.description"
       delirium_spike:
-        name: ability.major.delirium_spike.name
-        description: ability.major.delirium_spike.description
+        name: "class.deep_apiarist.ability.major.delirium_spike.name"
+        description: "class.deep_apiarist.ability.major.delirium_spike.description"
         nested_abilities:
           imperfect_balance:
-            name: ability.minor.imperfect_balance.name
-            description: ability.minor.imperfect_balance.description
+            name: "class.deep_apiarist.ability.minor.imperfect_balance.name"
+            description: "class.deep_apiarist.ability.minor.imperfect_balance.description"
           venomous_hex:
-            name: ability.minor.venomous_hex.name
-            description: ability.minor.venomous_hex.description
+            name: "class.deep_apiarist.ability.minor.venomous_hex.name"
+            description: "class.deep_apiarist.ability.minor.venomous_hex.description"
           inquisitive_burrowers:
-            name: ability.minor.inquisitive_burrowers.name
-            description: ability.minor.inquisitive_burrowers.description
+            name: "class.deep_apiarist.ability.minor.inquisitive_burrowers.name"
+            description: "class.deep_apiarist.ability.minor.inquisitive_burrowers.description"
       sacred_geometry:
-        name: ability.major.sacred_geometry.name
-        description: ability.major.sacred_geometry.description
+        name: "class.deep_apiarist.ability.major.sacred_geometry.name"
+        description: "class.deep_apiarist.ability.major.sacred_geometry.description"
         nested_abilities:
           majestic:
-            name: ability.minor.majestic.name
-            description: ability.minor.majestic.description
+            name: "class.deep_apiarist.ability.minor.majestic.name"
+            description: "class.deep_apiarist.ability.minor.majestic.description"
           pristine:
-            name: ability.minor.pristine.name
-            description: ability.minor.pristine.description
+            name: "class.deep_apiarist.ability.minor.pristine.name"
+            description: "class.deep_apiarist.ability.minor.pristine.description"
           regal:
-            name: ability.minor.regal.name
-            description: ability.minor.regal.description
+            name: "class.deep_apiarist.ability.minor.regal.name"
+            description: "class.deep_apiarist.ability.minor.regal.description"
       unchaos:
-        name: ability.major.unchaos.name
-        description: ability.major.unchaos.description
+        name: "class.deep_apiarist.ability.major.unchaos.name"
+        description: "class.deep_apiarist.ability.major.unchaos.description"
         nested_abilities:
           stabilisation:
-            name: ability.minor.stabilisation.name
-            description: ability.minor.stabilisation.description
+            name: "class.deep_apiarist.ability.minor.stabilisation.name"
+            description: "class.deep_apiarist.ability.minor.stabilisation.description"
           perfection:
-            name: ability.minor.perfection.name
-            description: ability.minor.perfection.description
+            name: "class.deep_apiarist.ability.minor.perfection.name"
+            description: "class.deep_apiarist.ability.minor.perfection.description"
           filed_away:
-            name: ability.minor.filed_away.name
-            description: ability.minor.filed_away.description
+            name: "class.deep_apiarist.ability.minor.filed_away.name"
+            description: "class.deep_apiarist.ability.minor.filed_away.description"
     zenith:
       absolute_stasis:
-        name: ability.zenith.absolute_stasis.name
-        description: ability.zenith.absolute_stasis.description
+        name: "class.deep_apiarist.ability.zenith.absolute_stasis.name"
+        description: "class.deep_apiarist.ability.zenith.absolute_stasis.description"
       dimensional_bastion:
-        name: ability.zenith.dimensional_bastion.name
-        description: ability.zenith.dimensional_bastion.description
+        name: "class.deep_apiarist.ability.zenith.dimensional_bastion.name"
+        description: "class.deep_apiarist.ability.zenith.dimensional_bastion.description"
       surrender_to_chaos:
-        name: ability.zenith.surrender_to_chaos.name
-        description: ability.zenith.surrender_to_chaos.description
+        name: "class.deep_apiarist.ability.zenith.surrender_to_chaos.name"
+        description: "class.deep_apiarist.ability.zenith.surrender_to_chaos.description"
 heretic:
-  name: class.heretic.name
-  description: class.heretic.description
+  name: "class.heretic.name"
+  description: "class.heretic.description"
   traits:
     skill: mend
     domain: religion
     resource:
-      heartsbloom_rose_in_a_glass_jar:
-        name: resource.single_devotional_candle
+      single_devotional_candle:
+        name: "class.heretic.resource.single_devotional_candle"
         dice: d6
         domain: religion
     equipment:
       group_1:
         spireblack_brazier_unlit:
-          name: equipment.spireblack_brazier_unlit
+          name: "class.heretic.equipment.spireblack_brazier_unlit"
           dice: d6
           type: kill
         spireblack_brazier_lit:
-          name: equipment.spireblack_brazier_lit
+          name: "class.heretic.equipment.spireblack_brazier_lit"
           dice: d8
           type: kill
           tags:
@@ -530,153 +530,168 @@ heretic:
             - dangerous
       group_2:
         breech_loading_pistol:
-          name: equipment.breech_loading_pistol
+          name: "class.heretic.equipment.breech_loading_pistol"
           dice: d6
           type: kill
           tags:
             - ranged
             - reload
         seekers_blade:
-          name: equipment.seekers_blade
+          name: "class.heretic.equipment.seekers_blade"
           dice: d6
           type: kill
           tags:
             - brutal
       group_3:
         scripture_etched_bandages:
-          name: equipment.scripture_etched_bandages
+          name: "class.heretic.equipment.scripture_etched_bandages"
           dice: d6
           type: mend
           resistances:
             - blood
             - mind
         staff:
-          name: equipment.staff
+          name: "class.heretic.equipment.staff"
           dice: d6
           type: kill
   abilities:
     core:
       ministrations:
-        name: ability.core.ministrations.name
-        description: ability.core.ministrations.description
+        name: "class.heretic.ability.core.ministrations.name"
+        description: "class.heretic.ability.core.ministrations.description"
     minor:
       grave_duty:
-        name: ability.minor.grave_duty.name
-        description: ability.minor.grave_duty.description
+        name: "class.heretic.ability.minor.grave_duty.name"
+        description: "class.heretic.ability.minor.grave_duty.description"
       the_goddess_gifts:
-        name: ability.minor.the_goddess_gifts.name
-        description: ability.minor.the_goddess_gifts.description
+        name: "class.heretic.ability.minor.the_goddess_gifts.name"
+        description: "class.heretic.ability.minor.the_goddess_gifts.description"
       the_left_hand_of_the_goddess:
-        name: ability.minor.the_left_hand_of_the_goddess.name
-        description: ability.minor.the_left_hand_of_the_goddess.description
+        name: "class.heretic.ability.minor.the_left_hand_of_the_goddess.name"
+        description: "class.heretic.ability.minor.the_left_hand_of_the_goddess.description"
       liars_burden:
-        name: ability.minor.liars_burden.name
-        description: ability.minor.liars_burden.description
+        name: "class.heretic.ability.minor.liars_burden.name"
+        description: "class.heretic.ability.minor.liars_burden.description"
       incandescent_communion:
-        name: ability.minor.incandescent_communion.name
-        description: ability.minor.incandescent_communion.description
+        name: "class.heretic.ability.minor.incandescent_communion.name"
+        description: "class.heretic.ability.minor.incandescent_communion.description"
       righteous_rhetoric:
-        name: ability.minor.righteous_rhetoric.name
-        description: ability.minor.righteous_rhetoric.description
+        name: "class.heretic.ability.minor.righteous_rhetoric.name"
+        description: "class.heretic.ability.minor.righteous_rhetoric.description"
       rite_of_placidity:
-        name: ability.minor.rite_of_placidity.name
-        description: ability.minor.rite_of_placidity.description
+        name: "class.heretic.ability.minor.rite_of_placidity.name"
+        description: "class.heretic.ability.minor.rite_of_placidity.description"
       sacred_tattoo:
-        name: ability.minor.sacred_tattoo.name
-        description: ability.minor.sacred_tattoo.description
+        name: "class.heretic.ability.minor.sacred_tattoo.name"
+        description: "class.heretic.ability.minor.sacred_tattoo.description"
       shard_of_the_temple_door:
-        name: ability.minor.shard_of_the_temple_door.name
-        description: ability.minor.shard_of_the_temple_door.description
+        name: "class.heretic.ability.minor.shard_of_the_temple_door.name"
+        description: "class.heretic.ability.minor.shard_of_the_temple_door.description"
       tomes_of_knowledge:
-        name: ability.minor.tomes_of_knowledge.name
-        description: ability.minor.tomes_of_knowledge.description
+        name: "class.heretic.ability.minor.tomes_of_knowledge.name"
+        description: "class.heretic.ability.minor.tomes_of_knowledge.description"
       unwavering_faith:
-        name: ability.minor.unwavering_faith.name
-        description: ability.minor.unwavering_faith.description
+        name: "class.heretic.ability.minor.unwavering_faith.name"
+        description: "class.heretic.ability.minor.unwavering_faith.description"
       words_of_grace:
-        name: ability.minor.words_of_grace.name
-        description: ability.minor.words_of_grace.description
+        name: "class.heretic.ability.minor.words_of_grace.name"
+        description: "class.heretic.ability.minor.words_of_grace.description"
     major:
       oath_of_community:
+        name: "class.heretic.ability.major.oath_of_community.name"
+        description: "class.heretic.ability.major.oath_of_community.description"
         nested_abilities:
           martyrs_blood:
-            name: ability.minor.martyrs_blood.name
-            description: ability.minor.martyrs_blood.description
+            name: "class.heretic.ability.minor.martyrs_blood.name"
+            description: "class.heretic.ability.minor.martyrs_blood.description"
           miraculous_intervention:
-            name: ability.minor.miraculous_intervention.name
-            description: ability.minor.miraculous_intervention.description
+            name: "class.heretic.ability.minor.miraculous_intervention.name"
+            description: "class.heretic.ability.minor.miraculous_intervention.description"
           cast_asunder:
-            name: ability.minor.cast_asunder.name
-            description: ability.minor.cast_asunder.description
+            name: "class.heretic.ability.minor.cast_asunder.name"
+            description: "class.heretic.ability.minor.cast_asunder.description"
       oath_of_fury:
+        name: "class.heretic.ability.major.oath_of_fury.name"
+        description: "class.heretic.ability.major.oath_of_fury.description"
         nested_abilities:
           avatar_of_flame:
-            name: ability.minor.avatar_of_flame.name
-            description: ability.minor.avatar_of_flame.description
+            name: "class.heretic.ability.minor.avatar_of_flame.name"
+            description: "class.heretic.ability.minor.avatar_of_flame.description"
           avatar_of_moonlight:
-            name: ability.minor.avatar_of_moonlight.name
-            description: ability.minor.avatar_of_moonlight.description
+            name: "class.heretic.ability.minor.avatar_of_moonlight.name"
+            description: "class.heretic.ability.minor.avatar_of_moonlight.description"
           avatar_of_shadows:
-            name: ability.minor.avatar_of_shadows.name
-            description: ability.minor.avatar_of_shadows.description
+            name: "class.heretic.ability.minor.avatar_of_shadows.name"
+            description: "class.heretic.ability.minor.avatar_of_shadows.description"
       oath_of_sagacity:
+        name: "class.heretic.ability.major.oath_of_sagacity.name"
+        description: "class.heretic.ability.major.oath_of_sagacity.description"
         nested_abilities:
           fragment_of_lekole:
-            name: ability.minor.fragment_of_lekole.name
-            description: ability.minor.fragment_of_lekole.description
+            name: "class.heretic.ability.minor.fragment_of_lekole.name"
+            description: "class.heretic.ability.minor.fragment_of_lekole.description"
           fragment_of_lombre:
-            name: ability.minor.fragment_of_lombre.name
-            description: ability.minor.fragment_of_lombre.description
+            name: "class.heretic.ability.minor.fragment_of_lombre.name"
+            description: "class.heretic.ability.minor.fragment_of_lombre.description"
           fragment_of_limye:
-            name: ability.minor.fragment_of_limye.name
-            description: ability.minor.fragment_of_limye.description
+            name: "class.heretic.ability.minor.fragment_of_limye.name"
+            description: "class.heretic.ability.minor.fragment_of_limye.description"
       oath_of_tenacity:
+        name: "class.heretic.ability.major.oath_of_tenacity.name"
+        description: "class.heretic.ability.major.oath_of_tenacity.description"
         nested_abilities:
           implacable_faith:
-            name: ability.minor.implacable_faith.name
-            description: ability.minor.implacable_faith.description
+            name: "class.heretic.ability.minor.implacable_faith.name"
+            description: "class.heretic.ability.minor.implacable_faith.description"
           glorious_resurgence:
-            name: ability.minor.glorious_resurgence.name
-            description: ability.minor.glorious_resurgence.description
+            name: "class.heretic.ability.minor.glorious_resurgence.name"
+            description: "class.heretic.ability.minor.glorious_resurgence.description"
           abide_with_me:
-            name: ability.minor.abide_with_me.name
-            description: ability.minor.abide_with_me.description
+            name: "class.heretic.ability.minor.abide_with_me.name"
+            description: "class.heretic.ability.minor.abide_with_me.description"
       rite_of_vigilance:
+        name: "class.heretic.ability.major.rite_of_vigilance.name"
+        description: "class.heretic.ability.major.rite_of_vigilance.description"
         nested_abilities:
           hunter:
-            name: ability.minor.hunter.name
-            description: ability.minor.hunter.description
+            name: "class.heretic.ability.minor.hunter.name"
+            description: "class.heretic.ability.minor.hunter.description"
           hearts_sight:
-            name: ability.minor.hearts_sight.name
-            description: ability.minor.hearts_sight.description
+            name: "class.heretic.ability.minor.hearts_sight.name"
+            description: "class.heretic.ability.minor.hearts_sight.description"
           blessing:
-            name: ability.minor.blessing.name
-            description: ability.minor.blessing.description
+            name: "class.heretic.ability.minor.blessing.name"
+            description: "class.heretic.ability.minor.blessing.description"
     zenith:
       ascension:
-        name: ability.zenith.ascension.name
-        description: ability.zenith.ascension.description
+        name: "class.heretic.ability.zenith.ascension.name"
+        description: "class.heretic.ability.zenith.ascension.description"
       glory:
-        name: ability.zenith.glory.name
-        description: ability.zenith.glory.description
+        name: "class.heretic.ability.zenith.glory.name"
+        description: "class.heretic.ability.zenith.glory.description"
       testament_of_faith:
-        name: ability.zenith.testament_of_faith.name
-        description: ability.zenith.testament_of_faith.description
+        name: "class.heretic.ability.zenith.testament_of_faith.name"
+        description: "class.heretic.ability.zenith.testament_of_faith.description"
 cleaver:
+  name: "class.cleaver.name"
+  description: "class.cleaver.description"
   traits:
     skill: hunt
     domain: cursed
     resource:
       freshly_harvested_heart:
+        name: "class.cleaver.resource.freshly_harvested_heart"
         dice: d6
         domain: wild
     equipment:
       core:
         hunting_knife:
+          name: "class.cleaver.equipment.hunting_knife"
           dice: d6
           type: kill
       group_1:
         cleaver:
+          name: "class.cleaver.equipment.cleaver"
           dice: d6
           type: kill
           tags:
@@ -684,12 +699,14 @@ cleaver:
             - tiring
       group_2:
         bone_charms_and_animal_gut_sutures:
+          name: "class.cleaver.equipment.bone_charms"
           dice: d6
           type: mend
           resistances:
             - blood
       group_3:
         heavy_draw_bow:
+          name: "class.cleaver.equipment.heavy_draw_bow"
           dice: d8
           type: kill
           tags:
@@ -698,128 +715,140 @@ cleaver:
   abilities:
     core:
       heartsblood:
-        name: ability.core.heartsblood.name
-        description: ability.core.heartsblood.description
+        name: "class.cleaver.ability.core.heartsblood.name"
+        description: "class.cleaver.ability.core.heartsblood.description"
       the_red_feast:
-        name: ability.core.the_red_feast.name
-        description: ability.core.the_red_feast.description
+        name: "class.cleaver.ability.core.the_red_feast.name"
+        description: "class.cleaver.ability.core.the_red_feast.description"
     minor:
       call_of_the_wild:
-        name: ability.minor.call_of_the_wild.name
-        description: ability.minor.call_of_the_wild.description
+        name: "class.cleaver.ability.minor.call_of_the_wild.name"
+        description: "class.cleaver.ability.minor.call_of_the_wild.description"
       darkling_eyes:
-        name: ability.minor.darkling_eyes.name
-        description: ability.minor.darkling_eyes.description
+        name: "class.cleaver.ability.minor.darkling_eyes.name"
+        description: "class.cleaver.ability.minor.darkling_eyes.description"
       desperate_measures:
-        name: ability.minor.desperate_measures.name
-        description: ability.minor.desperate_measures.description
+        name: "class.cleaver.ability.minor.desperate_measures.name"
+        description: "class.cleaver.ability.minor.desperate_measures.description"
       dominion:
-        name: ability.minor.dominion.name
-        description: ability.minor.dominion.description
+        name: "class.cleaver.ability.minor.dominion.name"
+        description: "class.cleaver.ability.minor.dominion.description"
       fell_metabolism:
-        name: ability.minor.fell_metabolism.name
-        description: ability.minor.fell_metabolism.description
+        name: "class.cleaver.ability.minor.fell_metabolism.name"
+        description: "class.cleaver.ability.minor.fell_metabolism.description"
       fractured_form:
-        name: ability.minor.fractured_form.name
-        description: ability.minor.fractured_form.description
+        name: "class.cleaver.ability.minor.fractured_form.name"
+        description: "class.cleaver.ability.minor.fractured_form.description"
       gut_instinct:
-        name: ability.minor.gut_instinct.name
-        description: ability.minor.gut_instinct.description
+        name: "class.cleaver.ability.minor.gut_instinct.name"
+        description: "class.cleaver.ability.minor.gut_instinct.description"
       inhuman:
-        name: ability.minor.inhuman.name
-        description: ability.minor.inhuman.description
+        name: "class.cleaver.ability.minor.inhuman.name"
+        description: "class.cleaver.ability.minor.inhuman.description"
       pitchskin:
-        name: ability.minor.pitchskin.name
-        description: ability.minor.pitchskin.description
+        name: "class.cleaver.ability.minor.pitchskin.name"
+        description: "class.cleaver.ability.minor.pitchskin.description"
       symbiotic:
-        name: ability.minor.symbiotic.name
-        description: ability.minor.symbiotic.description
+        name: "class.cleaver.ability.minor.symbiotic.name"
+        description: "class.cleaver.ability.minor.symbiotic.description"
       twisting_territory:
-        name: ability.minor.twisting_territory.name
-        description: ability.minor.twisting_territory.description
+        name: "class.cleaver.ability.minor.twisting_territory.name"
+        description: "class.cleaver.ability.minor.twisting_territory.description"
       unmaking_claws:
-        name: ability.minor.unmaking_claws.name
-        description: ability.minor.unmaking_claws.description
+        name: "class.cleaver.ability.minor.unmaking_claws.name"
+        description: "class.cleaver.ability.minor.unmaking_claws.description"
       vessel:
-        name: ability.minor.vessel.name
-        description: ability.minor.vessel.description
+        name: "class.cleaver.ability.minor.vessel.name"
+        description: "class.cleaver.ability.minor.vessel.description"
     major:
       bloodbound_beast:
+        name: "class.cleaver.ability.major.bloodbound_beast.name"
+        description: "class.cleaver.ability.major.bloodbound_beast.description"
         nested_abilities:
           pack_hunter:
-            name: ability.minor.pack_hunter.name
-            description: ability.minor.pack_hunter.description
+            name: "class.cleaver.ability.minor.pack_hunter.name"
+            description: "class.cleaver.ability.minor.pack_hunter.description"
           pounce:
-            name: ability.minor.pounce.name
-            description: ability.minor.pounce.description
+            name: "class.cleaver.ability.minor.pounce.name"
+            description: "class.cleaver.ability.minor.pounce.description"
           faithful_until_the_end:
-            name: ability.minor.faithful_until_the_end.name
-            description: ability.minor.faithful_until_the_end.description
+            name: "class.cleaver.ability.minor.faithful_until_the_end.name"
+            description: "class.cleaver.ability.minor.faithful_until_the_end.description"
       chimeric_strain:
+        name: "class.cleaver.ability.major.chimeric_strain.name"
+        description: "class.cleaver.ability.major.chimeric_strain.description"
         nested_abilities:
           blighted:
-            name: ability.minor.blighted.name
-            description: ability.minor.blighted.description
+            name: "class.cleaver.ability.minor.blighted.name"
+            description: "class.cleaver.ability.minor.blighted.description"
           horned:
-            name: ability.minor.horned.name
-            description: ability.minor.horned.description
+            name: "class.cleaver.ability.minor.horned.name"
+            description: "class.cleaver.ability.minor.horned.description"
           bezerk:
-            name: ability.minor.bezerk.name
-            description: ability.minor.bezerk.description
+            name: "class.cleaver.ability.minor.bezerk.name"
+            description: "class.cleaver.ability.minor.bezerk.description"
       extinction_bow:
+        name: "class.cleaver.ability.major.extinction_bow.name"
+        description: "class.cleaver.ability.major.extinction_bow.description"
         nested_abilities:
           harpoon:
-            name: ability.minor.harpoon.name
-            description: ability.minor.harpoon.description
+            name: "class.cleaver.ability.minor.harpoon.name"
+            description: "class.cleaver.ability.minor.harpoon.description"
           hunters_eye:
-            name: ability.minor.hunters_eye.name
-            description: ability.minor.hunters_eye.description
+            name: "class.cleaver.ability.minor.hunters_eye.name"
+            description: "class.cleaver.ability.minor.hunters_eye.description"
           nightmare_arrow:
-            name: ability.minor.nightmare_arrow.name
-            description: ability.minor.nightmare_arrow.description
+            name: "class.cleaver.ability.minor.nightmare_arrow.name"
+            description: "class.cleaver.ability.minor.nightmare_arrow.description"
       monstrous_appetite:
+        name: "class.cleaver.ability.major.monstrous_appetite.name"
+        description: "class.cleaver.ability.major.monstrous_appetite.description"
         nested_abilities:
           rejuvenation:
-            name: ability.minor.rejuvenation.name
-            description: ability.minor.rejuvenation.description
+            name: "class.cleaver.ability.minor.rejuvenation.name"
+            description: "class.cleaver.ability.minor.rejuvenation.description"
           tainted_meat:
-            name: ability.minor.tainted_meat.name
-            description: ability.minor.tainted_meat.description
+            name: "class.cleaver.ability.minor.tainted_meat.name"
+            description: "class.cleaver.ability.minor.tainted_meat.description"
           horrendous_bite:
-            name: ability.minor.horrendous_bite.name
-            description: ability.minor.horrendous_bite.description
+            name: "class.cleaver.ability.minor.horrendous_bite.name"
+            description: "class.cleaver.ability.minor.horrendous_bite.description"
       the_wild_hunt:
+        name: "class.cleaver.ability.major.the_wild_hunt.name"
+        description: "class.cleaver.ability.major.the_wild_hunt.description"
         nested_abilities:
           echoes_of_the_city_beneath:
-            name: ability.minor.echoes_of_the_city_beneath.name
-            description: ability.minor.echoes_of_the_city_beneath.description
+            name: "class.cleaver.ability.minor.echoes_of_the_city_beneath.name"
+            description: "class.cleaver.ability.minor.echoes_of_the_city_beneath.description"
           storyteller:
-            name: ability.minor.storyteller.name
-            description: ability.minor.storyteller.description
+            name: "class.cleaver.ability.minor.storyteller.name"
+            description: "class.cleaver.ability.minor.storyteller.description"
           bounty_shared:
-            name: ability.minor.bounty_shared.name
-            description: ability.minor.bounty_shared.description
+            name: "class.cleaver.ability.minor.bounty_shared.name"
+            description: "class.cleaver.ability.minor.bounty_shared.description"
     zenith:
       angelic:
-        name: ability.zenith.angelic.name
-        description: ability.zenith.angelic.description
+        name: "class.cleaver.ability.zenith.angelic.name"
+        description: "class.cleaver.ability.zenith.angelic.description"
       legendary_beast:
-        name: ability.zenith.legendary_beast.name
-        description: ability.zenith.legendary_beast.description
+        name: "class.cleaver.ability.zenith.legendary_beast.name"
+        description: "class.cleaver.ability.zenith.legendary_beast.description"
       weald_and_woe:
-        name: ability.zenith.weald_and_woe.name
-        description: ability.zenith.weald_and_woe.description
+        name: "class.cleaver.ability.zenith.weald_and_woe.name"
+        description: "class.cleaver.ability.zenith.weald_and_woe.description"
 deadwalker:
   traits:
     skill: delve
     domain: desolate
     resource:
       bag_of_interesting_teeth:
+        name: "class.deadwalker.resource.bag_of_interesting_teeth"
         dice: d6
         domain: desolate
     equipment:
       group_1:
         hunting_rifle:
+          name: "class.deadwalker.equipment.hunting_rifle"
           type: kill
           dice: d6
           tags:
@@ -827,12 +856,14 @@ deadwalker:
             - reload
       group_2:
         greatsword:
+          name: "class.deadwalker.equipment.greatsword"
           type: kill
           dice: d10
           tags:
             - tiring
       group_3:
         bootleg_ambrosia:
+          name: "class.deadwalker.equipment.bootleg_ambrosia"
           type: mend
           resistances:
             - mind
@@ -841,133 +872,144 @@ deadwalker:
             - potent
             - expensive
         ritual_blade:
+          name: "class.deadwalker.equipment.ritual_blade"
           type: kill
           dice: d6
   abilities:
     core:
       death_follows_close:
-        name: ability.core.death_follows_close.name
-        description: ability.core.death_follows_close.description
+        name: "class.deadwalker.ability.core.death_follows_close.name"
+        description: "class.deadwalker.ability.core.death_follows_close.description"
       enter_the_grey:
-        name: ability.core.enter_the_grey.name
-        description: ability.core.enter_the_grey.description
+        name: "class.deadwalker.ability.core.enter_the_grey.name"
+        description: "class.deadwalker.ability.core.enter_the_grey.description"
     minor:
       adept:
-        name: ability.minor.adept.name
-        description: ability.minor.adept.description
+        name: "class.deadwalker.ability.minor.adept.name"
+        description: "class.deadwalker.ability.minor.adept.description"
       deathless:
-        name: ability.minor.deathless.name
-        description: ability.minor.deathless.description
+        name: "class.deadwalker.ability.minor.deathless.name"
+        description: "class.deadwalker.ability.minor.deathless.description"
       dirt_under_the_fingernails:
-        name: ability.minor.dirt_under_the_fingernails.name
-        description: ability.minor.dirt_under_the_fingernails.description
+        name: "class.deadwalker.ability.minor.dirt_under_the_fingernails.name"
+        description: "class.deadwalker.ability.minor.dirt_under_the_fingernails.description"
       explorer:
-        name: ability.minor.explorer.name
-        description: ability.minor.explorer.description
+        name: "class.deadwalker.ability.minor.explorer.name"
+        description: "class.deadwalker.ability.minor.explorer.description"
       grail_armour:
-        name: ability.minor.grail_armour.name
-        description: ability.minor.grail_armour.description
+        name: "class.deadwalker.ability.minor.grail_armour.name"
+        description: "class.deadwalker.ability.minor.grail_armour.description"
       grim_reaper:
-        name: ability.minor.grim_reaper.name
-        description: ability.minor.grim_reaper.description
+        name: "class.deadwalker.ability.minor.grim_reaper.name"
+        description: "class.deadwalker.ability.minor.grim_reaper.description"
       the_harvest:
-        name: ability.minor.the_harvest.name
-        description: ability.minor.the_harvest.description
+        name: "class.deadwalker.ability.minor.the_harvest.name"
+        description: "class.deadwalker.ability.minor.the_harvest.description"
       last_rites:
-        name: ability.minor.last_rites.name
-        description: ability.minor.last_rites.description
+        name: "class.deadwalker.ability.minor.last_rites.name"
+        description: "class.deadwalker.ability.minor.last_rites.description"
       marked_for_death:
-        name: ability.minor.marked_for_death.name
-        description: ability.minor.marked_for_death.description
+        name: "class.deadwalker.ability.minor.marked_for_death.name"
+        description: "class.deadwalker.ability.minor.marked_for_death.description"
       shadow:
-        name: ability.minor.shadow.name
-        description: ability.minor.shadow.description
+        name: "class.deadwalker.ability.minor.shadow.name"
+        description: "class.deadwalker.ability.minor.shadow.description"
       survivor:
-        name: ability.minor.survivor.name
-        description: ability.minor.survivor.description
+        name: "class.deadwalker.ability.minor.survivor.name"
+        description: "class.deadwalker.ability.minor.survivor.description"
       tattered_soul:
-        name: ability.minor.tattered_soul.name
-        description: ability.minor.tattered_soul.description
+        name: "class.deadwalker.ability.minor.tattered_soul.name"
+        description: "class.deadwalker.ability.minor.tattered_soul.description"
       walking_reliquary:
-        name: ability.minor.walking_reliquary.name
-        description: ability.minor.walking_reliquary.description
+        name: "class.deadwalker.ability.minor.walking_reliquary.name"
+        description: "class.deadwalker.ability.minor.walking_reliquary.description"
     major:
       descent:
+        name: "class.deadwalker.ability.major.descent.name"
+        description: "class.deadwalker.ability.major.descent.description"
         nested_abilities:
           esoteric_cartographer:
-            name: ability.minor.esoteric_cartographer.name
-            description: ability.minor.esoteric_cartographer.description
+            name: "class.deadwalker.ability.minor.esoteric_cartographer.name"
+            description: "class.deadwalker.ability.minor.esoteric_cartographer.description"
           step_between:
-            name: ability.minor.step_between.name
-            description: ability.minor.step_between.description
+            name: "class.deadwalker.ability.minor.step_between.name"
+            description: "class.deadwalker.ability.minor.step_between.description"
           all_doors_as_one:
-            name: ability.minor.all_doors_as_one.name
-            description: ability.minor.all_doors_as_one.description
+            name: "class.deadwalker.ability.minor.all_doors_as_one.name"
+            description: "class.deadwalker.ability.minor.all_doors_as_one.description"
       echoes:
+        name: "class.deadwalker.ability.major.echoes.name"
+        description: "class.deadwalker.ability.major.echoes.description"
         nested_abilities:
           hidden_passageway:
-            name: ability.minor.hidden_passageway.name
-            description: ability.minor.hidden_passageway.description
+            name: "class.deadwalker.ability.minor.hidden_passageway.name"
+            description: "class.deadwalker.ability.minor.hidden_passageway.description"
           fragmentary_recollection:
-            name: ability.minor.fragmentary_recollection.name
-            description: ability.minor.fragmentary_recollection.description
+            name: "class.deadwalker.ability.minor.fragmentary_recollection.name"
+            description: "class.deadwalker.ability.minor.fragmentary_recollection.description"
           absorb_memories:
-            name: ability.minor.absorb_memories.name
-            description: ability.minor.absorb_memories.description
+            name: "class.deadwalker.ability.minor.absorb_memories.name"
+            description: "class.deadwalker.ability.minor.absorb_memories.description"
       invidious_spectre:
+        name: "class.deadwalker.ability.major.invidious_spectre.name"
+        description: "class.deadwalker.ability.major.invidious_spectre.description"
         nested_abilities:
           soothe:
-            name: ability.minor.soothe.name
-            description: ability.minor.soothe.description
+            name: "class.deadwalker.ability.minor.soothe.name"
+            description: "class.deadwalker.ability.minor.soothe.description"
           ghoulish_grasp:
-            name: ability.minor.ghoulish_grasp.name
-            description: ability.minor.ghoulish_grasp.description
+            name: "class.deadwalker.ability.minor.ghoulish_grasp.name"
+            description: "class.deadwalker.ability.minor.ghoulish_grasp.description"
           ethereal_touch:
-            name: ability.minor.ethereal_touch.name
-            description: ability.minor.ethereal_touch.description
+            name: "class.deadwalker.ability.minor.ethereal_touch.name"
+            description: "class.deadwalker.ability.minor.ethereal_touch.description"
       reapers_strike:
+        name: "class.deadwalker.ability.major.reapers_strike.name"
+        description: "class.deadwalker.ability.major.reapers_strike.description"
         nested_abilities:
           inexorable:
-            name: ability.minor.inexorable.name
-            description: ability.minor.inexorable.description
+            name: "class.deadwalker.ability.minor.inexorable.name"
+            description: "class.deadwalker.ability.minor.inexorable.description"
           bloodied_but_unbroken:
-            name: ability.minor.bloodied_but_unbroken.name
-            description: ability.minor.bloodied_but_unbroken.description
+            name: "class.deadwalker.ability.minor.bloodied_but_unbroken.name"
+            description: "class.deadwalker.ability.minor.bloodied_but_unbroken.description"
           scything_blow:
-            name: ability.minor.scything_blow.name
-            description: ability.minor.scything_blow.description
+            name: "class.deadwalker.ability.minor.scything_blow.name"
+            description: "class.deadwalker.ability.minor.scything_blow.description"
       sudden_death:
+        name: "class.deadwalker.ability.major.sudden_death.name"
+        description: "class.deadwalker.ability.major.sudden_death.description"
         nested_abilities:
           liminal:
-            name: ability.minor.liminal.name
-            description: ability.minor.liminal.description
+            name: "class.deadwalker.ability.minor.liminal.name"
+            description: "class.deadwalker.ability.minor.liminal.description"
           entropy:
-            name: ability.minor.entropy.name
-            description: ability.minor.entropy.description
+            name: "class.deadwalker.ability.minor.entropy.name"
+            description: "class.deadwalker.ability.minor.entropy.description"
           blood_sacrifice:
-            name: ability.minor.blood_sacrifice.name
-            description: ability.minor.blood_sacrifice.description
+            name: "class.deadwalker.ability.minor.blood_sacrifice.name"
+            description: "class.deadwalker.ability.minor.blood_sacrifice.description"
     zenith:
       extinguish:
-        name: ability.zenith.extinguish.name
-        description: ability.zenith.extinguish.description
+        name: "class.deadwalker.ability.zenith.extinguish.name"
+        description: "class.deadwalker.ability.zenith.extinguish.description"
       infernal_claws:
-        name: ability.zenith.infernal_claws.name
-        description: ability.zenith.infernal_claws.description
+        name: "class.deadwalker.ability.zenith.infernal_claws.name"
+        description: "class.deadwalker.ability.zenith.infernal_claws.description"
       sunder_the_veil:
-        name: ability.zenith.sunder_the_veil.name
-        description: ability.zenith.sunder_the_veil.description
+        name: "class.deadwalker.ability.zenith.sunder_the_veil.name"
+        description: "class.deadwalker.ability.zenith.sunder_the_veil.description"
 hound:
   traits:
     skill: hunt
     domain: haven
     resource:
       bottle_of_rotgut_liquor:
-        name: resource.bottle_of_rotgut_liquor
-        description: resource.bottle_of_rotgut_liquor.description
+        name: "class.hound.resource.bottle_of_rotgut_liquor"
     equipment:
       group_1:
         standard_issue_legrande_rifle:
+          name: "class.hound.equipment.standard_issue_legrande_rifle"
           type: kill
           dice: d8
           tags:
@@ -976,6 +1018,7 @@ hound:
             - expensive
       group_2:
         repeater_sidearm:
+          name: "class.hound.equipment.repeater_sidearm"
           type: kill
           dice: d6
           tags:
@@ -983,140 +1026,156 @@ hound:
             - brutal
             - reload
         knife:
+          name: "class.hound.equipment.knife"
           type: kill
           dice: d6
       group_3:
         well_stocked_haversack:
+          name: "class.hound.equipment.well_stocked_haversack"
           type: mend
           resistances:
             - supplies
           dice: d6
         cudgel:
+          name: "class.hound.equipment.cudgel"
           type: kill
           dice: d6
   abilities:
     core:
       in_the_thick_of_it:
-        name: ability.core.in_the_thick_of_it.name
-        description: ability.core.in_the_thick_of_it.description
+        name: "class.hound.ability.core.in_the_thick_of_it.name"
+        description: "class.hound.ability.core.in_the_thick_of_it.description"
     minor:
       advanced_training:
-        name: ability.minor.advanced_training.name
-        description: ability.minor.advanced_training.description
+        name: "class.hound.ability.minor.advanced_training.name"
+        description: "class.hound.ability.minor.advanced_training.description"
       the_better_part_of_valour:
-        name: ability.minor.the_better_part_of_valour.name
-        description: ability.minor.the_better_part_of_valour.description
+        name: "class.hound.ability.minor.the_better_part_of_valour.name"
+        description: "class.hound.ability.minor.the_better_part_of_valour.description"
       close_quarters:
-        name: ability.minor.close_quarters.name
-        description: ability.minor.close_quarters.description
+        name: "class.hound.ability.minor.close_quarters.name"
+        description: "class.hound.ability.minor.close_quarters.description"
       custodian:
-        name: ability.minor.custodian.name
-        description: ability.minor.custodian.description
+        name: "class.hound.ability.minor.custodian.name"
+        description: "class.hound.ability.minor.custodian.description"
       echoes_of_the_33rd:
-        name: ability.minor.echoes_of_the_33rd.name
-        description: ability.minor.echoes_of_the_33rd.description
+        name: "class.hound.ability.minor.echoes_of_the_33rd.name"
+        description: "class.hound.ability.minor.echoes_of_the_33rd.description"
       kill_count:
-        name: ability.minor.kill_count.name
-        description: ability.minor.kill_count.description
+        name: "class.hound.ability.minor.kill_count.name"
+        description: "class.hound.ability.minor.kill_count.description"
       liquid_courage:
-        name: ability.minor.liquid_courage.name
-        description: ability.minor.liquid_courage.description
+        name: "class.hound.ability.minor.liquid_courage.name"
+        description: "class.hound.ability.minor.liquid_courage.description"
       marshal:
-        name: ability.minor.marshal.name
-        description: ability.minor.marshal.description
+        name: "class.hound.ability.minor.marshal.name"
+        description: "class.hound.ability.minor.marshal.description"
       our_glorious_lady:
-        name: ability.minor.our_glorious_lady.name
-        description: ability.minor.our_glorious_lady.description
+        name: "class.hound.ability.minor.our_glorious_lady.name"
+        description: "class.hound.ability.minor.our_glorious_lady.description"
       quartermaster_training:
-        name: ability.minor.quartermaster_training.name
-        description: ability.minor.quartermaster_training.description
+        name: "class.hound.ability.minor.quartermaster_training.name"
+        description: "class.hound.ability.minor.quartermaster_training.description"
       round_the_next_corner:
-        name: ability.minor.round_the_next_corner.name
-        description: ability.minor.round_the_next_corner.description
+        name: "class.hound.ability.minor.round_the_next_corner.name"
+        description: "class.hound.ability.minor.round_the_next_corner.description"
       sergeant:
-        name: ability.minor.sergeant.name
-        description: ability.minor.sergeant.description
+        name: "class.hound.ability.minor.sergeant.name"
+        description: "class.hound.ability.minor.sergeant.description"
     major:
       condemn:
+        name: "class.hound.ability.major.condemn.name"
+        description: "class.hound.ability.major.condemn.description"
         nested_abilities:
           judge:
-            name: ability.minor.judge.name
-            description: ability.minor.judge.description
+            name: "class.hound.ability.minor.judge.name"
+            description: "class.hound.ability.minor.judge.description"
           jury:
-            name: ability.minor.jury.name
-            description: ability.minor.jury.description
+            name: "class.hound.ability.minor.jury.name"
+            description: "class.hound.ability.minor.jury.description"
           executioner:
-            name: ability.minor.executioner.name
-            description: ability.minor.executioner.description
+            name: "class.hound.ability.minor.executioner.name"
+            description: "class.hound.ability.minor.executioner.description"
       forewarned_and_forearmed:
+        name: "class.hound.ability.major.forewarned_and_forearmed.name"
+        description: "class.hound.ability.major.forewarned_and_forearmed.description"
         nested_abilities:
           double_duty:
-            name: ability.minor.double_duty.name
-            description: ability.minor.double_duty.description
+            name: "class.hound.ability.minor.double_duty.name"
+            description: "class.hound.ability.minor.double_duty.description"
           encampment:
-            name: ability.minor.encampment.name
-            description: ability.minor.encampment.description
+            name: "class.hound.ability.minor.encampment.name"
+            description: "class.hound.ability.minor.encampment.description"
           emergency_supplies:
-            name: ability.minor.emergency_supplies.name
-            description: ability.minor.emergency_supplies.description
+            name: "class.hound.ability.minor.emergency_supplies.name"
+            description: "class.hound.ability.minor.emergency_supplies.description"
       stare_down:
+        name: "class.hound.ability.major.stare_down.name"
+        description: "class.hound.ability.major.stare_down.description"
         nested_abilities:
           legendary:
-            name: ability.minor.legendary.name
-            description: ability.minor.legendary.description
+            name: "class.hound.ability.minor.legendary.name"
+            description: "class.hound.ability.minor.legendary.description"
           nose_to_nose:
-            name: ability.minor.nose_to_nose.name
-            description: ability.minor.nose_to_nose.description
+            name: "class.hound.ability.minor.nose_to_nose.name"
+            description: "class.hound.ability.minor.nose_to_nose.description"
           no_sympathy:
-            name: ability.minor.no_sympathy.name
-            description: ability.minor.no_sympathy.description
+            name: "class.hound.ability.minor.no_sympathy.name"
+            description: "class.hound.ability.minor.no_sympathy.description"
       trench_fighter:
+        name: "class.hound.ability.major.trench_fighter.name"
+        description: "class.hound.ability.major.trench_fighter.description"
         nested_abilities:
           over_the_top:
-            name: ability.minor.over_the_top.name
-            description: ability.minor.over_the_top.description
+            name: "class.hound.ability.minor.over_the_top.name"
+            description: "class.hound.ability.minor.over_the_top.description"
           keep_smiling:
-            name: ability.minor.keep_smiling.name
-            description: ability.minor.keep_smiling.description
+            name: "class.hound.ability.minor.keep_smiling.name"
+            description: "class.hound.ability.minor.keep_smiling.description"
           homecoming:
-            name: ability.minor.homecoming.name
-            description: ability.minor.homecoming.description
+            name: "class.hound.ability.minor.homecoming.name"
+            description: "class.hound.ability.minor.homecoming.description"
       unstoppable:
+        name: "class.hound.ability.major.unstoppable.name"
+        description: "class.hound.ability.major.unstoppable.description"
         nested_abilities:
           limping_onward:
-            name: ability.minor.limping_onward.name
-            description: ability.minor.limping_onward.description
+            name: "class.hound.ability.minor.limping_onward.name"
+            description: "class.hound.ability.minor.limping_onward.description"
           scars_like_medals:
-            name: ability.minor.scars_like_medals.name
-            description: ability.minor.scars_like_medals.description
+            name: "class.hound.ability.minor.scars_like_medals.name"
+            description: "class.hound.ability.minor.scars_like_medals.description"
           on_your_feet:
-            name: ability.minor.on_your_feet.name
-            description: ability.minor.on_your_feet.description
+            name: "class.hound.ability.minor.on_your_feet.name"
+            description: "class.hound.ability.minor.on_your_feet.description"
     zenith:
       everlasting_stand:
-        name: ability.zenith.everlasting_stand.name
-        description: ability.zenith.everlasting_stand.description
+        name: "class.hound.ability.zenith.everlasting_stand.name"
+        description: "class.hound.ability.zenith.everlasting_stand.description"
       fulcrum:
-        name: ability.zenith.fulcrum.name
-        description: ability.zenith.fulcrum.description
+        name: "class.hound.ability.zenith.fulcrum.name"
+        description: "class.hound.ability.zenith.fulcrum.description"
       incursion:
-        name: ability.zenith.incursion.name
-        description: ability.zenith.incursion.description
+        name: "class.hound.ability.zenith.incursion.name"
+        description: "class.hound.ability.zenith.incursion.description"
 incarnadine:
   traits:
     skill: compel
     domain: haven
     resource:
       second_hand_wedding_ring:
+        name: "class.incarnadine.resource.second_hand_wedding_ring"
         dice: d6
         domain: haven
     equipment:
       core:
         hooked_blade:
+          name: "class.incarnadine.equipment.hooked_blade"
           type: kill
           dice: d6
       group_1:
         filigreed_revolver:
+          name: "class.incarnadine.equipment.filigreed_revolver"
           type: kill
           dice: d8
           tags:
@@ -1124,12 +1183,14 @@ incarnadine:
             - expensive
       group_2:
         bailiffs_iron_cudgel:
+          name: "class.incarnadine.equipment.bailiffs_iron_cudgel"
           type: kill
           dice: d8
           tags:
             - tiring
       group_3:
         homemade_spireblack_pipe_bombs:
+          name: "class.incarnadine.equipment.homemade_spireblack_pipe_bombs"
           type: kill
           dice: d6
           tags:
@@ -1139,145 +1200,160 @@ incarnadine:
   abilities:
     core:
       the_cost_of_doing_business:
-        name: ability.core.the_cost_of_doing_business.name
-        description: ability.core.the_cost_of_doing_business.description
+        name: "class.incarnadine.ability.core.the_cost_of_doing_business.name"
+        description: "class.incarnadine.ability.core.the_cost_of_doing_business.description"
       mutually_assured_destruction:
-        name: ability.core.mutually_assured_destruction.name
-        description: ability.core.mutually_assured_destruction.description
+        name: "class.incarnadine.ability.core.mutually_assured_destruction.name"
+        description: "class.incarnadine.ability.core.mutually_assured_destruction.description"
     minor:
       a_red_and_bloody_business:
-        name: ability.minor.a_red_and_bloody_business.name
-        description: ability.minor.a_red_and_bloody_business.description
+        name: "class.incarnadine.ability.minor.a_red_and_bloody_business.name"
+        description: "class.incarnadine.ability.minor.a_red_and_bloody_business.description"
       an_eye_for_the_strange:
-        name: ability.minor.an_eye_for_the_strange.name
-        description: ability.minor.an_eye_for_the_strange.description
+        name: "class.incarnadine.ability.minor.an_eye_for_the_strange.name"
+        description: "class.incarnadine.ability.minor.an_eye_for_the_strange.description"
       better_safe_than_sorry:
-        name: ability.minor.better_safe_than_sorry.name
-        description: ability.minor.better_safe_than_sorry.description
+        name: "class.incarnadine.ability.minor.better_safe_than_sorry.name"
+        description: "class.incarnadine.ability.minor.better_safe_than_sorry.description"
       creative_acquisitions:
-        name: ability.minor.creative_acquisitions.name
-        description: ability.minor.creative_acquisitions.description
+        name: "class.incarnadine.ability.minor.creative_acquisitions.name"
+        description: "class.incarnadine.ability.minor.creative_acquisitions.description"
       creative_book_keeping:
-        name: ability.minor.creative_book_keeping.name
-        description: ability.minor.creative_book_keeping.description
+        name: "class.incarnadine.ability.minor.creative_book_keeping.name"
+        description: "class.incarnadine.ability.minor.creative_book_keeping.description"
       eyes_in_the_back_of_your_head:
-        name: ability.minor.eyes_in_the_back_of_your_head.name
-        description: ability.minor.eyes_in_the_back_of_your_head.description
+        name: "class.incarnadine.ability.minor.eyes_in_the_back_of_your_head.name"
+        description: "class.incarnadine.ability.minor.eyes_in_the_back_of_your_head.description"
       jack_of_all_trades:
-        name: ability.minor.jack_of_all_trades.name
-        description: ability.minor.jack_of_all_trades.description
+        name: "class.incarnadine.ability.minor.jack_of_all_trades.name"
+        description: "class.incarnadine.ability.minor.jack_of_all_trades.description"
       lost_it_all:
-        name: ability.minor.lost_it_all.name
-        description: ability.minor.lost_it_all.description
+        name: "class.incarnadine.ability.minor.lost_it_all.name"
+        description: "class.incarnadine.ability.minor.lost_it_all.description"
       make_do:
-        name: ability.minor.make_do.name
-        description: ability.minor.make_do.description
+        name: "class.incarnadine.ability.minor.make_do.name"
+        description: "class.incarnadine.ability.minor.make_do.description"
       on_the_run:
-        name: ability.minor.on_the_run.name
-        description: ability.minor.on_the_run.description
+        name: "class.incarnadine.ability.minor.on_the_run.name"
+        description: "class.incarnadine.ability.minor.on_the_run.description"
       priest_of_incarne:
-        name: ability.minor.priest_of_incarne.name
-        description: ability.minor.priest_of_incarne.description
+        name: "class.incarnadine.ability.minor.priest_of_incarne.name"
+        description: "class.incarnadine.ability.minor.priest_of_incarne.description"
       red_marketeer:
-        name: ability.minor.red_marketeer.name
-        description: ability.minor.red_marketeer.description
+        name: "class.incarnadine.ability.minor.red_marketeer.name"
+        description: "class.incarnadine.ability.minor.red_marketeer.description"
       valuable_asset:
-        name: ability.minor.valuable_asset.name
-        description: ability.minor.valuable_asset.description
+        name: "class.incarnadine.ability.minor.valuable_asset.name"
+        description: "class.incarnadine.ability.minor.valuable_asset.description"
       areas_of_opportunity:
-        name: ability.minor.areas_of_opportunity.name
-        description: ability.minor.areas_of_opportunity.description
+        name: "class.incarnadine.ability.minor.areas_of_opportunity.name"
+        description: "class.incarnadine.ability.minor.areas_of_opportunity.description"
     major:
       backstab:
+        name: "class.incarnadine.ability.major.backstab.name"
+        description: "class.incarnadine.ability.major.backstab.description"
         nested_abilities:
           deadeye:
-            name: ability.minor.deadeye.name
-            description: ability.minor.deadeye.description
+            name: "class.incarnadine.ability.minor.deadeye.name"
+            description: "class.incarnadine.ability.minor.deadeye.description"
           never_saw_it_coming:
-            name: ability.minor.never_saw_it_coming.name
-            description: ability.minor.never_saw_it_coming.description
+            name: "class.incarnadine.ability.minor.never_saw_it_coming.name"
+            description: "class.incarnadine.ability.minor.never_saw_it_coming.description"
           remuneration:
-            name: ability.minor.remuneration.name
-            description: ability.minor.remuneration.description
+            name: "class.incarnadine.ability.minor.remuneration.name"
+            description: "class.incarnadine.ability.minor.remuneration.description"
       broker:
+        name: "class.incarnadine.ability.major.broker.name"
+        description: "class.incarnadine.ability.major.broker.description"
         nested_abilities:
           invest:
-            name: ability.minor.invest.name
-            description: ability.minor.invest.description
+            name: "class.incarnadine.ability.minor.invest.name"
+            description: "class.incarnadine.ability.minor.invest.description"
           transferral:
-            name: ability.minor.transferral.name
-            description: ability.minor.transferral.description
+            name: "class.incarnadine.ability.minor.transferral.name"
+            description: "class.incarnadine.ability.minor.transferral.description"
           inflict:
-            name: ability.minor.inflict.name
-            description: ability.minor.inflict.description
+            name: "class.incarnadine.ability.minor.inflict.name"
+            description: "class.incarnadine.ability.minor.inflict.description"
       crave:
+        name: "class.incarnadine.ability.major.crave.name"
+        description: "class.incarnadine.ability.major.crave.description"
         nested_abilities:
           addict:
-            name: ability.minor.addict.name
-            description: ability.minor.addict.description
+            name: "class.incarnadine.ability.minor.addict.name"
+            description: "class.incarnadine.ability.minor.addict.description"
           conditioning:
-            name: ability.minor.conditioning.name
-            description: ability.minor.conditioning.description
+            name: "class.incarnadine.ability.minor.conditioning.name"
+            description: "class.incarnadine.ability.minor.conditioning.description"
       debtors_reds:
+        name: "class.incarnadine.ability.major.debtors_reds.name"
+        description: "class.incarnadine.ability.major.debtors_reds.description"
         nested_abilities:
           buy_off:
-            name: ability.minor.buy_off.name
-            description: ability.minor.buy_off.description
+            name: "class.incarnadine.ability.minor.buy_off.name"
+            description: "class.incarnadine.ability.minor.buy_off.description"
           cycle_of_debt:
-            name: ability.minor.cycle_of_debt.name
-            description: ability.minor.cycle_of_debt.description
+            name: "class.incarnadine.ability.minor.cycle_of_debt.name"
+            description: "class.incarnadine.ability.minor.cycle_of_debt.description"
           assume_debt:
-            name: ability.minor.assume_debt.name
-            description: ability.minor.assume_debt.description
+            name: "class.incarnadine.ability.minor.assume_debt.name"
+            description: "class.incarnadine.ability.minor.assume_debt.description"
       karmic_ledger:
+        name: "class.incarnadine.ability.major.karmic_ledger.name"
+        description: "class.incarnadine.ability.major.karmic_ledger.description"
         nested_abilities:
           connection:
-            name: ability.minor.connection.name
-            description: ability.minor.connection.description
+            name: "class.incarnadine.ability.minor.connection.name"
+            description: "class.incarnadine.ability.minor.connection.description"
           harvest:
-            name: ability.minor.harvest.name
-            description: ability.minor.harvest.description
+            name: "class.incarnadine.ability.minor.harvest.name"
+            description: "class.incarnadine.ability.minor.harvest.description"
           candidate:
-            name: ability.minor.candidate.name
-            description: ability.minor.candidate.description
+            name: "class.incarnadine.ability.minor.candidate.name"
+            description: "class.incarnadine.ability.minor.candidate.description"
       network:
+        name: "class.incarnadine.ability.major.network.name"
+        description: "class.incarnadine.ability.major.network.description"
         nested_abilities:
           proliferation:
-            name: ability.minor.proliferation.name
-            description: ability.minor.proliferation.description
+            name: "class.incarnadine.ability.minor.proliferation.name"
+            description: "class.incarnadine.ability.minor.proliferation.description"
           pathways:
-            name: ability.minor.pathways.name
-            description: ability.minor.pathways.description
+            name: "class.incarnadine.ability.minor.pathways.name"
+            description: "class.incarnadine.ability.minor.pathways.description"
           money_talks:
-            name: ability.minor.money_talks.name
-            description: ability.minor.money_talks.description
+            name: "class.incarnadine.ability.minor.money_talks.name"
+            description: "class.incarnadine.ability.minor.money_talks.description"
     zenith:
       ultimate_credit:
-        name: ability.zenith.ultimate_credit.name
-        description: ability.zenith.ultimate_credit.description
+        name: "class.incarnadine.ability.zenith.ultimate_credit.name"
+        description: "class.incarnadine.ability.zenith.ultimate_credit.description"
       ultimate_debt:
-        name: ability.zenith.ultimate_debt.name
-        description: ability.zenith.ultimate_debt.description
+        name: "class.incarnadine.ability.zenith.ultimate_debt.name"
+        description: "class.incarnadine.ability.zenith.ultimate_debt.description"
       ultimate_reward:
-        name: ability.zenith.ultimate_reward.name
-        description: ability.zenith.ultimate_reward.description
+        name: "class.incarnadine.ability.zenith.ultimate_reward.name"
+        description: "class.incarnadine.ability.zenith.ultimate_reward.description"
 witch:
   traits:
     skill: compel
     domain: occult
     resource:
       tattered_finery:
+        name: "class.witch.resource.tattered_finery"
         dice: d6
         domain: haven
     equipment:
       group_1:
         sacred_blade:
+          name: "class.witch.equipment.sacred_blade"
           type: kill
           dice: d6
           tags:
             - bloodbound
       group_2:
         goats_leg_carbine:
+          name: "class.witch.equipment.goats_leg_carbine"
           type: kill
           dice: d6
           tags:
@@ -1285,131 +1361,144 @@ witch:
             - reload
       group_3:
         physikers_bag:
+          name: "class.witch.equipment.physikers_bag"
           type: mend
           resistances: blood
           dice: d6
   abilities:
     core:
       crucible:
-        name: ability.core.crucible.name
-        description: ability.core.crucible.description
+        name: "class.witch.ability.core.crucible.name"
+        description: "class.witch.ability.core.crucible.description"
       true_form:
-        name: ability.core.true_form.name
-        description: ability.core.true_form.description
+        name: "class.witch.ability.core.true_form.name"
+        description: "class.witch.ability.core.true_form.description"
     minor:
       a_mind_of_many_doorways:
-        name: ability.minor.a_mind_of_many_doorways.name
-        description: ability.minor.a_mind_of_many_doorways.description
+        name: "class.witch.ability.minor.a_mind_of_many_doorways.name"
+        description: "class.witch.ability.minor.a_mind_of_many_doorways.description"
       blood_quiet:
-        name: ability.minor.blood_quiet.name
-        description: ability.minor.blood_quiet.description
+        name: "class.witch.ability.minor.blood_quiet.name"
+        description: "class.witch.ability.minor.blood_quiet.description"
       books_of_lore:
-        name: ability.minor.books_of_lore.name
-        description: ability.minor.books_of_lore.description
+        name: "class.witch.ability.minor.books_of_lore.name"
+        description: "class.witch.ability.minor.books_of_lore.description"
       charms_and_wards:
-        name: ability.minor.charms_and_wards.name
-        description: ability.minor.charms_and_wards.description
+        name: "class.witch.ability.minor.charms_and_wards.name"
+        description: "class.witch.ability.minor.charms_and_wards.description"
       distinguished_lineage:
-        name: ability.minor.distinguished_lineage.name
-        description: ability.minor.distinguished_lineage.description
+        name: "class.witch.ability.minor.distinguished_lineage.name"
+        description: "class.witch.ability.minor.distinguished_lineage.description"
       divinity:
-        name: ability.minor.divinity.name
-        description: ability.minor.divinity.description
+        name: "class.witch.ability.minor.divinity.name"
+        description: "class.witch.ability.minor.divinity.description"
       heart_wise:
-        name: ability.minor.heart_wise.name
-        description: ability.minor.heart_wise.description
+        name: "class.witch.ability.minor.heart_wise.name"
+        description: "class.witch.ability.minor.heart_wise.description"
       implacable:
-        name: ability.minor.implacable.name
-        description: ability.minor.implacable.description
+        name: "class.witch.ability.minor.implacable.name"
+        description: "class.witch.ability.minor.implacable.description"
       the_old_blood:
-        name: ability.minor.the_old_blood.name
-        description: ability.minor.the_old_blood.description
+        name: "class.witch.ability.minor.the_old_blood.name"
+        description: "class.witch.ability.minor.the_old_blood.description"
       ramblewyrd:
-        name: ability.minor.ramblewyrd.name
-        description: ability.minor.ramblewyrd.description
+        name: "class.witch.ability.minor.ramblewyrd.name"
+        description: "class.witch.ability.minor.ramblewyrd.description"
       red_dominion:
-        name: ability.minor.red_dominion.name
-        description: ability.minor.red_dominion.description
+        name: "class.witch.ability.minor.red_dominion.name"
+        description: "class.witch.ability.minor.red_dominion.description"
       wild_witch:
-        name: ability.minor.wild_witch.name
-        description: ability.minor.wild_witch.description
+        name: "class.witch.ability.minor.wild_witch.name"
+        description: "class.witch.ability.minor.wild_witch.description"
       witch_spit:
-        name: ability.minor.witch_spit.name
-        description: ability.minor.witch_spit.description
+        name: "class.witch.ability.minor.witch_spit.name"
+        description: "class.witch.ability.minor.witch_spit.description"
     major:
       ascendancy:
+        name: "class.witch.ability.major.ascendancy.name"
+        description: "class.witch.ability.major.ascendancy.description"
         nested_abilities:
           bypass:
-            name: ability.minor.bypass.name
-            description: ability.minor.bypass.description
+            name: "class.witch.ability.minor.bypass.name"
+            description: "class.witch.ability.minor.bypass.description"
           blood_calls_for_blood:
-            name: ability.minor.blood_calls_for_blood.name
-            description: ability.minor.blood_calls_for_blood.description
+            name: "class.witch.ability.minor.blood_calls_for_blood.name"
+            description: "class.witch.ability.minor.blood_calls_for_blood.description"
           refuge:
-            name: ability.minor.refuge.name
-            description: ability.minor.refuge.description
+            name: "class.witch.ability.minor.refuge.name"
+            description: "class.witch.ability.minor.refuge.description"
       crimson_mirror:
+        name: "class.witch.ability.major.crimson_mirror.name"
+        description: "class.witch.ability.major.crimson_mirror.description"
         nested_abilities:
           shared_visions:
-            name: ability.minor.shared_visions.name
-            description: ability.minor.shared_visions.description
+            name: "class.witch.ability.minor.shared_visions.name"
+            description: "class.witch.ability.minor.shared_visions.description"
           scarlet_insight:
-            name: ability.minor.scarlet_insight.name
-            description: ability.minor.scarlet_insight.description
+            name: "class.witch.ability.minor.scarlet_insight.name"
+            description: "class.witch.ability.minor.scarlet_insight.description"
           dire_portents:
-            name: ability.minor.dire_portents.name
-            description: ability.minor.dire_portents.description
+            name: "class.witch.ability.minor.dire_portents.name"
+            description: "class.witch.ability.minor.dire_portents.description"
       exsanguinate:
+        name: "class.witch.ability.major.exsanguinate.name"
+        description: "class.witch.ability.major.exsanguinate.description"
         nested_abilities:
           retch:
-            name: ability.minor.retch.name
-            description: ability.minor.retch.description
+            name: "class.witch.ability.minor.retch.name"
+            description: "class.witch.ability.minor.retch.description"
           maestro:
-            name: ability.minor.maestro.name
-            description: ability.minor.maestro.description
+            name: "class.witch.ability.minor.maestro.name"
+            description: "class.witch.ability.minor.maestro.description"
           as_above_so_below:
-            name: ability.minor.as_above_so_below.name
-            description: ability.minor.as_above_so_below.description
+            name: "class.witch.ability.minor.as_above_so_below.name"
+            description: "class.witch.ability.minor.as_above_so_below.description"
       familiar:
+        name: "class.witch.ability.major.familiar.name"
+        description: "class.witch.ability.major.familiar.description"
         nested_abilities:
           resilient:
-            name: ability.minor.resilient.name
-            description: ability.minor.resilient.description
+            name: "class.witch.ability.minor.resilient.name"
+            description: "class.witch.ability.minor.resilient.description"
           hungry:
-            name: ability.minor.hungry.name
-            description: ability.minor.hungry.description
+            name: "class.witch.ability.minor.hungry.name"
+            description: "class.witch.ability.minor.hungry.description"
           curious:
-            name: ability.minor.curious.name
-            description: ability.minor.curious.description
+            name: "class.witch.ability.minor.curious.name"
+            description: "class.witch.ability.minor.curious.description"
       great_and_terrible:
+        name: "class.witch.ability.major.great_and_terrible.name"
+        description: "class.witch.ability.major.great_and_terrible.description"
         nested_abilities:
           enthrall:
-            name: ability.minor.enthrall.name
-            description: ability.minor.enthrall.description
+            name: "class.witch.ability.minor.enthrall.name"
+            description: "class.witch.ability.minor.enthrall.description"
           sacred_object:
-            name: ability.minor.sacred_object.name
-            description: ability.minor.sacred_object.description
+            name: "class.witch.ability.minor.sacred_object.name"
+            description: "class.witch.ability.minor.sacred_object.description"
           union:
-            name: ability.minor.union.name
-            description: ability.minor.union.description
+            name: "class.witch.ability.minor.union.name"
+            description: "class.witch.ability.minor.union.description"
       lair:
+        name: "class.witch.ability.major.lair.name"
+        description: "class.witch.ability.major.lair.description"
         nested_abilities:
           calm:
-            name: ability.minor.calm.name
-            description: ability.minor.calm.description
+            name: "class.witch.ability.minor.calm.name"
+            description: "class.witch.ability.minor.calm.description"
           rule:
-            name: ability.minor.rule.name
-            description: ability.minor.rule.description
+            name: "class.witch.ability.minor.rule.name"
+            description: "class.witch.ability.minor.rule.description"
           feed:
-            name: ability.minor.feed.name
-            description: ability.minor.feed.description
+            name: "class.witch.ability.minor.feed.name"
+            description: "class.witch.ability.minor.feed.description"
     zenith:
       final_form:
-        name: ability.zenith.final_form.name
-        description: ability.zenith.final_form.description
+        name: "class.witch.ability.zenith.final_form.name"
+        description: "class.witch.ability.zenith.final_form.description"
       perfect_resurrection:
-        name: ability.zenith.perfect_resurrection.name
-        description: ability.zenith.perfect_resurrection.description
+        name: "class.witch.ability.zenith.perfect_resurrection.name"
+        description: "class.witch.ability.zenith.perfect_resurrection.description"
       the_red_queen:
-        name: ability.zenith.the_red_queen.name
-        description: ability.zenith.the_red_queen.description
+        name: "class.witch.ability.zenith.the_red_queen.name"
+        description: "class.witch.ability.zenith.the_red_queen.description"

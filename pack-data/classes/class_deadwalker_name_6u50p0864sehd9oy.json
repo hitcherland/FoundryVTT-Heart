@@ -12,10 +12,10 @@
       "group_3"
     ],
     "children": {
-      "vaq3vsgyk2iaezgi": {
-        "_id": "vaq3vsgyk2iaezgi",
+      "j9w641di2jqzji92": {
+        "_id": "j9w641di2jqzji92",
         "type": "resource",
-        "name": "resource.bag_of_interesting_teeth",
+        "name": "class.deadwalker.resource.bag_of_interesting_teeth",
         "system": {
           "active": true,
           "die_size": "d6",
@@ -23,209 +23,209 @@
           "children": {}
         }
       },
-      "tp6ubkn4fz4d2dox": {
-        "_id": "tp6ubkn4fz4d2dox",
-        "name": "ability.core.death_follows_close.name",
+      "kcnwc1in6fbhdmlb": {
+        "_id": "kcnwc1in6fbhdmlb",
+        "name": "class.deadwalker.ability.core.death_follows_close.name",
         "type": "ability",
         "system": {
           "active": true,
-          "description": "ability.core.death_follows_close.description",
+          "description": "class.deadwalker.ability.core.death_follows_close.description",
           "type": "core",
           "children": {}
         }
       },
-      "mzneab2hujq622dv": {
-        "_id": "mzneab2hujq622dv",
-        "name": "ability.core.enter_the_grey.name",
+      "xnl1t7grs1lxzh5f": {
+        "_id": "xnl1t7grs1lxzh5f",
+        "name": "class.deadwalker.ability.core.enter_the_grey.name",
         "type": "ability",
         "system": {
           "active": true,
-          "description": "ability.core.enter_the_grey.description",
+          "description": "class.deadwalker.ability.core.enter_the_grey.description",
           "type": "core",
           "children": {}
         }
       },
-      "eec291dsxsaolj3s": {
-        "_id": "eec291dsxsaolj3s",
-        "name": "ability.minor.adept.name",
+      "hedelctf3pmcnmbj": {
+        "_id": "hedelctf3pmcnmbj",
+        "name": "class.deadwalker.ability.minor.adept.name",
         "type": "ability",
         "system": {
           "active": false,
-          "description": "ability.minor.adept.description",
+          "description": "class.deadwalker.ability.minor.adept.description",
           "type": "minor",
           "children": {}
         }
       },
-      "hywz5pnd5ulj7s0f": {
-        "_id": "hywz5pnd5ulj7s0f",
-        "name": "ability.minor.deathless.name",
+      "db5laj2kd8vo3gov": {
+        "_id": "db5laj2kd8vo3gov",
+        "name": "class.deadwalker.ability.minor.deathless.name",
         "type": "ability",
         "system": {
           "active": false,
-          "description": "ability.minor.deathless.description",
+          "description": "class.deadwalker.ability.minor.deathless.description",
           "type": "minor",
           "children": {}
         }
       },
-      "79wflep6ezqbz80x": {
-        "_id": "79wflep6ezqbz80x",
-        "name": "ability.minor.dirt_under_the_fingernails.name",
+      "m5jutw7z5hk117yw": {
+        "_id": "m5jutw7z5hk117yw",
+        "name": "class.deadwalker.ability.minor.dirt_under_the_fingernails.name",
         "type": "ability",
         "system": {
           "active": false,
-          "description": "ability.minor.dirt_under_the_fingernails.description",
+          "description": "class.deadwalker.ability.minor.dirt_under_the_fingernails.description",
           "type": "minor",
           "children": {}
         }
       },
-      "g1zgo8r492sptsa0": {
-        "_id": "g1zgo8r492sptsa0",
-        "name": "ability.minor.explorer.name",
+      "oxqragxga5fnneo5": {
+        "_id": "oxqragxga5fnneo5",
+        "name": "class.deadwalker.ability.minor.explorer.name",
         "type": "ability",
         "system": {
           "active": false,
-          "description": "ability.minor.explorer.description",
+          "description": "class.deadwalker.ability.minor.explorer.description",
           "type": "minor",
           "children": {}
         }
       },
-      "cygkk3k3mxmepwnv": {
-        "_id": "cygkk3k3mxmepwnv",
-        "name": "ability.minor.grail_armour.name",
+      "i4jhk3f42ck67y2g": {
+        "_id": "i4jhk3f42ck67y2g",
+        "name": "class.deadwalker.ability.minor.grail_armour.name",
         "type": "ability",
         "system": {
           "active": false,
-          "description": "ability.minor.grail_armour.description",
+          "description": "class.deadwalker.ability.minor.grail_armour.description",
           "type": "minor",
           "children": {}
         }
       },
-      "s0fwuwy874s75i5p": {
-        "_id": "s0fwuwy874s75i5p",
-        "name": "ability.minor.grim_reaper.name",
+      "x3ukje4taxiwi6hn": {
+        "_id": "x3ukje4taxiwi6hn",
+        "name": "class.deadwalker.ability.minor.grim_reaper.name",
         "type": "ability",
         "system": {
           "active": false,
-          "description": "ability.minor.grim_reaper.description",
+          "description": "class.deadwalker.ability.minor.grim_reaper.description",
           "type": "minor",
           "children": {}
         }
       },
-      "24zdxfg09jzkqsdv": {
-        "_id": "24zdxfg09jzkqsdv",
-        "name": "ability.minor.the_harvest.name",
+      "28wl4zu89u3zyxsj": {
+        "_id": "28wl4zu89u3zyxsj",
+        "name": "class.deadwalker.ability.minor.the_harvest.name",
         "type": "ability",
         "system": {
           "active": false,
-          "description": "ability.minor.the_harvest.description",
+          "description": "class.deadwalker.ability.minor.the_harvest.description",
           "type": "minor",
           "children": {}
         }
       },
-      "vwq6mjf02f9qo2mf": {
-        "_id": "vwq6mjf02f9qo2mf",
-        "name": "ability.minor.last_rites.name",
+      "unj3hsube5wxs08t": {
+        "_id": "unj3hsube5wxs08t",
+        "name": "class.deadwalker.ability.minor.last_rites.name",
         "type": "ability",
         "system": {
           "active": false,
-          "description": "ability.minor.last_rites.description",
+          "description": "class.deadwalker.ability.minor.last_rites.description",
           "type": "minor",
           "children": {}
         }
       },
-      "ge85wzhvimepkdd8": {
-        "_id": "ge85wzhvimepkdd8",
-        "name": "ability.minor.marked_for_death.name",
+      "zzfuqoyg7kgxq97b": {
+        "_id": "zzfuqoyg7kgxq97b",
+        "name": "class.deadwalker.ability.minor.marked_for_death.name",
         "type": "ability",
         "system": {
           "active": false,
-          "description": "ability.minor.marked_for_death.description",
+          "description": "class.deadwalker.ability.minor.marked_for_death.description",
           "type": "minor",
           "children": {}
         }
       },
-      "mh07mcic0jsvfbxs": {
-        "_id": "mh07mcic0jsvfbxs",
-        "name": "ability.minor.shadow.name",
+      "pgf0hcjg1e9pqmgu": {
+        "_id": "pgf0hcjg1e9pqmgu",
+        "name": "class.deadwalker.ability.minor.shadow.name",
         "type": "ability",
         "system": {
           "active": false,
-          "description": "ability.minor.shadow.description",
+          "description": "class.deadwalker.ability.minor.shadow.description",
           "type": "minor",
           "children": {}
         }
       },
-      "7kk02zjqj679ezr2": {
-        "_id": "7kk02zjqj679ezr2",
-        "name": "ability.minor.survivor.name",
+      "xwr2litjkqmrtxcn": {
+        "_id": "xwr2litjkqmrtxcn",
+        "name": "class.deadwalker.ability.minor.survivor.name",
         "type": "ability",
         "system": {
           "active": false,
-          "description": "ability.minor.survivor.description",
+          "description": "class.deadwalker.ability.minor.survivor.description",
           "type": "minor",
           "children": {}
         }
       },
-      "xxc15wfbxkjwj8xi": {
-        "_id": "xxc15wfbxkjwj8xi",
-        "name": "ability.minor.tattered_soul.name",
+      "gclhzx84cfp640xm": {
+        "_id": "gclhzx84cfp640xm",
+        "name": "class.deadwalker.ability.minor.tattered_soul.name",
         "type": "ability",
         "system": {
           "active": false,
-          "description": "ability.minor.tattered_soul.description",
+          "description": "class.deadwalker.ability.minor.tattered_soul.description",
           "type": "minor",
           "children": {}
         }
       },
-      "kfg6j6ypkrlx5xeb": {
-        "_id": "kfg6j6ypkrlx5xeb",
-        "name": "ability.minor.walking_reliquary.name",
+      "2a0kjofd2ix2tii0": {
+        "_id": "2a0kjofd2ix2tii0",
+        "name": "class.deadwalker.ability.minor.walking_reliquary.name",
         "type": "ability",
         "system": {
           "active": false,
-          "description": "ability.minor.walking_reliquary.description",
+          "description": "class.deadwalker.ability.minor.walking_reliquary.description",
           "type": "minor",
           "children": {}
         }
       },
-      "ibhslgbjrqrtenm4": {
-        "_id": "ibhslgbjrqrtenm4",
-        "name": "ability.major.descent.name",
+      "oors9z67ff9xupuy": {
+        "_id": "oors9z67ff9xupuy",
+        "name": "class.deadwalker.ability.major.descent.name",
         "type": "ability",
         "system": {
           "active": false,
-          "description": "ability.major.descent.description",
+          "description": "class.deadwalker.ability.major.descent.description",
           "type": "major",
           "children": {
-            "wie13xqhrcki0epm": {
-              "_id": "wie13xqhrcki0epm",
-              "name": "ability.minor.esoteric_cartographer.name",
+            "ayukwnyflp9mz2av": {
+              "_id": "ayukwnyflp9mz2av",
+              "name": "class.deadwalker.ability.minor.esoteric_cartographer.name",
               "type": "ability",
               "system": {
                 "active": false,
-                "description": "ability.minor.esoteric_cartographer.description",
+                "description": "class.deadwalker.ability.minor.esoteric_cartographer.description",
                 "type": "minor",
                 "children": {}
               }
             },
-            "ilsgub035yiiqxqa": {
-              "_id": "ilsgub035yiiqxqa",
-              "name": "ability.minor.step_between.name",
+            "zkn55zmsowo0f2qj": {
+              "_id": "zkn55zmsowo0f2qj",
+              "name": "class.deadwalker.ability.minor.step_between.name",
               "type": "ability",
               "system": {
                 "active": false,
-                "description": "ability.minor.step_between.description",
+                "description": "class.deadwalker.ability.minor.step_between.description",
                 "type": "minor",
                 "children": {}
               }
             },
-            "y9da8n8kvqpwlxwp": {
-              "_id": "y9da8n8kvqpwlxwp",
-              "name": "ability.minor.all_doors_as_one.name",
+            "9974nvv8h9ibcwen": {
+              "_id": "9974nvv8h9ibcwen",
+              "name": "class.deadwalker.ability.minor.all_doors_as_one.name",
               "type": "ability",
               "system": {
                 "active": false,
-                "description": "ability.minor.all_doors_as_one.description",
+                "description": "class.deadwalker.ability.minor.all_doors_as_one.description",
                 "type": "minor",
                 "children": {}
               }
@@ -233,44 +233,44 @@
           }
         }
       },
-      "h3jwgg2efd9h0g70": {
-        "_id": "h3jwgg2efd9h0g70",
-        "name": "ability.major.echoes.name",
+      "bsvopmf6x0jl1ypg": {
+        "_id": "bsvopmf6x0jl1ypg",
+        "name": "class.deadwalker.ability.major.echoes.name",
         "type": "ability",
         "system": {
           "active": false,
-          "description": "ability.major.echoes.description",
+          "description": "class.deadwalker.ability.major.echoes.description",
           "type": "major",
           "children": {
-            "b137aq4qxqo5o5jf": {
-              "_id": "b137aq4qxqo5o5jf",
-              "name": "ability.minor.hidden_passageway.name",
+            "0wbyt7jqwg8pjs8z": {
+              "_id": "0wbyt7jqwg8pjs8z",
+              "name": "class.deadwalker.ability.minor.hidden_passageway.name",
               "type": "ability",
               "system": {
                 "active": false,
-                "description": "ability.minor.hidden_passageway.description",
+                "description": "class.deadwalker.ability.minor.hidden_passageway.description",
                 "type": "minor",
                 "children": {}
               }
             },
-            "vin3n50sffj5ywaa": {
-              "_id": "vin3n50sffj5ywaa",
-              "name": "ability.minor.fragmentary_recollection.name",
+            "wvh0lckruc1160i7": {
+              "_id": "wvh0lckruc1160i7",
+              "name": "class.deadwalker.ability.minor.fragmentary_recollection.name",
               "type": "ability",
               "system": {
                 "active": false,
-                "description": "ability.minor.fragmentary_recollection.description",
+                "description": "class.deadwalker.ability.minor.fragmentary_recollection.description",
                 "type": "minor",
                 "children": {}
               }
             },
-            "hynzzr4ms3vkg0bs": {
-              "_id": "hynzzr4ms3vkg0bs",
-              "name": "ability.minor.absorb_memories.name",
+            "u2pn43fjmunq729q": {
+              "_id": "u2pn43fjmunq729q",
+              "name": "class.deadwalker.ability.minor.absorb_memories.name",
               "type": "ability",
               "system": {
                 "active": false,
-                "description": "ability.minor.absorb_memories.description",
+                "description": "class.deadwalker.ability.minor.absorb_memories.description",
                 "type": "minor",
                 "children": {}
               }
@@ -278,44 +278,44 @@
           }
         }
       },
-      "dawf5rr00mbo28qm": {
-        "_id": "dawf5rr00mbo28qm",
-        "name": "ability.major.invidious_spectre.name",
+      "cfp4uuj3sv5u1t55": {
+        "_id": "cfp4uuj3sv5u1t55",
+        "name": "class.deadwalker.ability.major.invidious_spectre.name",
         "type": "ability",
         "system": {
           "active": false,
-          "description": "ability.major.invidious_spectre.description",
+          "description": "class.deadwalker.ability.major.invidious_spectre.description",
           "type": "major",
           "children": {
-            "62d6f7mnr8mrpmsm": {
-              "_id": "62d6f7mnr8mrpmsm",
-              "name": "ability.minor.soothe.name",
+            "wartc7u10h8g90we": {
+              "_id": "wartc7u10h8g90we",
+              "name": "class.deadwalker.ability.minor.soothe.name",
               "type": "ability",
               "system": {
                 "active": false,
-                "description": "ability.minor.soothe.description",
+                "description": "class.deadwalker.ability.minor.soothe.description",
                 "type": "minor",
                 "children": {}
               }
             },
-            "2cdnqld9ewxz9y0y": {
-              "_id": "2cdnqld9ewxz9y0y",
-              "name": "ability.minor.ghoulish_grasp.name",
+            "jamol1w4rzinqmaa": {
+              "_id": "jamol1w4rzinqmaa",
+              "name": "class.deadwalker.ability.minor.ghoulish_grasp.name",
               "type": "ability",
               "system": {
                 "active": false,
-                "description": "ability.minor.ghoulish_grasp.description",
+                "description": "class.deadwalker.ability.minor.ghoulish_grasp.description",
                 "type": "minor",
                 "children": {}
               }
             },
-            "jlwapep2sbo5dv3g": {
-              "_id": "jlwapep2sbo5dv3g",
-              "name": "ability.minor.ethereal_touch.name",
+            "wyksev8xyqrjvffi": {
+              "_id": "wyksev8xyqrjvffi",
+              "name": "class.deadwalker.ability.minor.ethereal_touch.name",
               "type": "ability",
               "system": {
                 "active": false,
-                "description": "ability.minor.ethereal_touch.description",
+                "description": "class.deadwalker.ability.minor.ethereal_touch.description",
                 "type": "minor",
                 "children": {}
               }
@@ -323,44 +323,44 @@
           }
         }
       },
-      "sihq4tzb698a9dj9": {
-        "_id": "sihq4tzb698a9dj9",
-        "name": "ability.major.reapers_strike.name",
+      "exrvhn88m99gnitg": {
+        "_id": "exrvhn88m99gnitg",
+        "name": "class.deadwalker.ability.major.reapers_strike.name",
         "type": "ability",
         "system": {
           "active": false,
-          "description": "ability.major.reapers_strike.description",
+          "description": "class.deadwalker.ability.major.reapers_strike.description",
           "type": "major",
           "children": {
-            "lacz0zgp3l62l5pg": {
-              "_id": "lacz0zgp3l62l5pg",
-              "name": "ability.minor.inexorable.name",
+            "mnd3dz5pt4d44kj4": {
+              "_id": "mnd3dz5pt4d44kj4",
+              "name": "class.deadwalker.ability.minor.inexorable.name",
               "type": "ability",
               "system": {
                 "active": false,
-                "description": "ability.minor.inexorable.description",
+                "description": "class.deadwalker.ability.minor.inexorable.description",
                 "type": "minor",
                 "children": {}
               }
             },
-            "3nits3baqclq32pz": {
-              "_id": "3nits3baqclq32pz",
-              "name": "ability.minor.bloodied_but_unbroken.name",
+            "qtl4fehxnzk436eh": {
+              "_id": "qtl4fehxnzk436eh",
+              "name": "class.deadwalker.ability.minor.bloodied_but_unbroken.name",
               "type": "ability",
               "system": {
                 "active": false,
-                "description": "ability.minor.bloodied_but_unbroken.description",
+                "description": "class.deadwalker.ability.minor.bloodied_but_unbroken.description",
                 "type": "minor",
                 "children": {}
               }
             },
-            "rdgbxx7ueuc9v63l": {
-              "_id": "rdgbxx7ueuc9v63l",
-              "name": "ability.minor.scything_blow.name",
+            "xcs9vt1q8hezr6tb": {
+              "_id": "xcs9vt1q8hezr6tb",
+              "name": "class.deadwalker.ability.minor.scything_blow.name",
               "type": "ability",
               "system": {
                 "active": false,
-                "description": "ability.minor.scything_blow.description",
+                "description": "class.deadwalker.ability.minor.scything_blow.description",
                 "type": "minor",
                 "children": {}
               }
@@ -368,44 +368,44 @@
           }
         }
       },
-      "oyota47s569ubmgo": {
-        "_id": "oyota47s569ubmgo",
-        "name": "ability.major.sudden_death.name",
+      "z4hipwdqyacug4of": {
+        "_id": "z4hipwdqyacug4of",
+        "name": "class.deadwalker.ability.major.sudden_death.name",
         "type": "ability",
         "system": {
           "active": false,
-          "description": "ability.major.sudden_death.description",
+          "description": "class.deadwalker.ability.major.sudden_death.description",
           "type": "major",
           "children": {
-            "tr5zzhqvw2d9s4jj": {
-              "_id": "tr5zzhqvw2d9s4jj",
-              "name": "ability.minor.liminal.name",
+            "ntiu67jc0uyjwvyt": {
+              "_id": "ntiu67jc0uyjwvyt",
+              "name": "class.deadwalker.ability.minor.liminal.name",
               "type": "ability",
               "system": {
                 "active": false,
-                "description": "ability.minor.liminal.description",
+                "description": "class.deadwalker.ability.minor.liminal.description",
                 "type": "minor",
                 "children": {}
               }
             },
-            "9m2v8cojwsesqcyp": {
-              "_id": "9m2v8cojwsesqcyp",
-              "name": "ability.minor.entropy.name",
+            "9f5erouf0iem8yv1": {
+              "_id": "9f5erouf0iem8yv1",
+              "name": "class.deadwalker.ability.minor.entropy.name",
               "type": "ability",
               "system": {
                 "active": false,
-                "description": "ability.minor.entropy.description",
+                "description": "class.deadwalker.ability.minor.entropy.description",
                 "type": "minor",
                 "children": {}
               }
             },
-            "hs4o36h9ba4at0mu": {
-              "_id": "hs4o36h9ba4at0mu",
-              "name": "ability.minor.blood_sacrifice.name",
+            "j8b1moproli8z38i": {
+              "_id": "j8b1moproli8z38i",
+              "name": "class.deadwalker.ability.minor.blood_sacrifice.name",
               "type": "ability",
               "system": {
                 "active": false,
-                "description": "ability.minor.blood_sacrifice.description",
+                "description": "class.deadwalker.ability.minor.blood_sacrifice.description",
                 "type": "minor",
                 "children": {}
               }
@@ -413,93 +413,93 @@
           }
         }
       },
-      "yp4d11ojeeaererc": {
-        "_id": "yp4d11ojeeaererc",
-        "name": "ability.zenith.extinguish.name",
+      "ce0jm6t67qsly1ev": {
+        "_id": "ce0jm6t67qsly1ev",
+        "name": "class.deadwalker.ability.zenith.extinguish.name",
         "type": "ability",
         "system": {
           "active": false,
-          "description": "ability.zenith.extinguish.description",
+          "description": "class.deadwalker.ability.zenith.extinguish.description",
           "type": "zenith",
           "children": {}
         }
       },
-      "8mrhs2dtawam9str": {
-        "_id": "8mrhs2dtawam9str",
-        "name": "ability.zenith.infernal_claws.name",
+      "fenn38l6i4khygzh": {
+        "_id": "fenn38l6i4khygzh",
+        "name": "class.deadwalker.ability.zenith.infernal_claws.name",
         "type": "ability",
         "system": {
           "active": false,
-          "description": "ability.zenith.infernal_claws.description",
+          "description": "class.deadwalker.ability.zenith.infernal_claws.description",
           "type": "zenith",
           "children": {}
         }
       },
-      "21tefoi8cpsn0f9y": {
-        "_id": "21tefoi8cpsn0f9y",
-        "name": "ability.zenith.sunder_the_veil.name",
+      "95kymhncvdy8ehlj": {
+        "_id": "95kymhncvdy8ehlj",
+        "name": "class.deadwalker.ability.zenith.sunder_the_veil.name",
         "type": "ability",
         "system": {
           "active": false,
-          "description": "ability.zenith.sunder_the_veil.description",
+          "description": "class.deadwalker.ability.zenith.sunder_the_veil.description",
           "type": "zenith",
           "children": {}
         }
       },
-      "6ca4dv5sfphhb4w8": {
-        "_id": "6ca4dv5sfphhb4w8",
-        "name": "equipment.hunting_rifle",
+      "g2g9otvqkaw92ruv": {
+        "_id": "g2g9otvqkaw92ruv",
+        "name": "class.deadwalker.equipment.hunting_rifle",
         "type": "equipment",
         "system": {
           "type": "kill",
           "die_size": "d6",
           "group": "group_1",
           "children": {
-            "fspbbi4cwsa232xi": {
-              "_id": "fspbbi4cwsa232xi",
+            "5nrztewh0ts3rirv": {
+              "_id": "5nrztewh0ts3rirv",
               "name": "tag.extreme_range.name",
               "type": "tag",
               "system": {
                 "description": "tag.extreme_range.description"
               },
-              "_key": "!items!tci353z3xqgo9l7s"
+              "_key": "!items!gqnzyyt0et81qe11"
             },
-            "2cs0r4uaruerxgdt": {
-              "_id": "2cs0r4uaruerxgdt",
+            "9h3y3jtrftkb2oe1": {
+              "_id": "9h3y3jtrftkb2oe1",
               "name": "tag.reload.name",
               "type": "tag",
               "system": {
                 "description": "tag.reload.description"
               },
-              "_key": "!items!lwghr282rmaynug0"
+              "_key": "!items!453oy3lu2tyz55bc"
             }
           }
         }
       },
-      "np0ldksb4zlqbb29": {
-        "_id": "np0ldksb4zlqbb29",
-        "name": "equipment.greatsword",
+      "9pgo4xyvf8btlim3": {
+        "_id": "9pgo4xyvf8btlim3",
+        "name": "class.deadwalker.equipment.greatsword",
         "type": "equipment",
         "system": {
           "type": "kill",
           "die_size": "d10",
           "group": "group_2",
           "children": {
-            "y7ipit1o03ky1sse": {
-              "_id": "y7ipit1o03ky1sse",
+            "fxj5xf69w25wr5mv": {
+              "_id": "fxj5xf69w25wr5mv",
               "name": "tag.tiring.name",
               "type": "tag",
               "system": {
                 "description": "tag.tiring.description"
               },
-              "_key": "!items!i6sngsub3gge67r0"
+              "_key": "!items!hd1bex1x3ql9t1ad"
             }
           }
         }
       },
-      "rfzdho5mo8aoff32": {
-        "_id": "rfzdho5mo8aoff32",
-        "name": "equipment.bootleg_ambrosia",
+      "7yux8hhtxuuu0da7": {
+        "_id": "7yux8hhtxuuu0da7",
+        "name": "class.deadwalker.equipment.bootleg_ambrosia",
         "type": "equipment",
         "system": {
           "type": "mend",
@@ -509,30 +509,30 @@
             "mind"
           ],
           "children": {
-            "9bio9svu6ibhqzlj": {
-              "_id": "9bio9svu6ibhqzlj",
+            "0oucp235wvhe9qmw": {
+              "_id": "0oucp235wvhe9qmw",
               "name": "tag.potent.name",
               "type": "tag",
               "system": {
                 "description": "tag.potent.description"
               },
-              "_key": "!items!xbxcp9pjlw8abua2"
+              "_key": "!items!q2pe8xfiti6bi8nh"
             },
-            "ix7ios5i8ss2fq7t": {
-              "_id": "ix7ios5i8ss2fq7t",
+            "t23pge26f5kbjo4l": {
+              "_id": "t23pge26f5kbjo4l",
               "name": "tag.expensive.name",
               "type": "tag",
               "system": {
                 "description": "tag.expensive.description"
               },
-              "_key": "!items!l3fk6li875rcoi4p"
+              "_key": "!items!1gorqw8vbyybsug1"
             }
           }
         }
       },
-      "lgggj8tn78ejerrt": {
-        "_id": "lgggj8tn78ejerrt",
-        "name": "equipment.ritual_blade",
+      "rl5zt4clu9o4th1i": {
+        "_id": "rl5zt4clu9o4th1i",
+        "name": "class.deadwalker.equipment.ritual_blade",
         "type": "equipment",
         "system": {
           "type": "kill",
@@ -544,5 +544,5 @@
     }
   },
   "effects": [],
-  "_key": "!items!6u50p0864sehd9oy"
+  "_key": "!items!13rnlfe54nvdo10p"
 }

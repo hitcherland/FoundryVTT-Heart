@@ -13,10 +13,10 @@
       "group_3"
     ],
     "children": {
-      "mjijsnoanvpm87sq": {
-        "_id": "mjijsnoanvpm87sq",
+      "0xomflpm6nm93hdz": {
+        "_id": "0xomflpm6nm93hdz",
         "type": "resource",
-        "name": "resource.second_hand_wedding_ring",
+        "name": "class.incarnadine.resource.second_hand_wedding_ring",
         "system": {
           "active": true,
           "die_size": "d6",
@@ -24,220 +24,220 @@
           "children": {}
         }
       },
-      "s1psw7vy6if91m6d": {
-        "_id": "s1psw7vy6if91m6d",
-        "name": "ability.core.the_cost_of_doing_business.name",
+      "opo6li9sakqogw08": {
+        "_id": "opo6li9sakqogw08",
+        "name": "class.incarnadine.ability.core.the_cost_of_doing_business.name",
         "type": "ability",
         "system": {
           "active": true,
-          "description": "ability.core.the_cost_of_doing_business.description",
+          "description": "class.incarnadine.ability.core.the_cost_of_doing_business.description",
           "type": "core",
           "children": {}
         }
       },
-      "b8q0kn8qa4uda8uk": {
-        "_id": "b8q0kn8qa4uda8uk",
-        "name": "ability.core.mutually_assured_destruction.name",
+      "m7qab69r3mbxc3fd": {
+        "_id": "m7qab69r3mbxc3fd",
+        "name": "class.incarnadine.ability.core.mutually_assured_destruction.name",
         "type": "ability",
         "system": {
           "active": true,
-          "description": "ability.core.mutually_assured_destruction.description",
+          "description": "class.incarnadine.ability.core.mutually_assured_destruction.description",
           "type": "core",
           "children": {}
         }
       },
-      "l7y9lg967hc29fds": {
-        "_id": "l7y9lg967hc29fds",
-        "name": "ability.minor.a_red_and_bloody_business.name",
+      "z0i7f8ljenr501qf": {
+        "_id": "z0i7f8ljenr501qf",
+        "name": "class.incarnadine.ability.minor.a_red_and_bloody_business.name",
         "type": "ability",
         "system": {
           "active": false,
-          "description": "ability.minor.a_red_and_bloody_business.description",
+          "description": "class.incarnadine.ability.minor.a_red_and_bloody_business.description",
           "type": "minor",
           "children": {}
         }
       },
-      "xnaz2xc8mcgf7coz": {
-        "_id": "xnaz2xc8mcgf7coz",
-        "name": "ability.minor.an_eye_for_the_strange.name",
+      "jyksmse73yfaeix8": {
+        "_id": "jyksmse73yfaeix8",
+        "name": "class.incarnadine.ability.minor.an_eye_for_the_strange.name",
         "type": "ability",
         "system": {
           "active": false,
-          "description": "ability.minor.an_eye_for_the_strange.description",
+          "description": "class.incarnadine.ability.minor.an_eye_for_the_strange.description",
           "type": "minor",
           "children": {}
         }
       },
-      "8j4cvl960mruz5cj": {
-        "_id": "8j4cvl960mruz5cj",
-        "name": "ability.minor.better_safe_than_sorry.name",
+      "g8t46assgubf960y": {
+        "_id": "g8t46assgubf960y",
+        "name": "class.incarnadine.ability.minor.better_safe_than_sorry.name",
         "type": "ability",
         "system": {
           "active": false,
-          "description": "ability.minor.better_safe_than_sorry.description",
+          "description": "class.incarnadine.ability.minor.better_safe_than_sorry.description",
           "type": "minor",
           "children": {}
         }
       },
-      "mevebsku3dkpxtiu": {
-        "_id": "mevebsku3dkpxtiu",
-        "name": "ability.minor.creative_acquisitions.name",
+      "9zh9jh4jca9o4v56": {
+        "_id": "9zh9jh4jca9o4v56",
+        "name": "class.incarnadine.ability.minor.creative_acquisitions.name",
         "type": "ability",
         "system": {
           "active": false,
-          "description": "ability.minor.creative_acquisitions.description",
+          "description": "class.incarnadine.ability.minor.creative_acquisitions.description",
           "type": "minor",
           "children": {}
         }
       },
-      "mwd0xgyx8xcfukwo": {
-        "_id": "mwd0xgyx8xcfukwo",
-        "name": "ability.minor.creative_book_keeping.name",
+      "y4gd97dnsj8o2igx": {
+        "_id": "y4gd97dnsj8o2igx",
+        "name": "class.incarnadine.ability.minor.creative_book_keeping.name",
         "type": "ability",
         "system": {
           "active": false,
-          "description": "ability.minor.creative_book_keeping.description",
+          "description": "class.incarnadine.ability.minor.creative_book_keeping.description",
           "type": "minor",
           "children": {}
         }
       },
-      "ko49jsa2j5mcs64d": {
-        "_id": "ko49jsa2j5mcs64d",
-        "name": "ability.minor.eyes_in_the_back_of_your_head.name",
+      "489lc2x87t6v1q50": {
+        "_id": "489lc2x87t6v1q50",
+        "name": "class.incarnadine.ability.minor.eyes_in_the_back_of_your_head.name",
         "type": "ability",
         "system": {
           "active": false,
-          "description": "ability.minor.eyes_in_the_back_of_your_head.description",
+          "description": "class.incarnadine.ability.minor.eyes_in_the_back_of_your_head.description",
           "type": "minor",
           "children": {}
         }
       },
-      "4u17df7ei4brn8ii": {
-        "_id": "4u17df7ei4brn8ii",
-        "name": "ability.minor.jack_of_all_trades.name",
+      "b29ovcy9k1m6r3z0": {
+        "_id": "b29ovcy9k1m6r3z0",
+        "name": "class.incarnadine.ability.minor.jack_of_all_trades.name",
         "type": "ability",
         "system": {
           "active": false,
-          "description": "ability.minor.jack_of_all_trades.description",
+          "description": "class.incarnadine.ability.minor.jack_of_all_trades.description",
           "type": "minor",
           "children": {}
         }
       },
-      "ccgem160pshxj5z1": {
-        "_id": "ccgem160pshxj5z1",
-        "name": "ability.minor.lost_it_all.name",
+      "wqj5jgbj82afhjb5": {
+        "_id": "wqj5jgbj82afhjb5",
+        "name": "class.incarnadine.ability.minor.lost_it_all.name",
         "type": "ability",
         "system": {
           "active": false,
-          "description": "ability.minor.lost_it_all.description",
+          "description": "class.incarnadine.ability.minor.lost_it_all.description",
           "type": "minor",
           "children": {}
         }
       },
-      "loc39lw64hk9rola": {
-        "_id": "loc39lw64hk9rola",
-        "name": "ability.minor.make_do.name",
+      "rxpejor6dlg3nb33": {
+        "_id": "rxpejor6dlg3nb33",
+        "name": "class.incarnadine.ability.minor.make_do.name",
         "type": "ability",
         "system": {
           "active": false,
-          "description": "ability.minor.make_do.description",
+          "description": "class.incarnadine.ability.minor.make_do.description",
           "type": "minor",
           "children": {}
         }
       },
-      "4pvxbsg03e8peukf": {
-        "_id": "4pvxbsg03e8peukf",
-        "name": "ability.minor.on_the_run.name",
+      "rh7n94c4a3dow0fx": {
+        "_id": "rh7n94c4a3dow0fx",
+        "name": "class.incarnadine.ability.minor.on_the_run.name",
         "type": "ability",
         "system": {
           "active": false,
-          "description": "ability.minor.on_the_run.description",
+          "description": "class.incarnadine.ability.minor.on_the_run.description",
           "type": "minor",
           "children": {}
         }
       },
-      "qdef02pxntzsy32u": {
-        "_id": "qdef02pxntzsy32u",
-        "name": "ability.minor.priest_of_incarne.name",
+      "7heugnzx3oilmuca": {
+        "_id": "7heugnzx3oilmuca",
+        "name": "class.incarnadine.ability.minor.priest_of_incarne.name",
         "type": "ability",
         "system": {
           "active": false,
-          "description": "ability.minor.priest_of_incarne.description",
+          "description": "class.incarnadine.ability.minor.priest_of_incarne.description",
           "type": "minor",
           "children": {}
         }
       },
-      "0tl4p5j9t2ciygd8": {
-        "_id": "0tl4p5j9t2ciygd8",
-        "name": "ability.minor.red_marketeer.name",
+      "j78ou2xhzkba7l9b": {
+        "_id": "j78ou2xhzkba7l9b",
+        "name": "class.incarnadine.ability.minor.red_marketeer.name",
         "type": "ability",
         "system": {
           "active": false,
-          "description": "ability.minor.red_marketeer.description",
+          "description": "class.incarnadine.ability.minor.red_marketeer.description",
           "type": "minor",
           "children": {}
         }
       },
-      "iylyhpc2xz0jrlkx": {
-        "_id": "iylyhpc2xz0jrlkx",
-        "name": "ability.minor.valuable_asset.name",
+      "t4m6iucu2yn85i1z": {
+        "_id": "t4m6iucu2yn85i1z",
+        "name": "class.incarnadine.ability.minor.valuable_asset.name",
         "type": "ability",
         "system": {
           "active": false,
-          "description": "ability.minor.valuable_asset.description",
+          "description": "class.incarnadine.ability.minor.valuable_asset.description",
           "type": "minor",
           "children": {}
         }
       },
-      "ecxgzkzgbxw60fcf": {
-        "_id": "ecxgzkzgbxw60fcf",
-        "name": "ability.minor.areas_of_opportunity.name",
+      "5d3uq9ihcuuu4a1z": {
+        "_id": "5d3uq9ihcuuu4a1z",
+        "name": "class.incarnadine.ability.minor.areas_of_opportunity.name",
         "type": "ability",
         "system": {
           "active": false,
-          "description": "ability.minor.areas_of_opportunity.description",
+          "description": "class.incarnadine.ability.minor.areas_of_opportunity.description",
           "type": "minor",
           "children": {}
         }
       },
-      "815xkltdtax92hpb": {
-        "_id": "815xkltdtax92hpb",
-        "name": "ability.major.backstab.name",
+      "j9ta27a4aikpltms": {
+        "_id": "j9ta27a4aikpltms",
+        "name": "class.incarnadine.ability.major.backstab.name",
         "type": "ability",
         "system": {
           "active": false,
-          "description": "ability.major.backstab.description",
+          "description": "class.incarnadine.ability.major.backstab.description",
           "type": "major",
           "children": {
-            "wrivghf6hqytn05j": {
-              "_id": "wrivghf6hqytn05j",
-              "name": "ability.minor.deadeye.name",
+            "rnxod09srayuuuzh": {
+              "_id": "rnxod09srayuuuzh",
+              "name": "class.incarnadine.ability.minor.deadeye.name",
               "type": "ability",
               "system": {
                 "active": false,
-                "description": "ability.minor.deadeye.description",
+                "description": "class.incarnadine.ability.minor.deadeye.description",
                 "type": "minor",
                 "children": {}
               }
             },
-            "z41jgu3pi1xhaosi": {
-              "_id": "z41jgu3pi1xhaosi",
-              "name": "ability.minor.never_saw_it_coming.name",
+            "lmvz98i8wkgaty7n": {
+              "_id": "lmvz98i8wkgaty7n",
+              "name": "class.incarnadine.ability.minor.never_saw_it_coming.name",
               "type": "ability",
               "system": {
                 "active": false,
-                "description": "ability.minor.never_saw_it_coming.description",
+                "description": "class.incarnadine.ability.minor.never_saw_it_coming.description",
                 "type": "minor",
                 "children": {}
               }
             },
-            "z6xnwfm623lxoflf": {
-              "_id": "z6xnwfm623lxoflf",
-              "name": "ability.minor.remuneration.name",
+            "r1ns268xedq3tfdm": {
+              "_id": "r1ns268xedq3tfdm",
+              "name": "class.incarnadine.ability.minor.remuneration.name",
               "type": "ability",
               "system": {
                 "active": false,
-                "description": "ability.minor.remuneration.description",
+                "description": "class.incarnadine.ability.minor.remuneration.description",
                 "type": "minor",
                 "children": {}
               }
@@ -245,44 +245,44 @@
           }
         }
       },
-      "isrykrbnjqhjzstx": {
-        "_id": "isrykrbnjqhjzstx",
-        "name": "ability.major.broker.name",
+      "jxbg6wrzpyba9dow": {
+        "_id": "jxbg6wrzpyba9dow",
+        "name": "class.incarnadine.ability.major.broker.name",
         "type": "ability",
         "system": {
           "active": false,
-          "description": "ability.major.broker.description",
+          "description": "class.incarnadine.ability.major.broker.description",
           "type": "major",
           "children": {
-            "3drdzvgbla4g6us5": {
-              "_id": "3drdzvgbla4g6us5",
-              "name": "ability.minor.invest.name",
+            "03mhgatbh71zmol4": {
+              "_id": "03mhgatbh71zmol4",
+              "name": "class.incarnadine.ability.minor.invest.name",
               "type": "ability",
               "system": {
                 "active": false,
-                "description": "ability.minor.invest.description",
+                "description": "class.incarnadine.ability.minor.invest.description",
                 "type": "minor",
                 "children": {}
               }
             },
-            "qn59z94r68qb17v3": {
-              "_id": "qn59z94r68qb17v3",
-              "name": "ability.minor.transferral.name",
+            "h4v5ux3db6hxjouy": {
+              "_id": "h4v5ux3db6hxjouy",
+              "name": "class.incarnadine.ability.minor.transferral.name",
               "type": "ability",
               "system": {
                 "active": false,
-                "description": "ability.minor.transferral.description",
+                "description": "class.incarnadine.ability.minor.transferral.description",
                 "type": "minor",
                 "children": {}
               }
             },
-            "k68lrune0nivnqsg": {
-              "_id": "k68lrune0nivnqsg",
-              "name": "ability.minor.inflict.name",
+            "it55tb87xktw4w76": {
+              "_id": "it55tb87xktw4w76",
+              "name": "class.incarnadine.ability.minor.inflict.name",
               "type": "ability",
               "system": {
                 "active": false,
-                "description": "ability.minor.inflict.description",
+                "description": "class.incarnadine.ability.minor.inflict.description",
                 "type": "minor",
                 "children": {}
               }
@@ -290,33 +290,33 @@
           }
         }
       },
-      "dhczpd0h8xhug9v4": {
-        "_id": "dhczpd0h8xhug9v4",
-        "name": "ability.major.crave.name",
+      "asr4ace448ujz62n": {
+        "_id": "asr4ace448ujz62n",
+        "name": "class.incarnadine.ability.major.crave.name",
         "type": "ability",
         "system": {
           "active": false,
-          "description": "ability.major.crave.description",
+          "description": "class.incarnadine.ability.major.crave.description",
           "type": "major",
           "children": {
-            "52hn2tq6z9slx4pg": {
-              "_id": "52hn2tq6z9slx4pg",
-              "name": "ability.minor.addict.name",
+            "dn7f4yoz94mxsiem": {
+              "_id": "dn7f4yoz94mxsiem",
+              "name": "class.incarnadine.ability.minor.addict.name",
               "type": "ability",
               "system": {
                 "active": false,
-                "description": "ability.minor.addict.description",
+                "description": "class.incarnadine.ability.minor.addict.description",
                 "type": "minor",
                 "children": {}
               }
             },
-            "fgrjqp0jcrp2utxg": {
-              "_id": "fgrjqp0jcrp2utxg",
-              "name": "ability.minor.conditioning.name",
+            "x1vrdop7irmq3tsm": {
+              "_id": "x1vrdop7irmq3tsm",
+              "name": "class.incarnadine.ability.minor.conditioning.name",
               "type": "ability",
               "system": {
                 "active": false,
-                "description": "ability.minor.conditioning.description",
+                "description": "class.incarnadine.ability.minor.conditioning.description",
                 "type": "minor",
                 "children": {}
               }
@@ -324,44 +324,44 @@
           }
         }
       },
-      "r826bqiy66hcxw24": {
-        "_id": "r826bqiy66hcxw24",
-        "name": "ability.major.debtors_reds.name",
+      "8tjdn8kx0gi5g8is": {
+        "_id": "8tjdn8kx0gi5g8is",
+        "name": "class.incarnadine.ability.major.debtors_reds.name",
         "type": "ability",
         "system": {
           "active": false,
-          "description": "ability.major.debtors_reds.description",
+          "description": "class.incarnadine.ability.major.debtors_reds.description",
           "type": "major",
           "children": {
-            "x5w7fwxnx11wti52": {
-              "_id": "x5w7fwxnx11wti52",
-              "name": "ability.minor.buy_off.name",
+            "wj24yx98yursgjs0": {
+              "_id": "wj24yx98yursgjs0",
+              "name": "class.incarnadine.ability.minor.buy_off.name",
               "type": "ability",
               "system": {
                 "active": false,
-                "description": "ability.minor.buy_off.description",
+                "description": "class.incarnadine.ability.minor.buy_off.description",
                 "type": "minor",
                 "children": {}
               }
             },
-            "eqvzxcyb7wocfvh3": {
-              "_id": "eqvzxcyb7wocfvh3",
-              "name": "ability.minor.cycle_of_debt.name",
+            "r75685x5d8yfgjjw": {
+              "_id": "r75685x5d8yfgjjw",
+              "name": "class.incarnadine.ability.minor.cycle_of_debt.name",
               "type": "ability",
               "system": {
                 "active": false,
-                "description": "ability.minor.cycle_of_debt.description",
+                "description": "class.incarnadine.ability.minor.cycle_of_debt.description",
                 "type": "minor",
                 "children": {}
               }
             },
-            "2frdg4i8no493v61": {
-              "_id": "2frdg4i8no493v61",
-              "name": "ability.minor.assume_debt.name",
+            "mgt6sm7844tli0f0": {
+              "_id": "mgt6sm7844tli0f0",
+              "name": "class.incarnadine.ability.minor.assume_debt.name",
               "type": "ability",
               "system": {
                 "active": false,
-                "description": "ability.minor.assume_debt.description",
+                "description": "class.incarnadine.ability.minor.assume_debt.description",
                 "type": "minor",
                 "children": {}
               }
@@ -369,44 +369,44 @@
           }
         }
       },
-      "rphyl6thtxpzft26": {
-        "_id": "rphyl6thtxpzft26",
-        "name": "ability.major.karmic_ledger.name",
+      "wdiv0hdur6ovw01u": {
+        "_id": "wdiv0hdur6ovw01u",
+        "name": "class.incarnadine.ability.major.karmic_ledger.name",
         "type": "ability",
         "system": {
           "active": false,
-          "description": "ability.major.karmic_ledger.description",
+          "description": "class.incarnadine.ability.major.karmic_ledger.description",
           "type": "major",
           "children": {
-            "djdo344ac4d6g6iq": {
-              "_id": "djdo344ac4d6g6iq",
-              "name": "ability.minor.connection.name",
+            "p54pzxrvab0b80gv": {
+              "_id": "p54pzxrvab0b80gv",
+              "name": "class.incarnadine.ability.minor.connection.name",
               "type": "ability",
               "system": {
                 "active": false,
-                "description": "ability.minor.connection.description",
+                "description": "class.incarnadine.ability.minor.connection.description",
                 "type": "minor",
                 "children": {}
               }
             },
-            "zqbw07fe0972q85j": {
-              "_id": "zqbw07fe0972q85j",
-              "name": "ability.minor.harvest.name",
+            "enmuttfdudsl02qz": {
+              "_id": "enmuttfdudsl02qz",
+              "name": "class.incarnadine.ability.minor.harvest.name",
               "type": "ability",
               "system": {
                 "active": false,
-                "description": "ability.minor.harvest.description",
+                "description": "class.incarnadine.ability.minor.harvest.description",
                 "type": "minor",
                 "children": {}
               }
             },
-            "85ygnjkhb9p7fvls": {
-              "_id": "85ygnjkhb9p7fvls",
-              "name": "ability.minor.candidate.name",
+            "fvo24b4iis5hjkq2": {
+              "_id": "fvo24b4iis5hjkq2",
+              "name": "class.incarnadine.ability.minor.candidate.name",
               "type": "ability",
               "system": {
                 "active": false,
-                "description": "ability.minor.candidate.description",
+                "description": "class.incarnadine.ability.minor.candidate.description",
                 "type": "minor",
                 "children": {}
               }
@@ -414,44 +414,44 @@
           }
         }
       },
-      "07tsnjkaf5mpy2eg": {
-        "_id": "07tsnjkaf5mpy2eg",
-        "name": "ability.major.network.name",
+      "v7xq1ymkc3fys0nd": {
+        "_id": "v7xq1ymkc3fys0nd",
+        "name": "class.incarnadine.ability.major.network.name",
         "type": "ability",
         "system": {
           "active": false,
-          "description": "ability.major.network.description",
+          "description": "class.incarnadine.ability.major.network.description",
           "type": "major",
           "children": {
-            "mo6bn995x4bpzsgs": {
-              "_id": "mo6bn995x4bpzsgs",
-              "name": "ability.minor.proliferation.name",
+            "7jjvraqne8fthxlh": {
+              "_id": "7jjvraqne8fthxlh",
+              "name": "class.incarnadine.ability.minor.proliferation.name",
               "type": "ability",
               "system": {
                 "active": false,
-                "description": "ability.minor.proliferation.description",
+                "description": "class.incarnadine.ability.minor.proliferation.description",
                 "type": "minor",
                 "children": {}
               }
             },
-            "9ib112da6uyvvgjr": {
-              "_id": "9ib112da6uyvvgjr",
-              "name": "ability.minor.pathways.name",
+            "e7chjuiqs58z13ho": {
+              "_id": "e7chjuiqs58z13ho",
+              "name": "class.incarnadine.ability.minor.pathways.name",
               "type": "ability",
               "system": {
                 "active": false,
-                "description": "ability.minor.pathways.description",
+                "description": "class.incarnadine.ability.minor.pathways.description",
                 "type": "minor",
                 "children": {}
               }
             },
-            "abv9ylgw8u9uo2gj": {
-              "_id": "abv9ylgw8u9uo2gj",
-              "name": "ability.minor.money_talks.name",
+            "b7b95eon8av2s947": {
+              "_id": "b7b95eon8av2s947",
+              "name": "class.incarnadine.ability.minor.money_talks.name",
               "type": "ability",
               "system": {
                 "active": false,
-                "description": "ability.minor.money_talks.description",
+                "description": "class.incarnadine.ability.minor.money_talks.description",
                 "type": "minor",
                 "children": {}
               }
@@ -459,42 +459,42 @@
           }
         }
       },
-      "dktaawvnyjj2j29u": {
-        "_id": "dktaawvnyjj2j29u",
-        "name": "ability.zenith.ultimate_credit.name",
+      "nksjwgo20hns0v8k": {
+        "_id": "nksjwgo20hns0v8k",
+        "name": "class.incarnadine.ability.zenith.ultimate_credit.name",
         "type": "ability",
         "system": {
           "active": false,
-          "description": "ability.zenith.ultimate_credit.description",
+          "description": "class.incarnadine.ability.zenith.ultimate_credit.description",
           "type": "zenith",
           "children": {}
         }
       },
-      "7jr2oj93nn2qb17m": {
-        "_id": "7jr2oj93nn2qb17m",
-        "name": "ability.zenith.ultimate_debt.name",
+      "j8mv0xbzte25ir5y": {
+        "_id": "j8mv0xbzte25ir5y",
+        "name": "class.incarnadine.ability.zenith.ultimate_debt.name",
         "type": "ability",
         "system": {
           "active": false,
-          "description": "ability.zenith.ultimate_debt.description",
+          "description": "class.incarnadine.ability.zenith.ultimate_debt.description",
           "type": "zenith",
           "children": {}
         }
       },
-      "50b93pujvod6bdsw": {
-        "_id": "50b93pujvod6bdsw",
-        "name": "ability.zenith.ultimate_reward.name",
+      "upnb12b5ap34djtd": {
+        "_id": "upnb12b5ap34djtd",
+        "name": "class.incarnadine.ability.zenith.ultimate_reward.name",
         "type": "ability",
         "system": {
           "active": false,
-          "description": "ability.zenith.ultimate_reward.description",
+          "description": "class.incarnadine.ability.zenith.ultimate_reward.description",
           "type": "zenith",
           "children": {}
         }
       },
-      "0pd2a57vroaek1ta": {
-        "_id": "0pd2a57vroaek1ta",
-        "name": "equipment.hooked_blade",
+      "milwdgfjz1u6ohwn": {
+        "_id": "milwdgfjz1u6ohwn",
+        "name": "class.incarnadine.equipment.hooked_blade",
         "type": "equipment",
         "system": {
           "type": "kill",
@@ -503,92 +503,92 @@
           "children": {}
         }
       },
-      "k9o9z3znaaep84b3": {
-        "_id": "k9o9z3znaaep84b3",
-        "name": "equipment.filigreed_revolver",
+      "2850fpw8ndtipsl9": {
+        "_id": "2850fpw8ndtipsl9",
+        "name": "class.incarnadine.equipment.filigreed_revolver",
         "type": "equipment",
         "system": {
           "type": "kill",
           "die_size": "d8",
           "group": "group_1",
           "children": {
-            "ve86x0axe1cucuf4": {
-              "_id": "ve86x0axe1cucuf4",
+            "us9s9ove8rpgpaq5": {
+              "_id": "us9s9ove8rpgpaq5",
               "name": "tag.ranged.name",
               "type": "tag",
               "system": {
                 "description": "tag.ranged.description"
               },
-              "_key": "!items!s8nvyy8qxppdiv98"
+              "_key": "!items!8t6wdqu6ch9v05j9"
             },
-            "mb7ke4np74s40ay8": {
-              "_id": "mb7ke4np74s40ay8",
+            "syrfwtip58hq6ayo": {
+              "_id": "syrfwtip58hq6ayo",
               "name": "tag.expensive.name",
               "type": "tag",
               "system": {
                 "description": "tag.expensive.description"
               },
-              "_key": "!items!l3fk6li875rcoi4p"
+              "_key": "!items!1gorqw8vbyybsug1"
             }
           }
         }
       },
-      "2dulkqzdh8drjhtz": {
-        "_id": "2dulkqzdh8drjhtz",
-        "name": "equipment.bailiffs_iron_cudgel",
+      "g53rfwf8qmrdf9an": {
+        "_id": "g53rfwf8qmrdf9an",
+        "name": "class.incarnadine.equipment.bailiffs_iron_cudgel",
         "type": "equipment",
         "system": {
           "type": "kill",
           "die_size": "d8",
           "group": "group_2",
           "children": {
-            "40y4rdlks3ssl1wc": {
-              "_id": "40y4rdlks3ssl1wc",
+            "7nv39c5n0ls43dba": {
+              "_id": "7nv39c5n0ls43dba",
               "name": "tag.tiring.name",
               "type": "tag",
               "system": {
                 "description": "tag.tiring.description"
               },
-              "_key": "!items!i6sngsub3gge67r0"
+              "_key": "!items!hd1bex1x3ql9t1ad"
             }
           }
         }
       },
-      "9de2w2gk5l4r545c": {
-        "_id": "9de2w2gk5l4r545c",
-        "name": "equipment.homemade_spireblack_pipe_bombs",
+      "84rqrkgrttxie2oi": {
+        "_id": "84rqrkgrttxie2oi",
+        "name": "class.incarnadine.equipment.homemade_spireblack_pipe_bombs",
         "type": "equipment",
         "system": {
           "type": "kill",
           "die_size": "d6",
           "group": "group_3",
           "children": {
-            "oo5nh98hlub057bo": {
-              "_id": "oo5nh98hlub057bo",
+            "ym170t1rk6zduxjq": {
+              "_id": "ym170t1rk6zduxjq",
               "name": "tag.ranged.name",
               "type": "tag",
               "system": {
                 "description": "tag.ranged.description"
               },
-              "_key": "!items!s8nvyy8qxppdiv98"
+              "_key": "!items!8t6wdqu6ch9v05j9"
             },
-            "f413z93tgjvn23wh": {
-              "_id": "f413z93tgjvn23wh",
+            "qozsnezdj2jtnjfk": {
+              "_id": "qozsnezdj2jtnjfk",
               "name": "tag.spread.name",
               "type": "tag",
               "system": {
                 "description": "tag.spread.description"
               },
-              "_key": "!items!ofuen42msbovq5qi"
+              "_key": "!items!2uneyze6l3bv9s64"
             },
-            "89jh293awzj79z74": {
-              "_id": "89jh293awzj79z74",
+            "4z8r9j08mqu8707z": {
+              "_id": "4z8r9j08mqu8707z",
               "name": "tag.one_shot.name",
               "type": "tag",
               "system": {
                 "description": "tag.one_shot.description"
               },
-              "_key": "!items!faj10jsehzakjtrj"
+              "_key": "!items!o6e76xgp4bgau5e5"
             }
           }
         }
@@ -596,5 +596,5 @@
     }
   },
   "effects": [],
-  "_key": "!items!kdo062vytauanrq4"
+  "_key": "!items!jjotgrhyblglfp90"
 }

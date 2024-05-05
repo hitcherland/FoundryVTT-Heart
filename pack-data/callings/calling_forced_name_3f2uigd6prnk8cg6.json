@@ -1,319 +1,319 @@
 {
-  "_id": "3f2uigd6prnk8cg6",
+  "_id": "yn64sswyai6g6yq8",
   "name": "calling.forced.name",
   "type": "calling",
   "system": {
     "description": "calling.forced.description",
     "questions": {
-      "6zszsu04hi40916y": {
+      "66919atrekvezucs": {
         "question": "calling.forced.who-are-your-masters"
       },
-      "9pak9h1femgqj758": {
+      "i63l9le9fzae8x3g": {
         "question": "calling.forced.what-do-your-masters-want"
       },
-      "vbvhh5iv98nko95o": {
+      "o18lt0dprvdv7ltt": {
         "question": "calling.forced.how-are-they-maintaining-power"
       },
-      "3c604dwgaa8jij44": {
+      "0vujn4ihap2v3o92": {
         "question": "calling.forced.how-do-your-masters-contact"
       },
-      "dtm2z3mfrct3lpxw": {
+      "uwqvc09cl8ml7279": {
         "question": "calling.forced.what-is-other-relationship"
       }
     },
     "children": {
-      "ma60znuyuumiz8sh": {
-        "_id": "ma60znuyuumiz8sh",
-        "name": "ability.core.collateral.name",
+      "4qutm6puhwhoaage": {
+        "_id": "4qutm6puhwhoaage",
+        "name": "calling.forced.ability.core.collateral.name",
         "type": "ability",
         "system": {
           "active": true,
-          "description": "ability.core.collateral.description",
+          "description": "calling.forced.ability.core.collateral.description",
           "type": "core",
           "children": {}
         }
       },
-      "8wdbiwfpedrbmntr": {
-        "_id": "8wdbiwfpedrbmntr",
-        "name": "beat.minor.receive-orders",
+      "zd6pjmloqk29tu9n": {
+        "_id": "zd6pjmloqk29tu9n",
+        "name": "calling.forced.beat.minor.receive-orders",
         "type": "beat",
         "system": {
-          "description": "beat.minor.receive-orders",
+          "description": "calling.forced.beat.minor.receive-orders",
           "type": "minor"
         }
       },
-      "rn1700u259og1etp": {
-        "_id": "rn1700u259og1etp",
-        "name": "beat.minor.follow-orders-from-your-masters",
+      "lqnbph20qwqvxse5": {
+        "_id": "lqnbph20qwqvxse5",
+        "name": "calling.forced.beat.minor.follow-orders-from-your-masters",
         "type": "beat",
         "system": {
-          "description": "beat.minor.follow-orders-from-your-masters",
+          "description": "calling.forced.beat.minor.follow-orders-from-your-masters",
           "type": "minor"
         }
       },
-      "uo3u8sddn51fgtxh": {
-        "_id": "uo3u8sddn51fgtxh",
-        "name": "beat.minor.rebel-against-your-orders",
+      "fk9wsdsmdxqo4lrh": {
+        "_id": "fk9wsdsmdxqo4lrh",
+        "name": "calling.forced.beat.minor.rebel-against-your-orders",
         "type": "beat",
         "system": {
-          "description": "beat.minor.rebel-against-your-orders",
+          "description": "calling.forced.beat.minor.rebel-against-your-orders",
           "type": "minor"
         }
       },
-      "2i8s9hsphbfck9zn": {
-        "_id": "2i8s9hsphbfck9zn",
-        "name": "beat.minor.forge-friendship-with-NPC",
+      "da5v9kg6ytfdgzqt": {
+        "_id": "da5v9kg6ytfdgzqt",
+        "name": "calling.forced.beat.minor.forge-friendship-with-NPC",
         "type": "beat",
         "system": {
-          "description": "beat.minor.forge-friendship-with-NPC",
+          "description": "calling.forced.beat.minor.forge-friendship-with-NPC",
           "type": "minor"
         }
       },
-      "faoj5qj3vi4qx2uv": {
-        "_id": "faoj5qj3vi4qx2uv",
-        "name": "beat.minor.betray-someone",
+      "g006m5epvej237lh": {
+        "_id": "g006m5epvej237lh",
+        "name": "calling.forced.beat.minor.betray-someone",
         "type": "beat",
         "system": {
-          "description": "beat.minor.betray-someone",
+          "description": "calling.forced.beat.minor.betray-someone",
           "type": "minor"
         }
       },
-      "pt5b8mj5uktj8yr8": {
-        "_id": "pt5b8mj5uktj8yr8",
-        "name": "beat.minor.take-minor-fortune-fallout",
+      "dmltumuicvbx2mez": {
+        "_id": "dmltumuicvbx2mez",
+        "name": "calling.forced.beat.minor.take-minor-fortune-fallout",
         "type": "beat",
         "system": {
-          "description": "beat.minor.take-minor-fortune-fallout",
+          "description": "calling.forced.beat.minor.take-minor-fortune-fallout",
           "type": "minor"
         }
       },
-      "drbdowe37g771jtk": {
-        "_id": "drbdowe37g771jtk",
-        "name": "beat.minor.do-something-dangerous",
+      "ui6obaoiyapwa38z": {
+        "_id": "ui6obaoiyapwa38z",
+        "name": "calling.forced.beat.minor.do-something-dangerous",
         "type": "beat",
         "system": {
-          "description": "beat.minor.do-something-dangerous",
+          "description": "calling.forced.beat.minor.do-something-dangerous",
           "type": "minor"
         }
       },
-      "33uc4y6vot6dmk04": {
-        "_id": "33uc4y6vot6dmk04",
-        "name": "beat.minor.invoke-your-masters-name",
+      "mbp8zp478fjyq9w4": {
+        "_id": "mbp8zp478fjyq9w4",
+        "name": "calling.forced.beat.minor.invoke-your-masters-name",
         "type": "beat",
         "system": {
-          "description": "beat.minor.invoke-your-masters-name",
+          "description": "calling.forced.beat.minor.invoke-your-masters-name",
           "type": "minor"
         }
       },
-      "lbwzv0ikllljbj36": {
-        "_id": "lbwzv0ikllljbj36",
-        "name": "beat.minor.PC-suffers-fallout",
+      "cpllxcvouu89hg5w": {
+        "_id": "cpllxcvouu89hg5w",
+        "name": "calling.forced.beat.minor.PC-suffers-fallout",
         "type": "beat",
         "system": {
-          "description": "beat.minor.PC-suffers-fallout",
+          "description": "calling.forced.beat.minor.PC-suffers-fallout",
           "type": "minor"
         }
       },
-      "7mofc4t7ympjcd1e": {
-        "_id": "7mofc4t7ympjcd1e",
-        "name": "beat.minor.find-a-sanctuary",
+      "gj4azkio174hradq": {
+        "_id": "gj4azkio174hradq",
+        "name": "calling.forced.beat.minor.find-a-sanctuary",
         "type": "beat",
         "system": {
-          "description": "beat.minor.find-a-sanctuary",
+          "description": "calling.forced.beat.minor.find-a-sanctuary",
           "type": "minor"
         }
       },
-      "5nbgbw0aoo7augti": {
-        "_id": "5nbgbw0aoo7augti",
-        "name": "beat.minor.rescue-NPC-from-trouble",
+      "k7rv3zyjw6ogzcd4": {
+        "_id": "k7rv3zyjw6ogzcd4",
+        "name": "calling.forced.beat.minor.rescue-NPC-from-trouble",
         "type": "beat",
         "system": {
-          "description": "beat.minor.rescue-NPC-from-trouble",
+          "description": "calling.forced.beat.minor.rescue-NPC-from-trouble",
           "type": "minor"
         }
       },
-      "nmxt02lwscp5x49o": {
-        "_id": "nmxt02lwscp5x49o",
-        "name": "beat.minor.receive-time-critical-mission",
+      "hd8bfeca7ngtnlu4": {
+        "_id": "hd8bfeca7ngtnlu4",
+        "name": "calling.forced.beat.minor.receive-time-critical-mission",
         "type": "beat",
         "system": {
-          "description": "beat.minor.receive-time-critical-mission",
+          "description": "calling.forced.beat.minor.receive-time-critical-mission",
           "type": "minor"
         }
       },
-      "3z4yyan50le5dbl7": {
-        "_id": "3z4yyan50le5dbl7",
-        "name": "beat.minor.receive-aid-from-someone-reprehensible",
+      "y9injf4shdjisb7t": {
+        "_id": "y9injf4shdjisb7t",
+        "name": "calling.forced.beat.minor.receive-aid-from-someone-reprehensible",
         "type": "beat",
         "system": {
-          "description": "beat.minor.receive-aid-from-someone-reprehensible",
+          "description": "calling.forced.beat.minor.receive-aid-from-someone-reprehensible",
           "type": "minor"
         }
       },
-      "w5is5mqpg5slcfb3": {
-        "_id": "w5is5mqpg5slcfb3",
-        "name": "beat.minor.send-requested-resource",
+      "q7fcsae355k1i16q": {
+        "_id": "q7fcsae355k1i16q",
+        "name": "calling.forced.beat.minor.send-requested-resource",
         "type": "beat",
         "system": {
-          "description": "beat.minor.send-requested-resource",
+          "description": "calling.forced.beat.minor.send-requested-resource",
           "type": "minor"
         }
       },
-      "4yj10tpcrwqabuyk": {
-        "_id": "4yj10tpcrwqabuyk",
-        "name": "beat.minor.perform-seemingly-unconnected-action",
+      "nb3kukc53rdabr0o": {
+        "_id": "nb3kukc53rdabr0o",
+        "name": "calling.forced.beat.minor.perform-seemingly-unconnected-action",
         "type": "beat",
         "system": {
-          "description": "beat.minor.perform-seemingly-unconnected-action",
+          "description": "calling.forced.beat.minor.perform-seemingly-unconnected-action",
           "type": "minor"
         }
       },
-      "2t75f4e4ghklw6qg": {
-        "_id": "2t75f4e4ghklw6qg",
-        "name": "beat.minor.cover-up-a-crime",
+      "omljmaj8jh9gz2bx": {
+        "_id": "omljmaj8jh9gz2bx",
+        "name": "calling.forced.beat.minor.cover-up-a-crime",
         "type": "beat",
         "system": {
-          "description": "beat.minor.cover-up-a-crime",
+          "description": "calling.forced.beat.minor.cover-up-a-crime",
           "type": "minor"
         }
       },
-      "r75nbguon8hsdihe": {
-        "_id": "r75nbguon8hsdihe",
-        "name": "beat.minor.claim-doing-something-on-behalf",
+      "pg7tjdt1rxj2k8fc": {
+        "_id": "pg7tjdt1rxj2k8fc",
+        "name": "calling.forced.beat.minor.claim-doing-something-on-behalf",
         "type": "beat",
         "system": {
-          "description": "beat.minor.claim-doing-something-on-behalf",
+          "description": "calling.forced.beat.minor.claim-doing-something-on-behalf",
           "type": "minor"
         }
       },
-      "023e0dtzcp8imu8a": {
-        "_id": "023e0dtzcp8imu8a",
-        "name": "beat.minor.involve-NPC-in-masters-schemes",
+      "hi035jvp2tfbxwbb": {
+        "_id": "hi035jvp2tfbxwbb",
+        "name": "calling.forced.beat.minor.involve-NPC-in-masters-schemes",
         "type": "beat",
         "system": {
-          "description": "beat.minor.involve-NPC-in-masters-schemes",
+          "description": "calling.forced.beat.minor.involve-NPC-in-masters-schemes",
           "type": "minor"
         }
       },
-      "zehtfohm8uhbmb7n": {
-        "_id": "zehtfohm8uhbmb7n",
-        "name": "beat.minor.do-favor-for-someone",
+      "asn8rtk17onismkk": {
+        "_id": "asn8rtk17onismkk",
+        "name": "calling.forced.beat.minor.do-favor-for-someone",
         "type": "beat",
         "system": {
-          "description": "beat.minor.do-favor-for-someone",
+          "description": "calling.forced.beat.minor.do-favor-for-someone",
           "type": "minor"
         }
       },
-      "w7yh7apjvoebvj6p": {
-        "_id": "w7yh7apjvoebvj6p",
-        "name": "beat.major.destroy-something-important",
+      "ddgavcll0es6o5cf": {
+        "_id": "ddgavcll0es6o5cf",
+        "name": "calling.forced.beat.major.destroy-something-important",
         "type": "beat",
         "system": {
-          "description": "beat.major.destroy-something-important",
+          "description": "calling.forced.beat.major.destroy-something-important",
           "type": "major"
         }
       },
-      "8yrz4ghq9a3paom7": {
-        "_id": "8yrz4ghq9a3paom7",
-        "name": "beat.major.learn-something-lessens-control",
+      "ef6fbddlngkjwz2i": {
+        "_id": "ef6fbddlngkjwz2i",
+        "name": "calling.forced.beat.major.learn-something-lessens-control",
         "type": "beat",
         "system": {
-          "description": "beat.major.learn-something-lessens-control",
+          "description": "calling.forced.beat.major.learn-something-lessens-control",
           "type": "major"
         }
       },
-      "9wpizyqrrrlcemys": {
-        "_id": "9wpizyqrrrlcemys",
-        "name": "beat.major.perform-reprehensible-act",
+      "7qbmj5rrmoy1zrjc": {
+        "_id": "7qbmj5rrmoy1zrjc",
+        "name": "calling.forced.beat.major.perform-reprehensible-act",
         "type": "beat",
         "system": {
-          "description": "beat.major.perform-reprehensible-act",
+          "description": "calling.forced.beat.major.perform-reprehensible-act",
           "type": "major"
         }
       },
-      "xlq0o9p8x3p972eh": {
-        "_id": "xlq0o9p8x3p972eh",
-        "name": "beat.major.suffer-the-consequences",
+      "1bugwd6af6m83bfk": {
+        "_id": "1bugwd6af6m83bfk",
+        "name": "calling.forced.beat.major.suffer-the-consequences",
         "type": "beat",
         "system": {
-          "description": "beat.major.suffer-the-consequences",
+          "description": "calling.forced.beat.major.suffer-the-consequences",
           "type": "major"
         }
       },
-      "f7sqyyt3enmsoyq8": {
-        "_id": "f7sqyyt3enmsoyq8",
-        "name": "beat.major.take-major-fortune-fallout",
+      "sy378ycnnaavhold": {
+        "_id": "sy378ycnnaavhold",
+        "name": "calling.forced.beat.major.take-major-fortune-fallout",
         "type": "beat",
         "system": {
-          "description": "beat.major.take-major-fortune-fallout",
+          "description": "calling.forced.beat.major.take-major-fortune-fallout",
           "type": "major"
         }
       },
-      "dw6m2fug12ftdj0d": {
-        "_id": "dw6m2fug12ftdj0d",
-        "name": "beat.minor.important-beloved-NPC-dies",
+      "052r8hb8uuphof9e": {
+        "_id": "052r8hb8uuphof9e",
+        "name": "calling.forced.beat.minor.important-beloved-NPC-dies",
         "type": "beat",
         "system": {
-          "description": "beat.minor.important-beloved-NPC-dies",
+          "description": "calling.forced.beat.minor.important-beloved-NPC-dies",
           "type": "major"
         }
       },
-      "hok3yngh334ll5wp": {
-        "_id": "hok3yngh334ll5wp",
-        "name": "beat.major.pitch-haven-into-chaos",
+      "s3n3tv4nmd04dd2m": {
+        "_id": "s3n3tv4nmd04dd2m",
+        "name": "calling.forced.beat.major.pitch-haven-into-chaos",
         "type": "beat",
         "system": {
-          "description": "beat.major.pitch-haven-into-chaos",
+          "description": "calling.forced.beat.major.pitch-haven-into-chaos",
           "type": "major"
         }
       },
-      "vwu238megzmbehxv": {
-        "_id": "vwu238megzmbehxv",
-        "name": "beat.major.coerce-NPC-into-task",
+      "ix5gwrrqezmh3g47": {
+        "_id": "ix5gwrrqezmh3g47",
+        "name": "calling.forced.beat.major.coerce-NPC-into-task",
         "type": "beat",
         "system": {
-          "description": "beat.major.coerce-NPC-into-task",
+          "description": "calling.forced.beat.major.coerce-NPC-into-task",
           "type": "major"
         }
       },
-      "gisr6tdb5tl1mv62": {
-        "_id": "gisr6tdb5tl1mv62",
-        "name": "beat.major.aid-another-person",
+      "iuxqpsi5lbme92ia": {
+        "_id": "iuxqpsi5lbme92ia",
+        "name": "calling.forced.beat.major.aid-another-person",
         "type": "beat",
         "system": {
-          "description": "beat.major.aid-another-person",
+          "description": "calling.forced.beat.major.aid-another-person",
           "type": "major"
         }
       },
-      "ot36ewj51tf6142h": {
-        "_id": "ot36ewj51tf6142h",
-        "name": "beat.major.complete-major-objective",
+      "44nywo7myjzrf5vw": {
+        "_id": "44nywo7myjzrf5vw",
+        "name": "calling.forced.beat.major.complete-major-objective",
         "type": "beat",
         "system": {
-          "description": "beat.major.complete-major-objective",
+          "description": "calling.forced.beat.major.complete-major-objective",
           "type": "major"
         }
       },
-      "cc9mrbivxanjnjhf": {
-        "_id": "cc9mrbivxanjnjhf",
-        "name": "beat.zenith.end-the-masters-control",
+      "zr5r3rg005jqrbh3": {
+        "_id": "zr5r3rg005jqrbh3",
+        "name": "calling.forced.beat.zenith.end-the-masters-control",
         "type": "beat",
         "system": {
-          "description": "beat.zenith.end-the-masters-control",
+          "description": "calling.forced.beat.zenith.end-the-masters-control",
           "type": "zenith"
         }
       },
-      "ba1u8usqdih56nd8": {
-        "_id": "ba1u8usqdih56nd8",
-        "name": "beat.zenith.take-bloody-revenge",
+      "uweq67hjjs83i6ba": {
+        "_id": "uweq67hjjs83i6ba",
+        "name": "calling.forced.beat.zenith.take-bloody-revenge",
         "type": "beat",
         "system": {
-          "description": "beat.zenith.take-bloody-revenge",
+          "description": "calling.forced.beat.zenith.take-bloody-revenge",
           "type": "zenith"
         }
       }
     }
   },
   "effects": [],
-  "_key": "!items!3f2uigd6prnk8cg6"
+  "_key": "!items!yn64sswyai6g6yq8"
 }
