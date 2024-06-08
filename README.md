@@ -99,7 +99,8 @@ You will get a result and an accompanying button to clear the appropriate stress
 
 If you're considering writing a translation, firstly: thank you! You can provide translation by submitting a pull request.
 
-You can find the main branch [here](https://github.com/hitcherland/FoundryVTT-Heart/tree/main). This is the branch from which we build repos. Fork the repo, and modify the duplicate the many instances of the `lang/en.json` file. You can find these by searching for `en.json`, (e.g. in Github, by going to [Find a File](https://github.com/hitcherland/FoundryVTT-Heart/find/development) and typing `en.json`).
+You can find the English translation at `lang/en.json`, and I encourage you to use this as a base for your translation efforts.
+Don't feel the pressure to translate version info though!
 
 ## Contributing
 It is not recommended to develop on the instance on Foundry you run games from. If you need help installing another version of Foundry or a dev environment this isn't the guide for that.

@@ -1,8 +1,0 @@
-{
-    "perform": {
-              "request-roll": "Richiedi un tiro",
-            "roll": "Tira",
-            "roll-stress": "Tira stress",
-            "roll-fallout": "Tira complicazione"
-    }
-}

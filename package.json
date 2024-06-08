@@ -4,11 +4,10 @@
   "description": "A red wet heaven slumbers fitful under the city of Spire. A FoundryVTT system for Heart - The City Beneath. Purchase at https://rowanrookanddecard.com/product/heart-the-city-beneath-rpg/",
   "main": "src/index.js",
   "scripts": {
-    "build-local": "npm run build-code && npm run build-manifest -- 0.8.6 && npm run build-translations && npm run build-packs && npm run build-template",
+    "build-local": "npm run build-code && npm run build-manifest -- 0.8.6 && npm run build-packs && npm run build-template",
     "build-code": "webpack --mode development",
     "build-prod": "webpack --mode production",
     "build-manifest": "node ./dev-utils/build-manifest.js",
-    "build-translations": "node ./dev-utils/build-translations.js",
     "build-packs": "node ./dev-utils/build-packs.js",
     "build-template": "node ./dev-utils/build-template.js"
   },

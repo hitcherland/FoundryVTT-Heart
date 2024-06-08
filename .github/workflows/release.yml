@@ -18,7 +18,6 @@ jobs:
       - run: npm ci
       - run: npm run build-prod
       - run: npm run build-manifest -- ${{ inputs.version}}
-      - run: npm run build-translations
       - run: npm run build-packs
       - run: npm run build-template
       - name: Copy static files

@@ -1,8 +1,0 @@
-{
-    "applications": {
-        "prepare-roll-request": {
-            "title": "Prepare Roll Request",
-            "description": "Pick a difficulty, which characters can roll and help, and what skills and domains they can use. Then send a chat message asking players to roll."
-        }
-    }
-}

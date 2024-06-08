@@ -1,8 +1,0 @@
-{
-    "applications": {
-        "prepare-roll-request": {
-    "title": "Richiedi un tiro",
-                "description": "Scegli la difficoltà, quali personaggi possono tirare e aiutare, e quali abilità e domini possono usare. Poi manda un messaggio in chat con la richiesta."
-        }
-    }
-}
