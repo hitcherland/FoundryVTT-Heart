@@ -9,7 +9,8 @@
     "build-prod": "webpack --mode production",
     "build-manifest": "node ./dev-utils/build-manifest.js",
     "build-packs": "node ./dev-utils/build-packs.js",
-    "build-template": "node ./dev-utils/build-template.js"
+    "build-template": "node ./dev-utils/build-template.js",
+    "launch": "npm run build-local && npx fvtt package workon heart --type System && npx fvtt launch"
   },
   "keywords": [
     "foundryvtt"
