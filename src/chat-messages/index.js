@@ -99,20 +99,20 @@ class HeartChatMessage extends ChatMessage {
     }
 
     get showClearStressButton() {
-      const showClearStressButton = this.getFlag('heart', 'show-clear-stress-button')
-      if (this.falloutRoll !== undefined) {
-        if (showClearStressButton === undefined) {
-          return this.falloutRoll.result == 'no-fallout' ? false : true;
-        } else {
-            return Boolean(showClearStressButton);
+        const showClearStressButton = this.getFlag('heart', 'show-clear-stress-button')
+        if (this.falloutRoll !== undefined) {
+            if (showClearStressButton === undefined) {
+                return this.falloutRoll.result == 'no-fallout' ? false : true;
+            } else {
+                return Boolean(showClearStressButton);
+            }
         }
-      }
-      return false;
-      
+        return false;
+
     }
 
     set showClearStressButton(value) {
-      return this.setFlag('heart', 'show-clear-stress-button', value);
+        return this.setFlag('heart', 'show-clear-stress-button', value);
     }
 
     async getHTML() {
@@ -132,10 +132,10 @@ class HeartChatMessage extends ChatMessage {
 
             if (this.stressRoll && this.stressRoll !== this.rolls[0]) {
                 const stressContent = await this.stressRoll.render({
-                  isPrivate: false,
-                  showTakeStressButton: this.showTakeStressButton,
-                  showFalloutRollButton: this.showFalloutRollButton,
-                  showClearStressButton: this.showClearStressButton,
+                    isPrivate: false,
+                    showTakeStressButton: this.showTakeStressButton,
+                    showFalloutRollButton: this.showFalloutRollButton,
+                    showClearStressButton: this.showClearStressButton,
                 });
                 html.append(
                     $('<div class="message-content"></div>').append(stressContent)
@@ -144,8 +144,8 @@ class HeartChatMessage extends ChatMessage {
 
             if (this.falloutRoll && this.falloutRoll !== this.rolls[0]) {
                 const falloutContent = await this.falloutRoll.render({
-                  isPrivate: false,
-                  showClearStressButton: this.showClearStressButton,
+                    isPrivate: false,
+                    showClearStressButton: this.showClearStressButton,
                 });
                 html.append(
                     $('<div class="message-content"></div>').append(falloutContent)
@@ -161,6 +161,24 @@ class HeartChatMessage extends ChatMessage {
 
         return html;
     }
+}
+
+// applied to chat messages to allow dragging of previewed items
+const dragDrop = new DragDrop({
+    dragSelector: ".item",
+    dropSelector: null,
+    permissions: { dragstart: true, drop: false },
+    callbacks: { dragstart: _onDragStart }
+  });
+
+// workaround for nested-children uuids not dragging properly
+async function _onDragStart(event) {
+    console.warn("dragging...", event);
+    const target = event.currentTarget;
+    const uuid = target.dataset.itemId;
+    const document = await fromUuid(uuid);
+    const dragData = document.toDragData();
+    event.dataTransfer.setData('text/plain', JSON.stringify(dragData));
 }
 
 function activateListeners(html) {
@@ -189,11 +207,48 @@ function activateListeners(html) {
 
         roll.toMessage({speaker: { actor: character }});
     });
+
+    html.find('[data-item-id] [data-action=view]').click(async ev => {
+        const target = $(ev.currentTarget);
+        const uuid = target.closest('[data-item-id]').data('itemId');
+        const item = await fromUuid(uuid);
+        item.sheet.render(true);
+    });
+
+    dragDrop.bind(html.get(0));
+}
+
+// overridden to allow replacing "content anchors" with previews
+class HeartTextEditor extends TextEditor {
+    static async _createContentLink(match, {
+        relativeTo
+    } = {}) {
+        const [type, target, hash, name] = match.slice(1, 5);
+        const doc = await fromUuid(target);
+        if (doc && doc.documentName === "Item") {
+            const data = await doc.sheet.getData();
+            const innerHTML = Handlebars.partials[`heart:items/${doc.type}/preview.html`](data, {
+                allowedProtoProperties: {
+                    uuid: true,
+                    childrenTypes: true,
+                    isOwner: true
+                }
+            });
+            const div = document.createElement('div');
+            div.innerHTML = innerHTML;
+            div.classList.add('heart', 'sheet');
+            return div;
+        }
+        return super._createContentLink(match, {
+            relativeTo
+        });
+    }
 }
 
 export function initialise() {
     console.log('heart | Registering ChatMessage');
     CONFIG.ChatMessage.documentClass = HeartChatMessage;
+    TextEditor = HeartTextEditor;
 
     Hooks.once('renderChatLog', (app, html, data) => activateListeners(html));
     Hooks.once('renderChatPopout', (app, html, data) => activateListeners(html));
