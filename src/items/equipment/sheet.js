@@ -54,7 +54,7 @@ export default class extends HeartItemSheet {
           const target = parent.dataset.target;
           const value = parent.dataset.value;
 
-          let currentResistances = getProperty(this.item, target)
+          let currentResistances = foundry.utils.getProperty(this.item, target)
           currentResistances.push(value)
           let data = {}
           data[target] = currentResistances
@@ -68,7 +68,7 @@ export default class extends HeartItemSheet {
             const target = parent.dataset.target;
             const value = parent.dataset.value;
 
-            let newResistances = getProperty(this.item, target).filter(e => e !== value)
+            let newResistances = foundry.utils.getProperty(this.item, target).filter(e => e !== value)
             let data = {}
             data[target] = newResistances
             this.item.update(data)

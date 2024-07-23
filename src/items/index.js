@@ -51,7 +51,7 @@ class HeartItem extends Item {
             return this._children;
 
         if (this.system.children === undefined) {
-            if (game.system.model.Item[this.type].children !== undefined) {
+            if (game.model.Item[this.type].children !== undefined) {
                 return new Collection();
             } else {
                 return
@@ -129,7 +129,7 @@ class HeartItem extends Item {
     async addChildren(datas=[]) {
         const update = {};
         datas.forEach(data => {
-            const id = randomID();
+            const id = foundry.utils.randomID();
             data._id = id;
             const child = this._addChild(data);
             const childData = child.toObject();

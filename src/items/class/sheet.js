@@ -34,7 +34,7 @@ export default class extends HeartItemSheet {
         super.activateListeners(html);
 
         html.find('[data-action=add-equipment-group]').click(ev => {
-            const id = randomID();
+            const id = foundry.utils.randomID();
             const groups = this.item.system.equipment_groups || [];
             groups.push(id);
             return this.item.update({'system.equipment_groups': groups});

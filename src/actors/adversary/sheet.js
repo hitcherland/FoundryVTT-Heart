@@ -6,7 +6,7 @@ import template from './template.json';
 export default class AdversarySheet extends HeartActorSheet {
     static get defaultOptions() {
         const defaultOptions = super.defaultOptions;
-        return mergeObject(defaultOptions, {
+        return foundry.utils.mergeObject(defaultOptions, {
             dragDrop: [{dragSelector: '.item', dropSelector: null}]
         })
     }
@@ -60,7 +60,7 @@ export default class AdversarySheet extends HeartActorSheet {
             const target = parent.dataset.target;
 
             const data = {};
-            if (index + 1 === getProperty(this.data, target)) {
+            if (index + 1 === foundry.utils.getProperty(this.data, target)) {
                 data[target] = index;
             } else {
                 data[target] = index + 1;

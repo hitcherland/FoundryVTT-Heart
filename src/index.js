@@ -9,7 +9,6 @@ function activateTemplates() {
         const template = module.default;
         const compiled = Handlebars.compile(template.source);
         Handlebars.registerPartial(template.path, compiled);
-        _templateCache[template.path] = compiled;
     });
 }
 
@@ -141,7 +140,7 @@ function initialise() {
     });
 
     Handlebars.registerHelper('randomID', function () {
-        return randomID();
+        return foundry.utils.randomID();
     });
 
     Handlebars.registerHelper('numEq', function (a, b) {
@@ -275,4 +274,52 @@ if (module.hot) {
             ui.chat._renderBatch(ui.chat.element, CONFIG.ChatMessage.batchSize)
         }
     })()
+}
+
+
+if (process.env.NODE_ENV !== 'production') {
+    Hooks.once("quenchReady", (quench) => {
+        quench.registerBatch(
+            "game.packs",
+            (ctx) => {
+                const {
+                    describe,
+                    it,
+                    assert,
+                    beforeEach,
+                    afterEach,
+                } = ctx;
+
+                game.packs.filter(pack => pack.metadata.packageType !== "world").forEach((pack) => {
+                    describe(pack.metadata.id, () => {
+                        function assertInnerHTML(content) {
+                            describe(`${content.name} (${content.type})#${content.uuid} `, () => {
+                                let document;
+                                let inner;
+                                beforeEach("setup", async () => {
+                                    document = await fromUuid(content.uuid);
+                                    let data = await document.sheet.getData();
+                                    inner = (await document.sheet._renderInner(data)).text();
+                                });
+
+                                it(`doesn't contain a heart.* missed translation`, async () => {
+                                    assert.notMatch(inner, /heart\.[a-z]/);
+                                });
+                            });
+                        }
+
+                        if (pack.metadata.type !== "Macro") {
+                            describe("content generates inner html", () => {
+                                pack.index.values().forEach((document) => {
+                                    if (document.type !== "macro") {
+                                        assertInnerHTML(document);
+                                    }
+                                });
+                            });
+                        }
+                    });
+                });
+            }
+        );
+    });
 }
