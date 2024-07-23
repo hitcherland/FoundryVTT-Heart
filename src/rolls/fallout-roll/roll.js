@@ -71,7 +71,7 @@ export default class FalloutRoll extends Roll {
         const showClearStressButton = chatOptions.showClearStressButton !== undefined ? chatOptions.showClearStressButton : false;
 
         // Execute the roll, if needed
-        if (!this._evaluated) await this.evaluate({ async: true });
+        if (!this._evaluated) await this.evaluateSync();
 
         const description = game.i18n.format('heart.rolls.fallout-roll.description(totalStress)', {
             totalStress: this.options.totalStress

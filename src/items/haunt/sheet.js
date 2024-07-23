@@ -64,7 +64,7 @@ export default class extends HeartItemSheet {
             const item = {system:{die_size:service.die_size}};
 
             const roll = game.heart.rolls.ItemRoll.build({item});
-            await roll.evaluate({async: true});
+            await roll.evaluateSync();
 
             roll.toMessage({
                 flavor: `${localizeHeart(this.item.name)} (<span class="item-type">${localizeHeart(this.item.type)}</span>)<div class="resistance-text">${localizeHeart(service.resistance)}</div>`,

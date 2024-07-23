@@ -205,7 +205,7 @@ export default class HeartRoll extends Roll {
         const showStressRollButton = chatOptions.showStressRollButton !== undefined ? chatOptions.showStressRollButton : false;
 
         // Execute the roll, if needed
-        if (!this._evaluated) await this.evaluate({ async: true });
+        if (!this._evaluated) await this.evaluateSync();
 
         const description = game.i18n.format('heart.rolls.roll.description(difficulty,count)', {
             difficulty: game.i18n.localize(`heart.difficulty.${this.options.difficulty}`),
@@ -247,13 +247,13 @@ export default class HeartRoll extends Roll {
             const roll = msg.roll;
 
             
-            if (!roll._evaluated) await this.evaluate({ async: true });
+            if (!roll._evaluated) await this.evaluateSync();
             const stressRoll = await game.heart.rolls.StressRoll.build({
                 character: roll.options.character,
                 result: roll.result,
             }, msg);
 
-            await stressRoll.evaluate({async: true});
+            await stressRoll.evaluateSync();
             if (game.dice3d && game.settings.get('heart', 'showStressRoll3dDice')) {
               await game.dice3d.showForRoll(stressRoll, game.user, true);
             }

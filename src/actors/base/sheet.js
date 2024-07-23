@@ -76,7 +76,7 @@ export default class HeartActorSheet extends HeartSheetMixin(ActorSheet) {
           }
 
           const roll = game.heart.rolls.ItemRoll.build({item}, {}, rollOptions);
-          await roll.evaluate({async: true});
+          roll.evaluateSync();
 
           roll.toMessage({
               flavor: `${localizeHeart(item.name)} (<span class="item-type">${item.type}</span>)`,
