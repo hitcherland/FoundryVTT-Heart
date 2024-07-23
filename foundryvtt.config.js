@@ -8,6 +8,4 @@ module.exports = {
         "minimum": "10",
         "verified": "11"
     },
-    githubRepo: "hitcherland/foundryvtt-heart",
-    githubBranch: "release",
 };
