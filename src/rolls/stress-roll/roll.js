@@ -74,7 +74,7 @@ export default class StressRoll extends Roll {
                 game.heart.applications.RequirementApplication.build({
                     requirements,
                     callback: moreData => {
-                        mergeObject(buildData, moreData)
+                        foundry.utils.mergeObject(buildData, moreData)
                         resolve(this._build(buildData, data, options));
                     },
                     type: 'prepare-stress-roll',

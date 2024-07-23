@@ -7,7 +7,7 @@ export default class HeartItemSheet extends HeartSheetMixin(ItemSheet) {
 
     static get defaultOptions() {
         const defaultOptions = super.defaultOptions;
-        return mergeObject(defaultOptions, {
+        return foundry.utils.mergeObject(defaultOptions, {
             dragDrop: defaultOptions.dragDrop.concat([{ dragSelector: ".item", dropSelector: null }])
         });
     }

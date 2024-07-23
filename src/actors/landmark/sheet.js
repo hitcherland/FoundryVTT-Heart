@@ -6,7 +6,7 @@ import template from './template.json';
 export default class LandmarkSheet extends HeartActorSheet {
     static get defaultOptions() {
         const defaultOptions = super.defaultOptions;
-        return mergeObject(defaultOptions, {
+        return foundry.utils.mergeObject(defaultOptions, {
             dragDrop: [{dragSelector: '.item', dropSelector: null}]
         })
     }
