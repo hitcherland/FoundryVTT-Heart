@@ -49,7 +49,7 @@ export default class extends HeartItemSheet {
             const target = parent.dataset.target;
 
             const data = {};
-            if (index + 1 === getProperty(this.item.data, target)) {
+            if (index + 1 === foundry.utils.getProperty(this.item.data, target)) {
                 data[target] = index;
             } else {
                 data[target] = index + 1;
@@ -64,7 +64,7 @@ export default class extends HeartItemSheet {
             const item = {system:{die_size:service.die_size}};
 
             const roll = game.heart.rolls.ItemRoll.build({item});
-            await roll.evaluate({async: true});
+            await roll.evaluateSync();
 
             roll.toMessage({
                 flavor: `${localizeHeart(this.item.name)} (<span class="item-type">${localizeHeart(this.item.type)}</span>)<div class="resistance-text">${localizeHeart(service.resistance)}</div>`,
@@ -111,7 +111,7 @@ export default class extends HeartItemSheet {
         });
 
         html.find('[data-action=add-service]').click(ev => {
-            const id = randomID();
+            const id = foundry.utils.randomID();
             this.item.update({[`system.resistances.${id}`]: {
                 die_size: 'd4',
                 resistance: 'blood'

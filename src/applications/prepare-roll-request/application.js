@@ -14,7 +14,7 @@ export default class PrepareRollRequestApplication extends HeartApplication {
 
     getData() {
         const data = super.getData();
-        return mergeObject(data, {
+        return foundry.utils.mergeObject(data, {
             'characters': game.actors.filter(actor => actor.type === 'character').reduce((map, char) => {
                 map[char.id] = char.name;
                 return map;

@@ -6,7 +6,7 @@ import template from './template.json';
 export default class LandmarkSheet extends HeartActorSheet {
     static get defaultOptions() {
         const defaultOptions = super.defaultOptions;
-        return mergeObject(defaultOptions, {
+        return foundry.utils.mergeObject(defaultOptions, {
             dragDrop: [{dragSelector: '.item', dropSelector: null}]
         })
     }
@@ -73,7 +73,7 @@ export default class LandmarkSheet extends HeartActorSheet {
             const item = await fromUuid(uuid);
 
             const data = {};
-            if (index + 1 === getProperty(item.data, target)) {
+            if (index + 1 === foundry.utils.getProperty(item.data, target)) {
                 data[target] = index;
             } else {
                 data[target] = index + 1;
@@ -140,7 +140,7 @@ export default class LandmarkSheet extends HeartActorSheet {
 
         html.find('[data-action=add-service]').click(async ev => {
             const target = $(ev.currentTarget);
-            const id = randomID();
+            const id = foundry.utils.randomID();
             const uuid = target.closest('[data-item-id]').data('itemId');
             const item = await fromUuid(uuid);
             item.update({[`system.resistances.${id}`]: {
@@ -188,7 +188,7 @@ export default class LandmarkSheet extends HeartActorSheet {
             const item = {system: {die_size:service.die_size}};
 
             const roll = game.heart.rolls.ItemRoll.build({item});
-            await roll.evaluate({async: true});
+            await roll.evaluateSync();
 
             roll.toMessage({
                 flavor: `${localizeHeart(hauntitem.name)} (<span class="item-type">${hauntitem.type}</span>)<div class="resistance-text">${localizeHeart(service.resistance)}</div>`,
