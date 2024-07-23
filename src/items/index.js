@@ -51,7 +51,7 @@ class HeartItem extends Item {
             return this._children;
 
         if (this.system.children === undefined) {
-            if (game.system.model.Item[this.type].children !== undefined) {
+            if (game.model.Item[this.type].children !== undefined) {
                 return new Collection();
             } else {
                 return
