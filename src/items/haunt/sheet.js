@@ -49,7 +49,7 @@ export default class extends HeartItemSheet {
             const target = parent.dataset.target;
 
             const data = {};
-            if (index + 1 === getProperty(this.item.data, target)) {
+            if (index + 1 === foundry.utils.getProperty(this.item.data, target)) {
                 data[target] = index;
             } else {
                 data[target] = index + 1;

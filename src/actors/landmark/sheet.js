@@ -73,7 +73,7 @@ export default class LandmarkSheet extends HeartActorSheet {
             const item = await fromUuid(uuid);
 
             const data = {};
-            if (index + 1 === getProperty(item.data, target)) {
+            if (index + 1 === foundry.utils.getProperty(item.data, target)) {
                 data[target] = index;
             } else {
                 data[target] = index + 1;

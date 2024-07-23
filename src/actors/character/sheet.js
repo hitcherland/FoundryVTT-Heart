@@ -77,7 +77,7 @@ export default class CharacterSheet extends HeartActorSheet {
             const target = parent.dataset.target;
 
             const data = {};
-            if (index + 1 === getProperty(this.actor, target)) {
+            if (index + 1 === foundry.utils.getProperty(this.actor, target)) {
                 data[target] = index;
             } else {
                 data[target] = index + 1;

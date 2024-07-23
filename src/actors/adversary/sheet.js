@@ -60,7 +60,7 @@ export default class AdversarySheet extends HeartActorSheet {
             const target = parent.dataset.target;
 
             const data = {};
-            if (index + 1 === getProperty(this.data, target)) {
+            if (index + 1 === foundry.utils.getProperty(this.data, target)) {
                 data[target] = index;
             } else {
                 data[target] = index + 1;
