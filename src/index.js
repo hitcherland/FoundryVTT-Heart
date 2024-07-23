@@ -293,7 +293,6 @@ if (process.env.NODE_ENV !== 'production') {
                 game.packs.filter(pack => pack.metadata.packageType !== "world").forEach((pack) => {
                     describe(pack.metadata.id, () => {
                         function assertInnerHTML(content) {
-                            console.warn(content);
                             describe(`${content.name} (${content.type})#${content.uuid} `, () => {
                                 let document;
                                 let inner;
