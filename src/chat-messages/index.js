@@ -173,7 +173,6 @@ const dragDrop = new DragDrop({
 
 // workaround for nested-children uuids not dragging properly
 async function _onDragStart(event) {
-    console.warn("dragging...", event);
     const target = event.currentTarget;
     const uuid = target.dataset.itemId;
     const document = await fromUuid(uuid);
