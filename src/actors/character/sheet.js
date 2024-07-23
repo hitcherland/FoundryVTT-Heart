@@ -11,6 +11,15 @@ export default class CharacterSheet extends HeartActorSheet {
         })
     }
 
+    // workaround for nested-children uuids not dragging properly
+    async _onDragStart(event) {
+        const target = event.currentTarget;
+        const uuid = target.dataset.itemId;
+        const document = await fromUuid(uuid);
+        const dragData = document.toDragData();
+        event.dataTransfer.setData('text/plain', JSON.stringify(dragData));
+    }
+
     async _onDropItemCreate(itemData) {
         if(this.actor.type === 'character') {
             if(itemData.type === 'calling' ) {
@@ -110,6 +119,5 @@ export default class CharacterSheet extends HeartActorSheet {
                 speaker: {actor: this.actor.id}
             });
         });
-
     }
 }

@@ -109,6 +109,15 @@ class HeartItem extends Item {
         }
     }
 
+    // required for dragging/dropping of nested-children
+    async updateSource(changes = {}, options = {}) {
+        if (this.isChild) {
+            await this.parentItem.updateChildren({ [`${this.id}`]: changes }, options);
+        } else {
+            return await super.updateSource(changes, options);
+        }
+    }
+
     _addChild(data) {
         let class_;
         if (Item.TYPES.includes(data.type)) {
