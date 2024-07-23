@@ -129,7 +129,7 @@ class HeartItem extends Item {
     async addChildren(datas=[]) {
         const update = {};
         datas.forEach(data => {
-            const id = randomID();
+            const id = foundry.utils.randomID();
             data._id = id;
             const child = this._addChild(data);
             const childData = child.toObject();

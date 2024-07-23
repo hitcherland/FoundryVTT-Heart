@@ -140,7 +140,7 @@ function initialise() {
     });
 
     Handlebars.registerHelper('randomID', function () {
-        return randomID();
+        return foundry.utils.randomID();
     });
 
     Handlebars.registerHelper('numEq', function (a, b) {

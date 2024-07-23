@@ -33,7 +33,7 @@ export default class extends HeartItemSheet {
         super.activateListeners(html);
 
         html.find('[data-action=add-question]').click(ev => {
-            const id = randomID();
+            const id = foundry.utils.randomID();
             this.item.update({[`system.questions.${id}`]: {
                 question: '',
                 answer: ''

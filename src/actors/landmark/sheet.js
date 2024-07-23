@@ -140,7 +140,7 @@ export default class LandmarkSheet extends HeartActorSheet {
 
         html.find('[data-action=add-service]').click(async ev => {
             const target = $(ev.currentTarget);
-            const id = randomID();
+            const id = foundry.utils.randomID();
             const uuid = target.closest('[data-item-id]').data('itemId');
             const item = await fromUuid(uuid);
             item.update({[`system.resistances.${id}`]: {

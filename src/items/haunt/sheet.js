@@ -111,7 +111,7 @@ export default class extends HeartItemSheet {
         });
 
         html.find('[data-action=add-service]').click(ev => {
-            const id = randomID();
+            const id = foundry.utils.randomID();
             this.item.update({[`system.resistances.${id}`]: {
                 die_size: 'd4',
                 resistance: 'blood'
