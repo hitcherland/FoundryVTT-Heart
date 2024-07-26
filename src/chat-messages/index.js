@@ -222,7 +222,6 @@ class HeartTextEditor extends TextEditor {
     static async _createContentLink(match, {
         relativeTo
     } = {}) {
-        console.warn(match);
         const [type, target, hash, name] = match.slice(1, 5);
         const doc = await fromUuid(target);
         if (doc && doc.documentName === "Item") {
