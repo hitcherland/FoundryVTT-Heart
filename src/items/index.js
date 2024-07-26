@@ -61,7 +61,10 @@ class HeartItem extends Item {
         const map = new Collection();
         Object.entries(this.system.children).forEach(([key, data]) => {
             let documentName = data.documentName;
-            const child = new CONFIG[documentName ?? 'Item'].documentClass(data, {
+            if (!documentName) {
+                documentName = 'Item'
+            }
+            const child = new CONFIG[documentName].documentClass(data, {
                 parentItem: this
             });
 
@@ -95,26 +98,30 @@ class HeartItem extends Item {
         // Refresh the "item.children" compendium and re-render any
         // documents when we update them
         super._onUpdate(data, options, userId);
-        if(data.system?.children !== undefined) {
-            
+        if (data.system && data.system.children) {
             this.refreshChildren();
         }
     }
 
     async update(data = {}, context = {}) {
         if (this.isChild) {
-            await this.parentItem.updateChildren({ [`${this.id}`]: data }, context);
+            await this.parentItem.updateChildren({
+                [`${this.id}`]: data
+            }, context);
         } else {
             return await super.update(data, context);
         }
     }
 
     // required for dragging/dropping of nested-children
-    async updateSource(changes = {}, options = {}) {
+    updateSource(changes = {}, options = {}) {
         if (this.isChild) {
-            await this.parentItem.updateChildren({ [`${this.id}`]: changes }, options);
+            this.parentItem.updateChildren({
+                [`${this.id}`]: changes
+            }, options);
+            return {};
         } else {
-            return await super.updateSource(changes, options);
+            return super.updateSource(changes, options);
         }
     }
 
@@ -135,7 +142,7 @@ class HeartItem extends Item {
         return child;
     }
 
-    async addChildren(datas=[]) {
+    async addChildren(datas = []) {
         const update = {};
         datas.forEach(data => {
             const id = foundry.utils.randomID();
@@ -146,18 +153,22 @@ class HeartItem extends Item {
             update[child.id] = childData;
         });
 
-        return this.update(flattenObject({'system.children': update}), {render: true});
+        return this.update(flattenObject({
+            'system.children': update
+        }), {
+            render: true
+        });
     }
 
     async refreshChildren() {
-        if(this.system.children === undefined) return;
+        if (this.system.children === undefined) return;
         Object.entries(this.system.children).forEach(([id, data]) => {
-            if(this.children.has(id)) {
+            if (this.children.has(id)) {
                 const child = this.children.get(id);
                 child.updateSource(this.system.children[child.id]);
                 child.prepareData();
 
-                if (child.children?.size ?? 0 >= 0) {
+                if (child.children && child.children.size && child.children.size >=0) {
                     child.refreshChildren();
                 }
 
@@ -169,25 +180,29 @@ class HeartItem extends Item {
         });
 
         this.children.forEach(child => {
-            if(this.system.children[child.id] === undefined) {
+            if (this.system.children[child.id] === undefined) {
                 this._deleteChild(child.id);
             }
         })
 
-        if(this.sheet.rendered) {
+        if (this.sheet.rendered) {
             this.sheet.render();
         }
     }
 
     async updateChildren(data = {}, context = {}) {
         // why
-        const ctx = { ...context} ; //, render: false };
-        const updates = await this.update({ 'system.children': data }, ctx);
+        const ctx = {
+            ...context
+        }; //, render: false };
+        const updates = await this.update({
+            'system.children': data
+        }, ctx);
         if (updates === undefined) return;
-        
-        if(this.isEmbedded && this.parent.sheet.rendered)
+
+        if (this.isEmbedded && this.parent.sheet.rendered)
             await this.parent.sheet.render(true);
-            
+
         return updates;
     }
 
@@ -204,7 +219,7 @@ class HeartItem extends Item {
     _deleteChild(id) {
         const child = this.children.get(id)
         child.sheet.close();
-        this.children.delete(id); 
+        this.children.delete(id);
     }
     async deleteChildren(ids) {
         if (this.system.children === undefined) return;
@@ -233,9 +248,15 @@ class HeartItem extends Item {
         return super.permission;
     }
 
-    testUserPermission(user, permission, { exact = false } = {}) {
-        if (this.isChild) return this.parentItem.testUserPermission(user, permission, { exact });
-        return super.testUserPermission(user, permission, { exact });
+    testUserPermission(user, permission, {
+        exact = false
+    } = {}) {
+        if (this.isChild) return this.parentItem.testUserPermission(user, permission, {
+            exact
+        });
+        return super.testUserPermission(user, permission, {
+            exact
+        });
     }
 }
 
@@ -243,9 +264,13 @@ HeartItem.proxies = {};
 
 
 function ItemSheetFactory(data) {
-    const safe_data = Object.freeze({ ...data });
+    const safe_data = Object.freeze({
+        ...data
+    });
     const CustomHeartItemSheet = class extends HeartItemSheet {
-        static get type() { return data.type; }
+        static get type() {
+            return data.type;
+        }
 
         get template() {
             return safe_data.template;
@@ -310,5 +335,296 @@ export function initialise() {
         Object.entries(module.default).forEach(([type, proxy]) => {
             HeartItem.proxies[type] = proxy;
         });
+    });
+}
+
+if (process.env.NODE_ENV !== 'production') {
+    async function simulateDragDrop(dragstart, dragTarget, drop, dropTarget) {
+        const dataTransfer = new DataTransfer();
+
+        await dragstart({
+            dataTransfer,
+            currentTarget: dragTarget,
+            target: dragTarget
+        });
+
+        return await drop({
+            dataTransfer,
+            currentTarget: dropTarget,
+            target: dropTarget
+        });
+    }
+
+    function simulateDropOntoTarget(data, target) {
+        const dataTransfer = new DataTransfer();
+        dataTransfer.setData("text/plain", JSON.stringify(data));
+        const event = new DragEvent("drop", {
+            dataTransfer,
+            target,
+        });
+
+        target.dispatchEvent(event);
+    }
+
+    function simulateDragFromTarget(target) {
+        const dataTransfer = new DataTransfer();
+        const event = new DragEvent("dragstart", {
+            dataTransfer
+        });
+
+        target.dispatchEvent(event);
+        return event;
+    }
+
+    function waitForElement(selector) {
+        return new Promise(resolve => {
+            const target = document.body;
+            if (target.querySelector(selector)) {
+                return resolve(target.querySelector(selector));
+            }
+
+            const observer = new MutationObserver(mutations => {
+                if (target.querySelector(selector)) {
+                    observer.disconnect();
+                    resolve(target.querySelector(selector));
+                }
+            });
+
+            // If you get "parameter 1 is not of type 'Node'" error, see https://stackoverflow.com/a/77855838/492336
+            observer.observe(target, {
+                childList: true,
+                subtree: true
+            });
+        });
+    }
+
+    class Draggable {
+        constructor(name, data) {
+            this.data = data;
+            this.name = name;
+        }
+
+        async setup() {};
+        async teardown() {};
+    }
+
+    class DraggableItem extends Draggable {
+        async setup() {
+            this.item = await Item.create(this.data);
+            this.target = await waitForElement(`[data-document-id="${this.item.id}"]`);
+            this.dragstart = ui.items._dragDrop[0].callbacks.dragstart;
+            return this.item;
+        }
+
+        async teardown() {
+            await this.item.delete();
+            this.item = undefined;
+            return;
+        }
+    }
+
+    class DraggableCompendiumItem extends Draggable {
+        async setup() {
+            this.compendium = await CompendiumCollection.createCompendium({
+                label: 'test-compendium',
+                type: 'Item'
+            });
+            this.item = await Item.create({
+                ...this.data,
+                name: foundry.utils.randomID()
+            }, {
+                pack: this.compendium.metadata.id
+            });
+
+            await this.compendium.render(true);
+            this.dragstart = this.compendium.apps[0]._dragDrop[0].callbacks.dragstart;
+            this.target = await waitForElement(`[data-document-id="${this.item.id}"]`);
+        }
+
+        async teardown() {
+            await this.compendium.apps[0].close();
+            await this.item.delete();
+            await this.compendium.deleteCompendium();
+            const clone = game.items.find((doc) => doc.name === this.item.name);
+            if (clone) {
+                await clone.delete();
+            }
+
+            this.item = undefined;
+            this.compendium = undefined;
+            return;
+        }
+    }
+
+    class DraggableLockedCompendiumItem extends DraggableCompendiumItem {
+        async setup() {
+            await super.setup();
+            await this.compendium.configure({
+                locked: true
+            });
+            return this.item;
+        }
+
+        async teardown() {
+            await this.compendium.configure({
+                locked: true
+            });
+            await super.teardown();
+        }
+    }
+
+    class Droppable {
+        constructor(name, data) {
+            this.data = data;
+            this.name = name;
+        }
+
+        async setup() {}
+        async teardown() {}
+    }
+
+    class DroppableTab extends Droppable {
+        async setup() {
+            await this.data.tab.activate();
+            this.target = this.data.tab.element.get(0);
+            this.drop = this.data.tab._dragDrop[0].callbacks.drop;
+            this.collection = this.data.tab.collection;
+            this.expectedFolder = undefined;
+            return this.target;
+        }
+    }
+
+    class DroppableTabFolder extends DroppableTab {
+        async setup() {
+            await super.setup();
+            this.folder = await Folder.create({
+                name: "test-folder",
+                type: "Item",
+            });
+            this.expectedFolder = this.folder.id;
+
+            await waitForElement(`[data-folder-id="${this.folder.id}"]`);
+            this.target = this.data.tab.element.find(`[data-folder-id="${this.folder.id}"]`).get(0);
+            return this.target;
+        }
+
+        async teardown() {
+            await this.folder.delete();
+            this.folder = undefined;
+            this.expectedFolder = undefined;
+            await super.teardown();
+        }
+    }
+
+    class DragDropTest {
+        constructor(draggable, droppable, expectations = {
+            success: true
+        }) {
+            this.name = `drag ${draggable.name} onto ${droppable.name}`;
+            this.draggable = draggable;
+            this.droppable = droppable;
+            this.expectations = expectations;
+        }
+    }
+
+    Hooks.once("quenchReady", (quench) => {
+        quench.registerBatch(
+            "dragging_and_dropping",
+            (ctx) => {
+                const {
+                    describe,
+                    it,
+                    assert,
+                    beforeEach,
+                    afterEach,
+                } = ctx;
+
+                const draggables = {
+                    WorldItem: new DraggableItem("world-item", {
+                        name: 'test-item',
+                        type: 'equipment'
+                    }),
+                    CompendiumItem: new DraggableCompendiumItem("compendium-item", {
+                        name: 'test-item',
+                        type: 'equipment'
+                    }),
+                    LockedCompendiumItem: new DraggableLockedCompendiumItem("locked-compendium-item", {
+                        name: 'test-item',
+                        type: 'equipment'
+                    })
+                };
+
+                const droppables = {
+                    ItemTab: new DroppableTab("item-tab", {
+                        tab: ui.items
+                    }),
+                    FolderInItemTab: new DroppableTabFolder("folder-in-item-tab", {
+                        tab: ui.items
+                    })
+                };
+
+                const tests = [
+                    new DragDropTest(draggables.WorldItem, droppables.ItemTab),
+                    new DragDropTest(draggables.WorldItem, droppables.FolderInItemTab),
+                    new DragDropTest(draggables.CompendiumItem, droppables.ItemTab, {
+                        success: true,
+                        makeCopy: true
+                    }),
+                    new DragDropTest(draggables.CompendiumItem, droppables.FolderInItemTab, {
+                        success: true,
+                        makeCopy: true
+                    }),
+                ];
+
+                tests.forEach(test => {
+                    describe(test.name, () => {
+                        const draggable = test.draggable;
+                        const droppable = test.droppable;
+                        const expectations = test.expectations;
+                        let output;
+
+                        beforeEach("setup", async () => {
+                            await draggable.setup();
+                            await droppable.setup();
+                        });
+
+                        afterEach("teardown", async () => {
+                            await draggable.teardown();
+                            await droppable.teardown();
+                            if (output && output._id !== null) {
+                                await output.delete();
+                            }
+                        });
+
+                        if (expectations.success) {
+                            it(`drag should drop`, async () => {
+                                output = await simulateDragDrop(
+                                    draggable.dragstart,
+                                    draggable.target,
+                                    droppable.drop,
+                                    droppable.target
+                                );
+
+                                if (expectations.makeCopy) {
+                                    // This assumes you've used randomID() to create a fairly unique name
+                                    assert.include(droppable.collection.map(x => x.name), draggable.item.name);
+                                    assert.equal(droppable.collection.find(x => x.name === draggable.item.name).folder, droppable.folder);
+                                } else {
+                                    assert.include(droppable.collection, draggable.item);
+                                    assert.equal(draggable.item.folder, droppable.folder);
+                                }
+
+                            });
+                        } else {
+                            it(`drag should not drop`, async () => {
+                                simulateDropOntoTarget(draggable.item.toDragData(), droppable.target().get(0));
+                                assert.notInclude(droppable.collection, draggable.item);
+                                assert.notEqual(draggable.item.folder, droppable.folder);
+                            });
+                        }
+                    });
+                })
+            }
+        );
     });
 }

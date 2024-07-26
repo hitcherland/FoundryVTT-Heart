@@ -194,18 +194,19 @@ export default class HeartItemSheet extends HeartSheetMixin(ItemSheet) {
         const li = event.currentTarget;
         if (event.target.classList.contains("entity-link")) return;
 
-        // Create drag data
         let dragData = {
-            parentItemId: this.item.id
+            parentItemId: this.item.id,
+            uuid: event.target.dataset.documentId,
+            type: "Item"
         };
 
         // Owned Items
-        if (li.dataset.itemId) {
+        if (dragData.uuid.startsWith('Compendium')) {
             const item = await fromUuid(li.dataset.itemId);
-            dragData.type = "Item";
             dragData.data = item.toObject();
             // Delete _id so that when dropped in Item panel Foundry knows to create a new item.
             delete dragData.data._id;
+            delete dragData.uuid;
         }
 
         // Set data transfer
