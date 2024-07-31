@@ -1,5 +1,6 @@
 import HeartItemSheet from './base/sheet';
 import sheetModules from './**/sheet.js';
+import dataModels from './**/model.js';
 import proxies from './*/proxy.js';
 
 class HeartItem extends Item {
@@ -44,6 +45,12 @@ class HeartItem extends Item {
         } else {
             return this.parentItem.uuid + '.@' + super.uuid;
         }
+    }
+
+    async childrenFromUUIDs() {
+      return await Promise.all(this.system.childUUIDs.map(async (uuid) => {
+        return await fromUuid(uuid);
+      }));
     }
 
     get children() {
@@ -291,6 +298,14 @@ function ItemSheetFactory(data) {
 export function initialise() {
     console.log('heart | Assigning new Item documentClass');
     CONFIG.Item.documentClass = HeartItem;
+
+    console.log('heart | Registering item data models');
+    dataModels.forEach((module) => {
+        if(module.initialise) {
+            module.initialise();
+        }
+    });
+
     console.log('heart | Registering item sheets');
     Items.unregisterSheet('core', ItemSheet);
     sheetModules.forEach((module) => {

@@ -90,8 +90,20 @@ function initialise() {
     activateTemplates();
 
     game.heart = {
+        ability: {
+            types: ['core', 'minor', 'major', 'zenith'],
+        },
+        beat: {
+            types: ['minor', 'major', 'zenith'],
+        },
         difficulties: ['standard', 'risky', 'dangerous', 'impossible'],
+        fallout: {
+            types: ['minor', 'major', 'zenith'],
+        },
         resistances: ['blood', 'mind', 'echo', 'fortune', 'supplies'],
+        equipment: {
+            types: ['miscellaneous', 'delve', 'kill', 'mend'],
+        },
         skills: ['compel', 'delve', 'discern', 'endure', 'evade', 'hunt', 'kill', 'mend', 'sneak'],
         domains: ['cursed', 'desolate', 'haven', 'occult', 'religion', 'technology', 'warren', 'wild'],
         stress_dice: ['d4', 'd6', 'd8', 'd10', 'd12'],
