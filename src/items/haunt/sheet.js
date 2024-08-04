@@ -1,11 +1,10 @@
 import sheetHTML from './sheet.html';
-import templateJSON from './template.json';
 import HeartItemSheet from '../base/sheet';
 
 import './sheet.sass';
 
 const data = Object.freeze({
-    type: Object.keys(templateJSON.Item)[0],
+    type: 'haunt',
     img: 'systems/heart/assets/prayer.svg',
     template: sheetHTML.path,
 });

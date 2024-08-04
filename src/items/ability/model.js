@@ -14,8 +14,8 @@ class AbilityData extends BaseItemData {
     };
   }
 
-  static migrateData(source) {
-    migrateChildrenToChildUUIDs(source);
+  static async migrateData(source) {
+    await migrateChildrenToChildUUIDs(source);
     return super.migrateData(source);
   }
 }

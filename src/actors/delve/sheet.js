@@ -1,10 +1,9 @@
 import sheetHTML from './sheet.html';
 import './delve.sass';
 import HeartActorSheet from '../base/sheet';
-import template from './template.json';
 
 export default class DelveSheet extends HeartActorSheet {
-    static get type() { return Object.keys(template.Actor)[0]; }
+    static get type() { return "delve"; }
 
     getData() {
       const data = super.getData();

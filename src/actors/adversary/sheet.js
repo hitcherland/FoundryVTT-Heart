@@ -1,7 +1,6 @@
 import sheetHTML from './sheet.html';
 import './adversary.sass';
 import HeartActorSheet from '../base/sheet';
-import template from './template.json';
 
 export default class AdversarySheet extends HeartActorSheet {
     static get defaultOptions() {
@@ -20,7 +19,7 @@ export default class AdversarySheet extends HeartActorSheet {
         return super._onDropItemCreate(itemData);
     }
 
-    static get type() { return Object.keys(template.Actor)[0]; }
+    static get type() { return "adversary"; }
 
     get template() {
         return sheetHTML.path;

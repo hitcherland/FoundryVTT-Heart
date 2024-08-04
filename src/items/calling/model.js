@@ -1,6 +1,7 @@
 import { BaseItemData, migrateChildrenToChildUUIDs } from "../base/model.js";
 
-const { HTMLField, ObjectField, SchemaField, StringField, ArrayField } = foundry.data.fields;
+const { HTMLField, ObjectField, SchemaField, StringField, ArrayField } =
+  foundry.data.fields;
 
 class CallingData extends BaseItemData {
   static defineSchema() {
@@ -19,11 +20,16 @@ class CallingData extends BaseItemData {
     };
   }
 
-  static migrateData(source) {
-    migrateChildrenToChildUUIDs(source);
-    Object.values(source.questions).forEach(question => {
-        source.questionArray.push(question)
-    });
+  static async migrateData(source) {
+    await migrateChildrenToChildUUIDs(source);
+    if (source.questionArray === undefined) {
+        source.questionArray = [];
+    }
+    if (source.questions !== undefined) {
+      Object.values(source.questions).forEach((question) => {
+        source.questionArray.push(question);
+      });
+    }
     return super.migrateData(source);
   }
 }

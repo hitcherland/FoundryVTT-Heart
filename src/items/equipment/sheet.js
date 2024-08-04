@@ -1,5 +1,4 @@
 import sheetHTML from './sheet.html';
-import templateJSON from './template.json';
 import HeartItemSheet from '../base/sheet';
 
 import './sheet.sass';
@@ -13,12 +12,12 @@ function initialise() {
 }
 
 const data = Object.freeze({
-    type: Object.keys(templateJSON.Item)[0],
+    type: 'equipment',
     img: 'systems/heart/assets/battle-gear.svg',
     template: sheetHTML.path,
 });
 
-export default class extends HeartItemSheet {
+export default class HeatEquipmentSheet extends HeartItemSheet {
     static get type() { return data.type; }
 
     get template() {
