@@ -1,8 +1,0 @@
-{
-    "Item": {   
-        "tag": {
-            "templates": ["has_description"],
-            "limited_uses": -1
-        }
-    }
-}

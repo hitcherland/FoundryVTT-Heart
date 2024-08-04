@@ -1,9 +1,0 @@
-{
-    "Item": {   
-        "haunt": {
-            "templates": ["has_description", "is_activatable"],
-            "resistances": [],
-            "upgradeTrack": ""
-        }
-    }
-}

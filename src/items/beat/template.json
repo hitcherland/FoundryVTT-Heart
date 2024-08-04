@@ -1,8 +1,0 @@
-{
-    "Item": {   
-        "beat": {
-            "templates": ["has_description", "is_activatable", "is_completable"],
-            "type": "minor"
-        }
-    }
-}

@@ -1,8 +1,0 @@
-{
-    "Item": {   
-        "resource": {
-            "templates": ["is_rollable", "has_description", "has_children", "is_activatable", "is_completable"],
-            "domain": "cursed"
-        }
-    }
-}

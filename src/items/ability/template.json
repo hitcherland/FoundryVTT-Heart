@@ -1,9 +1,0 @@
-{
-    "Item": {   
-        "ability": {
-            "templates": ["has_description", "is_activatable", "has_children"],
-            "mechanics": "",
-            "type": "core"
-        }
-    }
-}

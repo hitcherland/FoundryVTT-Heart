@@ -1,9 +1,0 @@
-{
-    "Item": {   
-        "calling": {
-            "templates": ["has_description", "has_children"],
-            "questions": {},
-            "mark": null
-        }
-    }
-}
