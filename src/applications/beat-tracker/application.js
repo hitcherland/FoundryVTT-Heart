@@ -11,31 +11,34 @@ export default class BeatTrackerApplication extends FormApplication {
     static get formType() {
         return 'beat-tracker';
     }
+    
 
     getData() {
         const data = super.getData();
     
         const charactersWithBeats = game.actors
             .filter(actor => actor.type === 'character')
-            .reduce((map, char) => {
+            .reduce((arr, char) => {
                 const activeBeats = char.items.filter(item => 
                     item.type === 'beat' && item.system.active
                 ).map(item => ({
                     text: item.name,
                     type: item.system.type
                 }));
-
-                map[char.id] = {
+    
+                arr.push({
+                    id: char.id,
                     name: char.name,
                     activeBeats: activeBeats
-                };
-                return map;
-            }, {});
+                });
+                return arr;
+            }, []);
     
         return foundry.utils.mergeObject(data, {
             'characters': charactersWithBeats,
         });
     }
+    
 
     activateListeners(html) {
         super.activateListeners(html); 

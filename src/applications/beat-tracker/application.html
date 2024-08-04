@@ -1,23 +1,27 @@
 <form class="heart form {{type}} {{classes}} grid-2 auto-first-col">
     <div class="active-beats">
-        {{#each characters as |char id|}}
-            <div class="character-box">
-                <label class="character-header">
-                    {{char.name}}
-                </label>
-                <div class="char-active-beats">
-                    {{#if (eq char.activeBeats.length 0)}}
-                        <p class="no-beats">{{localizeHeart "No active beats"}}</p>
-                    {{else}}
-                        {{#each char.activeBeats as |beat|}}
-                            <div class="beat">
-                                <span class="beat-type">{{beat.type}}:</span> {{beat.text}}
-                            </div>
-                        {{/each}}
-                    {{/if}}
+        {{#if (gt characters.length 0)}}
+            {{#each characters as |char|}}
+                <div class="character-box">
+                    <label class="character-header">
+                        {{char.name}}
+                    </label>
+                    <div class="char-active-beats">
+                        {{#if (gt char.activeBeats.length 0)}}
+                            {{#each char.activeBeats as |beat|}}
+                                <div class="beat">
+                                    <span class="beat-type">{{beat.type}}:</span> {{beat.text}}
+                                </div>
+                            {{/each}}
+                        {{else}}
+                            <p class="no-beats">{{localizeHeart "No active beats"}}</p>
+                        {{/if}}
+                    </div>
                 </div>
-            </div>
-        {{/each}}
+            {{/each}}
+        {{else}}
+            <p class="no-characters">{{localizeHeart "No characters available"}}</p>
+        {{/if}}
     </div>
 
     <div class="wide">
