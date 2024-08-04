@@ -4,10 +4,7 @@
         {
             "name": "macros",
             "label": "Useful Heart Macros",
-            "system": "heart",
-            "path": "./packs/macros.db",
-            "type": "Macro",
-            "entity": "Macro"
+            "type": "Macro"
         }
     ],
     "languages": [
@@ -15,15 +12,66 @@
             "lang": "en",
             "name": "English",
             "path": "lang/en.json"
-        }, {
+        },
+        {
             "lang": "es",
             "name": "Español",
             "path": "lang/es.json"
-        }, {
+        },
+        {
             "lang": "it",
             "name": "Italiano",
             "path": "lang/it.json"
         }
     ],
-    "socket": false
+    "socket": false,
+    "documentTypes": {
+        "Item": {
+            "ability": {
+                "htmlFields": [
+                    "description"
+                ]
+            },
+            "beat": {
+                "htmlFields": [
+                    "description"
+                ]
+            },
+            "calling": {
+                "htmlFields": [
+                    "description"
+                ]
+            },
+            "class": {
+                "htmlFields": [
+                    "description"
+                ]
+            },
+            "equipment": {
+                "htmlFields": [
+                    "description"
+                ]
+            },
+            "fallout": {
+                "htmlFields": [
+                    "description"
+                ]
+            },
+            "haunt": {
+                "htmlFields": [
+                    "description"
+                ]
+            },
+            "resource": {
+                "htmlFields": [
+                    "description"
+                ]
+            },
+            "tag": {
+                "htmlFields": [
+                    "description"
+                ]
+            }
+        }
+    }
 }
