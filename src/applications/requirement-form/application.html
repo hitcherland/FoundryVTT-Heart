@@ -1,16 +1,16 @@
-{{#> "heart:applications/base/application.html" type=options.type}}
+{{#> "heart:applications/base/application.html" type=options.type showRoll=true}}
 {{#each options.requirements as |entry name|}}
 <label>
     {{entry.label}}
 </label>
 {{#if entry.isCheckbox}}
-    <input type="checkbox" name="{{name}}" value="{{entry.value}}"/>
+<input type="checkbox" name="{{name}}" value="{{entry.value}}" />
 {{else}}
-    <select name="{{name}}" {{#if entry.isMany}}multiple{{/if}}>
-        {{#each entry.options as |label value|}}
-            <option value="{{value}}">{{label}}</option>
-        {{/each}}
-    </select>
+<select name="{{name}}" {{#if entry.isMany}}multiple{{/if}}>
+    {{#each entry.options as |label value|}}
+    <option value="{{value}}">{{label}}</option>
+    {{/each}}
+</select>
 {{/if}}
 {{/each}}
 {{/ "heart:applications/base/application.html"}}

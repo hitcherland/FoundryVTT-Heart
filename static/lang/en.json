@@ -17,6 +17,8 @@
     "heart.adversary.resistanceMax": "Maximum Resistance",
     "heart.adversary.special": "Special",
     "heart.applications.clear-stress.description": "Pick a resistance to set to 0 stress",
+    "heart.applications.beat-tracker.title": "Active beats",
+    "heart.applications.beat-tracker.description": "Active beats for all characters",
     "heart.applications.prepare-fallout-roll.description": "Pick a character to roll for fallout with.",
     "heart.applications.prepare-fallout-roll.title": "Prepare Fallout Roll",
     "heart.applications.prepare-roll-request.description": "Pick a difficulty, which characters can roll and help, and what skills and domains they can use. Then send a chat message asking players to roll.",

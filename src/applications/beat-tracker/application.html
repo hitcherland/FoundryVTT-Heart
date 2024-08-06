@@ -1,30 +1,24 @@
-<form class="heart form {{type}} {{classes}} grid-2 auto-first-col">
-    <div class="active-beats">
-        {{#if (gt characters.length 0)}}
-            {{#each characters as |char|}}
-                <div class="character-box">
-                    <label class="character-header">
-                        {{char.name}}
-                    </label>
-                    <div class="char-active-beats">
-                        {{#if (gt char.activeBeats.length 0)}}
-                            {{#each char.activeBeats as |beat|}}
-                                <div class="beat">
-                                    <span class="beat-type">{{beat.type}}:</span> {{beat.text}}
-                                </div>
-                            {{/each}}
-                        {{else}}
-                            <p class="no-beats">{{localizeHeart "No active beats"}}</p>
-                        {{/if}}
-                    </div>
-                </div>
+{{#> "heart:applications/base/application.html" type="beat-tracker"}}
+<div class="active-beats">
+    {{#if (gt characters.length 0)}}
+    {{#each characters as |char|}}
+    <div class="character-box">
+        <label class="character-header">
+            {{char.character.name}}
+        </label>
+        <div class="char-active-beats">
+            {{#if (gt char.activeBeats.length 0)}}
+            {{#each char.activeBeats as |beat|}}
+            {{> "heart:items/beat/preview.html" item=beat showDelete=false showComplete=false showActivate=false}}
             {{/each}}
-        {{else}}
-            <p class="no-characters">{{localizeHeart "No characters available"}}</p>
-        {{/if}}
+            {{else}}
+            <p class="no-beats">{{localizeHeart "No active beats"}}</p>
+            {{/if}}
+        </div>
     </div>
-
-    <div class="wide">
-        <button data-action='close'><span class="fas fa-times"></span> {{localizeHeart 'close'}}</button>
-    </div>
-</form>
+    {{/each}}
+    {{else}}
+    <p class="no-characters">{{localizeHeart "No characters available"}}</p>
+    {{/if}}
+</div>
+{{/ "heart:applications/base/application.html"}}

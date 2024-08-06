@@ -1,9 +1,9 @@
 @use '../util'
 
-.heart.form, .chat-message 
+.heart.form, .chat-message
     .options
         display: flex
-        
+
         align-items: center
         justify-content: start
 
@@ -37,39 +37,29 @@
     .description
         text-align: center
 
-.character-box
-    border: 1px solid util.$black
-    border-radius: 5px
-    padding-bottom: 10px
-    margin: 10px
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1)
+.active-beats
     display: flex
-    flex-direction: column
-    align-items: flex-start
+    flex-flow: row wrap
+    justify-content: center
 
-    .character-header
-        background: util.$red
-        padding: 5px
-        width: 100%
-        box-sizing: border-box
-        font-size: 1.2em
-        color: util.$white
-
-    .char-active-beats
-        padding-left: 10px
-        padding-right: 10px
-        margin-top: 10px
+    .character-box
+        border: 1px solid util.$black
+        border-radius: 0.5em
+        margin: 0.5em
         display: flex
         flex-direction: column
-        gap: 5px
+        align-items: flex-start
 
-        .beat
-            color: util.$black
+        .character-header
+            background: util.$red
+            color: util.$white
+            padding: 0.5em
+            width: 100%
+            box-sizing: border-box
+            font-size: 1.2em
+
+        .char-active-beats
+            padding: 0 0.5em
             display: flex
-            align-items: center
-
-            .beat-type
-                font-size: 1.2em
-                font-weight: bold
-                color: util.$red
-                margin-right: 10px
+            flex-direction: column
+            justify-content: center

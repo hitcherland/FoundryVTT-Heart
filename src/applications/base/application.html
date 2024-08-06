@@ -1,10 +1,12 @@
-<form class="heart form {{type}} {{classes}} grid-2 auto-first-col">
+<form class="heart form {{type}} {{classes}} {{#if showRoll}}grid-2{{/if}} auto-first-col">
     <div class="wide description">
-    {{localizeHeart "applications" type "description"}}
+        {{localizeHeart "applications" type "description"}}
     </div>
     {{> @partial-block}}
+    {{#if showRoll }}
     <div class="wide grid-2">
         <button data-action='cancel'><span class="fas fa-times"></span> {{localizeHeart 'cancel'}}</button>
         <button data-action='submit'><span class="fas fa-dice"></span> {{localizeHeart 'roll'}}</button>
     </div>
+    {{/if}}
 </form>
