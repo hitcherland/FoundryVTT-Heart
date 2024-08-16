@@ -23,6 +23,10 @@
             "lang": "it",
             "name": "Italiano",
             "path": "lang/it.json"
+        }, {
+            "lang": "pt",
+            "name": "Português",
+            "path": "lang/pt.json"
         }
     ],
     "socket": false
