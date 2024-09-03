@@ -193,19 +193,9 @@ class HeartItem extends Item {
     }
 
     async updateChildren(data = {}, context = {}) {
-        // why
-        const ctx = {
-            ...context
-        }; //, render: false };
-        const updates = await this.update({
+        return await this.update({
             'system.children': data
-        }, ctx);
-        if (updates === undefined) return;
-        
-        if (this.isEmbedded && this.parent.sheet.rendered)
-            await this.parent.sheet.render(true);
-
-        return updates;
+        }, context);
     }
 
     async delete() {
