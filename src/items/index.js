@@ -108,6 +108,7 @@ class HeartItem extends Item {
             await this.parentItem.updateChildren({
                 [`${this.id}`]: data
             }, context);
+            return this;
         } else {
             return await super.update(data, context);
         }
@@ -115,7 +116,7 @@ class HeartItem extends Item {
 
     // required for dragging/dropping of nested-children
     updateSource(changes = {}, options = {}) {
-        if (this.isChild) {
+        if (this.isChild && options.force !== true) {
             this.parentItem.updateChildren({
                 [`${this.id}`]: changes
             }, options);
@@ -165,15 +166,16 @@ class HeartItem extends Item {
         Object.entries(this.system.children).forEach(([id, data]) => {
             if (this.children.has(id)) {
                 const child = this.children.get(id);
-                child.updateSource(this.system.children[child.id]);
+                child.updateSource(this.system.children[child.id], {force: true});
                 child.prepareData();
 
                 if (child.children && child.children.size && child.children.size >=0) {
                     child.refreshChildren();
                 }
 
-                if (child.sheet.rendered)
+                if (child.sheet.rendered) {
                     child.sheet.render();
+                }
             } else {
                 this._addChild(data);
             }
@@ -199,7 +201,7 @@ class HeartItem extends Item {
             'system.children': data
         }, ctx);
         if (updates === undefined) return;
-
+        
         if (this.isEmbedded && this.parent.sheet.rendered)
             await this.parent.sheet.render(true);
 
