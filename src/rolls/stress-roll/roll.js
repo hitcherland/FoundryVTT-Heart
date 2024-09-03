@@ -114,7 +114,7 @@ export default class StressRoll extends Roll {
         const showFalloutRollButton = chatOptions.showFalloutRollButton !== undefined ? chatOptions.showFalloutRollButton : false;
 
         // Execute the roll, if needed
-        if (!this._evaluated) await this.evaluateSync();
+        if (!this._evaluated) await this.evaluate();
 
         const description = game.i18n.format('heart.rolls.stress-roll.description(die_size)', {
             die_size: this.options.die_size,
@@ -214,7 +214,7 @@ export default class StressRoll extends Roll {
                 character: stressRoll.options.character
             });
 
-            await falloutRoll.evaluateSync();
+            await falloutRoll.evaluate();
             if (game.dice3d && game.settings.get('heart', 'showFalloutRoll3dDice')) {
               await game.dice3d.showForRoll(falloutRoll, game.user, true);
             }

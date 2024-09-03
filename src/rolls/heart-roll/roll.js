@@ -244,16 +244,15 @@ export default class HeartRoll extends Roll {
             const msgElement = target.closest('.chat-message');
             const messageId = msgElement.data('messageId');
             const msg = game.messages.get(messageId);
-            const roll = msg.roll;
-
+            const roll = msg.rolls[0];
             
-            if (!roll._evaluated) await this.evaluateSync();
+            if (!roll._evaluated) await this.evaluate();
             const stressRoll = await game.heart.rolls.StressRoll.build({
                 character: roll.options.character,
                 result: roll.result,
             }, msg);
 
-            await stressRoll.evaluateSync();
+            await stressRoll.evaluate();
             if (game.dice3d && game.settings.get('heart', 'showStressRoll3dDice')) {
               await game.dice3d.showForRoll(stressRoll, game.user, true);
             }
