@@ -7,7 +7,7 @@
 </h2>
 <div class="item-list">
     {{#each beats as |beat|}}
-        {{> "heart:items/beat/preview.html" item=beat showDelete=../user.isGM}}
+        {{> "heart:items/beat/preview.html" item=beat showActivate=isOwner showComplete=isOwner showDelete=../user.isGM}}
     {{/each}}
 </div>
 {{/inline}}
