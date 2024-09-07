@@ -255,9 +255,6 @@ Promise.all(paths.map((filename) => {
         const string = JSON.stringify(data, null, 4);
         fs.writeFileSync(`./${tmp}/${type}/${data.name}_${data._id}.json`, string);
     });
-    const promise = fvtt.then(f => {
-        return f.compilePack(`${tmp}/${type}/`, `./${target}/${type}`)
-    });
 
     if(json.packs.find((e) => e.name === type) === undefined) {
         console.warn(`Adding ${type}.db to system.json`);
@@ -271,8 +268,10 @@ Promise.all(paths.map((filename) => {
                 "entity": "Item",
             });
     }
-
-    return promise;
+    
+    return fvtt.then(f => {
+        return f.compilePack(`${tmp}/${type}/`, `./${target}/${type}`)
+    });
 })).then(() => {
     fs.rmSync(tmp, {recursive: true});
 });
