@@ -21,7 +21,7 @@ class CallingData extends BaseItemData {
   }
 
   static async migrateData(source) {
-    await migrateChildrenToChildUUIDs(source);
+    migrateChildrenToChildUUIDs(source);
     if (source.questionArray === undefined) {
         source.questionArray = [];
     }

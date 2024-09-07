@@ -15,7 +15,6 @@ export function FindMatchingItemInCompendium(data) {
 }
 
 export function migrateChildrenToChildUUIDs(source) {
-    console.warn("migrating", );
     Object.values(source.children).forEach((data) => {
         if (source.childUUIDs === undefined) {
             source.childUUIDs = [];
