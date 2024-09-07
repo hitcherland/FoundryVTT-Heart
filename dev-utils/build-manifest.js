@@ -3,7 +3,6 @@ const config = require('../foundryvtt.config.js');
 const content = fs.readFileSync('./src/manifest.json');
 const manifest = JSON.parse(content);
 
-console.log(process.argv);
 version = process.argv[2] || "???";
 manifest.version = version;
 
