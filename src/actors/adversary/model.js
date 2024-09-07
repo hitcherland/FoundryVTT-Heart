@@ -1,7 +1,6 @@
 import { BaseActorData, migrateChildrenToChildUUIDs } from "../base/model.js";
 
-const { HTMLField, NumberField, ObjectField, SchemaField, StringField, ArrayField } =
-  foundry.data.fields;
+const { HTMLField, NumberField, StringField } = foundry.data.fields;
 
 class AdversaryData extends BaseActorData {
   static defineSchema() {
@@ -11,9 +10,9 @@ class AdversaryData extends BaseActorData {
       motivation: new StringField(),
       names: new StringField(),
       notes: new HTMLField(),
-      protection: new NumberField({integer: true, initial: 0}),
-      resistance: new NumberField({integer: true, initial: 0}),
-      resistanceMax: new NumberField({integer: true, initial: 5}),
+      protection: new NumberField({ integer: true, initial: 0 }),
+      resistance: new NumberField({ integer: true, initial: 0 }),
+      resistanceMax: new NumberField({ integer: true, initial: 5 }),
       special: new HTMLField(),
     };
   }
@@ -21,7 +20,7 @@ class AdversaryData extends BaseActorData {
   static async migrateData(source) {
     migrateChildrenToChildUUIDs(source);
     if (source.questionArray === undefined) {
-        source.questionArray = [];
+      source.questionArray = [];
     }
     if (source.questions !== undefined) {
       Object.values(source.questions).forEach((question) => {

@@ -26,6 +26,31 @@
     ],
     "socket": false,
     "documentTypes": {
+        "Actor": {
+            "adversary": {
+                "htmlFields": [
+                    "description",
+                    "special"
+                ]
+            },
+            "character": {
+                "htmlFields": [
+                    "notes"
+                ]
+            },
+            "delve": {
+                "htmlFields": [
+                    "description",
+                    "notes"
+                ]
+            },
+            "landmark": {
+                "htmlFields": [
+                    "description",
+                    "specialRules"
+                ]
+            }
+        },
         "Item": {
             "ability": {
                 "htmlFields": [

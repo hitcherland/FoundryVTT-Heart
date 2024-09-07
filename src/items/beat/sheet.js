@@ -1,12 +1,9 @@
-import sheetHTML from './sheet.html';
-import templateJSON from './template.json';
+import sheetHTML from "./sheet.html";
 
 const data = Object.freeze({
-    type: Object.keys(templateJSON.Item)[0],
-    img: 'systems/heart/assets/drum.svg',
-    template: sheetHTML.path,
+  type: "beat",
+  img: "systems/heart/assets/drum.svg",
+  template: sheetHTML.path,
 });
 
-export {
-    data
-}
+export { data };
