@@ -172,7 +172,7 @@ const dragDrop = new DragDrop({
   });
 
 // workaround for nested-children uuids not dragging properly
-async function _onDragStart(event) {
+async function _onDragStart(event) {    
     const target = event.currentTarget;
     const uuid = target.dataset.itemId;
     const document = await fromUuid(uuid);
@@ -219,13 +219,47 @@ function activateListeners(html) {
 
 // overridden to allow replacing "content anchors" with previews
 class HeartTextEditor extends TextEditor {
-    static async _createContentLink(match, {
-        relativeTo
-    } = {}) {
+    static async _createContentLink(match, { relativeTo } = {}) {
+
+        /// THIS IS WIP
+
+        console.log("Match array:", match);
         const [type, target, hash, name] = match.slice(1, 5);
-        const doc = await fromUuid(target);
+
+        console.log("Target UUID:", target); // Debugging
+
+        let uuid = target;
+
+        let doc;
+
+        // Check if the target is a compendium reference
+        switch (type)
+        {
+            case "Compendium":
+                
+                const item = await this._createCompendiumLink(uuid);
+
+                console.log("resolved compendium item");
+                console.log(item);
+
+                return item;
+            case "Item":
+                uuid = `Item.`.concat(uuid);
+                doc = await fromUuid(uuid);
+                // If the target is a UUID, return it directly
+                break;
+        }
+
+        console.log("Constructed UUID:", uuid);
+
+        console.log("Document:", doc);
+        console.log("Document Name:", doc.documentName);
+
         if (doc && doc.documentName === "Item") {
             const data = await doc.sheet.getData();
+
+            console.log(data);
+
             const innerHTML = Handlebars.partials[`heart:items/${doc.type}/preview.html`](data, {
                 allowedProtoProperties: {
                     uuid: true,
@@ -238,11 +272,58 @@ class HeartTextEditor extends TextEditor {
             div.classList.add('heart', 'sheet');
             return div;
         }
-        return super._createContentLink(match, {
-            relativeTo
-        });
+    
+        // Fallback to the default behavior if the document cannot be resolved
+        return super._createContentLink(match, { relativeTo });
+        
+    }
+
+    static async _createCompendiumLink(uuid)
+    {
+        try {
+            // Split the UUID into parts
+            const parts = uuid.split('.');
+            if (parts.length !== 3) {
+                throw new Error(`Invalid UUID format: ${uuid}`);
+            }
+
+            // Combine the first two parts as the compendium name and use the third part as the entry ID
+            const compendiumName = `${parts[0]}.${parts[1]}`;
+            const entryId = parts[2];
+
+            console.log("compendiumName: " + compendiumName);
+            console.log("entryId: " + entryId);
+
+            const item = await fromUuid(`Compendium.${compendiumName}.${entryId}`);
+
+            console.log(item);
+
+            if (item && item.documentName === "Item") {
+                const data = await item.sheet.getData();
+    
+                console.log(data);
+    
+                const innerHTML = Handlebars.partials[`heart:items/${item.type}/preview.html`](data, {
+                    allowedProtoProperties: {
+                        uuid: true,
+                        childrenTypes: true,
+                        isOwner: true
+                    }
+                });
+                const div = document.createElement('div');
+                div.innerHTML = innerHTML;
+                div.classList.add('heart', 'sheet');
+                return div;
+            }
+
+        } catch (err) {
+            console.error("Error resolving Compendium document:", err);
+            return null;
+        }
     }
 }
+
+
 
 export function initialise() {
     console.log('heart | Registering ChatMessage');

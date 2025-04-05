@@ -282,8 +282,10 @@ function ItemSheetFactory(data) {
 
 export function initialise() {
     console.log('heart | Assigning new Item documentClass');
+    
     CONFIG.Item.documentClass = HeartItem;
     console.log('heart | Registering item sheets');
+
     Items.unregisterSheet('core', ItemSheet);
     sheetModules.forEach((module) => {
 

@@ -1,0 +1,13 @@
+<div class="domains-manager">
+    <div class="section domains grid-2 auto-first-col">
+      <h3 class="center">{{localizeHeart "domain" "label-multiple"}}</h3>
+      <h3 class="faded">{{localizeHeart "domain" "knack" "label-multiple"}}</h3>
+      {{#each domains as |domain name|}}
+      <div class="flexrow">
+        <input type="checkbox" name="system.domains.{{name}}.value" {{checked domain.value}} />
+        <span class="bold">{{localizeHeart "domain" name}}</span>
+      </div>
+      <input type="text" name="system.domains.{{name}}.knack" value="{{domain.knack}}" />
+      {{/each}}
+    </div>
+  </div>

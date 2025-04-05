@@ -1,90 +1,552 @@
 @use '../../util'
 
-.sticky
-    position: sticky
-    top: 0
-    z-index: 1
+// ============================================================================
+// VARIABLES
+// ============================================================================
 
-.section
-    padding: 0.5em
+// Colors
+$header-label-color: white
 
-.item-list
-    &> *
-        padding: 0.5em
-        margin: 0.5em 0
-        border: 1px solid rgba(99, 0, 0, 0.2)
-        border-radius: 5px
+// Fonts
+$label-font: 'Mosherif'
 
-a[disabled]
-    opacity: 0.5
-    pointer-events: none
+// Sheet Containers
+$container-border-width: 2px
+$container-radius: 8px
+$container-padding: 1.5rem
+$container-title-bg: white
 
-.heart.sheet.actor.character
-    position: relative
-    background: white
+// ============================================================================
+// PLACEHOLDERS
+// ============================================================================
 
-    h3
-        font-size: 1.5em
+%header-container-style
+  border: 2px solid white
+  border-radius: 8px
+  background-color: transparent
+  padding: 10px
+  height: 90px
+  max-height: 90px
 
-    .info .grid-2
-        grid-gap: 1em
-        align-items: center
+%header-input-style
+  background-color: rgba(0,0,0,0.25)
+  border: 1px solid white
+  border-radius: 5px
+  color: white
+  padding-left: 10px
+  padding-right: 10px
+  height: 30px
+  min-width: 150px
+  width: 100%
+  max-height: 30px
+  font-family: 'Alegrey'
+  font-size: 16px
+  box-sizing: border-box
+  &::placeholder
+    color: white
 
-    .calling, .class
-        align-items: top
-        .name
-            font-weight: bold
-            text-transform: uppercase
-            font-size: 1.5em
+%header-label-style
+  font-family: $label-font
+  font-size: 24px
+  font-weight: normal
+  color: $header-label-color
+  align-self: center
 
-    img.profile
-        object-fit: contain
-        width: 100%
-        min-height: 100px
-        max-height: 256px
-        border: 0
-        background: util.$red-transparent
+%item-input
+  > .flexrow
+    > :last-child
+      flex: 0 0 auto
 
-    .faded
-        opacity: 66%
+%dynamic-container
+  border: $container-border-width solid util.$red
+  border-radius: $container-radius
+  padding: $container-padding
+  position: relative
+  margin-bottom: 1rem
 
-    .right
-        float: right
-        flex: auto 0 0
+  // Container Title: inlayed on top of the container border
+  .container-title
+    position: absolute
+    top: -0.8rem
+    left: 1rem
+    background-color: $container-title-bg
+    padding: 0 0.5rem
+    font-family: 'Mosherif'
+    font-size: 30px
+    color: util.$red
 
-    .col
-        margin: 0 0.5em
+  // Container Content Placeholder
+  .container-content
+    margin-top: 1rem
 
-    .grid-2
-        input:not([type])
-            border: 0
-            border-bottom: 1px dotted util.$red
-            font-size: 1.5em
+// ============================================================================
+// MIXINS
+// ============================================================================
 
-    .grid-3
-        display: grid
-        grid-template-columns: 1fr 1fr 1fr
-        place-items: stretch
-        column-gap: 0.5em
+@mixin active-tab($text-color, $bg-color, $radius: 5px)
+  color: $text-color
+  background-color: $bg-color
+  text-shadow: 0 0 transparent !important
+  padding: 5px 50px
+  mask: radial-gradient(8px at 20px 20px, transparent 98%, black) -20px -20px
 
-        &.resistances
-            grid-template-columns: auto auto auto
-            align-items: start
-            justify-content: space-evenly
+@mixin hover-clickable($text-color, $bg-color, $radius: 5px)
+  color: $text-color
+  background-color: $bg-color
+  margin: -2px 0 -2px -10px
+  text-shadow: 0 0 transparent !important
+  padding: 2px 12px 2px 10px
+  mask: radial-gradient(5px at 8px 8px, transparent 98%, black) -8px -8px
 
-            &.left
-                justify-self: left
+// ============================================================================
+// GLOBAL LAYOUT
+// ============================================================================
 
-    .bold
-        font-weight: bold
-        font-size: 16px
+[id^="CharacterSheet-Actor-"] .window-content > *
+  padding: 0
+  background-color: white
 
-    .resistance-input
-        font-family: 'MelmaCracked'
-        font-size: 1.5em
-        font-weight: bold
-        color: util.$red
-        border: none
-        margin: 0 2px
-        padding: 0
-        vertical-align: top
+  a span
+    &:hover
+      text-shadow: 0 0 transparent !important
+      color: util.$red
+
+.character-tab
+  display: grid
+  grid-template-columns: 400px 1fr
+  gap: 1rem
+  width: 100%
+  padding: 25px
+
+.biography-tab
+  display: grid
+  grid-template-columns: 1fr
+  gap: 1rem
+  width: 100%
+  padding: 25px
+
+.column
+  display: flex
+  flex-direction: column
+  gap: 1rem
+
+// Subcolumns
+.subcolumns
+  display: grid
+  grid-template-columns: 1fr 1fr
+  gap: 1rem
+
+.subcolumn
+  position: relative
+  padding: 1rem
+  border: $container-border-width solid util.$red
+  border-radius: $container-radius
+  min-width: 0
+
+// ============================================================================
+// ICONS
+// ============================================================================
+
+// Dice Icons
+.heart .sheetD10
+  display: inline-block
+  width: 0.7em
+  height: 0.7em
+  margin-left: 5px
+
+.heart .sheetD10
+  mask-image: url('../../../static/assets/ui/dice-d10.svg')
+  mask-size: 0.7em
+  mask-repeat: no-repeat
+
+.heart .sheetD10.red
+  background-color: util.$red
+.heart .sheetD10.black
+  background-color: black
+.heart .sheetD10.white
+  background-color: white
+
+.heart .addItem
+  font-size: 36px
+  line-height: 0
+  color: black
+  display: inline-block
+  vertical-align: middle
+
+.heart .editItem
+  font-size: 16px
+  line-height: 0
+  color: black
+  display: inline-block
+  vertical-align: middle
+
+// ============================================================================
+// HEADER
+// ============================================================================
+
+// Character Header
+.character-header
+  z-index: 1
+  display: flex
+  justify-content: flex-start
+  align-items: center
+  padding: 30px
+  background-color: transparent
+  background-image: url('../../../static/assets/ui/header_background.webp')
+  mask-image: url('../../../static/assets/ui/header_nav.svg')
+  mask-size: auto 180px
+  mask-repeat: repeat-x
+  mask-position: -0.5px top
+  margin-bottom: 1rem
+  min-height: 180px
+  max-height: 180px
+
+// Header Columns
+.header-col
+  flex: 1
+  &:not(:last-child)
+    margin-right: 2rem
+
+// Portrait Container
+.portrait
+  min-width: 90px
+  max-width: 90px
+  img
+    background-color: black
+    min-width: 90px
+    min-height: 90px
+    max-width: 90px
+    max-height: 90px
+    border-radius: 50%
+    border: 2px solid white
+    object-fit: cover
+
+// Identity Container
+.identity-container
+  @extend %header-container-style
+  display: grid
+  grid-template-columns: auto 1fr 1fr
+  gap: 0.5rem 1rem
+  width: 400px
+  max-width: 400px
+
+  // Row 1: Name, Name Input, Pronouns Input
+  .name-label
+    grid-column: 1
+    grid-row: 1
+    @extend %header-label-style
+
+  .name-input
+    grid-column: 2
+    grid-row: 1
+    @extend %header-input-style
+    overflow: hidden
+    text-overflow: ellipsis
+    white-space: nowrap
+    min-width: 0
+
+  .pronouns-input
+    grid-column: 3
+    grid-row: 1
+    @extend %header-input-style
+    min-width: 80px
+    overflow: hidden
+    text-overflow: ellipsis
+    white-space: nowrap
+
+    &::placeholder
+      color: rgba(255, 255, 255, 0.5)
+
+  // Row 2: Ancestry Label & Input
+  .ancestry-label
+    grid-column: 1
+    grid-row: 2
+    @extend %header-label-style
+
+  .ancestry-input
+    grid-column: 2 / span 2
+    grid-row: 2
+    @extend %header-input-style
+    min-width: 80px
+    overflow: hidden
+    text-overflow: ellipsis
+    white-space: nowrap
+
+    &::placeholder
+      color: rgba(255, 255, 255, 0.5)
+
+// Class & Calling Container
+.class-calling-container
+  @extend %header-container-style
+  display: grid
+  grid-template-columns: auto 1fr
+  gap: 0.5rem 1rem
+  width: 300px
+  max-width: 300px
+  @extend %item-input
+
+  // Row 1: Class Label & Content
+  .class-label
+    grid-column: 1
+    grid-row: 1
+    @extend %header-label-style
+
+  .class-content
+    grid-column: 2
+    grid-row: 1
+    @extend %header-input-style
+    display: flex
+    align-items: center
+    gap: 0.5rem
+
+    .name
+      overflow: hidden
+      text-overflow: ellipsis
+      white-space: nowrap
+      min-width: 0
+
+    .name.placeholder
+      color: rgba(255, 255, 255 , 0.5)
+
+  // Row 2: Calling Label & Content
+  .calling-label
+    grid-column: 1
+    grid-row: 2
+    @extend %header-label-style
+
+  .calling-content
+    grid-column: 2
+    grid-row: 2
+    @extend %header-input-style
+    display: flex
+    align-items: center
+    gap: 0.5rem
+    
+    .name
+      overflow: hidden
+      text-overflow: ellipsis
+      white-space: nowrap
+      min-width: 0
+
+    .name.placeholder
+      color: rgba(255, 255, 255 , 0.5)
+
+// Tab Navigation
+.character-nav-tabs
+  z-index: 0
+  margin-top: -60px
+  padding: 5px 25px
+  display: flex
+  justify-content: flex-start
+  gap: 3rem
+  background-color: util.$red
+  mask-image: url('../../../static/assets/ui/header_nav.svg')
+  mask-size: auto 90px
+  mask-repeat: repeat-x
+  mask-position: -0.5px top
+  margin-bottom: 1rem
+  min-height: 90px
+  max-height: 90px
+
+  a
+    padding: 5px 50px
+    margin-top: 15px
+    font-family: $label-font
+    font-size: 26px
+    color: white
+
+    &:hover
+      @include active-tab(util.$red, white)
+    
+  a:active, a.active
+    @include active-tab(util.$red, white)
+
+// Roll Buttons Container
+.roll-buttons-container
+  @extend %header-container-style
+  display: grid
+  grid-template-columns: auto 1fr
+  gap: 0.5rem 1rem
+  width: 400px
+  max-width: 400px
+
+// Heart Button Styles
+.header-col.heart
+  button
+    @extend %header-input-style
+    border: 1px solid white
+    @extend %header-label-style
+  
+  button.default-roll
+    grid-column: 1
+    grid-row: 1
+  button.stress-roll
+    grid-column: 2
+    grid-row: 1
+  button.fallout-roll
+    grid-column: 1 / span 2
+    grid-row: 2
+
+// ============================================================================
+// MAIN-TAB
+// ============================================================================
+
+// Reusable Character Container Pattern
+.character-tab-container
+  @extend %dynamic-container
+
+.resistance-row
+  display: grid
+  grid-template-columns: 5em 12em 6em
+  gap: 1em
+  align-items: center
+  margin-bottom: 0.5rem
+
+  .resistance-name
+    font-weight: bold
+    margin-right: 1rem
+    min-width: 4rem
+
+  .resistance-stress
+    font-weight: bold
+    display: inline-flex
+    align-items: center
+    gap: 0.2rem
+
+  .resistance-protection
+    font-weight: bold
+    display: inline-flex
+    align-items: center
+    gap: 0.2rem
+
+.protection input[type=checkbox]
+  $size: 12px
+  flex: $size 0 0
+  appearance: none
+  display: inline-block
+  width: $size
+  height: $size
+  background-color: util.$black
+  border: none
+  margin: 0 2px
+  box-sizing: content-box
+
+  &:disabled:checked
+    background-color: util.$disabled-and-checked
+
+  &:checked
+    background-color: util.$red
+    width: $size
+    height: $size
+    border: none
+
+  &:disabled
+    background-color: util.$disabled
+    cursor: not-allowed
+
+  &.invert
+    border-color: util.$white
+    &:checked
+      background-color: util.$white
+
+.protection .ordered-checkable-box
+  $size: 12px
+  flex: $size 0 0
+
+  &::after
+    content: '' // Ensure the pseudo-element is rendered
+    display: block
+    width: $size
+    height: $size
+    background-color: util.$grey
+    mask-image: url('../../../static/assets/ui/shield_fill.svg')
+    mask-repeat: no-repeat
+    mask-size: contain
+    border: none
+
+  &.checked::after
+    background-color: util.$red
+    mask-image: url('../../../static/assets/ui/shield_fill.svg')
+    mask-repeat: no-repeat
+    mask-size: contain
+    border: none
+    width: $size
+    height: $size
+
+.skill-row, .domain-row
+  display: grid
+  grid-template-columns: 1fr 0.5fr
+  align-items: center
+  gap: 1rem
+  margin-top: 0.75rem
+
+  .skill-name, .domain-name
+    text-align: left
+    font-weight: 900
+    cursor: pointer
+
+  .skill-bonus-dice, .domain-bonus-dice
+    gap: 0.25rem
+
+  .skill-plus, .domain-plus
+    font-size: 0.7em
+  
+  .skills-dice, .domain-dice
+    margin: 0
+
+  .knack-dice
+    margin: 0
+
+.knack-label
+  font-weight: 300
+  display: inline-block
+  max-width: 75%
+  overflow: hidden
+  white-space: nowrap
+  text-overflow: ellipsis
+  vertical-align: middle
+  padding: -10px 0 10px 0
+
+.info
+  font-size: 0.8em
+
+.clickable
+  cursor: pointer
+  color: util.$black
+
+  &:hover
+    @include hover-clickable(white, util.$red)
+
+.clickable.section-button
+  font-size: 16px
+  margin: 0 10px
+  display: inline-block
+  transform: translateY(-2px)
+
+.calling-description
+  text-align: center
+  font-size: 24px
+  width: 70%
+  margin: 0 auto 25px auto
+  padding: 0 10% 25px
+  border-bottom: 3px solid util.$red
+
+.calling-items .question strong
+  font-size: 16px
+  font-weight: 900
+  color: util.$red
+  display: inline-block
+  width: 70%
+
+.calling-items .question .answer-prompt
+  padding: 10px 0 30px 0
+  font-size: 16px
+
+.calling-items .editor-content
+  background-image: none !important
+  font-size: 16px !important
+  padding: 10px 0 30px 0 !important
+  min-height: 0 !important
+
+
+

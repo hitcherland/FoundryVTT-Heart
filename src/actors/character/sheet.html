@@ -1,138 +1,444 @@
 {{#*inline "itemListSection"}}
 <div class="section {{localizeHeart type 'label-multiple'}}">
-    <h2>
-        {{#if overrideTitle}}
-        {{overrideTitle}}
-        {{else}}
-        {{localizeHeart type "label-multiple"}}
-        {{/if}}
-        {{#if actor.isOwner}}
-        <div class="right">
-            <a data-action="add" data-type="{{type}}" data-data='{"active": true}'><span class="fas fa-plus"></span></a>
-        </div>
-        {{/if}}
-    </h2>
-
-    <div class="item-list">
-    {{#each list as |item|}}
-        {{> (join "/" "heart:items" type "preview.html") item=item dataPath="???" hideInactive=../hideInactive showActivate=../showActivate showDelete=(or (not item.isChild) user.isGM )}}
-    {{/each}}
-    </div>
-    
-    {{#if (and showTextboxesBelowItems description_path)}}
-    {{editor (lookup actor.system description_path) target=(join "." "system" description_path) button=true editable=editable owner=owner}}
+  <h2>
+    {{#if overrideTitle}}
+    {{overrideTitle}}
+    {{else}}
+    {{localizeHeart type "label-multiple"}}
     {{/if}}
+    {{#if actor.isOwner}}
+    <div class="right">
+      <a data-action="add" data-type="{{type}}" data-data='{"active": true}'><span class="fas fa-plus"></span></a>
+    </div>
+    {{/if}}
+  </h2>
+  <div class="item-list">
+    {{#each list as |item|}}
+    {{> (join "/" "heart:items" type "preview.html") item=item dataPath="???" hideInactive=../hideInactive
+    showActivate=../showActivate showDelete=(or (not item.isChild) user.isGM )}}
+    {{/each}}
+  </div>
+  {{#if (and showTextboxesBelowItems description_path)}}
+  {{editor (lookup actor.system description_path) target=(join "." "system" description_path) button=true
+  editable=editable owner=owner}}
+  {{/if}}
 </div>
 {{/inline}}
 
-<div>
-<div class="heart flexrow buttons sticky">
-    <button data-action="prepare-request-roll"><span class="fas fa-dice"></span> {{localizeHeart "perform" "request-roll"}}</button>
-    <button data-action="roll"><span class="fas fa-dice"></span> {{localizeHeart "perform" "roll"}}</button>
-    <button data-action="stress-roll"><span class="fas fa-dice"></span> {{localizeHeart "perform" "roll-stress"}}</button>
-    <button data-action="fallout-roll"><span class="fas fa-dice"></span> {{localizeHeart "perform" "roll-fallout"}}</button>
+{{#*inline "characterTabItemList"}}
+<div class="tab-item-list">
+  {{#each list as |item|}}
+  {{> (join "/" "heart:items" type "preview.html") item=item dataPath="???" hideInactive=../hideInactive
+  showActivate=../showActivate showDelete=(or (not item.isChild) user.isGM )}}
+  {{/each}}
 </div>
-<form class="heart sheet actor character {{cssClass}}" autocomplete="off">
-        <img class="profile" src="{{actor.img}}" title="{{actor.name}}" data-edit="img"/>
-        <div class="section grid-3 resistances place-top">
-            <div></div>
-            <div>
-                {{#if showTotalStress}}
-                <h3 class="left">Total Stress: {{actor.proxy.totalStress}}</h3>
-                {{/if}}
+{{/inline}}
+
+{{#*inline "inactiveItemsSection"}}
+<div class="section center wide inactive-items">
+  {{#each actor.items as |item|}}
+  {{#if (and (not (undef item.system.active)) (not item.system.active)) }}
+  {{> (join "/" "heart:items" item.type "preview.html") item=item dataPath="???" showActivate=../user.isOwner
+  showDelete=../user.isOwner}}
+  {{/if}}
+  {{/each}}
+</div>
+{{/inline}}
+
+
+
+
+
+
+<div>
+  <!-- Use a single form that wraps the entire sheet -->
+  <form class="heart sheet actor character {{cssClass}}" autocomplete="off">
+
+    <!-- HEADER -->
+    <div class="character-header">
+      <!-- Column 1: Character Portrait -->
+      <div class="header-col portrait">
+        <img class="profile" src="{{actor.img}}" title="{{actor.name}}" data-edit="img" />
+      </div>
+
+      <!-- Column 2: Identity (Ancestry, Name, Pronouns) -->
+      <div class="header-col identity-container">
+        <!-- Row 1: Name + Pronouns -->
+        <label class="name-label">{{localizeHeart "character" "name"}}</label>
+        <input class="name-input" name="name" value="{{actor.name}}" />
+        <input class="pronouns-input" name="pronouns" value="{{actor.system.pronouns}}"
+          placeholder="{{localizeHeart 'character' 'pronouns'}}" />
+        <!-- Row 2: Ancestry -->
+        <label class="ancestry-label">{{localizeHeart "character" "ancestry"}}</label>
+        <input class="ancestry-input" name="ancestry" placeholder="Ancestry" value="{{actor.system.ancestry}}" />
+      </div>
+
+      <!-- Column 3: Class and Calling -->
+      <div class="header-col class-calling-container">
+        <!-- Row 1: Class -->
+        <label class="class-label">{{localizeHeart "character" "class"}}</label>
+        {{#if classItem}}
+        <div data-item-id="{{classItem.uuid}}" class="class-content flexrow item non-draggable">
+          <div class="name">{{localizeHeart classItem.name}}</div>
+          <div class="right">
+            <a data-action="view" title="{{localizeHeart 'base' 'view'}}">
+              <span class="fas fa-eye"></span>
+            </a>
+            {{#if classItem.isOwner}}
+            <a data-action="delete" title="{{localizeHeart 'base' 'delete'}}">
+              <span class="fas fa-trash"></span>
+            </a>
+            {{/if}}
+          </div>
+        </div>
+        {{else}}
+        {{#if actor.isOwner}}
+        <div class="class-content flexrow item non-draggable">
+          <div class="name placeholder">{{localizeHeart "character" "class-prompt"}}</div>
+          <div class="right">
+            <a data-action="open-compendium" data-compendium="heart.classes">
+              <span class="fas fa-plus white"></span>
+            </a>
+          </div>
+        </div>
+        {{/if}}
+        {{/if}}
+
+        <!-- Row 2: Calling -->
+        <label class="calling-label">{{localizeHeart "character" "calling"}}</label>
+        {{#if callingItem}}
+        <div data-item-id="{{callingItem.uuid}}" class="calling-content flexrow item non-draggable">
+          <div class="name">{{localizeHeart callingItem.name}}</div>
+          <div class="right">
+            <a data-action="view" title="{{localizeHeart 'base' 'view'}}">
+              <span class="fas fa-eye"></span>
+            </a>
+            {{#if callingItem.isOwner}}
+            <a data-action="delete" title="{{localizeHeart 'base' 'delete'}}">
+              <span class="fas fa-trash"></span>
+            </a>
+            {{/if}}
+          </div>
+        </div>
+        {{else}}
+        {{#if actor.isOwner}}
+        <div class="calling-content flexrow item non-draggable">
+          <div class="name placeholder">{{localizeHeart "character" "calling-prompt"}}</div>
+          <div class="right">
+            <a data-action="open-compendium" data-compendium="heart.callings">
+              <span class="fas fa-plus white"></span>
+            </a>
+          </div>
+        </div>
+        {{/if}}
+        {{/if}}
+      </div>
+
+      <!-- Column 4: Roll Buttons -->
+      <div class="header-col heart roll-buttons roll-buttons-container">
+        <!-- Row 1: Default & Stress Roll -->
+        <button data-action="roll" class="default-roll">
+          {{localizeHeart "perform" "roll"}} <span class="sheetD10 white"></span>
+        </button>
+        <button data-action="stress-roll" class="stress-roll">
+          {{localizeHeart "perform" "roll-stress"}} <span class="sheetD10 white"></span>
+        </button>
+        <!-- Row 2: Fallout Roll -->
+        <button data-action="fallout-roll" class="fallout-roll">
+          {{localizeHeart "perform" "roll-fallout"}} <span class="sheetD10 white"></span>
+        </button>
+      </div>
+    </div>
+    <!-- END HEADER -->
+
+    <nav class="character-nav-tabs tabs" data-group="primary">
+      <a class="item" data-tab="character">{{localizeHeart "character" "label-single"}}</a>
+      <a class="item" data-tab="biography">{{localizeHeart "biography" "label-single"}}</a>
+      <a class="item" data-tab="skills-temp">Skills Temp</a>
+    </nav>
+
+    <!-- 2) TAB CONTENT WRAPPER -->
+    <section class="tab-content">
+      <!-- ===== CHARACTER TAB ===== -->
+      <section class="tab" data-tab="character">
+        <div class="character-tab">
+          <!-- LEFT COLUMN -->
+          <div class="column left-column">
+            <!-- Stress & Resistances & Protection -->
+            <div class="character-tab-container stress-container">
+              <div class="container-title">Resistances</div>
+              <div class="container-content">
+                <!-- TODO: Add Stress, Resistances & Protection content -->
+
+                <div>
+                  <div class="resistance-row">
+                    <span class="resistance-name"></span>
+                    <span class="resistance-stress red">Stress {{#if showTotalStress}}(Total:
+                      {{actor.proxy.totalStress}}){{/if}}</span>
+                    <span class="resistance-protection"
+                      title="Reduce stress taken by the amount of protection.">Protection<i
+                        class="fas fa-info-circle info"></i></span>
+                  </div>
+                  {{#each actor.system.resistances as |resistance name|}}
+                  <div class="resistance-row" data-resistance="{{name}}">
+                    <!-- Resistance Name -->
+                    <span class="resistance-name clickable" data-action="stress-roll" data-resistance="{{name}}">
+                      {{localizeHeart "resistance" name}}
+                    </span>
+
+                    <!-- Stress Checkboxes -->
+                    <span class="resistance-stress red" data-target="system.resistances.{{name}}.value">
+                      {{{ordered-checkable resistance.value 10}}}
+                    </span>
+
+                    <!-- Protection Checkboxes -->
+                    <span class="resistance-protection protection" data-target="system.resistances.{{name}}.protection">
+                      {{{ordered-checkable resistance.protection 5}}}
+                    </span>
+                  </div>
+                  {{/each}}
+                </div>
+              </div>
             </div>
-            <h3 class="center">{{localizeHeart "resistance" "protection" "label-multiple"}}</h3>
-            {{#each actor.system.resistances as |resistance name|}}
-                <h3 class="left">{{localizeHeart "resistance" name}}</h3>
-                <div class="red" data-target='system.resistances.{{name}}.value'>{{{ordered-checkable resistance.value 12}}}
-                    {{#if ../showStressInputBox}}
-                    <input class="resistance-input red" size="2" name='{{localizeHeart "resistance" name}} Input' value='{{resistance.value}}'/>
-                    {{/if}}
-                </div>
-                <div class="red" data-target='system.resistances.{{name}}.protection'>{{{ordered-checkable resistance.protection 5}}}</div>
-            {{/each}}
-        </div>
-        
-        <div class="section info">
-            <div class="grid-2 auto-first-col place-center">
-                <h2>{{localizeHeart "character" "name"}}</h2>
-                <input name="name" value="{{actor.name}}"/>
-                <h2>{{localizeHeart "character" "class"}}</h2>
-                {{#if classItem}}
-                <div data-item-id="{{classItem.uuid}}" class="flexrow class item">
-                    <div class="name">{{localizeHeart classItem.name}}</div>
-                    <div class="right">
-                        <a data-action="view" title="{{localizeHeart 'base' 'view'}}"><span class="fas fa-eye"></span></a>
-                        {{#if classItem.isOwner}}
-                        <a data-action="delete" title="{{localizeHeart 'base' 'delete'}}"><span class="fas fa-trash"></span></a>
-                        {{/if}}
+
+            <!-- Skills & Domains (subcolumns) -->
+            <div class="skills-domains-container">
+              <div class="container-content">
+                <div class="subcolumns">
+                  <div class="subcolumn character-tab-container skills-container">
+                    <div class="container-title">{{localizeHeart "skill" "label-multiple"}}
+                      {{#if actor.isOwner}}
+                        <a data-action="edit" data-type="skills" data-data='{"active": true}'>
+                          <span class="fas fa-edit editItem"></span>
+                        </a>
+                      {{/if}}
+                  </div>
+                    <div class="container-content">
+                        <!-- TODO: Add Skills content -->
+                        {{#each actor.system.skills as |skill name|}}
+                          {{#if skill.value}}
+                            <div class="skill-row">
+                              <div class="skill-name"><span class="clickable" data-action="skill-roll" data-skill="{{localizeHeart name}}" data-knack="{{skill.knack}}">{{localizeHeart "skill" name}}</span></div>
+                              <div class="skill-bonus-dice">
+                                <span class="fas fa-plus skill-plus"></span>
+                                <span class="sheetD10 black skills-dice"></span>
+                                {{#if skill.knack}}
+                                  <span class="sheetD10 red knack-dice"></span>
+                                {{/if}}
+                              </div>
+                            </div>
+                            {{#if skill.knack}}
+                                <div class="knack-label">{{localizeHeart "skill" "knack" "label-single"}} {{skill.knack}}</div>
+                            {{/if}}
+                          {{/if}}
+                        {{/each}}
                     </div>
-                </div>
-                {{else}}
-                <input name="system.class" value="{{actor.system.class}}"/>
-                {{/if}}
-                <h2>{{localizeHeart "character" "calling"}}</h2>
-                {{#if callingItem}}
-                <div data-item-id="{{callingItem.uuid}}" class="flexrow calling item">
-                    <div class="name">{{localizeHeart callingItem.name}}</div>
-                    <div class="right">
-                        <a data-action="view" title="{{localizeHeart 'base' 'view'}}"><span class="fas fa-eye"></span></a>
-                        {{#if callingItem.isOwner}}
-                        <a data-action="delete" title="{{localizeHeart 'base' 'delete'}}"><span class="fas fa-trash"></span></a>
-                        {{/if}}
+                  </div>
+                  <div class="subcolumn character-tab-container domains-container">
+                    <div class="container-title">{{localizeHeart "domain" "label-multiple"}}
+                      {{#if actor.isOwner}}
+                        <a data-action="edit" data-type="domains" data-data='{"active": true}'>
+                          <span class="fas fa-edit editItem"></span>
+                        </a>
+                      {{/if}}
                     </div>
+                    <div class="container-content">
+                      <!-- TODO: Add Domains content -->
+                      {{#each actor.system.domains as |domain name|}}
+                      {{#if domain.value}}
+                        <div class="domain-row">
+                          <div class="domain-name"><span class="clickable" data-action="domain-roll" data-domain="{{localizeHeart name}}" data-knack="{{domain.knack}}">{{localizeHeart "domain" name}}</span></div>
+                          <div class="domain-bonus-dice">
+                            <span class="fas fa-plus domain-plus"></span>
+                            <span class="sheetD10 black domain-dice"></span>
+                            {{#if domain.knack}}
+                              <span class="sheetD10 red knack-dice"></span>
+                            {{/if}}
+                          </div>
+                        </div>
+                        {{#if domain.knack}}
+                            <div class="knack-label">{{localizeHeart "domain" "knack" "label-single"}} {{domain.knack}}</div>
+                        {{/if}}
+                      {{/if}}
+                    {{/each}}
+                    </div>
+                  </div>
                 </div>
-                {{else}}
-                <input name="system.calling" value="{{actor.system.calling}}"/>
-                {{/if}}
+              </div>
             </div>
+
+            <!-- Equipment -->
+            <div class="character-tab-container equipment-container">
+              <div class="container-title">Equipment {{#if actor.isOwner}}<a data-action="add" data-type="equipment"
+                  data-data='{"active": true}'><span class="addItem">+</span></a>{{/if}}
+              </div>
+
+              <div class="container-content">
+                <!-- TODO: Add Equipment content -->
+                {{> characterTabItemList type="equipment" list=actor.proxy.equipment description_path="equipment"
+                showActivate=true}}
+              </div>
+            </div>
+
+            <!-- Resources -->
+            <div class="character-tab-container resources-container">
+              <div class="container-title">Resources {{#if actor.isOwner}}<a data-action="add" data-type="resource"
+                  data-data='{"active": true}'><span class="addItem">+</span></a>{{/if}}
+              </div>
+              <div class="container-content">
+                <!-- TODO: Add Resources content -->
+                {{> characterTabItemList type="resource" list=actor.proxy.resources description_path="resources"}}
+              </div>
+            </div>
+
+            <!-- Inactive Items -->
+            <div class="character-tab-container inactive-items-container">
+              <div class="container-title">Inactive Items</div>
+              <div class="container-content">
+                <!-- TODO: Add Equipment content -->
+                {{> inactiveItemsSection}}
+              </div>
+            </div>
+
+          </div>
+
+
+          <!-- RIGHT COLUMN -->
+          <div class="column right-column">
+            <!-- Active Beats -->
+            <div class="character-tab-container active-beats-container">
+              <div class="container-title">{{localizeHeart "applications" "beat-tracker" "title"}} {{#if actor.isOwner}}<a data-action="add" data-type="beat"
+                  data-data='{"active": true}'><span class="addItem">+</span></a>{{/if}}</div>
+              <div class="container-content">
+                <!-- TODO: Add Active Beats content -->
+                {{> characterTabItemList type="beat" list=actor.proxy.beats description_path="active_beats"}}
+              </div>
+            </div>
+
+            <!-- Abilities -->
+            <div class="character-tab-container abilities-container">
+              <div class="container-title">Abilities {{#if actor.isOwner}}<a data-action="add" data-type="ability"
+                  data-data='{"active": true}'><span class="addItem">+</span></a>{{/if}}</div>
+              <div class="container-content">
+                <!-- TODO: Add Abilities content -->
+                {{> characterTabItemList type="ability" list=actor.proxy.abilities description_path="abilities"}}
+              </div>
+            </div>
+
+            <!-- Fallout -->
+            <div class="character-tab-container fallout-container">
+              <div class="container-title">Fallout {{#if actor.isOwner}}<a data-action="add" data-type="fallout"
+                  data-data='{"active": true}'><span class="addItem">+</span></a>{{/if}}</div>
+              <div class="container-content">
+                <!-- TODO: Add Fallout content -->
+                {{> characterTabItemList type="fallout" list=(lookup actor.itemTypes "fallout")
+                description_path="fallout"}}
+              </div>
+            </div>
+          </div>
         </div>
 
-        {{> itemListSection type="beat" list=actor.proxy.beats description_path="active_beats" overrideTitle=(localizeHeart "beat" "active" "label-multiple")}}
-        {{> itemListSection type="equipment" list=actor.proxy.equipment description_path="equipment" showActivate=true}}
-        {{> itemListSection type="resource" list=actor.proxy.resources description_path="resources"}}
-        {{> itemListSection type="ability" list=actor.proxy.abilities description_path="abilities" hideInactive=true}}
-        {{> itemListSection type="fallout" list=(lookup actor.itemTypes "fallout") description_path="fallout"}}
-
-        <div class="section skills grid-2 auto-first-col">
-            <h3 class="center">{{localizeHeart "skill" "label-multiple"}}</h3>
-            <h3 class="faded">{{localizeHeart "skill" "knack" "label-multiple"}}</h3>
-            {{#each actor.system.skills as |skill name|}}
-                <div class="flexrow">
-                    <input type="checkbox" name="system.skills.{{name}}.value" {{checked skill.value}}/>
-                    <span class="bold">{{localizeHeart "skill" name}}</span>
-                </div>
-                <input name="system.skills.{{name}}.knack" value="{{skill.knack}}"/>
-            {{/each}}
-        </div>
-
-        <div class="section domains grid-2 auto-first-col">
-            <h3 class="center">{{localizeHeart "domain" "label-multiple"}}</h3>
-            <h3 class="faded">{{localizeHeart "domain" "knack" "label-multiple"}}</h3>
-            {{#each actor.system.domains as |domain name|}}
-                <div class="flexrow">
-                    <input type="checkbox" name="system.domains.{{name}}.value" {{checked domain.value}}/>
-                    <span class="bold">{{localizeHeart "domain" name}}</span>
-                </div>
-                <input name="system.domains.{{name}}.knack" value="{{domain.knack}}"/>
-            {{/each}}
-        </div>
-        
-        <div class="section center wide notes">
-            <h3>{{localizeHeart "character" "notes"}}</h3>
-            {{editor actor.system.notes target="system.notes" button=true editable=editable owner=owner}}
-        </div>
-        
-        <div class="section center wide inactive-items">
-            <h3>{{localizeHeart "character" "inactive-items"}}</h3>
-            <div>{{localizeHeart "character" "inactive-items-description"}}</div>
-            <div class="item-list">
+      </section>
+      <!-- ===== BIOGRAPHY TAB ===== -->
+      <section class="tab" data-tab="biography">
+        <div class="biography-tab">
+          <!-- Biography Content -->
+          <div class="character-tab-container questions-container">
+            <!-- Check if there are any items of type "calling" -->
+            {{#if (some actor.items "type calling")}}
+            <!-- Iterate over actor items -->
             {{#each actor.items as |item|}}
-                {{#if (and (not (undef item.system.active)) (not item.system.active)) }}
-                    {{> (join "/" "heart:items" item.type "preview.html") item=item dataPath="???" showActivate=../user.isOwner showDelete=../user.isOwner}}
-                {{/if}}
-            {{/each}}
+            {{#if (eq item.type "calling")}}
+            <div data-item-id="{{item.uuid}}" data-document-id="{{item.uuid}}">
+              <form class="heart sheet base Item calling {{cssClass}} editable" autocomplete="off">
+                <div class="container-title">
+                  {{localizeHeart "character" "calling"}}: {{item.name}}
+                  <a data-action="view">
+                    <span class="fas fa-edit clickable section-button"></span>
+                  </a>
+                </div>
+                <div class="section calling-items">
+                  <!-- Iterate over questions in the calling item -->
+                  <div class="calling-description">
+                    {{{localizeHeart item.system.description}}}
+                  </div>
+                  {{#each item.system.questions as |question id|}}
+                  <div class="question editable">
+                    {{#if question.answer}}
+                    <strong>{{{localizeHeart question.question}}}</strong>
+                    {{editor question.answer button=false editable=false}}
+                    {{else}}
+                    <strong>{{{localizeHeart question.question}}}</strong>
+                    <div class="answer-prompt">
+                      {{localizeHeart "calling" "questions" "sheet-prompt"}}
+                    </div>
+                    {{/if}}
+                  </div>
+                  {{/each}}
+                </div>
+              </form>
             </div>
+            {{/if}}
+            {{/each}}
+            {{else}}
+            <!-- Show this only if no item of type "calling" exists -->
+            <div class="container-title">
+              <a data-action="open-compendium" data-compendium="heart.callings">
+                {{localizeHeart "character" "calling-prompt"}} <span
+                  class="fas fa-plus clickable section-button"></span>
+              </a>
+            </div>
+            {{/if}}
+          </div>
+          <div class="character-tab-container notes-container">
+            <div class="container-title">{{localizeHeart "character" "notes"}}</div>
+            <div class="container-content">
+              {{editor actor.system.notes target="system.notes" button=true editable=true owner=true}}
+            </div>
+          </div>
         </div>
-</form>
+      </section>
+
+      <section class="tab" data-tab="skills-temp">
+        <div class="skills-tab">
+          <!-- Temp Content -->
+          <div class="character-tab-container questions-container">
+            <div class="section skills grid-2 auto-first-col">
+              <h3 class="center">{{localizeHeart "skill" "label-multiple"}}</h3>
+              <h3 class="faded">{{localizeHeart "skill" "knack" "label-multiple"}}</h3>
+              {{#each actor.system.skills as |skill name|}}
+              <div class="flexrow">
+                <input type="checkbox" name="system.skills.{{name}}.value" {{checked skill.value}} />
+                <span class="bold">{{localizeHeart "skill" name}}</span>
+              </div>
+              <input name="system.skills.{{name}}.knack" value="{{skill.knack}}" />
+              {{/each}}
+            </div>
+
+            <div class="section domains grid-2 auto-first-col">
+              <h3 class="center">{{localizeHeart "domain" "label-multiple"}}</h3>
+              <h3 class="faded">{{localizeHeart "domain" "knack" "label-multiple"}}</h3>
+              {{#each actor.system.domains as |domain name|}}
+              <div class="flexrow">
+                <input type="checkbox" name="system.domains.{{name}}.value" {{checked domain.value}} />
+                <span class="bold">{{localizeHeart "domain" name}}</span>
+              </div>
+              <input name="system.domains.{{name}}.knack" value="{{domain.knack}}" />
+              {{/each}}
+            </div>
+          </div>
+        </div>
+
+
+
+
+
+
+
+
+
+
+
+      </section>
+  </form>
 </div>

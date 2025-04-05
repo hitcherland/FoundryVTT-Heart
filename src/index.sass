@@ -5,8 +5,12 @@
     font-family: 'MelmaCracked'
     src: url(fonts/melma/MelmaCracked.ttf)
 
+@font-face
+    font-family: 'Mosherif'
+    src: url(fonts/mosherif/Mosherif.ttf)
+
 .title-font
-    font-family: 'MelmaCracked'
+    font-family: 'Mosherif'
 
 input.hidden
     display: none !important
@@ -22,7 +26,7 @@ input.toggle-display
         transition: max-height 0.2s ease-in
 
 .toggle-button
-    font-family: 'MelmaCracked'
+    font-family: 'Mosherif'
     color: black
     font-size: 1.5em
     text-align: center
@@ -107,8 +111,9 @@ input.toggle-display
     table
         border: 0
 
+    // Base (unchecked) styling
     .ordered-checkable-box
-        $size: 14px
+        $size: 10px
         flex: $size 0 0
 
         &::after, &.checked::after
@@ -116,49 +121,48 @@ input.toggle-display
             display: inline-block
             width: $size
             height: $size
-            border: 3px solid util.$black
-            margin: 0 2px
+            cursor: pointer
+            border: 1px solid util.$black
+            border-radius: 3px
+            background-color: transparent
 
+        // When checked
         &.checked::after
-            background-image: linear-gradient(90deg, util.$black 0%, util.$black 100%)
-            background-size: $size - 2px $size - 2px
-            background-position: center
-            background-repeat: no-repeat
+            background-color: util.$black
 
     input[type=checkbox]
-        $size: 14px
+        $size: 10px
         flex: $size 0 0
         appearance: none
         display: inline-block
         width: $size
         height: $size
-        border: 3px solid util.$black
+        border: 1px solid util.$black
+        border-radius: 3px
+        background-color: transparent
         margin: 0 2px
         box-sizing: content-box
 
         &:disabled:checked
-            background-image: linear-gradient(90deg, util.$disabled-and-checked 0%, util.$disabled-and-checked 100%)
-            background-size: $size - 2px $size - 2px
-            background-position: center
-            background-repeat: no-repeat
+            background-color: util.$disabled-and-checked
 
         &:checked
-            background-image: linear-gradient(90deg, util.$black 0%, util.$black 100%)
-            background-size: $size - 2px $size - 2px
-            background-position: center
-            background-repeat: no-repeat
+            background-color: util.$black
 
         &:disabled
-            background-image: linear-gradient(90deg, util.$disabled 0%, util.$disabled 100%)
-            background-size: $size - 2px $size - 2px
-            background-position: center
-            background-repeat: no-repeat
+            background-color: util.$disabled 0%
             cursor: not-allowed
 
         &.invert
             border-color: util.$white
             &:checked
-                background-image: linear-gradient(90deg, util.$white 0%, util.$white 100%)
+                background-color: util.$white
+
+    .ordered-checkable-box:nth-of-type(5)
+        margin-right: 1rem
+
+    input[type=checkbox]:nth-of-type(5)
+        margin-right: 1rem
 
     .red
         .ordered-checkable-box
@@ -166,7 +170,7 @@ input.toggle-display
                 border-color: util.$red
 
             &.checked::after
-                background-image: linear-gradient(90deg, util.$red 0%, util.$red 100%)
+                background-color: util.$red
 
 .window-app .window-content
     padding: 0

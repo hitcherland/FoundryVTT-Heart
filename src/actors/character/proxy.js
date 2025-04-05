@@ -8,6 +8,16 @@ export default {
                     }, 0);
                 }
 
+                if (name === 'pronouns') {
+                    const pronouns = actor.find(x => x.type === 'pronouns');
+                    return pronouns;
+                }
+
+                if (name === 'ancestry') {
+                    const ancestry = actor.find(x => x.type === 'ancestry');
+                    return ancestry;
+                }
+
                 if (name === 'calling') {
                     const calling = actor.items.find(x => x.type === 'calling');
                     return calling;

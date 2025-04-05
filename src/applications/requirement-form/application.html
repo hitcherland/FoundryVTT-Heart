@@ -1,6 +1,6 @@
 {{#> "heart:applications/base/application.html" type=options.type showRoll=true}}
 {{#each options.requirements as |entry name|}}
-<label>
+<label class="requirement-label">
     {{entry.label}}
 </label>
 {{#if entry.isCheckbox}}

@@ -1,6 +1,6 @@
 {{#> "heart:items/base/preview.html" showActivate=showActivate}}
-    {{localizeHeart item.name}}
-    ({{localizeHeart "equipment" "type" item.system.type}}, <a data-action="item-roll"><span class="fas fa-dice"></span> {{item.system.die_size}}</a>
+    <strong>{{localizeHeart item.name}}</strong>
+    ({{localizeHeart "equipment" "type" item.system.type}}<a data-action="item-roll"><span class="sheetD10 black"></span></span> <strong>{{item.system.die_size}}</strong></a>
     {{#each item.system.resistances}}
         {{titlecase (localizeHeart this)}}
     {{/each}}

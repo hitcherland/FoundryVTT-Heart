@@ -104,6 +104,7 @@ export default class HeartRoll extends Roll {
 
             const requirements = this.requirements;
         
+            // Remove already defined requirements
             if(character !== undefined) delete requirements.character;
             if(difficulty !== undefined) delete requirements.difficulty;
             if(skill !== undefined) delete requirements.skill;
@@ -117,8 +118,19 @@ export default class HeartRoll extends Roll {
                 skill,
                 domain,
                 mastery,
-                helpers,
+                helpers
             };
+
+            let descriptionParts = [];
+            descriptionParts.push(mastery 
+                ? game.i18n.localize(`heart.mastery.label`) 
+                : game.i18n.localize(`heart.perform.roll`));
+            if (skill) descriptionParts.push(game.i18n.localize(`heart.skill.${skill}`));
+            if (domain) descriptionParts.push(game.i18n.localize(`heart.domain.${domain}`));
+            
+            const customDescription = descriptionParts.length > 0
+                ? game.i18n.format("heart.applications.prepare-roll.custom-description", { description: descriptionParts.join(" ") })
+                : game.i18n.localize("heart.applications.prepare-roll.description");
 
             if(Object.keys(requirements).length > 0) {
                 game.heart.applications.RequirementApplication.build({
@@ -128,6 +140,7 @@ export default class HeartRoll extends Roll {
                         resolve(this._build(buildData, data, options));
                     },
                     type: 'prepare-roll',
+                    description: customDescription
                 });
             } else {
                 return resolve(this._build(buildData, data, options));
@@ -152,7 +165,8 @@ export default class HeartRoll extends Roll {
             skill ? game.i18n.localize(`heart.skill.${skill}`) : undefined,
             domain ? game.i18n.localize(`heart.domain.${domain}`) : undefined, 
             mastery ? game.i18n.localize(`heart.mastery.short`) : false,
-            ...helpers.map(h => game.actors.get(h).name)].forEach(flavor => {
+            ...helpers.map(h => game.actors.get(h).name)
+        ].forEach(flavor => {
             if (!flavor) return;
             formula_terms.push(`1d10[${flavor}]`);
         });

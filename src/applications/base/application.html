@@ -1,6 +1,11 @@
 <form class="heart form {{type}} {{classes}} {{#if showRoll}}grid-2{{/if}} auto-first-col">
+    {{#if options.description}}
+    <div class="wide custom-description">
+        <p>{{options.description}}</p>
+    </div>
+    {{/if}}
     <div class="wide description">
-        {{localizeHeart "applications" type "description"}}
+        {{{localizeHeart "applications" type "description"}}}
     </div>
     {{> @partial-block}}
     {{#if showRoll }}

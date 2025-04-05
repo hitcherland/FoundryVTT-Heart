@@ -8,6 +8,7 @@ export function initialise() {
     }
 
     modules.forEach(function(module) {
+        console.log('heart | Registering application: ' + module.default.name);
         game.heart.applications[module.default.name] = module.default;
         if(module.initialise) {
             module.initialise();

@@ -1,6 +1,6 @@
 {{#> "heart:items/base/preview.html" showActivate=true showComplete=false}}
-    {{localizeHeart item.name}}
-    (<a data-action="item-roll"><span class="fas fa-dice"></span> {{item.system.die_size}}</a>
+    <strong>{{localizeHeart item.name}}</strong>
+    (<a data-action="item-roll"><span class="sheetD10 black"></span></span> <strong>{{item.system.die_size}}</strong></a>
     {{localizeHeart "domain" item.system.domain}}
     )
     {{#if item.childrenTypes.tag}}

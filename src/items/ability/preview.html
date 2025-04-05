@@ -9,9 +9,9 @@
     </div>
     <div>
         {{#each item.proxy.abilities as |ability|}}
-            {{#if (or (not ../hideInactive) ability.system.active)}}
+            <!-- {{#if (or (not ../hideInactive) ability.system.active)}} -->
             {{> "heart:items/ability/preview.html" document=../document item=ability showTypeInTitle=true showActivate=true}}
-            {{/if}}
+            <!-- {{/if}} -->
         {{/each}}
     </div>
 {{/ "heart:items/base/preview.html"}}

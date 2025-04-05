@@ -12,7 +12,7 @@
 </div>
 {{/inline}}
 
-<form class="heart sheet base Item calling {{cssClass}}" autocomplete="off">
+<form class="heart sheet base Item calling {{cssClass}} editable" autocomplete="off">
     <h1>
         {{#if (and editable (not item.isOwned))}}
         <input name="name" value="{{localizeHeart item.name}}"/>

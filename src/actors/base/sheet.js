@@ -63,6 +63,7 @@ export default class HeartActorSheet extends HeartSheetMixin(ActorSheet) {
         html.find('[data-action=item-roll]').click(async ev => {
           const uuid = $(ev.currentTarget).closest('[data-item-id]').data('itemId');
           const item = await fromUuid(uuid);
+
           let rollOptions = {'stepIncrease': false, 'stepDecrease': false};
 
           if (ev.shiftKey) {
@@ -76,7 +77,8 @@ export default class HeartActorSheet extends HeartSheetMixin(ActorSheet) {
           }
 
           const roll = game.heart.rolls.ItemRoll.build({item}, {}, rollOptions);
-          roll.evaluateSync();
+
+          await roll.evaluate();
 
           roll.toMessage({
               flavor: `${localizeHeart(item.name)} (<span class="item-type">${item.type}</span>)`,
@@ -95,14 +97,79 @@ export default class HeartActorSheet extends HeartSheetMixin(ActorSheet) {
         });
 
         html.find('[data-action=stress-roll]').click(async ev => {
+            const target = $(ev.currentTarget); // The clicked element
+            const resistance = target.data('resistance'); // Get the resistance from the data attribute
+
             const roll = await game.heart.rolls.StressRoll.build({
-                character: this.actor.id
+                character: this.actor.id,
+                resistance: resistance // Pass the resistance to the roll
             });
 
             roll.toMessage({
-                speaker: {actor: this.actor.id}
+                speaker: { actor: this.actor.id },
+                flavor: resistance ? `Resistance: ${resistance}` : undefined // Optional: Add resistance info to the message
             });
         });
+
+        html.find('[data-action=skill-roll]').click(async ev => {
+
+            const target = $(ev.currentTarget);
+            const skill = target.data('skill');
+            const knack = target.data('knack');
+
+            let descriptionParts = [];
+            descriptionParts.push(knack 
+                ? game.i18n.localize(`heart.mastery.label`) 
+                : game.i18n.localize(`heart.perform.roll`));
+            if (skill) descriptionParts.push(game.i18n.localize(`heart.skill.${skill}`));
+            
+            const flavor = descriptionParts.length > 0
+                ? game.i18n.format("heart.applications.prepare-roll.custom-description", { description: descriptionParts.join(" ") })
+                : game.i18n.localize("heart.applications.prepare-roll.description");
+
+            const roll = await game.heart.rolls.HeartRoll.build({
+                character: this.actor.id,
+                skill: skill,
+                ...(knack && { mastery: knack }),
+                flavor: flavor
+            });
+
+            roll.toMessage({
+                speaker: { actor: this.actor.id },
+                flavor: skill ? `Skill: ${skill}` : undefined
+            });
+        });
+
+        html.find('[data-action=domain-roll]').click(async ev => {
+
+            const target = $(ev.currentTarget);
+            const domain = target.data('domain');
+            const knack = target.data('knack');
+
+            let descriptionParts = [];
+            descriptionParts.push(knack 
+                ? game.i18n.localize(`heart.mastery.label`) 
+                : game.i18n.localize(`heart.perform.roll`));
+            if (domain) descriptionParts.push(game.i18n.localize(`heart.domain.${domain}`));
+            
+            const flavor = descriptionParts.length > 0
+                ? game.i18n.format("heart.applications.prepare-roll.custom-description", { description: descriptionParts.join(" ") })
+                : game.i18n.localize("heart.applications.prepare-roll.description");
+
+            const roll = await game.heart.rolls.HeartRoll.build({
+                character: this.actor.id,
+                domain: domain,
+                ...(knack && { mastery: knack }),
+                flavor: flavor
+            });
+
+            roll.toMessage({
+                speaker: { actor: this.actor.id },
+                flavor: domain ? `Domain: ${domain}` : undefined
+            });
+        });
+        
+        
 
         html.find('[data-item-id] [data-action=activate]').click(async ev => {
             const target = $(ev.currentTarget);
@@ -130,6 +197,29 @@ export default class HeartActorSheet extends HeartSheetMixin(ActorSheet) {
             const uuid = target.closest('[data-item-id]').data('itemId');
             const item = await fromUuid(uuid);
             item.update({'system.complete': false});
+        });
+
+        html.find('[data-action=open-compendium]').click(async ev => {
+            // Get the compendium name from the data-compendium attribute
+            const target = $(ev.currentTarget);
+
+            const compendiumName = target.data('compendium'); // e.g., "heart.items"
+        
+            if (!compendiumName) {
+                console.error("No compendium name specified in the data-compendium attribute.");
+                return;
+            }
+        
+            // Retrieve the compendium
+            const pack = game.packs.get(compendiumName);
+        
+            if (!pack) {
+                console.error(`Compendium '${compendiumName}' not found.`);
+                return;
+            }
+        
+            // Render the compendium
+            pack.render(true);
         });
     }
 

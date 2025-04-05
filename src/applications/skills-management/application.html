@@ -1,0 +1,13 @@
+<div class="skills-manager">
+    <div class="section skills grid-2 auto-first-col">
+      <h3 class="center">{{localizeHeart "skill" "label-multiple"}}</h3>
+      <h3 class="faded">{{localizeHeart "skill" "knack" "label-multiple"}}</h3>
+      {{#each skills as |skill name|}}
+      <div class="flexrow">
+        <input type="checkbox" name="system.skills.{{name}}.value" {{checked skill.value}} />
+        <span class="bold">{{localizeHeart "skill" name}}</span>
+      </div>
+      <input type="text" name="system.skills.{{name}}.knack" value="{{skill.knack}}" />
+      {{/each}}
+    </div>
+  </div>

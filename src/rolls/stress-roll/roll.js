@@ -15,8 +15,7 @@ export default class StressRoll extends Roll {
                 options: characters.reduce((map, char) => {
                     map[char.id] = char.name
                     return map;
-                }, {})
-            },
+                }, {})            },
             result: {
                 label: game.i18n.localize(`heart.result.label-single`),
                 options: results.reduce((map, difficulty) => {
@@ -62,6 +61,8 @@ export default class StressRoll extends Roll {
             if(resistance !== undefined) delete requirements.resistance;
             if(ignoreProtection !== undefined) delete requirements.ignoreProtection;
 
+            console.log("RESISTANCE: " + resistance);
+
             const buildData = {
                 result,
                 die_size,
@@ -77,7 +78,7 @@ export default class StressRoll extends Roll {
                         foundry.utils.mergeObject(buildData, moreData)
                         resolve(this._build(buildData, data, options));
                     },
-                    type: 'prepare-stress-roll',
+                    type: resistance + '-stress-roll',
                 });
             } else {
                 return resolve(this._build(buildData, data, options));
@@ -108,7 +109,6 @@ export default class StressRoll extends Roll {
             blind: false
         }, chatOptions);
         const isPrivate = chatOptions.isPrivate;
-
 
         const showTakeStressButton = chatOptions.showTakeStressButton !== undefined ? chatOptions.showTakeStressButton : false;
         const showFalloutRollButton = chatOptions.showFalloutRollButton !== undefined ? chatOptions.showFalloutRollButton : false;

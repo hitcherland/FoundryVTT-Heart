@@ -151,6 +151,20 @@ function initialise() {
         return !Boolean(a);
     });
 
+    Handlebars.registerHelper("some", function (array, condition) {
+        console.debug("some helper called with:", { array, condition });
+    
+        if (typeof condition !== "string") {
+            console.warn("Invalid condition passed to 'some' helper:", condition);
+            return false;
+        }
+    
+        return array.some(item => {
+            const [key, value] = condition.split(" ");
+            return item[key] === value;
+        });
+    });
+
     Handlebars.registerHelper('notification', function (target, targetName, options) {
         const fa = Boolean(target) ? 'check' : 'times';
         let type = options.hash.optional ? 'optional' : 'required';
@@ -172,16 +186,22 @@ function initialise() {
 
     function localizeHeart(...args) {
         let options = {};
-        if (typeof (args[args.length - 1]) === "object") {
+        if (typeof args[args.length - 1] === "object") {
             options = args.splice(-1, 1)[0];
         }
-
+    
         const key = args.join('.');
         const value = `heart.${key}`;
         const response = game.i18n.localize(value);
-        if (response == value) {
-            return key;
+    
+        // Debugging information
+        if (response === value) {
+            console.warn(`Missing localization key: ${value}`);
+            console.debug("Arguments passed to localizeHeart:", args);
+            console.debug("Options passed to localizeHeart:", options);
+            return key; // Return the key if localization is missing
         } else {
+            //console.debug(`Localized value for key '${value}':`, response);
             return response;
         }
     }

@@ -23,7 +23,7 @@ module.exports = (env, argv) => {
             publicPath: publicPath,
         },
         optimization: {
-            minimize: true,
+            minimize: false, //true,
             minimizer: [new TerserPlugin({
                 terserOptions: {
                     keep_classnames: true
@@ -59,6 +59,10 @@ module.exports = (env, argv) => {
                     test: /\.(woff|woff2|eot|ttf|otf)$/i,
                     type: 'asset/resource',
                 },
+                {
+                    test: /\.(png|jpe?g|gif|webp|svg)$/i,
+                    type: 'asset/resource',
+                  },
             ],
         },
         devServer: {
