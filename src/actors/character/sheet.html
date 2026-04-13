@@ -20,19 +20,19 @@
     </div>
     
     {{#if (and showTextboxesBelowItems description_path)}}
-    {{editor (lookup actor.system description_path) target=(join "." "system" description_path) button=true editable=editable owner=owner}}
+    <textarea name="{{join '.' 'system' description_path}}" {{#unless editable}}disabled{{/unless}}>{{stripHTML (lookup actor.system description_path)}}</textarea>
     {{/if}}
 </div>
 {{/inline}}
 
-<div>
+<div class="sheet-scroll-root">
 <div class="heart flexrow buttons sticky">
     <button data-action="prepare-request-roll"><span class="fas fa-dice"></span> {{localizeHeart "perform" "request-roll"}}</button>
     <button data-action="roll"><span class="fas fa-dice"></span> {{localizeHeart "perform" "roll"}}</button>
     <button data-action="stress-roll"><span class="fas fa-dice"></span> {{localizeHeart "perform" "roll-stress"}}</button>
     <button data-action="fallout-roll"><span class="fas fa-dice"></span> {{localizeHeart "perform" "roll-fallout"}}</button>
 </div>
-<form class="heart sheet actor character {{cssClass}}" autocomplete="off">
+<div class="heart sheet actor character {{cssClass}}">
         <img class="profile" src="{{actor.img}}" title="{{actor.name}}" data-edit="img"/>
         <div class="section grid-3 resistances place-top">
             <div></div>
@@ -88,18 +88,18 @@
             </div>
         </div>
 
-        {{> itemListSection type="beat" list=actor.proxy.beats description_path="active_beats" overrideTitle=(localizeHeart "beat" "active" "label-multiple")}}
-        {{> itemListSection type="equipment" list=actor.proxy.equipment description_path="equipment" showActivate=true}}
-        {{> itemListSection type="resource" list=actor.proxy.resources description_path="resources"}}
-        {{> itemListSection type="ability" list=actor.proxy.abilities description_path="abilities" hideInactive=true}}
-        {{> itemListSection type="fallout" list=(lookup actor.itemTypes "fallout") description_path="fallout"}}
+        {{> itemListSection type="beat" list=actor.proxy.beats overrideTitle=(localizeHeart "beat" "active" "label-multiple")}}
+        {{> itemListSection type="equipment" list=actor.proxy.equipment showActivate=true}}
+        {{> itemListSection type="resource" list=actor.proxy.resources}}
+        {{> itemListSection type="ability" list=actor.proxy.abilities hideInactive=true}}
+        {{> itemListSection type="fallout" list=(lookup actor.itemTypes "fallout")}}
 
         <div class="section skills grid-2 auto-first-col">
             <h3 class="center">{{localizeHeart "skill" "label-multiple"}}</h3>
             <h3 class="faded">{{localizeHeart "skill" "knack" "label-multiple"}}</h3>
             {{#each actor.system.skills as |skill name|}}
                 <div class="flexrow">
-                    <input type="checkbox" name="system.skills.{{name}}.value" {{checked skill.value}}/>
+                    <a data-action="toggle-boolean" data-path="system.skills.{{name}}.value" class="ordered-checkable-box{{#if skill.value}} checked{{/if}}"></a>
                     <span class="bold">{{localizeHeart "skill" name}}</span>
                 </div>
                 <input name="system.skills.{{name}}.knack" value="{{skill.knack}}"/>
@@ -111,7 +111,7 @@
             <h3 class="faded">{{localizeHeart "domain" "knack" "label-multiple"}}</h3>
             {{#each actor.system.domains as |domain name|}}
                 <div class="flexrow">
-                    <input type="checkbox" name="system.domains.{{name}}.value" {{checked domain.value}}/>
+                    <a data-action="toggle-boolean" data-path="system.domains.{{name}}.value" class="ordered-checkable-box{{#if domain.value}} checked{{/if}}"></a>
                     <span class="bold">{{localizeHeart "domain" name}}</span>
                 </div>
                 <input name="system.domains.{{name}}.knack" value="{{domain.knack}}"/>
@@ -120,7 +120,7 @@
         
         <div class="section center wide notes">
             <h3>{{localizeHeart "character" "notes"}}</h3>
-            {{editor actor.system.notes target="system.notes" button=true editable=editable owner=owner}}
+            <textarea name="system.notes" {{#unless editable}}disabled{{/unless}}>{{stripHTML actor.system.notes}}</textarea>
         </div>
         
         <div class="section center wide inactive-items">
@@ -134,5 +134,5 @@
             {{/each}}
             </div>
         </div>
-</form>
+</div>
 </div>

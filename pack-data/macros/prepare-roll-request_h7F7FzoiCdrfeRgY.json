@@ -1,0 +1,20 @@
+{
+    "_id": "h7F7FzoiCdrfeRgY",
+    "_key": "!macros!h7F7FzoiCdrfeRgY",
+    "name": "Prepare Roll Request",
+    "type": "script",
+    "author": "yVBR839ynJiV8vzd",
+    "img": "systems/heart/assets/perspective-dice-six-faces-random.svg",
+    "scope": "global",
+    "command": "new game.heart.applications.PrepareRollRequestApplication().render(true)",
+    "folder": null,
+    "sort": 0,
+    "ownership": {
+        "default": 0
+    },
+    "flags": {
+        "core": {
+            "sourceId": "Macro.QVuQnBiSkkOeWl5T"
+        }
+    }
+}

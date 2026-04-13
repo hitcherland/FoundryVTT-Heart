@@ -2,26 +2,24 @@ import applicationHTML from "./application.html";
 import HeartApplication from "../base/application.js";
 
 export default class BeatTrackerApplication extends HeartApplication {
-  static get defaultOptions() {
-    return foundry.utils.mergeObject(super.defaultOptions, {
-      template: applicationHTML.path,
-      classes: ["form", "heart", this.formType],
-      resizable: true,
-    });
-  }
+  static DEFAULT_OPTIONS = {
+    ...super.DEFAULT_OPTIONS,
+    actions: {
+      ...super.DEFAULT_OPTIONS.actions,
+      close: BeatTrackerApplication._onClose,
+    },
+  };
 
-  static get defaultOptions() {
-    return foundry.utils.mergeObject(super.defaultOptions, {
-      template: applicationHTML.path,
-    });
-  }
+  static PARTS = {
+    main: { template: applicationHTML.path, scrollable: [".heart.form"] },
+  };
 
   static get formType() {
     return "beat-tracker";
   }
 
-  getData() {
-    const data = super.getData();
+  async _prepareContext(options) {
+    const context = {};
 
     const charactersWithBeats = game.actors
       .filter((actor) => actor.type === "character")
@@ -35,16 +33,12 @@ export default class BeatTrackerApplication extends HeartApplication {
         return arr;
       }, []);
 
-    return foundry.utils.mergeObject(data, {
-      characters: charactersWithBeats,
-    });
+    context.characters = charactersWithBeats;
+
+    return context;
   }
 
-  activateListeners(html) {
-    super.activateListeners(html);
-
-    html.find("[data-action=close]").click(() => {
-      this.close();
-    });
+  static _onClose(event, target) {
+    this.close();
   }
 }

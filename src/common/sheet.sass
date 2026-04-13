@@ -1,7 +1,16 @@
 @use '../util'
-    
+
+.sheet-scroll-root
+    display: flex
+    flex-direction: column
+    flex: 1
+    min-height: 0
+
 .heart.sheet
-    background: white
+    background: util.$bg-white
+    flex: 1
+    overflow-y: auto
+    min-height: 0
     img.profile
         flex-grow: 1
         background: rgba(0, 0, 0, 0.5)
@@ -21,8 +30,12 @@
         flex-grow: 0
         text-align: center
 
-    .editor-content 
-        @include util.notepad
+    textarea
+        resize: vertical
+        width: 100%
+        min-height: 5em
+        border: 1px solid rgba(99, 0, 0, 0.3)
+        padding: 0.25em
 
     .item-list
         font-size: 1.2em
@@ -66,7 +79,7 @@
 
     h1, h2, h3, h4
         font-family: 'MelmaCracked'
-        color: black
+        color: util.$black
         
         .right
             float: right

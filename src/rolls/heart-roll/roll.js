@@ -205,7 +205,7 @@ export default class HeartRoll extends Roll {
         const showStressRollButton = chatOptions.showStressRollButton !== undefined ? chatOptions.showStressRollButton : false;
 
         // Execute the roll, if needed
-        if (!this._evaluated) await this.evaluateSync();
+        if (!this._evaluated) await this.evaluate();
 
         const description = game.i18n.format('heart.rolls.roll.description(difficulty,count)', {
             difficulty: game.i18n.localize(`heart.difficulty.${this.options.difficulty}`),
@@ -226,27 +226,30 @@ export default class HeartRoll extends Roll {
         };
 
         // Render the roll display template
-        return renderTemplate(chatOptions.template, chatData);
+        return foundry.applications.handlebars.renderTemplate(chatOptions.template, chatData);
     }
 
     async getTooltip() {
         const parts = this.dice.map(d => d.getTooltipData());
         const kept = this.dice.findIndex(d => d.total == this.total);
-        return renderTemplate(this.constructor.TOOLTIP_TEMPLATE, {
+        return foundry.applications.handlebars.renderTemplate(this.constructor.TOOLTIP_TEMPLATE, {
             kept,
             parts 
         });
     }
 
     static activateListeners(html) {
-        html.on('click', '.heart-roll [data-action=roll-stress]', async function(ev) {
-            const target = $(ev.currentTarget);
-            const msgElement = target.closest('.chat-message');
-            const messageId = msgElement.data('messageId');
+        const el = html instanceof HTMLElement ? html : html[0] || html;
+        el.addEventListener('click', async function(ev) {
+            const button = ev.target.closest('.heart-roll [data-action=roll-stress]');
+            if (!button) return;
+
+            const msgElement = button.closest('.chat-message');
+            const messageId = msgElement.dataset.messageId;
             const msg = game.messages.get(messageId);
             const roll = msg.rolls[0];
-            
-            if (!roll._evaluated) await this.evaluate();
+
+            if (!roll._evaluated) await roll.evaluate();
             const stressRoll = await game.heart.rolls.StressRoll.build({
                 character: roll.options.character,
                 result: roll.result,

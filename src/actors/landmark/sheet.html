@@ -20,13 +20,13 @@
     </div>
     
     {{#if (and showTextboxesBelowItems description_path)}}
-    {{editor (lookup actor.system description_path) target=(join "." "system" description_path) button=true editable=editable owner=owner}}
+    <textarea name="{{join '.' 'system' description_path}}" {{#unless editable}}disabled{{/unless}}>{{stripHTML (lookup actor.system description_path)}}</textarea>
     {{/if}}
 </div>
 {{/inline}}
 
-<div>
-<form class="heart sheet actor landmark {{cssClass}}" autocomplete="off">
+<div class="sheet-scroll-root">
+<div class="heart sheet actor landmark {{cssClass}}">
         <img class="profile" src="{{actor.img}}" title="{{actor.name}}" data-edit="img"/>
         
         <div class="section info">
@@ -64,17 +64,17 @@
 
         <div class="section center wide notes">
             <h3>{{localizeHeart "landmark" "specialRule" "label-multiple"}}</h3>
-            {{editor actor.system.specialRules target="system.specialRules" button=true editable=editable owner=owner}}
+            <textarea name="system.specialRules" {{#unless editable}}disabled{{/unless}}>{{stripHTML actor.system.specialRules}}</textarea>
         </div>
 
         <div class="section center wide notes">
             <h3>{{localizeHeart "landmark" "potentialPlot" "label-multiple"}}</h3>
-            {{editor actor.system.potentialPlots target="system.potentialPlots" button=true editable=editable owner=owner}}
+            <textarea name="system.potentialPlots" {{#unless editable}}disabled{{/unless}}>{{stripHTML actor.system.potentialPlots}}</textarea>
         </div>
 
         <div class="section center wide notes">
             <h3>{{localizeHeart "landmark" "description"}}</h3>
-            {{editor actor.system.description target="system.description" button=true editable=editable owner=owner}}
+            <textarea name="system.description" {{#unless editable}}disabled{{/unless}}>{{stripHTML actor.system.description}}</textarea>
         </div>
         
         <div class="section center wide inactive-items">
@@ -88,5 +88,5 @@
             {{/each}}
             </div>
         </div>
-</form>
+</div>
 </div>

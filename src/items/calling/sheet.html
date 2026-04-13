@@ -12,7 +12,7 @@
 </div>
 {{/inline}}
 
-<form class="heart sheet base Item calling {{cssClass}}" autocomplete="off">
+<div class="heart sheet base Item calling {{cssClass}}">
     <h1>
         {{#if (and editable (not item.isOwned))}}
         <input name="name" value="{{localizeHeart item.name}}"/>
@@ -22,7 +22,7 @@
     </h1>
     <div class="description">
         {{#if (and editable (not item.isOwned))}}
-        {{editor (localizeHeart system.description) target="system.description" button=true editable=editable owner=owner}}
+        <textarea name="system.description">{{stripHTML system.description}}</textarea>
         {{else}}
         {{{localizeHeart system.description}}}
         {{/if}}
@@ -42,7 +42,7 @@
                 <div>
                     <div class="question">{{{localizeHeart question.question}}}</div>
                     {{#if ../editable}}
-                    {{editor question.answer target=(join "." "system.questions" id "answer") button=true editable=../editable owner=owner}}
+                    <textarea name="{{join '.' 'system.questions' id 'answer'}}">{{stripHTML question.answer}}</textarea>
                     {{else}}
                     <div>{{{localizeHeart question.answer}}}</div>
                     {{/if}}
@@ -50,7 +50,7 @@
                 {{else}}
                     {{#if ../editable}}
                     <div class="question">
-                        {{editor (localizeHeart question.question) target=(join "." "system.questions" id "question") button=true editable=../editable owner=owner}}
+                        <textarea name="{{join '.' 'system.questions' id 'question'}}">{{stripHTML question.question}}</textarea>
                     </div>
                     {{else}}
                     <div>{{{localizeHeart question.question}}}</div>
@@ -84,4 +84,4 @@
     {{> beatSection beats=minorBeats type="minor"}}
     {{> beatSection beats=majorBeats type="major"}}
     {{> beatSection beats=zenithBeats type="zenith"}}
-</form>
+</div>

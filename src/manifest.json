@@ -4,10 +4,12 @@
         {
             "name": "macros",
             "label": "Useful Heart Macros",
-            "system": "heart",
-            "path": "./packs/macros.db",
+            "path": "packs/macros",
             "type": "Macro",
-            "entity": "Macro"
+            "ownership": {
+                "PLAYER": "OBSERVER",
+                "ASSISTANT": "OWNER"
+            }
         }
     ],
     "languages": [

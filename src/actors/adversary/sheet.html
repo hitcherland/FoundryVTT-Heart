@@ -20,13 +20,13 @@
     </div>
     
     {{#if (and showTextboxesBelowItems description_path)}}
-    {{editor (lookup actor.system description_path) target=(join "." "system" description_path) button=true editable=editable owner=owner}}
+    <textarea name="{{join '.' 'system' description_path}}" {{#unless editable}}disabled{{/unless}}>{{stripHTML (lookup actor.system description_path)}}</textarea>
     {{/if}}
 </div>
 {{/inline}}
 
-<div>
-<form class="heart sheet actor adversary {{cssClass}}" autocomplete="off">
+<div class="sheet-scroll-root">
+<div class="heart sheet actor adversary {{cssClass}}">
         <img class="profile" src="{{actor.img}}" title="{{actor.name}}" data-edit="img"/>
 
         <div class="section grid-2 resistances place-top">
@@ -61,17 +61,17 @@
 
         <div class="section center wide notes">
             <h3>{{localizeHeart "adversary" "descriptors"}}</h3>
-            {{editor actor.system.descriptors target="system.descriptors" button=true editable=editable owner=owner}}
+            <textarea name="system.descriptors" {{#unless editable}}disabled{{/unless}}>{{stripHTML actor.system.descriptors}}</textarea>
         </div>
 
         <div class="section center wide notes">
             <h3>{{localizeHeart "adversary" "motivation"}}</h3>
-            {{editor actor.system.motivation target="system.motivation" button=true editable=editable owner=owner}}
+            <textarea name="system.motivation" {{#unless editable}}disabled{{/unless}}>{{stripHTML actor.system.motivation}}</textarea>
         </div>
 
         <div class="section center wide notes">
             <h3>{{localizeHeart "adversary" "special"}}</h3>
-            {{editor actor.system.special target="system.special" button=true editable=editable owner=owner}}
+            <textarea name="system.special" {{#unless editable}}disabled{{/unless}}>{{stripHTML actor.system.special}}</textarea>
         </div>
 
         {{> itemListSection type="equipment" list=actor.proxy.equipment description_path="equipment" showActivate=true}}
@@ -79,7 +79,7 @@
         
         <div class="section center wide notes">
             <h3>{{localizeHeart "adversary" "notes"}}</h3>
-            {{editor actor.system.notes target="system.notes" button=true editable=editable owner=owner}}
+            <textarea name="system.notes" {{#unless editable}}disabled{{/unless}}>{{stripHTML actor.system.notes}}</textarea>
         </div>
         
         <div class="section center wide inactive-items">
@@ -93,5 +93,5 @@
             {{/each}}
             </div>
         </div>
-</form>
+</div>
 </div>

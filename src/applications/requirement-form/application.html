@@ -4,13 +4,27 @@
     {{entry.label}}
 </label>
 {{#if entry.isCheckbox}}
-<input type="checkbox" name="{{name}}" value="{{entry.value}}" />
+{{#with (randomID) as |id|}}
+<input class="hidden" type="checkbox" name="{{name}}" id="{{id}}" value="{{entry.value}}" />
+<label for="{{id}}" class="ordered-checkable-box"></label>
+{{/with}}
 {{else}}
-<select name="{{name}}" {{#if entry.isMany}}multiple{{/if}}>
+{{#if entry.isMany}}
+<div class="options">
+    {{#each entry.options as |label value|}}
+    {{#with (randomID) as |id|}}
+    <input class="hidden" type="checkbox" id="{{id}}" name="{{name}}" value="{{value}}" />
+    <label for="{{id}}" class="option">{{label}}</label>
+    {{/with}}
+    {{/each}}
+</div>
+{{else}}
+<select name="{{name}}">
     {{#each entry.options as |label value|}}
     <option value="{{value}}">{{label}}</option>
     {{/each}}
 </select>
+{{/if}}
 {{/if}}
 {{/each}}
 {{/ "heart:applications/base/application.html"}}

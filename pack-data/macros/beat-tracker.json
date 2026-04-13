@@ -1,0 +1,1 @@
+{"name":"Beat Tracker","type":"script","img":"systems/heart/assets/heart-icon.svg","scope":"global","command":"new game.heart.applications.BeatTrackerApplication().render(true)","folder":null,"sort":0,"ownership":{"default":0},"flags":{},"_id":"ZcghHSn9NVO1X35y","_key":"!macros!ZcghHSn9NVO1X35y"}

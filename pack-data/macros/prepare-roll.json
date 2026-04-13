@@ -1,0 +1,1 @@
+{"name":"Prepare Roll","type":"script","img":"systems/heart/assets/d10.svg","scope":"global","command":"const msg = (await game.heart.rolls.HeartRoll.build()); msg.toMessage({speaker:{actor:msg.options.character}});","folder":null,"sort":0,"ownership":{"default":0},"flags":{},"_id":"F2zK0pTcxCWqt6eH","_key":"!macros!F2zK0pTcxCWqt6eH"}

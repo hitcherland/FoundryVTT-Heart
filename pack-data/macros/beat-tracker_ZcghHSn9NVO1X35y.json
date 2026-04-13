@@ -1,0 +1,20 @@
+{
+    "_id": "ZcghHSn9NVO1X35y",
+    "_key": "!macros!ZcghHSn9NVO1X35y",
+    "name": "Beat Tracker",
+    "type": "script",
+    "author": "yVBR839ynJiV8vzd",
+    "img": "systems/heart/assets/heart-icon.svg",
+    "scope": "global",
+    "command": "new game.heart.applications.BeatTrackerApplication().render(true)",
+    "folder": null,
+    "sort": 0,
+    "ownership": {
+        "default": 0
+    },
+    "flags": {
+        "core": {
+            "sourceId": "Macro.w8d43bZw2kfAdsIS"
+        }
+    }
+}

@@ -13,128 +13,123 @@ const data = Object.freeze({
 export default class extends HeartItemSheet {
     static get type() { return data.type; }
 
-    get template() {
-        return data.template;
-    }
+    static DEFAULT_OPTIONS = {
+        actions: {
+            "toggle-checkable": this._onToggleCheckable,
+            "service-roll": this._onServiceRoll,
+            "upgrade": this._onUpgrade,
+            "downgrade": this._onDowngrade,
+            "add-service": this._onAddService,
+            "delete-service": this._onDeleteService,
+        },
+    };
+
+    static PARTS = {
+        main: { template: data.template, scrollable: [".heart.sheet"] },
+    };
 
     get img() {
         return data.img;
     }
 
-    getData() {
-        const data = super.getData();        
-        return data;
+    static _onToggleCheckable(event, target) {
+        event.preventDefault();
+        const index = parseInt(target.dataset.index);
+        const parent = target.parentElement;
+        const targetPath = parent.dataset.target;
+        const isChecked = target.classList.contains('checked');
+        const data = {};
+        if (isChecked) {
+            if (index + 1 === foundry.utils.getProperty(this.document, targetPath)) {
+                data[targetPath] = index;
+            } else {
+                data[targetPath] = index + 1;
+            }
+        } else {
+            data[targetPath] = index + 1;
+        }
+        this.document.update(data);
     }
 
-    activateListeners(html) {
-        super.activateListeners(html);
+    static async _onServiceRoll(event, target) {
+        event.preventDefault();
+        const id = target.closest('[data-id]').dataset.id;
+        const service = this.document.system.resistances[id];
+        const item = {system:{die_size:service.die_size}};
 
-        html.find('.ordered-checkable-box:not(.checked)').click(ev => {
-            ev.preventDefault();
-            const element = ev.currentTarget;
-            const index = parseInt(element.dataset.index);
-            const parent = element.parentElement;
-            const target = parent.dataset.target;
+        const roll = game.heart.rolls.ItemRoll.build({item});
+        await roll.evaluate();
 
-            const data = {};
-            data[target] = index + 1;
-            this.item.update(data);
+        roll.toMessage({
+            flavor: `${localizeHeart(this.document.name)} (<span class="item-type">${localizeHeart(this.document.type)}</span>)<div class="resistance-text">${localizeHeart(service.resistance)}</div>`,
+            speaker: {alias: "GM"}
         });
+    }
 
-        html.find('.ordered-checkable-box.checked').click(ev => {
-            ev.preventDefault();
-            const element = ev.currentTarget;
-            const index = parseInt(element.dataset.index);
-            const parent = element.parentElement;
-            const target = parent.dataset.target;
+    static _onUpgrade(event, target) {
+        event.preventDefault();
+        const dieSizes = game.heart.die_sizes;
+        const services = this.document.system.resistances;
 
-            const data = {};
-            if (index + 1 === foundry.utils.getProperty(this.item.data, target)) {
-                data[target] = index;
-            } else {
-                data[target] = index + 1;
+        const updates = {};
+        updates['system.upgradeTrack'] = 0;
+        Object.keys(services).forEach(key => {
+            var service = services[key];
+            var indexOf = dieSizes.indexOf(service.die_size);
+
+            if(indexOf < (dieSizes.length - 1)) {
+                var largerSize = dieSizes[indexOf+1];
+                updates[`system.resistances.${key}.die_size`] = largerSize;
             }
-            this.item.update(data);
         });
 
-        html.find('[data-action=service-roll]').click(async ev => {
-            const target = $(ev.currentTarget);
-            const id = target.closest ('[data-id]').data('id');
-            const service = this.item.system.resistances[id];
-            const item = {system:{die_size:service.die_size}};
+        this.document.update(updates);
+    }
 
-            const roll = game.heart.rolls.ItemRoll.build({item});
-            await roll.evaluateSync();
+    static _onDowngrade(event, target) {
+        event.preventDefault();
+        const dieSizes = game.heart.die_sizes;
+        const services = this.document.system.resistances;
 
-            roll.toMessage({
-                flavor: `${localizeHeart(this.item.name)} (<span class="item-type">${localizeHeart(this.item.type)}</span>)<div class="resistance-text">${localizeHeart(service.resistance)}</div>`,
-                speaker: {alias: "GM"}
-            });
+        const updates = {};
+
+        Object.keys(services).forEach(key => {
+            var service = services[key];
+            var indexOf = dieSizes.indexOf(service.die_size);
+
+            if(indexOf > 0) {
+                var smallerSize = dieSizes[indexOf-1];
+                updates[`system.resistances.${key}.die_size`] = smallerSize;
+            }
         });
 
-        html.find('[data-action=upgrade]').click(async ev => {
-            const dieSizes = game.heart.die_sizes;
-            const services = this.item.system.resistances;
-            
-            const updates = {};
-            updates['system.upgradeTrack'] = 0;
-            Object.keys(services).forEach(key => {
-                var service = services[key];
-                var indexOf = dieSizes.indexOf(service.die_size);
-                
-                if(indexOf < (dieSizes.length - 1)) {
-                    var largerSize = dieSizes[indexOf+1];
-                    updates[`system.resistances.${key}.die_size`] = largerSize;
-                }
-            });
+        this.document.update(updates);
+    }
 
-            this.item.update(updates);
-        });
+    static _onAddService(event, target) {
+        event.preventDefault();
+        const id = foundry.utils.randomID();
+        this.document.update({[`system.resistances.${id}`]: {
+            die_size: 'd4',
+            resistance: 'blood'
+        }});
+    }
 
-        html.find('[data-action=downgrade]').click(async ev => {
-            const dieSizes = game.heart.die_sizes;
-            const services = this.item.system.resistances;
-
-            const updates = {};
-
-            Object.keys(services).forEach(key => {
-                var service = services[key];
-                var indexOf = dieSizes.indexOf(service.die_size);
-                
-                if(indexOf > 0) {
-                    var smallerSize = dieSizes[indexOf-1];
-                    updates[`system.resistances.${key}.die_size`] = smallerSize;
-                }
-            });
-
-            this.item.update(updates);
-        });
-
-        html.find('[data-action=add-service]').click(ev => {
-            const id = foundry.utils.randomID();
-            this.item.update({[`system.resistances.${id}`]: {
-                die_size: 'd4',
-                resistance: 'blood'
-            }});
-        });
-
-        html.find('[data-action=delete-service]').click(ev => {
-            const target = $(ev.currentTarget);
-            const id = target.closest ('[data-id]').data('id');
-            this.item.update({[`system.resistances.-=${id}`]: null});
-        });
+    static _onDeleteService(event, target) {
+        event.preventDefault();
+        const id = target.closest('[data-id]').dataset.id;
+        this.document.update({[`system.resistances.-=${id}`]: null});
     }
 
     async _canDragDropItem(item) {
         if(item.type === 'service' && item.type === undefined) {
             await item.update({'system.type': 'core'});
         }
-        
+
         return ['service'].includes(item.type);
     }
 
     async _onDropItem(event, data) {
-
         return super._onDropItem(event, data);
     }
 }

@@ -4,16 +4,25 @@ import HeartActorSheet from '../base/sheet';
 import template from './template.json';
 
 export default class LandmarkSheet extends HeartActorSheet {
-    static get defaultOptions() {
-        const defaultOptions = super.defaultOptions;
-        return foundry.utils.mergeObject(defaultOptions, {
-            dragDrop: [{dragSelector: '.item', dropSelector: null}]
-        })
-    }
+    static DEFAULT_OPTIONS = {
+        dragDrop: [{dragSelector: '.item', dropSelector: null}],
+        actions: {
+            "toggle-checkable": LandmarkSheet._onToggleCheckable,
+            "add-child": LandmarkSheet._onAddChild,
+            upgrade: LandmarkSheet._onUpgrade,
+            downgrade: LandmarkSheet._onDowngrade,
+            "add-service": LandmarkSheet._onAddService,
+            "delete-service": LandmarkSheet._onDeleteService,
+            "service-roll": LandmarkSheet._onServiceRoll,
+        },
+    };
+
+    static PARTS = {
+        main: { template: sheetHTML.path, scrollable: [".heart.sheet"] },
+    };
 
     async _onDropItemCreate(itemData) {
-        if(this.actor.type === 'landmark') {
-
+        if (this.actor.type === 'landmark') {
             itemData.system.active = true;
         }
 
@@ -22,178 +31,155 @@ export default class LandmarkSheet extends HeartActorSheet {
 
     static get type() { return Object.keys(template.Actor)[0]; }
 
-    get template() {
-        return sheetHTML.path;
-    }
-
     get img() {
         return 'systems/heart/assets/monument.svg';
     }
 
-    
-    getData() {
-        const data = super.getData();
-        data.user = game.user;
-        data.showTextboxesBelowItems = game.settings.get('heart', 'showTextboxesBelowItems')
-        data.die_sizes = game.heart.die_sizes.reduce((map, die) => {
-            map[die] = game.i18n.format('heart.die_size.d(N)', { N: die.replace(/^d/, '') })
+    async _prepareContext(options) {
+        const context = await super._prepareContext(options);
+        context.showTextboxesBelowItems = game.settings.get('heart', 'showTextboxesBelowItems');
+        context.die_sizes = game.heart.die_sizes.reduce((map, die) => {
+            map[die] = game.i18n.format('heart.die_size.d(N)', { N: die.replace(/^d/, '') });
             return map;
         }, {});
-        data.resistances = game.heart.resistances.reduce((map, resistance) => {
-            map[resistance] = game.i18n.localize(`heart.resistance.${resistance}`)
+        context.resistances = game.heart.resistances.reduce((map, resistance) => {
+            map[resistance] = game.i18n.localize(`heart.resistance.${resistance}`);
             return map;
         }, {});
-        return data;
+        return context;
     }
 
-    activateListeners(html) {
-        super.activateListeners(html);
+    _onRender(context, options) {
+        super._onRender(context, options);
 
-        html.find('.ordered-checkable-box:not(.checked)').click(async ev => {
-            ev.preventDefault();
-            const element = ev.currentTarget;
-            const index = parseInt(element.dataset.index);
-            const parent = element.parentElement;
-            const target = parent.dataset.target;
-            const uuid = $(ev.currentTarget).closest('[data-item-id]').data('itemId');
-            const item = await fromUuid(uuid);
-
-            const data = {};
-            data[target] = index + 1;
-            item.update(data);
+        this.element.querySelectorAll('[name=service-selector-die]').forEach(el => {
+            el.addEventListener('change', async ev => {
+                const uuid = ev.currentTarget.closest('[data-item-id]').dataset.itemId;
+                const item = await fromUuid(uuid);
+                const id = ev.currentTarget.closest('[data-id]').dataset.id;
+                item.update({[`system.resistances.${id}`]: {
+                    die_size: ev.target.value
+                }});
+            });
         });
 
-        html.find('.ordered-checkable-box.checked').click(async ev => {
-            ev.preventDefault();
-            const element = ev.currentTarget;
-            const index = parseInt(element.dataset.index);
-            const parent = element.parentElement;
-            const target = parent.dataset.target;
-            const uuid = $(ev.currentTarget).closest('[data-item-id]').data('itemId');
-            const item = await fromUuid(uuid);
+        this.element.querySelectorAll('[name=service-selector-resistance]').forEach(el => {
+            el.addEventListener('change', async ev => {
+                const uuid = ev.currentTarget.closest('[data-item-id]').dataset.itemId;
+                const item = await fromUuid(uuid);
+                const id = ev.currentTarget.closest('[data-id]').dataset.id;
+                item.update({[`system.resistances.${id}`]: {
+                    resistance: ev.target.value
+                }});
+            });
+        });
+    }
 
-            const data = {};
-            if (index + 1 === foundry.utils.getProperty(item.data, target)) {
-                data[target] = index;
+    static async _onToggleCheckable(event, target) {
+        event.preventDefault();
+        const index = parseInt(target.dataset.index);
+        const parent = target.parentElement;
+        const targetPath = parent.dataset.target;
+        const uuid = target.closest('[data-item-id]').dataset.itemId;
+        const item = await fromUuid(uuid);
+        const isChecked = target.classList.contains('checked');
+        const data = {};
+        if (isChecked) {
+            if (index + 1 === foundry.utils.getProperty(item, targetPath)) {
+                data[targetPath] = index;
             } else {
-                data[target] = index + 1;
+                data[targetPath] = index + 1;
             }
-            item.update(data);
+        } else {
+            data[targetPath] = index + 1;
+        }
+        item.update(data);
+    }
+
+    static async _onAddChild(event, target) {
+        const documentName = target.dataset.documentName || 'Item';
+        const type = target.dataset.type;
+        const uuid = target.closest('[data-item-id]').dataset.itemId;
+        const item = await fromUuid(uuid);
+        const itemData = target.dataset.data ? JSON.parse(target.dataset.data) : {};
+
+        const data = { documentName, type: type, name: `New ${type}`, system: itemData };
+        item.addChildren([data]);
+    }
+
+    static async _onUpgrade(event, target) {
+        const uuid = target.closest('[data-item-id]').dataset.itemId;
+        const item = await fromUuid(uuid);
+        const dieSizes = game.heart.die_sizes;
+        const services = item.system.resistances;
+
+        const updates = {};
+        updates['system.upgradeTrack'] = 0;
+
+        Object.keys(services).forEach(key => {
+            var service = services[key];
+            var indexOf = dieSizes.indexOf(service.die_size);
+
+            if (indexOf < (dieSizes.length - 1)) {
+                var largerSize = dieSizes[indexOf + 1];
+                updates[`system.resistances.${key}.die_size`] = largerSize;
+            }
         });
 
-        html.find('[data-action=add-child][data-type]').click(async ev => {
-            const target = $(ev.currentTarget);
-            const documentName = target.data('document-name') || 'Item';
-            const type = target.data('type');
-            const uuid = $(ev.currentTarget).closest('[data-item-id]').data('itemId');
-            const item = await fromUuid(uuid);
-            let itemData = target.data('data') || {};
+        item.update(updates);
+    }
 
-            const data = {documentName, type: type, name: `New ${type}`, system: itemData };
-            item.addChildren([data]);
+    static async _onDowngrade(event, target) {
+        const uuid = target.closest('[data-item-id]').dataset.itemId;
+        const item = await fromUuid(uuid);
+        const dieSizes = game.heart.die_sizes;
+        const services = item.system.resistances;
+
+        const updates = {};
+
+        Object.keys(services).forEach(key => {
+            var service = services[key];
+            var indexOf = dieSizes.indexOf(service.die_size);
+
+            if (indexOf > 0) {
+                var smallerSize = dieSizes[indexOf - 1];
+                updates[`system.resistances.${key}.die_size`] = smallerSize;
+            }
         });
 
-        html.find('[data-action=upgrade]').click(async ev => {
-            const target = $(ev.currentTarget);
-            const uuid = target.closest('[data-item-id]').data('itemId');
-            const item = await fromUuid(uuid);
-            const dieSizes = game.heart.die_sizes;
-            const services = item.system.resistances;
-            
-            const updates = {};
-            updates['system.upgradeTrack'] = 0;
-            
-            Object.keys(services).forEach(key => {
-                var service = services[key];
-                var indexOf = dieSizes.indexOf(service.die_size);
-                
-                if(indexOf < (dieSizes.length - 1)) {
-                    var largerSize = dieSizes[indexOf+1];
-                    updates[`system.resistances.${key}.die_size`] = largerSize;
-                }
-            });
+        item.update(updates);
+    }
 
-            item.update(updates);
-        });
+    static async _onAddService(event, target) {
+        const id = foundry.utils.randomID();
+        const uuid = target.closest('[data-item-id]').dataset.itemId;
+        const item = await fromUuid(uuid);
+        item.update({[`system.resistances.${id}`]: {
+            die_size: 'd4',
+            resistance: 'blood'
+        }});
+    }
 
-        html.find('[data-action=downgrade]').click(async ev => {
-            const target = $(ev.currentTarget);
-            const uuid = target.closest('[data-item-id]').data('itemId');
-            const item = await fromUuid(uuid);
-            const dieSizes = game.heart.die_sizes;
-            const services = item.system.resistances;
+    static async _onDeleteService(event, target) {
+        const uuid = target.closest('[data-item-id]').dataset.itemId;
+        const item = await fromUuid(uuid);
+        const id = target.closest('[data-id]').dataset.id;
+        item.update({[`system.resistances.-=${id}`]: null});
+    }
 
-            const updates = {};
-            
-            Object.keys(services).forEach(key => {
-                var service = services[key];
-                var indexOf = dieSizes.indexOf(service.die_size);
-                
-                if(indexOf > 0) {
-                    var smallerSize = dieSizes[indexOf-1];
-                    updates[`system.resistances.${key}.die_size`] = smallerSize;
-                }
-            });
+    static async _onServiceRoll(event, target) {
+        const uuid = target.closest('[data-item-id]').dataset.itemId;
+        const hauntitem = await fromUuid(uuid);
+        const id = target.closest('[data-id]').dataset.id;
+        const service = hauntitem.system.resistances[id];
+        const item = {system: {die_size: service.die_size}};
 
-            item.update(updates);
-        });
+        const roll = game.heart.rolls.ItemRoll.build({item});
+        await roll.evaluate();
 
-        html.find('[data-action=add-service]').click(async ev => {
-            const target = $(ev.currentTarget);
-            const id = foundry.utils.randomID();
-            const uuid = target.closest('[data-item-id]').data('itemId');
-            const item = await fromUuid(uuid);
-            item.update({[`system.resistances.${id}`]: {
-                die_size: 'd4',
-                resistance: 'blood'
-            }});
-        });
-
-        html.find('[data-action=delete-service]').click(async ev => {
-            const target = $(ev.currentTarget);
-            const uuid = target.closest('[data-item-id]').data('itemId');
-            const item = await fromUuid(uuid);
-            const id = target.closest ('[data-id]').data('id');
-            item.update({[`system.resistances.-=${id}`]: null});
-        });
-
-        html.find('[name=service-selector-die]').change(async ev => {
-            const target = $(ev.currentTarget);
-            const uuid = target.closest('[data-item-id]').data('itemId');
-            const item = await fromUuid(uuid);
-            const id = target.closest ('[data-id]').data('id');
-            const val = ev.target.value;
-            item.update({[`system.resistances.${id}`]: {
-                die_size: val
-            }});
-        });
-
-        html.find('[name=service-selector-resistance]').change(async ev => {
-            const target = $(ev.currentTarget);
-            const uuid = target.closest('[data-item-id]').data('itemId');
-            const item = await fromUuid(uuid);
-            const id = target.closest ('[data-id]').data('id');
-            const val = ev.target.value;
-            item.update({[`system.resistances.${id}`]: {
-                resistance: val
-            }});
-        });
-
-        html.find('[data-action=service-roll]').click(async ev => {
-            const uuid = $(ev.currentTarget).closest('[data-item-id]').data('itemId');
-            const hauntitem = await fromUuid(uuid);
-            const target = $(ev.currentTarget);
-            const id = target.closest ('[data-id]').data('id');
-            const service = hauntitem.system.resistances[id];
-            const item = {system: {die_size:service.die_size}};
-
-            const roll = game.heart.rolls.ItemRoll.build({item});
-            await roll.evaluateSync();
-
-            roll.toMessage({
-                flavor: `${localizeHeart(hauntitem.name)} (<span class="item-type">${hauntitem.type}</span>)<div class="resistance-text">${localizeHeart(service.resistance)}</div>`,
-                speaker: {alias: "GM"}
-            });
+        roll.toMessage({
+            flavor: `${localizeHeart(hauntitem.name)} (<span class="item-type">${hauntitem.type}</span>)<div class="resistance-text">${localizeHeart(service.resistance)}</div>`,
+            speaker: {alias: "GM"}
         });
     }
 }

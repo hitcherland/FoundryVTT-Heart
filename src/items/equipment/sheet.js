@@ -21,9 +21,15 @@ const data = Object.freeze({
 export default class extends HeartItemSheet {
     static get type() { return data.type; }
 
-    get template() {
-        return data.template || sheetHTML.path;
-    }
+    static DEFAULT_OPTIONS = {
+        actions: {
+            "toggle-checkable": this._onToggleCheckable,
+        },
+    };
+
+    static PARTS = {
+        main: { template: data.template, scrollable: [".heart.sheet"] },
+    };
 
     get img() {
         return data.img;
@@ -39,43 +45,23 @@ export default class extends HeartItemSheet {
       return this.system.resistances;
     }
 
-    getData() {
-      const data = super.getData();
-      return data;
+    static _onToggleCheckable(event, target) {
+        event.preventDefault();
+        const parent = target.parentElement;
+        const fieldTarget = parent.dataset.target;
+        const value = parent.dataset.value;
+        const isChecked = target.classList.contains('checked');
+
+        let currentResistances = foundry.utils.getProperty(this.document, fieldTarget);
+        if (isChecked) {
+            currentResistances = currentResistances.filter(e => e !== value);
+        } else {
+            currentResistances.push(value);
+        }
+        let data = {};
+        data[fieldTarget] = currentResistances;
+        this.document.update(data);
     }
-
-    activateListeners(html) {
-        super.activateListeners(html);
-
-        html.find('.ordered-checkable-box:not(.checked)').click(ev => {
-          ev.preventDefault();
-          const element = ev.currentTarget;
-          const parent = element.parentElement;
-          const target = parent.dataset.target;
-          const value = parent.dataset.value;
-
-          let currentResistances = foundry.utils.getProperty(this.item, target)
-          currentResistances.push(value)
-          let data = {}
-          data[target] = currentResistances
-          this.item.update(data)
-        });
-
-        html.find('.ordered-checkable-box.checked').click(ev => {
-            ev.preventDefault();
-            const element = ev.currentTarget;
-            const parent = element.parentElement;
-            const target = parent.dataset.target;
-            const value = parent.dataset.value;
-
-            let newResistances = foundry.utils.getProperty(this.item, target).filter(e => e !== value)
-            let data = {}
-            data[target] = newResistances
-            this.item.update(data)
-        });
-
-    }
-
 }
 
 export {

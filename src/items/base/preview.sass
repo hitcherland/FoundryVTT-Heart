@@ -1,3 +1,5 @@
+@use '../../util'
+
 .item.preview
     position: relative
     border: 1px solid rgba(99, 0, 0, 0.4)
@@ -14,9 +16,14 @@
 
     h1, h2, h3, h4
         font-family: 'MelmaCracked'
-        color: black
-        
+        color: util.$black
+
         .right
             float: right
             font-family: Alegreya
             font-size: 0.8em
+
+    .service-header
+        display: flex
+        justify-content: space-between
+        align-items: center

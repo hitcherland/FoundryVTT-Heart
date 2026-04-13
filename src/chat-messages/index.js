@@ -115,8 +115,8 @@ class HeartChatMessage extends ChatMessage {
         return this.setFlag('heart', 'show-clear-stress-button', value);
     }
 
-    async getHTML() {
-        const html = await super.getHTML();
+    async renderHTML() {
+        const el = await super.renderHTML();
 
         if (this.isRoll && this.isContentVisible) {
             const content = await this.rolls[0].render({
@@ -126,9 +126,12 @@ class HeartChatMessage extends ChatMessage {
                 showFalloutRollButton: this.showFalloutRollButton,
                 showClearStressButton: this.showClearStressButton,
             });
-            html.find('.message-content').find('.dice-roll').html(
-                $(content).children()
-            );
+            const diceRoll = el.querySelector('.message-content .dice-roll');
+            if (diceRoll) {
+                const temp = document.createElement('div');
+                temp.innerHTML = content;
+                diceRoll.replaceChildren(...temp.children);
+            }
 
             if (this.stressRoll && this.stressRoll !== this.rolls[0]) {
                 const stressContent = await this.stressRoll.render({
@@ -137,9 +140,10 @@ class HeartChatMessage extends ChatMessage {
                     showFalloutRollButton: this.showFalloutRollButton,
                     showClearStressButton: this.showClearStressButton,
                 });
-                html.append(
-                    $('<div class="message-content"></div>').append(stressContent)
-                );
+                const stressDiv = document.createElement('div');
+                stressDiv.classList.add('message-content');
+                stressDiv.innerHTML = stressContent;
+                el.appendChild(stressDiv);
             }
 
             if (this.falloutRoll && this.falloutRoll !== this.rolls[0]) {
@@ -147,24 +151,29 @@ class HeartChatMessage extends ChatMessage {
                     isPrivate: false,
                     showClearStressButton: this.showClearStressButton,
                 });
-                html.append(
-                    $('<div class="message-content"></div>').append(falloutContent)
-                );
+                const falloutDiv = document.createElement('div');
+                falloutDiv.classList.add('message-content');
+                falloutDiv.innerHTML = falloutContent;
+                el.appendChild(falloutDiv);
             }
         }
 
         if(this.isRollRequest) {
             const data = this.getFlag('heart', 'roll-request');
-            const content = await renderTemplate('heart:applications/prepare-roll-request/chat-message.html', data);
-            html.append(content)
+            const content = await foundry.applications.handlebars.renderTemplate('heart:applications/prepare-roll-request/chat-message.html', data);
+            const temp = document.createElement('div');
+            temp.innerHTML = content;
+            while (temp.firstChild) {
+                el.appendChild(temp.firstChild);
+            }
         }
 
-        return html;
+        return el;
     }
 }
 
 // applied to chat messages to allow dragging of previewed items
-const dragDrop = new DragDrop({
+const dragDrop = new (foundry.applications.ux.DragDrop.implementation)({
     dragSelector: ".item",
     dropSelector: null,
     permissions: { dragstart: true, drop: false },
@@ -181,52 +190,66 @@ async function _onDragStart(event) {
 }
 
 function activateListeners(html) {
+    // Handle both jQuery and HTMLElement (V13 compatibility)
+    const el = html instanceof HTMLElement ? html : html[0] || html;
 
-    html.on('click', 'form button', ev => {
-        ev.preventDefault();
+    el.addEventListener('click', (ev) => {
+        // Prevent default on form buttons
+        if (ev.target.closest('form button')) {
+            ev.preventDefault();
+        }
     });
 
-    html.on('click', 'form.roll-request [data-action=roll][data-character]', async (ev) => {
-        const button = $(ev.currentTarget);
-        const {
-            character
-        } = button.data();
-
-        const form = button.closest('form.roll-request');
-        const data = new FormData(form.get(0));
-
-        const roll = await game.heart.rolls.HeartRoll.build({
-            character: character,
-            difficulty: data.get('difficulty'),
-            skill: data.get('skill'),
-            domain: data.get('domain'),
-            mastery: data.get('mastery') === "on",
-            helpers: data.getAll('helper'),
-        });
-
-        roll.toMessage({speaker: { actor: character }});
+    // Toggle dice tooltip when clicking the dice formula in heart roll cards
+    el.addEventListener('click', (ev) => {
+        const formula = ev.target.closest('.heart .dice-formula');
+        if (!formula) return;
+        const tooltip = formula.closest('.dice-result')?.querySelector('.dice-tooltip');
+        if (!tooltip) return;
+        tooltip.style.display = tooltip.style.display === 'none' ? '' : 'none';
     });
 
-    html.find('[data-item-id] [data-action=view]').click(async ev => {
-        const target = $(ev.currentTarget);
-        const uuid = target.closest('[data-item-id]').data('itemId');
-        const item = await fromUuid(uuid);
-        item.sheet.render(true);
+    el.addEventListener('click', async (ev) => {
+        const rollButton = ev.target.closest('form.roll-request [data-action=roll][data-character]');
+        if (rollButton) {
+            ev.preventDefault();
+            const character = rollButton.dataset.character;
+            const form = rollButton.closest('form.roll-request');
+            const data = new FormData(form);
+
+            const roll = await game.heart.rolls.HeartRoll.build({
+                character: character,
+                difficulty: data.get('difficulty'),
+                skill: data.get('skill'),
+                domain: data.get('domain'),
+                mastery: data.get('mastery') === "on",
+                helpers: data.getAll('helper'),
+            });
+
+            roll.toMessage({speaker: { actor: character }});
+        }
+
+        const viewButton = ev.target.closest('[data-item-id] [data-action=view]');
+        if (viewButton) {
+            ev.preventDefault();
+            const uuid = viewButton.closest('[data-item-id]').dataset.itemId;
+            const item = await fromUuid(uuid);
+            item.sheet.render(true);
+        }
     });
 
-    dragDrop.bind(html.get(0));
+    dragDrop.bind(el);
 }
 
-// overridden to allow replacing "content anchors" with previews
-class HeartTextEditor extends TextEditor {
-    static async _createContentLink(match, {
-        relativeTo
-    } = {}) {
-        const [type, target, hash, name] = match.slice(1, 5);
-        const doc = await fromUuid(target);
-        if (doc && doc.documentName === "Item") {
-            const data = await doc.sheet.getData();
-            const innerHTML = Handlebars.partials[`heart:items/${doc.type}/preview.html`](data, {
+// Custom enricher to replace Item content links with rich previews
+async function _enrichItemPreview(match, options) {
+    const uuid = match[1];
+    const doc = await fromUuid(uuid);
+    if (doc && doc.documentName === "Item") {
+        const context = await doc.sheet._prepareContext({});
+        const partialName = `heart:items/${doc.type}/preview.html`;
+        if (Handlebars.partials[partialName]) {
+            const innerHTML = Handlebars.partials[partialName](context, {
                 allowedProtoProperties: {
                     uuid: true,
                     childrenTypes: true,
@@ -238,16 +261,20 @@ class HeartTextEditor extends TextEditor {
             div.classList.add('heart', 'sheet');
             return div;
         }
-        return super._createContentLink(match, {
-            relativeTo
-        });
     }
+    return null;
 }
 
 export function initialise() {
     console.log('heart | Registering ChatMessage');
     CONFIG.ChatMessage.documentClass = HeartChatMessage;
-    TextEditor = HeartTextEditor;
+
+    // Register custom enricher for Item content links (V13-compatible replacement
+    // for the old TextEditor.implementation override)
+    CONFIG.TextEditor.enrichers.push({
+        pattern: /@UUID\[([^\]]+)\]/g,
+        enricher: _enrichItemPreview,
+    });
 
     Hooks.once('renderChatLog', (app, html, data) => activateListeners(html));
     Hooks.once('renderChatPopout', (app, html, data) => activateListeners(html));

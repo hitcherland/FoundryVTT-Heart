@@ -7,11 +7,11 @@ console.log(process.argv);
 version = process.argv[2] || "???";
 manifest.version = version;
 
-// Required 
+// Required
 manifest.id = config.id;
 manifest.title = config.title;
 manifest.description = config.description;
-manifest.author = config.author;
+manifest.authors = config.authors;
 manifest.compatibility = config.compatibility;
 
 // Optional

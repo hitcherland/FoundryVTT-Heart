@@ -23,7 +23,7 @@ input.toggle-display
 
 .toggle-button
     font-family: 'MelmaCracked'
-    color: black
+    color: util.$black
     font-size: 1.5em
     text-align: center
     display: flex
@@ -52,7 +52,7 @@ input.toggle-display
 
         .dice-formula
             background: util.$black
-            color: white
+            color: util.$white
 
         .dice
             .part-header
@@ -80,11 +80,22 @@ input.toggle-display
 
 .heart
     font-family: 'Alegreya', serif
+    color: util.$black
 
-    input
+    input, select, textarea
         font-family: inherit
+        background: transparent
+        color: inherit
+        border: none
 
-    button
+    select
+        background: util.$white
+        color: util.$black
+        border: 1px solid rgba(99, 0, 0, 0.5)
+        border-radius: 3px
+        padding: 0.2em 0.4em
+
+    button:not(.header-control)
         font-family: 'Alegreya'
         background: util.$red
         color: util.$white
@@ -124,41 +135,74 @@ input.toggle-display
             background-size: $size - 2px $size - 2px
             background-position: center
             background-repeat: no-repeat
+            box-shadow: inset 0 0 0 1px util.$white
 
-    input[type=checkbox]
+        &.invert
+            &::after, &.checked::after
+                border-color: util.$white
+            &.checked::after
+                background-image: linear-gradient(90deg, util.$white 0%, util.$white 100%)
+                box-shadow: none
+
+    input.hidden[type=checkbox]:checked + label.ordered-checkable-box
         $size: 14px
-        flex: $size 0 0
-        appearance: none
-        display: inline-block
-        width: $size
-        height: $size
-        border: 3px solid util.$black
-        margin: 0 2px
-        box-sizing: content-box
-
-        &:disabled:checked
-            background-image: linear-gradient(90deg, util.$disabled-and-checked 0%, util.$disabled-and-checked 100%)
-            background-size: $size - 2px $size - 2px
-            background-position: center
-            background-repeat: no-repeat
-
-        &:checked
+        &::after
             background-image: linear-gradient(90deg, util.$black 0%, util.$black 100%)
             background-size: $size - 2px $size - 2px
             background-position: center
             background-repeat: no-repeat
+            box-shadow: inset 0 0 0 1px util.$white
 
-        &:disabled
-            background-image: linear-gradient(90deg, util.$disabled 0%, util.$disabled 100%)
+    input.hidden[type=checkbox]:checked + label.ordered-checkable-box.invert
+        &::after
+            background-image: linear-gradient(90deg, util.$white 0%, util.$white 100%)
+            box-shadow: none
+
+    input[type=checkbox]
+        $size: 14px
+        flex: $size 0 0
+        appearance: none !important
+        -webkit-appearance: none !important
+        display: inline-block
+        width: $size
+        height: $size
+        border: 3px solid util.$black
+        background-color: transparent !important
+        background-image: none !important
+        box-shadow: none !important
+        margin: 0 2px
+        box-sizing: content-box
+
+        &:disabled:checked
+            background-color: transparent !important
+            background-image: linear-gradient(90deg, util.$disabled-and-checked 0%, util.$disabled-and-checked 100%) !important
             background-size: $size - 2px $size - 2px
             background-position: center
             background-repeat: no-repeat
+            box-shadow: inset 0 0 0 1px util.$white !important
+
+        &:checked
+            background-color: transparent !important
+            background-image: linear-gradient(90deg, util.$black 0%, util.$black 100%) !important
+            background-size: $size - 2px $size - 2px
+            background-position: center
+            background-repeat: no-repeat
+            box-shadow: inset 0 0 0 1px util.$white !important
+
+        &:disabled
+            background-color: transparent !important
+            background-image: linear-gradient(90deg, util.$disabled 0%, util.$disabled 100%) !important
+            background-size: $size - 2px $size - 2px
+            background-position: center
+            background-repeat: no-repeat
+            box-shadow: inset 0 0 0 1px util.$white !important
             cursor: not-allowed
 
         &.invert
             border-color: util.$white
             &:checked
-                background-image: linear-gradient(90deg, util.$white 0%, util.$white 100%)
+                background-image: linear-gradient(90deg, util.$white 0%, util.$white 100%) !important
+                box-shadow: none !important
 
     .red
         .ordered-checkable-box
@@ -168,11 +212,40 @@ input.toggle-display
             &.checked::after
                 background-image: linear-gradient(90deg, util.$red 0%, util.$red 100%)
 
+// V1 app wrapper
 .window-app .window-content
     padding: 0
 
     & > *
         padding: 8px
+
+// V2 app wrapper
+.application .window-body
+    padding: 0
+
+    & > *
+        padding: 8px
+        display: flex
+        flex-direction: column
+
+    & > .heart.sheet
+        overflow: hidden
+
+// Minimum window size + higher-specificity checkbox overrides for Foundry v13
+// .application.heart beats .application used by core Foundry checkbox styles
+.application.heart
+    input[type=checkbox]
+        background-color: transparent !important
+        background-image: none !important
+
+        &:disabled:checked
+            background-image: linear-gradient(90deg, util.$disabled-and-checked 0%, util.$disabled-and-checked 100%) !important
+
+        &:checked
+            background-image: linear-gradient(90deg, util.$black 0%, util.$black 100%) !important
+
+        &:disabled
+            background-image: linear-gradient(90deg, util.$disabled 0%, util.$disabled 100%) !important
 
 .grid-2
     display: grid

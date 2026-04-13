@@ -13,99 +13,103 @@ const data = Object.freeze({
 export default class extends HeartItemSheet {
     static get type() { return data.type; }
 
-    get template() {
-        return data.template;
-    }
+    static DEFAULT_OPTIONS = {
+        actions: {
+            "add-equipment-group": this._onAddEquipmentGroup,
+            "delete-equipment-group": this._onDeleteEquipmentGroup,
+            "activate-group": this._onActivateGroup,
+            "deactivate-group": this._onDeactivateGroup,
+        },
+    };
+
+    static PARTS = {
+        main: { template: data.template, scrollable: [".heart.sheet"] },
+    };
 
     get img() {
         return data.img;
     }
 
-    getData() {
-        const data = super.getData();        
-        data.coreAbilities = this.item.children.filter(x => x.type === 'ability' && x.system.type === 'core');
-        data.minorAbilities = this.item.children.filter(x => x.type === 'ability' && x.system.type === 'minor');
-        data.majorAbilities = this.item.children.filter(x => x.type === 'ability' && x.system.type === 'major');
-        data.zenithAbilities = this.item.children.filter(x => x.type === 'ability' && x.system.type === 'zenith');
-        return data;
+    async _prepareContext(options) {
+        const context = await super._prepareContext(options);
+        context.coreAbilities = this.document.children.filter(x => x.type === 'ability' && x.system.type === 'core');
+        context.minorAbilities = this.document.children.filter(x => x.type === 'ability' && x.system.type === 'minor');
+        context.majorAbilities = this.document.children.filter(x => x.type === 'ability' && x.system.type === 'major');
+        context.zenithAbilities = this.document.children.filter(x => x.type === 'ability' && x.system.type === 'zenith');
+        return context;
     }
 
-    activateListeners(html) {
-        super.activateListeners(html);
+    static _onAddEquipmentGroup(event, target) {
+        event.preventDefault();
+        const id = foundry.utils.randomID();
+        const groups = this.document.system.equipment_groups || [];
+        groups.push(id);
+        return this.document.update({'system.equipment_groups': groups});
+    }
 
-        html.find('[data-action=add-equipment-group]').click(ev => {
-            const id = foundry.utils.randomID();
-            const groups = this.item.system.equipment_groups || [];
-            groups.push(id);
-            return this.item.update({'system.equipment_groups': groups});
-        });
+    static async _onDeleteEquipmentGroup(event, target) {
+        event.preventDefault();
+        const groupId = target.closest('[data-group-id]').dataset.groupId;
+        const groups = this.document.system.equipment_groups.filter(x => x !== groupId);
 
-        html.find('[data-group-id] [data-action=delete-equipment-group]').click(async ev => {
-            const target = $(ev.currentTarget);
-            const groupId = target.closest('[data-group-id]').data('groupId');
-            const groups = this.item.system.equipment_groups.filter(x => x !== groupId);
-
-            const ids = this.item.children.filter(x => x.type === 'equipment' && x.system.group === groupId).map(item => item.id);
-            Dialog.confirm({
-              title: 'Confirm Deletion',
-              content: 'Are you sure you want to delete this equipment group? It cannot be recovered.',
-              yes: () => {
-                this.item.deleteChildren(ids);
+        const ids = this.document.children.filter(x => x.type === 'equipment' && x.system.group === groupId).map(item => item.id);
+        foundry.applications.api.DialogV2.confirm({
+            window: { title: 'Confirm Deletion' },
+            content: 'Are you sure you want to delete this equipment group? It cannot be recovered.',
+            yes: { callback: () => {
+                this.document.deleteChildren(ids);
                 this.render();
-                return this.item.update({'system.equipment_groups': groups});
-              }
-            });
-
+                return this.document.update({'system.equipment_groups': groups});
+            }}
         });
+    }
 
-        html.find('[data-group-id] [data-action=activate-group]').click(async ev => {
-            const target = $(ev.currentTarget);
-            const groupId = target.closest('[data-group-id]').data('groupId');
-            const activeGroupId = this.item.system.active_equipment_group;
-            
-            const childrenUpdates = {};
+    static async _onActivateGroup(event, target) {
+        event.preventDefault();
+        const groupId = target.closest('[data-group-id]').dataset.groupId;
 
-            const previousEquipmentGroups = [...this.item.system.active_equipment_groups];
-            let activeEquipmentGroups = this.item.system.active_equipment_groups;
-            if (groupId === "core" && activeEquipmentGroups.find(g => g === "core") === undefined) {
-                activeEquipmentGroups.push('core');
+        const childrenUpdates = {};
+
+        const previousEquipmentGroups = [...this.document.system.active_equipment_groups];
+        let activeEquipmentGroups = this.document.system.active_equipment_groups;
+        if (groupId === "core" && activeEquipmentGroups.find(g => g === "core") === undefined) {
+            activeEquipmentGroups.push('core');
+        }
+
+        if (groupId !== "core" && activeEquipmentGroups.find(g => g === groupId) === undefined) {
+            activeEquipmentGroups = activeEquipmentGroups.filter(g => g === "core");
+            activeEquipmentGroups.push(groupId);
+        }
+
+        await this.document.update({'system.active_equipment_groups': activeEquipmentGroups});
+
+        this.document.children.filter(x => x.type === 'equipment').forEach(async child => {
+            if(previousEquipmentGroups.includes(child.system.group) && !activeEquipmentGroups.includes(child.system.group)) {
+                childrenUpdates[`${child.id}.system.active`] = false;
             }
 
-            if (groupId !== "core" && activeEquipmentGroups.find(g => g === groupId) === undefined) {
-                activeEquipmentGroups = activeEquipmentGroups.filter(g => g === "core");
-                activeEquipmentGroups.push(groupId);
+            if(activeEquipmentGroups.includes(child.system.group)) {
+                childrenUpdates[`${child.id}.system.active`] = true;
             }
-
-            await this.item.update({'system.active_equipment_groups': activeEquipmentGroups});
-
-            this.item.children.filter(x => x.type === 'equipment').forEach(async child => {
-                if(previousEquipmentGroups.includes(child.system.group) && !activeEquipmentGroups.includes(child.system.group)) {
-                    childrenUpdates[`${child.id}.system.active`] = false;
-                }
-
-                if(activeEquipmentGroups.includes(child.system.group)) {
-                    childrenUpdates[`${child.id}.system.active`] = true;
-                }
-            });
-
-            await this.item.updateChildren(childrenUpdates);
         });
 
-        html.find('[data-group-id] [data-action=deactivate-group]').click(async ev => {
-            const target = $(ev.currentTarget);
-            const groupId = target.closest('[data-group-id]').data('groupId');
+        await this.document.updateChildren(childrenUpdates);
+    }
 
-            const childrenUpdates = {};
-            this.item.children.filter(x => x.type === 'equipment').forEach(async child => {
-                if(child.system.group === groupId) {
-                    childrenUpdates[`${child.id}.system.active`] = false;
-                }
-            });
+    static async _onDeactivateGroup(event, target) {
+        event.preventDefault();
+        const groupId = target.closest('[data-group-id]').dataset.groupId;
 
-            await this.item.updateChildren(childrenUpdates);
-            const activeEquipmentGroups = this.item.system.active_equipment_groups.filter(g => g !== groupId);
-            await this.item.update({'system.active_equipment_groups': activeEquipmentGroups});
+        const childrenUpdates = {};
+        this.document.children.filter(x => x.type === 'equipment').forEach(async child => {
+            if(child.system.group === groupId) {
+                childrenUpdates[`${child.id}.system.active`] = false;
+            }
         });
+
+        await this.document.updateChildren(childrenUpdates);
+        const activeEquipmentGroups = this.document.system.active_equipment_groups.filter(g => g !== groupId);
+        await this.document.update({'system.active_equipment_groups': activeEquipmentGroups});
     }
 
     async _canDragDropItem(item) {

@@ -28,16 +28,18 @@
         <div class="item-list">
             {{#each item.system.resistances as |service id|}}
                 <div data-id="{{id}}">
-                    <a data-action="service-roll"><span class="fas fa-dice"></span></a>
+                    <div class="service-header">
+                        <a data-action="service-roll"><span class="fas fa-dice"></span></a>
+                        {{#if ../showDelete}}
+                        <a class="action" data-action="delete-service"><span class="fas fa-trash"></span></a>
+                        {{/if}}
+                    </div>
                     <select name="service-selector-die">
                         {{selectOptions ../die_sizes selected=service.die_size}}
                     </select>
                     <select name="service-selector-resistance">
                         {{selectOptions ../resistances selected=service.resistance}}
                     </select>
-                    {{#if ../showDelete}}
-                    <a class="action right" data-action="delete-service"><span class="fas fa-trash"></span></a>
-                    {{/if}}
                 </div>
             {{/each}}
         </div>

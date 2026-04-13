@@ -1,10 +1,7 @@
-import sheetHTML from './sheet.html';
-
 export default function HeartSheetMixin(baseClass) {
     return class extends baseClass {
-        get template() {
-            return sheetHTML.path;
-        }
+        static MIN_WIDTH = 300;
+        static MIN_HEIGHT = 150;
 
         get default_img() {
             return CONST.DEFAULT_TOKEN;
@@ -15,28 +12,37 @@ export default function HeartSheetMixin(baseClass) {
         }
 
         get title() {
-            const key = 'heart.' + super.title;
+            const key = 'heart.' + this.document.name;
             const resp = game.i18n.localize(key);
             if (resp == key) {
-                return super.title;
+                return this.document.name;
             } else {
                 return resp;
             }
         }
 
-        getData() {
-            const data = super.getData();
-            // Check for data type and assign default img where appropriate
-            if (data.actor && (data.actor.img === this.default_img)) {
-                data.actor.img = this.img;
+        setPosition(position = {}) {
+            const minWidth = this.constructor.MIN_WIDTH;
+            const minHeight = this.constructor.MIN_HEIGHT;
+            if (typeof position.width === 'number')
+                position = { ...position, width: Math.max(position.width, minWidth) };
+            if (typeof position.height === 'number')
+                position = { ...position, height: Math.max(position.height, minHeight) };
+            return super.setPosition(position);
+        }
+
+        async _prepareContext(options) {
+            const context = await super._prepareContext(options);
+            if (context.actor && (context.actor.img === this.default_img)) {
+                context.actor.img = this.img;
             }
-            else if (data.item) {
-                data.item.img = this.img;
+            else if (context.item) {
+                context.item.img = this.img;
             }
             else {
-                data.img = this.img;
+                context.img = this.img;
             }
-            return data;
+            return context;
         }
     };
 }

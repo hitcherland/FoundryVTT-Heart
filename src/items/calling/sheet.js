@@ -13,53 +13,56 @@ const data = Object.freeze({
 export default class extends HeartItemSheet {
     static get type() { return data.type; }
 
-    get template() {
-        return data.template;
-    }
+    static DEFAULT_OPTIONS = {
+        actions: {
+            "add-question": this._onAddQuestion,
+            "delete-question": this._onDeleteQuestion,
+        },
+    };
+
+    static PARTS = {
+        main: { template: data.template, scrollable: [".heart.sheet"] },
+    };
 
     get img() {
         return data.img;
     }
 
-    getData() {
-        const data = super.getData();
-        data.minorBeats = this.item.children.filter(x => x.type === 'beat' && x.system.type === 'minor');
-        data.majorBeats = this.item.children.filter(x => x.type === 'beat' && x.system.type === 'major');
-        data.zenithBeats = this.item.children.filter(x => x.type === 'beat' && x.system.type === 'zenith');
-        return data;
+    async _prepareContext(options) {
+        const context = await super._prepareContext(options);
+        context.minorBeats = this.document.children.filter(x => x.type === 'beat' && x.system.type === 'minor');
+        context.majorBeats = this.document.children.filter(x => x.type === 'beat' && x.system.type === 'major');
+        context.zenithBeats = this.document.children.filter(x => x.type === 'beat' && x.system.type === 'zenith');
+        return context;
     }
 
-    activateListeners(html) {
-        super.activateListeners(html);
+    static _onAddQuestion(event, target) {
+        event.preventDefault();
+        const id = foundry.utils.randomID();
+        this.document.update({[`system.questions.${id}`]: {
+            question: '',
+            answer: ''
+        }});
+    }
 
-        html.find('[data-action=add-question]').click(ev => {
-            const id = foundry.utils.randomID();
-            this.item.update({[`system.questions.${id}`]: {
-                question: '',
-                answer: ''
-            }});
-        });
-
-        html.find('[data-action=delete-question]').click(ev => {
-            const target = $(ev.currentTarget);
-            const id = target.closest ('[data-id]').data('id');
-            this.item.update({[`system.questions.-=${id}`]: null});
-        });
+    static _onDeleteQuestion(event, target) {
+        event.preventDefault();
+        const id = target.closest('[data-id]').dataset.id;
+        this.document.update({[`system.questions.-=${id}`]: null});
     }
 
     async _canDragDropItem(item) {
-        if(item.type === 'ability' && item.type === undefined) {
+        if (item.type === 'ability' && item.type === undefined) {
             await item.update({'system.type': 'core'});
         }
-        
-        if(item.type === 'beat' && item.type === undefined) {
+
+        if (item.type === 'beat' && item.type === undefined) {
             await item.update({'system.type': 'minor'});
         }
         return ['ability', 'beat'].includes(item.type);
     }
 
     async _onDropItem(event, data) {
-
         return super._onDropItem(event, data);
     }
 }

@@ -23,7 +23,7 @@
 
         .dice-formula
             background: util.$black
-            color: white
+            color: util.$white
             font-size: 1.2em
             padding: 0.2em
     
@@ -44,6 +44,7 @@
     h1
         border: 0
         text-align: center
+        color: util.$white
         
     button
         background: util.$bg-for-red
@@ -57,11 +58,12 @@
 
 .chat-message .roll-request
     background: util.$black
+    color: util.$white
     padding: 1em
     border-radius: 0.5em
     font-size: 1.1em
 
-    label
+    label:not(.ordered-checkable-box)
         display: flex
         align-items: center
         justify-items: end

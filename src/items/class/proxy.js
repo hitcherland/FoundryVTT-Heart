@@ -7,7 +7,7 @@ export default {
                     const skill = item.system.core_skill;
                     const skill_effect = new ActiveEffect({
                         _id: foundry.utils.randomID(),
-                        label: "Core Skill from Class",
+                        name: "Core Skill from Class",
                         changes: [{
                             key: `system.skills.${skill}.value`,
                             value: true,
@@ -17,11 +17,11 @@ export default {
                         }]
                     }, this);
 
-                    
+
                     const domain = item.system.core_domain;
                     const domain_effect = new ActiveEffect({
                         _id: foundry.utils.randomID(),
-                        label: "Core Domain from Class",
+                        name: "Core Domain from Class",
                         changes: [{
                             key: `system.domains.${domain}.value`,
                             value: true,

@@ -43,7 +43,10 @@
     {{/if}}
 
     <label class="title-font">{{localizeHeart "mastery" "short"}}</label>
-    <input class="invert" type="checkbox" name="mastery"/>
+    {{#with (randomID) as |id|}}
+    <input class="hidden" type="checkbox" name="mastery" id="{{id}}"/>
+    <label for="{{id}}" class="ordered-checkable-box invert"></label>
+    {{/with}}
 
     <label class="title-font">{{localizeHeart "help"}}</label>
     {{#if validHelpers}}

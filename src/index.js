@@ -78,15 +78,6 @@ function registerSettings() {
 }
 
 function initialise() {
-    const _compendium_opts = Compendium.defaultOptions;
-    _compendium_opts.template = 'heart:' + _compendium_opts.template;
-
-    Object.defineProperty(Compendium, 'defaultOptions', {
-        'get': function () {
-            return _compendium_opts;
-        }
-    });
-
     activateTemplates();
 
     game.heart = {
@@ -108,7 +99,8 @@ function initialise() {
     Handlebars.registerHelper('ordered-checkable', function (value, max) {
         let output = '';
         for (let i = 0; i < max; i++) {
-            output += `<a data-index="${i}" class="ordered-checkable-box${i < value ? ' checked' : ''}"></a>`;
+            const isChecked = i < value;
+            output += `<a data-action="toggle-checkable" data-index="${i}" class="ordered-checkable-box${isChecked ? ' checked' : ''}"></a>`;
         }
         return output;
     });
@@ -141,6 +133,15 @@ function initialise() {
 
     Handlebars.registerHelper('randomID', function () {
         return foundry.utils.randomID();
+    });
+
+    Handlebars.registerHelper('stripHTML', function (html) {
+        if (!html) return '';
+        return String(html)
+            .replace(/<\/p>\s*<p>/gi, '\n')
+            .replace(/<br\s*\/?>/gi, '\n')
+            .replace(/<[^>]*>/g, '')
+            .trim();
     });
 
     Handlebars.registerHelper('numEq', function (a, b) {
@@ -206,35 +207,38 @@ Hooks.once('init', initialise);
 
 Hooks.once('ready', function () {
     registerSettings();
-    new Promise(async function () {
+    (async function () {
         if (game.settings.get('heart', 'showStartupMessage')) {
-            let d = new Dialog({
-                title: game.i18n.format("heart.dialog.title(VERSION)", { VERSION: game.system.version }),
-                content: await renderTemplate('heart:templates/startup.html', { versions: Object.values(game.i18n.translations.heart.versions).sort((a, b) => a.version > b.version ? -1 : 1), version: game.system.version }),
-                buttons: {
-                    close: {
-                        icon: '<i class="fas fa-times"></i>',
+            const content = await foundry.applications.handlebars.renderTemplate('heart:templates/startup.html', { versions: Object.values(game.i18n.translations.heart.versions).sort((a, b) => a.version > b.version ? -1 : 1), version: game.system.version });
+            const result = await foundry.applications.api.DialogV2.wait({
+                window: {
+                    title: game.i18n.format("heart.dialog.title(VERSION)", { VERSION: game.system.version }),
+                },
+                content: content,
+                buttons: [
+                    {
+                        action: "close",
+                        icon: "fas fa-times",
                         label: game.i18n.localize("heart.dialog.skip"),
-                        callback: () => { }
                     },
-                    prevent: {
-                        icon: '<i class="fas fa-check"></i>',
+                    {
+                        action: "prevent",
+                        icon: "fas fa-check",
                         label: game.i18n.localize("heart.dialog.dont-show-again"),
-                        callback: () => game.settings.set('heart', 'showStartupMessage', false)
                     }
+                ],
+                render: (event, html) => {
+                    const el = html instanceof HTMLElement ? html : html[0] || html;
+                    const tabs = new (foundry.applications.ux.Tabs)({ navSelector: ".tabs", contentSelector: ".content", initial: `v${game.system.version}` });
+                    tabs.bind(el);
                 },
-                default: "skip",
-                render: html => {
-                    const tabs = new Tabs({ navSelector: ".tabs", contentSelector: ".content", initial: `v${game.system.version}` });
-                    tabs.bind(html[0]);
-                },
-                close: html => { }
             });
-            d.render(true);
+            if (result === "prevent") {
+                game.settings.set('heart', 'showStartupMessage', false);
+            }
         }
-    });
+    })();
 });
-
 
 
 Hooks.on('preCreateItem', function(document, data, options, userId) {
@@ -270,7 +274,9 @@ if (module.hot) {
 
         if (ui.chat !== undefined) {
             ui.chat._lastId = null;
-            ui.chat.element.find('#chat-log').html("");
+            const chatEl = ui.chat.element instanceof HTMLElement ? ui.chat.element : ui.chat.element[0];
+            const chatLog = chatEl.querySelector('#chat-log');
+            if (chatLog) chatLog.innerHTML = "";
             ui.chat._renderBatch(ui.chat.element, CONFIG.ChatMessage.batchSize)
         }
     })()

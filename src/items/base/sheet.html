@@ -18,14 +18,14 @@
             <label>
                 {{localizeHeart "base" "is-active"}}
             </label>
-            <input type="checkbox" value="system.active" {{checked system.active}}/>
+            <a data-action="toggle-boolean" data-path="system.active" class="ordered-checkable-box{{#if system.active}} checked{{/if}}"></a>
         {{/if}}
 
         {{#if (not (undef system.complete))}}
             <label>
                 {{localizeHeart "base" "is-complete"}}
             </label>
-            <input type="checkbox" value="system.complete" {{checked system.complete}}/>
+            <a data-action="toggle-boolean" data-path="system.complete" class="ordered-checkable-box{{#if system.complete}} checked{{/if}}"></a>
         {{/if}}
 
         {{#if (eq type "beat")}}
@@ -55,7 +55,7 @@
     {{/if}}
     </div>
 
-    {{editor (localizeHeart system.description) target="system.description" button=true editable=editable owner=owner}}
+    <textarea name="system.description" {{#unless editable}}disabled{{/unless}}>{{stripHTML system.description}}</textarea>
         
     {{> @partial-block }}
 {{/ "heart:common/sheet.html" }}

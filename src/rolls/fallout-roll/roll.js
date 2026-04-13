@@ -1,4 +1,5 @@
 import chatTemplateHTML from './roll.html';
+import tooltipTemplateHTML from '../heart-roll/tooltip.html';
 import './roll.sass';
 
 const fallout_results = {
@@ -59,6 +60,14 @@ export default class FalloutRoll extends Roll {
         return Object.keys(fallout_results).find(result => fallout_results[result](this.total, this.options.totalStress));
     }
 
+    static get TOOLTIP_TEMPLATE() { return tooltipTemplateHTML.path; }
+
+    async getTooltip() {
+        const parts = this.dice.map(d => d.getTooltipData());
+        const kept = this.dice.findIndex(d => d.total === this.total);
+        return foundry.applications.handlebars.renderTemplate(this.constructor.TOOLTIP_TEMPLATE, { kept, parts });
+    }
+
     async render(chatOptions = {}) {
         chatOptions = foundry.utils.mergeObject({
             user: game.user.id,
@@ -90,76 +99,53 @@ export default class FalloutRoll extends Roll {
         };
 
         // Render the roll display template
-        const output = await renderTemplate(chatOptions.template, chatData);
+        const output = await foundry.applications.handlebars.renderTemplate(chatOptions.template, chatData);
         return output;
     }
 
     async clearStress(msg) {
-      return new Promise((resolve, reject) => {
-          let character = msg.rolls[0].options.character || msg.speaker.actor;
-          let stressType = msg.rolls[0].options.resistance || '';
-  
-          let actor = game.actors.get(character);
-          let resistances = actor.system.resistances;
+        let character = msg.rolls[0].options.character || msg.speaker.actor;
+        let actor = game.actors.get(character);
+        let resistances = actor.system.resistances;
 
-          if (this.result == 'major-fallout') {
-            Dialog.confirm({
-              title: 'Confirm Stress Reset',
-              content: `Are you sure you want to reset ${actor.name}'s stress? This cannot be reversed.`,
-              yes: () => {
-                Object.keys(resistances).forEach(key =>{Object.assign(resistances[key], { value: 0 });});
-            
-                let data = {};
-                data["system.resistances"] = resistances;
-                actor.update(data);
-                msg.showClearStressButton = false
-              }
-            });
-          }
-          if (this.result == 'minor-fallout' && stressType) {
-            removeMinorStress(stressType, actor, resistances);
-          }
-          if (this.result == 'minor-fallout' && stressType == '') {
-            game.heart.applications.RequirementApplication.build({
-              requirements: {
-                  resistance: {
-                      options: game.heart.resistances.reduce((map, resistance) => {
-                          map[resistance] = game.i18n.localize(`heart.resistance.${resistance}`)
-                          return map;
-                      }, {})
-                  }
-              },
-              callback: ({resistance}) => {
-
-                removeMinorStress(resistance, actor, resistances);
-              },
-              type: "clear-stress"
-            });
-          }
-      });
-
-      function removeMinorStress(stressType, actor, resistances) {
-        Dialog.confirm({
-          title: `Confirm Set ${stressType} to 0`,
-          content: `Are you sure you want to reset ${actor.name}'s ${stressType} stress to 0? This cannot be reversed.`,
-          yes: () => {
-            resistances[stressType].value = 0;
-
-            let data = {};
-            data["system.resistances"] = resistances;
-            actor.update(data);
+        if (this.result == 'major-fallout') {
+            Object.keys(resistances).forEach(key => { Object.assign(resistances[key], { value: 0 }); });
+            await actor.update({ "system.resistances": resistances });
             msg.showClearStressButton = false;
-          }
-        });
-      }
+        }
+
+        if (this.result == 'minor-fallout') {
+            await new Promise(resolve => {
+                game.heart.applications.RequirementApplication.build({
+                    requirements: {
+                        resistance: {
+                            options: game.heart.resistances.reduce((map, resistance) => {
+                                map[resistance] = game.i18n.localize(`heart.resistance.${resistance}`)
+                                return map;
+                            }, {})
+                        }
+                    },
+                    callback: async ({resistance}) => {
+                        resistances[resistance].value = 0;
+                        await actor.update({ "system.resistances": resistances });
+                        msg.showClearStressButton = false;
+                        resolve();
+                    },
+                    type: "clear-stress"
+                });
+            });
+        }
     }
 
     static activateListeners(html) {
-      html.on('click', '.fallout-roll [data-action=clear-stress]', async function(ev) {
+      const el = html instanceof HTMLElement ? html : html[0] || html;
+      el.addEventListener('click', async function(ev) {
+        const button = ev.target.closest('.fallout-roll [data-action=clear-stress]');
+        if (!button) return;
+
         ev.preventDefault();
-        const target = $(ev.currentTarget);
-        const msgElement = target.closest('.chat-message');
-        const messageId = msgElement.data('messageId');
+        const msgElement = button.closest('.chat-message');
+        const messageId = msgElement.dataset.messageId;
         const msg = game.messages.get(messageId);
         const falloutRoll = msg.falloutRoll;
 
@@ -167,6 +153,6 @@ export default class FalloutRoll extends Roll {
 
         await ui.chat.updateMessage(msg, true);
         ui.chat.scrollBottom();
-    });
+      });
   }
 }

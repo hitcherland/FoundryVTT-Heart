@@ -1,0 +1,1 @@
+{"name":"Prepare Fallout Roll","type":"script","img":"systems/heart/assets/fallout-shelter.svg","scope":"global","command":"const msg = await game.heart.rolls.FalloutRoll.build(); msg.toMessage({speaker: { actor: msg.options.character }});","folder":null,"sort":0,"ownership":{"default":0},"flags":{},"_id":"yvTNHIftNQDe9n3q","_key":"!macros!yvTNHIftNQDe9n3q"}

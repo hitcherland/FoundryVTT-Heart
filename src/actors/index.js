@@ -45,7 +45,7 @@ HeartActor.proxies = {};
 
 export function initialise() {
     console.log('heart | Registering actor sheets');
-    Actors.unregisterSheet('core', ActorSheet);
+    foundry.documents.collections.Actors.unregisterSheet('core', foundry.appv1.sheets.ActorSheet);
 
     sheet_modules.forEach(function(module) {
         const Sheet = module.default;
@@ -65,7 +65,7 @@ export function initialise() {
 
         if(type === 'base') return;
 
-        Actors.registerSheet('heart', Sheet, {
+        foundry.documents.collections.Actors.registerSheet('heart', Sheet, {
             types: [type],
             makeDefault: true,
             label: `heart.${type}`

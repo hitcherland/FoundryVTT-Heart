@@ -1,0 +1,20 @@
+{
+    "_id": "wuEwchkvqLxMGf7q",
+    "_key": "!macros!wuEwchkvqLxMGf7q",
+    "name": "Prepare Stress Roll",
+    "type": "script",
+    "author": "yVBR839ynJiV8vzd",
+    "img": "systems/heart/assets/cracked-glass.svg",
+    "scope": "global",
+    "command": "const msg = (await game.heart.rolls.StressRoll.build()); msg.toMessage({speaker: {actor: msg.options.character}});",
+    "folder": null,
+    "sort": 0,
+    "ownership": {
+        "default": 0
+    },
+    "flags": {
+        "core": {
+            "sourceId": "Macro.kQ3kdzrXzOUbvWVw"
+        }
+    }
+}

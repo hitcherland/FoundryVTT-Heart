@@ -1,7 +1,9 @@
 import chatTemplateHTML from './roll.html';
+import tooltipTemplateHTML from '../heart-roll/tooltip.html';
 
 export default class StressRoll extends Roll {
     static get CHAT_TEMPLATE() { return chatTemplateHTML.path; }
+    static get TOOLTIP_TEMPLATE() { return tooltipTemplateHTML.path; }
 
     static get requirements() {
         const characters = game.actors.filter(x => x.type === 'character');
@@ -100,6 +102,12 @@ export default class StressRoll extends Roll {
         return new this(formula, data, options);
     }
 
+    async getTooltip() {
+        const parts = this.dice.map(d => d.getTooltipData());
+        const kept = this.dice.findIndex(d => d.total === this.total);
+        return foundry.applications.handlebars.renderTemplate(this.constructor.TOOLTIP_TEMPLATE, { kept, parts });
+    }
+
     async render(chatOptions = {}) {
         chatOptions = foundry.utils.mergeObject({
             user: game.user.id,
@@ -138,7 +146,7 @@ export default class StressRoll extends Roll {
         };
 
         // Render the roll display template
-        return renderTemplate(chatOptions.template, chatData);
+        return foundry.applications.handlebars.renderTemplate(chatOptions.template, chatData);
     }
 
     async takeStress(character, resistance='', ignoreProtection=false) {
@@ -187,43 +195,47 @@ export default class StressRoll extends Roll {
     }
 
     static activateListeners(html) {
-        html.on('click', '.stress-roll [data-action=take-stress]', async function(ev) {
-            ev.preventDefault();
-            const target = $(ev.currentTarget);
-            const msgElement = target.closest('.chat-message');
-            const messageId = msgElement.data('messageId');
-            const msg = game.messages.get(messageId);
-            const stressRoll = msg.stressRoll;
-            const actor_id = stressRoll.options.character;
-            await stressRoll.takeStress(actor_id)
-            msg.showTakeStressButton = false;
-            msg.showFalloutRollButton = true;
+        const el = html instanceof HTMLElement ? html : html[0] || html;
+        el.addEventListener('click', async function(ev) {
+            const takeStressButton = ev.target.closest('.stress-roll [data-action=take-stress]');
+            if (takeStressButton) {
+                ev.preventDefault();
+                const msgElement = takeStressButton.closest('.chat-message');
+                const messageId = msgElement.dataset.messageId;
+                const msg = game.messages.get(messageId);
+                const stressRoll = msg.stressRoll;
+                const actor_id = stressRoll.options.character;
+                await stressRoll.takeStress(actor_id);
+                msg.showTakeStressButton = false;
+                msg.showFalloutRollButton = true;
 
-            await ui.chat.updateMessage(msg, true);
-            ui.chat.scrollBottom();
-        });
-
-        html.on('click', '.stress-roll [data-action=roll-fallout]', async function(ev) {
-            ev.preventDefault();
-            const target = $(ev.currentTarget);
-            const msgElement = target.closest('.chat-message');
-            const messageId = msgElement.data('messageId');
-            const msg = game.messages.get(messageId);
-            const stressRoll = msg.stressRoll;
-            const falloutRoll = await game.heart.rolls.FalloutRoll.build({
-                character: stressRoll.options.character
-            });
-
-            await falloutRoll.evaluate();
-            if (game.dice3d && game.settings.get('heart', 'showFalloutRoll3dDice')) {
-              await game.dice3d.showForRoll(falloutRoll, game.user, true);
+                await ui.chat.updateMessage(msg, true);
+                ui.chat.scrollBottom();
+                return;
             }
 
-            await msg.setFalloutRoll(falloutRoll);
-            msg.showFalloutRollButton = false;
+            const rollFalloutButton = ev.target.closest('.stress-roll [data-action=roll-fallout]');
+            if (rollFalloutButton) {
+                ev.preventDefault();
+                const msgElement = rollFalloutButton.closest('.chat-message');
+                const messageId = msgElement.dataset.messageId;
+                const msg = game.messages.get(messageId);
+                const stressRoll = msg.stressRoll;
+                const falloutRoll = await game.heart.rolls.FalloutRoll.build({
+                    character: stressRoll.options.character
+                });
 
-            await ui.chat.updateMessage(msg, true);
-            ui.chat.scrollBottom();
+                await falloutRoll.evaluate();
+                if (game.dice3d && game.settings.get('heart', 'showFalloutRoll3dDice')) {
+                  await game.dice3d.showForRoll(falloutRoll, game.user, true);
+                }
+
+                await msg.setFalloutRoll(falloutRoll);
+                msg.showFalloutRollButton = false;
+
+                await ui.chat.updateMessage(msg, true);
+                ui.chat.scrollBottom();
+            }
         });
     }
 }

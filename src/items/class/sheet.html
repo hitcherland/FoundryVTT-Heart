@@ -12,7 +12,7 @@
 </div>
 {{/inline}}
 
-<form class="heart sheet base Item class {{cssClass}}" autocomplete="off">
+<div class="heart sheet base Item class {{cssClass}}">
     <h1>
         {{#if (and editable (not item.isOwned))}}
         <input name="name" value="{{localizeHeart item.name}}"/>
@@ -22,7 +22,7 @@
     </h1>
     <div class="description">
         {{#if (and editable (not item.isOwned))}}
-        {{editor (localizeHeart system.description) target="system.description" button=true editable=editable owner=owner}}
+        <textarea name="system.description">{{stripHTML system.description}}</textarea>
         {{else}}
         {{{localizeHeart system.description}}}
         {{/if}}
@@ -103,4 +103,4 @@
     {{> abilitySection abilities=minorAbilities type="minor"}}
     {{> abilitySection abilities=majorAbilities type="major"}}
     {{> abilitySection abilities=zenithAbilities type="zenith"}}
-</form>
+</div>

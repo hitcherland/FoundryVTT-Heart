@@ -235,12 +235,13 @@ if (fs.existsSync(tmp)) {
 };
 fs.mkdirSync(tmp);
 
-const paths = glob.globSync('./pack-data/**/*.yaml');
+const yamlPaths = glob.globSync('./pack-data/**/*.yaml');
 
 const manifest = fs.readFileSync('./dist/system.json');
 const json = JSON.parse(manifest);
 
-Promise.all(paths.map((filename) => {
+// Build YAML-sourced Item packs (classes, callings, tags, fallouts)
+const yamlPromises = yamlPaths.map((filename) => {
     const type = path.basename(filename).replace(/\.yaml$/, '');
     const content = fs.readFileSync(filename, 'utf8');
     const data = yaml.parse(content);
@@ -260,20 +261,66 @@ Promise.all(paths.map((filename) => {
     });
 
     if(json.packs.find((e) => e.name === type) === undefined) {
-        console.warn(`Adding ${type}.db to system.json`);
+        console.warn(`Adding ${type} to system.json`);
         json.packs.push(
             {
                 "name": type,
                 "label": type.replace(/\w\S*/g, function (txt) { return txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase(); }),
-                "system": "heart",
-                "path": `./packs/${type}.db`,
+                "path": `packs/${type}`,
                 "type": "Item",
-                "entity": "Item",
+                "ownership": {
+                    "PLAYER": "OBSERVER",
+                    "ASSISTANT": "OWNER"
+                }
             });
     }
 
     return promise;
-})).then(() => {
+});
+
+// Build JSON-sourced packs (macros) from pre-made JSON files
+const jsonPackDirs = glob.globSync('./pack-data/*/').filter(dir => {
+    const name = path.basename(dir);
+    return parsers[name] === undefined; // Not handled by YAML parsers
+});
+
+const jsonPromises = jsonPackDirs.map((dir) => {
+    const type = path.basename(dir);
+    const jsonFiles = glob.globSync(path.join(dir, '*.json'));
+    if (jsonFiles.length === 0) return Promise.resolve();
+
+    const tmpDir = `./${tmp}/${type}`;
+    const targetDir = `./${target}/${type}`;
+    if (!fs.existsSync(tmpDir)) fs.mkdirSync(tmpDir);
+    if (!fs.existsSync(targetDir)) fs.mkdirSync(targetDir);
+
+    jsonFiles.forEach(file => {
+        const basename = path.basename(file);
+        fs.copyFileSync(file, path.join(tmpDir, basename));
+    });
+
+    const promise = fvtt.then(f => {
+        return f.compilePack(`${tmpDir}/`, targetDir);
+    });
+
+    if(json.packs.find((e) => e.name === type) === undefined) {
+        console.warn(`Adding ${type} to system.json`);
+        json.packs.push({
+            "name": type,
+            "label": type.replace(/\w\S*/g, function (txt) { return txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase(); }),
+            "path": `packs/${type}`,
+            "type": "Macro",
+            "ownership": {
+                "PLAYER": "OBSERVER",
+                "ASSISTANT": "OWNER"
+            }
+        });
+    }
+
+    return promise;
+});
+
+Promise.all([...yamlPromises, ...jsonPromises]).then(() => {
     fs.rmSync(tmp, {recursive: true});
 });
 

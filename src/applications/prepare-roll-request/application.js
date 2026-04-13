@@ -2,19 +2,24 @@ import applicationHTML from './application.html';
 import HeartApplication from '../base/application';
 
 export default class PrepareRollRequestApplication extends HeartApplication {
-    static get defaultOptions() {
-        return foundry.utils.mergeObject(super.defaultOptions, {
-            template: applicationHTML.path,
-        });
-    }
+    static DEFAULT_OPTIONS = {
+        ...super.DEFAULT_OPTIONS,
+        actions: {
+            ...super.DEFAULT_OPTIONS.actions,
+            submit: PrepareRollRequestApplication._onSubmit,
+        },
+    };
+
+    static PARTS = {
+        main: { template: applicationHTML.path, scrollable: [".heart.form"] },
+    };
 
     static get formType() {
         return 'prepare-roll-request';
     }
 
-    getData() {
-        const data = super.getData();
-        return foundry.utils.mergeObject(data, {
+    async _prepareContext(options) {
+        return {
             'characters': game.actors.filter(actor => actor.type === 'character').reduce((map, char) => {
                 map[char.id] = char.name;
                 return map;
@@ -31,37 +36,27 @@ export default class PrepareRollRequestApplication extends HeartApplication {
                 map[difficulty] = game.i18n.localize(`heart.difficulty.${difficulty}`);
                 return map;
             }, {}),
-        });
+        };
     }
-    
-    activateListeners(html) {
-        super.activateListeners(html);
-        const form = html.get(0);
 
-        html.find('[data-action=submit]').click(async ev => {
-            const data = new FormData(form);
+    static _onSubmit(event, target) {
+        const form = this.element;
+        const data = new FormData(form);
+        const difficulty = data.get('difficulty');
+        const characters = data.getAll('character');
+        const skills = data.getAll('skill');
+        const domains = data.getAll('domain');
+        const validHelpers = data.getAll('helper');
 
-            const difficulty = data.get('difficulty');
-            const characters = data.getAll('character');
-            const skills = data.getAll('skill');
-            const domains = data.getAll('domain');
-            const validHelpers = data.getAll('helper');
-
-            CONFIG.ChatMessage.documentClass.create({
-                flags: {
-                    heart: {
-                        ["roll-request"]: {
-                            difficulty,
-                            characters,
-                            skills,
-                            domains,
-                            validHelpers,
-                        }
+        CONFIG.ChatMessage.documentClass.create({
+            flags: {
+                heart: {
+                    ["roll-request"]: {
+                        difficulty, characters, skills, domains, validHelpers,
                     }
                 }
-            });
-
-            this.close();
+            }
         });
+        this.close();
     }
 }

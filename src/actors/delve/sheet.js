@@ -6,18 +6,17 @@ import template from './template.json';
 export default class DelveSheet extends HeartActorSheet {
     static get type() { return Object.keys(template.Actor)[0]; }
 
-    getData() {
-      const data = super.getData();
-      data.user = game.user;
-      data.showTextboxesBelowItems = game.settings.get('heart', 'showTextboxesBelowItems')
-      return data;
-    }
-    
-    get template() {
-        return sheetHTML.path;
-    }
+    static PARTS = {
+        main: { template: sheetHTML.path, scrollable: [".heart.sheet"] },
+    };
 
     get img() {
         return 'systems/heart/assets/dungeon-light.svg';
+    }
+
+    async _prepareContext(options) {
+        const context = await super._prepareContext(options);
+        context.showTextboxesBelowItems = game.settings.get('heart', 'showTextboxesBelowItems');
+        return context;
     }
 }

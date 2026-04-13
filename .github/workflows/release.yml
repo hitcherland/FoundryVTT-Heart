@@ -1,32 +1,84 @@
 name: Release
-run-name: ${{ github.actor }} is creating release ${{ inputs.version }}
 on:
-  workflow_dispatch:
-    inputs:
-      version:
-        description: 'The version to release this build as'
-        required: true
-        type: string
-        default: 0.X.Y
+  release:
+    types: [published]
 jobs:
   build:
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
     steps:
-      - uses: actions/checkout@v3
-      - name: Use Node.js ${{ matrix.node-version }}
-        uses: actions/setup-node@v3
-      - run: npm ci
-      - run: npm run build-prod
-      - run: npm run build-manifest -- ${{ inputs.version}}
-      - run: npm run build-packs
-      - run: npm run build-template
+      # 1. Check out the repo at the tagged commit
+      - name: Checkout
+        uses: actions/checkout@v4
+      # 2. Set up Node.js
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: 'npm'
+      # 3. Install dependencies
+      - name: Install dependencies
+        run: npm ci
+      # 4. Extract version from the release tag (strips leading 'v' if present)
+      - name: Get version from tag
+        id: version
+        run: |
+          TAG="${{ github.event.release.tag_name }}"
+          VERSION="${TAG#v}"
+          echo "version=$VERSION" >> "$GITHUB_OUTPUT"
+          echo "Version: $VERSION"
+      # 5. Build all artifacts (webpack, manifest, compendium packs, template)
+      - name: Build
+        run: |
+          npm run build-prod
+          npm run build-manifest -- ${{ steps.version.outputs.version }}
+          npm run build-packs
+          npm run build-template
+      # 6. Copy static files into dist/
       - name: Copy static files
-        run: cp -r LICENSE ./static/* ./dist
-      - name: Zip files
-        working-directory: ./dist
-        run: zip -r ./heart.zip ./*
-      - name: Create Release
-        uses: ncipollo/release-action@v1
-        with: 
-          artifacts: "./dist/system.json,./dist/heart.zip"
-          tag: ${{ inputs.version }}
+        run: |
+          cp LICENSE ./dist/
+          cp -r ./static/assets ./dist/assets
+          cp -r ./static/lang ./dist/lang
+      # 7. Verify system.json exists in dist/
+      - name: Verify build output
+        run: |
+          if [ ! -f dist/system.json ]; then
+            echo "ERROR: dist/system.json not found after build!"
+            echo "Contents of dist/:"
+            ls -la dist/ || echo "dist/ directory does not exist"
+            exit 1
+          fi
+          echo "system.json found. Contents:"
+          cat dist/system.json
+      # 8. Patch system.json with correct manifest and download URLs
+      - name: Patch system.json URLs
+        run: |
+          VERSION="${{ steps.version.outputs.version }}"
+          TAG="${{ github.event.release.tag_name }}"
+          REPO="${{ github.repository }}"
+          node -e "
+            const fs = require('fs');
+            const manifest = JSON.parse(fs.readFileSync('dist/system.json', 'utf8'));
+            manifest.version = '${VERSION}';
+            manifest.manifest = 'https://github.com/${REPO}/releases/latest/download/system.json';
+            manifest.download = 'https://github.com/${REPO}/releases/download/${TAG}/heart.zip';
+            fs.writeFileSync('dist/system.json', JSON.stringify(manifest, null, 2) + '\n');
+          "
+          echo "Patched system.json:"
+          cat dist/system.json
+      # 9. Create the zip archive from dist/ contents
+      - name: Create release zip
+        run: |
+          cd dist
+          zip -r ../heart.zip . -x ".*"
+          cd ..
+          echo "Created heart.zip ($(du -h heart.zip | cut -f1))"
+      # 10. Upload system.json and heart.zip to the GitHub release
+      - name: Upload release artifacts
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          TAG="${{ github.event.release.tag_name }}"
+          gh release upload "$TAG" dist/system.json heart.zip --clobber

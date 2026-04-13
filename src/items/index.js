@@ -264,9 +264,9 @@ function ItemSheetFactory(data) {
             return data.type;
         }
 
-        get template() {
-            return safe_data.template;
-        }
+        static PARTS = {
+            main: { template: safe_data.template, scrollable: [".heart.sheet"] },
+        };
 
         get img() {
             return safe_data.img;
@@ -284,14 +284,14 @@ export function initialise() {
     console.log('heart | Assigning new Item documentClass');
     CONFIG.Item.documentClass = HeartItem;
     console.log('heart | Registering item sheets');
-    Items.unregisterSheet('core', ItemSheet);
+    foundry.documents.collections.Items.unregisterSheet('core', foundry.appv1.sheets.ItemSheet);
     sheetModules.forEach((module) => {
 
         const data = module.data;
         let Sheet;
         if (module.default !== undefined) {
             Sheet = module.default;
-        } else if (data.sheet instanceof ItemSheet) {
+        } else if (data.sheet instanceof foundry.appv1.sheets.ItemSheet) {
             Sheet = data.sheet
         } else {
             Sheet = ItemSheetFactory(data);
@@ -316,7 +316,7 @@ export function initialise() {
         if (type === 'base') return;
 
         CONFIG.Item.typeLabels[type] = `heart.${type}.label-single`;
-        Items.registerSheet('heart', Sheet, {
+        foundry.documents.collections.Items.registerSheet('heart', Sheet, {
             types: [type],
             makeDefault: true,
             label: `heart.${type}.label-single`
